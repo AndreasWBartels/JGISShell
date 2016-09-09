@@ -17,7 +17,7 @@ if (facade.exists(targetResource)) {
 }
 
 facade.copy(facade.resource(emtySpatiaLiteDatabaseFileName), targetResource)
-def regex = /gis\.osm\.(.+)_free_1/
+def regex = /gis[\._]osm[\._](.+)_free_1/
 
 
 def layerReferences = facade.iterable( facade.dataStoreReference(sourceResourceUrn))
