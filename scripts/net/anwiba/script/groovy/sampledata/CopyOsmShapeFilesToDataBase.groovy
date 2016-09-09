@@ -4,7 +4,7 @@ import net.anwiba.scripting.api.groovy.JGISShellGroovyScript
 @groovy.transform.BaseScript JGISShellGroovyScript facade
 
 def emtySpatiaLiteDatabaseFileName = "\$SYSTEM{jgisshell.workingpath}/data/template/spatialite-empty-4.n.sqlite"
-def targetFileName = "\$SYSTEM{jgisshell.workingpath}/data/osm/spatialite-osm-bw-4.n.sqlite"
+def targetFileName = "\$SYSTEM{jgisshell.workingpath}/data/osm/spatialite-osm-karlsruhe-4.n.sqlite"
 def sourceResourceUrn = "\$SYSTEM{jgisshell.workingpath}/data/osm";
 def targetResourceUrn = "sqlite:spatialite://${targetFileName}";
 
@@ -18,7 +18,6 @@ if (facade.exists(targetResource)) {
 
 facade.copy(facade.resource(emtySpatiaLiteDatabaseFileName), targetResource)
 def regex = /gis\.osm\.(.+)_free_1/
-def content ="gis.osm.transport_a_free_1"
 
 
 def layerReferences = facade.iterable( facade.dataStoreReference(sourceResourceUrn))

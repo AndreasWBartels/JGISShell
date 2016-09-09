@@ -10,4 +10,4 @@ echo "$program"
 echo "$folder"
 echo "$directory"
 
-$JAVA_HOME/java -Xms64m -Xmx4096m -XX:PermSize=32m -XX:MaxPermSize=1024m -Dnet.anwiba.logging.configuration=log4j.xml -jar JGISShell.jar
+$JAVA_HOME/java -Xms64m -Xmx4096m -jar JGISShell.jar

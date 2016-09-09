@@ -3,9 +3,9 @@ package net.anwiba.script.groovy.sampledata
 import net.anwiba.scripting.api.groovy.JGISShellGroovyScript
 @groovy.transform.BaseScript JGISShellGroovyScript facade
 
-def source = resource("http://download.geofabrik.de/europe/germany/baden-wuerttemberg-latest-free.shp.zip")
+def source = resource("http://download.geofabrik.de/europe/germany/baden-wuerttemberg/karlsruhe-regbez-latest-free.shp.zip")
 def folder = resource("\$SYSTEM{jgisshell.workingpath}/data/osm")
-def target = resource("\$SYSTEM{jgisshell.workingpath}/data/osm/baden-wuerttemberg-latest-free.shp.zip")
+def target = resource("\$SYSTEM{jgisshell.workingpath}/data/osm/karlsruhe-regbez-latest-free.shp.zip")
 
 try {
   if (!exists(folder)) createFolder(target)
