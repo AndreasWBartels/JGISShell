@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration xmlns="http://www.anwiba.net/module/scripting" xmlns:menu="http://www.anwiba.net/dynamic/menu" xmlns:popup="http://www.anwiba.net/dynamic/popup" xmlns:condition="http://www.anwiba.net/dynamic/condition" xmlns:script="http://www.anwiba.net/dynamic/script">
+  <script:classSearchPath>
+    <script:groovyClassPath>
+      <script:roots>
+        <script:uri>$SYSTEM{jgisshell.workingpath}/scripts</script:uri>
+      </script:roots>
+    </script:groovyClassPath>
+  </script:classSearchPath>
+  <initializer>
+    <script:language>GROOVY</script:language>
+    <script:groovyScript>
+      <script:uri>net/anwiba/script/groovy/initializer.groovy</script:uri>
+    </script:groovyScript>
+  </initializer>
+  <closer>
+    <script:language>GROOVY</script:language>
+    <script:groovyScript>
+      <script:uri>net/anwiba/script/groovy/closer.groovy</script:uri>
+    </script:groovyScript>
+  </closer>
+  <modes>
+  </modes>
+  <menu:menus>
+    <menu:menu>
+      <menu:name>Sampledata</menu:name>
+      <menu:menuitem>
+        <menu:name>Download OSM Shapefiles</menu:name>
+        <script:script>
+          <script:language>GROOVY</script:language>
+          <script:groovyScript>
+            <script:uri>net/anwiba/script/groovy/sampledata/DownloadOsmShapeFilesToDataFolder.groovy</script:uri>
+          </script:groovyScript>
+        </script:script>
+      </menu:menuitem>
+      <menu:menuitem>
+        <menu:name>Copy OSM Shapefiles to Database</menu:name>
+        <script:script>
+          <script:language>GROOVY</script:language>
+          <script:groovyScript>
+            <script:uri>net/anwiba/script/groovy/sampledata/CopyOsmShapeFilesToDataBase.groovy</script:uri>
+          </script:groovyScript>
+        </script:script>
+      </menu:menuitem>
+    </menu:menu>
+    <menu:menu>
+      <menu:name>Scripting</menu:name>
+      <menu:menuitem>
+        <menu:name>Load Backup</menu:name>
+        <script:script>
+          <script:language>GROOVY</script:language>
+          <script:groovyScript>
+            <script:uri>net/anwiba/script/groovy/LoadMap.groovy</script:uri>
+          </script:groovyScript>
+        </script:script>
+      </menu:menuitem>
+      <menu:menuitem>
+        <menu:name>Groovy Bindings</menu:name>
+        <script:script>
+          <script:language>GROOVY</script:language>
+          <script:groovyScript>
+            <script:uri>net/anwiba/script/groovy/GroovyBindings.groovy</script:uri>
+          </script:groovyScript>
+        </script:script>
+      </menu:menuitem>
+      <menu:menuitem>
+        <menu:name>Create Feature Layer (groovy)</menu:name>
+        <script:script>
+          <script:language>GROOVY</script:language>
+          <script:groovyScript>
+            <script:uri>net/anwiba/script/groovy/CreateFeatureLayer.groovy</script:uri>
+          </script:groovyScript>
+        </script:script>
+      </menu:menuitem>
+    </menu:menu>
+  </menu:menus>
+  <popup:popups>
+    <popup:popup>
+      <popup:type>LEGEND</popup:type>
+      <popup:menuitem>
+        <popup:name>LEGEND Popup Script (groovy)</popup:name>
+        <script:script>
+          <script:language>GROOVY</script:language>
+          <script:groovyScript>
+            <script:uri>net/anwiba/script/groovy/CreateFeatureLayer.groovy</script:uri>
+          </script:groovyScript>
+        </script:script>
+      </popup:menuitem>
+    </popup:popup>
+    <popup:popup>
+      <popup:type>MAP</popup:type>
+      <popup:menuitem>
+        <popup:name>Map Popup Script (groovy)</popup:name>
+        <popup:applicable>
+          <script:language>GROOVY</script:language>
+          <script:groovyScript>
+            <script:uri>net/anwiba/script/groovy/alwaysTrue.groovy</script:uri>
+          </script:groovyScript>
+        </popup:applicable>
+        <script:script>
+          <script:language>GROOVY</script:language>
+          <script:groovyScript>
+            <script:uri>net/anwiba/script/groovy/CreateFeatureLayer.groovy</script:uri>
+          </script:groovyScript>
+        </script:script>
+      </popup:menuitem>
+    </popup:popup>
+    <popup:popup>
+      <popup:type>LAYER_MANAGER</popup:type>
+      <popup:menuitem>
+        <popup:name>Create Overview Layer</popup:name>
+        <popup:applicable>
+          <script:language>GROOVY</script:language>
+          <script:groovyScript>
+            <script:uri>net/anwiba/script/groovy/isDataStoreReference.groovy</script:uri>
+          </script:groovyScript>
+        </popup:applicable>
+        <script:script>
+          <script:language>GROOVY</script:language>
+          <script:groovyScript>
+            <script:uri>net/anwiba/script/groovy/AggregateDataSourceLayerProcess.groovy</script:uri>
+          </script:groovyScript>
+        </script:script>
+      </popup:menuitem>
+    </popup:popup>
+  </popup:popups>
+</configuration>
