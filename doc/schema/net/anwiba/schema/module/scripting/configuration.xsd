@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+  xmlns:jaxb="http://java.sun.com/xml/ns/jaxb"
+  jaxb:version="2.0"
+  targetNamespace="http://www.anwiba.net/module/scripting"
+  xmlns:scripting="http://www.anwiba.net/module/scripting"
+  xmlns:script="http://www.anwiba.net/dynamic/script"
+  xmlns:menu="http://www.anwiba.net/dynamic/menu"
+  xmlns:popup="http://www.anwiba.net/dynamic/popup"
+  elementFormDefault="qualified">
+
+  <!--  xmlns:script="http://www.anwiba.net/dynamic/script" -->
+  <xsd:annotation>
+    <xsd:appinfo>
+      <!-- <jaxb:globalBindings choiceContentProperty="false"/> -->
+      <jaxb:schemaBindings>
+        <jaxb:package name="net.anwiba.schema.module.scripting"/>
+      </jaxb:schemaBindings>
+    </xsd:appinfo>
+  </xsd:annotation>
+
+  <xsd:import namespace="http://www.anwiba.net/dynamic/script" schemaLocation="../../dynamic/script/script.xsd" />
+  <xsd:import namespace="http://www.anwiba.net/dynamic/menu" schemaLocation="../../dynamic/menu/menus.xsd"/>
+  <xsd:import namespace="http://www.anwiba.net/dynamic/popup" schemaLocation="../../dynamic/popup/popups.xsd"/>
+
+  <xsd:element name="configuration" type="scripting:ConfigurationType">
+  </xsd:element>
+
+  <xsd:complexType name="ConfigurationType">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <jaxb:class name="Configuration"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element ref="script:classSearchPath" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="initializer" type="scripting:ScriptType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="closer" type="scripting:ScriptType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="modes" type="scripting:ModesType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element ref="menu:menus" minOccurs="1" maxOccurs="1"/>
+      <xsd:element ref="popup:popups" minOccurs="0" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="ScriptType">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <jaxb:class name="Script"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="script:AbstractScriptType">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+
+  <xsd:complexType name="ModesType">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <jaxb:class name="Modes"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="mode" type="scripting:ModeType" minOccurs="0" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="ModeType">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <jaxb:class name="Mode"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="name" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="description" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="icon" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="initializer" type="scripting:ScriptType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="script" type="script:ScriptType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="closer" type="scripting:ScriptType" minOccurs="0" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+</xsd:schema>

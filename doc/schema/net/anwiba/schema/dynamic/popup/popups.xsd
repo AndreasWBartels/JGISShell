@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jaxb="http://java.sun.com/xml/ns/jaxb"
+  jaxb:version="2.0" targetNamespace="http://www.anwiba.net/dynamic/popup"
+  xmlns="http://www.anwiba.net/dynamic/popup"
+  xmlns:script="http://www.anwiba.net/dynamic/script"
+  xmlns:condition="http://www.anwiba.net/dynamic/condition"
+  elementFormDefault="qualified">
+  <xsd:import namespace="http://www.anwiba.net/dynamic/script" schemaLocation="../script/script.xsd"/>
+
+  <xsd:element name="popups" type="PopupsType">
+  </xsd:element>
+
+
+  <xsd:annotation>
+    <xsd:appinfo>
+      <!-- <jaxb:globalBindings choiceContentProperty="false"/> -->
+      <jaxb:schemaBindings>
+        <jaxb:package name="net.anwiba.schema.dynamic.popup"/>
+      </jaxb:schemaBindings>
+    </xsd:appinfo>
+  </xsd:annotation>
+
+
+  <xsd:complexType name="PopupsType">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <jaxb:class name="Popups"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="popup" type="PopupType" minOccurs="0" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="PopupType">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <jaxb:class name="popup"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="type" type="PopupTypeEnum" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="menuitem" type="PopupItemType" minOccurs="1" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:simpleType name="PopupTypeEnum">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="MAP"/>
+      <xsd:enumeration value="LEGEND"/>
+      <xsd:enumeration value="LAYER_MANAGER"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+
+  <xsd:complexType name="PopupItemType">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <jaxb:class name="PopupMenuItem"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="name" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="applicable" type="ApplicableType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element ref="script:script" minOccurs="1" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="ApplicableType">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <jaxb:class name="Applicable"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="script:AbstractScriptType">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+</xsd:schema>

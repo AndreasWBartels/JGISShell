@@ -1,0 +1,75 @@
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+  xmlns:jaxb="http://java.sun.com/xml/ns/jaxb"
+  jaxb:version="2.0" targetNamespace="http://www.anwiba.net/database/connection"
+  xmlns:this="http://www.anwiba.net/database/connection"
+  elementFormDefault="qualified">
+  <xsd:annotation>
+    <xsd:appinfo>
+      <jaxb:schemaBindings>
+        <jaxb:package name="net.anwiba.schema.database.connection" />
+      </jaxb:schemaBindings>
+    </xsd:appinfo>
+  </xsd:annotation>
+
+  <xsd:element name="connection" type="this:DatabaseConnectionDescription">
+  </xsd:element>
+
+  <xsd:complexType name="DatabaseConnectionDescription">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <jaxb:class name="DatabaseConnectionDescription"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="host" type="xsd:string" minOccurs="0" maxOccurs="1">
+      </xsd:element>
+      <xsd:element name="port" type="xsd:int" minOccurs="0" maxOccurs="1">
+      </xsd:element>
+      <xsd:element name="database" type="xsd:string" minOccurs="1" maxOccurs="1">
+      </xsd:element>
+      <xsd:element name="schema" type="xsd:string" minOccurs="0" maxOccurs="1">
+      </xsd:element>
+      <xsd:element name="authentication" type="this:Authentication" minOccurs="1" maxOccurs="1">
+      </xsd:element>
+      <xsd:element name="driverName" type="xsd:string" minOccurs="1" maxOccurs="1">
+      </xsd:element>
+      <xsd:element name="urlPattern" type="xsd:string" minOccurs="1" maxOccurs="1">
+      </xsd:element>
+      <xsd:element name="properties" type="this:Properties" minOccurs="0" maxOccurs="1">
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Properties">
+    <xsd:sequence>
+      <xsd:element name="property" type="this:Property"  minOccurs="0" maxOccurs="unbounded">
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Property">
+    <xsd:sequence>
+      <xsd:element name="name" type="xsd:string" minOccurs="1" maxOccurs="1">
+      </xsd:element>
+      <xsd:element name="value" type="xsd:string" minOccurs="1" maxOccurs="1">
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Authentication">
+    <xsd:sequence>
+      <xsd:element name="userName" type="xsd:string" minOccurs="1" maxOccurs="1">
+      </xsd:element>
+      <xsd:element name="password" type="this:Password" minOccurs="1" maxOccurs="1">
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Password">
+    <xsd:simpleContent>
+      <xsd:extension base="xsd:string">
+        <xsd:attribute name="encrypted" type="xsd:boolean" default="true"/>
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+</xsd:schema>
