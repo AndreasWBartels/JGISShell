@@ -1,9 +1,6 @@
 # JGISShell
 Java GIS Viewer and Layer Datastore Manager
 
-![alt text](https://github.com/AndreasWBartels/JGISShell/tree/master/doc/images/WindAndRadioWaves-LUBW.png "JGISShell")  
-`map source: © 2016 Landesanstalt für Umwelt, Messungen und Naturschutz Baden-Württemberg`
-
 JGISShell consist of 4 parts. 
 
 ## Geodata Viewer
