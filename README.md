@@ -5,7 +5,9 @@ JGISShell consist of 4 parts.
 
 ## Geodata Viewer
 
-![Viewer](https://raw.githubusercontent.com/AndreasWBartels/JGISShell/7c0dcd1ea2a6cce4814cbc335e668e9147d2fbc8/doc/images/WindAndRadioWaves-LUBW.png)
+![Viewer](https://raw.githubusercontent.com/AndreasWBartels/JGISShell/7c0dcd1ea2a6cce4814cbc335e668e9147d2fbc8/doc/images/WindAndRadioWaves-LUBW.png)  
+`map source: © 2016 Landesanstalt für Umwelt, Messungen und Naturschutz Baden-Württemberg`  
+
 The first part is a viewer for spatial data who supports the following formats:
 
 ### Feature based geodata
