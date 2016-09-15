@@ -23,7 +23,7 @@ ESRI ASCII Grid, Saga Grid and XYZ Grid files
 The second part is a navigator tree to explore and manage geodata datastores.
 
 ## Scripting
-The third part is possibility to extend the viewer with java and groovy.
+The third part is the possibility to extend the viewer with java and groovy.
 
 ## Data access URL schema
 The fourth part is a URL based schema to access different kinds of datastores and layers.
@@ -40,6 +40,7 @@ To enable Oracle Locator/Spatial support, you need the following JAR-Files:
 * orai18n.jar
 * ojdbc6.jar
 * sdoapi.jar
+
 Ask your Database Administrators for the libraries. If you are a developer you can download the libraries Oracle Technology Network.
 The sdoapi.jar is part of the "Oracle Big Data Spatial and Graph - Vector API".
 
@@ -51,6 +52,7 @@ Copy
 ### Enable SAP HANA support
 To enable SAP Hana support, you need the following JAR-File:
 * ngdbc.jar
+
 Ask your Database Administrators for the library, or you can download the 'SAP HANA Client Software Packages' from SAP Store.
 
 Copy ngdbc.jar to JGISShell/lib/ngdbc-1.94.0.jar
