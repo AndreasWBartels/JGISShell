@@ -45,6 +45,7 @@ Ask your Database Administrators for the libraries. If you are a developer you c
 The sdoapi.jar is part of the "Oracle Big Data Spatial and Graph - Vector API".
 
 Copy
+
 * ojdbc6.jar to JGISShell/lib/ojdbc6-12.1.0.2.jar
 * orai18n.jar to JGISShell/lib/orai18n-12.1.0.2.jar
 * sdoapi.jar to JGISShell/lib/sdoapi-12.1.0.1b.jar
@@ -66,6 +67,7 @@ To enable ESRI SDE support, you need the following JAR-Files:
 Ask your ESRI Geodatabase Administrators for the libraries. The libraries are contributed with the 'Java Development kit'.
 
 Copy
+
  jpe_sdk.jar to JGISShell/lib/jpe_sdk-9.3.2.jar  
  jsde_sdk.jar to JGISShell/lib/jsde_sdk-9.3.2.jar  
  jsde_sdkres.jar to JGISShell/lib/jsde_sdkres-9.3.2.jar  
