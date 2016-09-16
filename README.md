@@ -41,7 +41,7 @@ To enable Oracle Locator/Spatial support, you need the following JAR-Files:
 * ojdbc6.jar
 * sdoapi.jar
 
-Ask your Database Administrators for the libraries. If you are a developer you can download the libraries Oracle Technology Network.
+Ask your Database Administrators for the libraries. If you are a developer you can download the libraries from Oracle Technology Network.
 The sdoapi.jar is part of the "Oracle Big Data Spatial and Graph - Vector API".
 
 Copy
