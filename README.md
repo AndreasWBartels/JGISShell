@@ -63,7 +63,7 @@ To enable ESRI SDE support, you need the following JAR-Files:
 * jsde_sdk.jar
 * jsde_sdkres.jar
 
-Ask your ESRI Geodatabase Administrators for the libraries.
+Ask your ESRI Geodatabase Administrators for the libraries. The libraries are contributed with the 'Java Development kit'.
 
 Copy
  jpe_sdk.jar to JGISShell/lib/jpe_sdk-9.3.2.jar  
