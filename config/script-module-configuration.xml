@@ -30,6 +30,15 @@
     <menu:menu>
       <menu:name>Sampledata</menu:name>
       <menu:menuitem>
+        <menu:name>Show Download Source</menu:name>
+        <script:script>
+          <script:language>GROOVY</script:language>
+          <script:groovyScript>
+            <script:uri>net/anwiba/script/groovy/sampledata/OpenDownloadSource.groovy</script:uri>
+          </script:groovyScript>
+        </script:script>
+      </menu:menuitem>
+      <menu:menuitem>
         <menu:name>Download OSM Shapefiles</menu:name>
         <script:script>
           <script:language>GROOVY</script:language>
