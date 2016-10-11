@@ -4,8 +4,8 @@ import net.anwiba.scripting.api.groovy.JGISShellGroovyScript
 @groovy.transform.BaseScript JGISShellGroovyScript facade
 
 def emtySpatiaLiteDatabaseFileName = "\$SYSTEM{jgisshell.workingpath}/data/template/spatialite-empty-4.n.sqlite"
-def targetFileName = "\$SYSTEM{jgisshell.workingpath}/data/osm/spatialite-osm-karlsruhe-4.n.sqlite"
-def sourceResourceUrn = "\$SYSTEM{jgisshell.workingpath}/data/osm";
+def targetFileName = "\$SYSTEM{jgisshell.workingpath}/data/osm/Karlsruhe/Karlsruhe.osm.sqlite"
+def sourceResourceUrn = "\$SYSTEM{jgisshell.workingpath}/data/osm/Karlsruhe";
 def targetResourceUrn = "sqlite:spatialite://${targetFileName}";
 
 def epsg4326 = facade.coordinateReferenceSystem("GEOGCS[\"WGS 84\", DATUM[\"World Geodetic System 1984\", SPHEROID[\"WGS 84\", 6378137.0, 298.257223563, AUTHORITY[\"EPSG\",\"7030\"]], AUTHORITY[\"EPSG\",\"6326\"]], PRIMEM[\"Greenwich\", 0.0, AUTHORITY[\"EPSG\",\"8901\"]], UNIT[\"degree\", 0.017453292519943295], AXIS[\"Geodetic longitude\", EAST], AXIS[\"Geodetic latitude\", NORTH], AUTHORITY[\"EPSG\",\"4326\"]]");
@@ -27,9 +27,11 @@ for (def sourceReference : layerReferences) {
   }
   println "source: " + facade.toString(sourceReference)
   def layer = facade.read(sourceReference)
-  def matcher = (layer.name() =~ regex)
-  if (matcher.matches()) {
-    def table = matcher[0][1]
+//  def matcher = layer.name()
+//  def matcher = (layer.name() =~ regex)
+//  if (matcher.matches()) {
+//  def table = matcher[0][1]
+    def table = layer.name()
     def targetLayerReferenceUrn = targetResourceUrn + "?table=${table}&column=geometry";
     println "target: " + targetLayerReferenceUrn
     monitor.setNote("Copy Shapefiles" + layer.name() + " in Table " + table)
@@ -37,5 +39,5 @@ for (def sourceReference : layerReferences) {
         .sourceSystem(epsg4326)
         .targetSystem(epsg31467)
         .copy(monitor, canceler);
-  }
+//  }
 }

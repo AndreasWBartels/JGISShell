@@ -3,5 +3,5 @@ package net.anwiba.script.groovy.sampledata
 import net.anwiba.scripting.api.groovy.JGISShellGroovyScript
 @groovy.transform.BaseScript JGISShellGroovyScript facade
 
-def source = resource("http://download.geofabrik.de/europe/germany/baden-wuerttemberg/karlsruhe-regbez.html")
+def source = resource("http://download.bbbike.org/osm/bbbike/Karlsruhe/")
 show(source)
