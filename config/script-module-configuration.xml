@@ -56,6 +56,15 @@
           </script:groovyScript>
         </script:script>
       </menu:menuitem>
+      <menu:menuitem>
+        <menu:name>Load Layers from Database</menu:name>
+        <script:script>
+          <script:language>GROOVY</script:language>
+          <script:groovyScript>
+            <script:uri>net/anwiba/script/groovy/sampledata/LoadLayersFromDatabase.groovy</script:uri>
+          </script:groovyScript>
+        </script:script>
+      </menu:menuitem>
     </menu:menu>
     <menu:menu>
       <menu:name>Scripting</menu:name>
