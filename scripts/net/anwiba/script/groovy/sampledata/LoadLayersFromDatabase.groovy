@@ -5,8 +5,9 @@ import java.awt.Color
 import net.anwiba.scripting.api.groovy.JGISShellGroovyScript
 @groovy.transform.BaseScript JGISShellGroovyScript facade
 
-def load = { map, database, tables, styles ->
+def load = { map, coordinateReferenceSystem, database, tables, styles ->
   map.clear();
+  map.coordinateReferenceSystem(coordinateReferenceSystem);
   for (def table : tables) {
     def resource = "${database}?table=${table}&column=geometry"
     def reference = facade.layerReference(resource)
@@ -66,11 +67,13 @@ def waterwaysStyle = facade.featureStyleBuilder(facade.multilinestring())
     .build()
 
 load(facade.locator()
+    , facade.coordinateReferenceSystem("EPSG",31467)
     , database
     , ["natural_1", "waterways"], [naturalStyle, waterwaysStyle].iterator()
     )
 def map = facade.map()
 load(map
+    , facade.coordinateReferenceSystem("EPSG",3857)
     , database
     , ["landuse", "natural_1", "waterways", "buildings", "railways", "roads"] //
     , [
