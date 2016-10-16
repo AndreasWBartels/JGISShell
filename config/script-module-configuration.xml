@@ -26,6 +26,52 @@
   </closer>
   <modes>
   </modes>
+  <toolbar>
+    <toolbaritem>
+      <menu:name>Load Backup</menu:name>
+      <menu:icon>net/anwiba/script/icons/misc.png</menu:icon>
+      <menu:tooltip>Load Backup</menu:tooltip>
+      <script:script>
+        <script:language>GROOVY</script:language>
+        <script:groovyScript>
+          <script:uri>net/anwiba/script/groovy/LoadMap.groovy</script:uri>
+        </script:groovyScript>
+      </script:script>
+    </toolbaritem>
+    <toolbaritem>
+      <menu:name>Initialize Layer Data Sliding</menu:name>
+      <menu:icon>net/anwiba/script/icons/application-x-executable.png</menu:icon>
+      <menu:tooltip>Initialize Layer Data Sliding</menu:tooltip>
+      <script:script>
+        <script:language>GROOVY</script:language>
+        <script:groovyScript>
+          <script:uri>net/anwiba/script/groovy/sampledata/LayerDataSlidingInitializer.groovy</script:uri>
+        </script:groovyScript>
+      </script:script>
+    </toolbaritem>
+    <toolbaritem>
+      <menu:name>Forward Layer Data Sliding</menu:name>
+      <menu:icon>net/anwiba/script/icons/go-next.png</menu:icon>
+      <menu:tooltip>Forward Layer Data Sliding</menu:tooltip>
+      <script:script>
+        <script:language>GROOVY</script:language>
+        <script:groovyScript>
+          <script:uri>net/anwiba/script/groovy/sampledata/LayerDataSlidingForward.groovy</script:uri>
+        </script:groovyScript>
+      </script:script>
+    </toolbaritem>
+    <toolbaritem>
+      <menu:name>Backward Layer Data Sliding</menu:name>
+      <menu:icon>net/anwiba/script/icons/go-previous.png</menu:icon>
+      <menu:tooltip>Backward Layer Data Sliding</menu:tooltip>
+      <script:script>
+        <script:language>GROOVY</script:language>
+        <script:groovyScript>
+          <script:uri>net/anwiba/script/groovy/sampledata/LayerDataSlidingBackward.groovy</script:uri>
+        </script:groovyScript>
+      </script:script>
+    </toolbaritem>
+  </toolbar>
   <menu:menus>
     <menu:menu>
       <menu:name>Sampledata</menu:name>
