@@ -66,12 +66,16 @@ def waterwaysStyle = facade.featureStyleBuilder(facade.multilinestring())
     .defaultStyle(facade.lineStyle(Color.BLUE,0.5))
     .build()
 
-load(facade.locator()
+def locator = facade.locator()
+load(locator
     , facade.coordinateReferenceSystem("EPSG",31467)
     , database
     , ["natural_1", "waterways"], [naturalStyle, waterwaysStyle].iterator()
     )
+locator.envelope(locator.worldBox());
+
 def map = facade.map()
+map.scale(1/10000);
 load(map
     , facade.coordinateReferenceSystem("EPSG",3857)
     , database
@@ -85,4 +89,4 @@ load(map
       facade.lineStyle(Color.BLACK,2)
     ].iterator()
     )
-map.scale(1/10000);
+map.center(map.worldBox().getCenterCoordinate());

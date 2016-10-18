@@ -6,6 +6,11 @@
         <script:uri>$SYSTEM{jgisshell.workingpath}/scripts</script:uri>
       </script:roots>
     </script:groovyClassPath>
+    <!-- <script:scalaClassPath> -->
+    <!-- <script:roots> -->
+    <!-- <script:uri>$SYSTEM{jgisshell.workingpath}/scripts</script:uri> -->
+    <!-- </script:roots> -->
+    <!-- </script:scalaClassPath> -->
     <script:javaClassPath>
       <script:classPath>
         <script:pathElement>$SYSTEM{jgisshell.workingpath}/classes/</script:pathElement>
@@ -25,6 +30,29 @@
     </script:groovyScript>
   </closer>
   <modes>
+    <mode>
+      <name>FOO</name>
+      <description>Foo und so weiter</description>
+      <icon>net/anwiba/script/icons/misc.png</icon>
+      <initializer>
+        <script:language>GROOVY</script:language>
+        <script:groovyScript>
+          <script:uri>net/anwiba/script/groovy/alwaysTrue.groovy</script:uri>
+        </script:groovyScript>
+      </initializer>
+      <script>
+        <script:language>GROOVY</script:language>
+        <script:groovyScript>
+          <script:uri>net/anwiba/script/groovy/PaintPoint.groovy</script:uri>
+        </script:groovyScript>
+      </script>
+      <closer>
+        <script:language>GROOVY</script:language>
+        <script:groovyScript>
+          <script:uri>net/anwiba/script/groovy/alwaysTrue.groovy</script:uri>
+        </script:groovyScript>
+      </closer>
+    </mode>
   </modes>
   <toolbar>
     <toolbaritem>
@@ -114,6 +142,336 @@
     </menu:menu>
     <menu:menu>
       <menu:name>Scripting</menu:name>
+      <menu:submenu>
+        <menu:name>Deutschland</menu:name>
+        <menu:menuitem>
+          <menu:name>Deutschland</menu:name>
+          <script:script>
+            <script:language>GROOVY</script:language>
+            <script:groovyScript>
+              <script:uri>net/anwiba/script/groovy/Deutschland.groovy</script:uri>
+            </script:groovyScript>
+          </script:script>
+        </menu:menuitem>
+        <menu:menuitem>
+          <menu:name>Bundesländer</menu:name>
+          <script:script>
+            <script:language>GROOVY</script:language>
+            <script:groovyScript>
+              <script:uri>net/anwiba/script/groovy/Bundeslaender.groovy</script:uri>
+            </script:groovyScript>
+          </script:script>
+        </menu:menuitem>
+        <menu:menuitem>
+          <menu:name>Bundesländer (save as Image)</menu:name>
+          <script:script>
+            <script:language>GROOVY</script:language>
+            <script:groovyScript>
+              <script:uri>net/anwiba/script/groovy/SaveImage.groovy</script:uri>
+            </script:groovyScript>
+          </script:script>
+        </menu:menuitem>
+        <menu:menuitem>
+          <menu:name>Norddeutschland</menu:name>
+          <script:script>
+            <script:language>GROOVY</script:language>
+            <script:groovyScript>
+              <script:uri>net/anwiba/script/groovy/Norddeutschland.groovy</script:uri>
+            </script:groovyScript>
+          </script:script>
+        </menu:menuitem>
+        <menu:menuitem>
+          <menu:name>Süddeutschland</menu:name>
+          <script:script>
+            <script:language>GROOVY</script:language>
+            <script:groovyScript>
+              <script:uri>net/anwiba/script/groovy/Sueddeutschland.groovy</script:uri>
+            </script:groovyScript>
+          </script:script>
+        </menu:menuitem>
+        <menu:menuitem>
+          <menu:name>Nordrhein-Westfalen</menu:name>
+          <script:script>
+            <script:language>GROOVY</script:language>
+            <script:groovyScript>
+              <script:uri>net/anwiba/script/groovy/Nrw.groovy</script:uri>
+            </script:groovyScript>
+          </script:script>
+        </menu:menuitem>
+        <menu:menuitem>
+          <menu:name>Sachsenlande</menu:name>
+          <script:script>
+            <script:language>GROOVY</script:language>
+            <script:groovyScript>
+              <script:uri>net/anwiba/script/groovy/Sachsenlande.groovy</script:uri>
+            </script:groovyScript>
+          </script:script>
+        </menu:menuitem>
+      </menu:submenu>
+      <menu:submenu>
+        <menu:name>List</menu:name>
+        <menu:menuitem>
+          <menu:name>Hana</menu:name>
+          <script:script>
+            <script:language>GROOVY</script:language>
+            <script:groovyScript>
+              <script:uri>net/anwiba/script/groovy/ListHanaFeatureLayer.groovy</script:uri>
+            </script:groovyScript>
+          </script:script>
+        </menu:menuitem>
+        <menu:menuitem>
+          <menu:name>Sdo</menu:name>
+          <script:script>
+            <script:language>GROOVY</script:language>
+            <script:groovyScript>
+              <script:uri>net/anwiba/script/groovy/ListSdoFeatureLayer.groovy</script:uri>
+            </script:groovyScript>
+          </script:script>
+        </menu:menuitem>
+        <menu:menuitem>
+          <menu:name>Sde</menu:name>
+          <script:script>
+            <script:language>GROOVY</script:language>
+            <script:groovyScript>
+              <script:uri>net/anwiba/script/groovy/ListSdeFeatureLayer.groovy</script:uri>
+            </script:groovyScript>
+          </script:script>
+        </menu:menuitem>
+        <menu:menuitem>
+          <menu:name>PostGis</menu:name>
+          <script:script>
+            <script:language>GROOVY</script:language>
+            <script:groovyScript>
+              <script:uri>net/anwiba/script/groovy/ListPostGisFeatureLayer.groovy</script:uri>
+            </script:groovyScript>
+          </script:script>
+        </menu:menuitem>
+        <menu:menuitem>
+          <menu:name>SpatialLite</menu:name>
+          <script:script mode="EDT">
+            <script:language>GROOVY</script:language>
+            <script:groovyScript>
+              <script:uri>net/anwiba/script/groovy/ListSpatialLiteFeatureLayer.groovy</script:uri>
+            </script:groovyScript>
+          </script:script>
+        </menu:menuitem>
+        <menu:menuitem>
+          <menu:name>PGDB</menu:name>
+          <script:script>
+            <script:language>GROOVY</script:language>
+            <script:groovyScript>
+              <script:uri>net/anwiba/script/groovy/ListPGDBFeatureLayer.groovy</script:uri>
+            </script:groovyScript>
+          </script:script>
+        </menu:menuitem>
+        <menu:menuitem>
+          <menu:name>File System</menu:name>
+          <script:script>
+            <script:language>GROOVY</script:language>
+            <script:groovyScript>
+              <script:uri>net/anwiba/script/groovy/ListFileSystemLayer.groovy</script:uri>
+            </script:groovyScript>
+          </script:script>
+        </menu:menuitem>
+      </menu:submenu>
+      <menu:submenu>
+        <menu:name>Load</menu:name>
+        <menu:menuitem>
+          <menu:name>Load Mapbox Layer</menu:name>
+          <script:script>
+            <script:language>GROOVY</script:language>
+            <script:groovyScript>
+              <script:uri>net/anwiba/script/groovy/LoadMapBoxLayer.groovy</script:uri>
+            </script:groovyScript>
+          </script:script>
+        </menu:menuitem>
+        <menu:menuitem>
+          <menu:name>Load GeoJson Feature to Layer</menu:name>
+          <script:script>
+            <script:language>GROOVY</script:language>
+            <script:groovyScript>
+              <script:uri>net/anwiba/script/groovy/LoadGeoJsonFeatureToLayer.groovy</script:uri>
+            </script:groovyScript>
+          </script:script>
+        </menu:menuitem>
+        <menu:menuitem>
+          <menu:name>Load Open Street Map Layer</menu:name>
+          <script:script>
+            <script:language>GROOVY</script:language>
+            <script:groovyScript>
+              <script:uri>net/anwiba/script/groovy/LoadOsmLayer.groovy</script:uri>
+            </script:groovyScript>
+          </script:script>
+        </menu:menuitem>
+        <menu:menuitem>
+          <menu:name>Load MBTiles Layer</menu:name>
+          <script:script>
+            <script:language>GROOVY</script:language>
+            <script:groovyScript>
+              <script:uri>net/anwiba/script/groovy/LoadMBTilesLayerFromSqliteDatabase.groovy</script:uri>
+            </script:groovyScript>
+          </script:script>
+        </menu:menuitem>
+        <menu:menuitem>
+          <menu:name>Load Worldfile Layer</menu:name>
+          <script:script>
+            <script:language>GROOVY</script:language>
+            <script:groovyScript>
+              <script:uri>net/anwiba/script/groovy/LoadWorldFileLayer.groovy</script:uri>
+            </script:groovyScript>
+          </script:script>
+        </menu:menuitem>
+        <menu:menuitem>
+          <menu:name>Load Shapefile Feature Layer</menu:name>
+          <script:script>
+            <script:language>GROOVY</script:language>
+            <script:groovyScript>
+              <script:uri>net/anwiba/script/groovy/LoadFeatureLayer.groovy</script:uri>
+            </script:groovyScript>
+          </script:script>
+        </menu:menuitem>
+        <menu:menuitem>
+          <menu:name>Load Shapefile Feature Layer to New Detail Map</menu:name>
+          <script:script>
+            <script:language>GROOVY</script:language>
+            <script:groovyScript>
+              <script:uri>net/anwiba/script/groovy/LoadFeatureLayerToNewDetailMap.groovy</script:uri>
+            </script:groovyScript>
+          </script:script>
+        </menu:menuitem>
+        <menu:menuitem>
+          <menu:name>Load Shapefile Feature Layer to Locator</menu:name>
+          <script:script>
+            <script:language>GROOVY</script:language>
+            <script:groovyScript>
+              <script:uri>net/anwiba/script/groovy/LoadFeatureLayerToLocator.groovy</script:uri>
+            </script:groovyScript>
+          </script:script>
+        </menu:menuitem>
+        <menu:menuitem>
+          <menu:name>Load Sdo Feature Layer</menu:name>
+          <script:script>
+            <script:language>GROOVY</script:language>
+            <script:groovyScript>
+              <script:uri>net/anwiba/script/groovy/LoadFeatureLayerFromOracleDatabase.groovy</script:uri>
+            </script:groovyScript>
+          </script:script>
+        </menu:menuitem>
+        <menu:menuitem>
+          <menu:name>Load PostGis Feature Layer</menu:name>
+          <script:script>
+            <script:language>GROOVY</script:language>
+            <script:groovyScript>
+              <script:uri>net/anwiba/script/groovy/LoadFeatureLayerFromPostgresqlDatabase.groovy</script:uri>
+            </script:groovyScript>
+          </script:script>
+        </menu:menuitem>
+        <menu:menuitem>
+          <menu:name>Load SpatiaLite Feature Layer</menu:name>
+          <script:script>
+            <script:language>GROOVY</script:language>
+            <script:groovyScript>
+              <script:uri>net/anwiba/script/groovy/LoadFeatureLayerFromSqliteDatabase.groovy</script:uri>
+            </script:groovyScript>
+          </script:script>
+        </menu:menuitem>
+        <menu:menuitem>
+          <menu:name>Load ArcGis Rest Feature Service Layer</menu:name>
+          <script:script>
+            <script:language>GROOVY</script:language>
+            <script:groovyScript>
+              <script:uri>net/anwiba/script/groovy/LoadFeatureLayerFromArcGisRestFeatureService.groovy</script:uri>
+            </script:groovyScript>
+          </script:script>
+        </menu:menuitem>
+        <menu:menuitem>
+          <menu:name>Load SDE Feature Layer</menu:name>
+          <script:script>
+            <script:language>GROOVY</script:language>
+            <script:groovyScript>
+              <script:uri>net/anwiba/script/groovy/LoadFeatureLayerFromSDE.groovy</script:uri>
+            </script:groovyScript>
+          </script:script>
+        </menu:menuitem>
+        <menu:menuitem>
+          <menu:name>Load Feature Layer from PGDB</menu:name>
+          <script:script>
+            <script:language>GROOVY</script:language>
+            <script:groovyScript>
+              <script:uri>net/anwiba/script/groovy/LoadFeatureLayerFromPGDB.groovy</script:uri>
+            </script:groovyScript>
+          </script:script>
+        </menu:menuitem>
+        <menu:menuitem>
+          <menu:name>Load Feature Layer In Progess Monitor</menu:name>
+          <script:script>
+            <script:language>GROOVY</script:language>
+            <script:groovyScript>
+              <script:uri>net/anwiba/script/groovy/LoadFeatureLayerInProgessRunner.groovy</script:uri>
+            </script:groovyScript>
+          </script:script>
+        </menu:menuitem>
+      </menu:submenu>
+      <menu:submenu>
+        <menu:name>Write</menu:name>
+        <menu:menuitem>
+          <menu:name>Write Images</menu:name>
+          <script:script>
+            <script:language>GROOVY</script:language>
+            <script:groovyScript>
+              <script:uri>net/anwiba/script/groovy/WriteImage.groovy</script:uri>
+            </script:groovyScript>
+          </script:script>
+        </menu:menuitem>
+      </menu:submenu>
+      <menu:submenu>
+        <menu:name>Copy</menu:name>
+        <menu:menuitem>
+          <menu:name>Copy Shapefile Feature Layer</menu:name>
+          <script:script>
+            <script:language>GROOVY</script:language>
+            <script:groovyScript>
+              <script:uri>net/anwiba/script/groovy/CopyFeatureLayer.groovy</script:uri>
+            </script:groovyScript>
+          </script:script>
+        </menu:menuitem>
+        <menu:menuitem>
+          <menu:name>Copy SDO Feature Layer</menu:name>
+          <script:script>
+            <script:language>GROOVY</script:language>
+            <script:groovyScript>
+              <script:uri>net/anwiba/script/groovy/CopySdoFeatureLayer.groovy</script:uri>
+            </script:groovyScript>
+          </script:script>
+        </menu:menuitem>
+        <menu:menuitem>
+          <menu:name>Copy SpatiaLite Feature Layer</menu:name>
+          <script:script>
+            <script:language>GROOVY</script:language>
+            <script:groovyScript>
+              <script:uri>net/anwiba/script/groovy/CopySpatiaLiteFeatureLayer.groovy</script:uri>
+            </script:groovyScript>
+          </script:script>
+        </menu:menuitem>
+        <menu:menuitem>
+          <menu:name>Copy PostGis Feature Layer</menu:name>
+          <script:script>
+            <script:language>GROOVY</script:language>
+            <script:groovyScript>
+              <script:uri>net/anwiba/script/groovy/CopyPostgisFeatureLayer.groovy</script:uri>
+            </script:groovyScript>
+          </script:script>
+        </menu:menuitem>
+        <menu:menuitem>
+          <menu:name>Copy PGDB Feature Layer to Shapefile</menu:name>
+          <script:script>
+            <script:language>GROOVY</script:language>
+            <script:groovyScript>
+              <script:uri>net/anwiba/script/groovy/CopyPGDBToShapefileFeatureLayer.groovy</script:uri>
+            </script:groovyScript>
+          </script:script>
+        </menu:menuitem>
+      </menu:submenu>
       <menu:menuitem>
         <menu:name>Load Backup</menu:name>
         <script:script>
@@ -132,6 +490,33 @@
           </script:groovyScript>
         </script:script>
       </menu:menuitem>
+      <!-- <menu:menuitem> -->
+      <!-- <menu:name>Hello scala</menu:name> -->
+      <!-- <script:script> -->
+      <!-- <script:language>SCALA</script:language> -->
+      <!-- <script:scalaScript> -->
+      <!-- <script:uri>net/anwiba/script/scala/HelloScala.scala</script:uri> -->
+      <!-- </script:scalaScript> -->
+      <!-- </script:script> -->
+      <!-- </menu:menuitem> -->
+      <menu:menuitem>
+        <menu:name>Create Feature Layer (java)</menu:name>
+        <script:script>
+          <script:language>JAVA</script:language>
+          <script:javaClass>
+            <script:name>net.anwiba.script.java.example.Example</script:name>
+          </script:javaClass>
+        </script:script>
+      </menu:menuitem>
+      <!-- <menu:menuitem> -->
+      <!-- <menu:name>Create Feature Layer (scala)</menu:name> -->
+      <!-- <script:script> -->
+      <!-- <script:language>SCALA</script:language> -->
+      <!-- <script:scalaScript> -->
+      <!-- <script:uri>net/anwiba/script/scala/CreateFeatureLayer.scala</script:uri> -->
+      <!-- </script:scalaScript> -->
+      <!-- </script:script> -->
+      <!-- </menu:menuitem> -->
       <menu:menuitem>
         <menu:name>Create Feature Layer (groovy)</menu:name>
         <script:script>
@@ -142,12 +527,39 @@
         </script:script>
       </menu:menuitem>
       <menu:menuitem>
-        <menu:name>Create Feature Layer (java)</menu:name>
+        <menu:name>Create Raster Layer (groovy)</menu:name>
         <script:script>
-          <script:language>JAVA</script:language>
-          <script:javaClass>
-            <script:name>net.anwiba.script.java.example.Example</script:name>
-          </script:javaClass>
+          <script:language>GROOVY</script:language>
+          <script:groovyScript>
+            <script:uri>net/anwiba/script/groovy/CreateRasterLayer.groovy</script:uri>
+          </script:groovyScript>
+        </script:script>
+      </menu:menuitem>
+      <menu:menuitem>
+        <menu:name>Create Overview Layer</menu:name>
+        <script:script>
+          <script:language>GROOVY</script:language>
+          <script:groovyScript>
+            <script:uri>net/anwiba/script/groovy/AggregateFileSystemLayer.groovy</script:uri>
+          </script:groovyScript>
+        </script:script>
+      </menu:menuitem>
+      <menu:menuitem>
+        <menu:name>Create LinearRings</menu:name>
+        <script:script>
+          <script:language>GROOVY</script:language>
+          <script:groovyScript>
+            <script:uri>net/anwiba/script/groovy/CreateLinearRings.groovy</script:uri>
+          </script:groovyScript>
+        </script:script>
+      </menu:menuitem>
+      <menu:menuitem>
+        <menu:name>Create Polygons</menu:name>
+        <script:script>
+          <script:language>GROOVY</script:language>
+          <script:groovyScript>
+            <script:uri>net/anwiba/script/groovy/CreatePolygons.groovy</script:uri>
+          </script:groovyScript>
         </script:script>
       </menu:menuitem>
     </menu:menu>
@@ -162,6 +574,15 @@
           <script:groovyScript>
             <script:uri>net/anwiba/script/groovy/CreateFeatureLayer.groovy</script:uri>
           </script:groovyScript>
+        </script:script>
+      </popup:menuitem>
+      <popup:menuitem>
+        <popup:name>LEGEND Popup Script (java)</popup:name>
+        <script:script>
+          <script:language>JAVA</script:language>
+          <script:javaClass>
+            <script:name>net.anwiba.script.java.example.Example</script:name>
+          </script:javaClass>
         </script:script>
       </popup:menuitem>
     </popup:popup>
@@ -182,9 +603,33 @@
           </script:groovyScript>
         </script:script>
       </popup:menuitem>
+      <popup:menuitem>
+        <popup:name>Map Popup Script (java)</popup:name>
+        <script:script>
+          <script:language>JAVA</script:language>
+          <script:javaClass>
+            <script:name>net.anwiba.script.java.example.Example</script:name>
+          </script:javaClass>
+        </script:script>
+      </popup:menuitem>
     </popup:popup>
     <popup:popup>
       <popup:type>LAYER_MANAGER</popup:type>
+      <popup:menuitem>
+        <popup:name>Map Popup Script (groovy)</popup:name>
+        <popup:applicable>
+          <script:language>GROOVY</script:language>
+          <script:groovyScript>
+            <script:uri>net/anwiba/script/groovy/isLayerReference.groovy</script:uri>
+          </script:groovyScript>
+        </popup:applicable>
+        <script:script>
+          <script:language>GROOVY</script:language>
+          <script:groovyScript>
+            <script:uri>net/anwiba/script/groovy/CreateFeatureLayer.groovy</script:uri>
+          </script:groovyScript>
+        </script:script>
+      </popup:menuitem>
       <popup:menuitem>
         <popup:name>Create Overview Layer</popup:name>
         <popup:applicable>
