@@ -1,0 +1,1 @@
+Icon Source package is the GNOME icon theme Package Version 3.10.0
