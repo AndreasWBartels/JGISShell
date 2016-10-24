@@ -30,7 +30,7 @@ The third part is the possibility to extend the viewer with java and groovy.
 ## Data access URL schema
 The fourth part is a URL based schema to access different kinds of datastores and layers.
 
-For more see [WIKI]https://github.com/AndreasWBartels/JGISShell/wiki
+For more see [WIKI](https://github.com/AndreasWBartels/JGISShell/wiki)
 
 ## Author
 JGISShell was created by [Andreas W. Bartels](https://github.com/AndreasWBartels).
