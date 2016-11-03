@@ -1,5 +1,5 @@
 #!/bin/sh
-JAVA_HOME=/usr/lib/jvm/java-8-oracle/bin
+# JAVA_HOME=/usr/lib/jvm/java-8-oracle/bin
 
 program=`basename "$0"`
 folder=`dirname "$0"`
@@ -10,4 +10,5 @@ echo "$program"
 echo "$folder"
 echo "$directory"
 
-$JAVA_HOME/java -Xms64m -Xmx4096m -jar JGISShell.jar
+# $JAVA_HOME/java -Xms64m -Xmx4096m -jar JGISShell.jar
+java -Xms64m -Xmx4096m -jar JGISShell.jar
