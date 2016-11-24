@@ -1,0 +1,17 @@
+@JssdExtends(type="response")
+@JssdPrimitivesEnabled
+{
+  @JssdImmutable
+  "class": <String> "SKY",
+  "tag": <String> null,
+  "device": <String> null,
+  "time": <long> null,
+  "xdop": <double> null,
+  "ydop": <double> null,
+  "vdop": <double> null,
+  "tdop": <double> null,
+  "hdop": <double> null,
+  "pdop": <double> null,
+  "gdop": <double> null,
+  "satellites": <satellite[]> null
+}

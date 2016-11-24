@@ -1,0 +1,8 @@
+@JssdExtends(type="response")
+@JssdPrimitivesEnabled
+{
+  @JssdImmutable
+  "class": <String> "DEVICES",
+  "devices": <device[]> null,
+  "remote": <String> null
+}
