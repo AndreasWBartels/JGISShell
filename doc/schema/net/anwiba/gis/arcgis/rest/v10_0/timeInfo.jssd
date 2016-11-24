@@ -1,0 +1,8 @@
+@JssdUnknownMember
+{
+  "startTimeField" : <String> null,
+  "endTimeField" : <String> null,
+  "trackIdField" : <String> null,
+  "timeExtent" : <java.util.Date[]> null,
+  "timeReference" : <timeReference> null
+}

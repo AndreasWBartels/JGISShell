@@ -1,0 +1,10 @@
+{
+"objectId" : <int> null,
+"name" : <String> null,
+"value" : <String> null,
+"location" : <point> null,
+  @JssdUnknownMember
+"properties" : <Object> null,
+"catalogItems" : <catalogItems> null,
+"catalogItemVisibilities" : <double[]> null
+}

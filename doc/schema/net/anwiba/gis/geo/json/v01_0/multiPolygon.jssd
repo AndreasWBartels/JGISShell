@@ -1,0 +1,6 @@
+@JssdExtends(type="geometry")
+{
+  @JssdImmutable
+  "type": <String> "MultiPolygon",
+  "coordinates": <double[][][][]> null
+}

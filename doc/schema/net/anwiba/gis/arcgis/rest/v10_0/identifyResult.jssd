@@ -1,0 +1,10 @@
+{
+ "layerId" : <int> null,
+ "layerName" : <String> null,
+ "value" : <String> null,
+ "displayFieldName" : <String> null,
+  @JssdUnknownMember
+ "attributes" : <Object>  null,
+ "geometryType" : <String>  null,
+ "geometry" : <Object> null
+}

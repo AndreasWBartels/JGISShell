@@ -1,0 +1,11 @@
+{
+  @JssdImmutable
+  "type": <String> "MessageRequest",
+  @JssdImmutable
+  "version": <String> "1.0.0",
+  "clientName": <String> null,
+  "clientVersion": <String> null,
+  "licenseType": <String> null,
+  "identifier": <String> null,
+  "message": <message> null
+}

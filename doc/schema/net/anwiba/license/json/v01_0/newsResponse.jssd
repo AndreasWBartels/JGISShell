@@ -1,0 +1,8 @@
+{
+  @JssdImmutable
+  "type": <String> "NewsResponse",
+  @JssdImmutable
+  "version": <String> "1.0.0",
+  @JssdNotNullable
+  "news": <news[]> null
+}

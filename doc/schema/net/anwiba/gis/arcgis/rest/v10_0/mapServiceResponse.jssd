@@ -1,0 +1,20 @@
+@JssdUnknownMember
+{
+"currentVersion": <double> null,
+"serviceDescription" : <String> null,
+"mapName" : <String> null,
+"description": <String> null,
+"copyrightText" : <String> null,
+"layers": <layer[]> null,
+"tables": <tableReference[]> null,
+"spatialReference" : <spatialReference> null,
+"singleFusedMapCache" : <boolean> null,
+"tileInfo": <tileInfo> null,
+"initialExtent" : <envelope> null,
+"fullExtent" : <envelope> null,
+"timeInfo" : <timeInfo> null,
+"units" : <String> null,
+"supportedImageFormatTypes" : <String> null,
+"documentInfo": <Object> null,
+"capabilities" : <String> null
+}

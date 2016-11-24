@@ -1,0 +1,8 @@
+{
+  "layerId": <int> null,
+  "layerName": <String> null,
+  "layerType" : <String> null,
+  "minScale": <int> null,
+  "maxScale": <int> null,
+  "legend": <legendResponse[]> null
+}

@@ -1,0 +1,5 @@
+{
+  "code" : <int> null,
+  "message" : <String> null,
+  "details" : <String[]>  null
+}

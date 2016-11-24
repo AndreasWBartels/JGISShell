@@ -1,0 +1,9 @@
+{
+  "currentVersion" : <double> null,
+  "fullVersion" : <String> null,
+  "soapUrl" : <String> null,
+  "secureSoapUrl" : <String> null,
+  "owningSystemUrl" : <String> null,
+  "authInfo" : <authInfo> null
+}
+ 

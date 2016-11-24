@@ -1,0 +1,6 @@
+{
+  "type":<String> null,
+  "name":<String> null,
+  "codedValues": <codedValue[]> null,
+  "range": <int[]> null
+}

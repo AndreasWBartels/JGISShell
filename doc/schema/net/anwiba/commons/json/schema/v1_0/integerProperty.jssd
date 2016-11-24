@@ -1,0 +1,16 @@
+@JssdExtends(type="property")
+{
+  @JssdImmutable
+  "type": <java.lang.String> "integer",
+
+  "default": <java.lang.Integer> null,
+  "format": <java.lang.String> null,
+
+  "maxLength": <java.lang.Integer> null,
+  "minimum": <java.lang.Integer> null,
+  "maximum": <java.lang.Integer> null,
+  "exclusiveMinimum": <java.lang.Integer> null,
+  "exclusiveMaximum": <java.lang.Integer> null,
+  "divisibleBy": <java.lang.Integer> null,
+  "enum": <java.lang.Integer[]> null
+}

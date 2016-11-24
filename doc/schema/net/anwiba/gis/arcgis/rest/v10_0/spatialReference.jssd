@@ -1,0 +1,7 @@
+{
+  "wkid" : <Integer> null,
+  "latestWkid" : <Integer> null,
+  "vcsWkid" : <Integer> null,
+  "latestVcsWkid" : <Integer> null,
+  "wkt" : <String> null
+}

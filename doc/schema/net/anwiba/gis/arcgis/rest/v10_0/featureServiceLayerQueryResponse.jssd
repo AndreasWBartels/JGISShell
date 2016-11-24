@@ -1,0 +1,8 @@
+{
+  "objectIdFieldName" : <String> null,
+  "globalIdFieldName" : <String> null,
+  "geometryType" : <String> null,
+  "spatialReference" : <spatialReference> null,
+  "fields" : <field[]> null,
+  "features" : <feature[]> null
+}

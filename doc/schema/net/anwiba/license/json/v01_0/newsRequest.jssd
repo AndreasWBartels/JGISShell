@@ -1,0 +1,10 @@
+{
+  @JssdImmutable
+  "type": <String> "NewsRequest",
+  @JssdImmutable
+  "version": <String> "1.0.0",
+  "clientName": <String> null,
+  "clientVersion": <String> null,
+  "licenseType": <String> null,
+  "identifier": <String> null
+}

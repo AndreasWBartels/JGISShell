@@ -1,0 +1,22 @@
+{
+  "currentVersion": <double> null,
+  "serviceDescription" : <String> null,
+  "name" : <String> null,
+  "description": <String> null,
+  "extent" : <envelope> null,
+  "timeInfo" :<timeInfo> null,
+  "pixelSizeX" : <double> null,
+  "pixelSizeY" : <double> null,
+  "bandCount" : <int> null,
+  "pixelType" : <String> null,
+  "minPixelSize" : <double> null,
+  "maxPixelSize" : <double> null,
+  "copyrightText" : <String> null,
+  "serviceDataType" : <String> null,
+  "minValues" : <double[]> null,
+  "maxValues" : <double[]> null,
+  "meanValues" : <double[]> null,
+  "stdvValues" : <double[]> null,
+  "objectIdField" : <String> null,
+  "fields" : <field[]> null
+}

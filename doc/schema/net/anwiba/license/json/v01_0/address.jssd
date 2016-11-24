@@ -1,0 +1,11 @@
+{
+  @JssdImmutable
+  "type": <String> "Address",
+  @JssdImmutable
+  "version": <String> "1.0.0",
+  "street": <String> null,
+  "zipcode": <String> null,
+  "city": <String> null,
+  "state": <String> null,
+  "country": <String> null
+}

@@ -1,0 +1,10 @@
+{
+  "name" : <String> null,
+  "type" : <String> null,
+  "sqlType" : <String> null,
+  "alias" : <String> null,
+  "editable" : <boolean> false,
+  "nullable" : <boolean> true,
+  "domain" : <domain> null,
+  "length" : <int> null
+}

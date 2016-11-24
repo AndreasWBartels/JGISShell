@@ -1,0 +1,27 @@
+@JssdUnknownMember
+{
+  "tilejson": <String> "2.0.0",
+  "id": <String> null,
+  "name": <String> null,
+  "description": <String> null,
+  "private": <boolean> false,
+  "mapbox_logo": <boolean> true,
+  "version": <String> "1.0.0",
+  "attribution": <String> null,
+  "template": <String> null,
+  "legend": <String> null,
+  "scheme": <String> "xyz",
+  "tiles": <String[]> null,
+  "grids": <String[]> null,
+  "minzoom": <int> 0,
+  "maxzoom": <int> 22,
+  "bounds": <double[]> [-180, -90, 180, 90],
+  "center": <double[]> null,
+  "autoscale": <boolean> true,
+  "created": <long> null,
+  "embed": <String> null,
+  "download": <String> null,
+  "filesize":<long>  -1,
+  "format": <String> null,
+  "webpage": <String> null
+}

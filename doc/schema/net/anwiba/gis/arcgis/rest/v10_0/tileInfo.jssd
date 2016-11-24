@@ -1,0 +1,10 @@
+{
+  "rows" : <int> null,
+  "cols" : <int> null,
+  "dpi" : <int> null,
+  "format" : <String> null,
+  "compressionQuality" : <int> null,
+  "origin" : <point> null,
+  "spatialReference" : <spatialReference> null,
+  "lods": <tileLevel[]> null
+}

@@ -1,0 +1,8 @@
+@JssdFactory
+{
+  "name": <java.lang.String> null,
+  "title": <java.lang.String> null,
+  "description": <java.lang.String> null,
+  @JssdImmutable
+  "type": <java.lang.String> "property"
+}
