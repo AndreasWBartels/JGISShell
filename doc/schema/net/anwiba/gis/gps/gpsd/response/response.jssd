@@ -1,4 +1,0 @@
-@JssdFactory(argument="class")
-{
-  "class": <java.lang.String> null
-}
