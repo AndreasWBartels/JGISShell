@@ -15,9 +15,11 @@ net.anwiba.gis.api.data
 net.anwiba.gis.api.entity
 net.anwiba.gis.api.feature
 net.anwiba.gis.api.geometry
+net.anwiba.gis.api.gps
 net.anwiba.gis.api.image
 net.anwiba.gis.api.layer
 net.anwiba.gis.api.layer.feature
+net.anwiba.gis.api.layer.raster
 net.anwiba.gis.api.map
 net.anwiba.gis.api.process
 net.anwiba.gis.api.raster
@@ -31,6 +33,6 @@ net.anwiba.gis.geometry.exception
 net.anwiba.gis.geometry.polygon
 net.anwiba.gis.geometry.ring
 net.anwiba.gis.geometry.style
+net.anwiba.gis.scripting.groovy.api
+net.anwiba.gis.scripting.java.api
 net.anwiba.gis.style
-net.anwiba.scripting.api.groovy
-net.anwiba.scripting.api.java

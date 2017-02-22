@@ -1,7 +1,7 @@
 package net.anwiba.script.groovy.sampledata
 // Copyright (c) 2015 by Andreas W. Bartels (bartels@anwiba.de)
 
-import net.anwiba.scripting.api.groovy.JGISShellGroovyScript
+import net.anwiba.gis.scripting.groovy.api.JGISShellGroovyScript
 @groovy.transform.BaseScript JGISShellGroovyScript facade
 
 if (!facade.variable("layerViewIdentifier"))  { return }
@@ -17,5 +17,5 @@ def layerViewIdentifier = facade.variable("layerViewIdentifier")
 def layerName = facade.variable("layerViewName")
 def layerSliderConditionValues = facade.variable("layerSliderConditionValues")
 def value = next( layerSliderConditionValues)
-facade.map().name(layerViewIdentifier, "${layerName} (${value})" )
-facade.map().condition(layerViewIdentifier, facade.equal(facade.reference("type"), facade.value(value)))
+facade.view().name(layerViewIdentifier, "${layerName} (${value})" )
+facade.view().condition(layerViewIdentifier, facade.equal(facade.reference("type"), facade.value(value)))

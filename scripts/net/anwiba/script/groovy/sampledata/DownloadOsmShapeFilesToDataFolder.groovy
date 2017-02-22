@@ -1,11 +1,12 @@
 package net.anwiba.script.groovy.sampledata
 // Copyright (c) 2015 by Andreas W. Bartels (bartels@anwiba.de)
-import net.anwiba.scripting.api.groovy.JGISShellGroovyScript
+import net.anwiba.gis.scripting.groovy.api.JGISShellGroovyScript
 @groovy.transform.BaseScript JGISShellGroovyScript facade
 
-def source = resource("http://download.bbbike.org/osm/bbbike/Karlsruhe/Karlsruhe.osm.shp.zip")
-def folder = resource("\$SYSTEM{jgisshell.workingpath}/data/osm/Karlsruhe")
-def target = resource("\$SYSTEM{jgisshell.workingpath}/data/osm/Karlsruhe/Karlsruhe.osm.shp.zip")
+def region = "Karlsruhe"
+def source = resource("http://download.bbbike.org/osm/bbbike/${region}/${region}.osm.shp.zip")
+def folder = resource("\$SYSTEM{jgisshell.workingpath}/data/osm/${region}")
+def target = resource("\$SYSTEM{jgisshell.workingpath}/data/osm/${region}/${region}.osm.shp.zip")
 
 try {
   if (!exists(folder)) createFolder(target)

@@ -1,0 +1,10 @@
+@JssdExtends(type="response")
+@JssdPrimitivesEnabled
+{
+  @JssdImmutable
+  "class": <String> "VERSION",
+  "release": <String> null,
+  "rev": <String> null,
+  "proto_major": <int> null,
+  "proto_minor": <int> null
+}

@@ -1,0 +1,11 @@
+@JssdExtends(type="response")
+@JssdPrimitivesEnabled
+{
+  @JssdImmutable
+  "class": <String> "POLL",
+  "time": <String> null,
+  "active": <int> 0,
+  "tpv": <tpv[]> null,
+  "gst": <gst[]> null,
+  "sky": <sky[]> null
+}

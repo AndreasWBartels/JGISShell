@@ -1,0 +1,6 @@
+@JssdExtends(type="response")
+{
+  @JssdImmutable
+  "class": <String> "ERROR",
+  "message": <String> null
+}

@@ -1,0 +1,16 @@
+@JssdExtends(type="response")
+@JssdPrimitivesEnabled
+{
+  @JssdImmutable
+  "class": <String> "GST",
+  "tag": <String> null,
+  "device": <String> null,
+  "time": <String> null,
+  "rms": <double> null,
+  "major": <double> null,
+  "minor": <double> null,
+  "orient": <double> null,
+  "lat": <double> null,
+  "lon": <double> null,
+  "alt": <double> null
+}

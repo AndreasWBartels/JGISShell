@@ -95,7 +95,7 @@
     </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="AbstractScriptType">
-        <xsd:attribute name="mode" type="ModeType" default="PMT"/>
+        <xsd:attribute name="mode" type="ThreadType" default="PMT"/>
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
@@ -118,7 +118,7 @@
     </xsd:sequence>
   </xsd:complexType>
 
-  <xsd:simpleType name="ModeType">
+  <xsd:simpleType name="ThreadType">
     <xsd:restriction base="xsd:string">
       <xsd:enumeration value="EDT"/>
       <xsd:enumeration value="PMT"/>

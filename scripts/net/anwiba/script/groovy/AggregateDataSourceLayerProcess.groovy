@@ -1,5 +1,5 @@
 package net.anwiba.script.groovy
-import net.anwiba.scripting.api.groovy.JGISShellGroovyScript;
+import net.anwiba.gis.scripting.groovy.api.JGISShellGroovyScript
 @groovy.transform.BaseScript JGISShellGroovyScript facade
 
 facade.processLauncher()

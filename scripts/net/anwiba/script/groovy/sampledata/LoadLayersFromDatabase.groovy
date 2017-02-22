@@ -2,21 +2,22 @@ package net.anwiba.script.groovy
 // Copyright (c) 2015 by Andreas W. Bartels (bartels@anwiba.de)
 import java.awt.Color
 
-import net.anwiba.scripting.api.groovy.JGISShellGroovyScript
+import net.anwiba.gis.scripting.groovy.api.JGISShellGroovyScript
 @groovy.transform.BaseScript JGISShellGroovyScript facade
 
-def load = { map, coordinateReferenceSystem, database, tables, styles ->
-  map.clear();
-  map.coordinateReferenceSystem(coordinateReferenceSystem);
+def load = { view, coordinateReferenceSystem, database, tables, styles ->
+  view.clear();
+  view.coordinateReferenceSystem(coordinateReferenceSystem);
   for (def table : tables) {
     def resource = "${database}?table=${table}&column=geometry"
     def reference = facade.layerReference(resource)
-    def id = map.add(table, reference)
-    map.style(id, styles.next())
+    def id = view.add(table, reference)
+    view.style(id, styles.next())
   }
 }
 
-def database = "sqlite:spatialite://\$SYSTEM{jgisshell.workingpath}/data/osm/Karlsruhe/Karlsruhe.osm.sqlite"
+def region = "Karlsruhe"
+def database = "sqlite:spatialite://\$SYSTEM{jgisshell.workingpath}/data/osm/${region}/${region}.osm.sqlite"
 
 def landuseStyle = facade.featureStyleBuilder(facade.multipolygon())
     .addConditionalStyle(facade.equal(facade.reference("type"), facade.value("water_works")), facade.areaStyle(Color.BLACK, Color.BLUE.brighter()))
@@ -74,9 +75,9 @@ load(locator
     )
 locator.envelope(locator.worldBox());
 
-def map = facade.map()
-map.scale(1/10000);
-load(map
+def view = facade.view()
+view.scale(1/10000);
+load(view
     , facade.coordinateReferenceSystem("EPSG",3857)
     , database
     , ["landuse", "natural_1", "waterways", "buildings", "railways", "roads"] //
@@ -89,4 +90,4 @@ load(map
       facade.lineStyle(Color.BLACK,2)
     ].iterator()
     )
-map.center(map.worldBox().getCenterCoordinate());
+view.center(view.worldBox().getCenterCoordinate());

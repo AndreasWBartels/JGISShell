@@ -1,11 +1,13 @@
 package net.anwiba.script.groovy.sampledata
 // Copyright (c) 2015 by Andreas W. Bartels (bartels@anwiba.de)
-import net.anwiba.scripting.api.groovy.JGISShellGroovyScript
+import net.anwiba.gis.scripting.groovy.api.JGISShellGroovyScript
 @groovy.transform.BaseScript JGISShellGroovyScript facade
 
+def region = "Karlsruhe"
+
 def emtySpatiaLiteDatabaseFileName = "\$SYSTEM{jgisshell.workingpath}/data/template/spatialite-empty-4.n.sqlite"
-def targetFileName = "\$SYSTEM{jgisshell.workingpath}/data/osm/Karlsruhe/Karlsruhe.osm.sqlite"
-def sourceResourceUrn = "\$SYSTEM{jgisshell.workingpath}/data/osm/Karlsruhe";
+def targetFileName = "\$SYSTEM{jgisshell.workingpath}/data/osm/${region}/${region}.osm.sqlite"
+def sourceResourceUrn = "\$SYSTEM{jgisshell.workingpath}/data/osm/${region}";
 def targetResourceUrn = "sqlite:spatialite://${targetFileName}";
 
 def epsg4326 = facade.coordinateReferenceSystem("GEOGCS[\"WGS 84\", DATUM[\"World Geodetic System 1984\", SPHEROID[\"WGS 84\", 6378137.0, 298.257223563, AUTHORITY[\"EPSG\",\"7030\"]], AUTHORITY[\"EPSG\",\"6326\"]], PRIMEM[\"Greenwich\", 0.0, AUTHORITY[\"EPSG\",\"8901\"]], UNIT[\"degree\", 0.017453292519943295], AXIS[\"Geodetic longitude\", EAST], AXIS[\"Geodetic latitude\", NORTH], AUTHORITY[\"EPSG\",\"4326\"]]");
@@ -17,8 +19,6 @@ if (facade.exists(targetResource)) {
 }
 
 facade.copy(facade.resource(emtySpatiaLiteDatabaseFileName), targetResource)
-def regex = /gis[\._]osm[\._](.+)_free_1/
-
 
 def layerReferences = facade.iterable( facade.dataStoreReference(sourceResourceUrn))
 for (def sourceReference : layerReferences) {
@@ -27,17 +27,12 @@ for (def sourceReference : layerReferences) {
   }
   println "source: " + facade.toString(sourceReference)
   def layer = facade.read(sourceReference)
-//  def matcher = layer.name()
-//  def matcher = (layer.name() =~ regex)
-//  if (matcher.matches()) {
-//  def table = matcher[0][1]
-    def table = layer.name()
-    def targetLayerReferenceUrn = targetResourceUrn + "?table=${table}&column=geometry";
-    println "target: " + targetLayerReferenceUrn
-    monitor.setNote("Copy Shapefiles" + layer.name() + " in Table " + table)
-    facade.layerCopier(sourceReference, facade.layerReference(targetLayerReferenceUrn))
-        .sourceSystem(epsg4326)
-        .targetSystem(epsg31467)
-        .copy(monitor, canceler);
-//  }
+  def table = layer.name()
+  def targetLayerReferenceUrn = targetResourceUrn + "?table=${table}&column=geometry";
+  println "target: " + targetLayerReferenceUrn
+  monitor.setNote("Copy Shapefile '" + layer.name() + "' in Table " + table)
+  facade.layerCopier(sourceReference, facade.layerReference(targetLayerReferenceUrn))
+      .sourceSystem(epsg4326)
+      .targetSystem(epsg31467)
+      .copy(monitor, canceler);
 }
