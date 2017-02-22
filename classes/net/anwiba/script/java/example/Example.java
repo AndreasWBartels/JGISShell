@@ -12,7 +12,7 @@ import net.anwiba.gis.api.IFacade;
 import net.anwiba.gis.api.layer.feature.IFeatureLayer;
 import net.anwiba.gis.api.layer.feature.IFeatureLayerBuilder;
 import net.anwiba.gis.geometry.exception.GeometryConversionException;
-import net.anwiba.scripting.api.java.IScript;
+import net.anwiba.gis.scripting.java.api.IScript;
 
 public class Example implements IScript {
 
@@ -54,7 +54,7 @@ public class Example implements IScript {
               this.facade
                   .geometry("GEOMETRYCOLLECTION (POINT (5.0 5.0), LINESTRING (5.0 5.0, 15.0 8.0), POLYGON ((50.0 50.0, 50.0 150.0, 150.0 150.0, 150.0 50.0, 50.0 50.0), (75.0 75.0, 125.0 75.0, 125.0 125.0, 75.0 125.0, 75.0 75.0)))")); //$NON-NLS-1$
       final IFeatureLayer featureLayer = featureLayerBuilder.build();
-      this.facade.map().add(featureLayer);
+      this.facade.view().add(featureLayer);
 
     } catch (final GeometryConversionException exception) {
       throw new InvocationTargetException(exception);

@@ -8,7 +8,7 @@ import net.anwiba.commons.process.cancel.ICanceler;
 import net.anwiba.commons.reflection.annotation.Injection;
 import net.anwiba.commons.reflection.annotation.Nullable;
 import net.anwiba.gis.api.IFacade;
-import net.anwiba.scripting.api.java.IScript;
+import net.anwiba.gis.scripting.java.api.IScript;
 
 public class DoNothing implements IScript {
 
