@@ -192,12 +192,12 @@
       <popup:type>MAP</popup:type>
       <popup:menuitem>
         <popup:name>Map Popup Script (groovy)</popup:name>
-        <popup:applicable>
+        <script:applicable>
           <script:language>GROOVY</script:language>
           <script:groovyScript>
             <script:uri>net/anwiba/script/groovy/alwaysTrue.groovy</script:uri>
           </script:groovyScript>
-        </popup:applicable>
+        </script:applicable>
         <script:script>
           <script:language>GROOVY</script:language>
           <script:groovyScript>
@@ -210,12 +210,12 @@
       <popup:type>LAYER_MANAGER</popup:type>
       <popup:menuitem>
         <popup:name>Create Overview Layer</popup:name>
-        <popup:applicable>
+        <script:applicable>
           <script:language>GROOVY</script:language>
           <script:groovyScript>
             <script:uri>net/anwiba/script/groovy/isDataStoreReference.groovy</script:uri>
           </script:groovyScript>
-        </popup:applicable>
+        </script:applicable>
         <script:script>
           <script:language>GROOVY</script:language>
           <script:groovyScript>
