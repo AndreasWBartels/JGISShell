@@ -9,9 +9,9 @@ import net.anwiba.commons.process.cancel.ICanceler;
 import net.anwiba.commons.reflection.annotation.Injection;
 import net.anwiba.commons.reflection.annotation.Nullable;
 import net.anwiba.gis.api.IFacade;
-import net.anwiba.gis.scripting.java.api.IScript;
+import net.anwiba.gis.scripting.java.api.AbstractScript;
 
-public class LoadShapeFile implements IScript {
+public class LoadShapeFile extends AbstractScript {
 
   @Nullable
   @Injection
@@ -25,11 +25,12 @@ public class LoadShapeFile implements IScript {
   private final IFacade facade = null;
 
   @Override
-  public void excecute() throws InterruptedException, InvocationTargetException {
+  public void run() throws InterruptedException, InvocationTargetException {
     try {
-      this.facade.view().add("natural aereas", //$NON-NLS-1$
+      this.facade.view().add(
+          "natural aereas", //$NON-NLS-1$
           this.facade.layerReference("$SYSTEM{jgisshell.workingpath}/data/osm/Karlsruhe/Karlsruhe-shp/shape/natural.shp" //$NON-NLS-1$
-              ));
+          ));
     } catch (final IOException exception) {
       throw new InvocationTargetException(exception);
     }

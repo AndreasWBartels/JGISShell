@@ -8,9 +8,9 @@ import net.anwiba.commons.process.cancel.ICanceler;
 import net.anwiba.commons.reflection.annotation.Injection;
 import net.anwiba.commons.reflection.annotation.Nullable;
 import net.anwiba.gis.api.IFacade;
-import net.anwiba.gis.scripting.java.api.IScript;
+import net.anwiba.gis.scripting.java.api.AbstractScript;
 
-public class DoNothing implements IScript {
+public class DoNothing extends AbstractScript {
 
   @Nullable
   @Injection
@@ -24,7 +24,7 @@ public class DoNothing implements IScript {
   private final IFacade facade = null;
 
   @Override
-  public void excecute() throws InterruptedException, InvocationTargetException {
+  public void run() throws InterruptedException, InvocationTargetException {
     // nothing to do
   }
 

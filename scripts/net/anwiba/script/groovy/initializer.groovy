@@ -5,6 +5,7 @@ import java.util.concurrent.TimeUnit
 import net.anwiba.gis.scripting.groovy.api.JGISShellGroovyScript
 @groovy.transform.BaseScript JGISShellGroovyScript facade
 
+facade.addVariable("region", "Karlsruhe")
 facade.processLauncher()
     .description("backup")
     .delay(1)

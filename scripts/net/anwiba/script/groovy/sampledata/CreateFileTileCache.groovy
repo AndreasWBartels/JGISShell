@@ -6,10 +6,11 @@ import java.awt.Color
 import net.anwiba.gis.scripting.groovy.api.JGISShellGroovyScript
 @groovy.transform.BaseScript JGISShellGroovyScript facade
 
-def region = "Karlsruhe"
+def region = facade.variable("region", "Karlsruhe")
 def table = "landuse"
 def name = "test-tilecache"
 def epsg3857 = coordinateReferenceSystem("PROJCS[\"WGS 84 / Pseudo-Mercator\", GEOGCS[\"WGS 84\", DATUM[\"WGS 84\", SPHEROID[\"WGS 84\", 6378137, 298.257223563, AUTHORITY[\"EPSG\",\"7030\"]], TOWGS84[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], AUTHORITY[\"EPSG\",\"6326\"]], PRIMEM[\"Greenwich\", 0, AUTHORITY[\"EPSG\",\"8901\"]], UNIT[\"degree\", 0.01745329251994328, AUTHORITY[\"EPSG\", \"9122\"]], AUTHORITY[\"EPSG\",\"4326\"]], PROJECTION[\"Mercator_1SP\"], PARAMETER[\"central_meridian\",0], PARAMETER[\"scale_factor\",1], PARAMETER[\"false_easting\",0], PARAMETER[\"false_northing\",0], UNIT[\"metre\", 1, AUTHORITY[\"EPSG\",\"9001\"]], AXIS[\"X\",EAST], AXIS[\"Y\",NORTH], AUTHORITY[\"EPSG\",\"3857\"]]")
+def satelliteLayerReference = layerReference("mapbox:https://api.mapbox.com?owner=mapbox&layer=streets-satellite&token=sk.eyJ1IjoiYmFydGVscyIsImEiOiJjaW1uOW1heTcwMDFrd3hrcWo4c2JmbTZtIn0.TgKad05borKR9UQhFsMWfw")
 
 def database = "sqlite:spatialite://\$SYSTEM{jgisshell.workingpath}data/osm/${region}/${region}.osm.sqlite"
 def resource = "${database}?table=${table}&column=geometry"
@@ -73,4 +74,5 @@ def layer = facade.tileCacheLayerBuilder()
 
 facade.view().clear()
 facade.view().map(map)
+facade.view().add("Satellite",satelliteLayerReference);
 facade.view().add(layer)

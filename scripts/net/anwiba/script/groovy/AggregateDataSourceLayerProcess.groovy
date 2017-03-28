@@ -42,6 +42,6 @@ facade.processLauncher()
       }
 
       def featureLayer = builder.build()
-      map().add(featureLayer)
+      view().add(featureLayer)
     })
     .launch()

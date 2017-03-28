@@ -3,7 +3,7 @@ package net.anwiba.script.groovy.sampledata
 import net.anwiba.gis.scripting.groovy.api.JGISShellGroovyScript
 @groovy.transform.BaseScript JGISShellGroovyScript facade
 
-def region = "Karlsruhe"
+def region = facade.variable("region", "Karlsruhe")
 
 def emtySpatiaLiteDatabaseFileName = "\$SYSTEM{jgisshell.workingpath}/data/template/spatialite-empty-4.n.sqlite"
 def targetFileName = "\$SYSTEM{jgisshell.workingpath}/data/osm/${region}/${region}.osm.sqlite"

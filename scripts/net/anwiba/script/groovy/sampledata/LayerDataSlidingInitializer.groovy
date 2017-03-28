@@ -6,7 +6,7 @@ import java.awt.Color
 import net.anwiba.gis.scripting.groovy.api.JGISShellGroovyScript
 @groovy.transform.BaseScript JGISShellGroovyScript facade
 
-def region = "Karlsruhe"
+def region = facade.variable("region", "Karlsruhe")
 def table = "landuse"
 def database = "sqlite:spatialite://\$SYSTEM{jgisshell.workingpath}/data/osm/${region}/${region}.osm.sqlite"
 def resource = "${database}?table=${table}&column=geometry"

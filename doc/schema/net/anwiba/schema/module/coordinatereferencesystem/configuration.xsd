@@ -4,6 +4,7 @@
   jaxb:version="2.0"
   targetNamespace="http://www.anwiba.net/module/coordinatereferencesystem"
   xmlns:crs="http://www.anwiba.net/module/coordinatereferencesystem"
+  xmlns:script="http://www.anwiba.net/dynamic/script"
   elementFormDefault="qualified">
 
   <xsd:annotation>
@@ -13,6 +14,8 @@
       </jaxb:schemaBindings>
     </xsd:appinfo>
   </xsd:annotation>
+
+  <xsd:import namespace="http://www.anwiba.net/dynamic/script" schemaLocation="../../dynamic/script/script.xsd" />
 
   <xsd:element name="configuration" type="crs:ConfigurationType">
   </xsd:element>
@@ -26,6 +29,7 @@
     <xsd:sequence>
       <xsd:element name="url" type="xsd:string" minOccurs="0" maxOccurs="1"/>
       <xsd:element name="coordinatereferencesystems" type="crs:CoordinateReferenceSystemsType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="transformerFactories" type="crs:TransformerFactoriesType" minOccurs="0" maxOccurs="1"/>
     </xsd:sequence>
   </xsd:complexType>
 
@@ -51,4 +55,28 @@
       <xsd:element name="wkt" type="xsd:string" minOccurs="1" maxOccurs="1"/>
     </xsd:sequence>
   </xsd:complexType>
+
+  <xsd:complexType name="TransformerFactoriesType">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <jaxb:class name="TransformerFactories"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="transformerFactory" type="crs:TransformerFactoryType" minOccurs="0" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="TransformerFactoryType">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <jaxb:class name="TransformerFactory"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element ref="script:applicable" minOccurs="1" maxOccurs="1"/>
+      <xsd:element ref="script:script" minOccurs="1" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
 </xsd:schema>

@@ -16,7 +16,7 @@ def load = { view, coordinateReferenceSystem, database, tables, styles ->
   }
 }
 
-def region = "Karlsruhe"
+def region = facade.variable("region", "Karlsruhe")
 def database = "sqlite:spatialite://\$SYSTEM{jgisshell.workingpath}/data/osm/${region}/${region}.osm.sqlite"
 
 def landuseStyle = facade.featureStyleBuilder(facade.multipolygon())

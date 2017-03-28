@@ -193,4 +193,19 @@
     </xsd:sequence>
   </xsd:complexType>
 
+  <xsd:element name="applicable" type="ApplicableType">
+  </xsd:element>
+
+  <xsd:complexType name="ApplicableType">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <jaxb:class name="Applicable"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="AbstractScriptType">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+
 </xsd:schema>
