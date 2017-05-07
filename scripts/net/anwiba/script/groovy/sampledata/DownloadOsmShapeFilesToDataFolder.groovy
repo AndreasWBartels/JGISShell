@@ -11,9 +11,9 @@ def target = resource("\$SYSTEM{jgisshell.workingpath}/data/osm/${region}/${regi
 try {
   if (!exists(folder)) createFolder(target)
   if (exists(target)) delete(target)
-  monitor.setNote("Download Data")
+  monitor.setNote("Download data for region '${region}'")
   copy(source, target)
-  monitor.setNote("Extract Shapefiles")
+  monitor.setNote("Extract shapefiles of region '${region}'")
   extract(target, folder)
 } catch (Exception e) {
   error("copy osm data faild", e)
