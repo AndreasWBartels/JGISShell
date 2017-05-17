@@ -8,8 +8,8 @@ import net.anwiba.commons.message.IMessageCollector;
 import net.anwiba.commons.process.cancel.ICanceler;
 import net.anwiba.commons.reflection.annotation.Injection;
 import net.anwiba.commons.reflection.annotation.Nullable;
-import net.anwiba.gis.api.IFacade;
-import net.anwiba.gis.scripting.java.api.AbstractScript;
+import net.anwiba.spatial.api.IFacade;
+import net.anwiba.spatial.scripting.java.api.AbstractScript;
 
 public class LoadShapeFile extends AbstractScript {
 

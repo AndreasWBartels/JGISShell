@@ -2,7 +2,7 @@ package net.anwiba.script.groovy
 // Copyright (c) 2015 by Andreas W. Bartels (bartels@anwiba.de)
 import java.awt.Color
 
-import net.anwiba.gis.scripting.groovy.api.JGISShellGroovyScript
+import net.anwiba.spatial.scripting.groovy.api.JGISShellGroovyScript
 @groovy.transform.BaseScript JGISShellGroovyScript facade
 
 def load = { view, coordinateReferenceSystem, database, tables, styles ->

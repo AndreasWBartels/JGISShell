@@ -1,6 +1,6 @@
 package net.anwiba.script.groovy.sampledata
 // Copyright (c) 2015 by Andreas W. Bartels (bartels@anwiba.de)
-import net.anwiba.gis.scripting.groovy.api.JGISShellGroovyScript
+import net.anwiba.spatial.scripting.groovy.api.JGISShellGroovyScript
 @groovy.transform.BaseScript JGISShellGroovyScript facade
 
 def region = facade.variable("region", "Karlsruhe")
@@ -10,9 +10,9 @@ def target = resource("\$SYSTEM{jgisshell.workingpath}/data/osm/${region}/${regi
 
 try {
   if (!exists(folder)) createFolder(target)
-  if (exists(target)) delete(target)
+  if (!exists(target)) copy(source, target)
+//    delete(target)
   monitor.setNote("Download data for region '${region}'")
-  copy(source, target)
   monitor.setNote("Extract shapefiles of region '${region}'")
   extract(target, folder)
 } catch (Exception e) {

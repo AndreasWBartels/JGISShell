@@ -3,7 +3,7 @@ package net.anwiba.script.groovy
 
 import java.awt.Color
 
-import net.anwiba.gis.scripting.groovy.api.JGISShellGroovyScript
+import net.anwiba.spatial.scripting.groovy.api.JGISShellGroovyScript
 @groovy.transform.BaseScript JGISShellGroovyScript facade
 
 def region = facade.variable("region", "Karlsruhe")

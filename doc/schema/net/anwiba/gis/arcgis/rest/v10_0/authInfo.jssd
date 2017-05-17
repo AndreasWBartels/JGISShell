@@ -1,5 +1,0 @@
-{
-  "isTokenBasedSecurity" : <boolean> false,
-  "tokenServicesUrl" : <String> null,
-  "shortLivedTokenValidity" : <int> null
-} 

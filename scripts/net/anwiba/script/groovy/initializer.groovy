@@ -2,7 +2,7 @@
 package net.anwiba.script.groovy
 import java.util.concurrent.TimeUnit
 
-import net.anwiba.gis.scripting.groovy.api.JGISShellGroovyScript
+import net.anwiba.spatial.scripting.groovy.api.JGISShellGroovyScript
 @groovy.transform.BaseScript JGISShellGroovyScript facade
 
 // facade.addVariable("region", "Paderborn")
