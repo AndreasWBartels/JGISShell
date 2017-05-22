@@ -43,6 +43,7 @@
       <xsd:choice minOccurs="0" maxOccurs="unbounded" >
         <xsd:element name="submenu" type="MenuType"  />
         <xsd:element name="menuitem" type="MenuItemType"  />
+        <xsd:element name="separator" type="SeparatorType"  />
       </xsd:choice>
     </xsd:sequence>
   </xsd:complexType>
@@ -60,4 +61,13 @@
       <xsd:element ref="script:script" minOccurs="1" maxOccurs="1"/>
     </xsd:sequence>
   </xsd:complexType>
+
+  <xsd:complexType name="SeparatorType">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <jaxb:class name="Separator" />
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:complexType>
+
 </xsd:schema>

@@ -38,7 +38,7 @@
       <script>
         <script:language>GROOVY</script:language>
         <script:groovyScript>
-          <script:uri>net/anwiba/script/groovy/PaintPoint.groovy</script:uri>
+          <script:uri>net/anwiba/script/groovy/mode/PaintPoint.groovy</script:uri>
         </script:groovyScript>
       </script>
       <closer>
@@ -99,14 +99,33 @@
     <menu:menu>
       <menu:name>Sampledata</menu:name>
       <menu:menuitem>
-        <menu:name>Show Download Source</menu:name>
+        <menu:name>Show data home page</menu:name>
         <script:script>
           <script:language>GROOVY</script:language>
           <script:groovyScript>
-            <script:uri>net/anwiba/script/groovy/sampledata/OpenDownloadSource.groovy</script:uri>
+            <script:uri>net/anwiba/script/groovy/sampledata/ShowDataHomePage.groovy</script:uri>
           </script:groovyScript>
         </script:script>
       </menu:menuitem>
+      <menu:menuitem>
+        <menu:name>Show data copyright and license</menu:name>
+        <script:script>
+          <script:language>GROOVY</script:language>
+          <script:groovyScript>
+            <script:uri>net/anwiba/script/groovy/sampledata/ShowDataCopyrightLicense.groovy</script:uri>
+          </script:groovyScript>
+        </script:script>
+      </menu:menuitem>
+      <menu:menuitem>
+        <menu:name>Show data download page</menu:name>
+        <script:script>
+          <script:language>GROOVY</script:language>
+          <script:groovyScript>
+            <script:uri>net/anwiba/script/groovy/sampledata/ShowDataDownloadPage.groovy</script:uri>
+          </script:groovyScript>
+        </script:script>
+      </menu:menuitem>
+      <menu:separator/>
       <menu:menuitem>
         <menu:name>Download OSM Shapefiles</menu:name>
         <script:script>

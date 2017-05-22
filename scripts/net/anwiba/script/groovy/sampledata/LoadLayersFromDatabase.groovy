@@ -1,4 +1,4 @@
-package net.anwiba.script.groovy
+package net.anwiba.script.groovy.sampledata
 // Copyright (c) 2015 by Andreas W. Bartels (bartels@anwiba.de)
 import java.awt.Color
 
@@ -6,7 +6,6 @@ import net.anwiba.spatial.scripting.groovy.api.JGISShellGroovyScript
 @groovy.transform.BaseScript JGISShellGroovyScript facade
 
 def load = { view, coordinateReferenceSystem, database, tables, styles ->
-  view.clear();
   view.coordinateReferenceSystem(coordinateReferenceSystem);
   for (def table : tables) {
     def resource = "${database}?table=${table}&column=geometry"
@@ -68,15 +67,19 @@ def waterwaysStyle = facade.featureStyleBuilder(facade.multilinestring())
     .defaultStyle(facade.lineStyle(Color.BLUE,0.5))
     .build()
 
+
 def locator = facade.locator()
+locator.clear()
 load(locator
-    , targetSystem
+    , facade.coordinateReferenceSystem("EPSG",3857)
     , database
     , ["natural_1", "waterways"], [naturalStyle, waterwaysStyle].iterator()
     )
 locator.envelope(locator.worldBox());
+locator.add(0,"Streets", facade.layerReference("osm:http://{identifier}.tiles.wmflabs.org/osm/{zoomLevel}/{column}/{row}.png?identifiers=a,b,c"));
 
 def view = facade.view()
+view.clear()
 view.scale(1/10000);
 load(view
     , facade.coordinateReferenceSystem("EPSG",3857)
@@ -92,3 +95,4 @@ load(view
     ].iterator()
     )
 view.center(view.worldBox().getCenterCoordinate());
+view.add(0,"Streets", facade.layerReference("osm:http://{identifier}.tiles.wmflabs.org/osm/{zoomLevel}/{column}/{row}.png?identifiers=a,b,c"));

@@ -1,4 +1,7 @@
 package net.anwiba.script.groovy
+
+import java.awt.Color;
+
 import net.anwiba.spatial.scripting.groovy.api.JGISShellGroovyScript
 @groovy.transform.BaseScript JGISShellGroovyScript facade
 
@@ -21,7 +24,7 @@ facade.processLauncher()
       def layerReferences = facade.iterable( dataStoreReference )
 
       for (def layerRef : layerReferences) {
-        def layerUrl =  toString(layerRef)
+        def layerUrl =  facade.toString(layerRef)
         try {
           println "load layer ${layerUrl}"
           def layer = read(layerRef)
@@ -42,6 +45,10 @@ facade.processLauncher()
       }
 
       def featureLayer = builder.build()
-      view().add(featureLayer)
+      def style = facade.featureStyleBuilder(facade.polygon())
+                        .defaultStyle(facade.areaStyle(Color.BLACK))
+                        .build()
+      def id = view().add(featureLayer)
+      view().style(id, style)
     })
     .launch()

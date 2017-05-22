@@ -3,6 +3,4 @@ package net.anwiba.script.groovy.sampledata
 import net.anwiba.spatial.scripting.groovy.api.JGISShellGroovyScript
 @groovy.transform.BaseScript JGISShellGroovyScript facade
 
-def region = facade.variable("region", "Karlsruhe")
-def source = resource("http://download.bbbike.org/osm/bbbike/${region}/")
-show(source)
+show(resource("http://download.bbbike.org/osm/"))
