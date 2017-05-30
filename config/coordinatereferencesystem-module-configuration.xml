@@ -3,45 +3,110 @@
 
   <url>http://spatialreference.org/ref/${authority}/${code}/ogcwkt/</url>
 
-  <coordinatereferencesystems>
+  <coordinateReferenceSystems>
 
 <!--
-    <coordinatereferencesystem>
+    <coordinateReferenceSystem>
       <authority></authority>
       <wkt></wkt>
-    </coordinatereferencesystem>
+    </coordinateReferenceSystem>
  -->
 
-    <coordinatereferencesystem>
+    <coordinateReferenceSystem>
+      <authority>EPSG:4326</authority>
+      <wkt>GEOGCS["WGS 84", DATUM["WGS_1984", SPHEROID["WGS 84",6378137,298.257223563, AUTHORITY["EPSG","7030"]], TOWGS84[0, 0, 0, 0, 0, 0, 0], AUTHORITY["EPSG","6326"]], PRIMEM["Greenwich",0, AUTHORITY["EPSG","8901"]], UNIT["degree",0.0174532925199433, AUTHORITY["EPSG","9122"]], AUTHORITY["EPSG","4326"]]</wkt>
+    </coordinateReferenceSystem>
+
+    <coordinateReferenceSystem>
+      <authority>EPSG:4314</authority>
+      <wkt>GEOGCS["DHDN", DATUM["Deutsches_Hauptdreiecksnetz", SPHEROID["Bessel 1841", 6377397.155, 299.1528128], TOWGS84[598.1, 73.7, 418.2, 0.202, 0.045, -2.455, 6.7]], PRIMEM["greenwich", 0.0], UNIT["degree", 0.0174532925199433],AUTHORITY["EPSG", 4314]]</wkt>
+    </coordinateReferenceSystem>
+
+    <coordinateReferenceSystem>
+      <authority>EPSG:4258</authority>
+      <wkt>GEOGCS["ETRS89", DATUM["European_Terrestrial_Reference_System_1989", SPHEROID["GRS 1980", 6378137.0, 298.257222101], TOWGS84[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]], PRIMEM["greenwich", 0.0], UNIT["degree", 0.0174532925199433],AUTHORITY["EPSG", 4258]]</wkt>
+    </coordinateReferenceSystem>
+
+    <!-- WGS 84 / Pseudo-Mercator -->
+
+    <coordinateReferenceSystem>
       <authority>EPSG:3857</authority>
       <wkt>PROJCS["WGS 84 / Pseudo-Mercator", GEOGCS["WGS 84", DATUM["WGS_1984", SPHEROID["WGS 84",6378137,298.257223563, AUTHORITY["EPSG","7030"]], TOWGS84[0, 0, 0, 0, 0, 0, 0], AUTHORITY["EPSG","6326"]], PRIMEM["Greenwich",0, AUTHORITY["EPSG","8901"]], UNIT["degree",0.0174532925199433, AUTHORITY["EPSG","9122"]], AUTHORITY["EPSG","4326"]], PROJECTION["Mercator_1SP"], PARAMETER["central_meridian",0], PARAMETER["scale_factor",1], PARAMETER["false_easting",0], PARAMETER["false_northing",0], UNIT["metre",1, AUTHORITY["EPSG","9001"]], AXIS["X",EAST], AXIS["Y",NORTH], AUTHORITY["EPSG","3857"]]</wkt>
-    </coordinatereferencesystem>
+    </coordinateReferenceSystem>
 
-    <coordinatereferencesystem>
-      <authority>EPSG:4326</authority>
-      <wkt>GEOGCS["WGS 84", DATUM["WGS_1984", SPHEROID["WGS 84", 6378137.0, 298.257223563]], PRIMEM["greenwich", 0.0], UNIT["degree", 0.01745329251994328], AUTHORITY["EPSG","4326"]]</wkt>
-    </coordinatereferencesystem>
+    <!-- DHDN / 3-degree Gauss-Kruger -->
 
-    <coordinatereferencesystem>
+    <coordinateReferenceSystem>
       <authority>EPSG:31466</authority>
-      <wkt>PROJCS["DHDN / 3-degree Gauss-Kruger zone 2",GEOGCS["DHDN", DATUM["Deutsches_Hauptdreiecksnetz", SPHEROID["Bessel 1841", 6377397.155, 299.1528128], TOWGS84[598.1, 73.7, 418.2, 0.202, 0.045, -2.455, 6.7]], PRIMEM["greenwich", 0.0], UNIT["degree", 0.01745329251994328]],PROJECTION["TRANSVERSE_MERCATOR"],PARAMETER["central_meridian", 6.0], PARAMETER["false_easting", 2500000.0], PARAMETER["false_northing", 0.0], PARAMETER["latitude_of_origin", 0.0], PARAMETER["scale_factor", 1.0], UNIT["metre", 1.0],AXIS["y",EAST],AXIS["x",NORTH], AUTHORITY["EPSG","31466"]]</wkt>
-    </coordinatereferencesystem>
+      <wkt>PROJCS["DHDN / 3-degree Gauss-Kruger zone 2",GEOGCS["DHDN", DATUM["Deutsches_Hauptdreiecksnetz", SPHEROID["Bessel 1841", 6377397.155, 299.1528128], TOWGS84[598.1, 73.7, 418.2, 0.202, 0.045, -2.455, 6.7]], PRIMEM["greenwich", 0.0], UNIT["degree", 0.0174532925199433],AUTHORITY["EPSG", 4314]],PROJECTION["TRANSVERSE_MERCATOR"],PARAMETER["false_easting", 2500000.0], PARAMETER["false_northing", 0.0], PARAMETER["latitude_of_origin", 0.0], PARAMETER["central_meridian", 6.0], PARAMETER["scale_factor", 1.0], UNIT["metre", 1.0],AXIS["x",NORTH],AXIS["y",EAST],AUTHORITY["EPSG", 31466]]</wkt>
+    </coordinateReferenceSystem>
 
-    <coordinatereferencesystem>
+    <coordinateReferenceSystem>
       <authority>EPSG:31467</authority>
-      <wkt>PROJCS["DHDN / 3-degree Gauss-Kruger zone 3",GEOGCS["DHDN", DATUM["Deutsches_Hauptdreiecksnetz", SPHEROID["Bessel 1841", 6377397.155, 299.1528128], TOWGS84[598.1, 73.7, 418.2, 0.202, 0.045, -2.455, 6.7]], PRIMEM["greenwich", 0.0], UNIT["degree", 0.01745329251994328]],PROJECTION["TRANSVERSE_MERCATOR"],PARAMETER["central_meridian", 9.0], PARAMETER["false_easting", 3500000.0], PARAMETER["false_northing", 0.0], PARAMETER["latitude_of_origin", 0.0], PARAMETER["scale_factor", 1.0], UNIT["metre", 1.0],AXIS["y",EAST],AXIS["x",NORTH], AUTHORITY["EPSG","31467"]]</wkt>
-    </coordinatereferencesystem>
+      <wkt>PROJCS["DHDN / 3-degree Gauss-Kruger zone 3",GEOGCS["DHDN", DATUM["Deutsches_Hauptdreiecksnetz", SPHEROID["Bessel 1841", 6377397.155, 299.1528128], TOWGS84[598.1, 73.7, 418.2, 0.202, 0.045, -2.455, 6.7]], PRIMEM["greenwich", 0.0], UNIT["degree", 0.0174532925199433],AUTHORITY["EPSG", 4314]],PROJECTION["TRANSVERSE_MERCATOR"],PARAMETER["false_easting", 3500000.0], PARAMETER["false_northing", 0.0], PARAMETER["latitude_of_origin", 0.0], PARAMETER["central_meridian", 9.0], PARAMETER["scale_factor", 1.0], UNIT["metre", 1.0],AXIS["x",NORTH],AXIS["y",EAST],AUTHORITY["EPSG", 31467]]</wkt>
+    </coordinateReferenceSystem>
 
-    <coordinatereferencesystem>
+    <coordinateReferenceSystem>
       <authority>EPSG:31468</authority>
-      <wkt>PROJCS["DHDN / 3-degree Gauss-Kruger zone 4",GEOGCS["DHDN", DATUM["Deutsches_Hauptdreiecksnetz", SPHEROID["Bessel 1841", 6377397.155, 299.1528128], TOWGS84[598.1, 73.7, 418.2, 0.202, 0.045, -2.455, 6.7]], PRIMEM["greenwich", 0.0], UNIT["degree", 0.01745329251994328]],PROJECTION["TRANSVERSE_MERCATOR"],PARAMETER["central_meridian", 12.0], PARAMETER["false_easting", 4500000.0], PARAMETER["false_northing", 0.0], PARAMETER["latitude_of_origin", 0.0], PARAMETER["scale_factor", 1.0], UNIT["metre", 1.0],AXIS["y",EAST],AXIS["x",NORTH], AUTHORITY["EPSG","31468"]]</wkt>
-    </coordinatereferencesystem>
+      <wkt>PROJCS["DHDN / 3-degree Gauss-Kruger zone 4",GEOGCS["DHDN", DATUM["Deutsches_Hauptdreiecksnetz", SPHEROID["Bessel 1841", 6377397.155, 299.1528128], TOWGS84[598.1, 73.7, 418.2, 0.202, 0.045, -2.455, 6.7]], PRIMEM["greenwich", 0.0], UNIT["degree", 0.0174532925199433],AUTHORITY["EPSG", 4314]],PROJECTION["TRANSVERSE_MERCATOR"],PARAMETER["false_easting", 4500000.0], PARAMETER["false_northing", 0.0], PARAMETER["latitude_of_origin", 0.0], PARAMETER["central_meridian", 12.0], PARAMETER["scale_factor", 1.0], UNIT["metre", 1.0],AXIS["x",NORTH],AXIS["y",EAST],AUTHORITY["EPSG", 31468]]</wkt>
+    </coordinateReferenceSystem>
 
-    <coordinatereferencesystem>
+    <coordinateReferenceSystem>
       <authority>EPSG:31469</authority>
-      <wkt>PROJCS["DHDN / 3-degree Gauss-Kruger zone 5",GEOGCS["DHDN", DATUM["Deutsches_Hauptdreiecksnetz", SPHEROID["Bessel 1841", 6377397.155, 299.1528128], TOWGS84[598.1, 73.7, 418.2, 0.202, 0.045, -2.455, 6.7]], PRIMEM["greenwich", 0.0], UNIT["degree", 0.01745329251994328]],PROJECTION["TRANSVERSE_MERCATOR"],PARAMETER["central_meridian", 15.0], PARAMETER["false_easting", 5500000.0], PARAMETER["false_northing", 0.0], PARAMETER["latitude_of_origin", 0.0], PARAMETER["scale_factor", 1.0], UNIT["metre", 1.0],AXIS["y",EAST],AXIS["x",NORTH], AUTHORITY["EPSG","31469"]]</wkt>
-    </coordinatereferencesystem>
+      <wkt>PROJCS["DHDN / 3-degree Gauss-Kruger zone 5",GEOGCS["DHDN", DATUM["Deutsches_Hauptdreiecksnetz", SPHEROID["Bessel 1841", 6377397.155, 299.1528128], TOWGS84[598.1, 73.7, 418.2, 0.202, 0.045, -2.455, 6.7]], PRIMEM["greenwich", 0.0], UNIT["degree", 0.0174532925199433],AUTHORITY["EPSG", 4314]],PROJECTION["TRANSVERSE_MERCATOR"],PARAMETER["false_easting", 5500000.0], PARAMETER["false_northing", 0.0], PARAMETER["latitude_of_origin", 0.0], PARAMETER["central_meridian", 15.0], PARAMETER["scale_factor", 1.0], UNIT["metre", 1.0],AXIS["x",NORTH],AXIS["y",EAST],AUTHORITY["EPSG", 31469]]</wkt>
+    </coordinateReferenceSystem>
 
-  </coordinatereferencesystems>
+    <!-- ETRS89 / UTM -->
+
+    <coordinateReferenceSystem>
+      <authority>EPSG:25831</authority>
+      <wkt>PROJCS["ETRS89 / UTM zone 31N",GEOGCS["ETRS89", DATUM["European_Terrestrial_Reference_System_1989", SPHEROID["GRS 1980", 6378137.0, 298.257222101], TOWGS84[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]], PRIMEM["greenwich", 0.0], UNIT["degree", 0.0174532925199433],AUTHORITY["EPSG", 4258]],PROJECTION["TRANSVERSE_MERCATOR"],PARAMETER["false_easting", 500000.0], PARAMETER["false_northing", 0.0], PARAMETER["latitude_of_origin", 0.0], PARAMETER["central_meridian", 3.0], PARAMETER["scale_factor", 0.9996], UNIT["metre", 1.0],AXIS["easting",EAST],AXIS["northing",NORTH],AUTHORITY["EPSG", 25831]]</wkt>
+    </coordinateReferenceSystem>
+
+    <coordinateReferenceSystem>
+      <authority>EPSG:25832</authority>
+      <wkt>PROJCS["ETRS89 / UTM zone 32N",GEOGCS["ETRS89", DATUM["European_Terrestrial_Reference_System_1989", SPHEROID["GRS 1980", 6378137.0, 298.257222101], TOWGS84[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]], PRIMEM["greenwich", 0.0], UNIT["degree", 0.0174532925199433],AUTHORITY["EPSG", 4258]],PROJECTION["TRANSVERSE_MERCATOR"],PARAMETER["false_easting", 500000.0], PARAMETER["false_northing", 0.0], PARAMETER["latitude_of_origin", 0.0], PARAMETER["central_meridian", 9.0], PARAMETER["scale_factor", 0.9996], UNIT["metre", 1.0],AXIS["easting",EAST],AXIS["northing",NORTH],AUTHORITY["EPSG", 25832]]</wkt>
+    </coordinateReferenceSystem>
+
+    <coordinateReferenceSystem>
+      <authority>EPSG:25833</authority>
+      <wkt>PROJCS["ETRS89 / UTM zone 33N",GEOGCS["ETRS89", DATUM["European_Terrestrial_Reference_System_1989", SPHEROID["GRS 1980", 6378137.0, 298.257222101], TOWGS84[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]], PRIMEM["greenwich", 0.0], UNIT["degree", 0.0174532925199433],AUTHORITY["EPSG", 4258]],PROJECTION["TRANSVERSE_MERCATOR"],PARAMETER["false_easting", 500000.0], PARAMETER["false_northing", 0.0], PARAMETER["latitude_of_origin", 0.0], PARAMETER["central_meridian", 15.0], PARAMETER["scale_factor", 0.9996], UNIT["metre", 1.0],AXIS["easting",EAST],AXIS["northing",NORTH],AUTHORITY["EPSG", 25833]]</wkt>
+    </coordinateReferenceSystem>
+
+  </coordinateReferenceSystems>
+
+<!--   <transformers> -->
+<!--     <ntv2Transformer> -->
+<!--       <sourceCoordinateReferenceSystem>EPSG:4314</sourceCoordinateReferenceSystem> -->
+<!--       <targetCoordinateReferenceSystem>EPSG:4258</targetCoordinateReferenceSystem> -->
+<!--       <gridShiftFile>$SYSTEM{jgisshell.workingpath}/data/ntv2/BETA2007.gsb</gridShiftFile> -->
+<!--       <boundingBox> -->
+<!--         <minimum> -->
+<!--           <longitude>5.5</longitude> -->
+<!--           <latitude>47</latitude> -->
+<!--         </minimum> -->
+<!--         <maximum> -->
+<!--           <longitude>15.666667</longitude> -->
+<!--           <latitude>55.3</latitude> -->
+<!--         </maximum> -->
+<!--       </boundingBox> -->
+<!--     </ntv2Transformer> -->
+
+<!--     <ntv2Transformer> -->
+<!--       <sourceCoordinateReferenceSystem>EPSG:4326</sourceCoordinateReferenceSystem> -->
+<!--       <targetCoordinateReferenceSystem>EPSG:4258</targetCoordinateReferenceSystem> -->
+<!--       <gridShiftFile>$SYSTEM{jgisshell.workingpath}/data/ntv2/BETA2007.gsb</gridShiftFile> -->
+<!--       <boundingBox> -->
+<!--         <minimum> -->
+<!--           <longitude>5.5</longitude> -->
+<!--           <latitude>47</latitude> -->
+<!--         </minimum> -->
+<!--         <maximum> -->
+<!--           <longitude>15.666667</longitude> -->
+<!--           <latitude>55.3</latitude> -->
+<!--         </maximum> -->
+<!--       </boundingBox> -->
+<!--     </ntv2Transformer> -->
+<!--   </transformers> -->
 
 </configuration>

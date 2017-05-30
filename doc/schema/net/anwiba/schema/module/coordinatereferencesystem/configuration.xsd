@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-  xmlns:jaxb="http://java.sun.com/xml/ns/jaxb"
-  jaxb:version="2.0"
-  targetNamespace="http://www.anwiba.net/module/coordinatereferencesystem"
-  xmlns:crs="http://www.anwiba.net/module/coordinatereferencesystem"
-  xmlns:script="http://www.anwiba.net/dynamic/script"
-  elementFormDefault="qualified">
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jaxb="http://java.sun.com/xml/ns/jaxb" jaxb:version="2.0" targetNamespace="http://www.anwiba.net/module/coordinatereferencesystem" xmlns:crs="http://www.anwiba.net/module/coordinatereferencesystem"
+  xmlns:script="http://www.anwiba.net/dynamic/script" elementFormDefault="qualified">
 
   <xsd:annotation>
     <xsd:appinfo>
@@ -26,8 +21,48 @@
     </xsd:annotation>
     <xsd:sequence>
       <xsd:element name="url" type="xsd:string" minOccurs="0" maxOccurs="1"/>
-      <xsd:element name="coordinatereferencesystems" type="crs:CoordinateReferenceSystemsType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="coordinateReferenceSystems" type="crs:CoordinateReferenceSystemsType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="transformers" type="crs:TransformersType" minOccurs="0" maxOccurs="1"/>
     </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="TransformersType">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <jaxb:class name="Transformers"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="ntv2Transformer" type="crs:Ntv2TransformerType" minOccurs="0" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="AbstractTransformerType">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <jaxb:class name="AbstractTransformer"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="sourceCoordinateReferenceSystem" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="targetCoordinateReferenceSystem" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Ntv2TransformerType">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <jaxb:class name="Ntv2Transformer"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="crs:AbstractTransformerType">
+        <xsd:sequence>
+          <xsd:element name="gridShiftFile" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+          <xsd:element name="boundingBox" type="crs:GeographicBoundingBoxType" minOccurs="1" maxOccurs="1"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
   </xsd:complexType>
 
   <xsd:complexType name="CoordinateReferenceSystemsType">
@@ -37,7 +72,7 @@
       </xsd:appinfo>
     </xsd:annotation>
     <xsd:sequence>
-      <xsd:element name="coordinatereferencesystem" type="crs:CoordinateReferenceSystemType" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element name="coordinateReferenceSystem" type="crs:CoordinateReferenceSystemType" minOccurs="0" maxOccurs="unbounded"/>
     </xsd:sequence>
   </xsd:complexType>
 
@@ -50,6 +85,30 @@
     <xsd:sequence>
       <xsd:element name="authority" type="xsd:string" minOccurs="1" maxOccurs="1"/>
       <xsd:element name="wkt" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="GeographicBoundingBoxType">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <jaxb:class name="GeographicBoundingBox"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="minimum" type="crs:GeographicCoordinateType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="maximum" type="crs:GeographicCoordinateType" minOccurs="1" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="GeographicCoordinateType">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <jaxb:class name="GeographicCoordinate"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="longitude" type="xsd:double" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="latitude" type="xsd:double" minOccurs="1" maxOccurs="1"/>
     </xsd:sequence>
   </xsd:complexType>
 
