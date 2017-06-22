@@ -35,7 +35,7 @@ JGISShell was created by [Andreas W. Bartels](https://github.com/AndreasWBartels
 
 ## License
 
-The license is a reduced [BSD](https://www.freebsd.org/copyright/freebsd-license.html) like binary usage license.
+The license is a reduced [BSD](https://www.freebsd.org/copyright/freebsd-license.html) like binary license.
 See [license.txt](https://github.com/AndreasWBartels/JGISShell/blob/master/license.txt) for more information.
 
 ## Installation
