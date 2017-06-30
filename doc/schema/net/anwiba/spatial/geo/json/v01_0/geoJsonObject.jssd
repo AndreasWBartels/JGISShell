@@ -1,0 +1,7 @@
+@JssdFactory
+{
+  @JssdImmutable
+  "type" : <String> "GeoJsonObject",
+  "crs": <crs> null,
+  "bbox": <double[]> null
+}
