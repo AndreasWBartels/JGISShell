@@ -1,4 +1,5 @@
 @JssdFactory
+@JssdUnknownMember
 {
   @JssdImmutable
   "type" : <String> "GeoJsonObject",

@@ -1,5 +1,6 @@
 @JssdExtends(type="geoJsonObject")
 @JssdFactory
+@JssdUnknownMember
 {
   @JssdImmutable
   "type" : <String> "Geometry"

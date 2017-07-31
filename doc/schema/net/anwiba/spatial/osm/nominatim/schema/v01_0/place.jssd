@@ -1,0 +1,17 @@
+@JssdUnknownMember
+{
+  "place_id" : <String> null,
+  "licence" : <String> null,
+  "osm_type" : <String> null,
+  "osm_id" : <String> null,
+  "boundingbox" : <String[]> null,
+  "lat" : <String> null,
+  "lon" : <String> null,
+  "display_name" : <String> null,
+  "place_rank" : <String> null,
+  "category":   <String> null,
+  "type" : <String> null,
+  "importance" : <double> 0,
+  "address" : <address> null,
+  "geojson" : <net.anwiba.spatial.geo.json.v01_0.Geometry> null
+}

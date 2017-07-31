@@ -1,0 +1,16 @@
+@JssdUnknownMember
+{
+   "house_number" : <String> null,
+   "road" : <String> null,
+   "neighbourhood" : <String> null,
+   "suburb" : <String> null,
+   "city_district" : <String> null,
+   "city" : <String> null,
+   "county" : <String> null,
+   "state_district" : <String> null,
+   "state" : <String> null,
+   "postcode" : <String> null,
+   "country" : <String> null,
+   "country_code" : <String> null,
+   "continent" : <String> null
+}

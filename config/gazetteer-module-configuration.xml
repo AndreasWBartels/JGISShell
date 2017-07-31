@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration xmlns="http://www.anwiba.net/module/gazetteer">
+  <!-- mapzen -->
+<!--   <service> -->
+<!--     <name>mapzen</name> -->
+<!--     <type>GEOJSON</type> -->
+<!--     <url>https://search.mapzen.com/v1/search?text=${query}&amp;size=${size}&amp;api_key=${key}</url> -->
+<!--     <boundary>&amp;boundary.rect.min_lat=${minX}&amp;boundary.rect.min_lon=${minY}&amp;boundary.rect.max_lat=${maxX}&amp;boundary.rect.max_lon=${maxY}</boundary> -->
+<!--     <values> -->
+<!--       <value name="size" value="20"/> -->
+<!--       <value name="key" value=" - key - "/> -->
+<!--     </values> -->
+<!--     <label>{0}</label> -->
+<!--     <properties> -->
+<!--       <property name="label"/> -->
+<!--     </properties> -->
+<!--     <maximumZoomValue>0.0001</maximumZoomValue> -->
+<!--   </service> -->
+  <!-- mapzen -->
+
+  <!-- nominatim -->
+  <!-- see: http://wiki.openstreetmap.org/wiki/Nominatim and https://operations.osmfoundation.org/policies/nominatim/ -->
+  <service>
+    <name>nominatim osm</name>
+    <type>NOMINATIM</type>
+    <url>http://nominatim.openstreetmap.org/search/${query}?format=jsonv2&amp;addressdetails=1&amp;limit=${limit}&amp;polygon_geojson=1</url>
+    <values>
+      <value name="limit" value="20"/>
+    </values>
+    <label>{0}</label>
+    <properties>
+      <property name="display_name"/>
+    </properties>
+    <maximumZoomValue>0.0001</maximumZoomValue>
+  </service>
+  <!-- nominatim -->
+
+  <!-- mapbox -->
+  <!-- <service> -->
+  <!-- <name>mapbox</name> -->
+  <!-- <type>GEOJSON</type> -->
+  <!-- <url>https://api.mapbox.com/geocoding/v5/mapbox.places/${query}.json?limit=${limit}&amp;access_token=${access-token}</url> -->
+  <!-- <values> -->
+  <!-- <value name="limit" value="20"/> -->
+  <!-- <value name="access-token" value=" - key - ""/> -->
+  <!-- </values> -->
+  <!-- <featureMemberToPropertiesMappings> -->
+  <!-- <mapping member="text" property="text"/> -->
+  <!-- <mapping member="place_name" property="place_name"/> -->
+  <!-- <mapping member="place_type" property="place_type"/> -->
+  <!-- <mapping member="address" property="address"/> -->
+  <!-- </featureMemberToPropertiesMappings> -->
+  <!-- <label>{0}</label> -->
+  <!-- <properties> -->
+  <!-- <property name="place_name"/> -->
+  <!-- </properties> -->
+  <!-- <maximumZoomValue>0.0001</maximumZoomValue> -->
+  <!-- </service> -->
+  <!-- mapbox -->
+
+</configuration>
