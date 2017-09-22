@@ -41,7 +41,7 @@
   <!-- <type>GEOJSON</type> -->
   <!-- <url>https://api.mapbox.com/geocoding/v5/mapbox.places/${query}.json?limit=${limit}&amp;access_token=${access-token}</url> -->
   <!-- <values> -->
-  <!-- <value name="limit" value="20"/> -->
+  <!-- <value name="limit" value="20"/>   -->
   <!-- <value name="access-token" value=" - key - ""/> -->
   <!-- </values> -->
   <!-- <featureMemberToPropertiesMappings> -->
