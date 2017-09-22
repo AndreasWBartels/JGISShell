@@ -1,0 +1,6 @@
+@JssdExtends(type="overpassObject")
+{
+  @JssdImmutable
+  "type": <String> "way",
+  "nodes": <Object[]> null
+}

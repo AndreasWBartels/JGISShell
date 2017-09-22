@@ -25,6 +25,7 @@ net.anwiba.spatial.api.layer.raster
 net.anwiba.spatial.api.map
 net.anwiba.spatial.api.process
 net.anwiba.spatial.api.raster
+net.anwiba.spatial.api.report
 net.anwiba.spatial.api.transformer
 net.anwiba.spatial.coordinate
 net.anwiba.spatial.coordinate.transform

@@ -1,0 +1,6 @@
+ {
+  "minlat": <double> 0,
+  "minlon": <double> 0,
+  "maxlat": <double> 0,
+  "maxlon": <double> 0
+}

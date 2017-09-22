@@ -1,0 +1,5 @@
+@JssdExtends(type="overpassObject")
+{
+  @JssdImmutable
+  "type": <String> "node"
+}

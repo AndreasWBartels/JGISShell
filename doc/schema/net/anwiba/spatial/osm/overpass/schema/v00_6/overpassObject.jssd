@@ -1,0 +1,16 @@
+@JssdFactory
+@JssdUnknownMember
+{
+  @JssdImmutable
+  "type" : <String> "OverpassObject",
+  "id": <Object> null,
+  "bounds": <bounds> null,
+  "lat": <double> null,
+  "lon": <double> null,
+  "timestamp": <String> null,
+  "version":  <int> null,
+  "changeset": <int> null,
+  "user": <String> null,
+  "uid": <Object> null,
+  "tags": <tags> null
+}

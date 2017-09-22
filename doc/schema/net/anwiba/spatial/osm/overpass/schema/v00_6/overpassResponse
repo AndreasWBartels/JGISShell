@@ -1,0 +1,6 @@
+{
+  "version": <double> null,
+  "generator": <String> "Overpass API",
+  "osm3s": <osm3s> null,
+  "elements": <overpassObject[]> null
+}
