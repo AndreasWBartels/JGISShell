@@ -1,4 +1,5 @@
 # JGISShell
+see [DOAG Geodata Days 2017 slides](https://github.com/AndreasWBartels/JGISShell/wiki/Presentations)
 Java GIS Viewer and Layer Datastore Manager
 
 JGSShell is a Java based spatial data viewer and layer datastore manager. It consist of 4 parts, a viewer, a layer manager, a scripting API (groovy and Java) and a URL concept to access layer and datastores.
