@@ -1,0 +1,5 @@
+@JssdFactory(type="delegation", factory="extravaluefactory:net.anwiba.spatial.ckan.json.factory.ExtraValueFactory",arguments="key:java.lang.String, value:java.lang.Object")
+{
+ "key" : <String> null,
+ "value" : <Object> null
+}

@@ -1,0 +1,4 @@
+@JssdExtends(type="result")
+{
+  "results": <dataset[]> null
+}

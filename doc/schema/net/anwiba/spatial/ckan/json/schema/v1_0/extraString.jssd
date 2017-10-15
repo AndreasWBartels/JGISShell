@@ -1,0 +1,4 @@
+@JssdExtends(type="extra")
+{
+  "value" : <String> null
+}

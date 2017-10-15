@@ -1,0 +1,4 @@
+@JssdExtends(type="response")
+{
+  "result": <user[]> null
+}

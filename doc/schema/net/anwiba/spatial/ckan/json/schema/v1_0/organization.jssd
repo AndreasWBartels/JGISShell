@@ -1,0 +1,13 @@
+{
+  "description": <String> null,
+  "created": <dateString> null,
+  "title": <String> null,
+  "name": <String> null,
+  "is_organization": <boolean> true,
+  "state": <String> null,
+  "image_url": <String> null,
+  "revision_id": <String> null,
+  "type": <String> null,
+  "id": <String> null,
+  "approval_status": <String> null
+}

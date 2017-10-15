@@ -1,8 +1,6 @@
-@JssdFactory
+@JssdFactory(type="typeinfo",types="featureCollection,feature,geometry,point,lineString,polygon,multiPoint,multiLineString,multiPolygon,geometryCollection")
 @JssdUnknownMember
 {
-  @JssdImmutable
-  "type" : <String> "GeoJsonObject",
   "crs": <crs> null,
   "bbox": <double[]> null
 }

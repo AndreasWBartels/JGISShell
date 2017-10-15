@@ -1,0 +1,15 @@
+{
+  "openid": <String> null,
+  "about": <String> null,
+  "display_name": <String> null,
+  "name": <String> null,
+  "created": <dateString> null,
+  "email_hash": <String> null,
+  "sysadmin": <boolean> false,
+  "activity_streams_email_notifications": <boolean> false,
+  "state": <String> null,
+  "number_of_edits": <int> 0,
+  "fullname": <String> null,
+  "id": <String> null,
+  "number_created_packages": <int> 0
+}

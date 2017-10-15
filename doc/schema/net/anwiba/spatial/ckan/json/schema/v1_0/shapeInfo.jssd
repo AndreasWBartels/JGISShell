@@ -1,0 +1,10 @@
+{
+  "error_class": <String> "None",
+  "layer_fields": <field[]> null,
+  "layer_id": <String> "None",
+  "error_type": <String> "None",
+  "bounding_box": <String> null,
+  "state": <String> null,
+  "timestamp": <dateString> null,
+  "message": <String> null
+}

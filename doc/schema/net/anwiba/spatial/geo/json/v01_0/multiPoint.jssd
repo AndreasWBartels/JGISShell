@@ -1,6 +1,7 @@
 @JssdExtends(type="geometry")
 {
   @JssdImmutable
+  @JssdNoProperty
   "type": <String> "MultiPoint",
   "coordinates": <double[][]> null
 }

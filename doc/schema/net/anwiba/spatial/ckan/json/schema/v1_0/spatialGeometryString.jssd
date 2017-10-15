@@ -1,0 +1,4 @@
+@JssdValue(type="net.anwiba.spatial.geo.json.v01_0.Geometry")
+{
+  "value" : <String> null
+}

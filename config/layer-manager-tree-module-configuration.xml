@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration xmlns="http://www.anwiba.net/module/layer/manager/tree">
+
+  <folder>
+    <name>Maps For Free</name>
+    <layer>
+      <name>Relief</name>
+      <url><![CDATA[osm:https://maps-for-free.com/layer/relief/z{zoomLevel}/row{row}/{zoomLevel}_{column}-{row}.jpg?name=Relief]]></url>
+    </layer>
+    <layer>
+      <name>Water</name>
+      <url><![CDATA[osm:https://maps-for-free.com/layer/water/z{zoomLevel}/row{row}/{zoomLevel}_{column}-{row}.gif?name=Water]]></url>
+    </layer>
+    <layer>
+      <name>Admin</name>
+      <url><![CDATA[osm:https://maps-for-free.com/layer/admin/z{zoomLevel}/row{row}/{zoomLevel}_{column}-{row}.gif?name=Admin]]></url>
+    </layer>
+    <layer>
+      <name>Streets</name>
+      <url><![CDATA[osm:https://maps-for-free.com/layer/streets/z{zoomLevel}/row{row}/{zoomLevel}_{column}-{row}.gif?name=Streets]]></url>
+    </layer>
+    <layer>
+      <name>Country</name>
+      <url><![CDATA[osm:https://maps-for-free.com/layer/country/z{zoomLevel}/row{row}/{zoomLevel}_{column}-{row}.png?name=Country]]></url>
+    </layer>
+    <layer>
+      <name>Crop</name>
+      <url><![CDATA[osm:https://maps-for-free.com/layer/crop/z{zoomLevel}/row{row}/{zoomLevel}_{column}-{row}.gif?name=Crop]]></url>
+    </layer>
+    <layer>
+      <name>Grass</name>
+      <url><![CDATA[osm:https://maps-for-free.com/layer/grass/z{zoomLevel}/row{row}/{zoomLevel}_{column}-{row}.gif?name=Grass]]></url>
+    </layer>
+    <layer>
+      <name>Forest</name>
+      <url><![CDATA[osm:https://maps-for-free.com/layer/forest/z{zoomLevel}/row{row}/{zoomLevel}_{column}-{row}.gif?name=Forest]]></url>
+    </layer>
+    <layer>
+      <name>Tundra</name>
+      <url><![CDATA[osm:https://maps-for-free.com/layer/tundra/z{zoomLevel}/row{row}/{zoomLevel}_{column}-{row}.gif?name=Tundra]]></url>
+    </layer>
+    <layer>
+      <name>Sand</name>
+      <url><![CDATA[osm:https://maps-for-free.com/layer/sand/z{zoomLevel}/row{row}/{zoomLevel}_{column}-{row}.gif?name=Sand]]></url>
+    </layer>
+    <layer>
+      <name>Swamp</name>
+      <url><![CDATA[osm:https://maps-for-free.com/layer/swamp/z{zoomLevel}/row{row}/{zoomLevel}_{column}-{row}.gif?name=Swamp]]></url>
+    </layer>
+    <layer>
+      <name>Ice</name>
+      <url><![CDATA[osm:https://maps-for-free.com/layer/ice/z{zoomLevel}/row{row}/{zoomLevel}_{column}-{row}.gif?name=Ice]]></url>
+    </layer>
+    <layer>
+      <name>Numbers</name>
+      <url><![CDATA[osm:https://maps-for-free.com/layer/numbers/z{zoomLevel}/row{row}/{zoomLevel}_{column}-{row}.gif?name=Numbers]]></url>
+    </layer>
+  </folder>
+
+  <folder>
+    <name>Open Railway Map</name>
+    <layer>
+      <name>Max Speed</name>
+      <url><![CDATA[osm:http://{identifier}.tiles.openrailwaymap.org/maxspeed/{zoomLevel}/{column}/{row}.png?identifiers=a,b,c,d]]></url>
+    </layer>
+    <layer>
+      <name>Standard</name>
+      <url><![CDATA[osm:http://{identifier}.tiles.openrailwaymap.org/standard/{zoomLevel}/{column}/{row}.png?identifiers=a,b,c,d]]></url>
+    </layer>
+  </folder>
+
+  <folder>
+    <name>Open Infrastructure Map</name>
+    <layer>
+      <name>petroleum</name>
+      <url><![CDATA[osm:https://tiles-{identifier}.openinframap.org/petroleum/{zoomLevel}/{column}/{row}.png?identifiers=a,b,c,d]]></url>
+    </layer>
+    <layer>
+      <name>telecoms</name>
+      <url><![CDATA[osm:https://tiles-{identifier}.openinframap.org/telecoms/{zoomLevel}/{column}/{row}.png?identifiers=a,b,c,d]]></url>
+    </layer>
+    <layer>
+      <name>water</name>
+      <url><![CDATA[osm:https://tiles-{identifier}.openinframap.org/water/{zoomLevel}/{column}/{row}.png?identifiers=a,b,c,d]]></url>
+    </layer>
+  </folder>
+
+  <folder>
+    <name>Way Marked Trails</name>
+    <layer>
+      <name>Cycling</name>
+      <url><![CDATA[osm:http://tile.waymarkedtrails.org/cycling/{zoomLevel}/{column}/{row}.png]]></url>
+    </layer>
+    <layer>
+      <name>Hiking</name>
+      <url><![CDATA[osm:http://tile.waymarkedtrails.org/hiking/{zoomLevel}/{column}/{row}.png]]></url>
+    </layer>
+    <layer>
+      <name>MTB</name>
+      <url><![CDATA[osm:http://tile.waymarkedtrails.org/mtb/{zoomLevel}/{column}/{row}.png]]></url>
+    </layer>
+  </folder>
+
+  <folder>
+    <name>Aster</name>
+    <layer>
+      <name>Aster contour lines</name>
+      <url><![CDATA[osm:http://korona.geog.uni-heidelberg.de/tiles/asterc/x={row}&y={column}&z={zoomLevel}]]></url>
+    </layer>
+    <layer>
+      <name><![CDATA[Aster GDEM & SRTM]]></name>
+      <url><![CDATA[osm:http://korona.geog.uni-heidelberg.de/tiles/asterh/x={row}&y={column}&z={zoomLevel}?minimumZoomLevel=14&maximumZoomLevel=18]]></url>
+    </layer>
+  </folder>
+
+  <layer>
+    <name>OSM Streets (de)</name>
+    <url><![CDATA[osm:http://{identifier}.tile.openstreetmap.de/tiles/osmde/{zoomLevel}/{column}/{row}.png?identifiers=a,b,c,d]]></url>
+  </layer>
+  <layer>
+    <name>OSM Streets (de)</name>
+    <url><![CDATA[osm:http://{identifier}.tile.openstreetmap.de/tiles/osmde/{zoomLevel}/{column}/{row}.png?identifiers=a,b,c,d]]></url>
+  </layer>
+  <layer>
+    <name>Max Speed</name>
+    <url><![CDATA[osm:http://wince.dentro.info/koord/osm/tiles/{zoomLevel}/{column}/{row}.png]]></url>
+  </layer>
+  <layer>
+    <name>Public transport</name>
+    <url><![CDATA[osm:http://pt.openmap.lt/{zoomLevel}/{column}/{row}.png]]></url>
+  </layer>
+  <layer>
+    <name>Maptoolkit Terrain</name>
+    <url><![CDATA[osm:https://tile{identifier}.maptoolkit.net/terrain/{zoomLevel}/{column}/{row}.png?identifiers=1,2,3,4]]></url>
+  </layer>
+</configuration>

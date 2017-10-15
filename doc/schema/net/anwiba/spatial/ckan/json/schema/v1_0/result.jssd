@@ -1,0 +1,6 @@
+{
+  "count": <int> 0,
+  "sort": <String> null,
+  "facets": <facets> null,
+  "search_facets": <facets> null
+}

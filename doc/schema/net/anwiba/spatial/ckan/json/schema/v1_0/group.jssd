@@ -1,0 +1,8 @@
+{
+  "display_name": <String> null,
+  "description": <String> null,
+  "image_display_url": <String> null,
+  "title":  <String> null,
+  "id":  <String> null,
+  "name":  <String> null
+}

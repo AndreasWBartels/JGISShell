@@ -1,6 +1,7 @@
 @JssdExtends(type="geoJsonObject")
 {
   @JssdImmutable
+  @JssdNoProperty
   "type": <String> "FeatureCollection",
   "features": <feature[]> null
 }

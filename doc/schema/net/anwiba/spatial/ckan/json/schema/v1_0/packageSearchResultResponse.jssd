@@ -1,0 +1,4 @@
+@JssdExtends(type="response")
+{
+  "result": <packageSearchResult> null
+}

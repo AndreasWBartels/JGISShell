@@ -1,0 +1,6 @@
+{
+    "role": <String> null,
+    "name": <String> null,
+    "email": <String> null,
+    "address": <String> null
+}
