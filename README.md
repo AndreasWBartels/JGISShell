@@ -15,10 +15,10 @@ I started JGISShell 10 years ago as an private education and evaluation project 
 The first part is a viewer for spatial data who supports the following formats:
 
 ### Feature based geodata
-Shapefiles, GeoJSON, PostGIS, SpatiaLite, Oracle Locator/Spatial, SAP Hana, ESRI MDB based Geodatabases, ESRI Arc GIS Rest Feature Services, ESRI SDE and a own GML equal XML format.
+Shapefiles, GeoJSON, PostGIS, SpatiaLite, GeoPackage, Oracle Locator/Spatial, SAP Hana, ESRI MDB based Geodatabases, ESRI Arc GIS Rest Feature Services, ESRI SDE and a own GML equal XML format.
 
 ### Image based geodata
-Worldfiles, mbtiles, OSM, MAPBOX Tile Layers, ESRI Arc GIS Rest Map and Image Services
+Worldfiles, mbtiles, OSM, MAPBOX Tile Layers, GeoPackage, ESRI Arc GIS Rest Map and Image Services
 
 ### Grid based geodata
 ESRI ASCII Grid, Saga Grid and XYZ Grid files
