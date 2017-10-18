@@ -4,4 +4,19 @@
  <bookmark type="FILE_SYSTEM">
   <fileSystem path="$SYSTEM{jgisshell.workingpath}data/"/>
  </bookmark>
+ <bookmark type="SERVICE">
+  <service type="ckan" host="demo.ckan.org" port="-1" path="/api"/>
+ </bookmark>
+ <bookmark type="SERVICE">
+  <service type="ckan" host="www.govdata.de" port="-1" path="/ckan/api"/>
+ </bookmark>
+ <bookmark type="SERVICE">
+  <service type="ckan" host="www.europeandataportal.eu" port="-1" path="/data/en/api"/>
+ </bookmark>
+ <bookmark type="SERVICE">
+  <service type="ckan" host="catalog.data.gov" port="-1" path="/api"/>
+ </bookmark>
+ <bookmark type="SERVICE">
+  <service type="ckan" host="data.gov.au" port="-1" path="/api"/>
+ </bookmark>
 </bookmarks>

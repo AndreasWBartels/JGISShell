@@ -118,10 +118,6 @@
     <url><![CDATA[osm:http://{identifier}.tile.openstreetmap.de/tiles/osmde/{zoomLevel}/{column}/{row}.png?identifiers=a,b,c,d]]></url>
   </layer>
   <layer>
-    <name>OSM Streets (de)</name>
-    <url><![CDATA[osm:http://{identifier}.tile.openstreetmap.de/tiles/osmde/{zoomLevel}/{column}/{row}.png?identifiers=a,b,c,d]]></url>
-  </layer>
-  <layer>
     <name>Max Speed</name>
     <url><![CDATA[osm:http://wince.dentro.info/koord/osm/tiles/{zoomLevel}/{column}/{row}.png]]></url>
   </layer>
