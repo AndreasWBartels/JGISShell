@@ -2,6 +2,7 @@
 @JssdPrimitivesEnabled
 {
   @JssdImmutable
+  @JssdNoProperty
   "class": <String> "VERSION",
   "release": <String> null,
   "rev": <String> null,

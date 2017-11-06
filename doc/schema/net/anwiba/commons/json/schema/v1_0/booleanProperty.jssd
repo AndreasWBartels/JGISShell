@@ -1,5 +1,6 @@
 @JssdExtends(type="property")
 {
   @JssdImmutable
+  @JssdNoProperty
   "type": <java.lang.String> "boolean"
 }

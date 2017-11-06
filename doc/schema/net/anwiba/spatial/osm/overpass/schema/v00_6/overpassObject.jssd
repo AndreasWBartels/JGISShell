@@ -1,7 +1,8 @@
-@JssdFactory
+@JssdFactory(type="typeinfo",types="node,relation,way")
 @JssdUnknownMember
 {
   @JssdImmutable
+  @JssdNoProperty
   "type" : <String> "OverpassObject",
   "id": <Object> null,
   "bounds": <bounds> null,

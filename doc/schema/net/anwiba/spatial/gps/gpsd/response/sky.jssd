@@ -2,6 +2,7 @@
 @JssdPrimitivesEnabled
 {
   @JssdImmutable
+  @JssdNoProperty
   "class": <String> "SKY",
   "tag": <String> null,
   "device": <String> null,

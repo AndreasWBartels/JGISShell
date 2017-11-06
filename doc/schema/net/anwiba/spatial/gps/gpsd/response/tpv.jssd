@@ -1,10 +1,11 @@
 @JssdExtends(type="response")
 {
   @JssdImmutable
+  @JssdNoProperty
   "class": <String> "TPV",
   "tag": <String> null,
   "device": <String> null,
-  "mode": <int> 0,  
+  "mode": <int> 0,
   "time": <String> null,
   "ept": <double> null,
   "lat": <double> null,

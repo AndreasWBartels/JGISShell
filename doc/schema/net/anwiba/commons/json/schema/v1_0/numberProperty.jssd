@@ -1,6 +1,7 @@
 @JssdExtends(type="property")
 {
   @JssdImmutable
+  @JssdNoProperty
   "type": <java.lang.String> "number",
 
   "default": <java.lang.Number> null,

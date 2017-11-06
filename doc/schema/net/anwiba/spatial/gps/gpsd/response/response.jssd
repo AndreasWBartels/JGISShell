@@ -1,4 +1,6 @@
-@JssdFactory(argument="class")
+@JssdFactory(type="typeinfo",types="device,devices,error,gst,poll,sky,tpv,version,watch",property="class")
 {
+  @JssdImmutable
+  @JssdNoProperty
   "class": <java.lang.String> null
 }

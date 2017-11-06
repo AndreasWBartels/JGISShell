@@ -6,5 +6,6 @@
   "editable" : <boolean> false,
   "nullable" : <boolean> true,
   "domain" : <domain> null,
+  "defaultValue" : <Object> null,
   "length" : <int> null
 }
