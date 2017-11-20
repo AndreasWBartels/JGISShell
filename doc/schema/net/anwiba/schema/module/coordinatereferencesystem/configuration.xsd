@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-  xmlns:jaxb="http://java.sun.com/xml/ns/jaxb" jaxb:version="2.0"
-  targetNamespace="http://www.anwiba.net/module/coordinatereferencesystem"
+  xmlns:jaxb="http://java.sun.com/xml/ns/jaxb"
   xmlns:crs="http://www.anwiba.net/module/coordinatereferencesystem"
-  xmlns:script="http://www.anwiba.net/dynamic/script" elementFormDefault="qualified">
+  xmlns:script="http://www.anwiba.net/dynamic/script"
+  targetNamespace="http://www.anwiba.net/module/coordinatereferencesystem"
+  jaxb:version="2.0"
+  elementFormDefault="qualified"
+>
 
   <xsd:annotation>
     <xsd:appinfo>
@@ -12,6 +15,8 @@
       </jaxb:schemaBindings>
     </xsd:appinfo>
   </xsd:annotation>
+
+  <xsd:import namespace="http://www.anwiba.net/dynamic/script" schemaLocation="../../dynamic/script/script.xsd"/>
 
   <xsd:element name="configuration" type="crs:ConfigurationType">
   </xsd:element>
@@ -36,12 +41,45 @@
       </xsd:appinfo>
     </xsd:annotation>
     <xsd:sequence>
-    <xsd:choice  minOccurs="0" maxOccurs="unbounded">
-      <xsd:element name="ntv2Transformer" type="crs:Ntv2TransformerType"/>
-      <xsd:element name="sevenParameterTransformer" type="crs:SevenParameterTransformerType"/>
-    </xsd:choice>
+      <xsd:choice minOccurs="0" maxOccurs="unbounded">
+        <xsd:element name="ntv2Transformer" type="crs:Ntv2TransformerType"/>
+        <xsd:element name="sevenParameterTransformer" type="crs:SevenParameterTransformerType"/>
+        <xsd:element name="projectionTransformer" type="crs:ProjectionTransformerType"/>
+      </xsd:choice>
     </xsd:sequence>
   </xsd:complexType>
+
+  <xsd:complexType name="ProjectionTransformerType">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <jaxb:class name="ProjectionTransformer"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="crs:TransformerType">
+        <xsd:sequence>
+          <xsd:element ref="script:applicable" minOccurs="1" maxOccurs="1"/>
+          <xsd:choice minOccurs="1" maxOccurs="1">
+            <xsd:group ref="crs:MethodGroup"></xsd:group>
+            <xsd:group ref="crs:FactoryGroup"></xsd:group>
+          </xsd:choice>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+
+  <xsd:group name="MethodGroup">
+    <xsd:sequence>
+      <xsd:element name="toProjected" type="script:AbstractScriptType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="toSpherical" type="script:AbstractScriptType" minOccurs="1" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:group>
+
+  <xsd:group name="FactoryGroup">
+    <xsd:sequence>
+      <xsd:element name="factory" type="script:AbstractScriptType" minOccurs="1" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:group>
 
   <xsd:complexType name="AbstractTransformerType">
     <xsd:annotation>
@@ -49,11 +87,23 @@
         <jaxb:class name="AbstractTransformer"/>
       </xsd:appinfo>
     </xsd:annotation>
-    <xsd:sequence>
-      <xsd:element name="sourceCoordinateReferenceSystem" type="xsd:string" minOccurs="1" maxOccurs="1"/>
-      <xsd:element name="targetCoordinateReferenceSystem" type="xsd:string" minOccurs="1" maxOccurs="1"/>
-      <xsd:element name="boundingBox" type="crs:GeographicBoundingBoxType" minOccurs="1" maxOccurs="1"/>
-    </xsd:sequence>
+    <xsd:complexContent>
+      <xsd:extension base="crs:TransformerType">
+        <xsd:sequence>
+          <xsd:element name="sourceCoordinateReferenceSystem" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+          <xsd:element name="targetCoordinateReferenceSystem" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+          <xsd:element name="boundingBox" type="crs:GeographicBoundingBoxType" minOccurs="1" maxOccurs="1"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+
+  <xsd:complexType name="TransformerType">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <jaxb:class name="Transformer"/>
+      </xsd:appinfo>
+    </xsd:annotation>
   </xsd:complexType>
 
   <xsd:complexType name="SevenParameterTransformerType">

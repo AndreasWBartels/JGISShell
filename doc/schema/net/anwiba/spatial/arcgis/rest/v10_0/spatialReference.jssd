@@ -1,4 +1,5 @@
 {
+  "cs" : <String> null,
   "wkid" : <Integer> null,
   "latestWkid" : <Integer> null,
   "vcsWkid" : <Integer> null,

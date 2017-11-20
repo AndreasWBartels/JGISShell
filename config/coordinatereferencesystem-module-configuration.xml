@@ -109,4 +109,24 @@
 <!--     </ntv2Transformer> -->
 <!--   </transformers> -->
 
+<!--
+    <projectionTransformer>
+
+      <script:applicable>
+        <script:language>GROOVY</script:language>
+        <script:groovyScript>
+          <script:uri>net/anwiba/script/groovy/transformer/applicable.groovy</script:uri>
+        </script:groovyScript>
+      </script:applicable>
+
+      <factory>
+        <script:language>GROOVY</script:language>
+        <script:groovyScript>
+          <script:uri>net/anwiba/script/groovy/transformer/factory.groovy</script:uri>
+        </script:groovyScript>
+      </factory>
+
+    </projectionTransformer>
+-->
+
 </configuration>

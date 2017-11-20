@@ -1,4 +1,7 @@
+@JssdUnknownMember
 {
+  "displayFieldName" : <String> null,
+  "fieldAliases" : <java.util.Map<String,Object>>  null,
   "objectIdFieldName" : <String> null,
   "globalIdFieldName" : <String> null,
   "geometryType" : <String> null,
