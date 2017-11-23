@@ -29,7 +29,7 @@ The second part is a file system manager like dialog to explore and manage geoda
 ![Viewer](https://github.com/AndreasWBartels/JGISShell/wiki/images/layer-manager.png)  
 
 ## Scripting
-The third part is the possibility to extend the viewer with java and groovy.
+The third part is a java and groovy based scripting API. The API could be used to extend the viewer or to manage and process geodata.
 
 ```groovy
 import net.anwiba.scripting.groovy.JGISShellGroovyScript
@@ -44,7 +44,7 @@ map().
 ``` 
 
 ## Data access URL schema
-The fourth part is a URL based schema to access different kinds of datastores and layers.
+The fourth part is a URL based schema to access different kinds of datastores or layers.
 
 ## Author
 JGISShell was created by [Andreas W. Bartels](https://github.com/AndreasWBartels).
