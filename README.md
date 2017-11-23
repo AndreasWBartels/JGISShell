@@ -31,6 +31,18 @@ The second part is a navigator tree to explore and manage geodata datastores.
 ## Scripting
 The third part is the possibility to extend the viewer with java and groovy.
 
+```groovy
+import net.anwiba.scripting.groovy.JGISShellGroovyScript
+@groovy.transform.BaseScript JGISShellGroovyScript facade
+
+map().
+  add("Bundesl\u00e4nder",
+    layerReference(
+      "\$SYSTEM{jgisshell.workingpath}/data/bundeslaender.shp"
+    )
+  );
+``` 
+
 ## Data access URL schema
 The fourth part is a URL based schema to access different kinds of datastores and layers.
 
