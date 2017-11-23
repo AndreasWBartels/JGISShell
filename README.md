@@ -24,7 +24,7 @@ Worldfiles, mbtiles, OSM, MAPBOX Tile Layers, GeoPackage, ESRI Arc GIS Rest Map 
 ESRI ASCII Grid, Saga Grid and XYZ Grid files
 
 ## Layer Manager
-The second part is a navigator tree to explore and manage geodata datastores.
+The second part is a file system manager like dialog to explore and manage geodata.
 
 ![Viewer](https://github.com/AndreasWBartels/JGISShell/wiki/images/layer-manager.png)  
 
