@@ -9,7 +9,7 @@ I started JGISShell 10 years ago as an private education and evaluation project 
 
 ## Geodata Viewer
 
-![Viewer](https://https://github.com/AndreasWBartels/JGISShell/wiki/images/WindAndRadioWaves-LUBW.png)  
+![Viewer](https://github.com/AndreasWBartels/JGISShell/wiki/images/WindAndRadioWaves-LUBW.png)  
 `map source: © 2016 Landesanstalt für Umwelt, Messungen und Naturschutz Baden-Württemberg and Landesamt für Geoinformation und Landentwicklung Baden-Württemberg`
 
 The first part is a viewer for spatial data who supports the following formats:
@@ -26,7 +26,7 @@ ESRI ASCII Grid, Saga Grid and XYZ Grid files
 ## Layer Manager
 The second part is a navigator tree to explore and manage geodata datastores.
 
-![Viewer](https://https://github.com/AndreasWBartels/JGISShell/wiki/images/layer-manager.png)  
+![Viewer](https://github.com/AndreasWBartels/JGISShell/wiki/images/layer-manager.png)  
 
 ## Scripting
 The third part is the possibility to extend the viewer with java and groovy.
