@@ -1,4 +1,4 @@
-// Copyright (c) 2016 by Andreas W. Bartels (bartels@anwiba.de)
+// Copyright (c) 2016 by Andreas W. Bartels
 package net.anwiba.script.groovy.mode
 import net.anwiba.spatial.coordinate.ICoordinate
 import net.anwiba.spatial.scripting.ScriptBinding

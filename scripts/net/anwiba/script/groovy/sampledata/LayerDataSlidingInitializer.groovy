@@ -1,5 +1,5 @@
 package net.anwiba.script.groovy.sampledata
-// Copyright (c) 2015 by Andreas W. Bartels (bartels@anwiba.de)
+// Copyright (c) 2015 by Andreas W. Bartels
 
 import java.awt.Color
 

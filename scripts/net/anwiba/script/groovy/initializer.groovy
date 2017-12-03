@@ -1,4 +1,4 @@
-// Copyright (c) 2015 by Andreas W. Bartels (bartels@anwiba.de)
+// Copyright (c) 2015 by Andreas W. Bartels
 package net.anwiba.script.groovy
 import java.util.concurrent.TimeUnit
 
