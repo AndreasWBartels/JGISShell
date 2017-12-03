@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE jnlp PUBLIC "-//Sun Microsystems, Inc//DTD JNLP Discriptor 1.5//EN" "http://java.sun.com/dtd/JNLP-1.5.dtd">
+<jnlp spec="1.0+" codebase="http://scooter/jgisshell/lib" href="arcsde.jnlp">
+  <information>
+    <title>ARCSDE Java API</title>
+    <vendor>ESRI</vendor>
+    <homepage href="http://www.esri.com"/>
+    <description>
+        </description>
+  </information>
+  <security>
+    <all-permissions/>
+  </security>
+  <resources>
+    <jar href="jpe_sdk-9.3.2.jar"/>
+    <jar href="jsde_sdk-9.3.2.jar"/>
+    <jar href="jsde_sdkres-9.3.2.jar"/>
+  </resources>
+  <component-desc/>
+</jnlp>
