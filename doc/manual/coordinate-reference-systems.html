@@ -525,6 +525,7 @@ table.CodeRay td.code>pre{padding:0}
 <ul class="sectlevel2">
 <li><a href="#coordinatereferencesystemes">Configuration</a></li>
 <li><a href="#_supported_projections">Supported projections</a></li>
+<li><a href="#_length_and_area_calculation">Length and area calculation</a></li>
 </ul>
 </li>
 </ul>
@@ -543,7 +544,7 @@ table.CodeRay td.code>pre{padding:0}
 File
 </td>
 <td class="hdlist2">
-<p><a href="../../config/coordinatereferencesystem-module-configuration.xml">config/coordinatereferencesystem-module-configuration.xml</a></p>
+<p><a href="{homepage}/config/coordinatereferencesystem-module-configuration.xml">config/coordinatereferencesystem-module-configuration.xml</a></p>
 </td>
 </tr>
 <tr>
@@ -551,8 +552,8 @@ File
 Schema
 </td>
 <td class="hdlist2">
-<p><a href="../doc/schema/net/anwiba/schema/module/coordinatereferencesystem/configuration.xsd">doc/schema/net/anwiba/schema/module/coordinatereferencesystem/configuration.xsd</a><br>
-<a href="../doc/schema/net/anwiba/schema/dynamic/script/script.xsd">doc/schema/net/anwiba/schema/dynamic/script/script.xsd</a></p>
+<p><a href="{homepage}/doc/schema/net/anwiba/schema/module/coordinatereferencesystem/configuration.xsd">doc/schema/net/anwiba/schema/module/coordinatereferencesystem/configuration.xsd</a><br>
+<a href="{homepage}/doc/schema/net/anwiba/schema/dynamic/script/script.xsd">doc/schema/net/anwiba/schema/dynamic/script/script.xsd</a></p>
 </td>
 </tr>
 </table>
@@ -568,7 +569,7 @@ Schema
 
     <span class="tag">&lt;coordinateReferenceSystem&gt;</span>
       <span class="tag">&lt;authority&gt;</span>EPSG:4326<span class="tag">&lt;/authority&gt;</span>
-      <span class="tag">&lt;wkt&gt;</span>GEOGCS[&quot;WGS 84&quot;, DATUM[&quot;WGS_1984&quot;, SPHEROID[&quot;WGS 84&quot;,6378137,298.257223563, AUTHORITY[&quot;EPSG&quot;,&quot;7030&quot;]], TOWGS84[0, 0, 0, 0, 0, 0, 0], AUTHORITY[&quot;EPSG&quot;,&quot;6326&quot;]], PRIMEM[&quot;Greenwich&quot;,0, AUTHORITY[&quot;EPSG&quot;,&quot;8901&quot;]], UNIT[&quot;degree&quot;,0.0174532925199433, AUTHORITY[&quot;EPSG&quot;,&quot;9122&quot;]], AUTHORITY[&quot;EPSG&quot;,&quot;4326&quot;]]<span class="tag">&lt;/wkt&gt;</span>
+      <span class="tag">&lt;wkt&gt;</span>GEOGCS[&quot;World Geodetic System 1984&quot;, DATUM[&quot;World Geodetic System 1984&quot;, SPHEROID[&quot;WGS 84&quot;, 6378137.0, 298.257223563, AUTHORITY[&quot;EPSG&quot;, 7030]], AUTHORITY[&quot;EPSG&quot;, 6326]], AREA[&quot;world&quot;, -180.0, -90.0, 180.0, 90.0],PRIMEM[&quot;greenwich&quot;, 0.0, AUTHORITY[&quot;EPSG&quot;, 8901]], UNIT[&quot;degree (supplier to define representation)&quot;, 0.017453292519943278, AUTHORITY[&quot;EPSG&quot;, 9122]], AXIS[&quot;north&quot;, NORTH], AXIS[&quot;east&quot;, EAST], AUTHORITY[&quot;EPSG&quot;, 4326]]<span class="tag">&lt;/wkt&gt;</span>
     <span class="tag">&lt;/coordinateReferenceSystem&gt;</span>
 
       :
@@ -646,8 +647,8 @@ Schema
 File
 </td>
 <td class="hdlist2">
-<p><a href="../../scripts/net/anwiba/script/groovy/transformer/applicable.groovy">scripts/net/anwiba/script/groovy/transformer/applicable.groovy</a><br>
-<a href="../../scripts/net/anwiba/script/groovy/transformer/factory.groovy">scripts/net/anwiba/script/groovy/transformer/factory.groovy</a></p>
+<p><a href="{homepage}/scripts/net/anwiba/script/groovy/transformer/applicable.groovy">scripts/net/anwiba/script/groovy/transformer/applicable.groovy</a><br>
+<a href="{homepage}/scripts/net/anwiba/script/groovy/transformer/factory.groovy">scripts/net/anwiba/script/groovy/transformer/factory.groovy</a></p>
 </td>
 </tr>
 </table>
@@ -656,13 +657,13 @@ File
 <dl>
 <dt class="hdlist1">Groovy bindings</dt>
 <dd>
-<p>projectedCoordinateSystem<br>
-coordinate<br></p>
+<p><a href="{homepage}/doc/api/net/anwiba/spatial/coordinatereferencesystem/coordinatesystem/IProjectedCoordinateSystem.html">projectedCoordinateSystem</a><br>
+<a href="{homepage}/doc/api/net/anwiba/spatial/coordinate/ICoordinate.html">coordinate</a><br></p>
 </dd>
 <dt class="hdlist1">Java injections</dt>
 <dd>
-<p>IProjectedCoordinateSystem<br>
-ICoordinate<br></p>
+<p><a href="{homepage}/doc/api/net/anwiba/spatial/coordinatereferencesystem/coordinatesystem/IProjectedCoordinateSystem.html">IProjectedCoordinateSystem</a><br>
+<a href="{homepage}/doc/api/net/anwiba/spatial/coordinate/ICoordinate.html">ICoordinate</a><br></p>
 </dd>
 </dl>
 </div>
@@ -716,12 +717,87 @@ ICoordinate<br></p>
 </dl>
 </div>
 </div>
+<div class="sect2">
+<h3 id="_length_and_area_calculation">Length and area calculation</h3>
+<div class="paragraph">
+<p>Distances or areas with known coordinate reference system are computed on the rotation ellipsoid using the method given Section 6 of C. F. F. Karney, Algorithms for <a href="https://doi.org/10.1007/s00190-012-0578-z">geodesics</a>, J. Geodesy 87, 43–55 (2013) ( <a href="https://geographiclib.sourceforge.io/geod-addenda.html">addenda</a>).</p>
+</div>
+<div class="paragraph">
+<p>The implementation and further description could be found <a href="https://geographiclib.sourceforge.io/">here</a>.</p>
+</div>
+<div class="sect3">
+<h4 id="_scripting_calculators">Scripting calculators</h4>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+File
+</td>
+<td class="hdlist2">
+<p><a href="{homepage}/scripts/net/anwiba/script/groovy/calculators/length/applicable.groovy">scripts/net/anwiba/script/groovy/calculators/length/applicable.groovy</a><br>
+<a href="{homepage}/scripts/net/anwiba/script/groovy/calculators/length/calculator.groovy">scripts/net/anwiba/script/groovy/calculators/length/calculator.groovy</a></p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Groovy bindings
+</td>
+<td class="hdlist2">
+<p><a href="{homepage}/doc/api/net/anwiba/spatial/coordinatereferencesystem/ICoordinateReferenceSystem.html">coordinateReferenceSystem</a><br>
+<a href="{homepage}/doc/api/net/anwiba/spatial/coordinate/ICoordinateSequence.html">coordinateSequence</a><br></p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Java injections
+</td>
+<td class="hdlist2">
+<p><a href="{homepage}/doc/api/net/anwiba/spatial/coordinatereferencesystem/ICoordinateReferenceSystem.html">ICoordinateReferenceSystem</a><br>
+<a href="{homepage}/doc/api/net/anwiba/spatial/coordinate/ICoordinateSequence.html">ICoordinateSequence</a><br></p>
+</td>
+</tr>
+</table>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="xml">    <span class="tag">&lt;calculators&gt;</span>
+      <span class="tag">&lt;length&gt;</span>
+
+        <span class="tag">&lt;script</span><span class="attribute-name">:applicable</span><span class="tag">&gt;</span>
+<span class="inline">          &lt;script:language&gt;GROOVY&lt;<span class="regexp"><span class="delimiter">/</span><span class="content">script:language&gt;
+          &lt;script:groovyScript&gt;
+            &lt;script:uri&gt;net</span><span class="delimiter">/</span></span>anwiba/script/groovy/calculators/length/applicable.groovy&lt;<span class="regexp"><span class="delimiter">/</span><span class="content">script:uri&gt;
+          &lt;</span><span class="delimiter">/</span></span>script:groovyScript&gt;
+        &lt;<span class="regexp"><span class="delimiter">/</span><span class="content">script:applicable&gt;
+
+        &lt;calculator&gt;
+          &lt;script:language&gt;GROOVY&lt;</span><span class="delimiter">/</span></span>script:language&gt;
+          &lt;script:groovyScript&gt;
+            &lt;script:uri&gt;net/anwiba/script/groovy/calculators/length/calculator.groovy&lt;<span class="regexp"><span class="delimiter">/</span><span class="content">script:uri&gt;
+          &lt;</span><span class="delimiter">/</span></span>script:groovyScript&gt;
+        &lt;<span class="regexp"><span class="delimiter">/</span><span class="content">calculator&gt;
+
+      &lt;</span><span class="delimiter">/</span></span>length&gt;
+
+      <span class="tag">&lt;area&gt;</span>
+
+         :
+
+      <span class="tag">&lt;/area&gt;</span>
+
+         :
+
+    &lt;<span class="regexp"><span class="delimiter">/</span><span class="content">calculators&gt;</span></span></span></code></pre>
+</div>
+</div>
+</div>
+</div>
 </div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2017-11-29 00:00:10 CET
+Last updated 2017-12-29 03:00:51 CET
 </div>
 </div>
 </body>

@@ -1,4 +1,5 @@
 @JssdUnknownMember
+@JssdExtends(type="named")
 {
   "license_title": <String> null,
   "maintainer": <String> null,
@@ -8,8 +9,8 @@
   "maintainer_email": <String> null,
   "num_tags": <int> 0,
   "id": <String> null,
-  "metadata_created": <dateString> null,
-  "metadata_modified": <dateString> null,
+  "metadata_created": <net.anwiba.spatial.ckan.json.types.DateString> null,
+  "metadata_modified": <net.anwiba.spatial.ckan.json.types.DateString> null,
   "conforms_to": <label[]> null,
   "author": <String> null,
   "author_email": <String> null,
@@ -26,16 +27,14 @@
   "translation_meta":  <translationMetadata> null,
   "relationships_as_subject": <relationship[]> null,
   "organization": <organization> null,
-  "name": <String> null,
   "isopen": <boolean> false,
   "url": <String> null,
   "notes": <String> null,
   "owner_org": <String> null,
-  "modified": <dateString> null,
+  "modified": <net.anwiba.spatial.ckan.json.types.DateString> null,
   "extras": <extra[]> null,
   "original_source": <String> null,
   "license_url": <String> null,
-  "title": <String> null,
   "revision_id": <String> null,
   "identifier":  <String[]> null
 }

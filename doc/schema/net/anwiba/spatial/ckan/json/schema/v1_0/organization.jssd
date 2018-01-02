@@ -1,8 +1,7 @@
+@JssdUnknownMember
+@JssdExtends(type="named")
 {
-  "description": <String> null,
-  "created": <dateString> null,
-  "title": <String> null,
-  "name": <String> null,
+  "created": <net.anwiba.spatial.ckan.json.types.DateString> null,
   "is_organization": <boolean> true,
   "state": <String> null,
   "image_url": <String> null,

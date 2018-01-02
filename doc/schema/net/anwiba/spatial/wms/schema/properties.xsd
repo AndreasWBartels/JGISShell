@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema jaxb:version="2.0"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+  xmlns:jaxb="http://java.sun.com/xml/ns/jaxb"
+  xmlns:properties="http://www.anwiba.net/wms/properties"
+  targetNamespace="http://www.anwiba.net/wms/properties"
+  elementFormDefault="qualified">
+
+  <xsd:annotation>
+    <xsd:appinfo>
+      <jaxb:schemaBindings>
+        <jaxb:package name="net.anwiba.spatial.wms.schema.properties"/>
+      </jaxb:schemaBindings>
+    </xsd:appinfo>
+  </xsd:annotation>
+
+  <xsd:element name="properties" type="properties:PropertiesType">
+  </xsd:element>
+
+  <xsd:complexType name="PropertiesType">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <jaxb:class name="Properties"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:sequence>
+       <xsd:element name="description" type="properties:DescriptionType" minOccurs="0" maxOccurs="1"/>
+       <xsd:element name="contact" type="properties:ContactType" minOccurs="0" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="DescriptionType">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <jaxb:class name="Description"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:sequence>
+       <xsd:element name="title" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+       <xsd:element name="abstract" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+       <xsd:element name="site" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+       <xsd:element name="fees" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+       <xsd:element name="constraints" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+       <xsd:element name="limits" type="properties:LimitsType" minOccurs="1" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="ContactType">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <jaxb:class name="Contact"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="person" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="organization" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="phone" type="properties:PhoneType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="address" type="properties:AddressType" minOccurs="0" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="PhoneType">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <jaxb:class name="Phone"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:sequence>
+       <xsd:element name="voice" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+       <xsd:element name="facsimile" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="LimitsType">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <jaxb:class name="Limits"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:sequence>
+       <xsd:element name="layer" type="xsd:int" minOccurs="1" maxOccurs="1"/>
+       <xsd:element name="imageWidth" type="xsd:int" minOccurs="1" maxOccurs="1"/>
+       <xsd:element name="imageHeight" type="xsd:int" minOccurs="1" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="AddressType">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <jaxb:class name="Address"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+
+    <xsd:sequence>
+       <xsd:element name="deliveryPoint" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+       <xsd:element name="city" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+       <xsd:element name="postalCode" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+       <xsd:element name="country" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+       <xsd:element name="email" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+</xsd:schema>

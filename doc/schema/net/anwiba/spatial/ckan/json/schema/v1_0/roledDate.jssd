@@ -1,4 +1,4 @@
 {
   "role": <String> null,
-  "date": <dateString> null
+  "date": <net.anwiba.spatial.ckan.json.types.DateString> null
 }

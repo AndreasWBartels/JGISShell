@@ -5,6 +5,6 @@
   "error_type": <String> "None",
   "bounding_box": <String> null,
   "state": <String> null,
-  "timestamp": <dateString> null,
+  "timestamp": <net.anwiba.spatial.ckan.json.types.DateString> null,
   "message": <String> null
 }

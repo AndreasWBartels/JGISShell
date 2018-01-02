@@ -31,7 +31,58 @@
       <xsd:element name="url" type="xsd:string" minOccurs="0" maxOccurs="1"/>
       <xsd:element name="coordinateReferenceSystems" type="crs:CoordinateReferenceSystemsType" minOccurs="0" maxOccurs="1"/>
       <xsd:element name="transformers" type="crs:TransformersType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="calculators" type="crs:CalculatorsType" minOccurs="0" maxOccurs="1"/>
     </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="CalculatorsType">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <jaxb:class name="Calculators"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:choice minOccurs="0" maxOccurs="unbounded">
+        <xsd:element name="area" type="crs:AreaCalculatorType"/>
+        <xsd:element name="length" type="crs:LengthCalculatorType"/>
+      </xsd:choice>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="AbstractCalculatorType">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <jaxb:class name="AbstractCalculator"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element ref="script:applicable" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="calculator" type="script:AbstractScriptType" minOccurs="1" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="LengthCalculatorType">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <jaxb:class name="LengthCalculator"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="crs:AbstractCalculatorType">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+
+  <xsd:complexType name="AreaCalculatorType">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <jaxb:class name="AreaCalculator"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="crs:AbstractCalculatorType">
+      </xsd:extension>
+    </xsd:complexContent>
   </xsd:complexType>
 
   <xsd:complexType name="TransformersType">

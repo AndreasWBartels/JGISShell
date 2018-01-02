@@ -1,7 +1,8 @@
 @JssdUnknownMember
+@JssdExtends(type="named")
 {
   "resource_group_id": <String> null,
-  "cache_last_updated" : <dateString> null,
+  "cache_last_updated" : <net.anwiba.spatial.ckan.json.types.DateString> null,
   "package_id" : <String> null,
   "webstore_last_updated" : <String> null,
   "datastore_active": <boolean> true,
@@ -10,19 +11,17 @@
   "state": <String>  null,
   "shape_info": <String>  null,
   "hash": <String> null,
-  "description": <String> null,
   "format": <String> null,
   "hdx_rel_url": <String> null,
   "mimetype_inner":  <String> null,
   "url_type":  <String> null,
   "mimetype": <String> null,
   "cache_url": <String> null,
-  "name": <String> null,
-  "language": <String> null,
-  "created":  <dateString> null,
+  "language": <String[]> null,
+  "created":  <net.anwiba.spatial.ckan.json.types.DateString> null,
   "url":  <String> null,
   "webstore_url": <String> null,
-  "last_modified": <dateString> null,
+  "last_modified": <net.anwiba.spatial.ckan.json.types.DateString> null,
   "position":  <int> 0,
   "revision_id":  <String> null,
   "resource_type": <String> null

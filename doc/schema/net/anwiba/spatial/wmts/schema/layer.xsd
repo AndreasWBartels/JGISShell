@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema jaxb:version="2.0"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+  xmlns:jaxb="http://java.sun.com/xml/ns/jaxb"
+  xmlns:layer="http://www.anwiba.net/wmts/layer"
+  targetNamespace="http://www.anwiba.net/wmts/layer"
+  elementFormDefault="qualified">
+
+  <xsd:annotation>
+    <xsd:appinfo>
+      <jaxb:schemaBindings>
+        <jaxb:package name="net.anwiba.spatial.wmts.schema.layer"/>
+      </jaxb:schemaBindings>
+    </xsd:appinfo>
+  </xsd:annotation>
+
+  <xsd:element name="layers" type="layer:LayersType">
+  </xsd:element>
+
+  <xsd:complexType name="LayersType">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <jaxb:class name="Layers"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="layer" type="layer:LayerType" minOccurs="1" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="LayerType">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <jaxb:class name="Layer"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="identifier" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="name" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="version" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="boundingBox" type="layer:BoundingBoxType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="style" type="layer:StyleType" minOccurs="1" maxOccurs="unbounded"/>
+      <xsd:element name="imageFormat" type="xsd:string" minOccurs="1" maxOccurs="unbounded"/>
+      <xsd:element name="dimension" type="layer:DimensionType" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element name="matrixSet" type="layer:MatrixSetType" minOccurs="1" maxOccurs="unbounded"/>
+      <xsd:element name="tiles" type="layer:TilesType" minOccurs="1" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="BoundingBoxType">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <jaxb:class name="BoundingBox"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="srs" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="lowerCorner" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="upperCorner" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="MatrixSetType">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <jaxb:class name="MatrixSet"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="boundingBox" type="layer:BoundingBoxType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="identifier" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="srs" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="matrix" type="layer:MatrixType" minOccurs="0" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="MatrixType">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <jaxb:class name="Matrix"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="identifier" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="scaleDenominator" type="xsd:double" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="topLeftCorner" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="tileWidth" type="xsd:int" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="tileHeight" type="xsd:int" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="matrixWidth" type="xsd:int" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="minimumMatrixWidth" type="xsd:int" minOccurs="1" maxOccurs="1" default="-1"/>
+      <xsd:element name="maximumMatrixWidth" type="xsd:int" minOccurs="1" maxOccurs="1" default="-1"/>
+      <xsd:element name="matrixHeight" type="xsd:int" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="minimumMatrixHeight" type="xsd:int" minOccurs="1" maxOccurs="1" default="-1"/>
+      <xsd:element name="maximumMatrixHeight" type="xsd:int" minOccurs="1" maxOccurs="1" default="-1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="TilesType">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <jaxb:class name="Tiles"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="restful" type="layer:RestfulUrlType" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element name="kvp" type="xsd:anyURI" minOccurs="0" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="RestfulUrlType">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <jaxb:class name="RestfulUrl"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="format" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="url" type="xsd:anyURI" minOccurs="1" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="StyleType">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <jaxb:class name="Style"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="identifier" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="DimensionType">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <jaxb:class name="Dimension"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="identifier" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="default" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="value" type="xsd:string" minOccurs="0" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+</xsd:schema>

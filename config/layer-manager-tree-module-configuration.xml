@@ -105,11 +105,11 @@
     <name>Aster</name>
     <layer>
       <name>Aster contour lines</name>
-      <url><![CDATA[osm:http://korona.geog.uni-heidelberg.de/tiles/asterc/x={row}&y={column}&z={zoomLevel}]]></url>
+      <url><![CDATA[osm:http://korona.geog.uni-heidelberg.de/tiles/asterc/x={column}&y={row}&z={zoomLevel}]]></url>
     </layer>
     <layer>
       <name><![CDATA[Aster GDEM & SRTM]]></name>
-      <url><![CDATA[osm:http://korona.geog.uni-heidelberg.de/tiles/asterh/x={row}&y={column}&z={zoomLevel}?minimumZoomLevel=14&maximumZoomLevel=18]]></url>
+      <url><![CDATA[osm:http://korona.geog.uni-heidelberg.de/tiles/asterh/x={column}&y={row}&z={zoomLevel}?minimumZoomLevel=14&maximumZoomLevel=18]]></url>
     </layer>
   </folder>
 

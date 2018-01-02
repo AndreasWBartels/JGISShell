@@ -13,64 +13,208 @@
  -->
 
     <coordinateReferenceSystem>
-      <authority>EPSG:4326</authority>
-      <wkt>GEOGCS["WGS 84", DATUM["WGS_1984", SPHEROID["WGS 84",6378137,298.257223563, AUTHORITY["EPSG","7030"]], TOWGS84[0, 0, 0, 0, 0, 0, 0], AUTHORITY["EPSG","6326"]], PRIMEM["Greenwich",0, AUTHORITY["EPSG","8901"]], UNIT["degree",0.0174532925199433, AUTHORITY["EPSG","9122"]], AUTHORITY["EPSG","4326"]]</wkt>
+      <authority>CRS:84</authority>
+      <wkt>GEOGCS["World Geodetic System 1984", DATUM["World Geodetic System 1984", SPHEROID["WGS 84", 6378137.0, 298.257223563, AUTHORITY["EPSG", 7030]], AUTHORITY["EPSG", 6326]], AREA["world", -180.0, -90.0, 180.0, 90.0],PRIMEM["greenwich", 0.0, AUTHORITY["EPSG", 8901]], UNIT["degree (supplier to define representation)", 0.017453292519943278, AUTHORITY["EPSG", 9122]], AXIS["east", EAST], AXIS["north", NORTH], AUTHORITY["CRS", 84]]</wkt>
     </coordinateReferenceSystem>
 
     <coordinateReferenceSystem>
-      <authority>EPSG:4314</authority>
-      <wkt>GEOGCS["DHDN", DATUM["Deutsches_Hauptdreiecksnetz", SPHEROID["Bessel 1841", 6377397.155, 299.1528128], TOWGS84[598.1, 73.7, 418.2, 0.202, 0.045, -2.455, 6.7]], PRIMEM["greenwich", 0.0], UNIT["degree", 0.0174532925199433],AUTHORITY["EPSG", 4314]]</wkt>
+      <authority>EPSG:4019</authority>
+      <wkt>GEOGCS["Not specified (based on GRS 1980 ellipsoid)", DATUM["Not specified (based on GRS 1980 ellipsoid)", SPHEROID["GRS 1980", 6378137.0, 298.257222101, AUTHORITY["EPSG", 7019]], AUTHORITY["EPSG", 6019]], AREA["not specified", -180.0, -90.0, 180.0, 90.0],PRIMEM["greenwich", 0.0, AUTHORITY["EPSG", 8901]], UNIT["degree (supplier to define representation)", 0.017453292519943278, AUTHORITY["EPSG", 9122]], AXIS["north", NORTH], AXIS["east", EAST], AUTHORITY["EPSG", 4019]]</wkt>
     </coordinateReferenceSystem>
 
     <coordinateReferenceSystem>
       <authority>EPSG:4258</authority>
-      <wkt>GEOGCS["ETRS89", DATUM["European_Terrestrial_Reference_System_1989", SPHEROID["GRS 1980", 6378137.0, 298.257222101], TOWGS84[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]], PRIMEM["greenwich", 0.0], UNIT["degree", 0.0174532925199433],AUTHORITY["EPSG", 4258]]</wkt>
+      <wkt>GEOGCS["European Terrestrial Reference System 1989", DATUM["European Terrestrial Reference System 1989", SPHEROID["GRS 1980", 6378137.0, 298.257222101, AUTHORITY["EPSG", 7019]], AUTHORITY["EPSG", 6258]], AREA["europe - etrs89", -16.1, 32.88, 40.18, 84.17],PRIMEM["greenwich", 0.0, AUTHORITY["EPSG", 8901]], UNIT["degree (supplier to define representation)", 0.017453292519943278, AUTHORITY["EPSG", 9122]], AXIS["north", NORTH], AXIS["east", EAST], AUTHORITY["EPSG", 4258]]</wkt>
+    </coordinateReferenceSystem>
+
+    <coordinateReferenceSystem>
+      <authority>EPSG:4314</authority>
+      <wkt>GEOGCS["Deutsches Hauptdreiecksnetz", DATUM["Deutsches Hauptdreiecksnetz", SPHEROID["Bessel 1841", 6377397.155, 299.1528128, AUTHORITY["EPSG", 7004]], AUTHORITY["EPSG", 6314]], AREA["germany - west germany all states", 5.87, 47.27, 13.84, 55.09],PRIMEM["greenwich", 0.0, AUTHORITY["EPSG", 8901]], UNIT["degree (supplier to define representation)", 0.017453292519943278, AUTHORITY["EPSG", 9122]], AXIS["north", NORTH], AXIS["east", EAST], AUTHORITY["EPSG", 4314]]</wkt>
+    </coordinateReferenceSystem>
+
+    <coordinateReferenceSystem>
+      <authority>EPSG:4326</authority>
+      <wkt>GEOGCS["World Geodetic System 1984", DATUM["World Geodetic System 1984", SPHEROID["WGS 84", 6378137.0, 298.257223563, AUTHORITY["EPSG", 7030]], AUTHORITY["EPSG", 6326]], AREA["world", -180.0, -90.0, 180.0, 90.0],PRIMEM["greenwich", 0.0, AUTHORITY["EPSG", 8901]], UNIT["degree (supplier to define representation)", 0.017453292519943278, AUTHORITY["EPSG", 9122]], AXIS["north", NORTH], AXIS["east", EAST], AUTHORITY["EPSG", 4326]]</wkt>
+    </coordinateReferenceSystem>
+
+    <!-- Soldner -->
+
+    <coordinateReferenceSystem>
+      <authority>EPSG:3068</authority>
+      <wkt>PROJCS["DHDN / Soldner Berlin",GEOGCS["Deutsches Hauptdreiecksnetz", DATUM["Deutsches Hauptdreiecksnetz", SPHEROID["Bessel 1841", 6377397.155, 299.1528128, AUTHORITY["EPSG", 7004]], AUTHORITY["EPSG", 6314]], AREA["germany - west germany all states", 5.87, 47.27, 13.84, 55.09],PRIMEM["greenwich", 0.0, AUTHORITY["EPSG", 8901]], UNIT["degree (supplier to define representation)", 0.017453292519943278, AUTHORITY["EPSG", 9122]], AXIS["north", NORTH], AXIS["east", EAST], AUTHORITY["EPSG", 4314]],AREA["germany - berlin", 13.09, 52.33, 13.76, 52.65],PROJECTION["Cassini-Soldner"],PARAMETER["false easting", 40000.0], PARAMETER["false northing", 10000.0], PARAMETER["latitude of natural origin", 52.25071338], PARAMETER["longitude of natural origin", 13.37379332], UNIT["metre", 1.0, AUTHORITY["EPSG", 9001]], AXIS["north", NORTH], AXIS["east", EAST],AUTHORITY["EPSG", 3068]]</wkt>
+    </coordinateReferenceSystem>
+
+    <!-- LCC -->
+
+    <coordinateReferenceSystem>
+      <authority>EPSG:3034</authority>
+      <wkt>PROJCS["ETRS89 / LCC Europe",GEOGCS["European Terrestrial Reference System 1989", DATUM["European Terrestrial Reference System 1989", SPHEROID["GRS 1980", 6378137.0, 298.257222101, AUTHORITY["EPSG", 7019]], AUTHORITY["EPSG", 6258]], AREA["europe - etrs89", -16.1, 32.88, 40.18, 84.17],PRIMEM["greenwich", 0.0, AUTHORITY["EPSG", 8901]], UNIT["degree (supplier to define representation)", 0.017453292519943278, AUTHORITY["EPSG", 9122]], AXIS["north", NORTH], AXIS["east", EAST], AUTHORITY["EPSG", 4258]],AREA["europe - etrs89", -16.1, 32.88, 40.18, 84.17],PROJECTION["Lambert Conic Conformal (2SP)"],PARAMETER["easting at false origin", 4000000.0], PARAMETER["northing at false origin", 2800000.0], PARAMETER["latitude of false origin", 52.0], PARAMETER["longitude of false origin", 10.0], PARAMETER["latitude of 1st standard parallel", 35.0], PARAMETER["latitude of 2nd standard parallel", 65.0], UNIT["metre", 1.0, AUTHORITY["EPSG", 9001]], AXIS["north", NORTH], AXIS["east", EAST],AUTHORITY["EPSG", 3034]]</wkt>
+    </coordinateReferenceSystem>
+
+    <coordinateReferenceSystem>
+      <authority>EPSG:3035</authority>
+      <wkt>PROJCS["ETRS89 / LAEA Europe",GEOGCS["European Terrestrial Reference System 1989", DATUM["European Terrestrial Reference System 1989", SPHEROID["GRS 1980", 6378137.0, 298.257222101, AUTHORITY["EPSG", 7019]], AUTHORITY["EPSG", 6258]], AREA["europe - etrs89", -16.1, 32.88, 40.18, 84.17],PRIMEM["greenwich", 0.0, AUTHORITY["EPSG", 8901]], UNIT["degree (supplier to define representation)", 0.017453292519943278, AUTHORITY["EPSG", 9122]], AXIS["north", NORTH], AXIS["east", EAST], AUTHORITY["EPSG", 4258]],AREA["europe - etrs89", -16.1, 32.88, 40.18, 84.17],PROJECTION["Lambert Azimuthal Equal Area"],PARAMETER["false easting", 4321000.0], PARAMETER["false northing", 3210000.0], PARAMETER["latitude of natural origin", 52.0], PARAMETER["longitude of natural origin", 10.0], UNIT["metre", 1.0, AUTHORITY["EPSG", 9001]], AXIS["north", NORTH], AXIS["east", EAST],AUTHORITY["EPSG", 3035]]</wkt>
+    </coordinateReferenceSystem>
+
+    <coordinateReferenceSystem>
+      <authority>EPSG:4839</authority>
+      <wkt>PROJCS["ETRS89 / LCC Germany (N-E)",GEOGCS["European Terrestrial Reference System 1989", DATUM["European Terrestrial Reference System 1989", SPHEROID["GRS 1980", 6378137.0, 298.257222101, AUTHORITY["EPSG", 7019]], AUTHORITY["EPSG", 6258]], AREA["europe - etrs89", -16.1, 32.88, 40.18, 84.17],PRIMEM["greenwich", 0.0, AUTHORITY["EPSG", 8901]], UNIT["degree (supplier to define representation)", 0.017453292519943278, AUTHORITY["EPSG", 9122]], AXIS["north", NORTH], AXIS["east", EAST], AUTHORITY["EPSG", 4258]],AREA["germany - onshore", 5.86, 47.27, 15.04, 55.09],PROJECTION["Lambert Conic Conformal (2SP)"],PARAMETER["easting at false origin", 0.0], PARAMETER["northing at false origin", 0.0], PARAMETER["latitude of false origin", 51.0], PARAMETER["longitude of false origin", 10.3], PARAMETER["latitude of 1st standard parallel", 48.4], PARAMETER["latitude of 2nd standard parallel", 53.4], UNIT["metre", 1.0, AUTHORITY["EPSG", 9001]], AXIS["north", NORTH], AXIS["east", EAST],AUTHORITY["EPSG", 4839]]</wkt>
     </coordinateReferenceSystem>
 
     <!-- WGS 84 / Pseudo-Mercator -->
 
     <coordinateReferenceSystem>
       <authority>EPSG:3857</authority>
-      <wkt>PROJCS["WGS 84 / Pseudo-Mercator", GEOGCS["WGS 84", DATUM["WGS_1984", SPHEROID["WGS 84",6378137,298.257223563, AUTHORITY["EPSG","7030"]], TOWGS84[0, 0, 0, 0, 0, 0, 0], AUTHORITY["EPSG","6326"]], PRIMEM["Greenwich",0, AUTHORITY["EPSG","8901"]], UNIT["degree",0.0174532925199433, AUTHORITY["EPSG","9122"]], AUTHORITY["EPSG","4326"]], PROJECTION["Mercator_1SP"], PARAMETER["central_meridian",0], PARAMETER["scale_factor",1], PARAMETER["false_easting",0], PARAMETER["false_northing",0], UNIT["metre",1, AUTHORITY["EPSG","9001"]], AXIS["X",EAST], AXIS["Y",NORTH], AUTHORITY["EPSG","3857"]]</wkt>
+      <wkt>PROJCS["WGS 84 / Pseudo-Mercator",GEOGCS["World Geodetic System 1984", DATUM["World Geodetic System 1984", SPHEROID["WGS 84", 6378137.0, 298.257223563, AUTHORITY["EPSG", 7030]], AUTHORITY["EPSG", 6326]], AREA["world", -180.0, -90.0, 180.0, 90.0],PRIMEM["greenwich", 0.0, AUTHORITY["EPSG", 8901]], UNIT["degree (supplier to define representation)", 0.017453292519943278, AUTHORITY["EPSG", 9122]], AXIS["north", NORTH], AXIS["east", EAST], AUTHORITY["EPSG", 4326]],AREA["world - 85°s to 85°n", -180.0, -85.06, 180.0, 85.06],PROJECTION["Mercator_1SP"],PARAMETER["false easting", 0.0], PARAMETER["false northing", 0.0], PARAMETER["latitude of natural origin", 0.0], PARAMETER["longitude of natural origin", 0.0], UNIT["metre", 1.0, AUTHORITY["EPSG", 9001]], AXIS["east", EAST], AXIS["north", NORTH],AUTHORITY["EPSG", 3857]]</wkt>
+    </coordinateReferenceSystem>
+
+    <coordinateReferenceSystem>
+      <authority>EPSG:102100</authority>
+      <wkt>PROJCS["WGS_1984_Web_Mercator_Auxiliary_Sphere",GEOGCS["GCS_WGS_1984",DATUM["D_WGS_1984",SPHEROID["WGS_1984",6378137.0,298.257223563]],PRIMEM["Greenwich",0.0],UNIT["Degree",0.0174532925199433]],PROJECTION["Mercator_Auxiliary_Sphere"],PARAMETER["False_Easting",0.0],PARAMETER["False_Northing",0.0],PARAMETER["Central_Meridian",0.0],PARAMETER["Standard_Parallel_1",0.0],PARAMETER["Auxiliary_Sphere_Type",0.0],UNIT["Meter",1.0],AUTHORITY["ESRI","102100"]]</wkt>
+    </coordinateReferenceSystem>
+
+    <coordinateReferenceSystem>
+      <authority>EPSG:900913</authority>
+      <wkt>PROJCS["WGS 84 / Pseudo-Mercator",GEOGCS["World Geodetic System 1984", DATUM["World Geodetic System 1984", SPHEROID["WGS 84", 6378137.0, 298.257223563, AUTHORITY["EPSG", 7030]], AUTHORITY["EPSG", 6326]], AREA["world", -180.0, -90.0, 180.0, 90.0],PRIMEM["greenwich", 0.0, AUTHORITY["EPSG", 8901]], UNIT["degree (supplier to define representation)", 0.017453292519943278, AUTHORITY["EPSG", 9122]], AXIS["north", NORTH], AXIS["east", EAST], AUTHORITY["EPSG", 4326]],AREA["world - 85°s to 85°n", -180.0, -85.06, 180.0, 85.06],PROJECTION["Mercator_1SP"],PARAMETER["false easting", 0.0], PARAMETER["false northing", 0.0], PARAMETER["latitude of natural origin", 0.0], PARAMETER["longitude of natural origin", 0.0], UNIT["metre", 1.0, AUTHORITY["EPSG", 9001]], AXIS["east", EAST], AXIS["north", NORTH],AUTHORITY["EPSG", 900913]]</wkt>
+    </coordinateReferenceSystem>
+
+    <coordinateReferenceSystem>
+      <authority>EPSG:3785</authority>
+      <wkt>PROJCS["Popular Visualisation CRS / Mercator",GEOGCS["Popular Visualisation Datum", DATUM["Popular Visualisation Datum", SPHEROID["Popular Visualisation Sphere", 6378137.0, Infinity, AUTHORITY["EPSG", 7059]], AUTHORITY["EPSG", 6055]], AREA["world", -180.0, -90.0, 180.0, 90.0],PRIMEM["greenwich", 0.0, AUTHORITY["EPSG", 8901]], UNIT["degree (supplier to define representation)", 0.017453292519943278, AUTHORITY["EPSG", 9122]], AXIS["north", NORTH], AXIS["east", EAST], AUTHORITY["EPSG", 4055]],AREA["world - 85°s to 85°n", -180.0, -85.06, 180.0, 85.06],PROJECTION["Mercator 1SP"],PARAMETER["false easting", 0.0], PARAMETER["false northing", 0.0], PARAMETER["latitude of natural origin", 0.0], PARAMETER["longitude of natural origin", 0.0], PARAMETER["scale factor at natural origin", 1.0], UNIT["metre", 1.0, AUTHORITY["EPSG", 9001]], AXIS["east", EAST], AXIS["north", NORTH],AUTHORITY["EPSG", 3785]]</wkt>
     </coordinateReferenceSystem>
 
     <!-- DHDN / 3-degree Gauss-Kruger -->
 
+
+    <coordinateReferenceSystem>
+      <authority>EPSG:2397</authority>
+      <wkt>PROJCS["Pulkovo 1942(83) / 3-degree Gauss-Kruger zone 3",GEOGCS["Pulkovo 1942(83)", DATUM["Pulkovo 1942(83)", SPHEROID["Krassowsky 1940", 6378245.0, 298.3, AUTHORITY["EPSG", 7024]], AUTHORITY["EPSG", 6178]], AREA["europe - onshore - eastern - s-42(83)", 9.92, 41.24, 28.68, 54.74],PRIMEM["greenwich", 0.0, AUTHORITY["EPSG", 8901]], UNIT["degree (supplier to define representation)", 0.017453292519943278, AUTHORITY["EPSG", 9122]], AXIS["north", NORTH], AXIS["east", EAST], AUTHORITY["EPSG", 4178]],AREA["germany - east germany - west of 10.5°e", 9.92, 50.35, 10.5, 51.56],PROJECTION["Transverse Mercator"],PARAMETER["false easting", 3500000.0], PARAMETER["false northing", 0.0], PARAMETER["latitude of natural origin", 0.0], PARAMETER["longitude of natural origin", 9.0], PARAMETER["scale factor at natural origin", 1.0], UNIT["metre", 1.0, AUTHORITY["EPSG", 9001]], AXIS["north", NORTH], AXIS["east", EAST],AUTHORITY["EPSG", 2397]]</wkt>
+    </coordinateReferenceSystem>
+
+    <coordinateReferenceSystem>
+      <authority>EPSG:2398</authority>
+      <wkt>PROJCS["Pulkovo 1942(83) / 3-degree Gauss-Kruger zone 4",GEOGCS["Pulkovo 1942(83)", DATUM["Pulkovo 1942(83)", SPHEROID["Krassowsky 1940", 6378245.0, 298.3, AUTHORITY["EPSG", 7024]], AUTHORITY["EPSG", 6178]], AREA["europe - onshore - eastern - s-42(83)", 9.92, 41.24, 28.68, 54.74],PRIMEM["greenwich", 0.0, AUTHORITY["EPSG", 8901]], UNIT["degree (supplier to define representation)", 0.017453292519943278, AUTHORITY["EPSG", 9122]], AXIS["north", NORTH], AXIS["east", EAST], AUTHORITY["EPSG", 4178]],AREA["europe - 10.5°e to 13.5°e onshore by country", 10.5, 48.97, 13.5, 54.74],PROJECTION["Transverse Mercator"],PARAMETER["false easting", 4500000.0], PARAMETER["false northing", 0.0], PARAMETER["latitude of natural origin", 0.0], PARAMETER["longitude of natural origin", 12.0], PARAMETER["scale factor at natural origin", 1.0], UNIT["metre", 1.0, AUTHORITY["EPSG", 9001]], AXIS["north", NORTH], AXIS["east", EAST],AUTHORITY["EPSG", 2398]]</wkt>
+    </coordinateReferenceSystem>
+
+    <coordinateReferenceSystem>
+      <authority>EPSG:2399</authority>
+      <wkt>PROJCS["Pulkovo 1942(83) / 3-degree Gauss-Kruger zone 5",GEOGCS["Pulkovo 1942(83)", DATUM["Pulkovo 1942(83)", SPHEROID["Krassowsky 1940", 6378245.0, 298.3, AUTHORITY["EPSG", 7024]], AUTHORITY["EPSG", 6178]], AREA["europe - onshore - eastern - s-42(83)", 9.92, 41.24, 28.68, 54.74],PRIMEM["greenwich", 0.0, AUTHORITY["EPSG", 8901]], UNIT["degree (supplier to define representation)", 0.017453292519943278, AUTHORITY["EPSG", 9122]], AXIS["north", NORTH], AXIS["east", EAST], AUTHORITY["EPSG", 4178]],AREA["europe - 13.5°e to 16.5°e onshore and s-42(83) by country", 13.5, 46.54, 16.5, 54.72],PROJECTION["Transverse Mercator"],PARAMETER["false easting", 5500000.0], PARAMETER["false northing", 0.0], PARAMETER["latitude of natural origin", 0.0], PARAMETER["longitude of natural origin", 15.0], PARAMETER["scale factor at natural origin", 1.0], UNIT["metre", 1.0, AUTHORITY["EPSG", 9001]], AXIS["north", NORTH], AXIS["east", EAST],AUTHORITY["EPSG", 2399]]</wkt>
+    </coordinateReferenceSystem>
+
+
+    <coordinateReferenceSystem>
+      <authority>EPSG:5676</authority>
+      <wkt>PROJCS["DHDN / 3-degree Gauss-Kruger zone 2 (E-N)",GEOGCS["Deutsches Hauptdreiecksnetz", DATUM["Deutsches Hauptdreiecksnetz", SPHEROID["Bessel 1841", 6377397.155, 299.1528128, AUTHORITY["EPSG", 7004]], AUTHORITY["EPSG", 6314]], AREA["germany - west germany all states", 5.87, 47.27, 13.84, 55.09],PRIMEM["greenwich", 0.0, AUTHORITY["EPSG", 8901]], UNIT["degree (supplier to define representation)", 0.017453292519943278, AUTHORITY["EPSG", 9122]], AXIS["north", NORTH], AXIS["east", EAST], AUTHORITY["EPSG", 4314]],AREA["germany - west germany - west of 7.5°e", 5.86, 49.11, 7.5, 53.81],PROJECTION["Transverse Mercator"],PARAMETER["false easting", 2500000.0], PARAMETER["false northing", 0.0], PARAMETER["latitude of natural origin", 0.0], PARAMETER["longitude of natural origin", 6.0], PARAMETER["scale factor at natural origin", 1.0], UNIT["metre", 1.0, AUTHORITY["EPSG", 9001]], AXIS["east", EAST], AXIS["north", NORTH],AUTHORITY["EPSG", 5676]]</wkt>
+    </coordinateReferenceSystem>
+
+    <coordinateReferenceSystem>
+      <authority>EPSG:5677</authority>
+      <wkt>PROJCS["DHDN / 3-degree Gauss-Kruger zone 3 (E-N)",GEOGCS["Deutsches Hauptdreiecksnetz", DATUM["Deutsches Hauptdreiecksnetz", SPHEROID["Bessel 1841", 6377397.155, 299.1528128, AUTHORITY["EPSG", 7004]], AUTHORITY["EPSG", 6314]], AREA["germany - west germany all states", 5.87, 47.27, 13.84, 55.09],PRIMEM["greenwich", 0.0, AUTHORITY["EPSG", 8901]], UNIT["degree (supplier to define representation)", 0.017453292519943278, AUTHORITY["EPSG", 9122]], AXIS["north", NORTH], AXIS["east", EAST], AUTHORITY["EPSG", 4314]],AREA["germany - west-germany - 7.5°e to 10.5°e", 7.5, 47.27, 10.51, 55.09],PROJECTION["Transverse Mercator"],PARAMETER["false easting", 3500000.0], PARAMETER["false northing", 0.0], PARAMETER["latitude of natural origin", 0.0], PARAMETER["longitude of natural origin", 9.0], PARAMETER["scale factor at natural origin", 1.0], UNIT["metre", 1.0, AUTHORITY["EPSG", 9001]], AXIS["east", EAST], AXIS["north", NORTH],AUTHORITY["EPSG", 5677]]</wkt>
+    </coordinateReferenceSystem>
+
+    <coordinateReferenceSystem>
+      <authority>EPSG:5678</authority>
+      <wkt>PROJCS["DHDN / 3-degree Gauss-Kruger zone 4 (E-N)",GEOGCS["Deutsches Hauptdreiecksnetz", DATUM["Deutsches Hauptdreiecksnetz", SPHEROID["Bessel 1841", 6377397.155, 299.1528128, AUTHORITY["EPSG", 7004]], AUTHORITY["EPSG", 6314]], AREA["germany - west germany all states", 5.87, 47.27, 13.84, 55.09],PRIMEM["greenwich", 0.0, AUTHORITY["EPSG", 8901]], UNIT["degree (supplier to define representation)", 0.017453292519943278, AUTHORITY["EPSG", 9122]], AXIS["north", NORTH], AXIS["east", EAST], AUTHORITY["EPSG", 4314]],AREA["germany - west germany - 10.5°e to 13.5°e", 10.5, 47.39, 13.51, 54.59],PROJECTION["Transverse Mercator"],PARAMETER["false easting", 4500000.0], PARAMETER["false northing", 0.0], PARAMETER["latitude of natural origin", 0.0], PARAMETER["longitude of natural origin", 12.0], PARAMETER["scale factor at natural origin", 1.0], UNIT["metre", 1.0, AUTHORITY["EPSG", 9001]], AXIS["east", EAST], AXIS["north", NORTH],AUTHORITY["EPSG", 5678]]</wkt>
+    </coordinateReferenceSystem>
+
+    <coordinateReferenceSystem>
+      <authority>EPSG:5679</authority>
+      <wkt>PROJCS["DHDN / 3-degree Gauss-Kruger zone 5 (E-N)",GEOGCS["Deutsches Hauptdreiecksnetz", DATUM["Deutsches Hauptdreiecksnetz", SPHEROID["Bessel 1841", 6377397.155, 299.1528128, AUTHORITY["EPSG", 7004]], AUTHORITY["EPSG", 6314]], AREA["germany - west germany all states", 5.87, 47.27, 13.84, 55.09],PRIMEM["greenwich", 0.0, AUTHORITY["EPSG", 8901]], UNIT["degree (supplier to define representation)", 0.017453292519943278, AUTHORITY["EPSG", 9122]], AXIS["north", NORTH], AXIS["east", EAST], AUTHORITY["EPSG", 4314]],AREA["germany - west germany - east of 13.5°e", 13.5, 48.51, 13.84, 48.98],PROJECTION["Transverse Mercator"],PARAMETER["false easting", 5500000.0], PARAMETER["false northing", 0.0], PARAMETER["latitude of natural origin", 0.0], PARAMETER["longitude of natural origin", 15.0], PARAMETER["scale factor at natural origin", 1.0], UNIT["metre", 1.0, AUTHORITY["EPSG", 9001]], AXIS["east", EAST], AXIS["north", NORTH],AUTHORITY["EPSG", 5679]]</wkt>
+    </coordinateReferenceSystem>
+
+
+    <coordinateReferenceSystem>
+      <authority>EPSG:31462</authority>
+      <wkt>PROJCS["DHDN / 3-degree Gauss zone 2",GEOGCS["Deutsches Hauptdreiecksnetz", DATUM["Deutsches Hauptdreiecksnetz", SPHEROID["Bessel 1841", 6377397.155, 299.1528128, AUTHORITY["EPSG", 7004]], AUTHORITY["EPSG", 6314]], AREA["germany - west germany all states", 5.87, 47.27, 13.84, 55.09],PRIMEM["greenwich", 0.0, AUTHORITY["EPSG", 8901]], UNIT["degree (supplier to define representation)", 0.017453292519943278, AUTHORITY["EPSG", 9122]], AXIS["north", NORTH], AXIS["east", EAST], AUTHORITY["EPSG", 4314]],AREA["germany - west germany - west of 7.5°e", 5.86, 49.11, 7.5, 53.81],PROJECTION["Transverse Mercator"],PARAMETER["false easting", 2500000.0], PARAMETER["false northing", 0.0], PARAMETER["latitude of natural origin", 0.0], PARAMETER["longitude of natural origin", 6.0], PARAMETER["scale factor at natural origin", 1.0], UNIT["metre", 1.0, AUTHORITY["EPSG", 9001]], AXIS["east", EAST], AXIS["north", NORTH],AUTHORITY["EPSG", 31462]]</wkt>
+    </coordinateReferenceSystem>
+
+    <coordinateReferenceSystem>
+      <authority>EPSG:31463</authority>
+      <wkt>PROJCS["DHDN / 3-degree Gauss zone 3",GEOGCS["Deutsches Hauptdreiecksnetz", DATUM["Deutsches Hauptdreiecksnetz", SPHEROID["Bessel 1841", 6377397.155, 299.1528128, AUTHORITY["EPSG", 7004]], AUTHORITY["EPSG", 6314]], AREA["germany - west germany all states", 5.87, 47.27, 13.84, 55.09],PRIMEM["greenwich", 0.0, AUTHORITY["EPSG", 8901]], UNIT["degree (supplier to define representation)", 0.017453292519943278, AUTHORITY["EPSG", 9122]], AXIS["north", NORTH], AXIS["east", EAST], AUTHORITY["EPSG", 4314]],AREA["germany - west-germany - 7.5°e to 10.5°e", 7.5, 47.27, 10.51, 55.09],PROJECTION["Transverse Mercator"],PARAMETER["false easting", 3500000.0], PARAMETER["false northing", 0.0], PARAMETER["latitude of natural origin", 0.0], PARAMETER["longitude of natural origin", 9.0], PARAMETER["scale factor at natural origin", 1.0], UNIT["metre", 1.0, AUTHORITY["EPSG", 9001]], AXIS["east", EAST], AXIS["north", NORTH],AUTHORITY["EPSG", 31463]]</wkt>
+    </coordinateReferenceSystem>
+
+    <coordinateReferenceSystem>
+      <authority>EPSG:31464</authority>
+      <wkt>PROJCS["DHDN / 3-degree Gauss zone 4",GEOGCS["Deutsches Hauptdreiecksnetz", DATUM["Deutsches Hauptdreiecksnetz", SPHEROID["Bessel 1841", 6377397.155, 299.1528128, AUTHORITY["EPSG", 7004]], AUTHORITY["EPSG", 6314]], AREA["germany - west germany all states", 5.87, 47.27, 13.84, 55.09],PRIMEM["greenwich", 0.0, AUTHORITY["EPSG", 8901]], UNIT["degree (supplier to define representation)", 0.017453292519943278, AUTHORITY["EPSG", 9122]], AXIS["north", NORTH], AXIS["east", EAST], AUTHORITY["EPSG", 4314]],AREA["germany - west germany - 10.5°e to 13.5°e", 10.5, 47.39, 13.51, 54.59],PROJECTION["Transverse Mercator"],PARAMETER["false easting", 4500000.0], PARAMETER["false northing", 0.0], PARAMETER["latitude of natural origin", 0.0], PARAMETER["longitude of natural origin", 12.0], PARAMETER["scale factor at natural origin", 1.0], UNIT["metre", 1.0, AUTHORITY["EPSG", 9001]], AXIS["east", EAST], AXIS["north", NORTH],AUTHORITY["EPSG", 31464]]</wkt>
+    </coordinateReferenceSystem>
+
+    <coordinateReferenceSystem>
+      <authority>EPSG:31465</authority>
+      <wkt>PROJCS["DHDN / 3-degree Gauss zone 5",GEOGCS["Deutsches Hauptdreiecksnetz", DATUM["Deutsches Hauptdreiecksnetz", SPHEROID["Bessel 1841", 6377397.155, 299.1528128, AUTHORITY["EPSG", 7004]], AUTHORITY["EPSG", 6314]], AREA["germany - west germany all states", 5.87, 47.27, 13.84, 55.09],PRIMEM["greenwich", 0.0, AUTHORITY["EPSG", 8901]], UNIT["degree (supplier to define representation)", 0.017453292519943278, AUTHORITY["EPSG", 9122]], AXIS["north", NORTH], AXIS["east", EAST], AUTHORITY["EPSG", 4314]],AREA["germany - west germany - east of 13.5°e", 13.5, 48.51, 13.84, 48.98],PROJECTION["Transverse Mercator"],PARAMETER["false easting", 5500000.0], PARAMETER["false northing", 0.0], PARAMETER["latitude of natural origin", 0.0], PARAMETER["longitude of natural origin", 15.0], PARAMETER["scale factor at natural origin", 1.0], UNIT["metre", 1.0, AUTHORITY["EPSG", 9001]], AXIS["east", EAST], AXIS["north", NORTH],AUTHORITY["EPSG", 31465]]</wkt>
+    </coordinateReferenceSystem>
+
     <coordinateReferenceSystem>
       <authority>EPSG:31466</authority>
-      <wkt>PROJCS["DHDN / 3-degree Gauss-Kruger zone 2",GEOGCS["DHDN", DATUM["Deutsches_Hauptdreiecksnetz", SPHEROID["Bessel 1841", 6377397.155, 299.1528128], TOWGS84[598.1, 73.7, 418.2, 0.202, 0.045, -2.455, 6.7]], PRIMEM["greenwich", 0.0], UNIT["degree", 0.0174532925199433],AUTHORITY["EPSG", 4314]],PROJECTION["TRANSVERSE_MERCATOR"],PARAMETER["false_easting", 2500000.0], PARAMETER["false_northing", 0.0], PARAMETER["latitude_of_origin", 0.0], PARAMETER["central_meridian", 6.0], PARAMETER["scale_factor", 1.0], UNIT["metre", 1.0],AXIS["x",NORTH],AXIS["y",EAST],AUTHORITY["EPSG", 31466]]</wkt>
+      <wkt>PROJCS["DHDN / 3-degree Gauss-Kruger zone 2",GEOGCS["Deutsches Hauptdreiecksnetz", DATUM["Deutsches Hauptdreiecksnetz", SPHEROID["Bessel 1841", 6377397.155, 299.1528128, AUTHORITY["EPSG", 7004]], AUTHORITY["EPSG", 6314]], AREA["germany - west germany all states", 5.87, 47.27, 13.84, 55.09],PRIMEM["greenwich", 0.0, AUTHORITY["EPSG", 8901]], UNIT["degree (supplier to define representation)", 0.017453292519943278, AUTHORITY["EPSG", 9122]], AXIS["north", NORTH], AXIS["east", EAST], AUTHORITY["EPSG", 4314]],AREA["germany - west germany - west of 7.5°e", 5.86, 49.11, 7.5, 53.81],PROJECTION["Transverse Mercator"],PARAMETER["false easting", 2500000.0], PARAMETER["false northing", 0.0], PARAMETER["latitude of natural origin", 0.0], PARAMETER["longitude of natural origin", 6.0], PARAMETER["scale factor at natural origin", 1.0], UNIT["metre", 1.0, AUTHORITY["EPSG", 9001]], AXIS["north", NORTH], AXIS["east", EAST],AUTHORITY["EPSG", 31466]]</wkt>
     </coordinateReferenceSystem>
 
     <coordinateReferenceSystem>
       <authority>EPSG:31467</authority>
-      <wkt>PROJCS["DHDN / 3-degree Gauss-Kruger zone 3",GEOGCS["DHDN", DATUM["Deutsches_Hauptdreiecksnetz", SPHEROID["Bessel 1841", 6377397.155, 299.1528128], TOWGS84[598.1, 73.7, 418.2, 0.202, 0.045, -2.455, 6.7]], PRIMEM["greenwich", 0.0], UNIT["degree", 0.0174532925199433],AUTHORITY["EPSG", 4314]],PROJECTION["TRANSVERSE_MERCATOR"],PARAMETER["false_easting", 3500000.0], PARAMETER["false_northing", 0.0], PARAMETER["latitude_of_origin", 0.0], PARAMETER["central_meridian", 9.0], PARAMETER["scale_factor", 1.0], UNIT["metre", 1.0],AXIS["x",NORTH],AXIS["y",EAST],AUTHORITY["EPSG", 31467]]</wkt>
+      <wkt>PROJCS["DHDN / 3-degree Gauss-Kruger zone 3",GEOGCS["Deutsches Hauptdreiecksnetz", DATUM["Deutsches Hauptdreiecksnetz", SPHEROID["Bessel 1841", 6377397.155, 299.1528128, AUTHORITY["EPSG", 7004]], AUTHORITY["EPSG", 6314]], AREA["germany - west germany all states", 5.87, 47.27, 13.84, 55.09],PRIMEM["greenwich", 0.0, AUTHORITY["EPSG", 8901]], UNIT["degree (supplier to define representation)", 0.017453292519943278, AUTHORITY["EPSG", 9122]], AXIS["north", NORTH], AXIS["east", EAST], AUTHORITY["EPSG", 4314]],AREA["germany - west-germany - 7.5°e to 10.5°e", 7.5, 47.27, 10.51, 55.09],PROJECTION["Transverse Mercator"],PARAMETER["false easting", 3500000.0], PARAMETER["false northing", 0.0], PARAMETER["latitude of natural origin", 0.0], PARAMETER["longitude of natural origin", 9.0], PARAMETER["scale factor at natural origin", 1.0], UNIT["metre", 1.0, AUTHORITY["EPSG", 9001]], AXIS["north", NORTH], AXIS["east", EAST],AUTHORITY["EPSG", 31467]]</wkt>
     </coordinateReferenceSystem>
 
     <coordinateReferenceSystem>
       <authority>EPSG:31468</authority>
-      <wkt>PROJCS["DHDN / 3-degree Gauss-Kruger zone 4",GEOGCS["DHDN", DATUM["Deutsches_Hauptdreiecksnetz", SPHEROID["Bessel 1841", 6377397.155, 299.1528128], TOWGS84[598.1, 73.7, 418.2, 0.202, 0.045, -2.455, 6.7]], PRIMEM["greenwich", 0.0], UNIT["degree", 0.0174532925199433],AUTHORITY["EPSG", 4314]],PROJECTION["TRANSVERSE_MERCATOR"],PARAMETER["false_easting", 4500000.0], PARAMETER["false_northing", 0.0], PARAMETER["latitude_of_origin", 0.0], PARAMETER["central_meridian", 12.0], PARAMETER["scale_factor", 1.0], UNIT["metre", 1.0],AXIS["x",NORTH],AXIS["y",EAST],AUTHORITY["EPSG", 31468]]</wkt>
+      <wkt>PROJCS["DHDN / 3-degree Gauss-Kruger zone 4",GEOGCS["Deutsches Hauptdreiecksnetz", DATUM["Deutsches Hauptdreiecksnetz", SPHEROID["Bessel 1841", 6377397.155, 299.1528128, AUTHORITY["EPSG", 7004]], AUTHORITY["EPSG", 6314]], AREA["germany - west germany all states", 5.87, 47.27, 13.84, 55.09],PRIMEM["greenwich", 0.0, AUTHORITY["EPSG", 8901]], UNIT["degree (supplier to define representation)", 0.017453292519943278, AUTHORITY["EPSG", 9122]], AXIS["north", NORTH], AXIS["east", EAST], AUTHORITY["EPSG", 4314]],AREA["germany - west germany - 10.5°e to 13.5°e", 10.5, 47.39, 13.51, 54.59],PROJECTION["Transverse Mercator"],PARAMETER["false easting", 4500000.0], PARAMETER["false northing", 0.0], PARAMETER["latitude of natural origin", 0.0], PARAMETER["longitude of natural origin", 12.0], PARAMETER["scale factor at natural origin", 1.0], UNIT["metre", 1.0, AUTHORITY["EPSG", 9001]], AXIS["north", NORTH], AXIS["east", EAST],AUTHORITY["EPSG", 31468]]</wkt>
     </coordinateReferenceSystem>
 
     <coordinateReferenceSystem>
       <authority>EPSG:31469</authority>
-      <wkt>PROJCS["DHDN / 3-degree Gauss-Kruger zone 5",GEOGCS["DHDN", DATUM["Deutsches_Hauptdreiecksnetz", SPHEROID["Bessel 1841", 6377397.155, 299.1528128], TOWGS84[598.1, 73.7, 418.2, 0.202, 0.045, -2.455, 6.7]], PRIMEM["greenwich", 0.0], UNIT["degree", 0.0174532925199433],AUTHORITY["EPSG", 4314]],PROJECTION["TRANSVERSE_MERCATOR"],PARAMETER["false_easting", 5500000.0], PARAMETER["false_northing", 0.0], PARAMETER["latitude_of_origin", 0.0], PARAMETER["central_meridian", 15.0], PARAMETER["scale_factor", 1.0], UNIT["metre", 1.0],AXIS["x",NORTH],AXIS["y",EAST],AUTHORITY["EPSG", 31469]]</wkt>
+      <wkt>PROJCS["DHDN / 3-degree Gauss-Kruger zone 5",GEOGCS["Deutsches Hauptdreiecksnetz", DATUM["Deutsches Hauptdreiecksnetz", SPHEROID["Bessel 1841", 6377397.155, 299.1528128, AUTHORITY["EPSG", 7004]], AUTHORITY["EPSG", 6314]], AREA["germany - west germany all states", 5.87, 47.27, 13.84, 55.09],PRIMEM["greenwich", 0.0, AUTHORITY["EPSG", 8901]], UNIT["degree (supplier to define representation)", 0.017453292519943278, AUTHORITY["EPSG", 9122]], AXIS["north", NORTH], AXIS["east", EAST], AUTHORITY["EPSG", 4314]],AREA["germany - west germany - east of 13.5°e", 13.5, 48.51, 13.84, 48.98],PROJECTION["Transverse Mercator"],PARAMETER["false easting", 5500000.0], PARAMETER["false northing", 0.0], PARAMETER["latitude of natural origin", 0.0], PARAMETER["longitude of natural origin", 15.0], PARAMETER["scale factor at natural origin", 1.0], UNIT["metre", 1.0, AUTHORITY["EPSG", 9001]], AXIS["north", NORTH], AXIS["east", EAST],AUTHORITY["EPSG", 31469]]</wkt>
     </coordinateReferenceSystem>
 
     <!-- ETRS89 / UTM -->
 
     <coordinateReferenceSystem>
+      <authority>EPSG:3043</authority>
+      <wkt>PROJCS["ETRS89 / UTM zone 31N (N-E)",GEOGCS["European Terrestrial Reference System 1989", DATUM["European Terrestrial Reference System 1989", SPHEROID["GRS 1980", 6378137.0, 298.257222101, AUTHORITY["EPSG", 7019]], AUTHORITY["EPSG", 6258]], AREA["europe - etrs89", -16.1, 32.88, 40.18, 84.17],PRIMEM["greenwich", 0.0, AUTHORITY["EPSG", 8901]], UNIT["degree (supplier to define representation)", 0.017453292519943278, AUTHORITY["EPSG", 9122]], AXIS["north", NORTH], AXIS["east", EAST], AUTHORITY["EPSG", 4258]],AREA["germany - west of 6°e", 3.34, 50.97, 6.0, 55.92],PROJECTION["Transverse Mercator"],PARAMETER["false easting", 500000.0], PARAMETER["false northing", 0.0], PARAMETER["latitude of natural origin", 0.0], PARAMETER["longitude of natural origin", 3.0], PARAMETER["scale factor at natural origin", 0.9996], UNIT["metre", 1.0, AUTHORITY["EPSG", 9001]], AXIS["north", NORTH], AXIS["east", EAST],AUTHORITY["EPSG", 3043]]</wkt>
+    </coordinateReferenceSystem>
+
+    <coordinateReferenceSystem>
+      <authority>EPSG:3044</authority>
+      <wkt>PROJCS["ETRS89 / UTM zone 32N (N-E)",GEOGCS["European Terrestrial Reference System 1989", DATUM["European Terrestrial Reference System 1989", SPHEROID["GRS 1980", 6378137.0, 298.257222101, AUTHORITY["EPSG", 7019]], AUTHORITY["EPSG", 6258]], AREA["europe - etrs89", -16.1, 32.88, 40.18, 84.17],PRIMEM["greenwich", 0.0, AUTHORITY["EPSG", 8901]], UNIT["degree (supplier to define representation)", 0.017453292519943278, AUTHORITY["EPSG", 9122]], AXIS["north", NORTH], AXIS["east", EAST], AUTHORITY["EPSG", 4258]],AREA["germany - 6°e to 12°e", 6.0, 47.27, 12.0, 55.47],PROJECTION["Transverse Mercator"],PARAMETER["false easting", 500000.0], PARAMETER["false northing", 0.0], PARAMETER["latitude of natural origin", 0.0], PARAMETER["longitude of natural origin", 9.0], PARAMETER["scale factor at natural origin", 0.9996], UNIT["metre", 1.0, AUTHORITY["EPSG", 9001]], AXIS["north", NORTH], AXIS["east", EAST],AUTHORITY["EPSG", 3044]]</wkt>
+    </coordinateReferenceSystem>
+
+    <coordinateReferenceSystem>
+      <authority>EPSG:3045</authority>
+      <wkt>PROJCS["ETRS89 / UTM zone 33N (N-E)",GEOGCS["European Terrestrial Reference System 1989", DATUM["European Terrestrial Reference System 1989", SPHEROID["GRS 1980", 6378137.0, 298.257222101, AUTHORITY["EPSG", 7019]], AUTHORITY["EPSG", 6258]], AREA["europe - etrs89", -16.1, 32.88, 40.18, 84.17],PRIMEM["greenwich", 0.0, AUTHORITY["EPSG", 8901]], UNIT["degree (supplier to define representation)", 0.017453292519943278, AUTHORITY["EPSG", 9122]], AXIS["north", NORTH], AXIS["east", EAST], AUTHORITY["EPSG", 4258]],AREA["germany - east of 12°e", 11.57, 47.46, 15.04, 55.03],PROJECTION["Transverse Mercator"],PARAMETER["false easting", 500000.0], PARAMETER["false northing", 0.0], PARAMETER["latitude of natural origin", 0.0], PARAMETER["longitude of natural origin", 15.0], PARAMETER["scale factor at natural origin", 0.9996], UNIT["metre", 1.0, AUTHORITY["EPSG", 9001]], AXIS["north", NORTH], AXIS["east", EAST],AUTHORITY["EPSG", 3045]]</wkt>
+    </coordinateReferenceSystem>
+
+
+    <coordinateReferenceSystem>
+      <authority>EPSG:4647</authority>
+      <wkt>PROJCS["ETRS89 / UTM zone 32N (zE-N)",GEOGCS["European Terrestrial Reference System 1989", DATUM["European Terrestrial Reference System 1989", SPHEROID["GRS 1980", 6378137.0, 298.257222101, AUTHORITY["EPSG", 7019]], AUTHORITY["EPSG", 6258]], AREA["europe - etrs89", -16.1, 32.88, 40.18, 84.17],PRIMEM["greenwich", 0.0, AUTHORITY["EPSG", 8901]], UNIT["degree (supplier to define representation)", 0.017453292519943278, AUTHORITY["EPSG", 9122]], AXIS["north", NORTH], AXIS["east", EAST], AUTHORITY["EPSG", 4258]],AREA["germany - 6°e to 12°e", 6.0, 47.27, 12.0, 55.47],PROJECTION["Transverse Mercator"],PARAMETER["false easting", 3.25E7], PARAMETER["false northing", 0.0], PARAMETER["latitude of natural origin", 0.0], PARAMETER["longitude of natural origin", 9.0], PARAMETER["scale factor at natural origin", 0.9996], UNIT["metre", 1.0, AUTHORITY["EPSG", 9001]], AXIS["east", EAST], AXIS["north", NORTH],AUTHORITY["EPSG", 4647]]</wkt>
+    </coordinateReferenceSystem>
+
+    <coordinateReferenceSystem>
+      <authority>EPSG:5650</authority>
+      <wkt>PROJCS["ETRS89 / UTM zone 33N (zE-N)",GEOGCS["European Terrestrial Reference System 1989", DATUM["European Terrestrial Reference System 1989", SPHEROID["GRS 1980", 6378137.0, 298.257222101, AUTHORITY["EPSG", 7019]], AUTHORITY["EPSG", 6258]], AREA["europe - etrs89", -16.1, 32.88, 40.18, 84.17],PRIMEM["greenwich", 0.0, AUTHORITY["EPSG", 8901]], UNIT["degree (supplier to define representation)", 0.017453292519943278, AUTHORITY["EPSG", 9122]], AXIS["north", NORTH], AXIS["east", EAST], AUTHORITY["EPSG", 4258]],AREA["germany - east of 12°e", 11.57, 47.46, 15.04, 55.03],PROJECTION["Transverse Mercator"],PARAMETER["false easting", 3.35E7], PARAMETER["false northing", 0.0], PARAMETER["latitude of natural origin", 0.0], PARAMETER["longitude of natural origin", 15.0], PARAMETER["scale factor at natural origin", 0.9996], UNIT["metre", 1.0, AUTHORITY["EPSG", 9001]], AXIS["east", EAST], AXIS["north", NORTH],AUTHORITY["EPSG", 5650]]</wkt>
+    </coordinateReferenceSystem>
+
+
+    <coordinateReferenceSystem>
+      <authority>EPSG:32632</authority>
+      <wkt>PROJCS["WGS 84 / UTM zone 32N",GEOGCS["World Geodetic System 1984", DATUM["World Geodetic System 1984", SPHEROID["WGS 84", 6378137.0, 298.257223563, AUTHORITY["EPSG", 7030]], AUTHORITY["EPSG", 6326]], AREA["world", -180.0, -90.0, 180.0, 90.0],PRIMEM["greenwich", 0.0, AUTHORITY["EPSG", 8901]], UNIT["degree (supplier to define representation)", 0.017453292519943278, AUTHORITY["EPSG", 9122]], AXIS["north", NORTH], AXIS["east", EAST], AUTHORITY["EPSG", 4326]],AREA["world - n hemisphere - 6°e to 12°e - by country", 6.0, 0.0, 12.0, 84.0],PROJECTION["Transverse Mercator"],PARAMETER["false easting", 500000.0], PARAMETER["false northing", 0.0], PARAMETER["latitude of natural origin", 0.0], PARAMETER["longitude of natural origin", 9.0], PARAMETER["scale factor at natural origin", 0.9996], UNIT["metre", 1.0, AUTHORITY["EPSG", 9001]], AXIS["east", EAST], AXIS["north", NORTH],AUTHORITY["EPSG", 32632]]</wkt>
+    </coordinateReferenceSystem>
+
+    <coordinateReferenceSystem>
+      <authority>EPSG:32633</authority>
+      <wkt>PROJCS["WGS 84 / UTM zone 33N",GEOGCS["World Geodetic System 1984", DATUM["World Geodetic System 1984", SPHEROID["WGS 84", 6378137.0, 298.257223563, AUTHORITY["EPSG", 7030]], AUTHORITY["EPSG", 6326]], AREA["world", -180.0, -90.0, 180.0, 90.0],PRIMEM["greenwich", 0.0, AUTHORITY["EPSG", 8901]], UNIT["degree (supplier to define representation)", 0.017453292519943278, AUTHORITY["EPSG", 9122]], AXIS["north", NORTH], AXIS["east", EAST], AUTHORITY["EPSG", 4326]],AREA["world - n hemisphere - 12°e to 18°e - by country", 12.0, 0.0, 18.0, 84.0],PROJECTION["Transverse Mercator"],PARAMETER["false easting", 500000.0], PARAMETER["false northing", 0.0], PARAMETER["latitude of natural origin", 0.0], PARAMETER["longitude of natural origin", 15.0], PARAMETER["scale factor at natural origin", 0.9996], UNIT["metre", 1.0, AUTHORITY["EPSG", 9001]], AXIS["east", EAST], AXIS["north", NORTH],AUTHORITY["EPSG", 32633]]</wkt>
+    </coordinateReferenceSystem>
+
+    <coordinateReferenceSystem>
       <authority>EPSG:25831</authority>
-      <wkt>PROJCS["ETRS89 / UTM zone 31N",GEOGCS["ETRS89", DATUM["European_Terrestrial_Reference_System_1989", SPHEROID["GRS 1980", 6378137.0, 298.257222101], TOWGS84[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]], PRIMEM["greenwich", 0.0], UNIT["degree", 0.0174532925199433],AUTHORITY["EPSG", 4258]],PROJECTION["TRANSVERSE_MERCATOR"],PARAMETER["false_easting", 500000.0], PARAMETER["false_northing", 0.0], PARAMETER["latitude_of_origin", 0.0], PARAMETER["central_meridian", 3.0], PARAMETER["scale_factor", 0.9996], UNIT["metre", 1.0],AXIS["easting",EAST],AXIS["northing",NORTH],AUTHORITY["EPSG", 25831]]</wkt>
+      <wkt>PROJCS["ETRS89 / UTM zone 31N",GEOGCS["European Terrestrial Reference System 1989", DATUM["European Terrestrial Reference System 1989", SPHEROID["GRS 1980", 6378137.0, 298.257222101, AUTHORITY["EPSG", 7019]], AUTHORITY["EPSG", 6258]], AREA["europe - etrs89", -16.1, 32.88, 40.18, 84.17],PRIMEM["greenwich", 0.0, AUTHORITY["EPSG", 8901]], UNIT["degree (supplier to define representation)", 0.017453292519943278, AUTHORITY["EPSG", 9122]], AXIS["north", NORTH], AXIS["east", EAST], AUTHORITY["EPSG", 4258]],AREA["europe - 0°e to 6°e and etrs89 by country", 0.0, 37.0, 6.01, 82.41],PROJECTION["Transverse Mercator"],PARAMETER["false easting", 500000.0], PARAMETER["false northing", 0.0], PARAMETER["latitude of natural origin", 0.0], PARAMETER["longitude of natural origin", 3.0], PARAMETER["scale factor at natural origin", 0.9996], UNIT["metre", 1.0, AUTHORITY["EPSG", 9001]], AXIS["east", EAST], AXIS["north", NORTH],AUTHORITY["EPSG", 25831]]</wkt>
     </coordinateReferenceSystem>
 
     <coordinateReferenceSystem>
       <authority>EPSG:25832</authority>
-      <wkt>PROJCS["ETRS89 / UTM zone 32N",GEOGCS["ETRS89", DATUM["European_Terrestrial_Reference_System_1989", SPHEROID["GRS 1980", 6378137.0, 298.257222101], TOWGS84[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]], PRIMEM["greenwich", 0.0], UNIT["degree", 0.0174532925199433],AUTHORITY["EPSG", 4258]],PROJECTION["TRANSVERSE_MERCATOR"],PARAMETER["false_easting", 500000.0], PARAMETER["false_northing", 0.0], PARAMETER["latitude_of_origin", 0.0], PARAMETER["central_meridian", 9.0], PARAMETER["scale_factor", 0.9996], UNIT["metre", 1.0],AXIS["easting",EAST],AXIS["northing",NORTH],AUTHORITY["EPSG", 25832]]</wkt>
+      <wkt>PROJCS["ETRS89 / UTM zone 32N",GEOGCS["European Terrestrial Reference System 1989", DATUM["European Terrestrial Reference System 1989", SPHEROID["GRS 1980", 6378137.0, 298.257222101, AUTHORITY["EPSG", 7019]], AUTHORITY["EPSG", 6258]], AREA["europe - etrs89", -16.1, 32.88, 40.18, 84.17],PRIMEM["greenwich", 0.0, AUTHORITY["EPSG", 8901]], UNIT["degree (supplier to define representation)", 0.017453292519943278, AUTHORITY["EPSG", 9122]], AXIS["north", NORTH], AXIS["east", EAST], AUTHORITY["EPSG", 4258]],AREA["europe - 6°e to 12°e and etrs89 by country", 6.0, 38.76, 12.0, 83.92],PROJECTION["Transverse Mercator"],PARAMETER["false easting", 500000.0], PARAMETER["false northing", 0.0], PARAMETER["latitude of natural origin", 0.0], PARAMETER["longitude of natural origin", 9.0], PARAMETER["scale factor at natural origin", 0.9996], UNIT["metre", 1.0, AUTHORITY["EPSG", 9001]], AXIS["east", EAST], AXIS["north", NORTH],AUTHORITY["EPSG", 25832]]</wkt>
     </coordinateReferenceSystem>
 
     <coordinateReferenceSystem>
       <authority>EPSG:25833</authority>
-      <wkt>PROJCS["ETRS89 / UTM zone 33N",GEOGCS["ETRS89", DATUM["European_Terrestrial_Reference_System_1989", SPHEROID["GRS 1980", 6378137.0, 298.257222101], TOWGS84[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]], PRIMEM["greenwich", 0.0], UNIT["degree", 0.0174532925199433],AUTHORITY["EPSG", 4258]],PROJECTION["TRANSVERSE_MERCATOR"],PARAMETER["false_easting", 500000.0], PARAMETER["false_northing", 0.0], PARAMETER["latitude_of_origin", 0.0], PARAMETER["central_meridian", 15.0], PARAMETER["scale_factor", 0.9996], UNIT["metre", 1.0],AXIS["easting",EAST],AXIS["northing",NORTH],AUTHORITY["EPSG", 25833]]</wkt>
+      <wkt>PROJCS["ETRS89 / UTM zone 33N",GEOGCS["European Terrestrial Reference System 1989", DATUM["European Terrestrial Reference System 1989", SPHEROID["GRS 1980", 6378137.0, 298.257222101, AUTHORITY["EPSG", 7019]], AUTHORITY["EPSG", 6258]], AREA["europe - etrs89", -16.1, 32.88, 40.18, 84.17],PRIMEM["greenwich", 0.0, AUTHORITY["EPSG", 8901]], UNIT["degree (supplier to define representation)", 0.017453292519943278, AUTHORITY["EPSG", 9122]], AXIS["north", NORTH], AXIS["east", EAST], AUTHORITY["EPSG", 4258]],AREA["europe - 12°e to 18°e and etrs89 by country", 12.0, 46.4, 18.01, 84.01],PROJECTION["Transverse Mercator"],PARAMETER["false easting", 500000.0], PARAMETER["false northing", 0.0], PARAMETER["latitude of natural origin", 0.0], PARAMETER["longitude of natural origin", 15.0], PARAMETER["scale factor at natural origin", 0.9996], UNIT["metre", 1.0, AUTHORITY["EPSG", 9001]], AXIS["east", EAST], AXIS["north", NORTH],AUTHORITY["EPSG", 25833]]</wkt>
     </coordinateReferenceSystem>
 
   </coordinateReferenceSystems>
@@ -107,7 +251,6 @@
 <!--         </maximum> -->
 <!--       </boundingBox> -->
 <!--     </ntv2Transformer> -->
-<!--   </transformers> -->
 
 <!--
     <projectionTransformer>
@@ -128,5 +271,6 @@
 
     </projectionTransformer>
 -->
+<!--   </transformers> -->
 
 </configuration>
