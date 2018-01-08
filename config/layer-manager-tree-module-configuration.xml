@@ -113,6 +113,38 @@
     </layer>
   </folder>
 
+  <folder>
+    <name>Feeds</name>
+    <layer>
+      <name>Recent Earthquacks</name>
+      <url><![CDATA[georss:http://quakes.bgs.ac.uk/feeds/WorldSeismology.xml]]></url>
+    </layer>
+    <layer>
+      <name><![CDATA[Download Service BGR]]></name>
+      <url><![CDATA[georss:https://services.bgr.de/atomfeeds/service.xml]]></url>
+    </layer>
+    <layer>
+      <name><![CDATA[SERTIT - Activations]]></name>
+      <url><![CDATA[georss:http://sertit.u-strasbg.fr/RMS/georss/ActivationsSertit.xml]]></url>
+    </layer>
+    <layer>
+      <name><![CDATA[DLR/ZKI Emergency Mapping Activations]]></name>
+      <url><![CDATA[georss:https://www.zki.dlr.de/iwg-sem/feeds/activations]]></url>
+    </layer>
+    <layer>
+      <name><![CDATA[Copernicus EMS Risk and Recovery Mapping Activations]]></name>
+      <url><![CDATA[georss:http://emergency.copernicus.eu/mapping/activations-risk-and-recovery/feed]]></url>
+    </layer>
+    <layer>
+      <name><![CDATA[Copernicus EMS Rapid Mapping Activations]]></name>
+      <url><![CDATA[georss:http://emergency.copernicus.eu/mapping/activations-rapid/feed]]></url>
+    </layer>
+    <layer>
+      <name><![CDATA[Geonames]]></name>
+      <url><![CDATA[georss:http://www.geonames.org/recent-changes.xml]]></url>
+    </layer>
+  </folder>
+
   <layer>
     <name>OSM Streets (de)</name>
     <url><![CDATA[osm:http://{identifier}.tile.openstreetmap.de/tiles/osmde/{zoomLevel}/{column}/{row}.png?identifiers=a,b,c,d]]></url>
@@ -129,4 +161,5 @@
     <name>Maptoolkit Terrain</name>
     <url><![CDATA[osm:https://tile{identifier}.maptoolkit.net/terrain/{zoomLevel}/{column}/{row}.png?identifiers=1,2,3,4]]></url>
   </layer>
+
 </configuration>

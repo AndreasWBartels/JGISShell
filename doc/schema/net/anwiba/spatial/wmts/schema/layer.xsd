@@ -37,13 +37,15 @@
     <xsd:sequence>
       <xsd:element name="identifier" type="xsd:string" minOccurs="1" maxOccurs="1"/>
       <xsd:element name="name" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="abstract" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="keyword" type="xsd:string" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element name="version" type="xsd:string" minOccurs="0" maxOccurs="1"/>
       <xsd:element name="boundingBox" type="layer:BoundingBoxType" minOccurs="0" maxOccurs="1"/>
       <xsd:element name="style" type="layer:StyleType" minOccurs="1" maxOccurs="unbounded"/>
-      <xsd:element name="imageFormat" type="xsd:string" minOccurs="1" maxOccurs="unbounded"/>
       <xsd:element name="dimension" type="layer:DimensionType" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element name="matrixSet" type="layer:MatrixSetType" minOccurs="1" maxOccurs="unbounded"/>
       <xsd:element name="tiles" type="layer:TilesType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="objectInfo" type="layer:ResourceType" minOccurs="0" maxOccurs="1"/>
     </xsd:sequence>
   </xsd:complexType>
 
@@ -101,9 +103,24 @@
         <jaxb:class name="Tiles"/>
       </xsd:appinfo>
     </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="layer:ResourceType">
+        <xsd:sequence>
+          <xsd:element name="restful" type="layer:RestfulUrlType" minOccurs="0" maxOccurs="unbounded"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+
+  <xsd:complexType name="ResourceType">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <jaxb:class name="Resource"/>
+      </xsd:appinfo>
+    </xsd:annotation>
     <xsd:sequence>
-      <xsd:element name="restful" type="layer:RestfulUrlType" minOccurs="0" maxOccurs="unbounded"/>
-      <xsd:element name="kvp" type="xsd:anyURI" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="format" type="xsd:string" minOccurs="1" maxOccurs="unbounded"/>
+      <xsd:element name="url" type="xsd:anyURI" minOccurs="1" maxOccurs="1"/>
     </xsd:sequence>
   </xsd:complexType>
 

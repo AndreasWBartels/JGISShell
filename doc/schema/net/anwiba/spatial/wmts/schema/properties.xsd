@@ -39,6 +39,7 @@
     <xsd:sequence>
        <xsd:element name="title" type="xsd:string" minOccurs="0" maxOccurs="1"/>
        <xsd:element name="abstract" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+       <xsd:element name="keyword" type="xsd:string" minOccurs="0" maxOccurs="unbounded"/>
        <xsd:element name="fees" type="xsd:string" minOccurs="0" maxOccurs="1"/>
        <xsd:element name="constraints" type="xsd:string" minOccurs="0" maxOccurs="1"/>
     </xsd:sequence>
