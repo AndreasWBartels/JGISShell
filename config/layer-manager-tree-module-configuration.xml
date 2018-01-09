@@ -143,6 +143,14 @@
       <name><![CDATA[Geonames]]></name>
       <url><![CDATA[georss:http://www.geonames.org/recent-changes.xml]]></url>
     </layer>
+    <layer>
+      <name><![CDATA[Geonetwork]]></name>
+      <url><![CDATA[georss:http://www.fao.org/geonetwork/srv/en/rss.latest]]></url>
+    </layer>
+    <layer>
+      <name><![CDATA[UNESCO World Heritage List]]></name>
+      <url><![CDATA[georss:http://whc.unesco.org/en/list/georss/]]></url>
+    </layer>
   </folder>
 
   <layer>

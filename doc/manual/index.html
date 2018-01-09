@@ -606,6 +606,12 @@ table.CodeRay td.code>pre{padding:0}
 <li><a href="#_api">API</a></li>
 </ul>
 </li>
+<li><a href="#_program_environment">Program environment</a>
+<ul class="sectlevel2">
+<li><a href="#_file_system">File system</a></li>
+<li><a href="#_system_variables">System variables</a></li>
+</ul>
+</li>
 <li><a href="#howto">How to</a>
 <ul class="sectlevel2">
 <li><a href="#_enable_oracle_locator_spatial_support">Enable Oracle Locator/Spatial support</a></li>
@@ -5317,6 +5323,49 @@ sample
 </tr>
 </table>
 </div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_georss">GeoRSS</h4>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+see <a href="http://www.georss.org/">hompage</a>
+</td>
+</tr>
+</table>
+</div>
+<div class="sect4">
+<h5 id="_layer_5">Layer</h5>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">URI syntax</dt>
+</dl>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+syntax
+</td>
+<td class="hdlist2">
+<p>georss:http[s]://{user}:{password}@{host}:{port}/{path}</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+sample
+</td>
+<td class="hdlist2">
+<p>georss:http://www.geonames.org/recent-changes.xml</p>
+</td>
+</tr>
+</table>
+</div>
 <div style="page-break-after: always;"></div>
 </div>
 </div>
@@ -5885,6 +5934,64 @@ path<br>
 </div>
 </div>
 <div class="sect1">
+<h2 id="_program_environment">Program environment</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_file_system">File system</h3>
+<div class="imageblock">
+<div class="content">
+<img src="./images/filesystem-manager-program-folder.png" alt="program folder">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_system_variables">System variables</h3>
+<div class="imageblock">
+<div class="content">
+<img src="./images/dialog-about-system-properties.png" alt="program folder">
+</div>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+jgisshell.cachingpath
+</td>
+<td class="hdlist2">
+<p>caching folder</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+jgisshell.workingpath
+</td>
+<td class="hdlist2">
+<p>working folder</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+net.anwiba.spatial.render.raster.border
+</td>
+<td class="hdlist2">
+<p>enable raster border rendering</p>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">See script</dt>
+<dd>
+<p><a href="../../scripts/net/anwiba/script/groovy/EnableRasterBorderRendering.groovy">scripts/net/anwiba/script/groovy/EnableRasterBorderRendering.groovy</a></p>
+</dd>
+</dl>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+</div>
+<div class="sect1">
 <h2 id="howto">How to</h2>
 <div class="sectionbody">
 <div class="sect2">
@@ -5979,7 +6086,7 @@ jsde_sdkres.jar to JGISShell/lib/jsde_sdkres-9.3.2.jar</pre>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2017-12-22 01:21:56 CET
+Last updated 2018-01-09 07:04:35 CET
 </div>
 </div>
 </body>
