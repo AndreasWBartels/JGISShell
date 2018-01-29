@@ -424,108 +424,18 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 .hide-for-print{display:none!important}
 .show-for-print{display:inherit!important}}
 </style>
-<style>
-/* Stylesheet for CodeRay to match GitHub theme | MIT License | http://foundation.zurb.com */
-/*pre.CodeRay {background-color:#f7f7f8;}*/
-.CodeRay .line-numbers{border-right:1px solid #d8d8d8;padding:0 0.5em 0 .25em}
-.CodeRay span.line-numbers{display:inline-block;margin-right:.5em;color:rgba(0,0,0,.3)}
-.CodeRay .line-numbers strong{color:rgba(0,0,0,.4)}
-table.CodeRay{border-collapse:separate;border-spacing:0;margin-bottom:0;border:0;background:none}
-table.CodeRay td{vertical-align: top;line-height:1.45}
-table.CodeRay td.line-numbers{text-align:right}
-table.CodeRay td.line-numbers>pre{padding:0;color:rgba(0,0,0,.3)}
-table.CodeRay td.code{padding:0 0 0 .5em}
-table.CodeRay td.code>pre{padding:0}
-.CodeRay .debug{color:#fff !important;background:#000080 !important}
-.CodeRay .annotation{color:#007}
-.CodeRay .attribute-name{color:#000080}
-.CodeRay .attribute-value{color:#700}
-.CodeRay .binary{color:#509}
-.CodeRay .comment{color:#998;font-style:italic}
-.CodeRay .char{color:#04d}
-.CodeRay .char .content{color:#04d}
-.CodeRay .char .delimiter{color:#039}
-.CodeRay .class{color:#458;font-weight:bold}
-.CodeRay .complex{color:#a08}
-.CodeRay .constant,.CodeRay .predefined-constant{color:#008080}
-.CodeRay .color{color:#099}
-.CodeRay .class-variable{color:#369}
-.CodeRay .decorator{color:#b0b}
-.CodeRay .definition{color:#099}
-.CodeRay .delimiter{color:#000}
-.CodeRay .doc{color:#970}
-.CodeRay .doctype{color:#34b}
-.CodeRay .doc-string{color:#d42}
-.CodeRay .escape{color:#666}
-.CodeRay .entity{color:#800}
-.CodeRay .error{color:#808}
-.CodeRay .exception{color:inherit}
-.CodeRay .filename{color:#099}
-.CodeRay .function{color:#900;font-weight:bold}
-.CodeRay .global-variable{color:#008080}
-.CodeRay .hex{color:#058}
-.CodeRay .integer,.CodeRay .float{color:#099}
-.CodeRay .include{color:#555}
-.CodeRay .inline{color:#000}
-.CodeRay .inline .inline{background:#ccc}
-.CodeRay .inline .inline .inline{background:#bbb}
-.CodeRay .inline .inline-delimiter{color:#d14}
-.CodeRay .inline-delimiter{color:#d14}
-.CodeRay .important{color:#555;font-weight:bold}
-.CodeRay .interpreted{color:#b2b}
-.CodeRay .instance-variable{color:#008080}
-.CodeRay .label{color:#970}
-.CodeRay .local-variable{color:#963}
-.CodeRay .octal{color:#40e}
-.CodeRay .predefined{color:#369}
-.CodeRay .preprocessor{color:#579}
-.CodeRay .pseudo-class{color:#555}
-.CodeRay .directive{font-weight:bold}
-.CodeRay .type{font-weight:bold}
-.CodeRay .predefined-type{color:inherit}
-.CodeRay .reserved,.CodeRay .keyword {color:#000;font-weight:bold}
-.CodeRay .key{color:#808}
-.CodeRay .key .delimiter{color:#606}
-.CodeRay .key .char{color:#80f}
-.CodeRay .value{color:#088}
-.CodeRay .regexp .delimiter{color:#808}
-.CodeRay .regexp .content{color:#808}
-.CodeRay .regexp .modifier{color:#808}
-.CodeRay .regexp .char{color:#d14}
-.CodeRay .regexp .function{color:#404;font-weight:bold}
-.CodeRay .string{color:#d20}
-.CodeRay .string .string .string{background:#ffd0d0}
-.CodeRay .string .content{color:#d14}
-.CodeRay .string .char{color:#d14}
-.CodeRay .string .delimiter{color:#d14}
-.CodeRay .shell{color:#d14}
-.CodeRay .shell .delimiter{color:#d14}
-.CodeRay .symbol{color:#990073}
-.CodeRay .symbol .content{color:#a60}
-.CodeRay .symbol .delimiter{color:#630}
-.CodeRay .tag{color:#008080}
-.CodeRay .tag-special{color:#d70}
-.CodeRay .variable{color:#036}
-.CodeRay .insert{background:#afa}
-.CodeRay .delete{background:#faa}
-.CodeRay .change{color:#aaf;background:#007}
-.CodeRay .head{color:#f8f;background:#505}
-.CodeRay .insert .insert{color:#080}
-.CodeRay .delete .delete{color:#800}
-.CodeRay .change .change{color:#66f}
-.CodeRay .head .head{color:#f4f}
-</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
 </head>
 <body class="article toc2 toc-left">
 <div id="header">
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
-<li><a href="#_coordinate_reference_systems">Coordinate reference systems</a>
+<li><a href="#coordinate-reference-systems">Coordinate reference systems</a>
 <ul class="sectlevel2">
 <li><a href="#coordinatereferencesystemes">Configuration</a></li>
-<li><a href="#_supported_projections">Supported projections</a></li>
-<li><a href="#_length_and_area_calculation">Length and area calculation</a></li>
+<li><a href="#supported-projections">Supported projections</a></li>
+<li><a href="#length-and-area-calculation">Length and area calculation</a></li>
 </ul>
 </li>
 </ul>
@@ -533,10 +443,10 @@ table.CodeRay td.code>pre{padding:0}
 </div>
 <div id="content">
 <div class="sect1">
-<h2 id="_coordinate_reference_systems">Coordinate reference systems</h2>
+<h2 id="coordinate-reference-systems"><a class="anchor" href="#coordinate-reference-systems"></a>Coordinate reference systems</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="coordinatereferencesystemes">Configuration</h3>
+<h3 id="coordinatereferencesystemes"><a class="anchor" href="#coordinatereferencesystemes"></a>Configuration</h3>
 <div id="configurationcoordinatereferencesystemes" class="hdlist">
 <table>
 <tr>
@@ -560,86 +470,86 @@ Schema
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="xml"><span class="preprocessor">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
-<span class="tag">&lt;configuration</span> <span class="attribute-name">xmlns</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">http://www.anwiba.net/module/coordinatereferencesystem</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;configuration xmlns="http://www.anwiba.net/module/coordinatereferencesystem"&gt;
 
-  <span class="tag">&lt;url&gt;</span>http://spatialreference.org/ref/${authority}/${code}/ogcwkt/<span class="tag">&lt;/url&gt;</span>
+  &lt;url&gt;http://spatialreference.org/ref/${authority}/${code}/ogcwkt/&lt;/url&gt;
 
-  <span class="tag">&lt;coordinateReferenceSystems&gt;</span>
+  &lt;coordinateReferenceSystems&gt;
 
-    <span class="tag">&lt;coordinateReferenceSystem&gt;</span>
-      <span class="tag">&lt;authority&gt;</span>EPSG:4326<span class="tag">&lt;/authority&gt;</span>
-      <span class="tag">&lt;wkt&gt;</span>GEOGCS[&quot;World Geodetic System 1984&quot;, DATUM[&quot;World Geodetic System 1984&quot;, SPHEROID[&quot;WGS 84&quot;, 6378137.0, 298.257223563, AUTHORITY[&quot;EPSG&quot;, 7030]], AUTHORITY[&quot;EPSG&quot;, 6326]], AREA[&quot;world&quot;, -180.0, -90.0, 180.0, 90.0],PRIMEM[&quot;greenwich&quot;, 0.0, AUTHORITY[&quot;EPSG&quot;, 8901]], UNIT[&quot;degree (supplier to define representation)&quot;, 0.017453292519943278, AUTHORITY[&quot;EPSG&quot;, 9122]], AXIS[&quot;north&quot;, NORTH], AXIS[&quot;east&quot;, EAST], AUTHORITY[&quot;EPSG&quot;, 4326]]<span class="tag">&lt;/wkt&gt;</span>
-    <span class="tag">&lt;/coordinateReferenceSystem&gt;</span>
+    &lt;coordinateReferenceSystem&gt;
+      &lt;authority&gt;EPSG:4326&lt;/authority&gt;
+      &lt;wkt&gt;GEOGCS["World Geodetic System 1984", DATUM["World Geodetic System 1984", SPHEROID["WGS 84", 6378137.0, 298.257223563, AUTHORITY["EPSG", 7030]], AUTHORITY["EPSG", 6326]], AREA["world", -180.0, -90.0, 180.0, 90.0],PRIMEM["greenwich", 0.0, AUTHORITY["EPSG", 8901]], UNIT["degree (supplier to define representation)", 0.017453292519943278, AUTHORITY["EPSG", 9122]], AXIS["north", NORTH], AXIS["east", EAST], AUTHORITY["EPSG", 4326]]&lt;/wkt&gt;
+    &lt;/coordinateReferenceSystem&gt;
 
       :
 
-  <span class="tag">&lt;/coordinateReferenceSystems&gt;</span>
+  &lt;/coordinateReferenceSystems&gt;
 
-  <span class="tag">&lt;transformers&gt;</span>
-  <span class="tag">&lt;/transformers&gt;</span>
+  &lt;transformers&gt;
+  &lt;/transformers&gt;
 
-<span class="tag">&lt;/configuration&gt;</span></code></pre>
+&lt;/configuration&gt;</code></pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_transformers">Transformers</h4>
+<h4 id="transformers"><a class="anchor" href="#transformers"></a>Transformers</h4>
 <div class="sect4">
-<h5 id="_gridshift">Gridshift</h5>
+<h5 id="gridshift"><a class="anchor" href="#gridshift"></a>Gridshift</h5>
 <div class="listingblock">
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="xml">    <span class="tag">&lt;ntv2Transformer&gt;</span>
-      <span class="tag">&lt;sourceCoordinateReferenceSystem&gt;</span>EPSG:4314<span class="tag">&lt;/sourceCoordinateReferenceSystem&gt;</span>
-      <span class="tag">&lt;targetCoordinateReferenceSystem&gt;</span>EPSG:4258<span class="tag">&lt;/targetCoordinateReferenceSystem&gt;</span>
-      <span class="tag">&lt;boundingBox&gt;</span>
-        <span class="tag">&lt;minimum&gt;</span>
-          <span class="tag">&lt;longitude&gt;</span>5.5<span class="tag">&lt;/longitude&gt;</span>
-          <span class="tag">&lt;latitude&gt;</span>47<span class="tag">&lt;/latitude&gt;</span>
-        <span class="tag">&lt;/minimum&gt;</span>
-        <span class="tag">&lt;maximum&gt;</span>
-          <span class="tag">&lt;longitude&gt;</span>15.666667<span class="tag">&lt;/longitude&gt;</span>
-          <span class="tag">&lt;latitude&gt;</span>55.3<span class="tag">&lt;/latitude&gt;</span>
-        <span class="tag">&lt;/maximum&gt;</span>
-      <span class="tag">&lt;/boundingBox&gt;</span>
-      <span class="tag">&lt;gridShiftFile&gt;</span>$SYSTEM{jgisshell.workingpath}/data/ntv2/BETA2007.gsb<span class="tag">&lt;/gridShiftFile&gt;</span>
-    <span class="tag">&lt;/ntv2Transformer&gt;</span></code></pre>
+<pre class="highlight"><code class="language-xml" data-lang="xml">    &lt;ntv2Transformer&gt;
+      &lt;sourceCoordinateReferenceSystem&gt;EPSG:4314&lt;/sourceCoordinateReferenceSystem&gt;
+      &lt;targetCoordinateReferenceSystem&gt;EPSG:4258&lt;/targetCoordinateReferenceSystem&gt;
+      &lt;boundingBox&gt;
+        &lt;minimum&gt;
+          &lt;longitude&gt;5.5&lt;/longitude&gt;
+          &lt;latitude&gt;47&lt;/latitude&gt;
+        &lt;/minimum&gt;
+        &lt;maximum&gt;
+          &lt;longitude&gt;15.666667&lt;/longitude&gt;
+          &lt;latitude&gt;55.3&lt;/latitude&gt;
+        &lt;/maximum&gt;
+      &lt;/boundingBox&gt;
+      &lt;gridShiftFile&gt;$SYSTEM{jgisshell.workingpath}/data/ntv2/BETA2007.gsb&lt;/gridShiftFile&gt;
+    &lt;/ntv2Transformer&gt;</code></pre>
 </div>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_7_parameter_helmert_transformer">7 Parameter Helmert transformer</h5>
+<h5 id="7-parameter-helmert-transformer"><a class="anchor" href="#7-parameter-helmert-transformer"></a>7 Parameter Helmert transformer</h5>
 <div class="listingblock">
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="xml">    <span class="tag">&lt;sevenParameterTransformer&gt;</span>
-      <span class="tag">&lt;sourceCoordinateReferenceSystem&gt;</span>EPSG:4314<span class="tag">&lt;/sourceCoordinateReferenceSystem&gt;</span>
-      <span class="tag">&lt;targetCoordinateReferenceSystem&gt;</span>EPSG:4258<span class="tag">&lt;/targetCoordinateReferenceSystem&gt;</span>
-      <span class="tag">&lt;boundingBox&gt;</span>
-        <span class="tag">&lt;minimum&gt;</span>
-          <span class="tag">&lt;longitude&gt;</span>5.5<span class="tag">&lt;/longitude&gt;</span>
-          <span class="tag">&lt;latitude&gt;</span>47<span class="tag">&lt;/latitude&gt;</span>
-        <span class="tag">&lt;/minimum&gt;</span>
-        <span class="tag">&lt;maximum&gt;</span>
-          <span class="tag">&lt;longitude&gt;</span>15.666667<span class="tag">&lt;/longitude&gt;</span>
-          <span class="tag">&lt;latitude&gt;</span>55.3<span class="tag">&lt;/latitude&gt;</span>
-        <span class="tag">&lt;/maximum&gt;</span>
-      <span class="tag">&lt;/boundingBox&gt;</span>
-      <span class="tag">&lt;translation&gt;</span>
-        <span class="tag">&lt;x&gt;</span>598.1<span class="tag">&lt;/x&gt;</span>
-        <span class="tag">&lt;y&gt;</span>73.7<span class="tag">&lt;/y&gt;</span>
-        <span class="tag">&lt;z&gt;</span>418.2<span class="tag">&lt;/z&gt;</span>
-      <span class="tag">&lt;/translation&gt;</span>
-      <span class="tag">&lt;rotation&gt;</span>
-        <span class="tag">&lt;x&gt;</span>0.202<span class="tag">&lt;/x&gt;</span>
-        <span class="tag">&lt;y&gt;</span>0.045<span class="tag">&lt;/y&gt;</span>
-        <span class="tag">&lt;z&gt;</span>-2.455<span class="tag">&lt;/z&gt;</span>
-      <span class="tag">&lt;/rotation&gt;</span>
-      <span class="tag">&lt;scale&gt;</span>6.7<span class="tag">&lt;/scale&gt;</span>
-    <span class="tag">&lt;/sevenParameterTransformer&gt;</span></code></pre>
+<pre class="highlight"><code class="language-xml" data-lang="xml">    &lt;sevenParameterTransformer&gt;
+      &lt;sourceCoordinateReferenceSystem&gt;EPSG:4314&lt;/sourceCoordinateReferenceSystem&gt;
+      &lt;targetCoordinateReferenceSystem&gt;EPSG:4258&lt;/targetCoordinateReferenceSystem&gt;
+      &lt;boundingBox&gt;
+        &lt;minimum&gt;
+          &lt;longitude&gt;5.5&lt;/longitude&gt;
+          &lt;latitude&gt;47&lt;/latitude&gt;
+        &lt;/minimum&gt;
+        &lt;maximum&gt;
+          &lt;longitude&gt;15.666667&lt;/longitude&gt;
+          &lt;latitude&gt;55.3&lt;/latitude&gt;
+        &lt;/maximum&gt;
+      &lt;/boundingBox&gt;
+      &lt;translation&gt;
+        &lt;x&gt;598.1&lt;/x&gt;
+        &lt;y&gt;73.7&lt;/y&gt;
+        &lt;z&gt;418.2&lt;/z&gt;
+      &lt;/translation&gt;
+      &lt;rotation&gt;
+        &lt;x&gt;0.202&lt;/x&gt;
+        &lt;y&gt;0.045&lt;/y&gt;
+        &lt;z&gt;-2.455&lt;/z&gt;
+      &lt;/rotation&gt;
+      &lt;scale&gt;6.7&lt;/scale&gt;
+    &lt;/sevenParameterTransformer&gt;</code></pre>
 </div>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_projection_transformer">Projection transformer</h5>
+<h5 id="projection-transformer"><a class="anchor" href="#projection-transformer"></a>Projection transformer</h5>
 <div class="hdlist">
 <table>
 <tr>
@@ -669,30 +579,30 @@ File
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="xml">    <span class="tag">&lt;projectionTransformer&gt;</span>
+<pre class="highlight"><code class="language-xml" data-lang="xml">    &lt;projectionTransformer&gt;
 
-      <span class="tag">&lt;script</span><span class="attribute-name">:applicable</span><span class="tag">&gt;</span>
-<span class="inline">        &lt;script:language&gt;GROOVY&lt;<span class="regexp"><span class="delimiter">/</span><span class="content">script:language&gt;
+      &lt;script:applicable&gt;
+        &lt;script:language&gt;GROOVY&lt;/script:language&gt;
         &lt;script:groovyScript&gt;
-          &lt;script:uri&gt;net</span><span class="delimiter">/</span></span>anwiba/script/groovy/transformer/applicable.groovy&lt;<span class="regexp"><span class="delimiter">/</span><span class="content">script:uri&gt;
-        &lt;</span><span class="delimiter">/</span></span>script:groovyScript&gt;
-      &lt;<span class="regexp"><span class="delimiter">/</span><span class="content">script:applicable&gt;
+          &lt;script:uri&gt;net/anwiba/script/groovy/transformer/applicable.groovy&lt;/script:uri&gt;
+        &lt;/script:groovyScript&gt;
+      &lt;/script:applicable&gt;
 
       &lt;factory&gt;
-        &lt;script:language&gt;GROOVY&lt;</span><span class="delimiter">/</span></span>script:language&gt;
+        &lt;script:language&gt;GROOVY&lt;/script:language&gt;
         &lt;script:groovyScript&gt;
-          &lt;script:uri&gt;net/anwiba/script/groovy/transformer/factory.groovy&lt;<span class="regexp"><span class="delimiter">/</span><span class="content">script:uri&gt;
-        &lt;</span><span class="delimiter">/</span></span>script:groovyScript&gt;
-      &lt;<span class="regexp"><span class="delimiter">/</span><span class="content">factory&gt;
+          &lt;script:uri&gt;net/anwiba/script/groovy/transformer/factory.groovy&lt;/script:uri&gt;
+        &lt;/script:groovyScript&gt;
+      &lt;/factory&gt;
 
-    &lt;</span><span class="delimiter">/</span></span>projectionTransformer&gt;</span></code></pre>
+    &lt;/projectionTransformer&gt;</code></pre>
 </div>
 </div>
 </div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_supported_projections">Supported projections</h3>
+<h3 id="supported-projections"><a class="anchor" href="#supported-projections"></a>Supported projections</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Transversale mercator projection</dt>
@@ -718,7 +628,7 @@ File
 </div>
 </div>
 <div class="sect2">
-<h3 id="_length_and_area_calculation">Length and area calculation</h3>
+<h3 id="length-and-area-calculation"><a class="anchor" href="#length-and-area-calculation"></a>Length and area calculation</h3>
 <div class="paragraph">
 <p>Distances or areas with known coordinate reference system are computed on the rotation ellipsoid using the method given Section 6 of C. F. F. Karney, Algorithms for <a href="https://doi.org/10.1007/s00190-012-0578-z">geodesics</a>, J. Geodesy 87, 43–55 (2013) ( <a href="https://geographiclib.sourceforge.io/geod-addenda.html">addenda</a>).</p>
 </div>
@@ -726,7 +636,7 @@ File
 <p>The implementation and further description could be found <a href="https://geographiclib.sourceforge.io/">here</a>.</p>
 </div>
 <div class="sect3">
-<h4 id="_scripting_calculators">Scripting calculators</h4>
+<h4 id="scripting-calculators"><a class="anchor" href="#scripting-calculators"></a>Scripting calculators</h4>
 <div class="hdlist">
 <table>
 <tr>
@@ -760,34 +670,34 @@ Java injections
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="xml">    <span class="tag">&lt;calculators&gt;</span>
-      <span class="tag">&lt;length&gt;</span>
+<pre class="highlight"><code class="language-xml" data-lang="xml">    &lt;calculators&gt;
+      &lt;length&gt;
 
-        <span class="tag">&lt;script</span><span class="attribute-name">:applicable</span><span class="tag">&gt;</span>
-<span class="inline">          &lt;script:language&gt;GROOVY&lt;<span class="regexp"><span class="delimiter">/</span><span class="content">script:language&gt;
+        &lt;script:applicable&gt;
+          &lt;script:language&gt;GROOVY&lt;/script:language&gt;
           &lt;script:groovyScript&gt;
-            &lt;script:uri&gt;net</span><span class="delimiter">/</span></span>anwiba/script/groovy/calculators/length/applicable.groovy&lt;<span class="regexp"><span class="delimiter">/</span><span class="content">script:uri&gt;
-          &lt;</span><span class="delimiter">/</span></span>script:groovyScript&gt;
-        &lt;<span class="regexp"><span class="delimiter">/</span><span class="content">script:applicable&gt;
+            &lt;script:uri&gt;net/anwiba/script/groovy/calculators/length/applicable.groovy&lt;/script:uri&gt;
+          &lt;/script:groovyScript&gt;
+        &lt;/script:applicable&gt;
 
         &lt;calculator&gt;
-          &lt;script:language&gt;GROOVY&lt;</span><span class="delimiter">/</span></span>script:language&gt;
+          &lt;script:language&gt;GROOVY&lt;/script:language&gt;
           &lt;script:groovyScript&gt;
-            &lt;script:uri&gt;net/anwiba/script/groovy/calculators/length/calculator.groovy&lt;<span class="regexp"><span class="delimiter">/</span><span class="content">script:uri&gt;
-          &lt;</span><span class="delimiter">/</span></span>script:groovyScript&gt;
-        &lt;<span class="regexp"><span class="delimiter">/</span><span class="content">calculator&gt;
+            &lt;script:uri&gt;net/anwiba/script/groovy/calculators/length/calculator.groovy&lt;/script:uri&gt;
+          &lt;/script:groovyScript&gt;
+        &lt;/calculator&gt;
 
-      &lt;</span><span class="delimiter">/</span></span>length&gt;
+      &lt;/length&gt;
 
-      <span class="tag">&lt;area&gt;</span>
-
-         :
-
-      <span class="tag">&lt;/area&gt;</span>
+      &lt;area&gt;
 
          :
 
-    &lt;<span class="regexp"><span class="delimiter">/</span><span class="content">calculators&gt;</span></span></span></code></pre>
+      &lt;/area&gt;
+
+         :
+
+    &lt;/calculators&gt;</code></pre>
 </div>
 </div>
 </div>

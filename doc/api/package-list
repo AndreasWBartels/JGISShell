@@ -20,6 +20,7 @@ net.anwiba.spatial.api.gps
 net.anwiba.spatial.api.image
 net.anwiba.spatial.api.layer
 net.anwiba.spatial.api.layer.feature
+net.anwiba.spatial.api.layer.manager
 net.anwiba.spatial.api.layer.raster
 net.anwiba.spatial.api.map
 net.anwiba.spatial.api.process

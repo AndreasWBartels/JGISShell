@@ -424,112 +424,22 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 .hide-for-print{display:none!important}
 .show-for-print{display:inherit!important}}
 </style>
-<style>
-/* Stylesheet for CodeRay to match GitHub theme | MIT License | http://foundation.zurb.com */
-/*pre.CodeRay {background-color:#f7f7f8;}*/
-.CodeRay .line-numbers{border-right:1px solid #d8d8d8;padding:0 0.5em 0 .25em}
-.CodeRay span.line-numbers{display:inline-block;margin-right:.5em;color:rgba(0,0,0,.3)}
-.CodeRay .line-numbers strong{color:rgba(0,0,0,.4)}
-table.CodeRay{border-collapse:separate;border-spacing:0;margin-bottom:0;border:0;background:none}
-table.CodeRay td{vertical-align: top;line-height:1.45}
-table.CodeRay td.line-numbers{text-align:right}
-table.CodeRay td.line-numbers>pre{padding:0;color:rgba(0,0,0,.3)}
-table.CodeRay td.code{padding:0 0 0 .5em}
-table.CodeRay td.code>pre{padding:0}
-.CodeRay .debug{color:#fff !important;background:#000080 !important}
-.CodeRay .annotation{color:#007}
-.CodeRay .attribute-name{color:#000080}
-.CodeRay .attribute-value{color:#700}
-.CodeRay .binary{color:#509}
-.CodeRay .comment{color:#998;font-style:italic}
-.CodeRay .char{color:#04d}
-.CodeRay .char .content{color:#04d}
-.CodeRay .char .delimiter{color:#039}
-.CodeRay .class{color:#458;font-weight:bold}
-.CodeRay .complex{color:#a08}
-.CodeRay .constant,.CodeRay .predefined-constant{color:#008080}
-.CodeRay .color{color:#099}
-.CodeRay .class-variable{color:#369}
-.CodeRay .decorator{color:#b0b}
-.CodeRay .definition{color:#099}
-.CodeRay .delimiter{color:#000}
-.CodeRay .doc{color:#970}
-.CodeRay .doctype{color:#34b}
-.CodeRay .doc-string{color:#d42}
-.CodeRay .escape{color:#666}
-.CodeRay .entity{color:#800}
-.CodeRay .error{color:#808}
-.CodeRay .exception{color:inherit}
-.CodeRay .filename{color:#099}
-.CodeRay .function{color:#900;font-weight:bold}
-.CodeRay .global-variable{color:#008080}
-.CodeRay .hex{color:#058}
-.CodeRay .integer,.CodeRay .float{color:#099}
-.CodeRay .include{color:#555}
-.CodeRay .inline{color:#000}
-.CodeRay .inline .inline{background:#ccc}
-.CodeRay .inline .inline .inline{background:#bbb}
-.CodeRay .inline .inline-delimiter{color:#d14}
-.CodeRay .inline-delimiter{color:#d14}
-.CodeRay .important{color:#555;font-weight:bold}
-.CodeRay .interpreted{color:#b2b}
-.CodeRay .instance-variable{color:#008080}
-.CodeRay .label{color:#970}
-.CodeRay .local-variable{color:#963}
-.CodeRay .octal{color:#40e}
-.CodeRay .predefined{color:#369}
-.CodeRay .preprocessor{color:#579}
-.CodeRay .pseudo-class{color:#555}
-.CodeRay .directive{font-weight:bold}
-.CodeRay .type{font-weight:bold}
-.CodeRay .predefined-type{color:inherit}
-.CodeRay .reserved,.CodeRay .keyword {color:#000;font-weight:bold}
-.CodeRay .key{color:#808}
-.CodeRay .key .delimiter{color:#606}
-.CodeRay .key .char{color:#80f}
-.CodeRay .value{color:#088}
-.CodeRay .regexp .delimiter{color:#808}
-.CodeRay .regexp .content{color:#808}
-.CodeRay .regexp .modifier{color:#808}
-.CodeRay .regexp .char{color:#d14}
-.CodeRay .regexp .function{color:#404;font-weight:bold}
-.CodeRay .string{color:#d20}
-.CodeRay .string .string .string{background:#ffd0d0}
-.CodeRay .string .content{color:#d14}
-.CodeRay .string .char{color:#d14}
-.CodeRay .string .delimiter{color:#d14}
-.CodeRay .shell{color:#d14}
-.CodeRay .shell .delimiter{color:#d14}
-.CodeRay .symbol{color:#990073}
-.CodeRay .symbol .content{color:#a60}
-.CodeRay .symbol .delimiter{color:#630}
-.CodeRay .tag{color:#008080}
-.CodeRay .tag-special{color:#d70}
-.CodeRay .variable{color:#036}
-.CodeRay .insert{background:#afa}
-.CodeRay .delete{background:#faa}
-.CodeRay .change{color:#aaf;background:#007}
-.CodeRay .head{color:#f8f;background:#505}
-.CodeRay .insert .insert{color:#080}
-.CodeRay .delete .delete{color:#800}
-.CodeRay .change .change{color:#66f}
-.CodeRay .head .head{color:#f4f}
-</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
 </head>
 <body class="article toc2 toc-left">
 <div id="header">
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
-<li><a href="#_map_components">Map components</a>
+<li><a href="#map-components">Map components</a>
 <ul class="sectlevel2">
-<li><a href="#_features">Features</a></li>
-<li><a href="#_map_2">Map</a></li>
-<li><a href="#_locator">Locator</a></li>
-<li><a href="#_legend">Legend</a></li>
-<li><a href="#_detail_maps">Detail maps</a></li>
-<li><a href="#_gazetteer">Gazetteer</a></li>
-<li><a href="#_object_search">Object search</a></li>
+<li><a href="#features">Features</a></li>
+<li><a href="#map-2">Map</a></li>
+<li><a href="#locator">Locator</a></li>
+<li><a href="#legend">Legend</a></li>
+<li><a href="#detail-maps">Detail maps</a></li>
+<li><a href="#gazetteer">Gazetteer</a></li>
+<li><a href="#object-search">Object search</a></li>
 </ul>
 </li>
 </ul>
@@ -537,7 +447,7 @@ table.CodeRay td.code>pre{padding:0}
 </div>
 <div id="content">
 <div class="sect1">
-<h2 id="_map_components">Map components</h2>
+<h2 id="map-components"><a class="anchor" href="#map-components"></a>Map components</h2>
 <div class="sectionbody">
 <div id="mapcomponents" class="imageblock">
 <div class="content">
@@ -548,7 +458,7 @@ table.CodeRay td.code>pre{padding:0}
 <table>
 <tr>
 <td class="icon">
-<div class="title">Tip</div>
+<i class="fa icon-tip" title="Tip"></i>
 </td>
 <td class="content">
 <a href="http://www.documenta14.de/en/venues/21721/karlsaue-park">Karlsaue</a>
@@ -557,9 +467,9 @@ table.CodeRay td.code>pre{padding:0}
 </table>
 </div>
 <div class="sect2">
-<h3 id="_features">Features</h3>
+<h3 id="features"><a class="anchor" href="#features"></a>Features</h3>
 <div class="sect3">
-<h4 id="mapcomponentsfeatures">Resources</h4>
+<h4 id="mapcomponentsfeatures"><a class="anchor" href="#mapcomponentsfeatures"></a>Resources</h4>
 <div class="paragraph">
 <p><strong>Open layer manager</strong> <a href="#layermanager">see</a></p>
 </div>
@@ -590,7 +500,7 @@ table.CodeRay td.code>pre{padding:0}
 <table>
 <tr>
 <td class="icon">
-<div class="title">Note</div>
+<i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
 see <a href="#supportedformats">Supported formats</a>
@@ -612,7 +522,7 @@ see <a href="#supportedformats">Supported formats</a>
 <table>
 <tr>
 <td class="icon">
-<div class="title">Note</div>
+<i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
 see <a href="#supportedformats">Supported formats</a>
@@ -637,7 +547,7 @@ see <a href="#supportedformats">Supported formats</a>
 <table>
 <tr>
 <td class="icon">
-<div class="title">Note</div>
+<i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
 see <a href="#supportedformats">Supported formats</a>
@@ -647,7 +557,7 @@ see <a href="#supportedformats">Supported formats</a>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_map_components_2">Map components</h4>
+<h4 id="map-components-2"><a class="anchor" href="#map-components-2"></a>Map components</h4>
 <div class="paragraph">
 <p><strong>Show/hide locator component</strong> <a href="#locatorcomponent">see</a></p>
 </div>
@@ -720,7 +630,7 @@ see <a href="#supportedformats">Supported formats</a>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_map_navigation">Map navigation</h4>
+<h4 id="map-navigation"><a class="anchor" href="#map-navigation"></a>Map navigation</h4>
 <div class="paragraph">
 <p><strong>Enable selection mode</strong></p>
 </div>
@@ -889,7 +799,7 @@ see <a href="#supportedformats">Supported formats</a>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_map">Map</h4>
+<h4 id="map"><a class="anchor" href="#map"></a>Map</h4>
 <div class="paragraph">
 <p><strong>Zoom to map envelope</strong></p>
 </div>
@@ -957,7 +867,7 @@ see <a href="#supportedformats">Supported formats</a>
 <table>
 <tr>
 <td class="icon">
-<div class="title">Caution</div>
+<i class="fa icon-caution" title="Caution"></i>
 </td>
 <td class="content">
 Ensure that no layer is selected
@@ -967,7 +877,7 @@ Ensure that no layer is selected
 </div>
 </div>
 <div class="sect3">
-<h4 id="_layer">Layer</h4>
+<h4 id="layer"><a class="anchor" href="#layer"></a>Layer</h4>
 <div class="paragraph">
 <p><strong>Zoom to envelope of selected layers</strong></p>
 </div>
@@ -1050,7 +960,7 @@ Ensure that no layer is selected
 <table>
 <tr>
 <td class="icon">
-<div class="title">Caution</div>
+<i class="fa icon-caution" title="Caution"></i>
 </td>
 <td class="content">
 Ensure that a layer is selected and no objects
@@ -1060,7 +970,7 @@ Ensure that a layer is selected and no objects
 </div>
 </div>
 <div class="sect3">
-<h4 id="_objects">Objects</h4>
+<h4 id="objects"><a class="anchor" href="#objects"></a>Objects</h4>
 <div class="paragraph">
 <p><strong>Zoom to envelope of selected objects</strong></p>
 </div>
@@ -1138,7 +1048,7 @@ Ensure that a layer is selected and no objects
 <table>
 <tr>
 <td class="icon">
-<div class="title">Caution</div>
+<i class="fa icon-caution" title="Caution"></i>
 </td>
 <td class="content">
 Ensure that objects are selected and the objects owning layer
@@ -1148,7 +1058,7 @@ Ensure that objects are selected and the objects owning layer
 </div>
 </div>
 <div class="sect3">
-<h4 id="_ohter">Ohter</h4>
+<h4 id="ohter"><a class="anchor" href="#ohter"></a>Ohter</h4>
 <div class="paragraph">
 <p><strong>Open elevation profile dialog for the current selected object</strong> <a href="#elevationprofile">see</a></p>
 </div>
@@ -1233,16 +1143,16 @@ Ensure that objects are selected and the objects owning layer
 </div>
 </div>
 <div class="sect2">
-<h3 id="_map_2">Map</h3>
+<h3 id="map-2"><a class="anchor" href="#map-2"></a>Map</h3>
 <div id="mapcomponent" class="imageblock">
 <div class="content">
 <img src="./images/mapviewer-osmmap.png" alt="map viewer">
 </div>
 </div>
 <div class="sect3">
-<h4 id="_features_2">Features</h4>
+<h4 id="features-2"><a class="anchor" href="#features-2"></a>Features</h4>
 <div class="sect4">
-<h5 id="mapcomponentfeatures">Map</h5>
+<h5 id="mapcomponentfeatures"><a class="anchor" href="#mapcomponentfeatures"></a>Map</h5>
 <div id="mapcomponentmapfeatures" class="paragraph">
 <p><strong>Open map</strong></p>
 </div>
@@ -1343,7 +1253,7 @@ Ensure that objects are selected and the objects owning layer
 <table>
 <tr>
 <td class="icon">
-<div class="title">Caution</div>
+<i class="fa icon-caution" title="Caution"></i>
 </td>
 <td class="content">
 Ensure that no layer is selected
@@ -1353,7 +1263,7 @@ Ensure that no layer is selected
 </div>
 </div>
 <div class="sect4">
-<h5 id="_layer_2">Layer</h5>
+<h5 id="layer-2"><a class="anchor" href="#layer-2"></a>Layer</h5>
 <div id="mapcomponentlayerfeatures" class="paragraph">
 <p><strong>Open layer</strong></p>
 </div>
@@ -1374,7 +1284,7 @@ Ensure that no layer is selected
 <table>
 <tr>
 <td class="icon">
-<div class="title">Note</div>
+<i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
 see <a href="#supportedformats">Supported formats</a>
@@ -1406,7 +1316,7 @@ see <a href="#supportedformats">Supported formats</a>
 <table>
 <tr>
 <td class="icon">
-<div class="title">Caution</div>
+<i class="fa icon-caution" title="Caution"></i>
 </td>
 <td class="content">
 Ensure that a layer is selected and no objects
@@ -1416,7 +1326,7 @@ Ensure that a layer is selected and no objects
 </div>
 </div>
 <div class="sect4">
-<h5 id="_objects_2">Objects</h5>
+<h5 id="objects-2"><a class="anchor" href="#objects-2"></a>Objects</h5>
 <div id="mapcomponentobjectfeatures" class="paragraph">
 <p><strong>Zoom to envelope of selected objects</strong></p>
 </div>
@@ -1471,7 +1381,7 @@ Ensure that a layer is selected and no objects
 <table>
 <tr>
 <td class="icon">
-<div class="title">Caution</div>
+<i class="fa icon-caution" title="Caution"></i>
 </td>
 <td class="content">
 Ensure that objects are selected and the objects owning layer
@@ -1484,14 +1394,14 @@ Ensure that objects are selected and the objects owning layer
 </div>
 </div>
 <div class="sect2">
-<h3 id="_locator">Locator</h3>
+<h3 id="locator"><a class="anchor" href="#locator"></a>Locator</h3>
 <div id="locatorcomponent" class="imageblock">
 <div class="content">
 <img src="./images/mapviewer-locator-osmmap.png" alt="locator">
 </div>
 </div>
 <div class="sect3">
-<h4 id="_features_3">Features</h4>
+<h4 id="features-3"><a class="anchor" href="#features-3"></a>Features</h4>
 <div id="locatorcomponentfeatures" class="paragraph">
 <p><strong>Open map</strong></p>
 </div>
@@ -1525,7 +1435,7 @@ Ensure that objects are selected and the objects owning layer
 <table>
 <tr>
 <td class="icon">
-<div class="title">Note</div>
+<i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
 see <a href="#supportedformats">Supported formats</a>
@@ -1647,14 +1557,14 @@ see <a href="#supportedformats">Supported formats</a>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_legend">Legend</h3>
+<h3 id="legend"><a class="anchor" href="#legend"></a>Legend</h3>
 <div id="legendcomponent" class="imageblock">
 <div class="content">
 <img src="./images/mapviewer-legend-osmmap.png" alt="image legend">
 </div>
 </div>
 <div class="sect3">
-<h4 id="_features_4">Features</h4>
+<h4 id="features-4"><a class="anchor" href="#features-4"></a>Features</h4>
 <div id="legendcomponentfeatures" class="paragraph">
 <p><strong>Open layer</strong></p>
 </div>
@@ -1675,7 +1585,7 @@ see <a href="#supportedformats">Supported formats</a>
 <table>
 <tr>
 <td class="icon">
-<div class="title">Note</div>
+<i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
 see <a href="#supportedformats">Supported formats</a>
@@ -1747,14 +1657,14 @@ see <a href="#supportedformats">Supported formats</a>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_detail_maps">Detail maps</h3>
+<h3 id="detail-maps"><a class="anchor" href="#detail-maps"></a>Detail maps</h3>
 <div id="detailmapscomponent" class="imageblock">
 <div class="content">
 <img src="./images/mapviewer-detail-maps-osmmap.png" alt="detail maps">
 </div>
 </div>
 <div class="sect3">
-<h4 id="_features_5">Features</h4>
+<h4 id="features-5"><a class="anchor" href="#features-5"></a>Features</h4>
 <div id="detailmapcomponentfeatures" class="paragraph">
 <p><strong>Open map</strong></p>
 </div>
@@ -1788,7 +1698,7 @@ see <a href="#supportedformats">Supported formats</a>
 <table>
 <tr>
 <td class="icon">
-<div class="title">Note</div>
+<i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
 see <a href="#supportedformats">Supported formats</a>
@@ -1933,14 +1843,14 @@ see <a href="#supportedformats">Supported formats</a>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_gazetteer">Gazetteer</h3>
+<h3 id="gazetteer"><a class="anchor" href="#gazetteer"></a>Gazetteer</h3>
 <div id="gazetteercomponent" class="imageblock">
 <div class="content">
 <img src="./images/mapviewer-gazetteer-osmmap.png" alt="gazetteer">
 </div>
 </div>
 <div class="sect3">
-<h4 id="_configuration">Configuration</h4>
+<h4 id="configuration"><a class="anchor" href="#configuration"></a>Configuration</h4>
 <div id="gazetteercomponentconfiguration" class="hdlist">
 <table>
 <tr>
@@ -1963,46 +1873,27 @@ Schema
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="xml"><table class="CodeRay"><tr>
-  <td class="line-numbers"><pre>1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-</pre></td>
-  <td class="code"><pre><span class="preprocessor">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
-<span class="tag">&lt;configuration</span> <span class="attribute-name">xmlns</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">http://www.anwiba.net/module/gazetteer</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
-  <span class="tag">&lt;service&gt;</span>
-    <span class="tag">&lt;name&gt;</span>nominatim osm<span class="tag">&lt;/name&gt;</span>
-    <span class="tag">&lt;type&gt;</span>NOMINATIM<span class="tag">&lt;/type&gt;</span>
-    <span class="tag">&lt;url&gt;</span>http://nominatim.openstreetmap.org/search/${query}?format=jsonv2<span class="entity">&amp;amp;</span>addressdetails=1<span class="entity">&amp;amp;</span>limit=${limit}<span class="entity">&amp;amp;</span>polygon_geojson=1<span class="tag">&lt;/url&gt;</span>
-    <span class="tag">&lt;values&gt;</span>
-      <span class="tag">&lt;value</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">limit</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">value</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">20</span><span class="delimiter">&quot;</span></span><span class="tag">/&gt;</span>
-    <span class="tag">&lt;/values&gt;</span>
-    <span class="tag">&lt;label&gt;</span>{0}<span class="tag">&lt;/label&gt;</span>
-    <span class="tag">&lt;properties&gt;</span>
-      <span class="tag">&lt;property</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">display_name</span><span class="delimiter">&quot;</span></span><span class="tag">/&gt;</span>
-    <span class="tag">&lt;/properties&gt;</span>
-    <span class="tag">&lt;maximumZoomValue&gt;</span>0.0001<span class="tag">&lt;/maximumZoomValue&gt;</span>
-  <span class="tag">&lt;/service&gt;</span>
-<span class="tag">&lt;/configuration&gt;</span></pre></td>
-</tr></table></code></pre>
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;configuration xmlns="http://www.anwiba.net/module/gazetteer"&gt;
+  &lt;service&gt;
+    &lt;name&gt;nominatim osm&lt;/name&gt;
+    &lt;type&gt;NOMINATIM&lt;/type&gt;
+    &lt;url&gt;http://nominatim.openstreetmap.org/search/${query}?format=jsonv2&amp;amp;addressdetails=1&amp;amp;limit=${limit}&amp;amp;polygon_geojson=1&lt;/url&gt;
+    &lt;values&gt;
+      &lt;value name="limit" value="20"/&gt;
+    &lt;/values&gt;
+    &lt;label&gt;{0}&lt;/label&gt;
+    &lt;properties&gt;
+      &lt;property name="display_name"/&gt;
+    &lt;/properties&gt;
+    &lt;maximumZoomValue&gt;0.0001&lt;/maximumZoomValue&gt;
+  &lt;/service&gt;
+&lt;/configuration&gt;</code></pre>
 </div>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_features_6">Features</h4>
+<h4 id="features-6"><a class="anchor" href="#features-6"></a>Features</h4>
 <div id="gazetteercomponentfeatures" class="paragraph">
 <p><strong>Open search result as layer</strong></p>
 </div>
@@ -2047,7 +1938,7 @@ Schema
 </div>
 </div>
 <div class="sect2">
-<h3 id="_object_search">Object search</h3>
+<h3 id="object-search"><a class="anchor" href="#object-search"></a>Object search</h3>
 <div id="objectsearchcomponent" class="imageblock">
 <div class="content">
 <img src="./images/mapviewer-object-search-osmmap.png" alt="object search">
@@ -2057,7 +1948,7 @@ Schema
 <table>
 <tr>
 <td class="icon">
-<div class="title">Note</div>
+<i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
 needs one selected layer
@@ -2164,7 +2055,7 @@ needs one selected layer
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2017-12-31 01:02:31 CET
+Last updated 2018-01-23 04:08:01 CET
 </div>
 </div>
 </body>
