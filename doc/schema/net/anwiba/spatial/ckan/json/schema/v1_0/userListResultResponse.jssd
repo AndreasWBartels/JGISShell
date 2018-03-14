@@ -1,4 +1,4 @@
 @JssdExtends(type="response")
 {
-  "result": <String[]> null
+  "result": <user[]> null
 }

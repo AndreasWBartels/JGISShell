@@ -1,4 +1,8 @@
+@JssdUnknownMember
+@JssdExtends(type="named")
 {
+"id": <String> null,
+"url": <String> null,
 "license_id": <String> null,
 "other": <String> null,
 "license_url": <String> null,

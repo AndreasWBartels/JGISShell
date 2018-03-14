@@ -1,3 +1,4 @@
+@JssdUnknownMember
 @JssdExtends(type="extra")
 {
   "value" : <net.anwiba.spatial.ckan.json.types.DateString> null

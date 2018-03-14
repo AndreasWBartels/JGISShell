@@ -44,7 +44,7 @@
       <xsd:element name="boundingBox" type="layer:BoundingBoxType" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element name="map" type="layer:ResourceType" minOccurs="0" maxOccurs="1"/>
       <xsd:element name="objectInfo" type="layer:ResourceType" minOccurs="0" maxOccurs="1"/>
-      <xsd:element name="style" type="xsd:string" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element name="style" type="layer:StyleType" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element name="scale" type="layer:ScaleType" minOccurs="0" maxOccurs="1"/>
       <xsd:element name="maximumImageWidth" type="xsd:int" minOccurs="1" maxOccurs="1" default="0"/>
       <xsd:element name="maximumImageHeight" type="xsd:int" minOccurs="1" maxOccurs="1" default="0"/>
@@ -63,6 +63,19 @@
       <xsd:element name="miny" type="xsd:double" minOccurs="1" maxOccurs="1"/>
       <xsd:element name="maxx" type="xsd:double" minOccurs="1" maxOccurs="1"/>
       <xsd:element name="maxy" type="xsd:double" minOccurs="1" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="StyleType">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <jaxb:class name="Style"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="identifier" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="name" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="url" type="xsd:string" minOccurs="0" maxOccurs="1"/>
     </xsd:sequence>
   </xsd:complexType>
 

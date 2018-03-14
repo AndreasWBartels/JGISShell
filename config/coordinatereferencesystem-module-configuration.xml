@@ -12,9 +12,15 @@
       </coordinateReferenceSystem>
     -->
 
+
     <coordinateReferenceSystem>
       <authority>CRS:84</authority>
       <wkt>GEOGCS["World Geodetic System 1984", DATUM["World Geodetic System 1984", SPHEROID["WGS 84", 6378137.0, 298.257223563, AUTHORITY["EPSG", 7030]], AUTHORITY["EPSG", 6326]], AREA["world", -180.0, -90.0, 180.0, 90.0],PRIMEM["greenwich", 0.0, AUTHORITY["EPSG", 8901]], UNIT["degree (supplier to define representation)", 0.017453292519943278, AUTHORITY["EPSG", 9122]], AXIS["east", EAST], AXIS["north", NORTH], AUTHORITY["CRS", 84]]</wkt>
+    </coordinateReferenceSystem>
+
+    <coordinateReferenceSystem>
+      <authority>EPSG:4150</authority>
+      <wkt>GEOGCS["CH1903+", DATUM["CH1903+", SPHEROID["Bessel 1841", 6377397.155, 299.1528128, AUTHORITY["EPSG", 7004]], TOWGS84[AREA["europe - liechtenstein and switzerland", 5.96, 45.82, 10.49, 47.81],674.374, 15.056, 405.346, 0.0, 0.0, 0.0, 0.0], AUTHORITY["EPSG", 6150]], AREA["europe - liechtenstein and switzerland", 5.96, 45.82, 10.49, 47.81],PRIMEM["greenwich", 0.0, AUTHORITY["EPSG", 8901]], UNIT["degree (supplier to define representation)", 0.017453292519943278, AUTHORITY["EPSG", 9122]], AXIS["LAT", NORTH], AXIS["LON", EAST], AUTHORITY["EPSG", 4150]]</wkt>
     </coordinateReferenceSystem>
 
     <coordinateReferenceSystem>
@@ -67,7 +73,7 @@
       <authority>EPSG:3035</authority>
       <wkt>PROJCS["ETRS89 / LAEA Europe",GEOGCS["European Terrestrial Reference System 1989", DATUM["European Terrestrial Reference System 1989", SPHEROID["GRS 1980", 6378137.0, 298.257222101, AUTHORITY["EPSG", 7019]], TOWGS84[AREA["europe - etrs89", -16.1, 32.88, 40.18, 84.17],0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], AUTHORITY["EPSG", 6258]], AREA["europe - etrs89", -16.1, 32.88, 40.18, 84.17],PRIMEM["greenwich", 0.0, AUTHORITY["EPSG", 8901]], UNIT["degree (supplier to define representation)", 0.017453292519943278, AUTHORITY["EPSG", 9122]], AXIS["north", NORTH], AXIS["east", EAST], AUTHORITY["EPSG", 4258]],AREA["europe - etrs89", -16.1, 32.88, 40.18, 84.17],PROJECTION["Lambert Azimuthal Equal Area"],PARAMETER["false easting", 4321000.0], PARAMETER["false northing", 3210000.0], PARAMETER["latitude of natural origin", 52.0], PARAMETER["longitude of natural origin", 10.0], UNIT["metre", 1.0, AUTHORITY["EPSG", 9001]], AXIS["north", NORTH], AXIS["east", EAST],AUTHORITY["EPSG", 3035]]</wkt>
     </coordinateReferenceSystem>
-    
+
     <!-- WGS 84 / Pseudo-Mercator -->
 
     <coordinateReferenceSystem>
@@ -217,6 +223,13 @@
     <coordinateReferenceSystem>
       <authority>EPSG:25833</authority>
       <wkt>PROJCS["ETRS89 / UTM zone 33N",GEOGCS["European Terrestrial Reference System 1989", DATUM["European Terrestrial Reference System 1989", SPHEROID["GRS 1980", 6378137.0, 298.257222101, AUTHORITY["EPSG", 7019]], TOWGS84[AREA["europe - etrs89", -16.1, 32.88, 40.18, 84.17],0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], AUTHORITY["EPSG", 6258]], AREA["europe - etrs89", -16.1, 32.88, 40.18, 84.17],PRIMEM["greenwich", 0.0, AUTHORITY["EPSG", 8901]], UNIT["degree (supplier to define representation)", 0.017453292519943278, AUTHORITY["EPSG", 9122]], AXIS["north", NORTH], AXIS["east", EAST], AUTHORITY["EPSG", 4258]],AREA["europe - 12°e to 18°e and etrs89 by country", 12.0, 46.4, 18.01, 84.01],PROJECTION["Transverse Mercator"],PARAMETER["false easting", 500000.0], PARAMETER["false northing", 0.0], PARAMETER["latitude of natural origin", 0.0], PARAMETER["longitude of natural origin", 15.0], PARAMETER["scale factor at natural origin", 0.9996], UNIT["metre", 1.0, AUTHORITY["EPSG", 9001]], AXIS["east", EAST], AXIS["north", NORTH],AUTHORITY["EPSG", 25833]]</wkt>
+    </coordinateReferenceSystem>
+
+    <!-- CH1903+ / LV95 -->
+
+    <coordinateReferenceSystem>
+      <authority>EPSG:2056</authority>
+      <wkt>PROJCS["CH1903+ / LV95",GEOGCS["CH1903+", DATUM["CH1903+", SPHEROID["Bessel 1841", 6377397.155, 299.1528128, AUTHORITY["EPSG", 7004]], TOWGS84[AREA["europe - liechtenstein and switzerland", 5.96, 45.82, 10.49, 47.81],674.374, 15.056, 405.346, 0.0, 0.0, 0.0, 0.0], AUTHORITY["EPSG", 6150]], AREA["europe - liechtenstein and switzerland", 5.96, 45.82, 10.49, 47.81],PRIMEM["greenwich", 0.0, AUTHORITY["EPSG", 8901]], UNIT["degree (supplier to define representation)", 0.017453292519943278, AUTHORITY["EPSG", 9122]], AXIS["LAT", NORTH], AXIS["LON", EAST], AUTHORITY["EPSG", 4150]],AREA["europe - liechtenstein and switzerland", 5.96, 45.82, 10.49, 47.81],PROJECTION["Hotine Oblique Mercator Azimuth Center"],PARAMETER["azimuth of initial line", 90.0], PARAMETER["easting at projection centre", 2600000.0], PARAMETER["northing at projection centre", 1200000.0], PARAMETER["latitude of projection centre", 46.570866], PARAMETER["longitude of projection centre", 7.26225], PARAMETER["angle from rectified to skew grid", 90.0], PARAMETER["scale factor on initial line", 1.0], UNIT["metre", 1.0, AUTHORITY["EPSG", 9001]], AXIS["X", EAST], AXIS["Y", NORTH],AUTHORITY["EPSG", 2056]]</wkt>
     </coordinateReferenceSystem>
 
   </coordinateReferenceSystems>

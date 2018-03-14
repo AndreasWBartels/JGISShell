@@ -17,7 +17,6 @@
   "url_type":  <String> null,
   "mimetype": <String> null,
   "cache_url": <String> null,
-  "language": <String[]> null,
   "created":  <net.anwiba.spatial.ckan.json.types.DateString> null,
   "url":  <String> null,
   "webstore_url": <String> null,

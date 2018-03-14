@@ -1,3 +1,4 @@
+@JssdUnknownMember
 @JssdExtends(type="extra")
 {
   "value" : <spatialReference> null
