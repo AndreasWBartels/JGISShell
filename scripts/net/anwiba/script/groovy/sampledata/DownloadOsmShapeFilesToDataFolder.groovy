@@ -12,13 +12,20 @@ try {
   if (!exists(folder)) {
     createFolder(folder)
   }
-  if (!exists(target)) {
+//  if (exists(target)) {
 //    delete(target)
-    monitor.setNote("Download data for region '${region}'")
+//  }
+
+  if (!exists(target)) {
+    if (monitor) {
+      monitor.setNote("Download data for region '${region}'")
+    }
     copy(source, target)
   }
   if (exists(target)) {
-    monitor.setNote("Extract shapefiles of region '${region}'")
+    if (monitor) {
+      monitor.setNote("Extract shapefiles of region '${region}'")
+    }
     extract(target, folder)
   }
 } catch (Exception e) {

@@ -20,7 +20,7 @@ if (facade.exists(targetResource)) {
 
 facade.copy(facade.resource(emtySpatiaLiteDatabaseFileName), targetResource)
 
-def layerReferences = facade.iterable( facade.dataStoreReference(sourceResourceUrn))
+def layerReferences = facade.layerReferences( facade.dataStoreReference(sourceResourceUrn))
 for (def sourceReference : layerReferences) {
   if (!facade.isFeatureLayer(sourceReference)) {
     continue

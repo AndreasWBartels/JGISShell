@@ -11,7 +11,7 @@ def epsg31467 = facade.coordinateReferenceSystem("EPSG",31467);
 def epsg25832 = facade.coordinateReferenceSystem("EPSG",25832);
 
 def extractGeometry = { file ->
-  def iterator = closableIterator(layerReference(file));
+  def iterator = entities(layerReference(file));
   def geometry = null
   for (def feature : iterator) {
     geometry = feature.geometry()
@@ -80,7 +80,7 @@ def createLayer = { name, description, envelope, geometry, transform ->
 
         minimum = Math.min(minimum, difference)
         maximum = Math.max(maximum, difference)
-        average = (average + difference) / 2
+        average = (average + difference) 
 
         point_counter++
       } catch (Exception e) {
@@ -95,7 +95,7 @@ def createLayer = { name, description, envelope, geometry, transform ->
   println "duration: " + duration
 
   println "minimum: " + minimum
-  println "average: " + average
+  println "average: " + (average / point_counter)
   println "maximum: " + maximum
 
   builder.build();
@@ -105,7 +105,7 @@ def createMap = { layer, coordinateReferenceSystem, startValue, endValue, stepSi
   def distances = [:]
   def iterator;
   try {
-    iterator = closableIterator(layer);
+    iterator = entities(layer);
     for (def feature : iterator) {
       def distance = feature.value("DISTANCE").round(2)
       def key = ((distance / stepSize).round(0) * stepSize).round(2)
@@ -151,7 +151,7 @@ def createXYZFile = { layer, coordinateReferenceSystem ->
   createFile(resource("\$SYSTEM{jgisshell.workingpath}/data/bwta/${layer.name()}.xyz")).withWriter('utf-8') {  writer ->
     def iterator;
     try {
-      iterator = closableIterator(layer);
+      iterator = entities(layer);
       for (def feature : iterator) {
         def distance = feature.value("DISTANCE");
         def x = feature.value("X");
