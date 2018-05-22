@@ -8,6 +8,8 @@ net.anwiba.commons.message
 net.anwiba.commons.message.notification
 net.anwiba.commons.message.observer
 net.anwiba.commons.reflection.annotation
+net.anwiba.commons.thread.cancel
+net.anwiba.commons.thread.progress
 net.anwiba.commons.utilities.validation
 net.anwiba.spatial.api
 net.anwiba.spatial.api.condition

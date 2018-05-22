@@ -6487,20 +6487,25 @@ File
 <div class="listingblock">
 <div class="content">
 <pre class="highlight"><code class="language-groovy" data-lang="groovy">package net.anwiba.script.groovy
-// Copyright (c) 2015 by Andreas W. Bartels
+
 import net.anwiba.spatial.scripting.groovy.api.JGISShellGroovyScript
 @groovy.transform.BaseScript JGISShellGroovyScript facadeScript
-def layerBuilder = facade.featureLayerBuilder();
-layerBuilder.values(null, facade.geometry("POINT (10 10)")); //$NON-NLS-1$
-layerBuilder.values(null, facade.geometry("LINESTRING ( 10 10, 20 20, 30 40)")); //$NON-NLS-1$
-layerBuilder.values(null, facade.geometry("POLYGON ((10 10, 10 20, 20 20, 20 15, 10 10))")); //$NON-NLS-1$
-layerBuilder.values(null, facade.geometry("MULTIPOINT (5.0 5.0, 15.0 8.0)")); //$NON-NLS-1$
-layerBuilder.values(null, facade.geometry("MULTILINESTRING ((50.0 50.0, 50.0 150.0, 150.0 150.0, 150.0 50.0, 75.0 75.0, 75.0 125.0, 125.0 125.0, 125.0 75.0), (50.0 50.0, 50.0 150.0, 150.0 150.0, 150.0 50.0, 75.0 75.0, 75.0 125.0, 125.0 125.0, 125.0 75.0))")); //$NON-NLS-1$
-layerBuilder.values(null, facade.geometry("MULTIPOLYGON (((50.0 50.0, 50.0 150.0, 150.0 150.0, 150.0 50.0, 50.0 50.0), (75.0 75.0, 125.0 75.0, 125.0 125.0, 75.0 125.0, 75.0 75.0)), ((175.0 50.0, 175.0 150.0, 200.0 150.0, 200.0 50.0, 175.0 50.0)))")); //$NON-NLS-1$
-layerBuilder.values(null, facade.geometry("GEOMETRYCOLLECTION (POINT (5.0 5.0), LINESTRING (5.0 5.0, 15.0 8.0), POLYGON ((50.0 50.0, 50.0 150.0, 150.0 150.0, 150.0 50.0, 50.0 50.0), (75.0 75.0, 125.0 75.0, 125.0 125.0, 75.0 125.0, 75.0 75.0)))")); //$NON-NLS-1$
-def layer = layerBuilder.build();
-facade.view()
-    .add(layer);</code></pre>
+
+def builder = facade.featureLayerBuilder();
+
+builder.values(null, facade.geometry("POINT (10 10)"));
+builder.values(null, facade.geometry("LINESTRING ( 10 10, 20 20, 30 40)"));
+builder.values(null, facade.geometry("POLYGON ((10 10, 10 20, 20 20, 20 15, 10 10))"));
+builder.values(null, facade.geometry("MULTIPOINT (5.0 5.0, 15.0 8.0)"));
+
+builder.values(null, facade.geometry("MULTILINESTRING ((50.0 50.0, 50.0 150.0, 150.0 150.0, 150.0 50.0, 75.0 75.0, 75.0 125.0, 125.0 125.0, 125.0 75.0), (50.0 50.0, 50.0 150.0, 150.0 150.0, 150.0 50.0, 75.0 75.0, 75.0 125.0, 125.0 125.0, 125.0 75.0))"));
+
+builder.values(null, facade.geometry("MULTIPOLYGON (((50.0 50.0, 50.0 150.0, 150.0 150.0, 150.0 50.0, 50.0 50.0), (75.0 75.0, 125.0 75.0, 125.0 125.0, 75.0 125.0, 75.0 75.0)), ((175.0 50.0, 175.0 150.0, 200.0 150.0, 200.0 50.0, 175.0 50.0)))"));
+
+builder.values(null, facade.geometry("GEOMETRYCOLLECTION (POINT (5.0 5.0), LINESTRING (5.0 5.0, 15.0 8.0), POLYGON ((50.0 50.0, 50.0 150.0, 150.0 150.0, 150.0 50.0, 50.0 50.0), (75.0 75.0, 125.0 75.0, 125.0 125.0, 75.0 125.0, 75.0 75.0)))"));
+
+def layer = builder.build();
+facade.view().add(layer);</code></pre>
 </div>
 </div>
 <div style="page-break-after: always;"></div>
@@ -6540,8 +6545,7 @@ File
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">// Copyright (c) 2014 by Andreas W. Bartels
-package net.anwiba.script.java.example;
+<pre class="highlight"><code class="language-java" data-lang="java">package net.anwiba.script.java.example;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
@@ -6569,27 +6573,37 @@ public class Example extends AbstractScript {
   @Injection
   private final IFacade facade = null;
 
+  @Nullable
+  @Named("name")
+  @Injection
+  private final String name = null;
+
   @Override
   public void run() throws InterruptedException, InvocationTargetException {
     try {
       final IFeatureLayerBuilder featureLayerBuilder = this.facade.featureLayerBuilder();
-      featureLayerBuilder.values(null, this.facade.geometry("POINT (10 10)")); //$NON-NLS-1$
-      featureLayerBuilder.values(null, this.facade.geometry("LINESTRING ( 10 10, 20 20, 30 40)")); //$NON-NLS-1$
-      featureLayerBuilder.values(null, this.facade.geometry("POLYGON ((10 10, 10 20, 20 20, 20 15, 10 10))")); //$NON-NLS-1$
-      featureLayerBuilder.values(null, this.facade.geometry("MULTIPOINT (5.0 5.0, 15.0 8.0)")); //$NON-NLS-1$
-      featureLayerBuilder.values(
+
+      builder.values(null, this.facade.geometry("POINT (10 10)"));
+      builder.values(null, this.facade.geometry("LINESTRING ( 10 10, 20 20, 30 40)"));
+      builder.values(null, this.facade.geometry("POLYGON ((10 10, 10 20, 20 20, 20 15, 10 10))"));
+      builder.values(null, this.facade.geometry("MULTIPOINT (5.0 5.0, 15.0 8.0)"));
+
+      builder.values(
           null,
           this.facade.geometry(
-              "MULTILINESTRING ((50.0 50.0, 50.0 150.0, 150.0 150.0, 150.0 50.0, 75.0 75.0, 75.0 125.0, 125.0 125.0, 125.0 75.0), (50.0 50.0, 50.0 150.0, 150.0 150.0, 150.0 50.0, 75.0 75.0, 75.0 125.0, 125.0 125.0, 125.0 75.0))")); //$NON-NLS-1$
-      featureLayerBuilder.values(
+              "MULTILINESTRING ((50.0 50.0, 50.0 150.0, 150.0 150.0, 150.0 50.0, 75.0 75.0, 75.0 125.0, 125.0 125.0, 125.0 75.0), (50.0 50.0, 50.0 150.0, 150.0 150.0, 150.0 50.0, 75.0 75.0, 75.0 125.0, 125.0 125.0, 125.0 75.0))"));
+
+      builder.values(
           null,
           this.facade.geometry(
-              "MULTIPOLYGON (((50.0 50.0, 50.0 150.0, 150.0 150.0, 150.0 50.0, 50.0 50.0), (75.0 75.0, 125.0 75.0, 125.0 125.0, 75.0 125.0, 75.0 75.0)), ((175.0 50.0, 175.0 150.0, 200.0 150.0, 200.0 50.0, 175.0 50.0)))")); //$NON-NLS-1$
-      featureLayerBuilder.values(
+              "MULTIPOLYGON (((50.0 50.0, 50.0 150.0, 150.0 150.0, 150.0 50.0, 50.0 50.0), (75.0 75.0, 125.0 75.0, 125.0 125.0, 75.0 125.0, 75.0 75.0)), ((175.0 50.0, 175.0 150.0, 200.0 150.0, 200.0 50.0, 175.0 50.0)))"));
+
+      builder.values(
           null,
           this.facade.geometry(
-              "GEOMETRYCOLLECTION (POINT (5.0 5.0), LINESTRING (5.0 5.0, 15.0 8.0), POLYGON ((50.0 50.0, 50.0 150.0, 150.0 150.0, 150.0 50.0, 50.0 50.0), (75.0 75.0, 125.0 75.0, 125.0 125.0, 75.0 125.0, 75.0 75.0)))")); //$NON-NLS-1$
-      final IFeatureLayer featureLayer = featureLayerBuilder.build();
+              "GEOMETRYCOLLECTION (POINT (5.0 5.0), LINESTRING (5.0 5.0, 15.0 8.0), POLYGON ((50.0 50.0, 50.0 150.0, 150.0 150.0, 150.0 50.0, 50.0 50.0), (75.0 75.0, 125.0 75.0, 125.0 125.0, 75.0 125.0, 75.0 75.0)))"));
+
+      final IFeatureLayer featureLayer = builder.build();
       this.facade.view().add(featureLayer);
 
     } catch (final GeometryConversionException exception) {
@@ -6694,6 +6708,11 @@ public class Example extends AbstractScript {
 <a href="../../doc/api/net/anwiba/spatial/coordinatereferencesystem/ICoordinateReferenceSystem.html">coordinateReferenceSystem</a><br>
 buttonNumber<br>
 clickCount<br>
+isAltDown<br>
+isAltGraphDown<br>
+isControlDown<br>
+isMetaDown<br>
+isShiftDown<br>
 <a href="../../doc/api/net/anwiba/spatial/geometry/IGeometryReciever.html">geometryReceiver</a><br>
 <a href="../../doc/api/net/anwiba/spatial/api/IFacade.html">facade</a><br></p>
 </dd>
@@ -6701,6 +6720,13 @@ clickCount<br>
 <dd>
 <p><a href="../../doc/api/net/anwiba/spatial/coordinate/ICoordinate.html">ICoordinate</a><br>
 <a href="../../doc/api/net/anwiba/spatial/coordinatereferencesystem/ICoordinateReferenceSystem.html">ICoordinateReferenceSystem</a><br>
+buttonNumber (Integer, Named)<br>
+clickCount (Integer, Named) <br>
+isAltDown (Boolean, Named)<br>
+isAltGraphDown (Boolean, Named)<br>
+isControlDown (Boolean, Named)<br>
+isMetaDown (Boolean, Named)<br>
+isShiftDown (Boolean, Named)<br>
 <a href="../../doc/api/net/anwiba/spatial/geometry/IGeometryReciever.html">IGeometryReceiver</a><br>
 <a href="../../doc/api/net/anwiba/spatial/api/IFacade.html">IFacade</a><br></p>
 </dd>

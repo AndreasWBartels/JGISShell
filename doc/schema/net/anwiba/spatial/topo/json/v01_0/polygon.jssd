@@ -1,0 +1,7 @@
+@JssdExtends(type="geometry")
+{
+  @JssdImmutable
+  @JssdNoProperty
+  "type": <String> "Polygon",
+  "arcs": <int[][]> null
+}

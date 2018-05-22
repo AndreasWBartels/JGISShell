@@ -1,0 +1,9 @@
+@JssdFactory(type="typeinfo",types="point,lineString,polygon,multiPoint,multiLineString,multiPolygon,geometryCollection")
+@JssdUnknownMember
+{
+  @JssdImmutable
+  @JssdNoProperty
+  "type" : <String> "Geometry",
+  "id" : <Object> null,
+  "properties" : <properties> null
+}

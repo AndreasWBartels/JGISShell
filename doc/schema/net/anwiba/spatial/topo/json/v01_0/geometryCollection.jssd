@@ -1,0 +1,8 @@
+@JssdExtends(type="geometry")
+@JssdUnknownMember
+{
+  @JssdImmutable
+  @JssdNoProperty
+  "type" : <String> "GeometryCollection",
+  "geometries" : <geometry[]> null
+}
