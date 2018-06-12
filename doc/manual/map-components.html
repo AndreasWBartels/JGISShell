@@ -449,10 +449,11 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sect1">
 <h2 id="map-components"><a class="anchor" href="#map-components"></a>Map components</h2>
 <div class="sectionbody">
-<div id="mapcomponents" class="imageblock">
+<div class="imageblock">
 <div class="content">
 <img src="./images/mapviewer-locator-legend-osmmap.png" alt="JGISShell">
 </div>
+<div class="title">Figure 1. JGISShell</div>
 </div>
 <div class="admonitionblock tip">
 <table>
@@ -469,17 +470,17 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sect2">
 <h3 id="features"><a class="anchor" href="#features"></a>Features</h3>
 <div class="sect3">
-<h4 id="mapcomponentsfeatures"><a class="anchor" href="#mapcomponentsfeatures"></a>Resources</h4>
+<h4 id="resources"><a class="anchor" href="#resources"></a>Resources</h4>
 <div class="paragraph">
-<p><strong>Open layer manager</strong> <a href="#layermanager">see</a></p>
+<p><strong>Open layer-manager dialog</strong> <a href="#layer-manager-2">see</a></p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>menu:File[Layer manager]</p>
+<p>menu:File[Layer-manager]</p>
 </li>
 <li>
-<p>Toolbar <span class="image"><img src="./images/icons/system-file-manager.png" alt="layer manager"></span></p>
+<p>Toolbar <span class="image"><img src="./images/icons/system-file-manager.png" alt="layer-manager"></span></p>
 </li>
 </ul>
 </div>
@@ -503,13 +504,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-see <a href="#supportedformats">Supported formats</a>
+see <a href="#datasources">Supported formats</a>
 </td>
 </tr>
 </table>
 </div>
 <div class="paragraph">
-<p><strong>Open a resource by URI</strong></p>
+<p><strong>Open a resource by URL</strong></p>
 </div>
 <div class="ulist">
 <ul>
@@ -525,7 +526,7 @@ see <a href="#supportedformats">Supported formats</a>
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-see <a href="#supportedformats">Supported formats</a>
+see <a href="#datasources">Supported formats</a>
 </td>
 </tr>
 </table>
@@ -550,7 +551,7 @@ see <a href="#supportedformats">Supported formats</a>
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-see <a href="#supportedformats">Supported formats</a>
+see <a href="#datasources">Supported formats</a>
 </td>
 </tr>
 </table>
@@ -559,7 +560,7 @@ see <a href="#supportedformats">Supported formats</a>
 <div class="sect3">
 <h4 id="map-components-2"><a class="anchor" href="#map-components-2"></a>Map components</h4>
 <div class="paragraph">
-<p><strong>Show/hide locator component</strong> <a href="#locatorcomponent">see</a></p>
+<p><strong>Show/hide locator component</strong> <a href="#locator">see</a></p>
 </div>
 <div class="ulist">
 <ul>
@@ -569,7 +570,7 @@ see <a href="#supportedformats">Supported formats</a>
 </ul>
 </div>
 <div class="paragraph">
-<p><strong>Show/hide legend component</strong> <a href="#legendcomponent">see</a></p>
+<p><strong>Show/hide legend component</strong> <a href="#legend">see</a></p>
 </div>
 <div class="ulist">
 <ul>
@@ -579,7 +580,7 @@ see <a href="#supportedformats">Supported formats</a>
 </ul>
 </div>
 <div class="paragraph">
-<p><strong>Show/hide detail maps component</strong> <a href="#detailmapscomponent">see</a></p>
+<p><strong>Show/hide detail maps component</strong> <a href="#detail-maps">see</a></p>
 </div>
 <div class="ulist">
 <ul>
@@ -609,7 +610,7 @@ see <a href="#supportedformats">Supported formats</a>
 </ul>
 </div>
 <div class="paragraph">
-<p><strong>Show/hide gazetteer component</strong> <a href="#gazetteercomponent">see</a></p>
+<p><strong>Show/hide gazetteer component</strong> <a href="#gazetteer">see</a></p>
 </div>
 <div class="ulist">
 <ul>
@@ -619,7 +620,7 @@ see <a href="#supportedformats">Supported formats</a>
 </ul>
 </div>
 <div class="paragraph">
-<p><strong>Show/hide object search map component</strong> <a href="#objectsearchcomponent">see</a></p>
+<p><strong>Show/hide object search map component</strong> <a href="#object-search">see</a></p>
 </div>
 <div class="ulist">
 <ul>
@@ -762,7 +763,7 @@ see <a href="#supportedformats">Supported formats</a>
 </ul>
 </div>
 <div class="paragraph">
-<p><strong>Show/hide gazetteer component</strong> <a href="#gazetteercomponent">see</a></p>
+<p><strong>Show/hide gazetteer component</strong> <a href="#gazetteer">see</a></p>
 </div>
 <div class="ulist">
 <ul>
@@ -895,7 +896,7 @@ Ensure that no layer is selected
 </ul>
 </div>
 <div class="paragraph">
-<p><strong>Open modal layer properties dialog of selected layer</strong> <a href="#layerproperties">see</a></p>
+<p><strong>Open modal layer properties dialog of selected layer</strong> <a href="#layer-properties">see</a></p>
 </div>
 <div class="ulist">
 <ul>
@@ -908,7 +909,7 @@ Ensure that no layer is selected
 </ul>
 </div>
 <div class="paragraph">
-<p><strong>Open layer objects table dialog for the current selected layer</strong> <a href="#objectstable">see</a></p>
+<p><strong>Open layer objects table dialog of selected layer</strong> <a href="#objects-table">see</a></p>
 </div>
 <div class="ulist">
 <ul>
@@ -985,7 +986,7 @@ Ensure that a layer is selected and no objects
 </ul>
 </div>
 <div class="paragraph">
-<p><strong>Open feature properties dialog for selected objects</strong> <a href="#objectproperties">see</a></p>
+<p><strong>Open feature properties dialog for selected objects</strong> <a href="#object-properties">see</a></p>
 </div>
 <div class="ulist">
 <ul>
@@ -995,7 +996,7 @@ Ensure that a layer is selected and no objects
 </ul>
 </div>
 <div class="paragraph">
-<p><strong>Show/hide object search map component</strong> <a href="#objectsearchcomponent">see</a></p>
+<p><strong>Show/hide object search map component</strong> <a href="#object-search">see</a></p>
 </div>
 <div class="ulist">
 <ul>
@@ -1060,7 +1061,7 @@ Ensure that objects are selected and the objects owning layer
 <div class="sect3">
 <h4 id="ohter"><a class="anchor" href="#ohter"></a>Ohter</h4>
 <div class="paragraph">
-<p><strong>Open elevation profile dialog for the current selected object</strong> <a href="#elevationprofile">see</a></p>
+<p><strong>Open elevation profile dialog for the selected object</strong> <a href="#elevation-profile">see</a></p>
 </div>
 <div class="ulist">
 <ul>
@@ -1070,7 +1071,7 @@ Ensure that objects are selected and the objects owning layer
 </ul>
 </div>
 <div class="paragraph">
-<p><strong>Open groovy scripting dialog</strong> <a href="#groovyconsole">see</a></p>
+<p><strong>Open groovy scripting dialog</strong> <a href="#groovy-console">see</a></p>
 </div>
 <div class="ulist">
 <ul>
@@ -1144,17 +1145,18 @@ Ensure that objects are selected and the objects owning layer
 </div>
 <div class="sect2">
 <h3 id="map-2"><a class="anchor" href="#map-2"></a>Map</h3>
-<div id="mapcomponent" class="imageblock">
+<div class="imageblock">
 <div class="content">
 <img src="./images/mapviewer-osmmap.png" alt="map viewer">
 </div>
+<div class="title">Figure 2. Map view</div>
 </div>
 <div class="sect3">
 <h4 id="features-2"><a class="anchor" href="#features-2"></a>Features</h4>
 <div class="sect4">
-<h5 id="mapcomponentfeatures"><a class="anchor" href="#mapcomponentfeatures"></a>Map</h5>
-<div id="mapcomponentmapfeatures" class="paragraph">
-<p><strong>Open map</strong></p>
+<h5 id="map-3"><a class="anchor" href="#map-3"></a>Map</h5>
+<div class="paragraph">
+<p><strong>Open a map</strong></p>
 </div>
 <div class="ulist">
 <ul>
@@ -1264,8 +1266,8 @@ Ensure that no layer is selected
 </div>
 <div class="sect4">
 <h5 id="layer-2"><a class="anchor" href="#layer-2"></a>Layer</h5>
-<div id="mapcomponentlayerfeatures" class="paragraph">
-<p><strong>Open layer</strong></p>
+<div class="paragraph">
+<p><strong>Open a layer</strong></p>
 </div>
 <div class="ulist">
 <ul>
@@ -1287,7 +1289,7 @@ Ensure that no layer is selected
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-see <a href="#supportedformats">Supported formats</a>
+see <a href="#datasources">Supported formats</a>
 </td>
 </tr>
 </table>
@@ -1327,7 +1329,7 @@ Ensure that a layer is selected and no objects
 </div>
 <div class="sect4">
 <h5 id="objects-2"><a class="anchor" href="#objects-2"></a>Objects</h5>
-<div id="mapcomponentobjectfeatures" class="paragraph">
+<div class="paragraph">
 <p><strong>Zoom to envelope of selected objects</strong></p>
 </div>
 <div class="ulist">
@@ -1395,15 +1397,16 @@ Ensure that objects are selected and the objects owning layer
 </div>
 <div class="sect2">
 <h3 id="locator"><a class="anchor" href="#locator"></a>Locator</h3>
-<div id="locatorcomponent" class="imageblock">
+<div class="imageblock">
 <div class="content">
 <img src="./images/mapviewer-locator-osmmap.png" alt="locator">
 </div>
+<div class="title">Figure 3. Locator view</div>
 </div>
 <div class="sect3">
 <h4 id="features-3"><a class="anchor" href="#features-3"></a>Features</h4>
-<div id="locatorcomponentfeatures" class="paragraph">
-<p><strong>Open map</strong></p>
+<div class="paragraph">
+<p><strong>Open a map</strong></p>
 </div>
 <div class="ulist">
 <ul>
@@ -1416,7 +1419,7 @@ Ensure that objects are selected and the objects owning layer
 </ul>
 </div>
 <div class="paragraph">
-<p><strong>Open layer</strong></p>
+<p><strong>Open a layer</strong></p>
 </div>
 <div class="ulist">
 <ul>
@@ -1438,7 +1441,7 @@ Ensure that objects are selected and the objects owning layer
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-see <a href="#supportedformats">Supported formats</a>
+see <a href="#datasources">Supported formats</a>
 </td>
 </tr>
 </table>
@@ -1558,15 +1561,16 @@ see <a href="#supportedformats">Supported formats</a>
 </div>
 <div class="sect2">
 <h3 id="legend"><a class="anchor" href="#legend"></a>Legend</h3>
-<div id="legendcomponent" class="imageblock">
+<div class="imageblock">
 <div class="content">
 <img src="./images/mapviewer-legend-osmmap.png" alt="image legend">
 </div>
+<div class="title">Figure 4. Legend view</div>
 </div>
 <div class="sect3">
 <h4 id="features-4"><a class="anchor" href="#features-4"></a>Features</h4>
-<div id="legendcomponentfeatures" class="paragraph">
-<p><strong>Open layer</strong></p>
+<div class="paragraph">
+<p><strong>Open a layer</strong></p>
 </div>
 <div class="ulist">
 <ul>
@@ -1588,7 +1592,7 @@ see <a href="#supportedformats">Supported formats</a>
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-see <a href="#supportedformats">Supported formats</a>
+see <a href="#datasources">Supported formats</a>
 </td>
 </tr>
 </table>
@@ -1624,7 +1628,7 @@ see <a href="#supportedformats">Supported formats</a>
 </ul>
 </div>
 <div class="paragraph">
-<p><strong>Open modal layer properties dialog of selected layer</strong> <a href="#layerproperties">see</a></p>
+<p><strong>Open modal layer properties dialog of selected layer</strong> <a href="#layer-properties">see</a></p>
 </div>
 <div class="ulist">
 <ul>
@@ -1634,7 +1638,7 @@ see <a href="#supportedformats">Supported formats</a>
 </ul>
 </div>
 <div class="paragraph">
-<p><strong>Open layer objects table dialog for the current selected layer</strong> <a href="#objectstable">see</a></p>
+<p><strong>Open layer objects table dialog for the current selected layer</strong> <a href="#objects-table">see</a></p>
 </div>
 <div class="ulist">
 <ul>
@@ -1658,15 +1662,16 @@ see <a href="#supportedformats">Supported formats</a>
 </div>
 <div class="sect2">
 <h3 id="detail-maps"><a class="anchor" href="#detail-maps"></a>Detail maps</h3>
-<div id="detailmapscomponent" class="imageblock">
+<div class="imageblock">
 <div class="content">
 <img src="./images/mapviewer-detail-maps-osmmap.png" alt="detail maps">
 </div>
+<div class="title">Figure 5. Detail maps view</div>
 </div>
 <div class="sect3">
 <h4 id="features-5"><a class="anchor" href="#features-5"></a>Features</h4>
-<div id="detailmapcomponentfeatures" class="paragraph">
-<p><strong>Open map</strong></p>
+<div class="paragraph">
+<p><strong>Open a map</strong></p>
 </div>
 <div class="ulist">
 <ul>
@@ -1679,7 +1684,7 @@ see <a href="#supportedformats">Supported formats</a>
 </ul>
 </div>
 <div class="paragraph">
-<p><strong>Open layer</strong></p>
+<p><strong>Open a layer</strong></p>
 </div>
 <div class="ulist">
 <ul>
@@ -1701,7 +1706,7 @@ see <a href="#supportedformats">Supported formats</a>
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-see <a href="#supportedformats">Supported formats</a>
+see <a href="#datasources">Supported formats</a>
 </td>
 </tr>
 </table>
@@ -1844,14 +1849,15 @@ see <a href="#supportedformats">Supported formats</a>
 </div>
 <div class="sect2">
 <h3 id="gazetteer"><a class="anchor" href="#gazetteer"></a>Gazetteer</h3>
-<div id="gazetteercomponent" class="imageblock">
+<div class="imageblock">
 <div class="content">
 <img src="./images/mapviewer-gazetteer-osmmap.png" alt="gazetteer">
 </div>
+<div class="title">Figure 6. Gazetteer  component</div>
 </div>
 <div class="sect3">
 <h4 id="configuration"><a class="anchor" href="#configuration"></a>Configuration</h4>
-<div id="gazetteercomponentconfiguration" class="hdlist">
+<div class="hdlist">
 <table>
 <tr>
 <td class="hdlist1">
@@ -1894,7 +1900,7 @@ Schema
 </div>
 <div class="sect3">
 <h4 id="features-6"><a class="anchor" href="#features-6"></a>Features</h4>
-<div id="gazetteercomponentfeatures" class="paragraph">
+<div class="paragraph">
 <p><strong>Open search result as layer</strong></p>
 </div>
 <div class="ulist">
@@ -1939,10 +1945,11 @@ Schema
 </div>
 <div class="sect2">
 <h3 id="object-search"><a class="anchor" href="#object-search"></a>Object search</h3>
-<div id="objectsearchcomponent" class="imageblock">
+<div class="imageblock">
 <div class="content">
 <img src="./images/mapviewer-object-search-osmmap.png" alt="object search">
 </div>
+<div class="title">Figure 7. Object search component</div>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -2020,7 +2027,7 @@ needs one selected layer
 </ul>
 </div>
 <div class="paragraph">
-<p><strong>Activate select all founded objects</strong></p>
+<p><strong>Activate, select all found objects</strong></p>
 </div>
 <div class="ulist">
 <ul>
@@ -2030,7 +2037,7 @@ needs one selected layer
 </ul>
 </div>
 <div class="paragraph">
-<p><strong>Activate search case sensitive</strong></p>
+<p><strong>Activate, search case sensitive</strong></p>
 </div>
 <div class="ulist">
 <ul>
@@ -2040,7 +2047,7 @@ needs one selected layer
 </ul>
 </div>
 <div class="paragraph">
-<p><strong>Activate zoom to object</strong></p>
+<p><strong>Activate, zoom to object</strong></p>
 </div>
 <div class="ulist">
 <ul>
@@ -2055,7 +2062,7 @@ needs one selected layer
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2018-01-23 04:08:01 CET
+Last updated 2018-06-12 23:22:35 CEST
 </div>
 </div>
 </body>

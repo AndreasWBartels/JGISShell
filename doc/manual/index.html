@@ -466,14 +466,14 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#tool-tip">Tool tip</a></li>
 </ul>
 </li>
-<li><a href="#objectstable">Objects table</a></li>
-<li><a href="#objectproperties">Object properties</a>
+<li><a href="#objects-table">Objects table</a></li>
+<li><a href="#object-properties">Object properties</a>
 <ul class="sectlevel2">
 <li><a href="#attributes-2">Attributes</a></li>
 <li><a href="#geometry-2">Geometry</a></li>
 </ul>
 </li>
-<li><a href="#elevationprofile">Elevation profile</a>
+<li><a href="#elevation-profile">Elevation profile</a>
 <ul class="sectlevel2">
 <li><a href="#stretched-profile">Stretched profile</a></li>
 <li><a href="#projected-profile">Projected profile</a></li>
@@ -481,16 +481,16 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="#coordinate-reference-systems">Coordinate reference systems</a>
 <ul class="sectlevel2">
-<li><a href="#coordinatereferencesystemes">Configuration</a></li>
+<li><a href="#configuration-2">Configuration</a></li>
 <li><a href="#supported-projections">Supported projections</a></li>
 <li><a href="#length-and-area-calculation">Length and area calculation</a></li>
 </ul>
 </li>
-<li><a href="#layer-manager-2">Layer manager</a>
+<li><a href="#layer-manager-2">Layer-manager</a>
 <ul class="sectlevel2">
-<li><a href="#configuration-2">Configuration</a></li>
+<li><a href="#configuration-3">Configuration</a></li>
 <li><a href="#features-8">Features</a></li>
-<li><a href="#database-layer-manager">Database layer manager</a></li>
+<li><a href="#database-layer-manager">Database layer-manager</a></li>
 </ul>
 </li>
 <li><a href="#sql-console">Sql console</a>
@@ -501,7 +501,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#groovy-console">Groovy console</a></li>
 <li><a href="#datasources">Datasources</a>
 <ul class="sectlevel2">
-<li><a href="#supportedformats">File system</a></li>
+<li><a href="#file-system">File system</a></li>
 <li><a href="#shapefile">Shapefile</a></li>
 <li><a href="#geojson">GeoJSON</a></li>
 <li><a href="#topojson">TopoJSON</a></li>
@@ -534,16 +534,17 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="#scripting">Scripting</a>
 <ul class="sectlevel2">
-<li><a href="#configuration-3">Configuration</a></li>
+<li><a href="#configuration-4">Configuration</a></li>
 <li><a href="#groovy">Groovy</a></li>
 <li><a href="#java">Java</a></li>
+<li><a href="#threading">Threading</a></li>
 <li><a href="#anchor-points">Anchor points</a></li>
 <li><a href="#api">API</a></li>
 </ul>
 </li>
 <li><a href="#program-environment">Program environment</a>
 <ul class="sectlevel2">
-<li><a href="#file-system">File system</a></li>
+<li><a href="#file-system-2">File system</a></li>
 <li><a href="#system-variables">System variables</a></li>
 </ul>
 </li>
@@ -616,6 +617,7 @@ cd JGISShell-master
 </div>
 </div>
 <div class="videoblock">
+<div class="title">Video 1. linux installation example</div>
 <div class="content">
 <iframe src="https://www.youtube.com/embed/HuO0rqcZIN8?rel=0" frameborder="0" allowfullscreen></iframe>
 </div>
@@ -624,6 +626,7 @@ cd JGISShell-master
 <dt class="hdlist1">Windows</dt>
 <dd>
 <div class="videoblock">
+<div class="title">Video 2. windows installation example</div>
 <div class="content">
 <iframe src="https://www.youtube.com/embed/baAMbC8Ztvo?rel=0" frameborder="0" allowfullscreen></iframe>
 </div>
@@ -684,6 +687,7 @@ cd JGISShell-master
 <div class="content">
 <img src="./images/dialog-license-licensee-register.png" alt="register">
 </div>
+<div class="title">Figure 1. Licensee registry dialog</div>
 </div>
 <div class="paragraph">
 <p>Confirm agreement and click <span class="menuseq"><b class="menu">button</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="menuitem">Confirm</b></span></p>
@@ -692,6 +696,7 @@ cd JGISShell-master
 <div class="content">
 <img src="./images/dialog-license-agreement.png" alt="license agreement">
 </div>
+<div class="title">Figure 2. License agreement dialog</div>
 </div>
 <div class="paragraph">
 <p>Confirm statement and click <span class="menuseq"><b class="menu">button</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="menuitem">Confirm</b></span></p>
@@ -700,12 +705,21 @@ cd JGISShell-master
 <div class="content">
 <img src="./images/dialog-data-privacy-statement.png" alt="data privacy statement">
 </div>
+<div class="title">Figure 3. Data privacy statement dialog</div>
 </div>
 <div class="paragraph">
 <p>Insert mandatory and optional data than click <span class="menuseq"><b class="menu">button</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="menuitem">Ok</b></span></p>
 </div>
-<div class="paragraph">
-<p><span class="image"><img src="./images/dialog-licensee-empty.png" alt="licensee empty"></span> <span class="image"><img src="./images/dialog-licensee-john-doe.png" alt="licensee"></span></p>
+<div class="imageblock" style="float: left">
+<div class="content">
+<img src="./images/dialog-licensee-empty.png" alt="licensee empty">
+</div>
+<div class="title">Figure 4. Licensee edit dialog</div>
+</div>
+<div class="imageblock" style="float: left">
+<div class="content">
+<img src="./images/dialog-licensee-john-doe.png" alt="licensee">
+</div>
 </div>
 <div class="admonitionblock tip">
 <table>
@@ -726,16 +740,19 @@ search for <a href="https://www.google.de/search?q=no+doubt+hello+goodbye">no do
 <div class="content">
 <img src="./images/dialog-license-confirmed.png" alt="license confirmed">
 </div>
+<div class="title">Figure 5. License confirm dialog</div>
 </div>
 <div class="imageblock">
 <div class="content">
 <img src="./images/dialog-license-licensee-unverified-license.png" alt="unverified license">
 </div>
+<div class="title">Figure 6. Unverified license dialog</div>
 </div>
 <div class="imageblock">
 <div class="content">
 <img src="./images/email-registration-confirm-signature.png" alt="confirm email">
 </div>
+<div class="title">Figure 7. Registration confirm e-mail</div>
 </div>
 <div class="paragraph">
 <p>Insert signature key and Click <span class="menuseq"><b class="menu">button</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="menuitem">Verify</b></span></p>
@@ -744,11 +761,13 @@ search for <a href="https://www.google.de/search?q=no+doubt+hello+goodbye">no do
 <div class="content">
 <img src="./images/dialog-license-verify-key-valid.png" alt="license verify key">
 </div>
+<div class="title">Figure 8. License verify key dialog</div>
 </div>
 <div class="imageblock">
 <div class="content">
 <img src="./images/dialog-license-license.png" alt="register">
 </div>
+<div class="title">Figure 9. Valid licensee registry dialog</div>
 </div>
 <div style="page-break-after: always;"></div>
 </div>
@@ -772,6 +791,7 @@ need&#8217;s registration
 <div class="content">
 <img src="./images/mapviewer-menu-sampledata.png" alt="sampledata">
 </div>
+<div class="title">Figure 10. Script based sampledata menu</div>
 </div>
 <div class="paragraph">
 <p>The sample data scripts downloads shapefiles from <a href="http://www.bbbike.org/">BBBike</a>. The region could be changed inside of the initialization <a href="../../scripts/net/anwiba/script/groovy/initializer.groovy">script</a>. Possible regions are listed at <a href="http://download.bbbike.org/osm/bbbike/Liverpool/">OSM extracts</a> klick on 'more cities' or change the map view.</p>
@@ -800,7 +820,7 @@ facade.addVariable("region", region)
 <div style="page-break-after: always;"></div>
 </div>
 <div class="sect3">
-<h4 id="layer-manager"><a class="anchor" href="#layer-manager"></a>Layer manager</h4>
+<h4 id="layer-manager"><a class="anchor" href="#layer-manager"></a>Layer-manager</h4>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -814,16 +834,18 @@ need&#8217;s registration
 </table>
 </div>
 <div class="paragraph">
-<p><a href="#layermanager">see</a></p>
+<p><a href="#layer-manager-2">see</a></p>
 </div>
 <div class="sect4">
 <h5 id="folder-data"><a class="anchor" href="#folder-data"></a>Folder "data"</h5>
 <div class="paragraph">
-<p><span class="image"><img src="./images/dialog-layer-manager-data.png" alt="layer manager data"></span>
+<div class="title">Layer-manager with file system folder view</div>
+<p><span class="image"><img src="./images/dialog-layer-manager-data.png" alt="layer-manager data"></span>
+.Filesystem manager
 <span class="image"><img src="./images/filesystem-manager-data.png" alt="filesystem manager data"></span></p>
 </div>
 <div class="paragraph">
-<p>Content from jgisshell file system data folder, added by initialization <a href="../../scripts/net/anwiba/script/groovy/initializer.groovy">script</a> see <a href="#programinitialization">layer manager configuration</a>.</p>
+<p>Content from JGISShell file system data folder, added by initialization <a href="../../scripts/net/anwiba/script/groovy/initializer.groovy">script</a> see <a href="#program-initialization">scripting configuration</a>.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -845,7 +867,7 @@ if (layermanager) {
 <div class="sect4">
 <h5 id="folder-other"><a class="anchor" href="#folder-other"></a>Folder "Other"</h5>
 <div class="paragraph">
-<p>Pre configured OSM tile-cache layers see <a href="#configurationlayermanager">layer manager configuration</a>.</p>
+<p>Pre configured OSM tile-cache layers see <a href="#configuration-2">layer-manager configuration</a>.</p>
 </div>
 <div class="hdlist">
 <table>
@@ -863,6 +885,7 @@ File
 <div class="content">
 <img src="./images/dialog-layer-manager-other.png" alt="open schema dialog">
 </div>
+<div class="title">Figure 11. Layer-manager with configured tile cache and GeoRSS layers</div>
 </div>
 </div>
 <div class="sect4">
@@ -885,30 +908,34 @@ The database is added by the initialization script.</p>
 <div class="content">
 <img src="./images/dialog-layer-manager-spatialite.png" alt="open schema dialog">
 </div>
+<div class="title">Figure 12. Layer-manager with open spatialite schema</div>
 </div>
 </div>
 <div class="sect4">
-<h5 id="bookmarks-ckan-services"><a class="anchor" href="#bookmarks-ckan-services"></a>Bookmarks ckan services</h5>
+<h5 id="ckan-service-bookmarks"><a class="anchor" href="#ckan-service-bookmarks"></a>Ckan service bookmarks</h5>
 <div class="imageblock">
 <div class="content">
 <img src="./images/dialog-layer-manager-ckan-bookmarks.png" alt="ckan bookmarks">
 </div>
+<div class="title">Figure 13. Layer-manager with open bookmark menu</div>
 </div>
 <div class="paragraph">
-<p><a href="https://ckan.org/">Ckan</a> is a open data portal implementation. A list of avialable services could be found <a href="https://github.com/sebneu/ckan_instances/blob/master/instances.csv">here</a></p>
+<p><a href="https://ckan.org/">Ckan</a> is a open data portal implementation. A list of available services could be found <a href="https://github.com/sebneu/ckan_instances/blob/master/instances.csv">here</a>. <a href="#ckan">see also</a></p>
 </div>
 <div class="paragraph">
-<p><span class="menuseq"><b class="menu">File</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="submenu">Layer manager</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="submenu">toolbar</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="submenu">Open layer schema</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="menuitem">Ckan</b></span></p>
+<p><span class="menuseq"><b class="menu">File</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="submenu">Layer-manager</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="submenu">toolbar</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="submenu">Open layer schema</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="menuitem">Ckan</b></span></p>
 </div>
 <div class="imageblock">
 <div class="content">
 <img src="./images/dialog-open-layer-schema-ckan.png" alt="open schema dialog">
 </div>
+<div class="title">Figure 14. Open ckan schema dialog</div>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="./images/dialog-layer-manager-ckan.png" alt="layer manager dialog">
+<img src="./images/dialog-layer-manager-ckan.png" alt="layer-manager dialog">
 </div>
+<div class="title">Figure 15. Layer-manager with open ckan schema</div>
 </div>
 <div style="page-break-after: always;"></div>
 </div>
@@ -919,10 +946,11 @@ The database is added by the initialization script.</p>
 <div class="sect1">
 <h2 id="map-components"><a class="anchor" href="#map-components"></a>Map components</h2>
 <div class="sectionbody">
-<div id="mapcomponents" class="imageblock">
+<div class="imageblock">
 <div class="content">
 <img src="./images/mapviewer-locator-legend-osmmap.png" alt="JGISShell">
 </div>
+<div class="title">Figure 16. JGISShell</div>
 </div>
 <div class="admonitionblock tip">
 <table>
@@ -939,17 +967,17 @@ The database is added by the initialization script.</p>
 <div class="sect2">
 <h3 id="features"><a class="anchor" href="#features"></a>Features</h3>
 <div class="sect3">
-<h4 id="mapcomponentsfeatures"><a class="anchor" href="#mapcomponentsfeatures"></a>Resources</h4>
+<h4 id="resources"><a class="anchor" href="#resources"></a>Resources</h4>
 <div class="paragraph">
-<p><strong>Open layer manager</strong> <a href="#layermanager">see</a></p>
+<p><strong>Open layer-manager dialog</strong> <a href="#layer-manager-2">see</a></p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><span class="menuseq"><b class="menu">File</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="menuitem">Layer manager</b></span></p>
+<p><span class="menuseq"><b class="menu">File</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="menuitem">Layer-manager</b></span></p>
 </li>
 <li>
-<p>Toolbar <span class="image"><img src="./images/icons/system-file-manager.png" alt="layer manager"></span></p>
+<p>Toolbar <span class="image"><img src="./images/icons/system-file-manager.png" alt="layer-manager"></span></p>
 </li>
 </ul>
 </div>
@@ -973,13 +1001,13 @@ The database is added by the initialization script.</p>
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-see <a href="#supportedformats">Supported formats</a>
+see <a href="#datasources">Supported formats</a>
 </td>
 </tr>
 </table>
 </div>
 <div class="paragraph">
-<p><strong>Open a resource by URI</strong></p>
+<p><strong>Open a resource by URL</strong></p>
 </div>
 <div class="ulist">
 <ul>
@@ -995,7 +1023,7 @@ see <a href="#supportedformats">Supported formats</a>
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-see <a href="#supportedformats">Supported formats</a>
+see <a href="#datasources">Supported formats</a>
 </td>
 </tr>
 </table>
@@ -1020,7 +1048,7 @@ see <a href="#supportedformats">Supported formats</a>
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-see <a href="#supportedformats">Supported formats</a>
+see <a href="#datasources">Supported formats</a>
 </td>
 </tr>
 </table>
@@ -1029,7 +1057,7 @@ see <a href="#supportedformats">Supported formats</a>
 <div class="sect3">
 <h4 id="map-components-2"><a class="anchor" href="#map-components-2"></a>Map components</h4>
 <div class="paragraph">
-<p><strong>Show/hide locator component</strong> <a href="#locatorcomponent">see</a></p>
+<p><strong>Show/hide locator component</strong> <a href="#locator">see</a></p>
 </div>
 <div class="ulist">
 <ul>
@@ -1039,7 +1067,7 @@ see <a href="#supportedformats">Supported formats</a>
 </ul>
 </div>
 <div class="paragraph">
-<p><strong>Show/hide legend component</strong> <a href="#legendcomponent">see</a></p>
+<p><strong>Show/hide legend component</strong> <a href="#legend">see</a></p>
 </div>
 <div class="ulist">
 <ul>
@@ -1049,7 +1077,7 @@ see <a href="#supportedformats">Supported formats</a>
 </ul>
 </div>
 <div class="paragraph">
-<p><strong>Show/hide detail maps component</strong> <a href="#detailmapscomponent">see</a></p>
+<p><strong>Show/hide detail maps component</strong> <a href="#detail-maps">see</a></p>
 </div>
 <div class="ulist">
 <ul>
@@ -1079,7 +1107,7 @@ see <a href="#supportedformats">Supported formats</a>
 </ul>
 </div>
 <div class="paragraph">
-<p><strong>Show/hide gazetteer component</strong> <a href="#gazetteercomponent">see</a></p>
+<p><strong>Show/hide gazetteer component</strong> <a href="#gazetteer">see</a></p>
 </div>
 <div class="ulist">
 <ul>
@@ -1089,7 +1117,7 @@ see <a href="#supportedformats">Supported formats</a>
 </ul>
 </div>
 <div class="paragraph">
-<p><strong>Show/hide object search map component</strong> <a href="#objectsearchcomponent">see</a></p>
+<p><strong>Show/hide object search map component</strong> <a href="#object-search">see</a></p>
 </div>
 <div class="ulist">
 <ul>
@@ -1232,7 +1260,7 @@ see <a href="#supportedformats">Supported formats</a>
 </ul>
 </div>
 <div class="paragraph">
-<p><strong>Show/hide gazetteer component</strong> <a href="#gazetteercomponent">see</a></p>
+<p><strong>Show/hide gazetteer component</strong> <a href="#gazetteer">see</a></p>
 </div>
 <div class="ulist">
 <ul>
@@ -1365,7 +1393,7 @@ Ensure that no layer is selected
 </ul>
 </div>
 <div class="paragraph">
-<p><strong>Open modal layer properties dialog of selected layer</strong> <a href="#layerproperties">see</a></p>
+<p><strong>Open modal layer properties dialog of selected layer</strong> <a href="#layer-properties">see</a></p>
 </div>
 <div class="ulist">
 <ul>
@@ -1378,7 +1406,7 @@ Ensure that no layer is selected
 </ul>
 </div>
 <div class="paragraph">
-<p><strong>Open layer objects table dialog for the current selected layer</strong> <a href="#objectstable">see</a></p>
+<p><strong>Open layer objects table dialog of selected layer</strong> <a href="#objects-table">see</a></p>
 </div>
 <div class="ulist">
 <ul>
@@ -1455,7 +1483,7 @@ Ensure that a layer is selected and no objects
 </ul>
 </div>
 <div class="paragraph">
-<p><strong>Open feature properties dialog for selected objects</strong> <a href="#objectproperties">see</a></p>
+<p><strong>Open feature properties dialog for selected objects</strong> <a href="#object-properties">see</a></p>
 </div>
 <div class="ulist">
 <ul>
@@ -1465,7 +1493,7 @@ Ensure that a layer is selected and no objects
 </ul>
 </div>
 <div class="paragraph">
-<p><strong>Show/hide object search map component</strong> <a href="#objectsearchcomponent">see</a></p>
+<p><strong>Show/hide object search map component</strong> <a href="#object-search">see</a></p>
 </div>
 <div class="ulist">
 <ul>
@@ -1530,7 +1558,7 @@ Ensure that objects are selected and the objects owning layer
 <div class="sect3">
 <h4 id="ohter"><a class="anchor" href="#ohter"></a>Ohter</h4>
 <div class="paragraph">
-<p><strong>Open elevation profile dialog for the current selected object</strong> <a href="#elevationprofile">see</a></p>
+<p><strong>Open elevation profile dialog for the selected object</strong> <a href="#elevation-profile">see</a></p>
 </div>
 <div class="ulist">
 <ul>
@@ -1540,7 +1568,7 @@ Ensure that objects are selected and the objects owning layer
 </ul>
 </div>
 <div class="paragraph">
-<p><strong>Open groovy scripting dialog</strong> <a href="#groovyconsole">see</a></p>
+<p><strong>Open groovy scripting dialog</strong> <a href="#groovy-console">see</a></p>
 </div>
 <div class="ulist">
 <ul>
@@ -1614,17 +1642,18 @@ Ensure that objects are selected and the objects owning layer
 </div>
 <div class="sect2">
 <h3 id="map-2"><a class="anchor" href="#map-2"></a>Map</h3>
-<div id="mapcomponent" class="imageblock">
+<div class="imageblock">
 <div class="content">
 <img src="./images/mapviewer-osmmap.png" alt="map viewer">
 </div>
+<div class="title">Figure 17. Map view</div>
 </div>
 <div class="sect3">
 <h4 id="features-2"><a class="anchor" href="#features-2"></a>Features</h4>
 <div class="sect4">
-<h5 id="mapcomponentfeatures"><a class="anchor" href="#mapcomponentfeatures"></a>Map</h5>
-<div id="mapcomponentmapfeatures" class="paragraph">
-<p><strong>Open map</strong></p>
+<h5 id="map-3"><a class="anchor" href="#map-3"></a>Map</h5>
+<div class="paragraph">
+<p><strong>Open a map</strong></p>
 </div>
 <div class="ulist">
 <ul>
@@ -1734,8 +1763,8 @@ Ensure that no layer is selected
 </div>
 <div class="sect4">
 <h5 id="layer-2"><a class="anchor" href="#layer-2"></a>Layer</h5>
-<div id="mapcomponentlayerfeatures" class="paragraph">
-<p><strong>Open layer</strong></p>
+<div class="paragraph">
+<p><strong>Open a layer</strong></p>
 </div>
 <div class="ulist">
 <ul>
@@ -1757,7 +1786,7 @@ Ensure that no layer is selected
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-see <a href="#supportedformats">Supported formats</a>
+see <a href="#datasources">Supported formats</a>
 </td>
 </tr>
 </table>
@@ -1797,7 +1826,7 @@ Ensure that a layer is selected and no objects
 </div>
 <div class="sect4">
 <h5 id="objects-2"><a class="anchor" href="#objects-2"></a>Objects</h5>
-<div id="mapcomponentobjectfeatures" class="paragraph">
+<div class="paragraph">
 <p><strong>Zoom to envelope of selected objects</strong></p>
 </div>
 <div class="ulist">
@@ -1865,15 +1894,16 @@ Ensure that objects are selected and the objects owning layer
 </div>
 <div class="sect2">
 <h3 id="locator"><a class="anchor" href="#locator"></a>Locator</h3>
-<div id="locatorcomponent" class="imageblock">
+<div class="imageblock">
 <div class="content">
 <img src="./images/mapviewer-locator-osmmap.png" alt="locator">
 </div>
+<div class="title">Figure 18. Locator view</div>
 </div>
 <div class="sect3">
 <h4 id="features-3"><a class="anchor" href="#features-3"></a>Features</h4>
-<div id="locatorcomponentfeatures" class="paragraph">
-<p><strong>Open map</strong></p>
+<div class="paragraph">
+<p><strong>Open a map</strong></p>
 </div>
 <div class="ulist">
 <ul>
@@ -1886,7 +1916,7 @@ Ensure that objects are selected and the objects owning layer
 </ul>
 </div>
 <div class="paragraph">
-<p><strong>Open layer</strong></p>
+<p><strong>Open a layer</strong></p>
 </div>
 <div class="ulist">
 <ul>
@@ -1908,7 +1938,7 @@ Ensure that objects are selected and the objects owning layer
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-see <a href="#supportedformats">Supported formats</a>
+see <a href="#datasources">Supported formats</a>
 </td>
 </tr>
 </table>
@@ -2028,15 +2058,16 @@ see <a href="#supportedformats">Supported formats</a>
 </div>
 <div class="sect2">
 <h3 id="legend"><a class="anchor" href="#legend"></a>Legend</h3>
-<div id="legendcomponent" class="imageblock">
+<div class="imageblock">
 <div class="content">
 <img src="./images/mapviewer-legend-osmmap.png" alt="image legend">
 </div>
+<div class="title">Figure 19. Legend view</div>
 </div>
 <div class="sect3">
 <h4 id="features-4"><a class="anchor" href="#features-4"></a>Features</h4>
-<div id="legendcomponentfeatures" class="paragraph">
-<p><strong>Open layer</strong></p>
+<div class="paragraph">
+<p><strong>Open a layer</strong></p>
 </div>
 <div class="ulist">
 <ul>
@@ -2058,7 +2089,7 @@ see <a href="#supportedformats">Supported formats</a>
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-see <a href="#supportedformats">Supported formats</a>
+see <a href="#datasources">Supported formats</a>
 </td>
 </tr>
 </table>
@@ -2094,7 +2125,7 @@ see <a href="#supportedformats">Supported formats</a>
 </ul>
 </div>
 <div class="paragraph">
-<p><strong>Open modal layer properties dialog of selected layer</strong> <a href="#layerproperties">see</a></p>
+<p><strong>Open modal layer properties dialog of selected layer</strong> <a href="#layer-properties">see</a></p>
 </div>
 <div class="ulist">
 <ul>
@@ -2104,7 +2135,7 @@ see <a href="#supportedformats">Supported formats</a>
 </ul>
 </div>
 <div class="paragraph">
-<p><strong>Open layer objects table dialog for the current selected layer</strong> <a href="#objectstable">see</a></p>
+<p><strong>Open layer objects table dialog for the current selected layer</strong> <a href="#objects-table">see</a></p>
 </div>
 <div class="ulist">
 <ul>
@@ -2128,15 +2159,16 @@ see <a href="#supportedformats">Supported formats</a>
 </div>
 <div class="sect2">
 <h3 id="detail-maps"><a class="anchor" href="#detail-maps"></a>Detail maps</h3>
-<div id="detailmapscomponent" class="imageblock">
+<div class="imageblock">
 <div class="content">
 <img src="./images/mapviewer-detail-maps-osmmap.png" alt="detail maps">
 </div>
+<div class="title">Figure 20. Detail maps view</div>
 </div>
 <div class="sect3">
 <h4 id="features-5"><a class="anchor" href="#features-5"></a>Features</h4>
-<div id="detailmapcomponentfeatures" class="paragraph">
-<p><strong>Open map</strong></p>
+<div class="paragraph">
+<p><strong>Open a map</strong></p>
 </div>
 <div class="ulist">
 <ul>
@@ -2149,7 +2181,7 @@ see <a href="#supportedformats">Supported formats</a>
 </ul>
 </div>
 <div class="paragraph">
-<p><strong>Open layer</strong></p>
+<p><strong>Open a layer</strong></p>
 </div>
 <div class="ulist">
 <ul>
@@ -2171,7 +2203,7 @@ see <a href="#supportedformats">Supported formats</a>
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-see <a href="#supportedformats">Supported formats</a>
+see <a href="#datasources">Supported formats</a>
 </td>
 </tr>
 </table>
@@ -2314,14 +2346,15 @@ see <a href="#supportedformats">Supported formats</a>
 </div>
 <div class="sect2">
 <h3 id="gazetteer"><a class="anchor" href="#gazetteer"></a>Gazetteer</h3>
-<div id="gazetteercomponent" class="imageblock">
+<div class="imageblock">
 <div class="content">
 <img src="./images/mapviewer-gazetteer-osmmap.png" alt="gazetteer">
 </div>
+<div class="title">Figure 21. Gazetteer  component</div>
 </div>
 <div class="sect3">
 <h4 id="configuration"><a class="anchor" href="#configuration"></a>Configuration</h4>
-<div id="gazetteercomponentconfiguration" class="hdlist">
+<div class="hdlist">
 <table>
 <tr>
 <td class="hdlist1">
@@ -2364,7 +2397,7 @@ Schema
 </div>
 <div class="sect3">
 <h4 id="features-6"><a class="anchor" href="#features-6"></a>Features</h4>
-<div id="gazetteercomponentfeatures" class="paragraph">
+<div class="paragraph">
 <p><strong>Open search result as layer</strong></p>
 </div>
 <div class="ulist">
@@ -2409,10 +2442,11 @@ Schema
 </div>
 <div class="sect2">
 <h3 id="object-search"><a class="anchor" href="#object-search"></a>Object search</h3>
-<div id="objectsearchcomponent" class="imageblock">
+<div class="imageblock">
 <div class="content">
 <img src="./images/mapviewer-object-search-osmmap.png" alt="object search">
 </div>
+<div class="title">Figure 22. Object search component</div>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -2490,7 +2524,7 @@ needs one selected layer
 </ul>
 </div>
 <div class="paragraph">
-<p><strong>Activate select all founded objects</strong></p>
+<p><strong>Activate, select all found objects</strong></p>
 </div>
 <div class="ulist">
 <ul>
@@ -2500,7 +2534,7 @@ needs one selected layer
 </ul>
 </div>
 <div class="paragraph">
-<p><strong>Activate search case sensitive</strong></p>
+<p><strong>Activate, search case sensitive</strong></p>
 </div>
 <div class="ulist">
 <ul>
@@ -2510,7 +2544,7 @@ needs one selected layer
 </ul>
 </div>
 <div class="paragraph">
-<p><strong>Activate zoom to object</strong></p>
+<p><strong>Activate, zoom to object</strong></p>
 </div>
 <div class="ulist">
 <ul>
@@ -2532,6 +2566,7 @@ needs one selected layer
 <div class="content">
 <img src="./images/dialog-layer-properties-properties.png" alt="properties">
 </div>
+<div class="title">Figure 23. Layer common properties</div>
 </div>
 </div>
 <div class="sect2">
@@ -2540,6 +2575,7 @@ needs one selected layer
 <div class="content">
 <img src="./images/dialog-layer-properties-projection.png" alt="projection">
 </div>
+<div class="title">Figure 24. Layer projection</div>
 </div>
 </div>
 <div class="sect2">
@@ -2548,6 +2584,7 @@ needs one selected layer
 <div class="content">
 <img src="./images/dialog-layer-properties-scale-range.png" alt="scale range">
 </div>
+<div class="title">Figure 25. Visible scale range</div>
 </div>
 </div>
 <div class="sect2">
@@ -2558,26 +2595,31 @@ needs one selected layer
 <div class="content">
 <img src="./images/dialog-layer-properties-geometry-style.png" alt="conditional geometry style">
 </div>
+<div class="title">Figure 26. Geometry style overview</div>
 </div>
 <div class="imageblock">
 <div class="content">
 <img src="./images/dialog-geometry-style.png" alt="geometry style">
 </div>
+<div class="title">Figure 27. Geometry style</div>
 </div>
 <div class="imageblock">
 <div class="content">
 <img src="./images/dialog-line-signature.png" alt="line signature">
 </div>
+<div class="title">Figure 28. Line signature</div>
 </div>
 <div class="imageblock">
 <div class="content">
 <img src="./images/dialog-line-signature-ordinate.png" alt="line ordinate">
 </div>
+<div class="title">Figure 29. Coordinate value depended signature</div>
 </div>
 <div class="imageblock">
 <div class="content">
 <img src="./images/dialog-line-signature-slope.png" alt="line slope">
 </div>
+<div class="title">Figure 30. Line slope depended signature</div>
 </div>
 </div>
 <div class="sect3">
@@ -2586,6 +2628,16 @@ needs one selected layer
 <div class="content">
 <img src="./images/dialog-layer-properties-grid-style.png" alt="grid style">
 </div>
+<div class="title">Figure 31. Grid style</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="image"><a class="anchor" href="#image"></a>Image</h4>
+<div class="imageblock">
+<div class="content">
+<img src="./images/dialog-layer-properties-image-style.png" alt="grid style">
+</div>
+<div class="title">Figure 32. Image style</div>
 </div>
 </div>
 </div>
@@ -2595,6 +2647,7 @@ needs one selected layer
 <div class="content">
 <img src="./images/dialog-layer-properties-attributes.png" alt="attributes">
 </div>
+<div class="title">Figure 33. Attributes</div>
 </div>
 </div>
 <div class="sect2">
@@ -2603,6 +2656,7 @@ needs one selected layer
 <div class="content">
 <img src="./images/dialog-layer-properties-label.png" alt="label">
 </div>
+<div class="title">Figure 34. Label style</div>
 </div>
 </div>
 <div class="sect2">
@@ -2611,18 +2665,20 @@ needs one selected layer
 <div class="content">
 <img src="./images/dialog-layer-properties-tooltip.png" alt="tool tip">
 </div>
+<div class="title">Figure 35. Tool-tip setting</div>
 </div>
 <div style="page-break-after: always;"></div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="objectstable"><a class="anchor" href="#objectstable"></a>Objects table</h2>
+<h2 id="objects-table"><a class="anchor" href="#objects-table"></a>Objects table</h2>
 <div class="sectionbody">
 <div class="imageblock">
 <div class="content">
 <img src="./images/objects-table.png" alt="Object table dialog">
 </div>
+<div class="title">Figure 36. Object table dialog</div>
 </div>
 <div class="paragraph">
 <p><strong>Show all rows</strong></p>
@@ -2678,21 +2734,30 @@ needs one selected layer
 </div>
 </div>
 <div class="sect1">
-<h2 id="objectproperties"><a class="anchor" href="#objectproperties"></a>Object properties</h2>
+<h2 id="object-properties"><a class="anchor" href="#object-properties"></a>Object properties</h2>
 <div class="sectionbody">
 <div class="sect2">
 <h3 id="attributes-2"><a class="anchor" href="#attributes-2"></a>Attributes</h3>
-<div class="paragraph">
-<p><span class="image"><img src="./images/dialog-object-properties-attributes.png" alt="Object properties attributes"></span></p>
+<div class="imageblock">
+<div class="content">
+<img src="./images/dialog-object-properties-attributes.png" alt="Object properties attributes">
+</div>
+<div class="title">Figure 37. Object properties dialog with attributes</div>
 </div>
 </div>
 <div class="sect2">
 <h3 id="geometry-2"><a class="anchor" href="#geometry-2"></a>Geometry</h3>
-<div class="paragraph">
-<p><span class="image"><img src="./images/dialog-object-properties-geometry-elements.png" alt="Object properties geometry"></span></p>
+<div class="imageblock">
+<div class="content">
+<img src="./images/dialog-object-properties-geometry-elements.png" alt="Object properties geometry">
 </div>
-<div class="paragraph">
-<p><span class="image"><img src="./images/dialog-object-properties-geometry-text.png" alt="Object properties geometry"></span></p>
+<div class="title">Figure 38. Object properties dialog with geometry tree representation</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/dialog-object-properties-geometry-text.png" alt="Object properties geometry">
+</div>
+<div class="title">Figure 39. Object properties dialog with geometry text representation</div>
 </div>
 <div class="sect3">
 <h4 id="features-7"><a class="anchor" href="#features-7"></a>Features</h4>
@@ -2789,7 +2854,7 @@ Geohash
 </div>
 </div>
 <div class="sect1">
-<h2 id="elevationprofile"><a class="anchor" href="#elevationprofile"></a>Elevation profile</h2>
+<h2 id="elevation-profile"><a class="anchor" href="#elevation-profile"></a>Elevation profile</h2>
 <div class="sectionbody">
 <div class="admonitionblock note">
 <table>
@@ -2819,8 +2884,9 @@ Works only with one selected linestring geometry
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="./images/dialog-elevation-profile-streched.png" alt="stretched profile">
+<img src="./images/dialog-elevation-profile-stretched.png" alt="stretched profile">
 </div>
+<div class="title">Figure 40. Elevation profile dialog with stretched geometry</div>
 </div>
 </div>
 <div class="sect2">
@@ -2829,6 +2895,7 @@ Works only with one selected linestring geometry
 <div class="content">
 <img src="./images/dialog-elevation-profile-projected.png" alt="projected profile">
 </div>
+<div class="title">Figure 41. Elevation profile dialog with projected geometry</div>
 </div>
 <div style="page-break-after: always;"></div>
 </div>
@@ -2838,8 +2905,8 @@ Works only with one selected linestring geometry
 <h2 id="coordinate-reference-systems"><a class="anchor" href="#coordinate-reference-systems"></a>Coordinate reference systems</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="coordinatereferencesystemes"><a class="anchor" href="#coordinatereferencesystemes"></a>Configuration</h3>
-<div id="configurationcoordinatereferencesystemes" class="hdlist">
+<h3 id="configuration-2"><a class="anchor" href="#configuration-2"></a>Configuration</h3>
+<div class="hdlist">
 <table>
 <tr>
 <td class="hdlist1">
@@ -3136,12 +3203,13 @@ Java injections
 </div>
 </div>
 <div class="sect1">
-<h2 id="layer-manager-2"><a class="anchor" href="#layer-manager-2"></a>Layer manager</h2>
+<h2 id="layer-manager-2"><a class="anchor" href="#layer-manager-2"></a>Layer-manager</h2>
 <div class="sectionbody">
-<div id="layermanager" class="imageblock">
+<div class="imageblock">
 <div class="content">
-<img src="./images/layer-manager.png" alt="layer manager">
+<img src="./images/layer-manager.png" alt="layer-manager">
 </div>
+<div class="title">Figure 42. Layer-manager dialog</div>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -3156,9 +3224,9 @@ need&#8217;s registration
 </table>
 </div>
 <div class="sect2">
-<h3 id="configuration-2"><a class="anchor" href="#configuration-2"></a>Configuration</h3>
+<h3 id="configuration-3"><a class="anchor" href="#configuration-3"></a>Configuration</h3>
 <div class="sect3">
-<h4 id="configurationlayermanager"><a class="anchor" href="#configurationlayermanager"></a>Pre configured layers</h4>
+<h4 id="pre-configured-layers"><a class="anchor" href="#pre-configured-layers"></a>Pre configured layers</h4>
 <div class="hdlist">
 <table>
 <tr>
@@ -3207,7 +3275,7 @@ Schema
 <div class="sect2">
 <h3 id="features-8"><a class="anchor" href="#features-8"></a>Features</h3>
 <div class="sect3">
-<h4 id="layermanagerfeatures"><a class="anchor" href="#layermanagerfeatures"></a>Data store</h4>
+<h4 id="data-store"><a class="anchor" href="#data-store"></a>Data store</h4>
 <div class="paragraph">
 <p><strong>Open data store</strong></p>
 </div>
@@ -3245,12 +3313,12 @@ Schema
 </ul>
 </div>
 <div class="paragraph">
-<p><strong>Open database layer manager</strong></p>
+<p><strong>Open database layer-manager</strong></p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Toolbar <span class="image"><img src="./images/icons/system-file-manager.png" alt="database layer manager"></span></p>
+<p>Toolbar <span class="image"><img src="./images/icons/system-file-manager.png" alt="database layer-manager"></span></p>
 </li>
 <li>
 <p>Tree <span class="menuseq"><b class="menu">popup</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="menuitem">Manage layers</b></span></p>
@@ -3615,11 +3683,12 @@ Schema
 </div>
 </div>
 <div class="sect2">
-<h3 id="database-layer-manager"><a class="anchor" href="#database-layer-manager"></a>Database layer manager</h3>
-<div id="databaselayermanager" class="imageblock">
+<h3 id="database-layer-manager"><a class="anchor" href="#database-layer-manager"></a>Database layer-manager</h3>
+<div class="imageblock">
 <div class="content">
-<img src="./images/dialog-database-layer-manager.png" alt="database layer manager">
+<img src="./images/dialog-database-layer-manager.png" alt="database layer-manager">
 </div>
+<div class="title">Figure 43. Database layer-manager dialog</div>
 </div>
 <div class="sect3">
 <h4 id="features-9"><a class="anchor" href="#features-9"></a>Features</h4>
@@ -3643,10 +3712,11 @@ Schema
 <div class="sect1">
 <h2 id="sql-console"><a class="anchor" href="#sql-console"></a>Sql console</h2>
 <div class="sectionbody">
-<div id="sqlconsole" class="imageblock">
+<div class="imageblock">
 <div class="content">
 <img src="./images/sql-console.png" alt="sql console">
 </div>
+<div class="title">Figure 44. SQL console</div>
 </div>
 <div class="sect2">
 <h3 id="features-10"><a class="anchor" href="#features-10"></a>Features</h3>
@@ -3776,10 +3846,11 @@ Schema
 <div class="sect1">
 <h2 id="groovy-console"><a class="anchor" href="#groovy-console"></a>Groovy console</h2>
 <div class="sectionbody">
-<div id="groovyconsole" class="imageblock">
+<div class="imageblock">
 <div class="content">
 <img src="./images/groovy-console.png" alt="Groovy console">
 </div>
+<div class="title">Figure 45. Groovy console</div>
 </div>
 <div class="paragraph">
 <p>See groovy console <a href="http://groovy-lang.org/groovyconsole.html">documentation page</a>.</p>
@@ -3791,7 +3862,7 @@ Schema
 <h2 id="datasources"><a class="anchor" href="#datasources"></a>Datasources</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="supportedformats"><a class="anchor" href="#supportedformats"></a>File system</h3>
+<h3 id="file-system"><a class="anchor" href="#file-system"></a>File system</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">URI syntax</dt>
@@ -6685,7 +6756,7 @@ need&#8217;s registration
 </table>
 </div>
 <div class="sect2">
-<h3 id="configuration-3"><a class="anchor" href="#configuration-3"></a>Configuration</h3>
+<h3 id="configuration-4"><a class="anchor" href="#configuration-4"></a>Configuration</h3>
 <div class="hdlist">
 <table>
 <tr>
@@ -6879,10 +6950,32 @@ public class Example extends AbstractScript {
 <div style="page-break-after: always;"></div>
 </div>
 <div class="sect2">
+<h3 id="threading"><a class="anchor" href="#threading"></a>Threading</h3>
+<div class="paragraph">
+<p>See <a href="https://docs.oracle.com/javase/tutorial/uiswing/concurrency/dispatch.html">The Java Tutorials</a> or <a href="https://en.wikipedia.org/wiki/Event_dispatching_thread">Wikipedia</a></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-xml" data-lang="xml">  &lt;script:script mode="EDT"&gt; --&gt;
+     :
+  &lt;/script:script&gt; --&gt;</code></pre>
+</div>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">mode</dt>
+<dd>
+<p><strong>EDT</strong> - Event dispatch thread<br>
+<strong>PMT</strong> - Program thread or progress monitor task</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect2">
 <h3 id="anchor-points"><a class="anchor" href="#anchor-points"></a>Anchor points</h3>
 <div class="sect3">
 <h4 id="program-initialization"><a class="anchor" href="#program-initialization"></a>Program initialization</h4>
-<div id="programinitialization" class="paragraph">
+<div class="paragraph">
 <p><strong>Configuration</strong></p>
 </div>
 <div class="listingblock">
@@ -6899,13 +6992,17 @@ public class Example extends AbstractScript {
 <dl>
 <dt class="hdlist1">Groovy bindings</dt>
 <dd>
-<p><a href="../../doc/api/net/anwiba/spatial/api/IFacade.html">facade</a>
-<a href="../../doc/api/net/anwiba/spatial/api/layer/mamager/ILayerManager.html">layerManager</a><br></p>
+<p><a href="../../doc/api/net/anwiba/spatial/api/IFacade.html">facade</a><br>
+<a href="../../doc/api/net/anwiba/spatial/api/layer/mamager/ILayerManager.html">layerManager</a></p>
 </dd>
 <dt class="hdlist1">Java injections</dt>
 <dd>
-<p><a href="../../doc/api/net/anwiba/spatial/api/IFacade.html">IFacade</a>
-<a href="../../doc/api/net/anwiba/spatial/api/layer/mamager/ILayerManager.html">ILayerManager</a><br></p>
+<p><a href="../../doc/api/net/anwiba/spatial/api/IFacade.html">IFacade</a><br>
+<a href="../../doc/api/net/anwiba/spatial/api/layer/mamager/ILayerManager.html">ILayerManager</a></p>
+</dd>
+<dt class="hdlist1">Thread</dt>
+<dd>
+<p>SCRIPTING_QUEUE_n</p>
 </dd>
 </dl>
 </div>
@@ -6934,6 +7031,10 @@ public class Example extends AbstractScript {
 <dt class="hdlist1">Java injections</dt>
 <dd>
 <p><a href="../../doc/api/net/anwiba/spatial/api/IFacade.html">IFacade</a></p>
+</dd>
+<dt class="hdlist1">Thread</dt>
+<dd>
+<p>SCRIPTING_QUEUE_n</p>
 </dd>
 </dl>
 </div>
@@ -6993,6 +7094,12 @@ isShiftDown (Boolean, Named)<br>
 <a href="../../doc/api/net/anwiba/spatial/geometry/IGeometryReciever.html">IGeometryReceiver</a><br>
 <a href="../../doc/api/net/anwiba/spatial/api/IFacade.html">IFacade</a><br></p>
 </dd>
+<dt class="hdlist1">Thread</dt>
+<dd>
+<p><strong>initializer</strong> SCRIPTING_QUEUE_n<br>
+<strong>script</strong> EVENT_DISPATCH_THREAD<br>
+<strong>closer</strong> SCRIPTING_QUEUE_n</p>
+</dd>
 </dl>
 </div>
 </div>
@@ -7033,6 +7140,10 @@ isShiftDown (Boolean, Named)<br>
 <a href="../../doc/api/net/anwiba/commons/thread/cancel/ICanceler.html">ICanceler</a><br>
 <a href="../../doc/api/net/anwiba/spatial/api/IFacade.html">IFacade</a><br>
 <a href="../../doc/api/net/anwiba/spatial/api/layer/mamager/ILayerManager.html">ILayerManager</a><br></p>
+</dd>
+<dt class="hdlist1">Thread</dt>
+<dd>
+<p>Configurable</p>
 </dd>
 </dl>
 </div>
@@ -7086,6 +7197,10 @@ isShiftDown (Boolean, Named)<br>
 <a href="../../doc/api/net/anwiba/spatial/api/IFacade.html">IFacade</a><br>
 <a href="../../doc/api/net/anwiba/spatial/api/layer/mamager/ILayerManager.html">ILayerManager</a><br></p>
 </dd>
+<dt class="hdlist1">Thread</dt>
+<dd>
+<p>Configurable</p>
+</dd>
 </dl>
 </div>
 </div>
@@ -7136,11 +7251,14 @@ isShiftDown (Boolean, Named)<br>
 <a href="../../doc/api/net/anwiba/spatial/api/IFacade.html">IFacade</a><br>
 <a href="../../doc/api/net/anwiba/spatial/api/layer/mamager/ILayerManager.html">ILayerManager</a><br></p>
 </dd>
+<dt class="hdlist1">Thread</dt>
+<dd>
+<p>Configurable</p>
+</dd>
 </dl>
 </div>
-</div>
-<div class="sect3">
-<h4 id="map-popup-menu"><a class="anchor" href="#map-popup-menu"></a>Map Popup Menu</h4>
+<div class="sect4">
+<h5 id="map-popup-menu"><a class="anchor" href="#map-popup-menu"></a>Map Popup Menu</h5>
 <div class="paragraph">
 <p><strong>Configuration</strong></p>
 </div>
@@ -7174,8 +7292,8 @@ isShiftDown (Boolean, Named)<br>
 </dl>
 </div>
 </div>
-<div class="sect3">
-<h4 id="legend-popup-menu"><a class="anchor" href="#legend-popup-menu"></a>Legend Popup Menu</h4>
+<div class="sect4">
+<h5 id="legend-popup-menu"><a class="anchor" href="#legend-popup-menu"></a>Legend Popup Menu</h5>
 <div class="paragraph">
 <p><strong>Configuration</strong></p>
 </div>
@@ -7209,8 +7327,8 @@ isShiftDown (Boolean, Named)<br>
 </dl>
 </div>
 </div>
-<div class="sect3">
-<h4 id="layer-manager-popup-menus"><a class="anchor" href="#layer-manager-popup-menus"></a>Layer manager popup menus</h4>
+<div class="sect4">
+<h5 id="layer-manager-popup-menus"><a class="anchor" href="#layer-manager-popup-menus"></a>Layer-manager popup menus</h5>
 <div class="paragraph">
 <p><strong>Configuration</strong></p>
 </div>
@@ -7250,16 +7368,33 @@ path<br>
 </div>
 <div style="page-break-after: always;"></div>
 </div>
+</div>
 <div class="sect3">
 <h4 id="coordinate-transformers"><a class="anchor" href="#coordinate-transformers"></a>Coordinate transformers</h4>
 <div class="paragraph">
-<p>see <a href="#coordinatereferencesystemes">Chapter coordinate reference systemes</a></p>
+<p>see <a href="#projection-transformer">Chapter coordinate reference systems - projection transformer</a></p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Thread</dt>
+<dd>
+<p>Program queue</p>
+</dd>
+</dl>
 </div>
 </div>
 <div class="sect3">
 <h4 id="area-and-length-calculators"><a class="anchor" href="#area-and-length-calculators"></a>Area and length calculators</h4>
 <div class="paragraph">
-<p>see <a href="#coordinatereferencesystemes">Chapter coordinate reference systemes</a></p>
+<p>see <a href="#length-and-area-calculation">Chapter coordinate reference systems - length and area calculation</a></p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Thread</dt>
+<dd>
+<p>Program queue</p>
+</dd>
+</dl>
 </div>
 </div>
 </div>
@@ -7276,11 +7411,12 @@ path<br>
 <h2 id="program-environment"><a class="anchor" href="#program-environment"></a>Program environment</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="file-system"><a class="anchor" href="#file-system"></a>File system</h3>
+<h3 id="file-system-2"><a class="anchor" href="#file-system-2"></a>File system</h3>
 <div class="imageblock">
 <div class="content">
 <img src="./images/filesystem-manager-program-folder.png" alt="program folder">
 </div>
+<div class="title">Figure 46. JGISShell folder overview</div>
 </div>
 <div class="hdlist">
 <table>
@@ -7347,8 +7483,9 @@ scripts
 <h3 id="system-variables"><a class="anchor" href="#system-variables"></a>System variables</h3>
 <div class="imageblock">
 <div class="content">
-<img src="./images/dialog-about-system-properties.png" alt="program folder">
+<img src="./images/dialog-about-system-properties.png" alt="system-properties">
 </div>
+<div class="title">Figure 47. JGISShell java system-properties overview</div>
 </div>
 <div class="hdlist">
 <table>
@@ -7790,7 +7927,7 @@ XSD
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2018-05-30 23:22:01 CEST
+Last updated 2018-06-12 23:49:14 CEST
 </div>
 </div>
 </body>

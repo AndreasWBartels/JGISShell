@@ -5,7 +5,7 @@
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.6.1">
-<title>Scripting</title>
+<title>Object properties</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
@@ -431,14 +431,16 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
-<li><a href="#scripting">Scripting</a>
+<li><a href="#object-properties">Object properties</a>
 <ul class="sectlevel2">
-<li><a href="#configuration">Configuration</a></li>
-<li><a href="#groovy">Groovy</a></li>
-<li><a href="#java">Java</a></li>
-<li><a href="#threading">Threading</a></li>
-<li><a href="#anchor-points">Anchor points</a></li>
-<li><a href="#api">API</a></li>
+<li><a href="#attributes">Attributes</a></li>
+<li><a href="#geometry">Geometry</a></li>
+</ul>
+</li>
+<li><a href="#elevation-profile">Elevation profile</a>
+<ul class="sectlevel2">
+<li><a href="#stretched-profile">Stretched profile</a></li>
+<li><a href="#projected-profile">Projected profile</a></li>
 </ul>
 </li>
 </ul>
@@ -446,7 +448,127 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div id="content">
 <div class="sect1">
-<h2 id="scripting"><a class="anchor" href="#scripting"></a>Scripting</h2>
+<h2 id="object-properties"><a class="anchor" href="#object-properties"></a>Object properties</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="attributes"><a class="anchor" href="#attributes"></a>Attributes</h3>
+<div class="imageblock">
+<div class="content">
+<img src="./images/dialog-object-properties-attributes.png" alt="Object properties attributes">
+</div>
+<div class="title">Figure 1. Object properties dialog with attributes</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="geometry"><a class="anchor" href="#geometry"></a>Geometry</h3>
+<div class="imageblock">
+<div class="content">
+<img src="./images/dialog-object-properties-geometry-elements.png" alt="Object properties geometry">
+</div>
+<div class="title">Figure 2. Object properties dialog with geometry tree representation</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/dialog-object-properties-geometry-text.png" alt="Object properties geometry">
+</div>
+<div class="title">Figure 3. Object properties dialog with geometry text representation</div>
+</div>
+<div class="sect3">
+<h4 id="features"><a class="anchor" href="#features"></a>Features</h4>
+<div class="paragraph">
+<p><strong>Zoom to object</strong></p>
+</div>
+<div class="paragraph">
+<p><strong>Set text geometry format</strong></p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+GML
+</td>
+<td class="hdlist2">
+<p>Geometry Markup Language version 2</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+SDO
+</td>
+<td class="hdlist2">
+<p>Oracle Spatial/Locator Service Data Objects</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+GeoJSON
+</td>
+<td class="hdlist2">
+</td>
+</tr>
+</table>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+WKT
+</td>
+<td class="hdlist2">
+<p>Well Known Text, Simple Feature</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+WKB
+</td>
+<td class="hdlist2">
+<p>Well Known Binary, Simple Feature, base64 coded</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+GPKG
+</td>
+<td class="hdlist2">
+<p>OGC GeoPackage geometry format, base64 coded</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Geohash
+</td>
+<td class="hdlist2">
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><strong>Drag</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Objects</p>
+</li>
+<li>
+<p>Object</p>
+</li>
+<li>
+<p>Geometry</p>
+</li>
+<li>
+<p>Geometry elements</p>
+</li>
+</ul>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="elevation-profile"><a class="anchor" href="#elevation-profile"></a>Elevation profile</h2>
 <div class="sectionbody">
 <div class="admonitionblock note">
 <table>
@@ -455,658 +577,39 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-need&#8217;s registration
+Needs geometries with altitude values
 </td>
 </tr>
 </table>
 </div>
 <div class="sect2">
-<h3 id="configuration"><a class="anchor" href="#configuration"></a>Configuration</h3>
-<div class="hdlist">
+<h3 id="stretched-profile"><a class="anchor" href="#stretched-profile"></a>Stretched profile</h3>
+<div class="admonitionblock note">
 <table>
 <tr>
-<td class="hdlist1">
-File
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
 </td>
-<td class="hdlist2">
-<p><a href="{homepage}/config/script-module-configuration.xml">config/script-module-configuration.xml</a></p>
-</td>
-</tr>
-<tr>
-<td class="hdlist1">
-Schema
-</td>
-<td class="hdlist2">
-<p><a href="{homepage}/doc/schema/net/anwiba/schema/module/scripting/configuration.xsd">doc/schema/net/anwiba/schema/module/scripting/configuration.xsd</a><br>
-<a href="{homepage}/doc/schema/net/anwiba/schema/dynamic/menu/menus.xsd">doc/schema/net/anwiba/schema/dynamic/menu/menus.xsd</a><br>
-<a href="{homepage}/doc/schema/net/anwiba/schema/dynamic/popup/popups.xsd">doc/schema/net/anwiba/schema/dynamic/popup/popups.xsd</a><br>
-<a href="{homepage}/doc/schema/net/anwiba/schema/dynamic/script/script.xsd">doc/schema/net/anwiba/schema/dynamic/script/script.xsd</a></p>
+<td class="content">
+Works only with one selected linestring geometry
 </td>
 </tr>
 </table>
 </div>
-<div style="page-break-after: always;"></div>
-</div>
-<div class="sect2">
-<h3 id="groovy"><a class="anchor" href="#groovy"></a>Groovy</h3>
-<div class="paragraph">
-<p>See also groovy <a href="http://groovy-lang.org/documentation.html">documentation page</a></p>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">Groovy bindings</dt>
-<dd>
-<p><a href="{homepage}/doc/api/net/anwiba/spatial/coordinate/ICoordinate.html">coordinate</a><br>
-<a href="{homepage}/doc/api/net/anwiba/spatial/coordinatereferencesystem/ICoordinateReferenceSystem.html">coordinateReferenceSystem</a><br>
-buttonNumber<br>
-clickCount<br>
-<a href="{homepage}/doc/api/net/anwiba/spatial/geometry/IGeometryReciever.html">geometryReceiver</a><br>
-<a href="{homepage}/doc/api/net/anwiba/commons/message/IMessageCollector.html">monitor</a><br>
-<a href="{homepage}/doc/api/net/anwiba/commons/thread/cancel/ICanceler.html">canceler</a><br>
-<a href="{homepage}/doc/api/net/anwiba/spatial/api/IFacade.html">facade</a><br>
-path<br>
-<a href="{homepage}/doc/api/net/anwiba/spatial/api/data/IDataStoreReference.html">dataStoreReference</a><br>
-<a href="{homepage}/doc/api/net/anwiba/spatial/api/layer/ILayerReference.html">layerReference</a><br>
-<a href="{homepage}/doc/api/net/anwiba/spatial/api/layer/mamager/ILayerManager.html">layerManager</a><br></p>
-</dd>
-</dl>
-</div>
-<div class="hdlist">
-<table>
-<tr>
-<td class="hdlist1">
-File
-</td>
-<td class="hdlist2">
-<p><a href="{homepage}/scripts/net/anwiba/script/groovy/CreateFeatureLayer.groovy">scripts/net/anwiba/script/groovy/CreateFeatureLayer.groovy</a></p>
-</td>
-</tr>
-</table>
-</div>
-<div class="listingblock">
+<div class="imageblock">
 <div class="content">
-<pre class="highlight"><code class="language-groovy" data-lang="groovy">package net.anwiba.script.groovy
-
-import net.anwiba.spatial.scripting.groovy.api.JGISShellGroovyScript
-@groovy.transform.BaseScript JGISShellGroovyScript facadeScript
-
-def builder = facade.featureLayerBuilder();
-
-builder.values(null, facade.geometry("POINT (10 10)"));
-builder.values(null, facade.geometry("LINESTRING ( 10 10, 20 20, 30 40)"));
-builder.values(null, facade.geometry("POLYGON ((10 10, 10 20, 20 20, 20 15, 10 10))"));
-builder.values(null, facade.geometry("MULTIPOINT (5.0 5.0, 15.0 8.0)"));
-
-builder.values(null, facade.geometry("MULTILINESTRING ((50.0 50.0, 50.0 150.0, 150.0 150.0, 150.0 50.0, 75.0 75.0, 75.0 125.0, 125.0 125.0, 125.0 75.0), (50.0 50.0, 50.0 150.0, 150.0 150.0, 150.0 50.0, 75.0 75.0, 75.0 125.0, 125.0 125.0, 125.0 75.0))"));
-
-builder.values(null, facade.geometry("MULTIPOLYGON (((50.0 50.0, 50.0 150.0, 150.0 150.0, 150.0 50.0, 50.0 50.0), (75.0 75.0, 125.0 75.0, 125.0 125.0, 75.0 125.0, 75.0 75.0)), ((175.0 50.0, 175.0 150.0, 200.0 150.0, 200.0 50.0, 175.0 50.0)))"));
-
-builder.values(null, facade.geometry("GEOMETRYCOLLECTION (POINT (5.0 5.0), LINESTRING (5.0 5.0, 15.0 8.0), POLYGON ((50.0 50.0, 50.0 150.0, 150.0 150.0, 150.0 50.0, 50.0 50.0), (75.0 75.0, 125.0 75.0, 125.0 125.0, 75.0 125.0, 75.0 75.0)))"));
-
-def layer = builder.build();
-facade.view().add(layer);</code></pre>
+<img src="./images/dialog-elevation-profile-stretched.png" alt="stretched profile">
 </div>
-</div>
-<div style="page-break-after: always;"></div>
-</div>
-<div class="sect2">
-<h3 id="java"><a class="anchor" href="#java"></a>Java</h3>
-<div class="paragraph">
-<p>See also Oracle Technology Network Java <a href="http://www.oracle.com/technetwork/java/index.html">entry page</a></p>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">Java injections</dt>
-<dd>
-<p><a href="{homepage}/doc/api/net/anwiba/spatial/coordinate/ICoordinate.html">ICoordinate</a><br>
-<a href="{homepage}/doc/api/net/anwiba/spatial/coordinatereferencesystem/ICoordinateReferenceSystem.html">ICoordinateReferenceSystem</a><br>
-<a href="{homepage}/doc/api/net/anwiba/spatial/geometry/IGeometryReciever.html">IGeometryReceiver</a><br>
-<a href="{homepage}/doc/api/net/anwiba/commons/message/IMessageCollector.html">IMessageCollector</a><br>
-<a href="{homepage}/doc/api/net/anwiba/commons/thread/cancel/ICanceler.html">ICanceler</a><br>
-<a href="{homepage}/doc/api/net/anwiba/spatial/api/IFacade.html">IFacade</a><br>
-<a href="{homepage}/doc/api/net/anwiba/spatial/api/data/IDataStoreReference.html">IDataStoreReference</a><br>
-<a href="{homepage}/doc/api/net/anwiba/spatial/api/layer/ILayerReference.html">ILayerReference</a><br>
-<a href="{homepage}/doc/api/net/anwiba/spatial/api/layer/mamager/ILayerManager.html">ILayerManager</a><br></p>
-</dd>
-</dl>
-</div>
-<div class="hdlist">
-<table>
-<tr>
-<td class="hdlist1">
-File
-</td>
-<td class="hdlist2">
-<p><a href="{homepage}/scripts/net/anwiba/script/java/example/Example.java">scripts/net/anwiba/script/java/example/Example.java</a></p>
-</td>
-</tr>
-</table>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">package net.anwiba.script.java.example;
-
-import java.lang.reflect.InvocationTargetException;
-import java.util.ArrayList;
-
-import net.anwiba.commons.message.IMessageCollector;
-import net.anwiba.commons.reflection.annotation.Injection;
-import net.anwiba.commons.reflection.annotation.Nullable;
-import net.anwiba.commons.thread.cancel.ICanceler;
-import net.anwiba.spatial.api.IFacade;
-import net.anwiba.spatial.api.layer.feature.IFeatureLayer;
-import net.anwiba.spatial.api.layer.feature.IFeatureLayerBuilder;
-import net.anwiba.spatial.geometry.exception.GeometryConversionException;
-import net.anwiba.spatial.scripting.java.api.AbstractScript;
-
-public class Example extends AbstractScript {
-
-  @Nullable
-  @Injection
-  private final IMessageCollector monitor = null;
-
-  @Nullable
-  @Injection
-  private final ICanceler canceler = null;
-
-  @Injection
-  private final IFacade facade = null;
-
-  @Nullable
-  @Named("name")
-  @Injection
-  private final String name = null;
-
-  @Override
-  public void run() throws InterruptedException, InvocationTargetException {
-    try {
-      final IFeatureLayerBuilder featureLayerBuilder = this.facade.featureLayerBuilder();
-
-      builder.values(null, this.facade.geometry("POINT (10 10)"));
-      builder.values(null, this.facade.geometry("LINESTRING ( 10 10, 20 20, 30 40)"));
-      builder.values(null, this.facade.geometry("POLYGON ((10 10, 10 20, 20 20, 20 15, 10 10))"));
-      builder.values(null, this.facade.geometry("MULTIPOINT (5.0 5.0, 15.0 8.0)"));
-
-      builder.values(
-          null,
-          this.facade.geometry(
-              "MULTILINESTRING ((50.0 50.0, 50.0 150.0, 150.0 150.0, 150.0 50.0, 75.0 75.0, 75.0 125.0, 125.0 125.0, 125.0 75.0), (50.0 50.0, 50.0 150.0, 150.0 150.0, 150.0 50.0, 75.0 75.0, 75.0 125.0, 125.0 125.0, 125.0 75.0))"));
-
-      builder.values(
-          null,
-          this.facade.geometry(
-              "MULTIPOLYGON (((50.0 50.0, 50.0 150.0, 150.0 150.0, 150.0 50.0, 50.0 50.0), (75.0 75.0, 125.0 75.0, 125.0 125.0, 75.0 125.0, 75.0 75.0)), ((175.0 50.0, 175.0 150.0, 200.0 150.0, 200.0 50.0, 175.0 50.0)))"));
-
-      builder.values(
-          null,
-          this.facade.geometry(
-              "GEOMETRYCOLLECTION (POINT (5.0 5.0), LINESTRING (5.0 5.0, 15.0 8.0), POLYGON ((50.0 50.0, 50.0 150.0, 150.0 150.0, 150.0 50.0, 50.0 50.0), (75.0 75.0, 125.0 75.0, 125.0 125.0, 75.0 125.0, 75.0 75.0)))"));
-
-      final IFeatureLayer featureLayer = builder.build();
-      this.facade.view().add(featureLayer);
-
-    } catch (final GeometryConversionException exception) {
-      throw new InvocationTargetException(exception);
-    }
-  }
-}</code></pre>
-</div>
-</div>
-<div style="page-break-after: always;"></div>
-</div>
-<div class="sect2">
-<h3 id="threading"><a class="anchor" href="#threading"></a>Threading</h3>
-<div class="paragraph">
-<p>See <a href="https://docs.oracle.com/javase/tutorial/uiswing/concurrency/dispatch.html">The Java Tutorials</a> or <a href="https://en.wikipedia.org/wiki/Event_dispatching_thread">Wikipedia</a></p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-xml" data-lang="xml">  &lt;script:script mode="EDT"&gt; --&gt;
-     :
-  &lt;/script:script&gt; --&gt;</code></pre>
-</div>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">mode</dt>
-<dd>
-<p><strong>EDT</strong> - Event dispatch thread<br>
-<strong>PMT</strong> - Program thread or progress monitor task</p>
-</dd>
-</dl>
+<div class="title">Figure 4. Elevation profile dialog with stretched geometry</div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="anchor-points"><a class="anchor" href="#anchor-points"></a>Anchor points</h3>
-<div class="sect3">
-<h4 id="program-initialization"><a class="anchor" href="#program-initialization"></a>Program initialization</h4>
-<div class="paragraph">
-<p><strong>Configuration</strong></p>
-</div>
-<div class="listingblock">
+<h3 id="projected-profile"><a class="anchor" href="#projected-profile"></a>Projected profile</h3>
+<div class="imageblock">
 <div class="content">
-<pre class="highlight"><code class="language-xml" data-lang="xml">  &lt;initializer&gt;
-    &lt;script:language&gt;GROOVY&lt;/script:language&gt;
-    &lt;script:groovyScript&gt;
-        &lt;script:uri&gt;LoadMap.groovy&lt;/script:uri&gt;
-    &lt;/script:groovyScript&gt;
-  &lt;/initializer&gt;</code></pre>
+<img src="./images/dialog-elevation-profile-projected.png" alt="projected profile">
 </div>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">Groovy bindings</dt>
-<dd>
-<p><a href="{homepage}/doc/api/net/anwiba/spatial/api/IFacade.html">facade</a><br>
-<a href="{homepage}/doc/api/net/anwiba/spatial/api/layer/mamager/ILayerManager.html">layerManager</a></p>
-</dd>
-<dt class="hdlist1">Java injections</dt>
-<dd>
-<p><a href="{homepage}/doc/api/net/anwiba/spatial/api/IFacade.html">IFacade</a><br>
-<a href="{homepage}/doc/api/net/anwiba/spatial/api/layer/mamager/ILayerManager.html">ILayerManager</a></p>
-</dd>
-<dt class="hdlist1">Thread</dt>
-<dd>
-<p>SCRIPTING_QUEUE_n</p>
-</dd>
-</dl>
-</div>
-</div>
-<div class="sect3">
-<h4 id="program-closing"><a class="anchor" href="#program-closing"></a>Program closing</h4>
-<div class="paragraph">
-<p><strong>Configuration</strong></p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-xml" data-lang="xml">  &lt;closer&gt;
-    &lt;script:language&gt;GROOVY&lt;/script:language&gt;
-    &lt;script:groovyScript&gt;
-        &lt;script:uri&gt;WriteMap.groovy&lt;/script:uri&gt;
-    &lt;/script:groovyScript&gt;
-  &lt;/closer&gt;</code></pre>
-</div>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">Groovy bindings</dt>
-<dd>
-<p><a href="{homepage}/doc/api/net/anwiba/spatial/api/IFacade.html">facade</a></p>
-</dd>
-<dt class="hdlist1">Java injections</dt>
-<dd>
-<p><a href="{homepage}/doc/api/net/anwiba/spatial/api/IFacade.html">IFacade</a></p>
-</dd>
-<dt class="hdlist1">Thread</dt>
-<dd>
-<p>SCRIPTING_QUEUE_n</p>
-</dd>
-</dl>
-</div>
-</div>
-<div class="sect3">
-<h4 id="mode"><a class="anchor" href="#mode"></a>Mode</h4>
-<div class="paragraph">
-<p><strong>Configuration</strong></p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-xml" data-lang="xml">  &lt;modes&gt;
-    &lt;mode&gt;
-        &lt;name&gt;FOO&lt;/name&gt;
-        &lt;description&gt;Foo and so on&lt;/description&gt;
-        &lt;icon&gt;net/anwiba/script/icons/misc.png&lt;/icon&gt;
-        &lt;initializer&gt;
-          :
-        &lt;/initializer&gt;
-        &lt;script&gt;
-          :
-        &lt;/script&gt;
-        &lt;closer&gt;
-          :
-        &lt;/closer&gt;
-    &lt;/mode&gt;
-  &lt;/modes&gt;</code></pre>
-</div>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">Groovy bindings</dt>
-<dd>
-<p><a href="{homepage}/doc/api/net/anwiba/spatial/coordinate/ICoordinate.html">coordinate</a><br>
-<a href="{homepage}/doc/api/net/anwiba/spatial/coordinatereferencesystem/ICoordinateReferenceSystem.html">coordinateReferenceSystem</a><br>
-buttonNumber<br>
-clickCount<br>
-isAltDown<br>
-isAltGraphDown<br>
-isControlDown<br>
-isMetaDown<br>
-isShiftDown<br>
-<a href="{homepage}/doc/api/net/anwiba/spatial/geometry/IGeometryReciever.html">geometryReceiver</a><br>
-<a href="{homepage}/doc/api/net/anwiba/spatial/api/IFacade.html">facade</a><br></p>
-</dd>
-<dt class="hdlist1">Java injections</dt>
-<dd>
-<p><a href="{homepage}/doc/api/net/anwiba/spatial/coordinate/ICoordinate.html">ICoordinate</a><br>
-<a href="{homepage}/doc/api/net/anwiba/spatial/coordinatereferencesystem/ICoordinateReferenceSystem.html">ICoordinateReferenceSystem</a><br>
-buttonNumber (Integer, Named)<br>
-clickCount (Integer, Named) <br>
-isAltDown (Boolean, Named)<br>
-isAltGraphDown (Boolean, Named)<br>
-isControlDown (Boolean, Named)<br>
-isMetaDown (Boolean, Named)<br>
-isShiftDown (Boolean, Named)<br>
-<a href="{homepage}/doc/api/net/anwiba/spatial/geometry/IGeometryReciever.html">IGeometryReceiver</a><br>
-<a href="{homepage}/doc/api/net/anwiba/spatial/api/IFacade.html">IFacade</a><br></p>
-</dd>
-<dt class="hdlist1">Thread</dt>
-<dd>
-<p><strong>initializer</strong> SCRIPTING_QUEUE_n<br>
-<strong>script</strong> EVENT_DISPATCH_THREAD<br>
-<strong>closer</strong> SCRIPTING_QUEUE_n</p>
-</dd>
-</dl>
-</div>
-</div>
-<div class="sect3">
-<h4 id="toolbar"><a class="anchor" href="#toolbar"></a>Toolbar</h4>
-<div class="paragraph">
-<p><strong>Configuration</strong></p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-xml" data-lang="xml">  &lt;toolbar&gt;
-    &lt;toolbaritem&gt;
-        &lt;menu:name&gt;Load Backup&lt;/menu:name&gt;
-        &lt;menu:icon&gt;net/anwiba/script/icons/misc.png&lt;/menu:icon&gt;
-        &lt;menu:tooltip&gt;&amp;lt;html&amp;gt;Load Backup&amp;lt;br&amp;gt;(Scripting Example)&amp;lt;/html&amp;gt;&lt;/menu:tooltip&gt;
-        &lt;script:script&gt;
-          :
-        &lt;/script:script&gt;
-    &lt;/toolbaritem&gt;
-    &lt;toolbaritem&gt;
-        :
-    &lt;/toolbaritem&gt;
-  &lt;toolbar&gt;</code></pre>
-</div>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">Groovy bindings</dt>
-<dd>
-<p><a href="{homepage}/doc/api/net/anwiba/commons/message/IMessageCollector.html">monitor</a><br>
-<a href="{homepage}/doc/api/net/anwiba/commons/thread/cancel/ICanceler.html">canceler</a><br>
-<a href="{homepage}/doc/api/net/anwiba/spatial/api/IFacade.html">facade</a><br>
-<a href="{homepage}/doc/api/net/anwiba/spatial/api/layer/mamager/ILayerManager.html">layerManager</a><br></p>
-</dd>
-<dt class="hdlist1">Java injections</dt>
-<dd>
-<p><a href="{homepage}/doc/api/net/anwiba/commons/message/IMessageCollector.html">IMessageCollector</a><br>
-<a href="{homepage}/doc/api/net/anwiba/commons/thread/cancel/ICanceler.html">ICanceler</a><br>
-<a href="{homepage}/doc/api/net/anwiba/spatial/api/IFacade.html">IFacade</a><br>
-<a href="{homepage}/doc/api/net/anwiba/spatial/api/layer/mamager/ILayerManager.html">ILayerManager</a><br></p>
-</dd>
-<dt class="hdlist1">Thread</dt>
-<dd>
-<p>Configurable</p>
-</dd>
-</dl>
-</div>
-</div>
-<div class="sect3">
-<h4 id="menu"><a class="anchor" href="#menu"></a>Menu</h4>
-<div class="paragraph">
-<p><strong>Configuration</strong></p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-xml" data-lang="xml">  &lt;menu:menus&gt;
-    &lt;menu:menu&gt;
-        &lt;menu:name&gt;Scripting&lt;/menu:name&gt;
-        &lt;menu:submenu&gt;
-          &lt;menu:name&gt;Deutschland&lt;/menu:name&gt;
-          &lt;menu:menuitem&gt;
-            &lt;menu:name&gt;Deutschland&lt;/menu:name&gt;
-            &lt;script:script&gt;
-                :
-            &lt;/script:script&gt;
-          &lt;/menu:menuitem&gt;
-            :
-        &lt;menu:submenu&gt;
-          :
-        &lt;menu:menuitem&gt;
-          &lt;menu:name&gt;Create Polygons&lt;/menu:name&gt;
-          &lt;script:script&gt;
-            :
-          &lt;/script:script&gt;
-        &lt;/menu:menuitem&gt;
-        :
-    &lt;menu:menu&gt;
-        :
-  &lt;menu:menus&gt;</code></pre>
-</div>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">Groovy bindings</dt>
-<dd>
-<p><a href="{homepage}/doc/api/net/anwiba/commons/message/IMessageCollector.html">monitor</a><br>
-<a href="{homepage}/doc/api/net/anwiba/commons/thread/cancel/ICanceler.html">canceler</a><br>
-<a href="{homepage}/doc/api/net/anwiba/spatial/api/IFacade.html">facade</a><br>
-<a href="{homepage}/doc/api/net/anwiba/spatial/api/layer/mamager/ILayerManager.html">layerManager</a><br></p>
-</dd>
-<dt class="hdlist1">Java injections</dt>
-<dd>
-<p><a href="{homepage}/doc/api/net/anwiba/commons/message/IMessageCollector.html">IMessageCollector</a><br>
-<a href="{homepage}/doc/api/net/anwiba/commons/thread/cancel/ICanceler.html">ICanceler</a><br>
-<a href="{homepage}/doc/api/net/anwiba/spatial/api/IFacade.html">IFacade</a><br>
-<a href="{homepage}/doc/api/net/anwiba/spatial/api/layer/mamager/ILayerManager.html">ILayerManager</a><br></p>
-</dd>
-<dt class="hdlist1">Thread</dt>
-<dd>
-<p>Configurable</p>
-</dd>
-</dl>
-</div>
-</div>
-<div class="sect3">
-<h4 id="popup-menus"><a class="anchor" href="#popup-menus"></a>Popup Menus</h4>
-<div class="paragraph">
-<p><strong>Configuration</strong></p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-xml" data-lang="xml">  &lt;popup:popups&gt;
-    &lt;popup:popup&gt;
-        &lt;popup:type&gt;{Anchor Point}&lt;/popup:type&gt;
-        &lt;popup:menuitem&gt;
-          &lt;popup:name&gt;Map Popup Script (groovy)&lt;/popup:name&gt;
-          &lt;popup:applicable&gt;
-            &lt;popup:script&gt;
-                :
-            &lt;/popup:script&gt;
-          &lt;/popup:applicable&gt;
-          &lt;script:script&gt;
-            :
-          &lt;/script:script&gt;
-        &lt;/popup:menuitem&gt;
-        &lt;popup:menuitem&gt;
-          &lt;popup:name&gt;Map Popup Script (java)&lt;/popup:name&gt;
-          &lt;script:script&gt;
-            :
-          &lt;/script:script&gt;
-        &lt;/popup:menuitem&gt;
-    &lt;/popup:popup&gt;
-  &lt;/popup:popups&gt;</code></pre>
-</div>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">Groovy bindings</dt>
-<dd>
-<p><a href="{homepage}/doc/api/net/anwiba/commons/message/IMessageCollector.html">monitor</a><br>
-<a href="{homepage}/doc/api/net/anwiba/commons/thread/cancel/ICanceler.html">canceler</a><br>
-<a href="{homepage}/doc/api/net/anwiba/spatial/api/IFacade.html">facade</a><br>
-<a href="{homepage}/doc/api/net/anwiba/spatial/api/layer/mamager/ILayerManager.html">layerManager</a><br></p>
-</dd>
-<dt class="hdlist1">Java injections</dt>
-<dd>
-<p><a href="{homepage}/doc/api/net/anwiba/commons/message/IMessageCollector.html">IMessageCollector</a><br>
-<a href="{homepage}/doc/api/net/anwiba/commons/thread/cancel/ICanceler.html">ICanceler</a><br>
-<a href="{homepage}/doc/api/net/anwiba/spatial/api/IFacade.html">IFacade</a><br>
-<a href="{homepage}/doc/api/net/anwiba/spatial/api/layer/mamager/ILayerManager.html">ILayerManager</a><br></p>
-</dd>
-<dt class="hdlist1">Thread</dt>
-<dd>
-<p>Configurable</p>
-</dd>
-</dl>
-</div>
-<div class="sect4">
-<h5 id="map-popup-menu"><a class="anchor" href="#map-popup-menu"></a>Map Popup Menu</h5>
-<div class="paragraph">
-<p><strong>Configuration</strong></p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-xml" data-lang="xml">  &lt;popup:popup&gt;
-      &lt;popup:type&gt;Map&lt;/popup:type&gt;
-      &lt;popup:menuitem&gt;
-         :
-      &lt;/popup:menuitem&gt;
-       :
-  &lt;/popup:popup&gt;</code></pre>
-</div>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">Groovy bindings</dt>
-<dd>
-<p><a href="{homepage}/doc/api/net/anwiba/commons/message/IMessageCollector.html">monitor</a><br>
-<a href="{homepage}/doc/api/net/anwiba/commons/thread/cancel/ICanceler.html">canceler</a><br>
-<a href="{homepage}/doc/api/net/anwiba/spatial/api/IFacade.html">facade</a><br>
-<a href="{homepage}/doc/api/net/anwiba/spatial/api/layer/mamager/ILayerManager.html">layerManager</a><br></p>
-</dd>
-<dt class="hdlist1">Java injections</dt>
-<dd>
-<p><a href="{homepage}/doc/api/net/anwiba/commons/message/IMessageCollector.html">IMessageCollector</a><br>
-<a href="{homepage}/doc/api/net/anwiba/commons/thread/cancel/ICanceler.html">ICanceler</a><br>
-<a href="{homepage}/doc/api/net/anwiba/spatial/api/IFacade.html">IFacade</a><br>
-<a href="{homepage}/doc/api/net/anwiba/spatial/api/layer/mamager/ILayerManager.html">ILayerManager</a><br></p>
-</dd>
-</dl>
-</div>
-</div>
-<div class="sect4">
-<h5 id="legend-popup-menu"><a class="anchor" href="#legend-popup-menu"></a>Legend Popup Menu</h5>
-<div class="paragraph">
-<p><strong>Configuration</strong></p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-xml" data-lang="xml">  &lt;popup:popup&gt;
-      &lt;popup:type&gt;Layer&lt;/popup:type&gt;
-      &lt;popup:menuitem&gt;
-         :
-      &lt;/popup:menuitem&gt;
-       :
-  &lt;/popup:popup&gt;</code></pre>
-</div>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">Groovy bindings</dt>
-<dd>
-<p><a href="{homepage}/doc/api/net/anwiba/commons/message/IMessageCollector.html">monitor</a><br>
-<a href="{homepage}/doc/api/net/anwiba/commons/thread/cancel/ICanceler.html">canceler</a><br>
-<a href="{homepage}/doc/api/net/anwiba/spatial/api/IFacade.html">facade</a><br>
-<a href="{homepage}/doc/api/net/anwiba/spatial/api/layer/mamager/ILayerManager.html">layerManager</a><br></p>
-</dd>
-<dt class="hdlist1">Java injections</dt>
-<dd>
-<p><a href="{homepage}/doc/api/net/anwiba/commons/message/IMessageCollector.html">IMessageCollector</a><br>
-<a href="{homepage}/doc/api/net/anwiba/commons/thread/cancel/ICanceler.html">ICanceler</a><br>
-<a href="{homepage}/doc/api/net/anwiba/spatial/api/IFacade.html">IFacade</a><br>
-<a href="{homepage}/doc/api/net/anwiba/spatial/api/layer/mamager/ILayerManager.html">ILayerManager</a><br></p>
-</dd>
-</dl>
-</div>
-</div>
-<div class="sect4">
-<h5 id="layer-manager-popup-menus"><a class="anchor" href="#layer-manager-popup-menus"></a>Layer-manager popup menus</h5>
-<div class="paragraph">
-<p><strong>Configuration</strong></p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-xml" data-lang="xml">  &lt;popup:popup&gt;
-      &lt;popup:type&gt;LAYER_MANAGER&lt;/popup:type&gt;
-      &lt;popup:menuitem&gt;
-         :
-      &lt;/popup:menuitem&gt;
-       :
-  &lt;/popup:popup&gt;</code></pre>
-</div>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">Groovy bindings</dt>
-<dd>
-<p><a href="{homepage}/doc/api/net/anwiba/commons/message/IMessageCollector.html">monitor</a><br>
-<a href="{homepage}/doc/api/net/anwiba/commons/thread/cancel/ICanceler.html">canceler</a><br>
-<a href="{homepage}/doc/api/net/anwiba/spatial/api/IFacade.html">facade</a><br>
-path<br>
-<a href="{homepage}/doc/api/net/anwiba/spatial/api/data/IDataStoreReference.html">dataStoreReference</a><br>
-<a href="{homepage}/doc/api/net/anwiba/spatial/api/layer/ILayerReference.html">layerReference</a><br>
-<a href="{homepage}/doc/api/net/anwiba/spatial/api/layer/mamager/ILayerManager.html">layerManager</a><br></p>
-</dd>
-<dt class="hdlist1">Java injections</dt>
-<dd>
-<p><a href="{homepage}/doc/api/net/anwiba/commons/message/IMessageCollector.html">IMessageCollector</a><br>
-<a href="{homepage}/doc/api/net/anwiba/commons/thread/cancel/ICanceler.html">ICanceler</a><br>
-<a href="{homepage}/doc/api/net/anwiba/spatial/api/IFacade.html">IFacade</a><br>
-<a href="{homepage}/doc/api/net/anwiba/spatial/api/data/IDataStoreReference.html">IDataStoreReference</a><br>
-<a href="{homepage}/doc/api/net/anwiba/spatial/api/layer/ILayerReference.html">ILayerReference</a><br>
-<a href="{homepage}/doc/api/net/anwiba/spatial/api/layer/mamager/ILayerManager.html">ILayerManager</a><br></p>
-</dd>
-</dl>
-</div>
-<div style="page-break-after: always;"></div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="coordinate-transformers"><a class="anchor" href="#coordinate-transformers"></a>Coordinate transformers</h4>
-<div class="paragraph">
-<p>see <a href="#projection-transformer">Chapter coordinate reference systems - projection transformer</a></p>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">Thread</dt>
-<dd>
-<p>Program queue</p>
-</dd>
-</dl>
-</div>
-</div>
-<div class="sect3">
-<h4 id="area-and-length-calculators"><a class="anchor" href="#area-and-length-calculators"></a>Area and length calculators</h4>
-<div class="paragraph">
-<p>see <a href="#length-and-area-calculation">Chapter coordinate reference systems - length and area calculation</a></p>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">Thread</dt>
-<dd>
-<p>Program queue</p>
-</dd>
-</dl>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="api"><a class="anchor" href="#api"></a>API</h3>
-<div class="paragraph">
-<p>see <a href="{homepage}/doc/api/index.html">java doc</a></p>
+<div class="title">Figure 5. Elevation profile dialog with projected geometry</div>
 </div>
 </div>
 </div>
@@ -1114,7 +617,7 @@ path<br>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2018-06-13 01:20:02 CEST
+Last updated 2018-06-12 23:31:27 CEST
 </div>
 </div>
 </body>
