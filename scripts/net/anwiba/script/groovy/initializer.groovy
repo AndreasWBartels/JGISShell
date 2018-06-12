@@ -12,10 +12,6 @@ def region = "Kassel"
 facade.addVariable("region", region)
 facade.addVariable("targetSystem", targetSystem);
 
-facade.addVariable("dba", "SYS")
-facade.addVariable("password", "GEO")
-facade.addVariable("database", "localhost:1521/GEODATA.localdomain")
-
 facade.view().coordinateReferenceSystem(epsg3857)
 
 if (layermanager) {
