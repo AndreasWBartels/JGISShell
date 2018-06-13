@@ -514,7 +514,7 @@ cd JGISShell-master
 <div class="sidebarblock">
 <div class="content">
 <div class="paragraph">
-<p>Copyright (c) 2007-2016 by Andreas W. Bartels. All Rights Reserved.</p>
+<p>Copyright (c) 2007-2018 by Andreas W. Bartels. All Rights Reserved.</p>
 </div>
 <div class="paragraph">
 <p>Redistribution and use in binary forms, without modification, are permitted provided that the following conditions are met:</p>
@@ -534,10 +534,7 @@ cd JGISShell-master
 <p>Private use or use for education is not limited.</p>
 </li>
 <li>
-<p>Commercial use is not permitted in or for governmental organizations of states or countries with death penalty.</p>
-</li>
-<li>
-<p>For information about death penalty, see <a href="http://www.amnesty.org/en/death-penalty" class="bare">http://www.amnesty.org/en/death-penalty</a></p>
+<p>Commercial use is not permitted in or for governmental organizations of states or countries with death penalty. For information about death penalty, see <a href="http://www.amnesty.org/en/death-penalty" class="bare">http://www.amnesty.org/en/death-penalty</a></p>
 </li>
 </ul>
 </div>
@@ -606,26 +603,26 @@ search for <a href="https://www.google.de/search?q=no+doubt+hello+goodbye">no do
 </tr>
 </table>
 </div>
-<div class="paragraph">
-<p>Click menu:button[Verify]</p>
-</div>
 <div class="imageblock">
 <div class="content">
 <img src="./images/dialog-license-confirmed.png" alt="license confirmed">
 </div>
-<div class="title">Figure 5. License confirm dialog</div>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="./images/dialog-license-licensee-unverified-license.png" alt="unverified license">
-</div>
-<div class="title">Figure 6. Unverified license dialog</div>
+<div class="title">Figure 5. License successful requested dialog</div>
 </div>
 <div class="imageblock">
 <div class="content">
 <img src="./images/email-registration-confirm-signature.png" alt="confirm email">
 </div>
-<div class="title">Figure 7. Registration confirm e-mail</div>
+<div class="title">Figure 6. Registration confirm e-mail</div>
+</div>
+<div class="paragraph">
+<p>Click menu:button[Verify]</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/dialog-license-licensee-unverified-license.png" alt="unverified license">
+</div>
+<div class="title">Figure 7. Unverified license dialog</div>
 </div>
 <div class="paragraph">
 <p>Insert signature key and Click menu:button[Verify]</p>
@@ -670,6 +667,7 @@ need&#8217;s registration
 <p>The sample data scripts downloads shapefiles from <a href="http://www.bbbike.org/">BBBike</a>. The region could be changed inside of the initialization <a href="{homepage}/scripts/net/anwiba/script/groovy/initializer.groovy">script</a>. Possible regions are listed at <a href="http://download.bbbike.org/osm/bbbike/Liverpool/">OSM extracts</a> klick on 'more cities' or change the map view.</p>
 </div>
 <div class="listingblock">
+<div class="title">Scripting: Set sample data region</div>
 <div class="content">
 <pre class="highlight"><code class="language-groovy" data-lang="groovy">  :
 def region = "whereyouwant"
@@ -711,16 +709,8 @@ need&#8217;s registration
 </div>
 <div class="sect4">
 <h5 id="folder-data"><a class="anchor" href="#folder-data"></a>Folder "data"</h5>
-<div class="paragraph">
-<div class="title">Layer-manager with file system folder view</div>
-<p><span class="image"><img src="./images/dialog-layer-manager-data.png" alt="layer-manager data"></span>
-.Filesystem manager
-<span class="image"><img src="./images/filesystem-manager-data.png" alt="filesystem manager data"></span></p>
-</div>
-<div class="paragraph">
-<p>Content from JGISShell file system data folder, added by initialization <a href="{homepage}/scripts/net/anwiba/script/groovy/initializer.groovy">script</a> see <a href="#program-initialization">scripting configuration</a>.</p>
-</div>
 <div class="listingblock">
+<div class="title">Scripting: Add JGISShell default data folder to layer-manager</div>
 <div class="content">
 <pre class="highlight"><code class="language-groovy" data-lang="groovy">// Copyright (c) 2015 by Andreas W. Bartels
 package net.anwiba.script.groovy
@@ -736,11 +726,26 @@ if (layermanager) {
 }</code></pre>
 </div>
 </div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/dialog-layer-manager-data.png" alt="layer-manager data">
+</div>
+<div class="title">Figure 11. Layer-manager with file system folder view</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/filesystem-manager-data.png" alt="filesystem manager data">
+</div>
+<div class="title">Figure 12. Filesystem manager</div>
+</div>
+<div class="paragraph">
+<p>Content from JGISShell file system data folder, added by initialization <a href="{homepage}/scripts/net/anwiba/script/groovy/initializer.groovy">script</a> see <a href="#program-initialization">scripting configuration</a>.</p>
+</div>
 </div>
 <div class="sect4">
 <h5 id="folder-other"><a class="anchor" href="#folder-other"></a>Folder "Other"</h5>
 <div class="paragraph">
-<p>Pre configured OSM tile-cache layers see <a href="#configuration-2">layer-manager configuration</a>.</p>
+<p>Pre configured OSM tile-cache layers see <a href="#configuration-3">layer-manager configuration</a>.</p>
 </div>
 <div class="hdlist">
 <table>
@@ -758,7 +763,7 @@ File
 <div class="content">
 <img src="./images/dialog-layer-manager-other.png" alt="open schema dialog">
 </div>
-<div class="title">Figure 11. Layer-manager with configured tile cache and GeoRSS layers</div>
+<div class="title">Figure 13. Layer-manager with configured tile cache and GeoRSS layers</div>
 </div>
 </div>
 <div class="sect4">
@@ -768,6 +773,7 @@ File
 The database is added by the initialization script.</p>
 </div>
 <div class="listingblock">
+<div class="title">Scripting: Add sample data spatialite database to layer-manager</div>
 <div class="content">
 <pre class="highlight"><code class="language-groovy" data-lang="groovy">  :
   def targetFileName = "\$SYSTEM{jgisshell.workingpath}/data/osm/${region}/${region}.osm.sqlite"
@@ -781,16 +787,16 @@ The database is added by the initialization script.</p>
 <div class="content">
 <img src="./images/dialog-layer-manager-spatialite.png" alt="open schema dialog">
 </div>
-<div class="title">Figure 12. Layer-manager with open spatialite schema</div>
+<div class="title">Figure 14. Layer-manager with open spatialite schema</div>
 </div>
 </div>
 <div class="sect4">
-<h5 id="ckan-service-bookmarks"><a class="anchor" href="#ckan-service-bookmarks"></a>Ckan service bookmarks</h5>
+<h5 id="ckan-service-bookmarks"><a class="anchor" href="#ckan-service-bookmarks"></a>CKAN service bookmarks</h5>
 <div class="imageblock">
 <div class="content">
-<img src="./images/dialog-layer-manager-ckan-bookmarks.png" alt="ckan bookmarks">
+<img src="./images/dialog-layer-manager-ckan-bookmarks.png" alt="CKAN bookmarks">
 </div>
-<div class="title">Figure 13. Layer-manager with open bookmark menu</div>
+<div class="title">Figure 15. Layer-manager with open bookmark menu</div>
 </div>
 <div class="paragraph">
 <p><a href="https://ckan.org/">Ckan</a> is a open data portal implementation. A list of available services could be found <a href="https://github.com/sebneu/ckan_instances/blob/master/instances.csv">here</a>. <a href="#ckan">see also</a></p>
@@ -802,13 +808,13 @@ The database is added by the initialization script.</p>
 <div class="content">
 <img src="./images/dialog-open-layer-schema-ckan.png" alt="open schema dialog">
 </div>
-<div class="title">Figure 14. Open ckan schema dialog</div>
+<div class="title">Figure 16. Open CKAN schema dialog</div>
 </div>
 <div class="imageblock">
 <div class="content">
 <img src="./images/dialog-layer-manager-ckan.png" alt="layer-manager dialog">
 </div>
-<div class="title">Figure 15. Layer-manager with open ckan schema</div>
+<div class="title">Figure 17. Layer-manager with open CKAN schema</div>
 </div>
 </div>
 </div>
@@ -818,7 +824,7 @@ The database is added by the initialization script.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2018-06-12 23:49:03 CEST
+Last updated 2018-06-13 23:40:17 CEST
 </div>
 </div>
 </body>

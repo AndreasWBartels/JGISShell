@@ -524,6 +524,7 @@ File
 </table>
 </div>
 <div class="listingblock">
+<div class="title">Scripting: Groovy script</div>
 <div class="content">
 <pre class="highlight"><code class="language-groovy" data-lang="groovy">package net.anwiba.script.groovy
 
@@ -583,6 +584,7 @@ File
 </table>
 </div>
 <div class="listingblock">
+<div class="title">Scripting: Java script</div>
 <div class="content">
 <pre class="highlight"><code class="language-java" data-lang="java">package net.anwiba.script.java.example;
 
@@ -660,10 +662,11 @@ public class Example extends AbstractScript {
 <p>See <a href="https://docs.oracle.com/javase/tutorial/uiswing/concurrency/dispatch.html">The Java Tutorials</a> or <a href="https://en.wikipedia.org/wiki/Event_dispatching_thread">Wikipedia</a></p>
 </div>
 <div class="listingblock">
+<div class="title">Configuration: Set threading mode</div>
 <div class="content">
-<pre class="highlight"><code class="language-xml" data-lang="xml">  &lt;script:script mode="EDT"&gt; --&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">  &lt;script:script mode="EDT"&gt;
      :
-  &lt;/script:script&gt; --&gt;</code></pre>
+  &lt;/script:script&gt;</code></pre>
 </div>
 </div>
 <div class="dlist">
@@ -684,6 +687,7 @@ public class Example extends AbstractScript {
 <p><strong>Configuration</strong></p>
 </div>
 <div class="listingblock">
+<div class="title">Configuration: Set program initializer script</div>
 <div class="content">
 <pre class="highlight"><code class="language-xml" data-lang="xml">  &lt;initializer&gt;
     &lt;script:language&gt;GROOVY&lt;/script:language&gt;
@@ -707,7 +711,7 @@ public class Example extends AbstractScript {
 </dd>
 <dt class="hdlist1">Thread</dt>
 <dd>
-<p>SCRIPTING_QUEUE_n</p>
+<p>Program queue</p>
 </dd>
 </dl>
 </div>
@@ -718,6 +722,7 @@ public class Example extends AbstractScript {
 <p><strong>Configuration</strong></p>
 </div>
 <div class="listingblock">
+<div class="title">Configuration: Set program closer script</div>
 <div class="content">
 <pre class="highlight"><code class="language-xml" data-lang="xml">  &lt;closer&gt;
     &lt;script:language&gt;GROOVY&lt;/script:language&gt;
@@ -739,7 +744,7 @@ public class Example extends AbstractScript {
 </dd>
 <dt class="hdlist1">Thread</dt>
 <dd>
-<p>SCRIPTING_QUEUE_n</p>
+<p>Program queue</p>
 </dd>
 </dl>
 </div>
@@ -750,6 +755,7 @@ public class Example extends AbstractScript {
 <p><strong>Configuration</strong></p>
 </div>
 <div class="listingblock">
+<div class="title">Configuration: Add program modus action</div>
 <div class="content">
 <pre class="highlight"><code class="language-xml" data-lang="xml">  &lt;modes&gt;
     &lt;mode&gt;
@@ -801,9 +807,9 @@ isShiftDown (Boolean, Named)<br>
 </dd>
 <dt class="hdlist1">Thread</dt>
 <dd>
-<p><strong>initializer</strong> SCRIPTING_QUEUE_n<br>
-<strong>script</strong> EVENT_DISPATCH_THREAD<br>
-<strong>closer</strong> SCRIPTING_QUEUE_n</p>
+<p><strong>initializer</strong> Scripting queue thread<br>
+<strong>script</strong> Event dispatch thread<br>
+<strong>closer</strong> Scripting queue thread</p>
 </dd>
 </dl>
 </div>
@@ -814,6 +820,7 @@ isShiftDown (Boolean, Named)<br>
 <p><strong>Configuration</strong></p>
 </div>
 <div class="listingblock">
+<div class="title">Configuration: Add toolbar action</div>
 <div class="content">
 <pre class="highlight"><code class="language-xml" data-lang="xml">  &lt;toolbar&gt;
     &lt;toolbaritem&gt;
@@ -859,6 +866,7 @@ isShiftDown (Boolean, Named)<br>
 <p><strong>Configuration</strong></p>
 </div>
 <div class="listingblock">
+<div class="title">Configuration: Add menu items</div>
 <div class="content">
 <pre class="highlight"><code class="language-xml" data-lang="xml">  &lt;menu:menus&gt;
     &lt;menu:menu&gt;
@@ -915,6 +923,7 @@ isShiftDown (Boolean, Named)<br>
 <p><strong>Configuration</strong></p>
 </div>
 <div class="listingblock">
+<div class="title">Configuration: Add popup menu item</div>
 <div class="content">
 <pre class="highlight"><code class="language-xml" data-lang="xml">  &lt;popup:popups&gt;
     &lt;popup:popup&gt;
@@ -968,6 +977,7 @@ isShiftDown (Boolean, Named)<br>
 <p><strong>Configuration</strong></p>
 </div>
 <div class="listingblock">
+<div class="title">Configuration: Add map popup menu item</div>
 <div class="content">
 <pre class="highlight"><code class="language-xml" data-lang="xml">  &lt;popup:popup&gt;
       &lt;popup:type&gt;Map&lt;/popup:type&gt;
@@ -1003,6 +1013,7 @@ isShiftDown (Boolean, Named)<br>
 <p><strong>Configuration</strong></p>
 </div>
 <div class="listingblock">
+<div class="title">Configuration: Add layer legend popup menu item</div>
 <div class="content">
 <pre class="highlight"><code class="language-xml" data-lang="xml">  &lt;popup:popup&gt;
       &lt;popup:type&gt;Layer&lt;/popup:type&gt;
@@ -1038,6 +1049,7 @@ isShiftDown (Boolean, Named)<br>
 <p><strong>Configuration</strong></p>
 </div>
 <div class="listingblock">
+<div class="title">Configuration: Add layer manager popup menu item</div>
 <div class="content">
 <pre class="highlight"><code class="language-xml" data-lang="xml">  &lt;popup:popup&gt;
       &lt;popup:type&gt;LAYER_MANAGER&lt;/popup:type&gt;
@@ -1114,7 +1126,7 @@ path<br>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2018-06-13 01:20:02 CEST
+Last updated 2018-06-13 21:43:22 CEST
 </div>
 </div>
 </body>

@@ -528,7 +528,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#mapbox">Mapbox</a></li>
 <li><a href="#mapzen">Mapzen</a></li>
 <li><a href="#open-street-map-osm">Open street map (OSM)</a></li>
-<li><a href="#ckan">Ckan</a></li>
+<li><a href="#ckan">CKAN</a></li>
 <li><a href="#georss">GeoRSS</a></li>
 </ul>
 </li>
@@ -641,7 +641,7 @@ cd JGISShell-master
 <div class="sidebarblock">
 <div class="content">
 <div class="paragraph">
-<p>Copyright (c) 2007-2016 by Andreas W. Bartels. All Rights Reserved.</p>
+<p>Copyright (c) 2007-2018 by Andreas W. Bartels. All Rights Reserved.</p>
 </div>
 <div class="paragraph">
 <p>Redistribution and use in binary forms, without modification, are permitted provided that the following conditions are met:</p>
@@ -661,10 +661,7 @@ cd JGISShell-master
 <p>Private use or use for education is not limited.</p>
 </li>
 <li>
-<p>Commercial use is not permitted in or for governmental organizations of states or countries with death penalty.</p>
-</li>
-<li>
-<p>For information about death penalty, see <a href="http://www.amnesty.org/en/death-penalty" class="bare">http://www.amnesty.org/en/death-penalty</a></p>
+<p>Commercial use is not permitted in or for governmental organizations of states or countries with death penalty. For information about death penalty, see <a href="http://www.amnesty.org/en/death-penalty" class="bare">http://www.amnesty.org/en/death-penalty</a></p>
 </li>
 </ul>
 </div>
@@ -733,26 +730,26 @@ search for <a href="https://www.google.de/search?q=no+doubt+hello+goodbye">no do
 </tr>
 </table>
 </div>
-<div class="paragraph">
-<p>Click <span class="menuseq"><b class="menu">button</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="menuitem">Verify</b></span></p>
-</div>
 <div class="imageblock">
 <div class="content">
 <img src="./images/dialog-license-confirmed.png" alt="license confirmed">
 </div>
-<div class="title">Figure 5. License confirm dialog</div>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="./images/dialog-license-licensee-unverified-license.png" alt="unverified license">
-</div>
-<div class="title">Figure 6. Unverified license dialog</div>
+<div class="title">Figure 5. License successful requested dialog</div>
 </div>
 <div class="imageblock">
 <div class="content">
 <img src="./images/email-registration-confirm-signature.png" alt="confirm email">
 </div>
-<div class="title">Figure 7. Registration confirm e-mail</div>
+<div class="title">Figure 6. Registration confirm e-mail</div>
+</div>
+<div class="paragraph">
+<p>Click <span class="menuseq"><b class="menu">button</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="menuitem">Verify</b></span></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/dialog-license-licensee-unverified-license.png" alt="unverified license">
+</div>
+<div class="title">Figure 7. Unverified license dialog</div>
 </div>
 <div class="paragraph">
 <p>Insert signature key and Click <span class="menuseq"><b class="menu">button</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="menuitem">Verify</b></span></p>
@@ -797,6 +794,7 @@ need&#8217;s registration
 <p>The sample data scripts downloads shapefiles from <a href="http://www.bbbike.org/">BBBike</a>. The region could be changed inside of the initialization <a href="../../scripts/net/anwiba/script/groovy/initializer.groovy">script</a>. Possible regions are listed at <a href="http://download.bbbike.org/osm/bbbike/Liverpool/">OSM extracts</a> klick on 'more cities' or change the map view.</p>
 </div>
 <div class="listingblock">
+<div class="title">Scripting: Set sample data region</div>
 <div class="content">
 <pre class="highlight"><code class="language-groovy" data-lang="groovy">  :
 def region = "whereyouwant"
@@ -838,16 +836,8 @@ need&#8217;s registration
 </div>
 <div class="sect4">
 <h5 id="folder-data"><a class="anchor" href="#folder-data"></a>Folder "data"</h5>
-<div class="paragraph">
-<div class="title">Layer-manager with file system folder view</div>
-<p><span class="image"><img src="./images/dialog-layer-manager-data.png" alt="layer-manager data"></span>
-.Filesystem manager
-<span class="image"><img src="./images/filesystem-manager-data.png" alt="filesystem manager data"></span></p>
-</div>
-<div class="paragraph">
-<p>Content from JGISShell file system data folder, added by initialization <a href="../../scripts/net/anwiba/script/groovy/initializer.groovy">script</a> see <a href="#program-initialization">scripting configuration</a>.</p>
-</div>
 <div class="listingblock">
+<div class="title">Scripting: Add JGISShell default data folder to layer-manager</div>
 <div class="content">
 <pre class="highlight"><code class="language-groovy" data-lang="groovy">// Copyright (c) 2015 by Andreas W. Bartels
 package net.anwiba.script.groovy
@@ -863,11 +853,26 @@ if (layermanager) {
 }</code></pre>
 </div>
 </div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/dialog-layer-manager-data.png" alt="layer-manager data">
+</div>
+<div class="title">Figure 11. Layer-manager with file system folder view</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/filesystem-manager-data.png" alt="filesystem manager data">
+</div>
+<div class="title">Figure 12. Filesystem manager</div>
+</div>
+<div class="paragraph">
+<p>Content from JGISShell file system data folder, added by initialization <a href="../../scripts/net/anwiba/script/groovy/initializer.groovy">script</a> see <a href="#program-initialization">scripting configuration</a>.</p>
+</div>
 </div>
 <div class="sect4">
 <h5 id="folder-other"><a class="anchor" href="#folder-other"></a>Folder "Other"</h5>
 <div class="paragraph">
-<p>Pre configured OSM tile-cache layers see <a href="#configuration-2">layer-manager configuration</a>.</p>
+<p>Pre configured OSM tile-cache layers see <a href="#configuration-3">layer-manager configuration</a>.</p>
 </div>
 <div class="hdlist">
 <table>
@@ -885,7 +890,7 @@ File
 <div class="content">
 <img src="./images/dialog-layer-manager-other.png" alt="open schema dialog">
 </div>
-<div class="title">Figure 11. Layer-manager with configured tile cache and GeoRSS layers</div>
+<div class="title">Figure 13. Layer-manager with configured tile cache and GeoRSS layers</div>
 </div>
 </div>
 <div class="sect4">
@@ -895,6 +900,7 @@ File
 The database is added by the initialization script.</p>
 </div>
 <div class="listingblock">
+<div class="title">Scripting: Add sample data spatialite database to layer-manager</div>
 <div class="content">
 <pre class="highlight"><code class="language-groovy" data-lang="groovy">  :
   def targetFileName = "\$SYSTEM{jgisshell.workingpath}/data/osm/${region}/${region}.osm.sqlite"
@@ -908,16 +914,16 @@ The database is added by the initialization script.</p>
 <div class="content">
 <img src="./images/dialog-layer-manager-spatialite.png" alt="open schema dialog">
 </div>
-<div class="title">Figure 12. Layer-manager with open spatialite schema</div>
+<div class="title">Figure 14. Layer-manager with open spatialite schema</div>
 </div>
 </div>
 <div class="sect4">
-<h5 id="ckan-service-bookmarks"><a class="anchor" href="#ckan-service-bookmarks"></a>Ckan service bookmarks</h5>
+<h5 id="ckan-service-bookmarks"><a class="anchor" href="#ckan-service-bookmarks"></a>CKAN service bookmarks</h5>
 <div class="imageblock">
 <div class="content">
-<img src="./images/dialog-layer-manager-ckan-bookmarks.png" alt="ckan bookmarks">
+<img src="./images/dialog-layer-manager-ckan-bookmarks.png" alt="CKAN bookmarks">
 </div>
-<div class="title">Figure 13. Layer-manager with open bookmark menu</div>
+<div class="title">Figure 15. Layer-manager with open bookmark menu</div>
 </div>
 <div class="paragraph">
 <p><a href="https://ckan.org/">Ckan</a> is a open data portal implementation. A list of available services could be found <a href="https://github.com/sebneu/ckan_instances/blob/master/instances.csv">here</a>. <a href="#ckan">see also</a></p>
@@ -929,13 +935,13 @@ The database is added by the initialization script.</p>
 <div class="content">
 <img src="./images/dialog-open-layer-schema-ckan.png" alt="open schema dialog">
 </div>
-<div class="title">Figure 14. Open ckan schema dialog</div>
+<div class="title">Figure 16. Open CKAN schema dialog</div>
 </div>
 <div class="imageblock">
 <div class="content">
 <img src="./images/dialog-layer-manager-ckan.png" alt="layer-manager dialog">
 </div>
-<div class="title">Figure 15. Layer-manager with open ckan schema</div>
+<div class="title">Figure 17. Layer-manager with open CKAN schema</div>
 </div>
 <div style="page-break-after: always;"></div>
 </div>
@@ -950,7 +956,7 @@ The database is added by the initialization script.</p>
 <div class="content">
 <img src="./images/mapviewer-locator-legend-osmmap.png" alt="JGISShell">
 </div>
-<div class="title">Figure 16. JGISShell</div>
+<div class="title">Figure 18. JGISShell</div>
 </div>
 <div class="admonitionblock tip">
 <table>
@@ -1646,7 +1652,7 @@ Ensure that objects are selected and the objects owning layer
 <div class="content">
 <img src="./images/mapviewer-osmmap.png" alt="map viewer">
 </div>
-<div class="title">Figure 17. Map view</div>
+<div class="title">Figure 19. Map view</div>
 </div>
 <div class="sect3">
 <h4 id="features-2"><a class="anchor" href="#features-2"></a>Features</h4>
@@ -1898,7 +1904,7 @@ Ensure that objects are selected and the objects owning layer
 <div class="content">
 <img src="./images/mapviewer-locator-osmmap.png" alt="locator">
 </div>
-<div class="title">Figure 18. Locator view</div>
+<div class="title">Figure 20. Locator view</div>
 </div>
 <div class="sect3">
 <h4 id="features-3"><a class="anchor" href="#features-3"></a>Features</h4>
@@ -2062,7 +2068,7 @@ see <a href="#datasources">Supported formats</a>
 <div class="content">
 <img src="./images/mapviewer-legend-osmmap.png" alt="image legend">
 </div>
-<div class="title">Figure 19. Legend view</div>
+<div class="title">Figure 21. Legend view</div>
 </div>
 <div class="sect3">
 <h4 id="features-4"><a class="anchor" href="#features-4"></a>Features</h4>
@@ -2163,7 +2169,7 @@ see <a href="#datasources">Supported formats</a>
 <div class="content">
 <img src="./images/mapviewer-detail-maps-osmmap.png" alt="detail maps">
 </div>
-<div class="title">Figure 20. Detail maps view</div>
+<div class="title">Figure 22. Detail maps view</div>
 </div>
 <div class="sect3">
 <h4 id="features-5"><a class="anchor" href="#features-5"></a>Features</h4>
@@ -2350,7 +2356,7 @@ see <a href="#datasources">Supported formats</a>
 <div class="content">
 <img src="./images/mapviewer-gazetteer-osmmap.png" alt="gazetteer">
 </div>
-<div class="title">Figure 21. Gazetteer  component</div>
+<div class="title">Figure 23. Gazetteer  component</div>
 </div>
 <div class="sect3">
 <h4 id="configuration"><a class="anchor" href="#configuration"></a>Configuration</h4>
@@ -2375,6 +2381,7 @@ Schema
 </table>
 </div>
 <div class="listingblock">
+<div class="title">Configuration: Set OSM nominatim as gazetteer source</div>
 <div class="content">
 <pre class="highlight"><code class="language-xml" data-lang="xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;configuration xmlns="http://www.anwiba.net/module/gazetteer"&gt;
@@ -2446,7 +2453,7 @@ Schema
 <div class="content">
 <img src="./images/mapviewer-object-search-osmmap.png" alt="object search">
 </div>
-<div class="title">Figure 22. Object search component</div>
+<div class="title">Figure 24. Object search component</div>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -2566,7 +2573,7 @@ needs one selected layer
 <div class="content">
 <img src="./images/dialog-layer-properties-properties.png" alt="properties">
 </div>
-<div class="title">Figure 23. Layer common properties</div>
+<div class="title">Figure 25. Layer common properties</div>
 </div>
 </div>
 <div class="sect2">
@@ -2575,7 +2582,7 @@ needs one selected layer
 <div class="content">
 <img src="./images/dialog-layer-properties-projection.png" alt="projection">
 </div>
-<div class="title">Figure 24. Layer projection</div>
+<div class="title">Figure 26. Layer projection</div>
 </div>
 </div>
 <div class="sect2">
@@ -2584,7 +2591,7 @@ needs one selected layer
 <div class="content">
 <img src="./images/dialog-layer-properties-scale-range.png" alt="scale range">
 </div>
-<div class="title">Figure 25. Visible scale range</div>
+<div class="title">Figure 27. Visible scale range</div>
 </div>
 </div>
 <div class="sect2">
@@ -2595,31 +2602,31 @@ needs one selected layer
 <div class="content">
 <img src="./images/dialog-layer-properties-geometry-style.png" alt="conditional geometry style">
 </div>
-<div class="title">Figure 26. Geometry style overview</div>
+<div class="title">Figure 28. Geometry style overview</div>
 </div>
 <div class="imageblock">
 <div class="content">
 <img src="./images/dialog-geometry-style.png" alt="geometry style">
 </div>
-<div class="title">Figure 27. Geometry style</div>
+<div class="title">Figure 29. Geometry style</div>
 </div>
 <div class="imageblock">
 <div class="content">
 <img src="./images/dialog-line-signature.png" alt="line signature">
 </div>
-<div class="title">Figure 28. Line signature</div>
+<div class="title">Figure 30. Line signature</div>
 </div>
 <div class="imageblock">
 <div class="content">
 <img src="./images/dialog-line-signature-ordinate.png" alt="line ordinate">
 </div>
-<div class="title">Figure 29. Coordinate value depended signature</div>
+<div class="title">Figure 31. Coordinate value depended signature</div>
 </div>
 <div class="imageblock">
 <div class="content">
 <img src="./images/dialog-line-signature-slope.png" alt="line slope">
 </div>
-<div class="title">Figure 30. Line slope depended signature</div>
+<div class="title">Figure 32. Line slope depended signature</div>
 </div>
 </div>
 <div class="sect3">
@@ -2628,7 +2635,7 @@ needs one selected layer
 <div class="content">
 <img src="./images/dialog-layer-properties-grid-style.png" alt="grid style">
 </div>
-<div class="title">Figure 31. Grid style</div>
+<div class="title">Figure 33. Grid style</div>
 </div>
 </div>
 <div class="sect3">
@@ -2637,7 +2644,7 @@ needs one selected layer
 <div class="content">
 <img src="./images/dialog-layer-properties-image-style.png" alt="grid style">
 </div>
-<div class="title">Figure 32. Image style</div>
+<div class="title">Figure 34. Image style</div>
 </div>
 </div>
 </div>
@@ -2647,7 +2654,7 @@ needs one selected layer
 <div class="content">
 <img src="./images/dialog-layer-properties-attributes.png" alt="attributes">
 </div>
-<div class="title">Figure 33. Attributes</div>
+<div class="title">Figure 35. Attributes</div>
 </div>
 </div>
 <div class="sect2">
@@ -2656,7 +2663,7 @@ needs one selected layer
 <div class="content">
 <img src="./images/dialog-layer-properties-label.png" alt="label">
 </div>
-<div class="title">Figure 34. Label style</div>
+<div class="title">Figure 36. Label style</div>
 </div>
 </div>
 <div class="sect2">
@@ -2665,7 +2672,7 @@ needs one selected layer
 <div class="content">
 <img src="./images/dialog-layer-properties-tooltip.png" alt="tool tip">
 </div>
-<div class="title">Figure 35. Tool-tip setting</div>
+<div class="title">Figure 37. Tool-tip setting</div>
 </div>
 <div style="page-break-after: always;"></div>
 </div>
@@ -2678,7 +2685,7 @@ needs one selected layer
 <div class="content">
 <img src="./images/objects-table.png" alt="Object table dialog">
 </div>
-<div class="title">Figure 36. Object table dialog</div>
+<div class="title">Figure 38. Object table dialog</div>
 </div>
 <div class="paragraph">
 <p><strong>Show all rows</strong></p>
@@ -2742,7 +2749,7 @@ needs one selected layer
 <div class="content">
 <img src="./images/dialog-object-properties-attributes.png" alt="Object properties attributes">
 </div>
-<div class="title">Figure 37. Object properties dialog with attributes</div>
+<div class="title">Figure 39. Object properties dialog with attributes</div>
 </div>
 </div>
 <div class="sect2">
@@ -2751,13 +2758,13 @@ needs one selected layer
 <div class="content">
 <img src="./images/dialog-object-properties-geometry-elements.png" alt="Object properties geometry">
 </div>
-<div class="title">Figure 38. Object properties dialog with geometry tree representation</div>
+<div class="title">Figure 40. Object properties dialog with geometry tree representation</div>
 </div>
 <div class="imageblock">
 <div class="content">
 <img src="./images/dialog-object-properties-geometry-text.png" alt="Object properties geometry">
 </div>
-<div class="title">Figure 39. Object properties dialog with geometry text representation</div>
+<div class="title">Figure 41. Object properties dialog with geometry text representation</div>
 </div>
 <div class="sect3">
 <h4 id="features-7"><a class="anchor" href="#features-7"></a>Features</h4>
@@ -2886,7 +2893,7 @@ Works only with one selected linestring geometry
 <div class="content">
 <img src="./images/dialog-elevation-profile-stretched.png" alt="stretched profile">
 </div>
-<div class="title">Figure 40. Elevation profile dialog with stretched geometry</div>
+<div class="title">Figure 42. Elevation profile dialog with stretched geometry</div>
 </div>
 </div>
 <div class="sect2">
@@ -2895,7 +2902,7 @@ Works only with one selected linestring geometry
 <div class="content">
 <img src="./images/dialog-elevation-profile-projected.png" alt="projected profile">
 </div>
-<div class="title">Figure 41. Elevation profile dialog with projected geometry</div>
+<div class="title">Figure 43. Elevation profile dialog with projected geometry</div>
 </div>
 <div style="page-break-after: always;"></div>
 </div>
@@ -2928,6 +2935,7 @@ Schema
 </table>
 </div>
 <div class="listingblock">
+<div class="title">Configuration: Set known coordinate reference systems</div>
 <div class="content">
 <pre class="highlight"><code class="language-xml" data-lang="xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;configuration xmlns="http://www.anwiba.net/module/coordinatereferencesystem"&gt;
@@ -2956,6 +2964,7 @@ Schema
 <div class="sect4">
 <h5 id="gridshift"><a class="anchor" href="#gridshift"></a>Gridshift</h5>
 <div class="listingblock">
+<div class="title">Configuration: Set BETA2007 for transformations between epsg:4312 (DHDN) to epsg:4258 (ETRS89)</div>
 <div class="content">
 <pre class="highlight"><code class="language-xml" data-lang="xml">    &lt;ntv2Transformer&gt;
       &lt;sourceCoordinateReferenceSystem&gt;EPSG:4314&lt;/sourceCoordinateReferenceSystem&gt;
@@ -2978,6 +2987,7 @@ Schema
 <div class="sect4">
 <h5 id="7-parameter-helmert-transformer"><a class="anchor" href="#7-parameter-helmert-transformer"></a>7 Parameter Helmert transformer</h5>
 <div class="listingblock">
+<div class="title">Configuration: Set DHDN 2001 parameter for transformations between epsg:4312 (DHDN) to epsg:4258 (ETRS89)</div>
 <div class="content">
 <pre class="highlight"><code class="language-xml" data-lang="xml">    &lt;sevenParameterTransformer&gt;
       &lt;sourceCoordinateReferenceSystem&gt;EPSG:4314&lt;/sourceCoordinateReferenceSystem&gt;
@@ -3037,6 +3047,7 @@ File
 </dl>
 </div>
 <div class="listingblock">
+<div class="title">Configuration: Add script as projection transformer</div>
 <div class="content">
 <pre class="highlight"><code class="language-xml" data-lang="xml">    &lt;projectionTransformer&gt;
 
@@ -3166,6 +3177,7 @@ Java injections
 </table>
 </div>
 <div class="listingblock">
+<div class="title">Configuration: Add script as distance or area calculator</div>
 <div class="content">
 <pre class="highlight"><code class="language-xml" data-lang="xml">    &lt;calculators&gt;
       &lt;length&gt;
@@ -3209,7 +3221,7 @@ Java injections
 <div class="content">
 <img src="./images/layer-manager.png" alt="layer-manager">
 </div>
-<div class="title">Figure 42. Layer-manager dialog</div>
+<div class="title">Figure 44. Layer-manager dialog</div>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -3248,6 +3260,7 @@ Schema
 </table>
 </div>
 <div class="listingblock">
+<div class="title">Configuration: Add layer to layer-manager folder 'other'</div>
 <div class="content">
 <pre class="highlight"><code class="language-xml" data-lang="xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;configuration xmlns="http://www.anwiba.net/module/layer/manager/tree"&gt;
@@ -3688,7 +3701,7 @@ Schema
 <div class="content">
 <img src="./images/dialog-database-layer-manager.png" alt="database layer-manager">
 </div>
-<div class="title">Figure 43. Database layer-manager dialog</div>
+<div class="title">Figure 45. Database layer-manager dialog</div>
 </div>
 <div class="sect3">
 <h4 id="features-9"><a class="anchor" href="#features-9"></a>Features</h4>
@@ -3716,7 +3729,7 @@ Schema
 <div class="content">
 <img src="./images/sql-console.png" alt="sql console">
 </div>
-<div class="title">Figure 44. SQL console</div>
+<div class="title">Figure 46. SQL console</div>
 </div>
 <div class="sect2">
 <h3 id="features-10"><a class="anchor" href="#features-10"></a>Features</h3>
@@ -3850,7 +3863,7 @@ Schema
 <div class="content">
 <img src="./images/groovy-console.png" alt="Groovy console">
 </div>
-<div class="title">Figure 45. Groovy console</div>
+<div class="title">Figure 47. Groovy console</div>
 </div>
 <div class="paragraph">
 <p>See groovy console <a href="http://groovy-lang.org/groovyconsole.html">documentation page</a>.</p>
@@ -6349,6 +6362,7 @@ Configuration
 </table>
 </div>
 <div class="listingblock">
+<div class="title">Configuration: Set mapbox as gazetteer source</div>
 <div class="content">
 <pre class="highlight"><code class="language-xml" data-lang="xml">  &lt;service&gt;
     &lt;name&gt;mapbox&lt;/name&gt;
@@ -6427,6 +6441,7 @@ Configuration
 </table>
 </div>
 <div class="listingblock">
+<div class="title">Configuration: Set mapzen as gazetteer source</div>
 <div class="content">
 <pre class="highlight"><code class="language-xml" data-lang="xml">  &lt;service&gt;
     &lt;name&gt;mapzen&lt;/name&gt;
@@ -6524,6 +6539,7 @@ Configuration
 </table>
 </div>
 <div class="listingblock">
+<div class="title">Configuration: Set OSM nominatim as gazetteer source</div>
 <div class="content">
 <pre class="highlight"><code class="language-xml" data-lang="xml">  &lt;service&gt;
     &lt;name&gt;nominatim osm&lt;/name&gt;
@@ -6542,7 +6558,7 @@ Configuration
 </div>
 </div>
 <div class="sect2">
-<h3 id="ckan"><a class="anchor" href="#ckan"></a>Ckan</h3>
+<h3 id="ckan"><a class="anchor" href="#ckan"></a>CKAN</h3>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -6550,7 +6566,7 @@ Configuration
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-see <a href="https://ckan.org/">hompage</a> and <a href="https://github.com/sebneu/ckan_instances/blob/master/instances.csv">list of ckan services</a>
+see <a href="https://ckan.org/">hompage</a> and <a href="https://github.com/sebneu/ckan_instances/blob/master/instances.csv">list of CKAN services</a>
 </td>
 </tr>
 </table>
@@ -6665,8 +6681,15 @@ sample
 <h4 id="dataset-and-resources-search"><a class="anchor" href="#dataset-and-resources-search"></a>Dataset and resources search</h4>
 <div class="imageblock">
 <div class="content">
+<img src="./images/dialog-layer-manager-ckan-search-action.png" alt="search">
+</div>
+<div class="title">Figure 48. Layer-manager with open popup menu on CKAN schema</div>
+</div>
+<div class="imageblock">
+<div class="content">
 <img src="./images/dialog-ckan-search.png" alt="search">
 </div>
+<div class="title">Figure 49. CKAN search dialog</div>
 </div>
 </div>
 </div>
@@ -6819,6 +6842,7 @@ File
 </table>
 </div>
 <div class="listingblock">
+<div class="title">Scripting: Groovy script</div>
 <div class="content">
 <pre class="highlight"><code class="language-groovy" data-lang="groovy">package net.anwiba.script.groovy
 
@@ -6878,6 +6902,7 @@ File
 </table>
 </div>
 <div class="listingblock">
+<div class="title">Scripting: Java script</div>
 <div class="content">
 <pre class="highlight"><code class="language-java" data-lang="java">package net.anwiba.script.java.example;
 
@@ -6955,10 +6980,11 @@ public class Example extends AbstractScript {
 <p>See <a href="https://docs.oracle.com/javase/tutorial/uiswing/concurrency/dispatch.html">The Java Tutorials</a> or <a href="https://en.wikipedia.org/wiki/Event_dispatching_thread">Wikipedia</a></p>
 </div>
 <div class="listingblock">
+<div class="title">Configuration: Set threading mode</div>
 <div class="content">
-<pre class="highlight"><code class="language-xml" data-lang="xml">  &lt;script:script mode="EDT"&gt; --&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">  &lt;script:script mode="EDT"&gt;
      :
-  &lt;/script:script&gt; --&gt;</code></pre>
+  &lt;/script:script&gt;</code></pre>
 </div>
 </div>
 <div class="dlist">
@@ -6979,6 +7005,7 @@ public class Example extends AbstractScript {
 <p><strong>Configuration</strong></p>
 </div>
 <div class="listingblock">
+<div class="title">Configuration: Set program initializer script</div>
 <div class="content">
 <pre class="highlight"><code class="language-xml" data-lang="xml">  &lt;initializer&gt;
     &lt;script:language&gt;GROOVY&lt;/script:language&gt;
@@ -7002,7 +7029,7 @@ public class Example extends AbstractScript {
 </dd>
 <dt class="hdlist1">Thread</dt>
 <dd>
-<p>SCRIPTING_QUEUE_n</p>
+<p>Program queue</p>
 </dd>
 </dl>
 </div>
@@ -7013,6 +7040,7 @@ public class Example extends AbstractScript {
 <p><strong>Configuration</strong></p>
 </div>
 <div class="listingblock">
+<div class="title">Configuration: Set program closer script</div>
 <div class="content">
 <pre class="highlight"><code class="language-xml" data-lang="xml">  &lt;closer&gt;
     &lt;script:language&gt;GROOVY&lt;/script:language&gt;
@@ -7034,7 +7062,7 @@ public class Example extends AbstractScript {
 </dd>
 <dt class="hdlist1">Thread</dt>
 <dd>
-<p>SCRIPTING_QUEUE_n</p>
+<p>Program queue</p>
 </dd>
 </dl>
 </div>
@@ -7045,6 +7073,7 @@ public class Example extends AbstractScript {
 <p><strong>Configuration</strong></p>
 </div>
 <div class="listingblock">
+<div class="title">Configuration: Add program modus action</div>
 <div class="content">
 <pre class="highlight"><code class="language-xml" data-lang="xml">  &lt;modes&gt;
     &lt;mode&gt;
@@ -7096,9 +7125,9 @@ isShiftDown (Boolean, Named)<br>
 </dd>
 <dt class="hdlist1">Thread</dt>
 <dd>
-<p><strong>initializer</strong> SCRIPTING_QUEUE_n<br>
-<strong>script</strong> EVENT_DISPATCH_THREAD<br>
-<strong>closer</strong> SCRIPTING_QUEUE_n</p>
+<p><strong>initializer</strong> Scripting queue thread<br>
+<strong>script</strong> Event dispatch thread<br>
+<strong>closer</strong> Scripting queue thread</p>
 </dd>
 </dl>
 </div>
@@ -7109,6 +7138,7 @@ isShiftDown (Boolean, Named)<br>
 <p><strong>Configuration</strong></p>
 </div>
 <div class="listingblock">
+<div class="title">Configuration: Add toolbar action</div>
 <div class="content">
 <pre class="highlight"><code class="language-xml" data-lang="xml">  &lt;toolbar&gt;
     &lt;toolbaritem&gt;
@@ -7154,6 +7184,7 @@ isShiftDown (Boolean, Named)<br>
 <p><strong>Configuration</strong></p>
 </div>
 <div class="listingblock">
+<div class="title">Configuration: Add menu items</div>
 <div class="content">
 <pre class="highlight"><code class="language-xml" data-lang="xml">  &lt;menu:menus&gt;
     &lt;menu:menu&gt;
@@ -7210,6 +7241,7 @@ isShiftDown (Boolean, Named)<br>
 <p><strong>Configuration</strong></p>
 </div>
 <div class="listingblock">
+<div class="title">Configuration: Add popup menu item</div>
 <div class="content">
 <pre class="highlight"><code class="language-xml" data-lang="xml">  &lt;popup:popups&gt;
     &lt;popup:popup&gt;
@@ -7263,6 +7295,7 @@ isShiftDown (Boolean, Named)<br>
 <p><strong>Configuration</strong></p>
 </div>
 <div class="listingblock">
+<div class="title">Configuration: Add map popup menu item</div>
 <div class="content">
 <pre class="highlight"><code class="language-xml" data-lang="xml">  &lt;popup:popup&gt;
       &lt;popup:type&gt;Map&lt;/popup:type&gt;
@@ -7298,6 +7331,7 @@ isShiftDown (Boolean, Named)<br>
 <p><strong>Configuration</strong></p>
 </div>
 <div class="listingblock">
+<div class="title">Configuration: Add layer legend popup menu item</div>
 <div class="content">
 <pre class="highlight"><code class="language-xml" data-lang="xml">  &lt;popup:popup&gt;
       &lt;popup:type&gt;Layer&lt;/popup:type&gt;
@@ -7333,6 +7367,7 @@ isShiftDown (Boolean, Named)<br>
 <p><strong>Configuration</strong></p>
 </div>
 <div class="listingblock">
+<div class="title">Configuration: Add layer manager popup menu item</div>
 <div class="content">
 <pre class="highlight"><code class="language-xml" data-lang="xml">  &lt;popup:popup&gt;
       &lt;popup:type&gt;LAYER_MANAGER&lt;/popup:type&gt;
@@ -7416,7 +7451,7 @@ path<br>
 <div class="content">
 <img src="./images/filesystem-manager-program-folder.png" alt="program folder">
 </div>
-<div class="title">Figure 46. JGISShell folder overview</div>
+<div class="title">Figure 50. JGISShell folder overview</div>
 </div>
 <div class="hdlist">
 <table>
@@ -7485,7 +7520,7 @@ scripts
 <div class="content">
 <img src="./images/dialog-about-system-properties.png" alt="system-properties">
 </div>
-<div class="title">Figure 47. JGISShell java system-properties overview</div>
+<div class="title">Figure 51. JGISShell java system-properties overview</div>
 </div>
 <div class="hdlist">
 <table>
@@ -7641,10 +7676,50 @@ API
 </tr>
 <tr>
 <td class="hdlist1">
+ATKIS
+</td>
+<td class="hdlist2">
+<p>Amtliches Topographisch-Kartographisches Informationssystem</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+BETA
+</td>
+<td class="hdlist2">
+<p>Bundeseinheitliche Transformation für ATKIS</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
 CKAN
 </td>
 <td class="hdlist2">
 <p>Comprehensive Knowledge Archive Network</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+CRS
+</td>
+<td class="hdlist2">
+<p>Coordinate Reference System</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+DHDN
+</td>
+<td class="hdlist2">
+<p>Deutsches Haupt Dreiecks Netz (German main triangulation network)</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+EPSG
+</td>
+<td class="hdlist2">
+<p>European Petroleum Survey Group</p>
 </td>
 </tr>
 <tr>
@@ -7657,10 +7732,42 @@ ESRI
 </tr>
 <tr>
 <td class="hdlist1">
+ETRS
+</td>
+<td class="hdlist2">
+<p>European Terrestrial Reference System</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+EU
+</td>
+<td class="hdlist2">
+<p>European Union</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
 FLML
 </td>
 <td class="hdlist2">
 <p>Feature Layer Markup Language</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+GEO
+</td>
+<td class="hdlist2">
+<p>Geographic JavaScript Object Notation</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+GeoJSON
+</td>
+<td class="hdlist2">
+<p>Geographic</p>
 </td>
 </tr>
 <tr>
@@ -7721,10 +7828,34 @@ JDBC
 </tr>
 <tr>
 <td class="hdlist1">
+JGISShell
+</td>
+<td class="hdlist2">
+<p>Java Geographic Information System Shell</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+JRE
+</td>
+<td class="hdlist2">
+<p>Java Runtime Enviroment</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
 JSON
 </td>
 <td class="hdlist2">
 <p>JavaScript Object Notation</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+N.N.
+</td>
+<td class="hdlist2">
+<p>Nomen nescio</p>
 </td>
 </tr>
 <tr>
@@ -7785,6 +7916,14 @@ RFC
 </tr>
 <tr>
 <td class="hdlist1">
+TopoJSON
+</td>
+<td class="hdlist2">
+<p>Topology JavaScript Object Notation</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
 SAP
 </td>
 <td class="hdlist2">
@@ -7825,10 +7964,26 @@ SDO
 </tr>
 <tr>
 <td class="hdlist1">
+SDO
+</td>
+<td class="hdlist2">
+<p>Spatial Data Objects</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
 SQL
 </td>
 <td class="hdlist2">
 <p>Structured Query Language</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+SRS
+</td>
+<td class="hdlist2">
+<p>Spatial Reference System</p>
 </td>
 </tr>
 <tr>
@@ -7869,6 +8024,14 @@ UTM
 </td>
 <td class="hdlist2">
 <p>Universal Transverse Mercator</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+WGS
+</td>
+<td class="hdlist2">
+<p>World Geodetic System</p>
 </td>
 </tr>
 <tr>
