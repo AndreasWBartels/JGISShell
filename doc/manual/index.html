@@ -6691,6 +6691,109 @@ sample
 </div>
 <div class="title">Figure 49. CKAN search dialog</div>
 </div>
+<div class="sect4">
+<h5 id="consume-selected-resources"><a class="anchor" href="#consume-selected-resources"></a>Consume selected resources</h5>
+<div class="paragraph">
+<p>Script call resources table button "Open resource"</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+File
+</td>
+<td class="hdlist2">
+<p><a href="../../config/script-module-configuration.xml">config/script-module-configuration.xml</a></p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Schema
+</td>
+<td class="hdlist2">
+<p><a href="../../doc/schema/net/anwiba/schema/module/scripting/configuration.xsd">doc/schema/net/anwiba/schema/module/scripting/configuration.xsd</a><br>
+<a href="../../doc/schema/net/anwiba/schema/dynamic/script/script.xsd">doc/schema/net/anwiba/schema/dynamic/script/script.xsd</a></p>
+</td>
+</tr>
+</table>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+File
+</td>
+<td class="hdlist2">
+<p><a href="../../scripts/net/anwiba/script/groovy/ckan/isTextResource.groovy">scripts/net/anwiba/script/groovy/ckan/isTextResource.groovy</a><br></p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+File
+</td>
+<td class="hdlist2">
+<p><a href="../../scripts/net/anwiba/script/groovy/ckan/OpenTextResource.groovy">scripts/net/anwiba/script/groovy/ckan/OpenTextResource.groovy</a></p>
+</td>
+</tr>
+</table>
+</div>
+<div class="listingblock">
+<div class="title">Configuration: Set registerable CKAN resource consumer</div>
+<div class="content">
+<pre class="highlight"><code class="language-xml" data-lang="xml">  &lt;scripts&gt;
+    &lt;registerable&gt;
+      &lt;nature&gt;CKAN_RESOURCE_CONSUMER&lt;/nature&gt;
+        &lt;script:applicable&gt;
+          &lt;script:language&gt;GROOVY&lt;/script:language&gt;
+          &lt;script:groovyScript&gt;
+            &lt;script:uri&gt;net/anwiba/script/groovy/ckan/isTextResource.groovy&lt;/script:uri&gt;
+          &lt;/script:groovyScript&gt;
+        &lt;/script:applicable&gt;
+        &lt;script:script&gt;
+          &lt;script:language&gt;GROOVY&lt;/script:language&gt;
+          &lt;script:groovyScript&gt;
+            &lt;script:uri&gt;net/anwiba/script/groovy/ckan/OpenTextResource.groovy&lt;/script:uri&gt;
+          &lt;/script:groovyScript&gt;
+        &lt;/script:script&gt;
+    &lt;/registerable&gt;
+  &lt;/scripts&gt;</code></pre>
+</div>
+</div>
+<div class="dlist">
+<div class="title">Script</div>
+<dl>
+<dt class="hdlist1">Groovy bindings</dt>
+<dd>
+<p><a href="../../doc/api//net/anwiba/spatial/ckan/json/schema/v1_0/Resource.html">resource</a></p>
+</dd>
+<dt class="hdlist1">Java injections</dt>
+<dd>
+<p><a href="../../doc/api//net/anwiba/spatial/ckan/json/schema/v1_0/Resource.html">Resource</a></p>
+</dd>
+</dl>
+</div>
+<div class="dlist">
+<div class="title">Script</div>
+<dl>
+<dt class="hdlist1">Groovy bindings</dt>
+<dd>
+<p><a href="../../doc/api//net/anwiba/spatial/ckan/json/schema/v1_0/Dataset.html">dataset</a><br>
+<a href="../../doc/api//net/anwiba/spatial/ckan/json/schema/v1_0/Resource.html">resource</a><br>
+<a href="../../doc/api/net/anwiba/spatial/api/IFacade.html">facade</a><br>
+<a href="../../doc/api/net/anwiba/spatial/api/layer/mamager/ILayerManager.html">layerManager</a><br>
+<a href="../../doc/api/net/anwiba/spatial/scripting/desktop/api/IDesktop.html">desktop</a></p>
+</dd>
+<dt class="hdlist1">Java injections</dt>
+<dd>
+<p><a href="../../doc/api//net/anwiba/spatial/ckan/json/schema/v1_0/Dataset.html">Dataset</a><br>
+<a href="../../doc/api//net/anwiba/spatial/ckan/json/schema/v1_0/Resource.html">Resource</a><br>
+<a href="../../doc/api/net/anwiba/spatial/api/IFacade.html">IFacade</a><br>
+<a href="../../doc/api/net/anwiba/spatial/api/layer/mamager/ILayerManager.html">ILayerManager</a><br>
+<a href="../../doc/api/net/anwiba/spatial/scripting/desktop/api/IDesktop.html">IDesktop</a></p>
+</dd>
+</dl>
+</div>
+</div>
 </div>
 </div>
 <div class="sect2">
@@ -7245,7 +7348,7 @@ isShiftDown (Boolean, Named)<br>
 <div class="content">
 <pre class="highlight"><code class="language-xml" data-lang="xml">  &lt;popup:popups&gt;
     &lt;popup:popup&gt;
-        &lt;popup:type&gt;{Anchor Point}&lt;/popup:type&gt;
+        &lt;popup:target&gt;{Anchor Point}&lt;/popup:target&gt;
         &lt;popup:menuitem&gt;
           &lt;popup:name&gt;Map Popup Script (groovy)&lt;/popup:name&gt;
           &lt;popup:applicable&gt;
@@ -7298,7 +7401,7 @@ isShiftDown (Boolean, Named)<br>
 <div class="title">Configuration: Add map popup menu item</div>
 <div class="content">
 <pre class="highlight"><code class="language-xml" data-lang="xml">  &lt;popup:popup&gt;
-      &lt;popup:type&gt;Map&lt;/popup:type&gt;
+      &lt;popup:target&gt;MAP&lt;/popup:target&gt;
       &lt;popup:menuitem&gt;
          :
       &lt;/popup:menuitem&gt;
@@ -7334,7 +7437,7 @@ isShiftDown (Boolean, Named)<br>
 <div class="title">Configuration: Add layer legend popup menu item</div>
 <div class="content">
 <pre class="highlight"><code class="language-xml" data-lang="xml">  &lt;popup:popup&gt;
-      &lt;popup:type&gt;Layer&lt;/popup:type&gt;
+      &lt;popup:target&gt;LAYER&lt;/popup:target&gt;
       &lt;popup:menuitem&gt;
          :
       &lt;/popup:menuitem&gt;
@@ -7370,7 +7473,7 @@ isShiftDown (Boolean, Named)<br>
 <div class="title">Configuration: Add layer manager popup menu item</div>
 <div class="content">
 <pre class="highlight"><code class="language-xml" data-lang="xml">  &lt;popup:popup&gt;
-      &lt;popup:type&gt;LAYER_MANAGER&lt;/popup:type&gt;
+      &lt;popup:target&gt;LAYER_MANAGER&lt;/popup:target&gt;
       &lt;popup:menuitem&gt;
          :
       &lt;/popup:menuitem&gt;
@@ -7428,6 +7531,20 @@ path<br>
 <dt class="hdlist1">Thread</dt>
 <dd>
 <p>Program queue</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect3">
+<h4 id="ckan-resource-consumer"><a class="anchor" href="#ckan-resource-consumer"></a>CKAN resource consumer</h4>
+<div class="paragraph">
+<p>see <a href="#dataset-and-resources-search">Chapter Datasources - CKAN - Dataset and resources search</a></p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Thread</dt>
+<dd>
+<p>Configurable</p>
 </dd>
 </dl>
 </div>

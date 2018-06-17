@@ -39,12 +39,12 @@
       </xsd:appinfo>
     </xsd:annotation>
     <xsd:sequence>
-      <xsd:element name="type" type="PopupTypeEnum" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="target" type="PopupTargetEnum" minOccurs="1" maxOccurs="1"/>
       <xsd:element name="menuitem" type="PopupItemType" minOccurs="1" maxOccurs="unbounded"/>
     </xsd:sequence>
   </xsd:complexType>
 
-  <xsd:simpleType name="PopupTypeEnum">
+  <xsd:simpleType name="PopupTargetEnum">
     <xsd:restriction base="xsd:string">
       <xsd:enumeration value="MAP"/>
       <xsd:enumeration value="LEGEND"/>

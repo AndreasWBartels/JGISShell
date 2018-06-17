@@ -1,4 +1,4 @@
-@JssdFactory(type="typeinfo",types="featureCollection,feature,geometry,point,lineString,polygon,multiPoint,multiLineString,multiPolygon,geometryCollection")
+@JssdFactory(type="typeinfo",types="featureCollection:FeatureCollection,featureCollection:featurecollection,feature:Feature,feature:feature,geometry:Geometry,geometry:geometry,point:Point,point:point,lineString:LineString,lineString:linestring,polygon:Polygon,polygon:polygon,multiPoint:MultiPoint,multiPoint:multipoint,multiLineString:MultiLineString,multiLineString:multilinestring,multiPolygon:MultiPolygon,multiPolygon:multipolygon,geometryCollection:GeometryCollection,geometryCollection:geometrycollection")
 @JssdUnknownMember
 {
   "crs": <crs> null,

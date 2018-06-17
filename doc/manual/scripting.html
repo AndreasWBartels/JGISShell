@@ -927,7 +927,7 @@ isShiftDown (Boolean, Named)<br>
 <div class="content">
 <pre class="highlight"><code class="language-xml" data-lang="xml">  &lt;popup:popups&gt;
     &lt;popup:popup&gt;
-        &lt;popup:type&gt;{Anchor Point}&lt;/popup:type&gt;
+        &lt;popup:target&gt;{Anchor Point}&lt;/popup:target&gt;
         &lt;popup:menuitem&gt;
           &lt;popup:name&gt;Map Popup Script (groovy)&lt;/popup:name&gt;
           &lt;popup:applicable&gt;
@@ -980,7 +980,7 @@ isShiftDown (Boolean, Named)<br>
 <div class="title">Configuration: Add map popup menu item</div>
 <div class="content">
 <pre class="highlight"><code class="language-xml" data-lang="xml">  &lt;popup:popup&gt;
-      &lt;popup:type&gt;Map&lt;/popup:type&gt;
+      &lt;popup:target&gt;MAP&lt;/popup:target&gt;
       &lt;popup:menuitem&gt;
          :
       &lt;/popup:menuitem&gt;
@@ -1016,7 +1016,7 @@ isShiftDown (Boolean, Named)<br>
 <div class="title">Configuration: Add layer legend popup menu item</div>
 <div class="content">
 <pre class="highlight"><code class="language-xml" data-lang="xml">  &lt;popup:popup&gt;
-      &lt;popup:type&gt;Layer&lt;/popup:type&gt;
+      &lt;popup:target&gt;LAYER&lt;/popup:target&gt;
       &lt;popup:menuitem&gt;
          :
       &lt;/popup:menuitem&gt;
@@ -1052,7 +1052,7 @@ isShiftDown (Boolean, Named)<br>
 <div class="title">Configuration: Add layer manager popup menu item</div>
 <div class="content">
 <pre class="highlight"><code class="language-xml" data-lang="xml">  &lt;popup:popup&gt;
-      &lt;popup:type&gt;LAYER_MANAGER&lt;/popup:type&gt;
+      &lt;popup:target&gt;LAYER_MANAGER&lt;/popup:target&gt;
       &lt;popup:menuitem&gt;
          :
       &lt;/popup:menuitem&gt;
@@ -1114,6 +1114,20 @@ path<br>
 </dl>
 </div>
 </div>
+<div class="sect3">
+<h4 id="ckan-resource-consumer"><a class="anchor" href="#ckan-resource-consumer"></a>CKAN resource consumer</h4>
+<div class="paragraph">
+<p>see <a href="#dataset-and-resources-search">Chapter Datasources - CKAN - Dataset and resources search</a></p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Thread</dt>
+<dd>
+<p>Configurable</p>
+</dd>
+</dl>
+</div>
+</div>
 </div>
 <div class="sect2">
 <h3 id="api"><a class="anchor" href="#api"></a>API</h3>
@@ -1126,7 +1140,7 @@ path<br>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2018-06-13 21:43:22 CEST
+Last updated 2018-06-16 02:25:52 CEST
 </div>
 </div>
 </body>

@@ -14,6 +14,7 @@
   "conforms_to": <label[]> null,
   "author": <String> null,
   "author_email": <String> null,
+  "publisher": <publisher> null,
   "state": <String> null,
   "version": <String> null,
   "creator_user_id": <String> null,

@@ -196,7 +196,7 @@
   </menu:menus>
   <popup:popups>
     <popup:popup>
-      <popup:type>LEGEND</popup:type>
+      <popup:target>LEGEND</popup:target>
       <popup:menuitem>
         <popup:name>LEGEND Popup Script (groovy)</popup:name>
         <script:script>
@@ -208,7 +208,7 @@
       </popup:menuitem>
     </popup:popup>
     <popup:popup>
-      <popup:type>MAP</popup:type>
+      <popup:target>MAP</popup:target>
       <popup:menuitem>
         <popup:name>Map Popup Script (groovy)</popup:name>
         <script:applicable>
@@ -226,7 +226,7 @@
       </popup:menuitem>
     </popup:popup>
     <popup:popup>
-      <popup:type>LAYER_MANAGER</popup:type>
+      <popup:target>LAYER_MANAGER</popup:target>
       <popup:menuitem>
         <popup:name>Create Overview Layer</popup:name>
         <script:applicable>
@@ -244,4 +244,21 @@
       </popup:menuitem>
     </popup:popup>
   </popup:popups>
+  <scripts>
+    <registerable>
+      <nature>CKAN_RESOURCE_CONSUMER</nature>
+      <script:applicable>
+        <script:language>GROOVY</script:language>
+        <script:groovyScript>
+          <script:uri>net/anwiba/script/groovy/ckan/isTextResource.groovy</script:uri>
+        </script:groovyScript>
+      </script:applicable>
+      <script:script>
+        <script:language>GROOVY</script:language>
+        <script:groovyScript>
+          <script:uri>net/anwiba/script/groovy/ckan/OpenTextResource.groovy</script:uri>
+        </script:groovyScript>
+      </script:script>
+    </registerable>
+  </scripts>
 </configuration>
