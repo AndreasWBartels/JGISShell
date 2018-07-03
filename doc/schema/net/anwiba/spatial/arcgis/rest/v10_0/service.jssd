@@ -1,5 +1,10 @@
 {
+  "server" : <String> null,
+  "id" : <String> null,
+  "serviceItemId" : <String> null,
   "name" : <String> null,
+  "type" : <String> null,
   "url" : <String> null,
-  "type" : <String> null
+  "created" : <String> null,
+  "cacheKey" : <String> null
 }
