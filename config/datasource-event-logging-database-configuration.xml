@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<db:connection
+  xmlns:db="http://www.anwiba.net/database/connection"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.anwiba.net/database/connection connection.xsd ">
+  <db:database>${jgisshell.workingpath}data/datasource_events.sqlite</db:database>
+  <db:driverName>org.sqlite.JDBC</db:driverName>
+  <db:urlPattern>jdbc:sqlite:${database}</db:urlPattern>
+</db:connection>
