@@ -4876,7 +4876,7 @@ see <a href="http://www.geopackage.org/">geopackage homepage</a>
 syntax
 </td>
 <td class="hdlist2">
-<p>sqlite:geopackage:/path/database.sqlite</p>
+<p>sqlite:geopackage:[feature:|tilecache:]/path/database.gpkg</p>
 </td>
 </tr>
 <tr>
@@ -4884,7 +4884,7 @@ syntax
 sample
 </td>
 <td class="hdlist2">
-<p>sqlite:geopackage:/path/transportation.sqlite</p>
+<p>sqlite:geopackage:[feature:|tilecache:]/path/transportation.gpkg</p>
 </td>
 </tr>
 </table>
@@ -4931,7 +4931,7 @@ sample
 syntax
 </td>
 <td class="hdlist2">
-<p>sqlite:geopackage:/path/database.sqlite?table={table name}&amp;column={geometry column name}</p>
+<p>sqlite:geopackage:feature:/path/database.gpkg?table={table name}&amp;column={geometry column name}</p>
 </td>
 </tr>
 <tr>
@@ -4939,7 +4939,7 @@ syntax
 sample
 </td>
 <td class="hdlist2">
-<p>sqlite:geopackage:/path/transportation.sqlite?table=highway&amp;column=geometry</p>
+<p>sqlite:geopackage:feature:/path/transportation.gpkg?table=highway&amp;column=geometry</p>
 </td>
 </tr>
 </table>
@@ -4983,7 +4983,7 @@ sample
 syntax
 </td>
 <td class="hdlist2">
-<p>sqlite:geopackage:/path/database.sqlite?table={table name}</p>
+<p>sqlite:geopackage:tilecache:/path/database.gpkg?table={table name}</p>
 </td>
 </tr>
 <tr>
@@ -4991,7 +4991,7 @@ syntax
 sample
 </td>
 <td class="hdlist2">
-<p>sqlite:geopackage:/path/transportation.sqlite?table=highway</p>
+<p>sqlite:geopackage:tilecache:/path/transportation.gpkg?table=highway</p>
 </td>
 </tr>
 </table>

@@ -14,7 +14,7 @@
   <service type="ckan" host="demo.ckan.org" port="-1" path="/api"/>
  </bookmark>
  <bookmark type="SERVICE">
-  <service type="ckan" host="www.europeandataportal.eu" port="-1" path="/data/en/api"/>
+  <service type="ckan" host="www.europeandataportal.eu" port="-1" path="/data/en/api" ssl="true" />
  </bookmark>
  <bookmark type="SERVICE">
   <service type="ckan" host="www.govdata.de" port="-1" path="/ckan/api"/>

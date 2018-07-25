@@ -23,7 +23,7 @@
   <service>
     <name>nominatim osm</name>
     <type>NOMINATIM</type>
-    <url>http://nominatim.openstreetmap.org/search/${query}?format=jsonv2&amp;addressdetails=1&amp;limit=${limit}&amp;polygon_geojson=1</url>
+    <url>https://nominatim.openstreetmap.org/search/${query}?format=jsonv2&amp;addressdetails=1&amp;limit=${limit}&amp;polygon_geojson=1</url>
     <values>
       <value name="limit" value="20"/>
     </values>
