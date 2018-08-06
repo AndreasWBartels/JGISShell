@@ -6977,6 +6977,14 @@ facade.view().add(layer);</code></pre>
 </div>
 <div class="dlist">
 <dl>
+<dt class="hdlist1">Injection Annotations</dt>
+<dd>
+<p><a href="../../doc/api/net/anwiba/commons/injection/annotation/Injection.html">Injection</a> marked fields or constructor parameter as injection target<br>
+<a href="../../doc/api/net/anwiba/commons/injection/annotation/Emptiable.html">Emptiable</a> allows empty list as injected value<br>
+<a href="../../doc/api/net/anwiba/commons/injection/annotation/Named.html">Named</a> named injection binding<br>
+<a href="../../doc/api/net/anwiba/commons/injection/annotation/Nullable.html">Nullable</a> allows null as injected value <br>
+<a href="../../doc/api/net/anwiba/commons/injection/annotation/Published.html">Published</a> marker for injectable in scripts</p>
+</dd>
 <dt class="hdlist1">Java injections</dt>
 <dd>
 <p><a href="../../doc/api/net/anwiba/spatial/coordinate/ICoordinate.html">ICoordinate</a><br>
@@ -7012,8 +7020,8 @@ import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 
 import net.anwiba.commons.message.IMessageCollector;
-import net.anwiba.commons.reflection.annotation.Injection;
-import net.anwiba.commons.reflection.annotation.Nullable;
+import net.anwiba.commons.injection.annotation.Injection;
+import net.anwiba.commons.injection.annotation.Nullable;
 import net.anwiba.commons.thread.cancel.ICanceler;
 import net.anwiba.spatial.api.IFacade;
 import net.anwiba.spatial.api.layer.feature.IFeatureLayer;

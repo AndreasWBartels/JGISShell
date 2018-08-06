@@ -1,4 +1,5 @@
 net.anwiba.commons.attribute
+net.anwiba.commons.injection.annotation
 net.anwiba.commons.lang.collection
 net.anwiba.commons.lang.comparable
 net.anwiba.commons.lang.counter
@@ -25,7 +26,6 @@ net.anwiba.commons.lang.visitor
 net.anwiba.commons.message
 net.anwiba.commons.message.notification
 net.anwiba.commons.message.observer
-net.anwiba.commons.reflection.annotation
 net.anwiba.commons.thread.cancel
 net.anwiba.commons.thread.process
 net.anwiba.commons.thread.program
