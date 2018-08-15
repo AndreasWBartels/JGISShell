@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+ xmlns:jaxb="http://java.sun.com/xml/ns/jaxb"
+ jaxb:version="2.0"
+ targetNamespace="http://www.anwiba.net/module/datasource/event"
+ xmlns:this="http://www.anwiba.net/module/datasource/event"
+ xmlns:database="http://www.anwiba.net/dynamic/database/connection"
+ elementFormDefault="qualified">
+
+  <xsd:import namespace="http://www.anwiba.net/dynamic/database/connection" schemaLocation="../../../dynamic/database/connection.xsd"/>
+
+  <xsd:annotation>
+    <xsd:appinfo>
+      <!-- <jaxb:globalBindings choiceContentProperty="false"/> -->
+      <jaxb:schemaBindings>
+        <jaxb:package name="net.anwiba.schema.module.datasource.event"/>
+      </jaxb:schemaBindings>
+    </xsd:appinfo>
+  </xsd:annotation>
+
+  <xsd:element name="configuration" type="this:ConfigurationType">
+  </xsd:element>
+
+  <xsd:complexType name="ConfigurationType">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <jaxb:class name="Configuration"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="storage" type="this:StorageType" minOccurs="1" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="StorageType">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <jaxb:class name="Storage"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="database" type="this:DatabaseType" minOccurs="1" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="DatabaseType">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <jaxb:class name="Database"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="connection" type="database:DatabaseConnectionDescription" minOccurs="1" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+</xsd:schema>

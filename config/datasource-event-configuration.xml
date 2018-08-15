@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration xmlns="http://www.anwiba.net/module/datasource/event"
+               xmlns:connection="http://www.anwiba.net/dynamic/database/connection">
+  <storage>
+    <database>
+      <connection>
+        <connection:database>${jgisshell.workingpath}data/datasource_events.sqlite</connection:database>
+        <connection:driverName>org.sqlite.JDBC</connection:driverName>
+        <connection:urlPattern>jdbc:sqlite:${database}</connection:urlPattern>
+      </connection>
+    </database>
+  </storage>
+</configuration>
