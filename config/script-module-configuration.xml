@@ -242,6 +242,22 @@
           </script:groovyScript>
         </script:script>
       </popup:menuitem>
+      <popup:menuitem>
+        <popup:name>Open Terminal</popup:name>
+        <popup:icon>net/anwiba/script/icons/utilities-terminal.png</popup:icon>
+        <script:applicable>
+          <script:language>GROOVY</script:language>
+          <script:groovyScript>
+            <script:uri>net/anwiba/script/groovy/terminal/isApplicable.groovy</script:uri>
+          </script:groovyScript>
+        </script:applicable>
+        <script:script mode="EDT">
+          <script:language>GROOVY</script:language>
+          <script:groovyScript>
+            <script:uri>net/anwiba/script/groovy/terminal/TerminalLauncher.groovy</script:uri>
+          </script:groovyScript>
+        </script:script>
+      </popup:menuitem>
     </popup:popup>
   </popup:popups>
   <scripts>

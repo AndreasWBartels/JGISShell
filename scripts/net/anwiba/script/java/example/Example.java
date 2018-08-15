@@ -1,12 +1,12 @@
-// Copyright (c) 2014 by Andreas W. Bartels (bartels@anwiba.net)
+// Copyright (c) 2014 by Andreas W. Bartels
 package net.anwiba.script.java.example;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 
 import net.anwiba.commons.message.IMessageCollector;
-import net.anwiba.commons.reflection.annotation.Injection;
-import net.anwiba.commons.reflection.annotation.Nullable;
+import net.anwiba.commons.injection.annotation.Injection;
+import net.anwiba.commons.injection.annotation.Nullable;
 import net.anwiba.commons.thread.cancel.ICanceler;
 import net.anwiba.spatial.api.IFacade;
 import net.anwiba.spatial.api.layer.feature.IFeatureLayer;
@@ -57,5 +57,4 @@ public class Example extends AbstractScript {
       throw new InvocationTargetException(exception);
     }
   }
-
 }
