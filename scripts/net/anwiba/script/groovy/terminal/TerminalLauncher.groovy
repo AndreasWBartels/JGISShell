@@ -7,7 +7,6 @@ import groovy.swing.SwingBuilder
 import net.anwiba.spatial.scripting.groovy.api.JGISShellGroovyScript
 @groovy.transform.BaseScript JGISShellGroovyScript facade
 
-
 //def terminal = "/usr/bin/Konsole"
 def terminal = "/usr/bin/mate-terminal"
 //def terminal = "/usr/bin/gnome-terminal"
@@ -21,10 +20,9 @@ if (new File(terminal).exists()) {
       .command(commandPattern)
       .launch()
 } else {
+  desktop.open(facade.resource("\$SYSTEM{jgisshell.workingpath}/scripts/net/anwiba/script/groovy/terminal/TerminalLauncher.groovy"))
   new SwingBuilder().optionPane().showMessageDialog(parentComponent,
-      "Couldn't find the terminal program.\nPlease, fix the script.",
+      "Couldn't find the terminal program.\nPlease, edit the script 'TerminalLauncher'.",
       "Error",
       JOptionPane.INFORMATION_MESSAGE)
-  desktop.open(facade.resource("\$SYSTEM{jgisshell.workingpath}/scripts/net/anwiba/script/groovy/terminal/TerminalLauncher.groovy"))
 }
-
