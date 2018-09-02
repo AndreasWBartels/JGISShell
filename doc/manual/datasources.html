@@ -462,6 +462,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#open-street-map-osm">Open street map (OSM)</a></li>
 <li><a href="#ckan">CKAN</a></li>
 <li><a href="#georss">GeoRSS</a></li>
+<li><a href="#event-logging">Event logging</a></li>
 </ul>
 </li>
 </ul>
@@ -618,6 +619,18 @@ sample
 </li>
 </ul>
 </div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The geometry validation is <a href="http://www.opengeospatial.org/standards/sfa">OGC Simple Feature Access - Part 1: Common Architecture, Version 1.2.1</a> conform. The definition of valid Polygons from ESRI is different see <a href="http://desktop.arcgis.com/en/arcmap/latest/manage-data/using-sql-with-gdbs/geometry-validation.htm">ESRI Geometry validation rules and operations for area shapes</a>.
+</td>
+</tr>
+</table>
+</div>
 <div class="ulist">
 <div class="title">Scripting</div>
 <ul>
@@ -654,7 +667,7 @@ sample
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-see <a href="http://geojson.org/geojson-spec.html">original specification</a> and internet standard <a href="https://tools.ietf.org/html/rfc7946">RFC7946</a>
+see <a href="http://geojson.org/geojson-spec.html">original specification</a> and Internet standard <a href="https://tools.ietf.org/html/rfc7946">RFC7946</a>
 </td>
 </tr>
 </table>
@@ -848,6 +861,18 @@ sample
 <p>Open file (system default application)</p>
 </li>
 </ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The geometry validation is <a href="http://www.opengeospatial.org/standards/sfa">OGC Simple Feature Access - Part 1: Common Architecture, Version 1.2.1</a> conform. The definition of valid Polygons from ESRI is different see <a href="http://desktop.arcgis.com/en/arcmap/latest/manage-data/using-sql-with-gdbs/geometry-validation.htm">ESRI Geometry validation rules and operations for area shapes</a>.
+</td>
+</tr>
+</table>
 </div>
 </div>
 <div class="sect2">
@@ -2299,6 +2324,18 @@ sample
 </li>
 </ul>
 </div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The geometry validation is <a href="http://www.opengeospatial.org/standards/sfa">OGC Simple Feature Access - Part 1: Common Architecture, Version 1.2.1</a> conform. The definition of valid Polygons from ESRI is different see <a href="http://desktop.arcgis.com/en/arcmap/latest/manage-data/using-sql-with-gdbs/geometry-validation.htm">ESRI Geometry validation rules and operations for area shapes</a>.
+</td>
+</tr>
+</table>
+</div>
 </div>
 <div class="sect2">
 <h3 id="ogc-web-map-service-wms"><a class="anchor" href="#ogc-web-map-service-wms"></a>OGC Web Map Service (WMS)</h3>
@@ -2661,6 +2698,18 @@ sample
 </li>
 </ul>
 </div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The geometry validation is <a href="http://www.opengeospatial.org/standards/sfa">OGC Simple Feature Access - Part 1: Common Architecture, Version 1.2.1</a> conform. The definition of valid Polygons from ESRI is different see <a href="http://desktop.arcgis.com/en/arcmap/latest/manage-data/using-sql-with-gdbs/geometry-validation.htm">ESRI Geometry validation rules and operations for area shapes</a>.
+</td>
+</tr>
+</table>
+</div>
 <div class="dlist">
 <div class="title">Raster layer</div>
 <dl>
@@ -2803,6 +2852,18 @@ sample
 <p>Validate layer geometries</p>
 </li>
 </ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The geometry validation is <a href="http://www.opengeospatial.org/standards/sfa">OGC Simple Feature Access - Part 1: Common Architecture, Version 1.2.1</a> conform. The definition of valid Polygons from ESRI is different see <a href="http://desktop.arcgis.com/en/arcmap/latest/manage-data/using-sql-with-gdbs/geometry-validation.htm">ESRI Geometry validation rules and operations for area shapes</a>.
+</td>
+</tr>
+</table>
 </div>
 <div class="dlist">
 <div class="title">Requirements</div>
@@ -3459,12 +3520,143 @@ sample
 </ul>
 </div>
 </div>
+<div class="sect2">
+<h3 id="event-logging"><a class="anchor" href="#event-logging"></a>Event logging</h3>
+<div class="imageblock">
+<div class="content">
+<img src="./images/dialog-layer-properties-history.png" alt="history">
+</div>
+<div class="title">Figure 3. Layer history</div>
+</div>
+<div class="hdlist">
+<div class="title">Configuration</div>
+<table>
+<tr>
+<td class="hdlist1">
+File
+</td>
+<td class="hdlist2">
+<p><a href="{homepage}/config/datasource-event-configuration.xml">config/datasource-event-configuration.xml</a></p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Schema
+</td>
+<td class="hdlist2">
+<p><a href="{homepage}/doc/schema/net/anwiba/schema/module/datasource/event/configuration.xsd">doc/schema/net/anwiba/schema/module/datasource/event/configuration.xsd</a><br>
+<a href="{homepage}/doc/schema/net/anwiba/schema/dynamic/database/connection.xsd">doc/schema/net/anwiba/schema/dynamic/database/connection.xsd</a></p>
+</td>
+</tr>
+</table>
+</div>
+<div class="listingblock">
+<div class="title">Table</div>
+<div class="content">
+<pre class="highlight"><code class="language-sql" data-lang="sql">create table datasource_event (
+         resource VARCHAR(512) NOT NULL,
+         source_resource VARCHAR(512),
+         join_condition VARCHAR(1024),
+         select_condition VARCHAR(2024),
+         number_of_rows INTEGER,
+         kind VARCHAR(128) NOT NULL,
+         executed date NOT NULL,
+         duration VARCHAR(32)
+       )</code></pre>
+</div>
+</div>
+<div class="hdlist">
+<div class="title">Events</div>
+<table>
+<tr>
+<td class="hdlist1">
+CREATED
+</td>
+<td class="hdlist2">
+<p>created a layer</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+RENAMED
+</td>
+<td class="hdlist2">
+<p>renamed a layer</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+DELETED
+</td>
+<td class="hdlist2">
+<p>deleted a layer</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+INDEXED
+</td>
+<td class="hdlist2">
+<p>created or rebuilded spatial index of a layer</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+ANALYZED
+</td>
+<td class="hdlist2">
+<p>gathered table statistic for a layer</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+ADDED
+</td>
+<td class="hdlist2">
+<p>added objects</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+CHANGED
+</td>
+<td class="hdlist2">
+<p>changed objects</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+REMOVED
+</td>
+<td class="hdlist2">
+<p>removed objects or marked objects as removed</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+RESTORED
+</td>
+<td class="hdlist2">
+<p>restored as removed marked objects</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+CLEANED
+</td>
+<td class="hdlist2">
+<p>removed as removed marked objects</p>
+</td>
+</tr>
+</table>
+</div>
+</div>
 </div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2018-07-25 22:43:04 CEST
+Last updated 2018-08-27 03:07:21 CEST
 </div>
 </div>
 </body>
