@@ -31,7 +31,7 @@ public class Example extends AbstractScript {
   private final Iterable<IFacade> facades = new ArrayList<>();
 
   @Override
-  public void run() throws InterruptedException, InvocationTargetException {
+  public void run() throws CanceledException, InvocationTargetException {
     try {
       final IFeatureLayerBuilder featureLayerBuilder = this.facade.featureLayerBuilder();
       featureLayerBuilder.values(null, this.facade.geometry("POINT (10 10)")); //$NON-NLS-1$

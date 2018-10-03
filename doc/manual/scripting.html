@@ -827,6 +827,10 @@ isShiftDown (Boolean, Named)<br>
 <a href="{homepage}/doc/api/net/anwiba/spatial/geometry/IGeometryReciever.html">IGeometryReceiver</a><br>
 <a href="{homepage}/doc/api/net/anwiba/spatial/api/IFacade.html">IFacade</a><br></p>
 </dd>
+</dl>
+</div>
+<div class="dlist">
+<dl>
 <dt class="hdlist1">Thread</dt>
 <dd>
 <p><strong>initializer</strong> Scripting queue thread<br>
@@ -875,6 +879,10 @@ isShiftDown (Boolean, Named)<br>
 <a href="{homepage}/doc/api/net/anwiba/spatial/api/IFacade.html">IFacade</a><br>
 <a href="{homepage}/doc/api/net/anwiba/spatial/api/layer/mamager/ILayerManager.html">ILayerManager</a><br></p>
 </dd>
+</dl>
+</div>
+<div class="dlist">
+<dl>
 <dt class="hdlist1">Thread</dt>
 <dd>
 <p>Configurable</p>
@@ -932,6 +940,10 @@ isShiftDown (Boolean, Named)<br>
 <a href="{homepage}/doc/api/net/anwiba/spatial/api/IFacade.html">IFacade</a><br>
 <a href="{homepage}/doc/api/net/anwiba/spatial/api/layer/mamager/ILayerManager.html">ILayerManager</a><br></p>
 </dd>
+</dl>
+</div>
+<div class="dlist">
+<dl>
 <dt class="hdlist1">Thread</dt>
 <dd>
 <p>Configurable</p>
@@ -987,6 +999,10 @@ isShiftDown (Boolean, Named)<br>
 <a href="{homepage}/doc/api/net/anwiba/spatial/api/IFacade.html">IFacade</a><br>
 <a href="{homepage}/doc/api/net/anwiba/spatial/api/layer/mamager/ILayerManager.html">ILayerManager</a><br></p>
 </dd>
+</dl>
+</div>
+<div class="dlist">
+<dl>
 <dt class="hdlist1">Thread</dt>
 <dd>
 <p>Configurable</p>
@@ -1026,6 +1042,10 @@ isShiftDown (Boolean, Named)<br>
 <a href="{homepage}/doc/api/net/anwiba/spatial/api/IFacade.html">IFacade</a><br>
 <a href="{homepage}/doc/api/net/anwiba/spatial/api/layer/mamager/ILayerManager.html">ILayerManager</a><br></p>
 </dd>
+<dt class="hdlist1">Thread</dt>
+<dd>
+<p>Configurable</p>
+</dd>
 </dl>
 </div>
 </div>
@@ -1061,6 +1081,14 @@ isShiftDown (Boolean, Named)<br>
 <a href="{homepage}/doc/api/net/anwiba/commons/thread/cancel/ICanceler.html">ICanceler</a><br>
 <a href="{homepage}/doc/api/net/anwiba/spatial/api/IFacade.html">IFacade</a><br>
 <a href="{homepage}/doc/api/net/anwiba/spatial/api/layer/mamager/ILayerManager.html">ILayerManager</a><br></p>
+</dd>
+</dl>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Thread</dt>
+<dd>
+<p>Configurable</p>
 </dd>
 </dl>
 </div>
@@ -1105,7 +1133,110 @@ path<br>
 </dd>
 </dl>
 </div>
-<div style="page-break-after: always;"></div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Thread</dt>
+<dd>
+<p>Configurable</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect4">
+<h5 id="layer-manager-script-tree"><a class="anchor" href="#layer-manager-script-tree"></a>Layer-manager script tree</h5>
+<div class="paragraph">
+<p><strong>Configuration</strong></p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+File
+</td>
+<td class="hdlist2">
+<p><a href="{homepage}/config/script-module-configuration.xml">config/script-module-configuration.xml</a></p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Schema
+</td>
+<td class="hdlist2">
+<p><a href="{homepage}/doc/schema/net/anwiba/schema/module/scripting/configuration.xsd">doc/schema/net/anwiba/schema/module/scripting/configuration.xsd</a></p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+File
+</td>
+<td class="hdlist2">
+<p><a href="{homepage}/config/layer-manager-tree-module-configuration.xml">config/layer-manager-tree-module-configuration.xml</a></p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Schema
+</td>
+<td class="hdlist2">
+<p><a href="{homepage}/doc/schema/net/anwiba/schema/module/layer/manager/tree/configuration.xsd">doc/schema/net/anwiba/schema/module/layer/manager/tree/configuration.xsd</a></p>
+</td>
+</tr>
+</table>
+</div>
+<div class="listingblock">
+<div class="title">Configuration: set id to groovy classpath root</div>
+<div class="content">
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;configuration xmlns="http://www.anwiba.net/module/scripting"
+               xmlns:menu="http://www.anwiba.net/dynamic/menu"
+               xmlns:popup="http://www.anwiba.net/dynamic/popup"
+               xmlns:condition="http://www.anwiba.net/dynamic/condition"
+               xmlns:script="http://www.anwiba.net/dynamic/script"
+             &gt;
+  &lt;script:classSearchPath&gt;
+    &lt;script:groovyClassPath&gt;
+      &lt;script:roots&gt;
+        &lt;script:uri id="net.anwiba.script" &gt;$SYSTEM{jgisshell.workingpath}/scripts&lt;/script:uri&gt;
+      &lt;/script:roots&gt;
+      &lt;script:classPath&gt;
+
+  :
+
+&lt;/configuration&gt;</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Configuration: add groovy classpath root as folder 'Groovy Scripts'</div>
+<div class="content">
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;configuration xmlns="http://www.anwiba.net/module/layer/manager/tree"&gt;
+  &lt;scriptingProjects&gt;
+    &lt;project reference="net.anwiba.script"&gt;Groovy Scripts&lt;/project&gt;
+  &lt;/scriptingProjects&gt;
+  &lt;folder&gt;
+
+   :
+
+&lt;/configuration&gt;</code></pre>
+</div>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Groovy bindings</dt>
+<dd>
+<p><a href="{homepage}/doc/api/net/anwiba/spatial/api/IFacade.html">facade</a><br>
+path<br>
+<a href="{homepage}/doc/api/net/anwiba/spatial/api/data/IDataStoreReference.html">dataStoreReference</a><br>
+<a href="{homepage}/doc/api/net/anwiba/spatial/api/layer/ILayerReference.html">layerReference</a><br>
+<a href="{homepage}/doc/api/net/anwiba/spatial/api/layer/ILayer.html">layer</a><br>
+<a href="{homepage}/doc/api/net/anwiba/spatial/api/layer/mamager/ILayerManager.html">layerManager</a></p>
+</dd>
+<dt class="hdlist1">Thread</dt>
+<dd>
+<p>Event dispatch thread</p>
+</dd>
+</dl>
+</div>
 </div>
 </div>
 <div class="sect3">
@@ -1162,7 +1293,7 @@ path<br>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2018-08-01 22:20:20 CEST
+Last updated 2018-10-03 22:48:45 CEST
 </div>
 </div>
 </body>

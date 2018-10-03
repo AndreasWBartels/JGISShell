@@ -24,7 +24,7 @@ public class DoNothing extends AbstractScript {
   private final IFacade facade = null;
 
   @Override
-  public void run() throws InterruptedException, InvocationTargetException {
+  public void run() throws CanceledException, InvocationTargetException {
     // nothing to do
   }
 

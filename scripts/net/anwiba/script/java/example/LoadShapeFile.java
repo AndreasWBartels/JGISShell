@@ -25,7 +25,7 @@ public class LoadShapeFile extends AbstractScript {
   private final IFacade facade = null;
 
   @Override
-  public void run() throws InterruptedException, InvocationTargetException {
+  public void run() throws CanceledException, InvocationTargetException {
     try {
       this.facade.view().add(
           "natural aereas", //$NON-NLS-1$

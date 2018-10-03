@@ -182,15 +182,29 @@
     </xsd:sequence>
   </xsd:complexType>
 
-  <xsd:complexType name="RootsType">
+
+    <xsd:complexType name="RootsType">
     <xsd:annotation>
       <xsd:appinfo>
         <jaxb:class name="Roots"/>
       </xsd:appinfo>
     </xsd:annotation>
     <xsd:sequence>
-      <xsd:element name="uri" type="xsd:anyURI" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element name="uri" type="RootPathType" minOccurs="0" maxOccurs="unbounded"/>
     </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="RootPathType">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <jaxb:class name="RootPath"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+      <xsd:simpleContent>
+        <xsd:extension base="xsd:anyURI">
+          <xsd:attribute name="id" type="xsd:string" use="optional"/>
+        </xsd:extension>
+      </xsd:simpleContent>
   </xsd:complexType>
 
   <xsd:element name="applicable" type="ApplicableType">

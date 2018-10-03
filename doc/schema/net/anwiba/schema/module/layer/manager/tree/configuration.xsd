@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
- xmlns:jaxb="http://java.sun.com/xml/ns/jaxb" jaxb:version="2.0"
- targetNamespace="http://www.anwiba.net/module/layer/manager/tree"
- xmlns:tree="http://www.anwiba.net/module/layer/manager/tree" elementFormDefault="qualified">
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jaxb="http://java.sun.com/xml/ns/jaxb" jaxb:version="2.0" targetNamespace="http://www.anwiba.net/module/layer/manager/tree"
+  xmlns:tree="http://www.anwiba.net/module/layer/manager/tree" elementFormDefault="qualified">
 
   <xsd:annotation>
     <xsd:appinfo>
@@ -23,9 +21,34 @@
       </xsd:appinfo>
     </xsd:annotation>
     <xsd:sequence>
+      <xsd:element name="scriptingProjects" type="tree:ProjectsType" minOccurs="0" maxOccurs="1"/>
       <xsd:element name="folder" type="tree:FolderType" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element name="layer" type="tree:LayerType" minOccurs="0" maxOccurs="unbounded"/>
     </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="ProjectsType">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <jaxb:class name="Projects"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="project" type="tree:ProjectType" minOccurs="0" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="ProjectType">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <jaxb:class name="Project"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:simpleContent>
+      <xsd:extension base="xsd:string">
+        <xsd:attribute name="reference" type="xsd:string"/>
+      </xsd:extension>
+    </xsd:simpleContent>
   </xsd:complexType>
 
   <xsd:complexType name="FolderType">

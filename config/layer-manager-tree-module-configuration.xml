@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration xmlns="http://www.anwiba.net/module/layer/manager/tree">
 
+  <scriptingProjects>
+    <project reference="net.anwiba.script">Groovy Scripts</project>
+  </scriptingProjects>
+
   <folder>
     <name>Maps For Free</name>
     <layer>

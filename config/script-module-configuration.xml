@@ -3,7 +3,7 @@
   <script:classSearchPath>
     <script:groovyClassPath>
       <script:roots>
-        <script:uri>$SYSTEM{jgisshell.workingpath}/scripts</script:uri>
+        <script:uri id="net.anwiba.script" >$SYSTEM{jgisshell.workingpath}/scripts</script:uri>
       </script:roots>
     </script:groovyClassPath>
     <script:javaClassPath>
