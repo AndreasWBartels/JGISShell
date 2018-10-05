@@ -4,9 +4,10 @@ package net.anwiba.script.java.example;
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 
-import net.anwiba.commons.message.IMessageCollector;
 import net.anwiba.commons.injection.annotation.Injection;
 import net.anwiba.commons.injection.annotation.Nullable;
+import net.anwiba.commons.lang.exception.CanceledException;
+import net.anwiba.commons.message.IMessageCollector;
 import net.anwiba.commons.thread.cancel.ICanceler;
 import net.anwiba.spatial.api.IFacade;
 import net.anwiba.spatial.api.layer.feature.IFeatureLayer;

@@ -6,6 +6,17 @@
   <coordinateReferenceSystems>
 
     <!--
+
+      WKT source: generated from EPSG Postgresql Database scripts Version 9.0
+      URL: http://www.epsg.org/EPSGDataset/DownloadDataset.aspx
+      Terms of use; http://www.epsg.org/Termsofuse.aspx
+
+      Attention the published WKT Strings are not OGC Well-known text representation of coordinate reference systems
+      or OGC OpenGIS ® Implementation Specification: Coordinate Transformation Services conform
+
+    -->
+
+    <!--
       <coordinateReferenceSystem>
       <authority></authority>
       <wkt></wkt>

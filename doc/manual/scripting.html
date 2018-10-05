@@ -599,9 +599,11 @@ File
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 
-import net.anwiba.commons.message.IMessageCollector;
 import net.anwiba.commons.injection.annotation.Injection;
+import net.anwiba.commons.injection.annotation.Named;
 import net.anwiba.commons.injection.annotation.Nullable;
+import net.anwiba.commons.lang.exception.CanceledException;
+import net.anwiba.commons.message.IMessageCollector;
 import net.anwiba.commons.thread.cancel.ICanceler;
 import net.anwiba.spatial.api.IFacade;
 import net.anwiba.spatial.api.layer.feature.IFeatureLayer;
@@ -628,7 +630,7 @@ public class Example extends AbstractScript {
   private final String name = null;
 
   @Override
-  public void run() throws InterruptedException, InvocationTargetException {
+  public void run() throws CanceledException, InvocationTargetException {
     try {
       final IFeatureLayerBuilder featureLayerBuilder = this.facade.featureLayerBuilder();
 
@@ -667,7 +669,7 @@ public class Example extends AbstractScript {
 <div class="sect2">
 <h3 id="threading"><a class="anchor" href="#threading"></a>Threading</h3>
 <div class="paragraph">
-<p>See <a href="https://docs.oracle.com/javase/tutorial/uiswing/concurrency/dispatch.html">The Java Tutorials</a> or <a href="https://en.wikipedia.org/wiki/Event_dispatching_thread">Wikipedia</a></p>
+<p>See <a href="https://docs.oracle.com/javase/tutorial/uiswing/concurrency/dispatch.html">The Java Tutorials</a>, <a href="https://en.wikipedia.org/wiki/Event_dispatching_thread">Wikipedia</a> and <a href="https://www.oracle.com/technetwork/systems/ts-5098-1-159011.pdf">Building Rich Applications with Groovy&#8217;s SwingBuilder</a></p>
 </div>
 <div class="listingblock">
 <div class="title">Configuration: Set threading mode</div>
@@ -1293,7 +1295,7 @@ path<br>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2018-10-03 22:48:45 CEST
+Last updated 2018-10-05 02:23:15 CEST
 </div>
 </div>
 </body>

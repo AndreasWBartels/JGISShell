@@ -457,14 +457,15 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="#layer-properties">Layer properties</a>
 <ul class="sectlevel2">
-<li><a href="#layerproperties">Properties</a></li>
-<li><a href="#history">History</a></li>
+<li><a href="#properties">Properties</a></li>
 <li><a href="#projection">Projection</a></li>
 <li><a href="#scale-rang">Scale rang</a></li>
 <li><a href="#style">Style</a></li>
 <li><a href="#attributes">Attributes</a></li>
 <li><a href="#label">Label</a></li>
 <li><a href="#tool-tip">Tool tip</a></li>
+<li><a href="#history">History</a></li>
+<li><a href="#messages">Messages</a></li>
 </ul>
 </li>
 <li><a href="#objects-table">Objects table</a></li>
@@ -535,7 +536,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#event-logging">Event logging</a></li>
 </ul>
 </li>
-<li><a href="#scripting">Scripting</a>
+<li><a href="#scripting-2">Scripting</a>
 <ul class="sectlevel2">
 <li><a href="#configuration-4">Configuration</a></li>
 <li><a href="#groovy">Groovy</a></li>
@@ -2571,7 +2572,7 @@ needs one selected layer
 <h2 id="layer-properties"><a class="anchor" href="#layer-properties"></a>Layer properties</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="layerproperties"><a class="anchor" href="#layerproperties"></a>Properties</h3>
+<h3 id="properties"><a class="anchor" href="#properties"></a>Properties</h3>
 <div class="imageblock">
 <div class="content">
 <img src="./images/dialog-layer-properties-properties.png" alt="properties">
@@ -2580,21 +2581,18 @@ needs one selected layer
 </div>
 </div>
 <div class="sect2">
-<h3 id="history"><a class="anchor" href="#history"></a>History</h3>
-<div class="imageblock">
-<div class="content">
-<img src="./images/dialog-layer-properties-history.png" alt="history">
-</div>
-<div class="title">Figure 26. Layer history</div>
-</div>
-</div>
-<div class="sect2">
 <h3 id="projection"><a class="anchor" href="#projection"></a>Projection</h3>
 <div class="imageblock">
 <div class="content">
 <img src="./images/dialog-layer-properties-projection.png" alt="projection">
 </div>
-<div class="title">Figure 27. Layer projection</div>
+<div class="title">Figure 26. Layer projection</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/dialog-layer-properties-projections.png" alt="projections">
+</div>
+<div class="title">Figure 27. Supported projections</div>
 </div>
 </div>
 <div class="sect2">
@@ -2686,6 +2684,24 @@ needs one selected layer
 </div>
 <div class="title">Figure 38. Tool-tip setting</div>
 </div>
+</div>
+<div class="sect2">
+<h3 id="history"><a class="anchor" href="#history"></a>History</h3>
+<div class="imageblock">
+<div class="content">
+<img src="./images/dialog-layer-properties-history.png" alt="history">
+</div>
+<div class="title">Figure 39. Layer history</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="messages"><a class="anchor" href="#messages"></a>Messages</h3>
+<div class="imageblock">
+<div class="content">
+<img src="./images/dialog-layer-properties-messages.png" alt="messages">
+</div>
+<div class="title">Figure 40. Layer state messages</div>
+</div>
 <div style="page-break-after: always;"></div>
 </div>
 </div>
@@ -2697,7 +2713,7 @@ needs one selected layer
 <div class="content">
 <img src="./images/objects-table.png" alt="Object table dialog">
 </div>
-<div class="title">Figure 39. Object table dialog</div>
+<div class="title">Figure 41. Object table dialog</div>
 </div>
 <div class="paragraph">
 <p><strong>Show all rows</strong></p>
@@ -2761,7 +2777,7 @@ needs one selected layer
 <div class="content">
 <img src="./images/dialog-object-properties-attributes.png" alt="Object properties attributes">
 </div>
-<div class="title">Figure 40. Object properties dialog with attributes</div>
+<div class="title">Figure 42. Object properties dialog with attributes</div>
 </div>
 </div>
 <div class="sect2">
@@ -2770,13 +2786,13 @@ needs one selected layer
 <div class="content">
 <img src="./images/dialog-object-properties-geometry-elements.png" alt="Object properties geometry">
 </div>
-<div class="title">Figure 41. Object properties dialog with geometry tree representation</div>
+<div class="title">Figure 43. Object properties dialog with geometry tree representation</div>
 </div>
 <div class="imageblock">
 <div class="content">
 <img src="./images/dialog-object-properties-geometry-text.png" alt="Object properties geometry">
 </div>
-<div class="title">Figure 42. Object properties dialog with geometry text representation</div>
+<div class="title">Figure 44. Object properties dialog with geometry text representation</div>
 </div>
 <div class="sect3">
 <h4 id="features-7"><a class="anchor" href="#features-7"></a>Features</h4>
@@ -2905,7 +2921,7 @@ Works only with one selected linestring geometry
 <div class="content">
 <img src="./images/dialog-elevation-profile-stretched.png" alt="stretched profile">
 </div>
-<div class="title">Figure 43. Elevation profile dialog with stretched geometry</div>
+<div class="title">Figure 45. Elevation profile dialog with stretched geometry</div>
 </div>
 </div>
 <div class="sect2">
@@ -2914,7 +2930,7 @@ Works only with one selected linestring geometry
 <div class="content">
 <img src="./images/dialog-elevation-profile-projected.png" alt="projected profile">
 </div>
-<div class="title">Figure 44. Elevation profile dialog with projected geometry</div>
+<div class="title">Figure 46. Elevation profile dialog with projected geometry</div>
 </div>
 <div style="page-break-after: always;"></div>
 </div>
@@ -3233,7 +3249,7 @@ Java injections
 <div class="content">
 <img src="./images/layer-manager.png" alt="layer-manager">
 </div>
-<div class="title">Figure 45. Layer-manager dialog</div>
+<div class="title">Figure 47. Layer-manager dialog</div>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -3715,7 +3731,7 @@ Schema
 <div class="content">
 <img src="./images/dialog-layer-manager-scripting-popup.png" alt="script tree">
 </div>
-<div class="title">Figure 46. Script tree dialog</div>
+<div class="title">Figure 48. Script tree dialog</div>
 </div>
 <div class="paragraph">
 <p>see <a href="#layer-manager-script-tree">Scripting</a></p>
@@ -3734,7 +3750,7 @@ Schema
 <div class="content">
 <img src="./images/dialog-database-layer-manager.png" alt="database layer-manager">
 </div>
-<div class="title">Figure 47. Database layer-manager dialog</div>
+<div class="title">Figure 49. Database layer-manager dialog</div>
 </div>
 <div class="sect3">
 <h4 id="features-9"><a class="anchor" href="#features-9"></a>Features</h4>
@@ -3762,7 +3778,7 @@ Schema
 <div class="content">
 <img src="./images/sql-console.png" alt="sql console">
 </div>
-<div class="title">Figure 48. SQL console</div>
+<div class="title">Figure 50. SQL console</div>
 </div>
 <div class="sect2">
 <h3 id="features-10"><a class="anchor" href="#features-10"></a>Features</h3>
@@ -3896,7 +3912,7 @@ Schema
 <div class="content">
 <img src="./images/groovy-console.png" alt="Groovy console">
 </div>
-<div class="title">Figure 49. Groovy console</div>
+<div class="title">Figure 51. Groovy console</div>
 </div>
 <div class="paragraph">
 <p>See groovy console <a href="http://groovy-lang.org/groovyconsole.html">documentation page</a>.</p>
@@ -6776,13 +6792,13 @@ sample
 <div class="content">
 <img src="./images/dialog-layer-manager-ckan-search-action.png" alt="search">
 </div>
-<div class="title">Figure 50. Layer-manager with open popup menu on CKAN schema</div>
+<div class="title">Figure 52. Layer-manager with open popup menu on CKAN schema</div>
 </div>
 <div class="imageblock">
 <div class="content">
 <img src="./images/dialog-ckan-search.png" alt="search">
 </div>
-<div class="title">Figure 51. CKAN search dialog</div>
+<div class="title">Figure 53. CKAN search dialog</div>
 </div>
 <div class="sect4">
 <h5 id="consume-selected-resources"><a class="anchor" href="#consume-selected-resources"></a>Consume selected resources</h5>
@@ -6961,7 +6977,7 @@ sample
 <div class="content">
 <img src="./images/dialog-layer-properties-history.png" alt="history">
 </div>
-<div class="title">Figure 52. Layer history</div>
+<div class="title">Figure 54. Layer history</div>
 </div>
 <div class="hdlist">
 <div class="title">Configuration</div>
@@ -7090,7 +7106,7 @@ CLEANED
 </div>
 </div>
 <div class="sect1">
-<h2 id="scripting"><a class="anchor" href="#scripting"></a>Scripting</h2>
+<h2 id="scripting-2"><a class="anchor" href="#scripting-2"></a>Scripting</h2>
 <div class="sectionbody">
 <div class="admonitionblock note">
 <table>
@@ -7243,9 +7259,11 @@ File
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 
-import net.anwiba.commons.message.IMessageCollector;
 import net.anwiba.commons.injection.annotation.Injection;
+import net.anwiba.commons.injection.annotation.Named;
 import net.anwiba.commons.injection.annotation.Nullable;
+import net.anwiba.commons.lang.exception.CanceledException;
+import net.anwiba.commons.message.IMessageCollector;
 import net.anwiba.commons.thread.cancel.ICanceler;
 import net.anwiba.spatial.api.IFacade;
 import net.anwiba.spatial.api.layer.feature.IFeatureLayer;
@@ -7272,7 +7290,7 @@ public class Example extends AbstractScript {
   private final String name = null;
 
   @Override
-  public void run() throws InterruptedException, InvocationTargetException {
+  public void run() throws CanceledException, InvocationTargetException {
     try {
       final IFeatureLayerBuilder featureLayerBuilder = this.facade.featureLayerBuilder();
 
@@ -7311,7 +7329,7 @@ public class Example extends AbstractScript {
 <div class="sect2">
 <h3 id="threading"><a class="anchor" href="#threading"></a>Threading</h3>
 <div class="paragraph">
-<p>See <a href="https://docs.oracle.com/javase/tutorial/uiswing/concurrency/dispatch.html">The Java Tutorials</a> or <a href="https://en.wikipedia.org/wiki/Event_dispatching_thread">Wikipedia</a></p>
+<p>See <a href="https://docs.oracle.com/javase/tutorial/uiswing/concurrency/dispatch.html">The Java Tutorials</a>, <a href="https://en.wikipedia.org/wiki/Event_dispatching_thread">Wikipedia</a> and <a href="https://www.oracle.com/technetwork/systems/ts-5098-1-159011.pdf">Building Rich Applications with Groovy&#8217;s SwingBuilder</a></p>
 </div>
 <div class="listingblock">
 <div class="title">Configuration: Set threading mode</div>
@@ -7944,7 +7962,7 @@ path<br>
 <div class="content">
 <img src="./images/filesystem-manager-program-folder.png" alt="program folder">
 </div>
-<div class="title">Figure 53. JGISShell folder overview</div>
+<div class="title">Figure 55. JGISShell folder overview</div>
 </div>
 <div class="hdlist">
 <table>
@@ -8013,7 +8031,7 @@ scripts
 <div class="content">
 <img src="./images/dialog-about-system-properties.png" alt="system-properties">
 </div>
-<div class="title">Figure 54. JGISShell java system-properties overview</div>
+<div class="title">Figure 56. JGISShell java system-properties overview</div>
 </div>
 <div class="hdlist">
 <table>
