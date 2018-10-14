@@ -3,9 +3,20 @@
 {
 "id": <String> null,
 "url": <String> null,
+"status": <String> null,
+"maintainer": <String> null,
+"family": <String> null,
 "license_id": <String> null,
-"other": <String> null,
 "license_url": <String> null,
+"other": <String> null,
 "attribution_text": <String> null,
+"is_generic": <boolean> false,
+"domain_data": <boolean> false,
+"domain_content": <boolean> false,
+"od_conformance": <String> null,
+"is_okd_compliant": <boolean> false,
+"domain_software": <boolean> false,
+"osd_conformance": <String> null,
+"is_osi_compliant": <boolean> false,
 "is_free_to_use": <boolean> false
 }

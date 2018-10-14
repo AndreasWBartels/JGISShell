@@ -110,7 +110,6 @@ net.anwiba.spatial.geometry.ring
 net.anwiba.spatial.geometry.style
 net.anwiba.spatial.geometry.utilities
 net.anwiba.spatial.geometry.validation
-net.anwiba.spatial.raster.tile.matrix
 net.anwiba.spatial.scripting.desktop.api
 net.anwiba.spatial.scripting.java.api
 net.anwiba.spatial.style
