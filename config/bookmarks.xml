@@ -3,20 +3,32 @@
 <bookmarks>
  <bookmark type="FILE_SYSTEM">
   <fileSystem path="$SYSTEM{jgisshell.workingpath}data/"/>
- </bookmark>
- <bookmark type="SERVICE">
-  <service type="ckan" host="catalog.data.gov" port="-1" path="/api"/>
- </bookmark>
- <bookmark type="SERVICE">
-  <service type="ckan" host="data.gov.au" port="-1" path="/api"/>
+  <name><![CDATA[data]]></name>
+  <created><![CDATA[2018-10-18T01:14:55.594]]></created>
  </bookmark>
  <bookmark type="SERVICE">
   <service type="ckan" host="demo.ckan.org" port="-1" path="/api"/>
+  <name><![CDATA[Ckan Demo Catalog]]></name>
+  <created><![CDATA[2018-10-18T01:14:55.596]]></created>
  </bookmark>
  <bookmark type="SERVICE">
-  <service type="ckan" host="www.europeandataportal.eu" port="-1" path="/data/en/api" ssl="true" />
+  <service type="ckan" host="www.europeandataportal.eu" port="-1" path="/data/en/api" ssl="true"/>
+  <name><![CDATA[European Data Portal]]></name>
+  <created><![CDATA[2018-10-18T01:14:55.596]]></created>
  </bookmark>
  <bookmark type="SERVICE">
   <service type="ckan" host="www.govdata.de" port="-1" path="/ckan/api"/>
+  <name><![CDATA[GOVDATA - Das Datenportal für Deutschland]]></name>
+  <created><![CDATA[2018-10-18T01:14:55.597]]></created>
+ </bookmark>
+ <bookmark type="SERVICE">
+  <service type="ckan" host="catalog.data.gov" port="-1" path="/api"/>
+  <name><![CDATA[Open Data Catalog data.gov]]></name>
+  <created><![CDATA[2018-10-18T01:14:55.595]]></created>
+ </bookmark>
+ <bookmark type="SERVICE">
+  <service type="ckan" host="data.gov.au" port="-1" path="/api"/>
+  <name><![CDATA[Open Data Catalog gov.au]]></name>
+  <created><![CDATA[2018-10-18T01:14:55.595]]></created>
  </bookmark>
 </bookmarks>

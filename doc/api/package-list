@@ -13,7 +13,7 @@ net.anwiba.commons.lang.map
 net.anwiba.commons.lang.number
 net.anwiba.commons.lang.object
 net.anwiba.commons.lang.optional
-net.anwiba.commons.lang.primativ
+net.anwiba.commons.lang.primitive
 net.anwiba.commons.lang.queue
 net.anwiba.commons.lang.random
 net.anwiba.commons.lang.stream
@@ -113,3 +113,4 @@ net.anwiba.spatial.geometry.validation
 net.anwiba.spatial.scripting.desktop.api
 net.anwiba.spatial.scripting.java.api
 net.anwiba.spatial.style
+net.anwiba.spatial.tile.cache.matrix
