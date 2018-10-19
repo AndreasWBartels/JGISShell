@@ -1,7 +1,7 @@
 # JGISShell
 see [DOAG Geodata Days 2017 slides](https://github.com/AndreasWBartels/JGISShell/wiki/Presentations)
 ---
-Java GIS Viewer and Spatial Layer Datastore Manager
+## Java GIS Viewer and Spatial Layer Datastore Manager
 
 JGSShell is a Java based spatial data viewer and layer datastore manager. It consist of 4 parts, a viewer, a spatial-layer manager, a scripting API (groovy and Java) and a URL concept.
 
@@ -51,7 +51,7 @@ JGISShell was created by [Andreas W. Bartels](https://github.com/AndreasWBartels
 
 ## License
 
-The license is a reduced [BSD] (https://www.freebsd.org/copyright/freebsd-license.html) license. Which regulates the use of the binary code.
+The license is a reduced [BSD](https://www.freebsd.org/copyright/freebsd-license.html) license. Which regulates the use of the binary code.
 See [license.txt](https://github.com/AndreasWBartels/JGISShell/blob/master/license.txt) for more information.
 
 The source-code, insofar as it is published, is located in this project [libraries](https://github.com/AndreasWBartels/libraries)
