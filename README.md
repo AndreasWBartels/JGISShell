@@ -12,7 +12,7 @@ JGISShell was created 10 years ago as a private education and evaluation project
 ![Viewer](https://github.com/AndreasWBartels/JGISShell/wiki/images/WindAndRadioWaves-LUBW.png)  
 `map source: © 2016 Landesanstalt für Umwelt, Messungen und Naturschutz Baden-Württemberg and Landesamt für Geoinformation und Landentwicklung Baden-Württemberg`
 
-The first part is a viewer of spatial data. It supports the following formats:
+The viewer supports the following formats:
 
 ### Feature based geodata
 Shapefiles, GeoJSON, PostGIS, SpatiaLite, GeoPackage, Oracle Locator/Spatial, SAP Hana, ESRI MDB based Geodatabases, ESRI Arc GIS Rest Feature Services, ESRI SDE and a own GML equal XML format.
@@ -24,12 +24,12 @@ published
 ESRI ASCII Grid, Saga Grid and XYZ Grid files
 
 ## Layer Manager
-The second part is like a spatial data file system manager for exploring and managing geospatial data.
+The manager is like a spatial data file system manager for exploring and managing geospatial data.
 
 ![Viewer](https://github.com/AndreasWBartels/JGISShell/wiki/images/layer-manager.png)  
 
 ## Scripting
-The third part is a scripting API for java and groovy. The API can be used to extend the Viewer and the Manager or to process geospatial data.
+The scripting API can be used to extend the Viewer and the Manager or to process geospatial data.
 
 ```groovy
 import net.anwiba.scripting.groovy.JGISShellGroovyScript
@@ -44,7 +44,7 @@ map().
 ``` 
 
 ## Data access URL schema
-The fourth part is a URL based schema to access different kinds of datastores or spatial layers.
+The URL based schema is designed to access different kinds of datastores or spatial layers.
 
 ## Author
 JGISShell was created by [Andreas W. Bartels](https://github.com/AndreasWBartels).
