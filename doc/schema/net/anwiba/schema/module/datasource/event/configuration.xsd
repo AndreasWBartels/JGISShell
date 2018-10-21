@@ -29,7 +29,6 @@
     </xsd:annotation>
     <xsd:sequence>
       <xsd:element name="storage" type="this:StorageType" minOccurs="1" maxOccurs="1"/>
-      <xsd:element name="constraints" type="this:ConstraintsType" minOccurs="0" maxOccurs="1"/>
     </xsd:sequence>
   </xsd:complexType>
 
@@ -52,55 +51,6 @@
     </xsd:annotation>
     <xsd:sequence>
       <xsd:element name="connection" type="database:DatabaseConnectionDescription" minOccurs="1" maxOccurs="1"/>
-    </xsd:sequence>
-  </xsd:complexType>
-
-  <xsd:complexType name="ConstraintsType">
-    <xsd:annotation>
-      <xsd:appinfo>
-        <jaxb:class name="Constraints"/>
-      </xsd:appinfo>
-    </xsd:annotation>
-    <xsd:sequence>
-      <xsd:element name="licenses" type="this:LicensesType" minOccurs="1" maxOccurs="1"/>
-    </xsd:sequence>
-  </xsd:complexType>
-
-  <xsd:complexType name="LicensesType">
-    <xsd:annotation>
-      <xsd:appinfo>
-        <jaxb:class name="Licenses"/>
-      </xsd:appinfo>
-    </xsd:annotation>
-    <xsd:sequence>
-      <xsd:element name="license" type="this:LicenseType" minOccurs="0" maxOccurs="unbounded"/>
-    </xsd:sequence>
-  </xsd:complexType>
-
-  <xsd:complexType name="AliasesType">
-    <xsd:annotation>
-      <xsd:appinfo>
-        <jaxb:class name="Aliases"/>
-      </xsd:appinfo>
-    </xsd:annotation>
-    <xsd:sequence>
-      <xsd:element name="alias" type="xsd:string" minOccurs="0" maxOccurs="unbounded"/>
-    </xsd:sequence>
-  </xsd:complexType>
-
-  <xsd:complexType name="LicenseType">
-    <xsd:annotation>
-      <xsd:appinfo>
-        <jaxb:class name="License"/>
-      </xsd:appinfo>
-    </xsd:annotation>
-    <xsd:sequence>
-      <xsd:element name="identifier" type="xsd:string" minOccurs="1" maxOccurs="1"/>
-      <xsd:element name="name" type="xsd:string" minOccurs="1" maxOccurs="1"/>
-      <xsd:element name="acronym" type="xsd:string" minOccurs="0" maxOccurs="1"/>
-      <xsd:element name="version" type="xsd:string" minOccurs="0" maxOccurs="1"/>
-      <xsd:element name="reference" type="xsd:anyURI" minOccurs="1" maxOccurs="1"/>
-      <xsd:element name="aliases" type="this:AliasesType" minOccurs="0" maxOccurs="1"/>
     </xsd:sequence>
   </xsd:complexType>
 
