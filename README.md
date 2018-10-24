@@ -61,4 +61,4 @@ The source-code, insofar as it is published, is located in this project [librari
 see [WIKI - JGISShell-Installation](https://github.com/AndreasWBartels/JGISShell/wiki/JGISShell-Installation)
 
 For more see [WIKI](https://github.com/AndreasWBartels/JGISShell/wiki)
-
+ 
