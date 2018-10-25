@@ -49,7 +49,7 @@ The URL based schema is designed to access different kinds of datastores or spat
 ## Open Data search
 
 ![CKAN](https://github.com/AndreasWBartels/JGISShell/wiki/images/dialog-ckan-search.png)
-`ckan search dialog using [european data portal](https://www.europeandataportal.eu/)`
+`ckan search dialog using european data portal https://www.europeandataportal.eu/`
 
 ## Author
 JGISShell was created by [Andreas W. Bartels](https://github.com/AndreasWBartels).
