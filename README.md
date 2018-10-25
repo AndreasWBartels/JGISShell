@@ -46,18 +46,26 @@ map().
 ## Data access URL schema
 The URL based schema is designed to access different kinds of datastores or spatial layers.
 
+## Open Data search
+
+![CKAN](https://github.com/AndreasWBartels/JGISShell/wiki/images/dialog-ckan-search.png)
+`ckan search dialog using [european data portal](https://www.europeandataportal.eu/)`
+
 ## Author
 JGISShell was created by [Andreas W. Bartels](https://github.com/AndreasWBartels).
 
 ## License
 
-The license is a reduced [BSD](https://www.freebsd.org/copyright/freebsd-license.html) license. Which regulates the use of the binary code.
+JGISShell (JGISShell.jar) has a reduced [BSD](https://www.freebsd.org/copyright/freebsd-license.html) license. Which regulates the use of the binary code.
 See [license.txt](https://github.com/AndreasWBartels/JGISShell/blob/master/license.txt) for more information.
 
-The source-code, insofar as it is published, is located in this project [libraries](https://github.com/AndreasWBartels/libraries)
+The source-code, insofar as it is published, is located in this project [libraries](https://github.com/AndreasWBartels/libraries) and has the LGPL V2.1 license.
+
+The source code published in this project, in the scripts folder, has the GPL V3 license.
+
 
 ## Installation
 
 see [WIKI - JGISShell-Installation](https://github.com/AndreasWBartels/JGISShell/wiki/JGISShell-Installation)
 
-For more see [WIKI](https://github.com/AndreasWBartels/JGISShell/wiki)
+For more download this project and open doc/manual/index.html.
