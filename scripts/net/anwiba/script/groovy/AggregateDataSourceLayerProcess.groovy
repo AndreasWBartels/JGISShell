@@ -1,3 +1,24 @@
+/*
+ * #%L
+ * jgisshell scripting
+ * %%
+ * Copyright (C) 2007 - 2018 Andreas W. Bartels
+ * %%
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as
+ * published by the Free Software Foundation, either version 3 of the
+ * License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Lesser Public License for more details.
+ *
+ * You should have received a copy of the GNU General Lesser Public
+ * License along with this program.  If not, see
+ * <http://www.gnu.org/licenses/gpl-3.0.html>.
+ * #L%
+ */
 package net.anwiba.script.groovy
 
 import java.awt.Color;
@@ -8,9 +29,7 @@ import net.anwiba.spatial.scripting.groovy.api.JGISShellGroovyScript
 facade.processLauncher()
     .description("create datastore overview layer")
     .closure({ def monitor, def canceler ->
-      def epsg3785 = coordinateReferenceSystem("PROJCS[\"WGS 84 / Pseudo-Mercator\",GEOGCS[\"Popular Visualisation CRS\",DATUM[\"Popular_Visualisation_Datum\",SPHEROID[\"Popular Visualisation Sphere\",6378137,0,AUTHORITY[\"EPSG\",\"7059\"]],TOWGS84[0,0,0,0,0,0,0],AUTHORITY[\"EPSG\",\"6055\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.01745329251994328,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4055\"]],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],PROJECTION[\"Mercator_1SP\"],PARAMETER[\"central_meridian\",0],PARAMETER[\"scale_factor\",1],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],AUTHORITY[\"EPSG\",\"3785\"],AXIS[\"X\",EAST],AXIS[\"Y\",NORTH]]")
-      def epsg31467 = coordinateReferenceSystem("PROJCS[\"DHDN / 3-degree Gauss-Kruger zone 3\", GEOGCS[\"DHDN\", DATUM[\"Deutsches Hauptdreiecksnetz\", SPHEROID[\"Bessel 1841\", 6377397.155, 299.1528128, AUTHORITY[\"EPSG\",\"7004\"]], TOWGS84[598.1, 73.7, 418.2, 0.202, 0.045, -2.455, 6.7], AUTHORITY[\"EPSG\",\"6314\"]], PRIMEM[\"Greenwich\", 0.0, AUTHORITY[\"EPSG\",\"8901\"]], UNIT[\"degree\", 0.017453292519943295], AXIS[\"Geodetic longitude\", EAST], AXIS[\"Geodetic latitude\", NORTH], AUTHORITY[\"EPSG\",\"4314\"]], PROJECTION[\"Transverse_Mercator\"], PARAMETER[\"central_meridian\", 9.0], PARAMETER[\"latitude_of_origin\", 0.0], PARAMETER[\"scale_factor\", 1.0], PARAMETER[\"false_easting\", 3500000.0], PARAMETER[\"false_northing\", 0.0], UNIT[\"m\", 1.0], AXIS[\"Easting\", EAST], AXIS[\"Northing\", NORTH], AUTHORITY[\"EPSG\",\"31467\"]]")
-
+      def targetSystem = coordinateReferenceSystem("EPSG",4326)
       def builder = featureLayerBuilder()
       builder.name("Envelopes")
       builder.identifierAttribute("IDENTIFIER")
@@ -19,9 +38,9 @@ facade.processLauncher()
       builder.attribute("ATTRIBUTES", stringType())
       builder.attribute("SRS", stringType())
       builder.attribute("GEOMETRY_TYPE", stringType())
-      builder.geometryAttribute("GEOMETRY",facade.polygon(),2,false,epsg3785)
+      builder.geometryAttribute("GEOMETRY",facade.polygon(),2,false,targetSystem)
 
-      def layerReferences = facade.iterable( dataStoreReference )
+      def layerReferences = facade.layerReferences( dataStoreReference )
 
       for (def layerRef : layerReferences) {
         def layerUrl =  facade.toString(layerRef)
@@ -35,7 +54,7 @@ facade.processLauncher()
           }
           def srs = layer.coordinateReferenceSystem()
           def srsString = srs ? wkt(srs) : null
-          def geometry = transform(geometry(srs, layer.envelope()),epsg3785)
+          def geometry = transform(geometry(srs, layer.envelope()),targetSystem)
           def geometryString = geometry ? wkt(geometry) : null
           builder.values(null, layerUrl, layerName, attributeNames, srsString, layer.geometryType().name(), geometry)
         } catch (Exception e) {
@@ -46,8 +65,8 @@ facade.processLauncher()
 
       def featureLayer = builder.build()
       def style = facade.featureStyleBuilder(facade.polygon())
-                        .defaultStyle(facade.areaStyle(Color.BLACK))
-                        .build()
+          .defaultStyle(facade.areaStyle(Color.BLACK))
+          .build()
       def id = view().add(featureLayer)
       view().style(id, style)
     })

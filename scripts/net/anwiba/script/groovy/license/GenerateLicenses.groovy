@@ -1,3 +1,24 @@
+/*
+ * #%L
+ * jgisshell scripting
+ * %%
+ * Copyright (C) 2007 - 2018 Andreas W. Bartels
+ * %%
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as
+ * published by the Free Software Foundation, either version 3 of the
+ * License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Lesser Public License for more details.
+ *
+ * You should have received a copy of the GNU General Lesser Public
+ * License along with this program.  If not, see
+ * <http://www.gnu.org/licenses/gpl-3.0.html>.
+ * #L%
+ */
 package net.anwiba.script.groovy.license
 
 import net.anwiba.spatial.scripting.groovy.api.JGISShellGroovyScript
@@ -174,6 +195,10 @@ def convertToXml = {identifier,name,version,acronym,reference,attributes,aliases
   licenseBuilder.toString()
 }
 
+//https://www.dcat-ap.de/def/licenses/1_0.html
+//https://github.com/fraunhoferfokus/ogd-metadata/blob/master/lizenzen/deutschland.json
+//https://www.europeandataportal.eu/en/content/show-license
+
 def attributeNames =
     [
       "default":
@@ -184,12 +209,14 @@ def attributeNames =
         "commercial":"Commercial",
         "unpublished":"unpublished",
         "zero":"Zero",
+        "cl":"Copyleft",
         "by":"Attribution",
         "npn":"NonPublicNetwork",
         "nc":"NonCommercial",
         "nd":"NoDerivatives",
         "pd":"Public Domain",
-        "sa":"ShareAlike"
+        "sa":"ShareAlike",
+        "sc":"State Changes"
       ],
       "de":
       [
@@ -200,11 +227,13 @@ def attributeNames =
         "unpublished":"nicht Veröffentlicht",
         "zero":"Zero",
         "by":"Namensnennung",
+        "cl":"Copyleft",
         "npn":"nicht öffentliche Netzwerke",
         "nc":"Nicht kommerziell",
         "nd":"Keine Bearbeitungen",
         "pd":"Public Domain",
-        "sa":"Weitergabe unter gleichen Bedingungen"
+        "sa":"Weitergabe unter gleichen Bedingungen",
+        "sc":"Änderungsvermerk"
       ]
     ]
 
@@ -213,9 +242,6 @@ def languages =
 
 def separators =
     ["dl-de":" - "]
-
-//    https://www.dcat-ap.de/def/licenses/1_0.html
-//    https://github.com/fraunhoferfokus/ogd-metadata/blob/master/lizenzen/deutschland.json
 
 //    geonutz-be-2013-10-01 Nutzungsbestimmungen für die Bereitstellung von Geodaten des Landes Berlin http://www.stadtentwicklung.berlin.de/geoinformation/download/nutzIII.pdf
 //    geonutzv-de-2013-03-19 Nutzungsbestimmungen für die Bereitstellung von Geodaten des Bundes http://www.geodatenzentrum.de/docpdf/geonutzv.pdf
@@ -237,6 +263,7 @@ def identifiers =
       "geonutzv-de-2013-03-19",
       "cc",
       "cca",
+      "odbl",
       "other-attributes",
       "other",
       "notspecified"
@@ -245,6 +272,7 @@ def identifiers =
 
 def references =
     [
+      "odbl":"https://opendatacommons.org/licenses/odbl/",
       "dl-de":"https://www.govdata.de/dl-de/\${attribute}-\${[\"1.0\":\"1-0\", \"2.0\":\"2-0\"].get(version)}",
       "official-work":"http://www.gesetze-im-internet.de/urhg/__5.html",
       "geonutz-be-2013-10-01":"http://www.stadtentwicklung.berlin.de/geoinformation/download/nutzIII.pdf",
@@ -255,6 +283,7 @@ def references =
 
 def names =
     [
+      "odbl":"Open Data Commons Open Database License",
       "dl-de":"Datenlizenz Deutschland \${name} Version \${version}",
       "official-work":"Amtliches Werk, lizenzfrei nach §5 Abs. 1 UrhG",
       "geonutz-be-2013-10-01":"Nutzungsbestimmungen für die Bereitstellung von Geodaten des Landes Berlin",
@@ -267,6 +296,7 @@ def names =
 
 def acronyms =
     [
+      "odbl":"ODbL",
       "dl-de":"DL-DE \${attribute.toUpperCase()} \${version}",
       "cc":"CC-\${attribute.toUpperCase()} \${version}",
       "cca":"CC-\${attribute.toUpperCase()} \${version}",
@@ -276,6 +306,7 @@ def acronyms =
 
 def attributeCombinationsByIdentifier =
     [
+      "odbl":[["by", "sa"]],
       "dl-de":[["zero"], ["by"], ["by", "nc"]],
       "official-work":[["by", "nd"]],
       "geonutz-be-2013-10-01":[["by"]],
@@ -316,6 +347,7 @@ def templates =
 
 def aliases =
     [
+      "odbl":["ODbL"],
       "dl-de":[
         "dl\${attribute.replaceAll(\"-\", \"\")}de/\${version.replaceAll(\"[.]\", \"_\")}",
         "http://dcat-ap.de/def/licenses/dl-\${attribute}-de/\${version}"
@@ -373,4 +405,3 @@ def versionsByIdentifier =
 createFile(resource("\$SYSTEM{jgisshell.workingpath}/data/ckan/licenses.xml")).withWriter('utf-8') {  writer ->
   execute(writer, convertToXml, attributeNames,identifiers,templates,attributeCombinationsByIdentifier,languages,separators,names,acronyms,references,versionsByIdentifier,aliases,aliasesByVerion )
 }
-

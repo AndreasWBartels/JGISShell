@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema jaxb:version="2.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jaxb="http://java.sun.com/xml/ns/jaxb"
+  xmlns:this="http://www.anwiba.net/sld/properties"
+  targetNamespace="http://www.anwiba.net/sld/properties"
+  elementFormDefault="qualified">
+
+  <xsd:annotation>
+    <xsd:appinfo>
+      <jaxb:schemaBindings>
+        <jaxb:package name="net.anwiba.spatial.sld.schema.properties"/>
+      </jaxb:schemaBindings>
+    </xsd:appinfo>
+  </xsd:annotation>
+
+  <xsd:element name="properties">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="name" type="xsd:string" minOccurs="0" maxOccurs="unbounded" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+
+</xsd:schema>

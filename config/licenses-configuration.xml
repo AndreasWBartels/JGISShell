@@ -939,6 +939,20 @@
         </aliases>
       </license>
       <license>
+        <identifier>odbl</identifier>
+        <name>Open Data Commons Open Database License</name>
+        <acronym>ODbL</acronym>
+        <reference>https://opendatacommons.org/licenses/odbl/</reference>
+        <attributes>
+          <attribute>by</attribute>
+          <attribute>sa</attribute>
+        </attributes>
+        <aliases>
+          <alias>ODBL</alias>
+          <alias>ODbL</alias>
+        </aliases>
+      </license>
+      <license>
         <identifier>other-open</identifier>
         <name>Other (Open)</name>
         <acronym>OTHER-OPEN</acronym>
@@ -1094,5 +1108,5 @@
           <alias>OTHER</alias>
         </aliases>
       </license>
-    </this:licenses>
+  </this:licenses>
 </this:configuration>
