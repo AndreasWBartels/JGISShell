@@ -264,6 +264,7 @@ def identifiers =
       "cc",
       "cca",
       "odbl",
+      "dbcl",
       "other-attributes",
       "other",
       "notspecified"
@@ -272,7 +273,8 @@ def identifiers =
 
 def references =
     [
-      "odbl":"https://opendatacommons.org/licenses/odbl/",
+      "odbl":"https://opendatacommons.org/licenses/odbl/1.0/",
+      "dbcl":"https://opendatacommons.org/licenses/dbcl/1.0/",
       "dl-de":"https://www.govdata.de/dl-de/\${attribute}-\${[\"1.0\":\"1-0\", \"2.0\":\"2-0\"].get(version)}",
       "official-work":"http://www.gesetze-im-internet.de/urhg/__5.html",
       "geonutz-be-2013-10-01":"http://www.stadtentwicklung.berlin.de/geoinformation/download/nutzIII.pdf",
@@ -283,7 +285,8 @@ def references =
 
 def names =
     [
-      "odbl":"Open Data Commons Open Database License",
+      "odbl":"Open Database License (ODbL) v1.0",
+      "dbcl":"Database Contents License (DbCL) v1.0",
       "dl-de":"Datenlizenz Deutschland \${name} Version \${version}",
       "official-work":"Amtliches Werk, lizenzfrei nach §5 Abs. 1 UrhG",
       "geonutz-be-2013-10-01":"Nutzungsbestimmungen für die Bereitstellung von Geodaten des Landes Berlin",
@@ -297,6 +300,7 @@ def names =
 def acronyms =
     [
       "odbl":"ODbL",
+      "dbcl":"DbCL",
       "dl-de":"DL-DE \${attribute.toUpperCase()} \${version}",
       "cc":"CC-\${attribute.toUpperCase()} \${version}",
       "cca":"CC-\${attribute.toUpperCase()} \${version}",
@@ -307,6 +311,7 @@ def acronyms =
 def attributeCombinationsByIdentifier =
     [
       "odbl":[["by", "sa"]],
+      "dbcl":[["by", "sa"]],      
       "dl-de":[["zero"], ["by"], ["by", "nc"]],
       "official-work":[["by", "nd"]],
       "geonutz-be-2013-10-01":[["by"]],
@@ -348,6 +353,7 @@ def templates =
 def aliases =
     [
       "odbl":["ODbL"],
+      "dbcl":["DbCL"],
       "dl-de":[
         "dl\${attribute.replaceAll(\"-\", \"\")}de/\${version.replaceAll(\"[.]\", \"_\")}",
         "http://dcat-ap.de/def/licenses/dl-\${attribute}-de/\${version}"
@@ -400,7 +406,14 @@ def versionsByIdentifier =
     [
       "dl-de":["1.0", "2.0"],
       "cc":["1.0", "2.0", "2.5", "3.0", "4.0"],
+      "dbcl":["1.0"],
+      "odbl":["1.0"],
       "cca":["1.0"]]
+
+def folder = resource("\$SYSTEM{jgisshell.workingpath}/data/ckan")
+if (!exists(folder)) {
+  createFolder(folder)
+}
 
 createFile(resource("\$SYSTEM{jgisshell.workingpath}/data/ckan/licenses.xml")).withWriter('utf-8') {  writer ->
   execute(writer, convertToXml, attributeNames,identifiers,templates,attributeCombinationsByIdentifier,languages,separators,names,acronyms,references,versionsByIdentifier,aliases,aliasesByVerion )
