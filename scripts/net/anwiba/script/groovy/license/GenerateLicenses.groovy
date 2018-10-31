@@ -25,7 +25,7 @@ import net.anwiba.spatial.scripting.groovy.api.JGISShellGroovyScript
 
 @groovy.transform.BaseScript JGISShellGroovyScript facadeScript
 
-def getResolved = {values, string ->
+def getResolved = { values, string ->
   if (!string) {
     return null
   }
@@ -39,7 +39,7 @@ def getResolved = {values, string ->
   return result
 }
 
-def getResolvedList = {values, list ->
+def getResolvedList = { values, list ->
   def result = []
   for (def value in list) {
     result.add(getResolved(values, value))
@@ -65,7 +65,7 @@ def getName = { attributeNames,language, separator,attributes ->
   return names.join("-")
 }
 
-def getVersionedAliases = {version,identifier,aliasesByVerion ->
+def getVersionedAliases = { version,identifier,aliasesByVerion ->
   def aliasesByIdentifier = aliasesByVerion.get(version)
   if (aliasesByIdentifier) {
     def aliases = aliasesByIdentifier.get(identifier)
@@ -76,7 +76,14 @@ def getVersionedAliases = {version,identifier,aliasesByVerion ->
   return []
 }
 
-def execute = {writer, converter, attributeNames,identifiers,templates,attributeCombinationsByIdentifier,languages,separators,names,acronyms,references,versionsByIdentifier,aliasesByIdentivier,aliasesByVerion ->
+def mergeAliases = {aliases, others ->
+  if (!aliases && !others) return null;
+  if (aliases) return aliases;
+  if (others) return others;
+  aliases + others
+}
+
+def execute = { writer, converter, attributeNames,identifiers,templates,attributeCombinationsByIdentifier,languages,separators,names,acronyms,references,versionsByIdentifier,aliasesByIdentivier,aliasesByVerion ->
   for (def identifier in identifiers) {
     def template =  templates.get(identifier)
     def aliases = aliasesByIdentivier.get(identifier)
@@ -101,7 +108,7 @@ def execute = {writer, converter, attributeNames,identifiers,templates,attribute
             def reference = getResolved(values, references.get(identifier))
             def acronym = getResolved(values, acronyms.get(identifier))
             def versionedAliases = getVersionedAliases(version,identifier,aliasesByVerion)
-            def resolvedAliases = getResolvedList(values, aliases + versionedAliases )
+            def resolvedAliases = getResolvedList(values, mergeAliases( aliases, versionedAliases) )
             writer.write(converter(resolvedIdentifier,name,version,acronym,reference,attributes,resolvedAliases))
           }
         } else {
@@ -129,7 +136,7 @@ def execute = {writer, converter, attributeNames,identifiers,templates,attribute
         if (versions) {
           for (def version in versions) {
             def versionedAliases = getVersionedAliases(version,identifier,aliasesByVerion)
-            writer.write(converter(identifier,name,version,acronym,reference,attributes,aliases + versionedAliases))
+            writer.write(converter(identifier,name,version,acronym,reference,attributes,mergeAliases( aliases, versionedAliases)))
           }
         } else {
           def version = null
@@ -141,7 +148,7 @@ def execute = {writer, converter, attributeNames,identifiers,templates,attribute
   }
 }
 
-def convertToXml = {identifier,name,version,acronym,reference,attributes,aliases ->
+def convertToXml = { identifier,name,version,acronym,reference,attributes,aliases ->
 
   StringBuilder versionBuilder = new StringBuilder()
   if (version) {
@@ -243,8 +250,6 @@ def languages =
 def separators =
     ["dl-de":" - "]
 
-//    geonutz-be-2013-10-01 Nutzungsbestimmungen für die Bereitstellung von Geodaten des Landes Berlin http://www.stadtentwicklung.berlin.de/geoinformation/download/nutzIII.pdf
-//    geonutzv-de-2013-03-19 Nutzungsbestimmungen für die Bereitstellung von Geodaten des Bundes http://www.geodatenzentrum.de/docpdf/geonutzv.pdf
 //    geolizenz-v1.2-1a GeoLizenz V1-2 Ia-kommerziell-Weiterverarbeitung-oeffentliche_Netzwerke
 //    geolizenz-v1.2-1b GeoLizenz V1-2 Ib-nicht-kommerziell-Weiterverarbeitung-oeffentliche_Netzwerke
 //    geolizenz-v1.2-2a GeoLizenz V1-2 IIa-kommerziell-keine Weiterverarbeitung-oeffentliche_Netzwerke
@@ -264,6 +269,8 @@ def identifiers =
       "cc",
       "cca",
       "odbl",
+      "odc-by",
+      "pddl",
       "dbcl",
       "other-attributes",
       "other",
@@ -273,45 +280,49 @@ def identifiers =
 
 def references =
     [
-      "odbl":"https://opendatacommons.org/licenses/odbl/1.0/",
-      "dbcl":"https://opendatacommons.org/licenses/dbcl/1.0/",
       "dl-de":"https://www.govdata.de/dl-de/\${attribute}-\${[\"1.0\":\"1-0\", \"2.0\":\"2-0\"].get(version)}",
       "official-work":"http://www.gesetze-im-internet.de/urhg/__5.html",
       "geonutz-be-2013-10-01":"http://www.stadtentwicklung.berlin.de/geoinformation/download/nutzIII.pdf",
       "geonutzv-de-2013-03-19":"http://www.geodatenzentrum.de/docpdf/geonutzv.pdf",
       "cc":"http://creativecommons.org/licenses/\${attribute}/\${version}/",
-      "cca":"http://creativecommons.org/licenses/\${attribute}/\${version}/"
+      "cca":"http://creativecommons.org/licenses/\${attribute}/\${version}/",
+      "odc-by":"https://opendatacommons.org/licenses/by/1.0/",
+      "pddl":"https://opendatacommons.org/licenses/pddl/1.0/",
+      "odbl":"https://opendatacommons.org/licenses/odbl/1.0/",
+      "dbcl":"https://opendatacommons.org/licenses/dbcl/1.0/"
     ]
 
 def names =
     [
-      "odbl":"Open Database License (ODbL) v1.0",
-      "dbcl":"Database Contents License (DbCL) v1.0",
       "dl-de":"Datenlizenz Deutschland \${name} Version \${version}",
       "official-work":"Amtliches Werk, lizenzfrei nach §5 Abs. 1 UrhG",
       "geonutz-be-2013-10-01":"Nutzungsbestimmungen für die Bereitstellung von Geodaten des Landes Berlin",
       "geonutzv-de-2013-03-19":"Nutzungsbestimmungen für die Bereitstellung von Geodaten des Bundes",
       "cc":"Creative Commons \${name} \${version} \${[\"1.0\":\"Generic\", \"2.0\":\"Generic\", \"2.5\":\"Generic\", \"3.0\":\"Unported\", \"4.0\":\"International\"].get(version)}",
       "cca":"Creative Commons \${name} \${version} Generic",
+      "odc-by":"Open Data Commons Attribution License (ODC-By) v1.0",
+      "pddl":"Open Data Commons Public Domain Dedication and Licence (PDDL)",
+      "odbl":"Open Data Commons Open Database License (ODbL) v1.0",
+      "dbcl":"Database Contents License (DbCL) v1.0",
       "other-attributes":"Other (\${name})",
       "notspecified":"License not specified"
     ]
 
 def acronyms =
     [
-      "odbl":"ODbL",
-      "dbcl":"DbCL",
       "dl-de":"DL-DE \${attribute.toUpperCase()} \${version}",
       "cc":"CC-\${attribute.toUpperCase()} \${version}",
       "cca":"CC-\${attribute.toUpperCase()} \${version}",
+      "odc-by":"ODC-By",
+      "pddl":"PDDL",
+      "odbl":"ODbL",
+      "dbcl":"DbCL",
       "other-attributes":"OTHER-\${attribute.toUpperCase()}",
       "notspecified":"-"
     ]
 
 def attributeCombinationsByIdentifier =
     [
-      "odbl":[["by", "sa"]],
-      "dbcl":[["by", "sa"]],      
       "dl-de":[["zero"], ["by"], ["by", "nc"]],
       "official-work":[["by", "nd"]],
       "geonutz-be-2013-10-01":[["by"]],
@@ -340,6 +351,10 @@ def attributeCombinationsByIdentifier =
         ["nd"],
         ["sa"]
       ],
+      "odc-by":[["by"]],
+      "pddl":[["zero"]],
+      "odbl":[["by", "sa"]],
+      "dbcl":[["by", "sa"]],
       "notspecified":[["closed"]]]
 
 def templates =
@@ -352,16 +367,11 @@ def templates =
 
 def aliases =
     [
-      "odbl":["ODbL"],
-      "dbcl":["DbCL"],
       "dl-de":[
         "dl\${attribute.replaceAll(\"-\", \"\")}de/\${version.replaceAll(\"[.]\", \"_\")}",
         "http://dcat-ap.de/def/licenses/dl-\${attribute}-de/\${version}"
       ],
-      "official-work":[
-        "officialWork",
-        "http://dcat-ap.de/def/licenses/official-work",
-      ],
+      "official-work":["officialWork", "http://dcat-ap.de/def/licenses/official-work",],
       "cc":[
         "cc\${attribute.replaceAll(\"-\", \"\")}/\${version.replaceAll(\"[.]\", \"_\")}",
         "http://dcat-ap.de/def/licenses/cc-\${attribute}/\${version}",
@@ -372,6 +382,9 @@ def aliases =
         "http://dcat-ap.de/def/licenses/dl-\${attribute}/\${version}",
         "http://dcat-ap.de/def/licenses/dl-\${attribute}-de/\${version}"
       ],
+      "odc-by":["ODC-By"],
+      "odbl":["ODbL"],
+      "dbcl":["DbCL"],
       "other-attributes":[
         "other\${attribute}",
         "http://dcat-ap.de/def/licenses/other-\${attribute}"
@@ -381,6 +394,11 @@ def aliases =
 def aliasesByVerion =
     [
       "1.0":[
+        "dl-de":[
+          "dl-\${attribute}-de",
+          "DL-\${attribute.toUpperCase()}-DE",
+          "http://dcat-ap.de/def/licenses/dl-\${attribute}-de"
+        ],
         "cc":[
           "cc-\${attribute}",
           "cc\${attribute.replaceAll(\"-\", \"\")}",
@@ -393,11 +411,6 @@ def aliasesByVerion =
           "cc\${attribute.replaceAll(\"-\", \"\")}",
           "http://dcat-ap.de/def/licenses/cc-\${attribute}",
           "http://dcat-ap.de/def/licenses/cc-\${attribute}-de"
-        ],
-        "dl-de":[
-          "dl-\${attribute}-de",
-          "DL-\${attribute.toUpperCase()}-DE",
-          "http://dcat-ap.de/def/licenses/dl-\${attribute}-de"
         ]
       ]
     ]
@@ -406,9 +419,11 @@ def versionsByIdentifier =
     [
       "dl-de":["1.0", "2.0"],
       "cc":["1.0", "2.0", "2.5", "3.0", "4.0"],
+      "cca":["1.0"],
+      "odc-by":["1.0"],
+      "pddl":["1.0"],
       "dbcl":["1.0"],
-      "odbl":["1.0"],
-      "cca":["1.0"]]
+      "odbl":["1.0"]]
 
 def folder = resource("\$SYSTEM{jgisshell.workingpath}/data/ckan")
 if (!exists(folder)) {
