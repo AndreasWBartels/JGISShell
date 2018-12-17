@@ -61,13 +61,16 @@ net.anwiba.spatial.api
 net.anwiba.spatial.api.condition
 net.anwiba.spatial.api.coordinatereferencesystem
 net.anwiba.spatial.api.data
+net.anwiba.spatial.api.database
 net.anwiba.spatial.api.entity
 net.anwiba.spatial.api.feature
 net.anwiba.spatial.api.geometry
 net.anwiba.spatial.api.gps
+net.anwiba.spatial.api.grid
 net.anwiba.spatial.api.image
 net.anwiba.spatial.api.layer
 net.anwiba.spatial.api.layer.feature
+net.anwiba.spatial.api.layer.grid
 net.anwiba.spatial.api.layer.manager
 net.anwiba.spatial.api.layer.raster
 net.anwiba.spatial.api.map
