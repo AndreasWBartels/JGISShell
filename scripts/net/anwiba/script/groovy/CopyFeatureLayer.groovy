@@ -21,11 +21,11 @@
  */
 package net.anwiba.script.groovy
 
-import net.anwiba.spatial.scripting.groovy.api.JGISShellGroovyScript
+import net.anwiba.jgisshell.scripting.groovy.api.JGISShellGroovyScript
 @groovy.transform.BaseScript JGISShellGroovyScript script
 
 def name = "Bundesländer";
-def sourceReference = layerReference("\$SYSTEM{jgisshell.workingpath}/data/bundeslaender.shp");
+def sourceReference = layerReference("\$SYSTEM{jgisshell.workingpath}data/bundeslaender.shp");
 def targetReference = layerReference("\$SYSTEM{java.io.tmpdir}" + File.separator + "bundeslaender.shp");
 
 if (!exists(sourceReference)) {

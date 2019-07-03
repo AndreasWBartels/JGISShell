@@ -1,0 +1,6 @@
+{
+      "lat": <double>,
+      "lon": <double>,
+      "primary": <String>,
+      "globe": <String>
+}

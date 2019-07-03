@@ -21,10 +21,10 @@
  */
 package net.anwiba.script.groovy
 
-import net.anwiba.spatial.scripting.groovy.api.JGISShellGroovyScript
+import net.anwiba.jgisshell.scripting.groovy.api.JGISShellGroovyScript
 @groovy.transform.BaseScript JGISShellGroovyScript facade
 
-def resource = facade.resource("\$SYSTEM{jgisshell.workingpath}/data/backup.map")
+def resource = facade.resource("\$SYSTEM{jgisshell.workingpath}data/backup.map")
 if (facade.canRead(resource)) {
   def map = facade.readMap(resource)
   facade.view().map(map)

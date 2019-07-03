@@ -21,13 +21,13 @@
  */
 package net.anwiba.script.groovy.sampledata
 
-import net.anwiba.spatial.scripting.groovy.api.JGISShellGroovyScript
+import net.anwiba.jgisshell.scripting.groovy.api.JGISShellGroovyScript
 @groovy.transform.BaseScript JGISShellGroovyScript facade
 
 def region = facade.variable("region", "Karlsruhe")
 def source = resource("http://download.bbbike.org/osm/bbbike/${region}/${region}.osm.shp.zip")
-def folder = resource("\$SYSTEM{jgisshell.workingpath}/data/osm/${region}")
-def target = resource("\$SYSTEM{jgisshell.workingpath}/data/osm/${region}/${region}.osm.shp.zip")
+def folder = resource("\$SYSTEM{jgisshell.workingpath}data/osm/${region}")
+def target = resource("\$SYSTEM{jgisshell.workingpath}data/osm/${region}/${region}.osm.shp.zip")
 
 try {
   if (!exists(folder)) {

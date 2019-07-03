@@ -24,7 +24,7 @@ package net.anwiba.script.groovy.terminal
 import javax.swing.JOptionPane
 
 import groovy.swing.SwingBuilder
-import net.anwiba.spatial.scripting.groovy.api.JGISShellGroovyScript
+import net.anwiba.jgisshell.scripting.groovy.api.JGISShellGroovyScript
 @groovy.transform.BaseScript JGISShellGroovyScript facade
 
 //def terminal = "/usr/bin/Konsole"

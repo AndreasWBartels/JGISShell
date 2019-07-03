@@ -1,0 +1,10 @@
+{
+    "pageid": <int>,
+    "ns": <int> 0,
+    "title": <String>,
+    "index": <int>,
+    "lat": <double>,
+    "lon": <double>,
+    "dist": <double>,
+    "primary": <boolean>
+}

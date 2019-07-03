@@ -141,6 +141,13 @@
         <maintainer>OpenStreetMap</maintainer>
       </license>
     </layer>
+    <layer>
+      <name>Marine Traffic</name>
+      <url><![CDATA[osm:https://tiles.marinetraffic.com/ais_helpers/shiptilesingle.aspx?output=png&sat=1&grouping=shiptype&tile_size=256&legends=1&zoom={zoomLevel}&X={column}&Y={row}]]></url>
+      <license identifier="odbl">
+        <maintainer>OpenStreetMap</maintainer>
+      </license>
+    </layer>
   </folder>
 
   <folder>
@@ -165,6 +172,35 @@
       <license identifier="odbl">
         <maintainer>OpenStreetMap</maintainer>
       </license>
+    </layer>
+  </folder>
+
+  <folder>
+    <name>Wiki</name>
+    <layer>
+      <name>Wikipedia (en)</name>
+      <url><![CDATA[mediawiki:https://en.wikipedia.org/w/api.php]]></url>
+      <license identifier="cc-zero-1.0" />
+    </layer>
+    <layer>
+      <name>Wikipedia (de)</name>
+      <url><![CDATA[mediawiki:https://de.wikipedia.org/w/api.php]]></url>
+      <license identifier="cc-zero-1.0" />
+    </layer>
+    <layer>
+      <name>Wikivoyage (en)</name>
+      <url><![CDATA[mediawiki:https://en.wikivoyage.org/w/api.php]]></url>
+      <license identifier="cc-zero-1.0" />
+    </layer>
+    <layer>
+      <name>Wikimedia</name>
+      <url><![CDATA[mediawiki:https://commons.wikimedia.org/w/api.php]]></url>
+      <license identifier="cc-zero-1.0" />
+    </layer>
+    <layer>
+      <name>Wikidata</name>
+      <url><![CDATA[mediawiki:https://www.wikidata.org/w/api.php]]></url>
+      <license identifier="cc-zero-1.0" />
     </layer>
   </folder>
 

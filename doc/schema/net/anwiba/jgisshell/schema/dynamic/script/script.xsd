@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jaxb="http://java.sun.com/xml/ns/jaxb" jaxb:version="2.0" targetNamespace="http://www.anwiba.net/dynamic/script" xmlns="http://www.anwiba.net/dynamic/script"
+  elementFormDefault="qualified">
+
+  <xsd:annotation>
+    <xsd:appinfo>
+      <!-- <jaxb:globalBindings choiceContentProperty="false"/> -->
+      <jaxb:schemaBindings>
+        <jaxb:package name="net.anwiba.jgisshell.schema.dynamic.script"/>
+      </jaxb:schemaBindings>
+    </xsd:appinfo>
+  </xsd:annotation>
+
+  <xsd:element name="classSearchPath" type="ClassSearchPathType">
+  </xsd:element>
+
+  <xsd:complexType name="ClassSearchPathType">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <jaxb:class name="ClassSearchPath"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="groovyClassPath" type="GroovyClassPathType" minOccurs="0" maxOccurs="1"/>
+      <!--
+        <xsd:element name="scalaClassPath" type="ScalaClassPathType" minOccurs="0" maxOccurs="1"/>
+      -->
+      <xsd:element name="javaClassPath" type="JavaClassPathType" minOccurs="0" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="GroovyClassPathType">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <jaxb:class name="GroovyClassPath"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="roots" type="RootsType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="classPath" type="ClasspathType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="resources" minOccurs="0" maxOccurs="1">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="resource" type="ResourceType" minOccurs="0" maxOccurs="unbounded"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <!--
+    <xsd:complexType name="ScalaClassPathType">
+    <xsd:annotation>
+    <xsd:appinfo>
+    <jaxb:class name="ScalaClassPath"/>
+    </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:sequence>
+    <xsd:element name="roots" type="RootsType" minOccurs="1" maxOccurs="1"/>
+    <xsd:element name="classPath" type="ClasspathType" minOccurs="0" maxOccurs="1"/>
+    </xsd:sequence>
+    </xsd:complexType>
+  -->
+
+  <xsd:complexType name="JavaClassPathType">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <jaxb:class name="JavaClassPath"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="classPath" type="ClasspathType" minOccurs="0" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="ClasspathType">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <jaxb:class name="Classpath"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="pathElement" type="xsd:string" minOccurs="1" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:element name="script" type="ScriptType">
+  </xsd:element>
+
+  <xsd:complexType name="ScriptType">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <jaxb:class name="Script"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="AbstractScriptType">
+        <xsd:attribute name="mode" type="ThreadType" default="PMT"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+
+  <xsd:complexType name="AbstractScriptType">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <jaxb:class name="AbstractScript"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="language" type="languageMember" minOccurs="1" maxOccurs="1"/>
+      <xsd:choice>
+        <!--
+          <xsd:element name="scalaScript" type="ScalaScriptType" minOccurs="1" maxOccurs="1"/>
+        -->
+        <xsd:element name="groovyScript" type="GroovyScriptType" minOccurs="1" maxOccurs="1"/>
+        <xsd:element name="javaClass" type="JavaClassType" minOccurs="1" maxOccurs="1"/>
+      </xsd:choice>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:simpleType name="ThreadType">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="EDT"/>
+      <xsd:enumeration value="PMT"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+
+  <xsd:simpleType name="languageMember">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="GROOVY"/>
+      <xsd:enumeration value="JAVA"/>
+      <!--
+        <xsd:enumeration value="SCALA"/>
+      -->
+    </xsd:restriction>
+  </xsd:simpleType>
+
+  <xsd:complexType name="ResourceType">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <jaxb:class name="Resource"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="name" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="uri" type="xsd:anyURI" minOccurs="1" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="GroovyScriptType">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <jaxb:class name="GroovyScript"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="uri" type="xsd:anyURI" minOccurs="1" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <!--
+    <xsd:complexType name="ScalaScriptType">
+    <xsd:annotation>
+    <xsd:appinfo>
+    <jaxb:class name="ScalaScript"/>
+    </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:sequence>
+    <xsd:element name="uri" type="xsd:anyURI" minOccurs="1" maxOccurs="1"/>
+    </xsd:sequence>
+    </xsd:complexType>
+  -->
+
+  <xsd:complexType name="JavaClassType">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <jaxb:class name="JavaClass"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="name" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+
+    <xsd:complexType name="RootsType">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <jaxb:class name="Roots"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="uri" type="RootPathType" minOccurs="0" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="RootPathType">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <jaxb:class name="RootPath"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+      <xsd:simpleContent>
+        <xsd:extension base="xsd:anyURI">
+          <xsd:attribute name="id" type="xsd:string" use="optional"/>
+        </xsd:extension>
+      </xsd:simpleContent>
+  </xsd:complexType>
+
+  <xsd:element name="applicable" type="ApplicableType">
+  </xsd:element>
+
+  <xsd:complexType name="ApplicableType">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <jaxb:class name="Applicable"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="AbstractScriptType">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+
+</xsd:schema>

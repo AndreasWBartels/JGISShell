@@ -21,7 +21,7 @@
  */
 package net.anwiba.script.groovy.sampledata
 
-import net.anwiba.spatial.scripting.groovy.api.JGISShellGroovyScript
+import net.anwiba.jgisshell.scripting.groovy.api.JGISShellGroovyScript
 @groovy.transform.BaseScript JGISShellGroovyScript facade
 
 show(resource("https://www.openstreetmap.org/copyright"))

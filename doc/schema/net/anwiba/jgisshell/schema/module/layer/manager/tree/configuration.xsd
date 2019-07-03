@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jaxb="http://java.sun.com/xml/ns/jaxb" jaxb:version="2.0" targetNamespace="http://www.anwiba.net/module/layer/manager/tree"
+  xmlns:tree="http://www.anwiba.net/module/layer/manager/tree" elementFormDefault="qualified">
+
+  <xsd:annotation>
+    <xsd:appinfo>
+      <!-- <jaxb:globalBindings choiceContentProperty="false"/> -->
+      <jaxb:schemaBindings>
+        <jaxb:package name="net.anwiba.jgisshell.schema.module.layer.manager.tree"/>
+      </jaxb:schemaBindings>
+    </xsd:appinfo>
+  </xsd:annotation>
+
+  <xsd:element name="configuration" type="tree:ConfigurationType">
+  </xsd:element>
+
+  <xsd:complexType name="ConfigurationType">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <jaxb:class name="Configuration"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="scriptingProjects" type="tree:ProjectsType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="folder" type="tree:FolderType" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element name="layer" type="tree:LayerType" minOccurs="0" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="ProjectsType">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <jaxb:class name="Projects"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="project" type="tree:ProjectType" minOccurs="0" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="ProjectType">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <jaxb:class name="Project"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:simpleContent>
+      <xsd:extension base="xsd:string">
+        <xsd:attribute name="reference" type="xsd:string"/>
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+
+  <xsd:complexType name="FolderType">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <jaxb:class name="Folder"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="name" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="layer" type="tree:LayerType" minOccurs="0" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="LicenseType">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <jaxb:class name="License"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="maintainer" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+    </xsd:sequence>
+    <xsd:attribute name="identifier" type="xsd:string" />
+  </xsd:complexType>
+
+  <xsd:complexType name="LayerType">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <jaxb:class name="Layer"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="name" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="url" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="license" type="tree:LicenseType" minOccurs="0" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+</xsd:schema>

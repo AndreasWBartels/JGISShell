@@ -1,0 +1,214 @@
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+  xmlns:jaxb="http://java.sun.com/xml/ns/jaxb" jaxb:version="2.0"
+  targetNamespace="http://www.anwiba.net/java/layer"
+  xmlns:this="http://www.anwiba.net/java/layer"
+  elementFormDefault="qualified"
+>
+
+  <xsd:annotation>
+    <xsd:appinfo>
+      <!-- <jaxb:globalBindings choiceContentProperty="false"/> -->
+      <jaxb:schemaBindings>
+        <jaxb:package name="net.anwiba.spatial.java.layer.schema" />
+      </jaxb:schemaBindings>
+    </xsd:appinfo>
+  </xsd:annotation> 
+
+  <xsd:element name="layer" type="this:LayerType" >
+  </xsd:element>
+
+  <xsd:complexType name="LayerType">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <jaxb:class name="Layer" />
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element ref="this:description" minOccurs="1" maxOccurs="1" />
+      <xsd:element name="envelope" type="this:EnvelopeType" minOccurs="1" maxOccurs="1" />
+      <xsd:element name="iteratorFactory" type="this:FeatureIteratorFactoryType" minOccurs="1" maxOccurs="1" />
+    </xsd:sequence>
+    <xsd:attribute name="version" type="xsd:string" default="1.0"/>
+<!--     <xsd:attribute name="modified" type="xsd:dateTime" use="optional"/> -->
+  </xsd:complexType>
+
+  <xsd:complexType name="EnvelopeType">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <jaxb:class name="Envelope" />
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="minimum" type="this:CoordinateType"  minOccurs="1" maxOccurs="1" />
+      <xsd:element name="maximum" type="this:CoordinateType"  minOccurs="1" maxOccurs="1" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="CoordinateType">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <jaxb:class name="Coordinate" />
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:attribute name="x" type="xsd:double" />
+    <xsd:attribute name="y" type="xsd:double" />
+  </xsd:complexType>
+
+  <xsd:element name="description" type="this:AbstractEntityDescriptionType" abstract="true"/>
+  
+  <xsd:complexType name="AbstractEntityDescriptionType">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <jaxb:class name="AbstractEntityDescription" />
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:complexType>
+
+  <xsd:element name="featureDescription" type="this:FeatureDescriptionType" substitutionGroup="this:description"/>
+
+  <xsd:complexType name="FeatureDescriptionType">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <jaxb:class name="FeatureDescription" />
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="this:AbstractEntityDescriptionType">
+	    <xsd:sequence>
+	      <xsd:element ref="this:attribute" minOccurs="1" maxOccurs="unbounded" />
+	    </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <xsd:element name="attribute" type="this:AbstractAttributeDescriptionType" abstract="true"/>
+
+  <xsd:complexType name="AbstractAttributeDescriptionType">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <jaxb:class name="AbstractAttributeDescription" />
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:attribute name="name" type="xsd:string" />
+  </xsd:complexType>
+
+  <xsd:element name="boolean" type="this:BooleanAttributeDescriptionType" substitutionGroup="this:attribute"/>
+
+  <xsd:complexType name="BooleanAttributeDescriptionType">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <jaxb:class name="BooleanAttributeDescription" />
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="this:AbstractAttributeDescriptionType">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+
+  <xsd:element name="date" type="this:DateAttributeDescriptionType" substitutionGroup="this:attribute"/>
+
+  <xsd:complexType name="DateAttributeDescriptionType">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <jaxb:class name="DateAttributeDescription" />
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="this:AbstractAttributeDescriptionType">
+	    <xsd:attribute name="zone" type="xsd:string" default="UTC" />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+
+  <xsd:element name="string" type="this:StringAttributeDescriptionType" substitutionGroup="this:attribute"/>
+
+  <xsd:complexType name="StringAttributeDescriptionType">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <jaxb:class name="StringAttributeDescription" />
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="this:AbstractAttributeDescriptionType">
+	    <xsd:attribute name="identifier" type="xsd:boolean" default="false" />
+	    <xsd:attribute name="length" type="xsd:int" default="-1" />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+
+  <xsd:element name="long" type="this:LongAttributeDescriptionType" substitutionGroup="this:attribute"/>
+
+  <xsd:complexType name="LongAttributeDescriptionType">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <jaxb:class name="LongAttributeDescription" />
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="this:AbstractAttributeDescriptionType">
+	    <xsd:attribute name="identifier" type="xsd:boolean" default="false" />
+	    <xsd:attribute name="length" type="xsd:int" default="-1" />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+
+  <xsd:element name="double" type="this:DoubleAttributeDescriptionType" substitutionGroup="this:attribute"/>
+
+  <xsd:complexType name="DoubleAttributeDescriptionType">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <jaxb:class name="DoubleAttributeDescription" />
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="this:AbstractAttributeDescriptionType">
+	    <xsd:attribute name="length" type="xsd:int" default="-1" />
+        <xsd:attribute name="decimalCount" type="xsd:int" default="-1" />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+
+  <xsd:element name="geometry" type="this:GeometryAttributeDescriptionType" substitutionGroup="this:attribute"/>
+
+  <xsd:complexType name="GeometryAttributeDescriptionType">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <jaxb:class name="GeometryAttributeDescription" />
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent> 
+      <xsd:extension base="this:AbstractAttributeDescriptionType">
+        <xsd:attribute name="type" type="this:GeometryType"  />
+        <xsd:attribute name="coordinateDimension" type="xsd:int" default="2" />
+        <xsd:attribute name="coordinateReferenceSystem" type="xsd:string" />
+        <xsd:attribute name="measured" type="xsd:boolean" default="false" />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+
+  <xsd:simpleType name="GeometryType">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="Point"/>
+      <xsd:enumeration value="LineString"/>
+      <xsd:enumeration value="LinearRing"/>
+      <xsd:enumeration value="Collection"/>
+      <xsd:enumeration value="Polygon"/>
+      <xsd:enumeration value="MultiPoint"/>
+      <xsd:enumeration value="MultiLineString"/>
+      <xsd:enumeration value="MuiltPolygon"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+
+  <xsd:complexType name="FeatureIteratorFactoryType">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <jaxb:class name="FeatureIteratorFactory" />
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="script" type="xsd:string" minOccurs="1" maxOccurs="1" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+</xsd:schema>

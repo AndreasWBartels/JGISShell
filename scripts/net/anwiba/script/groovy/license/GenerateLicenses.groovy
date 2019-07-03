@@ -21,7 +21,7 @@
  */
 package net.anwiba.script.groovy.license
 
-import net.anwiba.spatial.scripting.groovy.api.JGISShellGroovyScript
+import net.anwiba.jgisshell.scripting.groovy.api.JGISShellGroovyScript
 
 @groovy.transform.BaseScript JGISShellGroovyScript facadeScript
 
@@ -425,11 +425,11 @@ def versionsByIdentifier =
       "dbcl":["1.0"],
       "odbl":["1.0"]]
 
-def folder = resource("\$SYSTEM{jgisshell.workingpath}/data/ckan")
+def folder = resource("\$SYSTEM{jgisshell.workingpath}data/ckan")
 if (!exists(folder)) {
   createFolder(folder)
 }
 
-createFile(resource("\$SYSTEM{jgisshell.workingpath}/data/ckan/licenses.xml")).withWriter('utf-8') {  writer ->
+createFile(resource("\$SYSTEM{jgisshell.workingpath}data/ckan/licenses.xml")).withWriter('utf-8') {  writer ->
   execute(writer, convertToXml, attributeNames,identifiers,templates,attributeCombinationsByIdentifier,languages,separators,names,acronyms,references,versionsByIdentifier,aliases,aliasesByVerion )
 }

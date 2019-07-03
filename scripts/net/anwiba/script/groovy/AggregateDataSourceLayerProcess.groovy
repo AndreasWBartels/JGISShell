@@ -23,7 +23,7 @@ package net.anwiba.script.groovy
 
 import java.awt.Color;
 
-import net.anwiba.spatial.scripting.groovy.api.JGISShellGroovyScript
+import net.anwiba.jgisshell.scripting.groovy.api.JGISShellGroovyScript
 @groovy.transform.BaseScript JGISShellGroovyScript facade
 
 facade.processLauncher()

@@ -21,7 +21,7 @@
  */
 package net.anwiba.script.groovy.mode
 
-import net.anwiba.spatial.scripting.groovy.api.JGISShellGroovyScript
+import net.anwiba.jgisshell.scripting.groovy.api.JGISShellGroovyScript
 @groovy.transform.BaseScript JGISShellGroovyScript facade
 
 def point = facade.point(coordinateReferenceSystem,coordinate);

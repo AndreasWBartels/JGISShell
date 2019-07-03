@@ -21,7 +21,7 @@
  */
 package net.anwiba.script.groovy
 
-import net.anwiba.spatial.scripting.groovy.api.JGISShellGroovyScript
+import net.anwiba.jgisshell.scripting.groovy.api.JGISShellGroovyScript
 @groovy.transform.BaseScript JGISShellGroovyScript facadeScript
 def epsg31467 = facade.coordinateReferenceSystem( "EPSG", 31467)
 def hash = facade.geohash(facade.point(epsg31467,3448808.78, 5418135.71),9);

@@ -23,7 +23,7 @@ package net.anwiba.script.groovy.bwta
 
 import java.awt.Color
 
-import net.anwiba.spatial.scripting.groovy.api.JGISShellGroovyScript
+import net.anwiba.jgisshell.scripting.groovy.api.JGISShellGroovyScript
 @groovy.transform.BaseScript JGISShellGroovyScript facade
 
 def epsg4314 = facade.coordinateReferenceSystem("EPSG",4314);
@@ -48,8 +48,8 @@ def transformGeocentric = { geocentricTransformer, geometry  ->
 }
 
 
-def beta2017ToEpsg4258Transformer = transformer(resource("\$SYSTEM{jgisshell.workingpath}/data/bwta/ntv2/BETA2007.gsb"), forward())
-def epsg4326toEpsg4314Bwta2017Transformer = transformer(resource("\$SYSTEM{jgisshell.workingpath}/data/bwta/ntv2/BWTA2017.gsb"), backward())
+def beta2017ToEpsg4258Transformer = transformer(resource("\$SYSTEM{jgisshell.workingpath}data/bwta/ntv2/BETA2007.gsb"), forward())
+def epsg4326toEpsg4314Bwta2017Transformer = transformer(resource("\$SYSTEM{jgisshell.workingpath}data/bwta/ntv2/BWTA2017.gsb"), backward())
 
 
 def builder = featureLayerBuilder()
@@ -84,4 +84,4 @@ def id = view().add(layer)
 view().style(id, style)
 
 
-facade.copy(layer, facade.layerReference("\$SYSTEM{jgisshell.workingpath}/data/bwta/geometry.shp"));
+facade.copy(layer, facade.layerReference("\$SYSTEM{jgisshell.workingpath}data/bwta/geometry.shp"));

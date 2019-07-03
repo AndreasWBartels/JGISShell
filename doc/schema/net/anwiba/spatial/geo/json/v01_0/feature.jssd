@@ -3,6 +3,7 @@
   @JssdImmutable
   @JssdNoProperty
   "type": <String> "Feature",
+  @JssdIncludeNonNull
   "id": <Object> null,
   "geometry": <Geometry> null,
   "properties": <properties> null

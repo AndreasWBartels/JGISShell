@@ -21,7 +21,7 @@
  */
 package net.anwiba.script.groovy
 
-import net.anwiba.spatial.scripting.groovy.api.JGISShellGroovyScript
+import net.anwiba.jgisshell.scripting.groovy.api.JGISShellGroovyScript
 @groovy.transform.BaseScript JGISShellGroovyScript facadeScript
 def layerBuilder = facade.featureLayerBuilder();
 layerBuilder.values(null, facade.geometry("POINT (10 10)")); //$NON-NLS-1$

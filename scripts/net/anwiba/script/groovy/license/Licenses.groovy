@@ -21,8 +21,8 @@
  */
 package net.anwiba.script.groovy.license
 
+import net.anwiba.jgisshell.scripting.groovy.api.JGISShellGroovyScript
 import net.anwiba.spatial.ckan.query.ILicenseSearchResult
-import net.anwiba.spatial.scripting.groovy.api.JGISShellGroovyScript
 
 @groovy.transform.BaseScript JGISShellGroovyScript facadeScript
 
@@ -42,7 +42,7 @@ def urls = [
   "https://www.govdata.de/ckan/api"
 ]
 
-createFile(resource("\$SYSTEM{jgisshell.workingpath}/data/ckan/licenses.csv")).withWriter('utf-8') {  writer ->
+createFile(resource("\$SYSTEM{jgisshell.workingpath}data/ckan/licenses.csv")).withWriter('utf-8') {  writer ->
   def head = "\"url\", \"id\", \"title\", \"reference\", \"isGenric\", \"isDomainContent\", \"isDomainData\", \"isOkdCompliant\", \"isDomainSoftware\", \"isOsiCompliant\""
   writer.writeLine head
   for (url in urls) {

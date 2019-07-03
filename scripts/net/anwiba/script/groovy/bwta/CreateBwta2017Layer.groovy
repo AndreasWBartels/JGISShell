@@ -21,7 +21,7 @@
  */
 package net.anwiba.script.groovy.bwta
 
-import net.anwiba.spatial.scripting.groovy.api.JGISShellGroovyScript
+import net.anwiba.jgisshell.scripting.groovy.api.JGISShellGroovyScript
 @groovy.transform.BaseScript JGISShellGroovyScript facade
 
 def epsg4314 = facade.coordinateReferenceSystem("EPSG",4314);
@@ -31,7 +31,7 @@ def epsg25832 = facade.coordinateReferenceSystem("EPSG",25832);
 
 
 def epsg3147toEpsg4314Transformer = transformer(epsg31467 ,epsg4314);
-def epsg4314toEpsg4258Bwta2017Transformer = transformer(resource("\$SYSTEM{jgisshell.workingpath}/data/ntv2/bw/BWTA2017.gsb"), forward())
+def epsg4314toEpsg4258Bwta2017Transformer = transformer(resource("\$SYSTEM{jgisshell.workingpath}data/ntv2/bw/BWTA2017.gsb"), forward())
 def epsg4258toEpsg25832Transformer = transformer(epsg4258 ,epsg25832);
 
 def builder = featureLayerBuilder()
@@ -77,5 +77,5 @@ println "number of exceptions: " + exeption_counter
 println "duration: " + duration
 
 def layer = builder.build();
-def targetReference = facade.layerReference("\$SYSTEM{jgisshell.workingpath}/data/bwta/${layer.name()}.shp");
+def targetReference = facade.layerReference("\$SYSTEM{jgisshell.workingpath}data/bwta/${layer.name()}.shp");
 facade.copy(layer, targetReference);

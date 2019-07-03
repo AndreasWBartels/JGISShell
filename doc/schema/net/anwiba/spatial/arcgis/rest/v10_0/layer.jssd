@@ -6,5 +6,6 @@
   "subLayerIds" : <int[]> null,
   "minScale": <double> null,
   "maxScale": <double> null,
+  "type": <String> null,
   "geometryType": <String> null
 }

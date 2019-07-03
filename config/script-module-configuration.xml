@@ -3,14 +3,9 @@
   <script:classSearchPath>
     <script:groovyClassPath>
       <script:roots>
-        <script:uri id="net.anwiba.script" >$SYSTEM{jgisshell.workingpath}/scripts</script:uri>
+        <script:uri id="net.anwiba.script" >$SYSTEM{jgisshell.workingpath}scripts/</script:uri>
       </script:roots>
     </script:groovyClassPath>
-    <script:javaClassPath>
-      <script:classPath>
-        <script:pathElement>$SYSTEM{jgisshell.workingpath}/scripts/</script:pathElement>
-      </script:classPath>
-    </script:javaClassPath>
   </script:classSearchPath>
   <initializer>
     <script:language>GROOVY</script:language>
@@ -175,21 +170,12 @@
         </script:script>
       </menu:menuitem>
       <menu:menuitem>
-        <menu:name>Create Feature Layer (groovy)</menu:name>
+        <menu:name>Create Feature Layer</menu:name>
         <script:script>
           <script:language>GROOVY</script:language>
           <script:groovyScript>
             <script:uri>net/anwiba/script/groovy/CreateFeatureLayer.groovy</script:uri>
           </script:groovyScript>
-        </script:script>
-      </menu:menuitem>
-      <menu:menuitem>
-        <menu:name>Create Feature Layer (java)</menu:name>
-        <script:script>
-          <script:language>JAVA</script:language>
-          <script:javaClass>
-            <script:name>net.anwiba.script.java.example.Example</script:name>
-          </script:javaClass>
         </script:script>
       </menu:menuitem>
     </menu:menu>
@@ -198,7 +184,7 @@
     <popup:popup>
       <popup:target>LEGEND</popup:target>
       <popup:menuitem>
-        <popup:name>LEGEND Popup Script (groovy)</popup:name>
+        <popup:name>LEGEND Popup Script</popup:name>
         <script:script>
           <script:language>GROOVY</script:language>
           <script:groovyScript>
@@ -210,7 +196,7 @@
     <popup:popup>
       <popup:target>MAP</popup:target>
       <popup:menuitem>
-        <popup:name>Map Popup Script (groovy)</popup:name>
+        <popup:name>Map Popup Script</popup:name>
         <script:applicable>
           <script:language>GROOVY</script:language>
           <script:groovyScript>

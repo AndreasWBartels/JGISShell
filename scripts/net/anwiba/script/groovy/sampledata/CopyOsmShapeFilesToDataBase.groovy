@@ -21,16 +21,16 @@
  */
 package net.anwiba.script.groovy.sampledata
 
-import net.anwiba.spatial.scripting.groovy.api.JGISShellGroovyScript
+import net.anwiba.jgisshell.scripting.groovy.api.JGISShellGroovyScript
 @groovy.transform.BaseScript JGISShellGroovyScript facade
 
 def region = facade.variable("region", "Karlsruhe")
 def sourceSystem = facade.coordinateReferenceSystem("EPSG",4326);
 def targetSystem = facade.variable("targetSystem", facade.coordinateReferenceSystem("EPSG",25832));
 
-def emtySpatiaLiteDatabaseFileName = "\$SYSTEM{jgisshell.workingpath}/data/template/spatialite-empty-4.n.sqlite"
-def sourceResourceUrn = "\$SYSTEM{jgisshell.workingpath}/data/osm/${region}";
-def targetFileName = "\$SYSTEM{jgisshell.workingpath}/data/osm/${region}/${region}.osm.sqlite"
+def emtySpatiaLiteDatabaseFileName = "\$SYSTEM{jgisshell.workingpath}data/template/spatialite-empty-4.n.sqlite"
+def sourceResourceUrn = "\$SYSTEM{jgisshell.workingpath}data/osm/${region}";
+def targetFileName = "\$SYSTEM{jgisshell.workingpath}data/osm/${region}/${region}.osm.sqlite"
 def targetResourceUrn = "sqlite:spatialite://${targetFileName}";
 
 

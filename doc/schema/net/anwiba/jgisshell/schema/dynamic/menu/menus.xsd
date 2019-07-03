@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+  xmlns:jaxb="http://java.sun.com/xml/ns/jaxb" jaxb:version="2.0"
+  targetNamespace="http://www.anwiba.net/dynamic/menu" xmlns="http://www.anwiba.net/dynamic/menu"
+  xmlns:script="http://www.anwiba.net/dynamic/script"
+  elementFormDefault="qualified"
+>
+  <xsd:import namespace="http://www.anwiba.net/dynamic/script" schemaLocation="../script/script.xsd" />
+
+  <xsd:element name="menus" type="MenusType">
+  </xsd:element>
+
+
+  <xsd:annotation>
+    <xsd:appinfo>
+      <!-- <jaxb:globalBindings choiceContentProperty="false"/> -->
+      <jaxb:schemaBindings>
+        <jaxb:package name="net.anwiba.jgisshell.schema.dynamic.menu" />
+      </jaxb:schemaBindings>
+    </xsd:appinfo>
+  </xsd:annotation>
+
+
+  <xsd:complexType name="MenusType">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <jaxb:class name="Menus"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="menu" type="MenuType" minOccurs="0" maxOccurs="unbounded" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="MenuType">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <jaxb:class name="Menu" />
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="name" type="xsd:string" minOccurs="1" maxOccurs="1" />
+      <xsd:choice minOccurs="0" maxOccurs="unbounded" >
+        <xsd:element name="submenu" type="MenuType"  />
+        <xsd:element name="menuitem" type="MenuItemType"  />
+        <xsd:element name="separator" type="SeparatorType"  />
+      </xsd:choice>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="MenuItemType">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <jaxb:class name="MenuItem" />
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="name" type="xsd:string" minOccurs="1" maxOccurs="1" />
+      <xsd:element name="icon" type="xsd:string" minOccurs="0" maxOccurs="1" />
+      <xsd:element name="tooltip" type="xsd:string" minOccurs="0" maxOccurs="1" />
+      <xsd:element ref="script:script" minOccurs="1" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="SeparatorType">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <jaxb:class name="Separator" />
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:complexType>
+
+</xsd:schema>

@@ -23,7 +23,7 @@ package net.anwiba.script.groovy.bwta
 
 import java.awt.Color
 
-import net.anwiba.spatial.scripting.groovy.api.JGISShellGroovyScript
+import net.anwiba.jgisshell.scripting.groovy.api.JGISShellGroovyScript
 @groovy.transform.BaseScript JGISShellGroovyScript facade
 
 def epsg4314 = facade.coordinateReferenceSystem("EPSG",4314);
@@ -52,7 +52,7 @@ def createLayer = { name, description, envelope, geometry, transform ->
       .buffer(1000)
 
   def epsg3147toEpsg4314Transformer = transformer(epsg31467 ,epsg4314);
-  def epsg4314toEpsg4258Bwta2017Transformer = transformer(resource("\$SYSTEM{jgisshell.workingpath}/data/bwta/ntv2/BWTA2017.gsb"), forward())
+  def epsg4314toEpsg4258Bwta2017Transformer = transformer(resource("\$SYSTEM{jgisshell.workingpath}data/bwta/ntv2/BWTA2017.gsb"), forward())
   def epsg4258toEpsg25832Transformer = transformer(epsg4258 ,epsg25832);
 
   def builder = featureLayerBuilder()
@@ -139,7 +139,7 @@ def createMap = { layer, coordinateReferenceSystem, startValue, endValue, stepSi
     iterator.close()
   }
 
-  createFile(resource("\$SYSTEM{jgisshell.workingpath}/data/bwta/${layer.name()}-${startValue}-${endValue}-${stepSize}.cvs")).withWriter('utf-8') {  writer ->
+  createFile(resource("\$SYSTEM{jgisshell.workingpath}data/bwta/${layer.name()}-${startValue}-${endValue}-${stepSize}.cvs")).withWriter('utf-8') {  writer ->
     writer.writeLine "\"distance\", \"count\";"
     for (d in distances) {
       writer.writeLine "${d.getKey()}, ${d.getValue()};"
@@ -156,20 +156,20 @@ def createMap = { layer, coordinateReferenceSystem, startValue, endValue, stepSi
 
   def mapBuilder = facade.mapBuilder()
   mapBuilder.coordinateReferenceSystem(coordinateReferenceSystem)
-  mapBuilder.add("${layer.name()}", layerReference("\$SYSTEM{jgisshell.workingpath}/data/bwta/${layer.name()}.xyz"), gridstyle);
-  mapBuilder.add("Grenzen", layerReference("\$SYSTEM{jgisshell.workingpath}/data/bwta/border/AX_Gebiet_Bundesland.shp"), areaStyle(Color.BLACK))
+  mapBuilder.add("${layer.name()}", layerReference("\$SYSTEM{jgisshell.workingpath}data/bwta/${layer.name()}.xyz"), gridstyle);
+  mapBuilder.add("Grenzen", layerReference("\$SYSTEM{jgisshell.workingpath}data/bwta/border/AX_Gebiet_Bundesland.shp"), areaStyle(Color.BLACK))
   def map = mapBuilder.build()
   view().map(map)
 
   def image = imageBuilder().fit().height(750).width(600).set(map).build()
-  facade.write(image,resource("\$SYSTEM{jgisshell.workingpath}/data/bwta/${layer.name()}-${startValue}-${endValue}-${stepSize}.png"));
+  facade.write(image,resource("\$SYSTEM{jgisshell.workingpath}data/bwta/${layer.name()}-${startValue}-${endValue}-${stepSize}.png"));
 
-  facade.write(map, resource("\$SYSTEM{jgisshell.workingpath}/data/bwta/${layer.name()}-${startValue}-${endValue}-${stepSize}.map"))
+  facade.write(map, resource("\$SYSTEM{jgisshell.workingpath}data/bwta/${layer.name()}-${startValue}-${endValue}-${stepSize}.map"))
 }
 
 def createXYZFile = { layer, coordinateReferenceSystem ->
 
-  createFile(resource("\$SYSTEM{jgisshell.workingpath}/data/bwta/${layer.name()}.xyz")).withWriter('utf-8') {  writer ->
+  createFile(resource("\$SYSTEM{jgisshell.workingpath}data/bwta/${layer.name()}.xyz")).withWriter('utf-8') {  writer ->
     def iterator;
     try {
       iterator = entities(layer);
@@ -183,7 +183,7 @@ def createXYZFile = { layer, coordinateReferenceSystem ->
       iterator.close()
     }
   }
-  createFile(resource("\$SYSTEM{jgisshell.workingpath}/data/bwta/${layer.name()}.prj")).withWriter('utf-8') {  writer ->
+  createFile(resource("\$SYSTEM{jgisshell.workingpath}data/bwta/${layer.name()}.prj")).withWriter('utf-8') {  writer ->
     writer.writeLine wkt(coordinateReferenceSystem)
   }
 }
@@ -192,7 +192,7 @@ def name = "DHDN-2001"
 def description = "helmert transformation"
 
 def envelope = envelope(3387500, 5265000, 3612000, 5520000)
-def geometry = extractGeometry("\$SYSTEM{jgisshell.workingpath}/data/bwta/border/AX_Gebiet_Bundesland.shp")
+def geometry = extractGeometry("\$SYSTEM{jgisshell.workingpath}data/bwta/border/AX_Gebiet_Bundesland.shp")
 
 def toGeocentricTransformer = facade.toGeocentricTransformer(epsg4314);
 def geocentricTransformer = transformer(598.1,   73.7, 418.2,  0.202,  0.045, -2.455,   6.7)
@@ -205,7 +205,7 @@ def layer = createLayer(name, description, envelope, geometry, {coordinate ->
 }
 );
 
-facade.copy(layer, facade.layerReference("\$SYSTEM{jgisshell.workingpath}/data/bwta/distances-${layer.name()}.shp"));
+facade.copy(layer, facade.layerReference("\$SYSTEM{jgisshell.workingpath}data/bwta/distances-${layer.name()}.shp"));
 
 createXYZFile(layer, epsg31467)
 

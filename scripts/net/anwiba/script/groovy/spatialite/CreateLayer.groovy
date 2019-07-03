@@ -1,9 +1,9 @@
 package net.anwiba.script.groovy.spatialite
 // Copyright (c) 2015 by Andreas W. Bartels
-import net.anwiba.spatial.scripting.groovy.api.JGISShellGroovyScript
+import net.anwiba.jgisshell.scripting.groovy.api.JGISShellGroovyScript
 @groovy.transform.BaseScript JGISShellGroovyScript facade
 
-def targetFileName = "\$SYSTEM{jgisshell.workingpath}/data/spatialite/database.sqlite"
+def targetFileName = "\$SYSTEM{jgisshell.workingpath}data/spatialite/database.sqlite"
 def targetResourceUrn = "sqlite:spatialite://${targetFileName}";
 
 
