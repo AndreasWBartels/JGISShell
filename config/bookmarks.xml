@@ -6,29 +6,119 @@
   <name><![CDATA[data]]></name>
   <created><![CDATA[2018-10-18T01:14:55.594]]></created>
  </bookmark>
- <bookmark type="SERVICE">
+ <bookmark type="CATALOG">
+  <service type="ckan" host="data.gov.au" port="-1" path="/api"/>
+  <name><![CDATA[Australian open government data]]></name>
+  <created><![CDATA[2018-10-18T01:14:55.595]]></created>
+ </bookmark>
+ <bookmark type="CATALOG">
   <service type="ckan" host="demo.ckan.org" port="-1" path="/api"/>
   <name><![CDATA[Ckan Demo Catalog]]></name>
   <created><![CDATA[2018-10-18T01:14:55.596]]></created>
  </bookmark>
- <bookmark type="SERVICE">
-  <service type="ckan" host="www.europeandataportal.eu" port="-1" path="/data/en/api" ssl="true"/>
+ <bookmark type="CATALOG">
+  <service type="ckan" host="datahub.io" port="-1" path="/api" ssl="true"/>
+  <name><![CDATA[Datahub io]]></name>
+  <created><![CDATA[2019-07-08T21:43:39.425600]]></created>
+ </bookmark>
+ <bookmark type="CATALOG">
+  <service type="ckan" host="ecaidata.org" port="-1" path="/api"/>
+  <name><![CDATA[Electronic Cultural Atlas Initiative]]></name>
+  <created><![CDATA[2019-07-08T21:43:02.803490]]></created>
+ </bookmark>
+ <bookmark type="CATALOG">
+  <service type="ckan" host="edx.netl.doe.gov" port="-1" path="/api" ssl="true"/>
+  <name><![CDATA[Energy Data eXchange]]></name>
+  <created><![CDATA[2018-04-06T01:14:36.340]]></created>
+ </bookmark>
+ <bookmark type="CATALOG">
+  <service type="ckan" host="www.europeandataportal.eu" port="-1" path="/data/search/ckan" ssl="true"/>
   <name><![CDATA[European Data Portal]]></name>
   <created><![CDATA[2018-10-18T01:14:55.596]]></created>
  </bookmark>
- <bookmark type="SERVICE">
+ <bookmark type="CATALOG">
   <service type="ckan" host="www.govdata.de" port="-1" path="/ckan/api"/>
   <name><![CDATA[GOVDATA - Das Datenportal für Deutschland]]></name>
   <created><![CDATA[2018-10-18T01:14:55.597]]></created>
  </bookmark>
- <bookmark type="SERVICE">
+ <bookmark type="CATALOG">
+  <service type="ckan" host="iatiregistry.org" port="-1" path="/api" ssl="true"/>
+  <name><![CDATA[International Aid Transparency Initiative Portal]]></name>
+  <created><![CDATA[2019-07-08T22:47:29.341151]]></created>
+ </bookmark>
+ <bookmark type="CATALOG">
+  <service type="ckan" host="data.jrc.ec.europa.eu" port="-1" path="/api"/>
+  <name><![CDATA[Joint Research Centre Data Catalogue]]></name>
+  <created><![CDATA[2019-07-08T21:43:54.472735]]></created>
+ </bookmark>
+ <bookmark type="CATALOG">
+  <service type="ckan" host="offenedaten.de" port="-1" path="/api"/>
+  <name><![CDATA[Offene Daten Deutschland]]></name>
+  <created><![CDATA[2018-04-06T01:14:36.340]]></created>
+ </bookmark>
+ <bookmark type="CATALOG">
+  <service type="ckan" host="datahub.ckan.io" port="-1" path="/api" ssl="true"/>
+  <name><![CDATA[Open Knowledge International Datahub]]></name>
+  <created><![CDATA[2018-06-04T11:42:52.896]]></created>
+ </bookmark>
+ <bookmark type="CATALOG">
+  <service type="ckan" host="open.nrw" port="-1" path="/api" ssl="true"/>
+  <name><![CDATA[Open NRW]]></name>
+  <created><![CDATA[2018-04-06T01:14:36.340]]></created>
+ </bookmark>
+ <bookmark type="CATALOG">
+  <service type="ckan" host="www.daten.rlp.de" port="-1" path="/api"/>
+  <name><![CDATA[Open-Government-Data-Portal Rheinland-Pfalz]]></name>
+  <created><![CDATA[2018-04-06T01:14:36.340]]></created>
+ </bookmark>
+ <bookmark type="CATALOG">
+  <service type="ckan" host="data.humdata.org" port="-1" path="/api"/>
+  <name><![CDATA[The Humanitarian Data Exchange]]></name>
+  <created><![CDATA[2018-04-06T01:14:36.340]]></created>
+ </bookmark>
+ <bookmark type="CATALOG">
   <service type="ckan" host="catalog.data.gov" port="-1" path="/api"/>
-  <name><![CDATA[Open Data Catalog data.gov]]></name>
+  <name><![CDATA[US Open government data]]></name>
   <created><![CDATA[2018-10-18T01:14:55.595]]></created>
  </bookmark>
+ <bookmark type="CATALOG">
+  <service type="ckan" host="journaldata.zbw.eu" port="-1" path="/api"/>
+  <name><![CDATA[ZBW Journal Data Archive]]></name>
+  <description><![CDATA[ZBW – Leibniz-Informationszentrum Wirtschaft]]></description>
+  <created><![CDATA[2019-07-08T21:42:34.291949]]></created>
+ </bookmark>
  <bookmark type="SERVICE">
-  <service type="ckan" host="data.gov.au" port="-1" path="/api"/>
-  <name><![CDATA[Open Data Catalog gov.au]]></name>
-  <created><![CDATA[2018-10-18T01:14:55.595]]></created>
+  <service type="wms" host="neo.sci.gsfc.nasa.gov" port="-1" path="/wms/wms" ssl="true"/>
+  <name><![CDATA[NASA Earth Observations (NEO) WMS]]></name>
+  <description><![CDATA[Remote sensing imagery from NASA Earth Observations (NEO).]]></description>
+  <created><![CDATA[2019-07-07T12:22:44.085897]]></created>
+ </bookmark>
+ <bookmark type="SERVICE">
+  <service type="wms" host="apps.ecmwf.int" port="-1" path="/wms/">
+   <parameters>
+    <parameter name="token" value="public"/>
+   </parameters>
+  </service>
+  <name><![CDATA[ECMWF WMS Server]]></name>
+  <description><![CDATA[European Centre for Medium-Range Weather Forecasts]]></description>
+  <created><![CDATA[2018-07-10T13:52:39]]></created>
+ </bookmark>
+ <bookmark type="SERVICE">
+  <service type="wms" host="geoservice.dlr.de" port="-1" path="/eoc/atmosphere/wms" ssl="true"/>
+  <name><![CDATA[EOC Atmosphere Map Service]]></name>
+  <description><![CDATA[This Web Mapping Service provides access to geospatial atmospheric products within the Earth Observation Center (EOC).]]></description>
+  <created><![CDATA[2018-07-19T13:27:34.015]]></created>
+ </bookmark>
+ <bookmark type="SERVICE">
+  <service type="wms" host="geoservice.dlr.de" port="-1" path="/eoc/basemap/wms" ssl="true"/>
+  <name><![CDATA[EOC Basemap Map Service]]></name>
+  <description><![CDATA[This Web Mapping Service provides access to geospatial core map products within the Earth Observation Center (EOC).]]></description>
+  <created><![CDATA[2018-07-19T13:27:31.065]]></created>
+ </bookmark>
+ <bookmark type="SERVICE">
+  <service type="wms" host="geoservice.dlr.de" port="-1" path="/eoc/imagery/wms" ssl="true"/>
+  <name><![CDATA[EOC Imagery Map Service]]></name>
+  <description><![CDATA[This Web Mapping Service provides access to Orthoimagery products within the Earth Observation Center (EOC).]]></description>
+  <created><![CDATA[2018-07-19T13:27:26.080]]></created>
  </bookmark>
 </bookmarks>
