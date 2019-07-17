@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration xmlns="http://www.anwiba.net/module/spatialite">
   <extensions>
-    <spatialite>
 <!-- 
+    <spatialite>
       <library>/usr/lib/x86_64-linux-gnu/libspatialite.so.5.1.0</library>
       <library>/usr/lib/libspatialite.so</library>
- -->
       <library>/usr/lib/libspatialite.so.3.2.0</library>
     </spatialite>
+ -->
 <!-- 
     <extension>
       <name>spatialite</name>
