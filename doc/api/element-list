@@ -85,6 +85,7 @@ net.anwiba.jgisshell.api.layer.raster
 net.anwiba.jgisshell.api.map
 net.anwiba.jgisshell.api.process
 net.anwiba.jgisshell.api.program
+net.anwiba.jgisshell.api.project
 net.anwiba.jgisshell.api.raster
 net.anwiba.jgisshell.api.report
 net.anwiba.jgisshell.api.transformer

@@ -1,0 +1,1490 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<map xmlns:crs="http://www.anwiba.net/gis/crs" xmlns:condition="http://www.anwiba.net/condition" xmlns:tooltip="http://www.anwiba.net/tooltip" xmlns:label="http://www.anwiba.net/label" xmlns:font="http://www.anwiba.net/font">
+ <crs:coordinateReferenceSystem>
+  <crs:projectedCoordinateReference name="WGS 84 / Pseudo-Mercator" projection="Mercator 1SP">
+   <crs:geographicCoordinateReference name="World Geodetic System 1984">
+    <crs:datum name="World Geodetic System 1984">
+     <crs:spheroid name="WGS 84" semiMajorAxis="6378137.0" inverseFlattening="298.257223563">
+      <crs:Authority name="EPSG" code="7030"/>
+     </crs:spheroid>
+     <crs:toWgs84 dx="0.0" dy="0.0" dz="0.0" rx="0.0" ry="0.0" rz="0.0" ppm="0.0"/>
+     <crs:Authority name="EPSG" code="6326"/>
+    </crs:datum>
+    <crs:primeMeridian name="greenwich" value="0.0">
+     <crs:Authority name="EPSG" code="8901"/>
+    </crs:primeMeridian>
+    <crs:unit name="degree (supplier to define representation)" type="ANGLE" factor="0.017453292519943278"/>
+    <crs:axes>
+     <crs:axis name="LAT" value="NORTH"/>
+     <crs:axis name="LON" value="EAST"/>
+    </crs:axes>
+    <crs:Authority name="EPSG" code="4326"/>
+   </crs:geographicCoordinateReference>
+   <crs:parameters>
+    <crs:parameter name="false easting" value="0.0"/>
+    <crs:parameter name="false northing" value="0.0"/>
+    <crs:parameter name="latitude of natural origin" value="0.0"/>
+    <crs:parameter name="longitude of natural origin" value="0.0"/>
+   </crs:parameters>
+   <crs:unit name="metre" type="DISTANCE" factor="1.0"/>
+   <crs:axes>
+    <crs:axis name="X" value="EAST"/>
+    <crs:axis name="Y" value="NORTH"/>
+   </crs:axes>
+   <crs:Authority name="EPSG" code="3857"/>
+  </crs:projectedCoordinateReference>
+  <crs:Authority name="EPSG" code="3857"/>
+ </crs:coordinateReferenceSystem>
+ <worldBox>
+  <coordinate coordinateDimension="2" isMeasured="false">1055198.5789201949, 6672199.54397282</coordinate>
+  <coordinate coordinateDimension="2" isMeasured="false">1060165.7462245529, 6675129.589365545</coordinate>
+ </worldBox>
+ <layers>
+  <layer name="Streets" visible="true" uuid="3b76bbdc-0ab9-46bc-8e75-35e01fc8ae28">
+   <resource type="SERVICE" layerType="RASTER" format="OSM" codec="PNG">
+    <file url="osm:http://{identifier}.tiles.wmflabs.org/osm/{zoomLevel}/{column}/{row}.png?identifiers=a,b,c"/>
+   </resource>
+   <crs:coordinateReferenceSystem>
+    <crs:projectedCoordinateReference name="WGS 84 / Pseudo-Mercator" projection="Mercator 1SP">
+     <crs:geographicCoordinateReference name="WGS 84">
+      <crs:datum name="WGS 84">
+       <crs:spheroid name="WGS 84" semiMajorAxis="6378137.0" inverseFlattening="298.257223563">
+        <crs:Authority name="EPSG" code="7030"/>
+       </crs:spheroid>
+       <crs:toWgs84 dx="0.0" dy="0.0" dz="0.0" rx="0.0" ry="0.0" rz="0.0" ppm="0.0"/>
+      </crs:datum>
+      <crs:primeMeridian name="greenwich" value="0.0"/>
+      <crs:unit name="degree" type="ANGLE" factor="0.0174532925199433"/>
+      <crs:axes>
+       <crs:axis name="north" value="NORTH"/>
+       <crs:axis name="east" value="EAST"/>
+      </crs:axes>
+      <crs:Authority name="EPSG" code="4326"/>
+     </crs:geographicCoordinateReference>
+     <crs:parameters>
+      <crs:parameter name="false_easting" value="0.0"/>
+      <crs:parameter name="false_northing" value="0.0"/>
+      <crs:parameter name="central_meridian" value="0.0"/>
+      <crs:parameter name="scale_factor" value="1.0"/>
+     </crs:parameters>
+     <crs:unit name="meter" type="DISTANCE" factor="1.0"/>
+     <crs:axes>
+      <crs:axis name="east" value="EAST"/>
+      <crs:axis name="north" value="NORTH"/>
+     </crs:axes>
+     <crs:Authority name="EPSG" code="3857"/>
+    </crs:projectedCoordinateReference>
+    <crs:Authority name="EPSG" code="3857"/>
+   </crs:coordinateReferenceSystem>
+   <style/>
+   <properties/>
+  </layer>
+  <layer name="landuse" visible="true" uuid="d5083a2b-23b2-45ba-8db1-8404aecb1903">
+   <resource type="DATABASE" layerType="FEATURE" format="SPATIALITE">
+    <database type="filesystem" protocol="jdbc:spatialite" database="$SYSTEM{jgisshell.workingpath}data/osm/$SYSTEM{region}/$SYSTEM{region}.osm.sqlite"/>
+    <layerColumn table="landuse" column="geometry"/>
+   </resource>
+   <crs:coordinateReferenceSystem>
+    <crs:projectedCoordinateReference name="WGS 84 / Pseudo-Mercator" projection="Mercator 1SP">
+     <crs:geographicCoordinateReference name="WGS 84">
+      <crs:datum name="WGS_1984">
+       <crs:spheroid name="WGS 84" semiMajorAxis="6378137.0" inverseFlattening="298.257223563">
+        <crs:Authority name="EPSG" code="7030"/>
+       </crs:spheroid>
+       <crs:toWgs84 dx="0.0" dy="0.0" dz="0.0" rx="0.0" ry="0.0" rz="0.0" ppm="0.0"/>
+       <crs:Authority name="EPSG" code="6326"/>
+      </crs:datum>
+      <crs:primeMeridian name="greenwich" value="0.0">
+       <crs:Authority name="EPSG" code="8901"/>
+      </crs:primeMeridian>
+      <crs:unit name="degree" type="ANGLE" factor="0.0174532925199433"/>
+      <crs:Authority name="EPSG" code="4326"/>
+     </crs:geographicCoordinateReference>
+     <crs:parameters>
+      <crs:parameter name="false_easting" value="0.0"/>
+      <crs:parameter name="false_northing" value="0.0"/>
+      <crs:parameter name="central_meridian" value="0.0"/>
+      <crs:parameter name="scale_factor" value="1.0"/>
+     </crs:parameters>
+     <crs:unit name="metre" type="DISTANCE" factor="1.0"/>
+     <crs:axes>
+      <crs:axis name="X" value="EAST"/>
+      <crs:axis name="Y" value="NORTH"/>
+     </crs:axes>
+     <crs:Authority name="EPSG" code="3857"/>
+    </crs:projectedCoordinateReference>
+    <crs:Authority name="epsg" code="3857"/>
+   </crs:coordinateReferenceSystem>
+   <conditionalStyles>
+    <conditionalStyle>
+     <description><![CDATA[type EQ 'water_works']]></description>
+     <condition:condition>
+      <condition:equals type="STRING">
+       <condition:argument nature="reference" name="type"/>
+       <condition:argument nature="value"><![CDATA[water_works]]></condition:argument>
+      </condition:equals>
+     </condition:condition>
+     <style type="AREA">
+      <areastyle paintbackground="true">
+       <fillpattern type="SOLID">
+        <color red="0" green="0" blue="255" alpha="255"/>
+       </fillpattern>
+       <linestyle haspoints="false">
+        <signature dashpattern="SOLID_LINE" width="1.0">
+         <color red="0" green="0" blue="0" alpha="255"/>
+        </signature>
+       </linestyle>
+      </areastyle>
+     </style>
+    </conditionalStyle>
+    <conditionalStyle>
+     <description><![CDATA[type EQ 'basin']]></description>
+     <condition:condition>
+      <condition:equals type="STRING">
+       <condition:argument nature="reference" name="type"/>
+       <condition:argument nature="value"><![CDATA[basin]]></condition:argument>
+      </condition:equals>
+     </condition:condition>
+     <style type="AREA">
+      <areastyle paintbackground="true">
+       <fillpattern type="SOLID">
+        <color red="0" green="0" blue="255" alpha="255"/>
+       </fillpattern>
+       <linestyle haspoints="false">
+        <signature dashpattern="SOLID_LINE" width="1.0">
+         <color red="0" green="0" blue="0" alpha="255"/>
+        </signature>
+       </linestyle>
+      </areastyle>
+     </style>
+    </conditionalStyle>
+    <conditionalStyle>
+     <description><![CDATA[type EQ 'reservoir']]></description>
+     <condition:condition>
+      <condition:equals type="STRING">
+       <condition:argument nature="reference" name="type"/>
+       <condition:argument nature="value"><![CDATA[reservoir]]></condition:argument>
+      </condition:equals>
+     </condition:condition>
+     <style type="AREA">
+      <areastyle paintbackground="true">
+       <fillpattern type="SOLID">
+        <color red="0" green="0" blue="255" alpha="255"/>
+       </fillpattern>
+       <linestyle haspoints="false">
+        <signature dashpattern="SOLID_LINE" width="1.0">
+         <color red="0" green="0" blue="0" alpha="255"/>
+        </signature>
+       </linestyle>
+      </areastyle>
+     </style>
+    </conditionalStyle>
+    <conditionalStyle>
+     <description><![CDATA[type EQ 'commercial']]></description>
+     <condition:condition>
+      <condition:equals type="STRING">
+       <condition:argument nature="reference" name="type"/>
+       <condition:argument nature="value"><![CDATA[commercial]]></condition:argument>
+      </condition:equals>
+     </condition:condition>
+     <style type="AREA">
+      <areastyle paintbackground="true">
+       <fillpattern type="SOLID">
+        <color red="192" green="192" blue="192" alpha="255"/>
+       </fillpattern>
+       <linestyle haspoints="false">
+        <signature dashpattern="SOLID_LINE" width="1.0">
+         <color red="192" green="192" blue="192" alpha="255"/>
+        </signature>
+       </linestyle>
+      </areastyle>
+     </style>
+    </conditionalStyle>
+    <conditionalStyle>
+     <description><![CDATA[type EQ 'railway']]></description>
+     <condition:condition>
+      <condition:equals type="STRING">
+       <condition:argument nature="reference" name="type"/>
+       <condition:argument nature="value"><![CDATA[railway]]></condition:argument>
+      </condition:equals>
+     </condition:condition>
+     <style type="AREA">
+      <areastyle paintbackground="true">
+       <fillpattern type="SOLID">
+        <color red="192" green="192" blue="192" alpha="255"/>
+       </fillpattern>
+       <linestyle haspoints="false">
+        <signature dashpattern="SOLID_LINE" width="1.0">
+         <color red="192" green="192" blue="192" alpha="255"/>
+        </signature>
+       </linestyle>
+      </areastyle>
+     </style>
+    </conditionalStyle>
+    <conditionalStyle>
+     <description><![CDATA[type EQ 'plaza']]></description>
+     <condition:condition>
+      <condition:equals type="STRING">
+       <condition:argument nature="reference" name="type"/>
+       <condition:argument nature="value"><![CDATA[plaza]]></condition:argument>
+      </condition:equals>
+     </condition:condition>
+     <style type="AREA">
+      <areastyle paintbackground="true">
+       <fillpattern type="SOLID">
+        <color red="192" green="192" blue="192" alpha="255"/>
+       </fillpattern>
+       <linestyle haspoints="false">
+        <signature dashpattern="SOLID_LINE" width="1.0">
+         <color red="192" green="192" blue="192" alpha="255"/>
+        </signature>
+       </linestyle>
+      </areastyle>
+     </style>
+    </conditionalStyle>
+    <conditionalStyle>
+     <description><![CDATA[type EQ 'place']]></description>
+     <condition:condition>
+      <condition:equals type="STRING">
+       <condition:argument nature="reference" name="type"/>
+       <condition:argument nature="value"><![CDATA[place]]></condition:argument>
+      </condition:equals>
+     </condition:condition>
+     <style type="AREA">
+      <areastyle paintbackground="true">
+       <fillpattern type="SOLID">
+        <color red="192" green="192" blue="192" alpha="255"/>
+       </fillpattern>
+       <linestyle haspoints="false">
+        <signature dashpattern="SOLID_LINE" width="1.0">
+         <color red="192" green="192" blue="192" alpha="255"/>
+        </signature>
+       </linestyle>
+      </areastyle>
+     </style>
+    </conditionalStyle>
+    <conditionalStyle>
+     <description><![CDATA[type EQ 'highway']]></description>
+     <condition:condition>
+      <condition:equals type="STRING">
+       <condition:argument nature="reference" name="type"/>
+       <condition:argument nature="value"><![CDATA[highway]]></condition:argument>
+      </condition:equals>
+     </condition:condition>
+     <style type="AREA">
+      <areastyle paintbackground="true">
+       <fillpattern type="SOLID">
+        <color red="192" green="192" blue="192" alpha="255"/>
+       </fillpattern>
+       <linestyle haspoints="false">
+        <signature dashpattern="SOLID_LINE" width="1.0">
+         <color red="192" green="192" blue="192" alpha="255"/>
+        </signature>
+       </linestyle>
+      </areastyle>
+     </style>
+    </conditionalStyle>
+    <conditionalStyle>
+     <description><![CDATA[type EQ 'traffic_island']]></description>
+     <condition:condition>
+      <condition:equals type="STRING">
+       <condition:argument nature="reference" name="type"/>
+       <condition:argument nature="value"><![CDATA[traffic_island]]></condition:argument>
+      </condition:equals>
+     </condition:condition>
+     <style type="AREA">
+      <areastyle paintbackground="true">
+       <fillpattern type="SOLID">
+        <color red="192" green="192" blue="192" alpha="255"/>
+       </fillpattern>
+       <linestyle haspoints="false">
+        <signature dashpattern="SOLID_LINE" width="1.0">
+         <color red="192" green="192" blue="192" alpha="255"/>
+        </signature>
+       </linestyle>
+      </areastyle>
+     </style>
+    </conditionalStyle>
+    <conditionalStyle>
+     <description><![CDATA[type EQ 'garages']]></description>
+     <condition:condition>
+      <condition:equals type="STRING">
+       <condition:argument nature="reference" name="type"/>
+       <condition:argument nature="value"><![CDATA[garages]]></condition:argument>
+      </condition:equals>
+     </condition:condition>
+     <style type="AREA">
+      <areastyle paintbackground="true">
+       <fillpattern type="SOLID">
+        <color red="192" green="192" blue="192" alpha="255"/>
+       </fillpattern>
+       <linestyle haspoints="false">
+        <signature dashpattern="SOLID_LINE" width="1.0">
+         <color red="192" green="192" blue="192" alpha="255"/>
+        </signature>
+       </linestyle>
+      </areastyle>
+     </style>
+    </conditionalStyle>
+    <conditionalStyle>
+     <description><![CDATA[type EQ 'garagegr']]></description>
+     <condition:condition>
+      <condition:equals type="STRING">
+       <condition:argument nature="reference" name="type"/>
+       <condition:argument nature="value"><![CDATA[garagegr]]></condition:argument>
+      </condition:equals>
+     </condition:condition>
+     <style type="AREA">
+      <areastyle paintbackground="true">
+       <fillpattern type="SOLID">
+        <color red="192" green="192" blue="192" alpha="255"/>
+       </fillpattern>
+       <linestyle haspoints="false">
+        <signature dashpattern="SOLID_LINE" width="1.0">
+         <color red="192" green="192" blue="192" alpha="255"/>
+        </signature>
+       </linestyle>
+      </areastyle>
+     </style>
+    </conditionalStyle>
+    <conditionalStyle>
+     <description><![CDATA[type EQ 'flowerbed']]></description>
+     <condition:condition>
+      <condition:equals type="STRING">
+       <condition:argument nature="reference" name="type"/>
+       <condition:argument nature="value"><![CDATA[flowerbed]]></condition:argument>
+      </condition:equals>
+     </condition:condition>
+     <style type="AREA">
+      <areastyle paintbackground="true">
+       <fillpattern type="SOLID">
+        <color red="0" green="255" blue="0" alpha="255"/>
+       </fillpattern>
+       <linestyle haspoints="false">
+        <signature dashpattern="SOLID_LINE" width="1.0">
+         <color red="0" green="0" blue="0" alpha="255"/>
+        </signature>
+       </linestyle>
+      </areastyle>
+     </style>
+    </conditionalStyle>
+    <conditionalStyle>
+     <description><![CDATA[type EQ 'nursery']]></description>
+     <condition:condition>
+      <condition:equals type="STRING">
+       <condition:argument nature="reference" name="type"/>
+       <condition:argument nature="value"><![CDATA[nursery]]></condition:argument>
+      </condition:equals>
+     </condition:condition>
+     <style type="AREA">
+      <areastyle paintbackground="true">
+       <fillpattern type="SOLID">
+        <color red="0" green="255" blue="0" alpha="255"/>
+       </fillpattern>
+       <linestyle haspoints="false">
+        <signature dashpattern="SOLID_LINE" width="1.0">
+         <color red="0" green="0" blue="0" alpha="255"/>
+        </signature>
+       </linestyle>
+      </areastyle>
+     </style>
+    </conditionalStyle>
+    <conditionalStyle>
+     <description><![CDATA[type EQ 'plant_nursery']]></description>
+     <condition:condition>
+      <condition:equals type="STRING">
+       <condition:argument nature="reference" name="type"/>
+       <condition:argument nature="value"><![CDATA[plant_nursery]]></condition:argument>
+      </condition:equals>
+     </condition:condition>
+     <style type="AREA">
+      <areastyle paintbackground="true">
+       <fillpattern type="SOLID">
+        <color red="0" green="255" blue="0" alpha="255"/>
+       </fillpattern>
+       <linestyle haspoints="false">
+        <signature dashpattern="SOLID_LINE" width="1.0">
+         <color red="0" green="0" blue="0" alpha="255"/>
+        </signature>
+       </linestyle>
+      </areastyle>
+     </style>
+    </conditionalStyle>
+    <conditionalStyle>
+     <description><![CDATA[type EQ 'greenhouse_horti']]></description>
+     <condition:condition>
+      <condition:equals type="STRING">
+       <condition:argument nature="reference" name="type"/>
+       <condition:argument nature="value"><![CDATA[greenhouse_horti]]></condition:argument>
+      </condition:equals>
+     </condition:condition>
+     <style type="AREA">
+      <areastyle paintbackground="true">
+       <fillpattern type="SOLID">
+        <color red="0" green="255" blue="0" alpha="255"/>
+       </fillpattern>
+       <linestyle haspoints="false">
+        <signature dashpattern="SOLID_LINE" width="1.0">
+         <color red="0" green="0" blue="0" alpha="255"/>
+        </signature>
+       </linestyle>
+      </areastyle>
+     </style>
+    </conditionalStyle>
+    <conditionalStyle>
+     <description><![CDATA[type EQ 'wetland']]></description>
+     <condition:condition>
+      <condition:equals type="STRING">
+       <condition:argument nature="reference" name="type"/>
+       <condition:argument nature="value"><![CDATA[wetland]]></condition:argument>
+      </condition:equals>
+     </condition:condition>
+     <style type="AREA">
+      <areastyle paintbackground="true">
+       <fillpattern type="SOLID">
+        <color red="0" green="255" blue="0" alpha="255"/>
+       </fillpattern>
+       <linestyle haspoints="false">
+        <signature dashpattern="SOLID_LINE" width="1.0">
+         <color red="0" green="0" blue="0" alpha="255"/>
+        </signature>
+       </linestyle>
+      </areastyle>
+     </style>
+    </conditionalStyle>
+    <conditionalStyle>
+     <description><![CDATA[type EQ 'winter_sports']]></description>
+     <condition:condition>
+      <condition:equals type="STRING">
+       <condition:argument nature="reference" name="type"/>
+       <condition:argument nature="value"><![CDATA[winter_sports]]></condition:argument>
+      </condition:equals>
+     </condition:condition>
+     <style type="AREA">
+      <areastyle paintbackground="true">
+       <fillpattern type="SOLID">
+        <color red="0" green="255" blue="0" alpha="255"/>
+       </fillpattern>
+       <linestyle haspoints="false">
+        <signature dashpattern="SOLID_LINE" width="1.0">
+         <color red="0" green="0" blue="0" alpha="255"/>
+        </signature>
+       </linestyle>
+      </areastyle>
+     </style>
+    </conditionalStyle>
+    <conditionalStyle>
+     <description><![CDATA[type EQ 'fishfarm']]></description>
+     <condition:condition>
+      <condition:equals type="STRING">
+       <condition:argument nature="reference" name="type"/>
+       <condition:argument nature="value"><![CDATA[fishfarm]]></condition:argument>
+      </condition:equals>
+     </condition:condition>
+     <style type="AREA">
+      <areastyle paintbackground="true">
+       <fillpattern type="SOLID">
+        <color red="0" green="255" blue="0" alpha="255"/>
+       </fillpattern>
+       <linestyle haspoints="false">
+        <signature dashpattern="SOLID_LINE" width="1.0">
+         <color red="0" green="0" blue="0" alpha="255"/>
+        </signature>
+       </linestyle>
+      </areastyle>
+     </style>
+    </conditionalStyle>
+    <conditionalStyle>
+     <description><![CDATA[type EQ 'brownfield']]></description>
+     <condition:condition>
+      <condition:equals type="STRING">
+       <condition:argument nature="reference" name="type"/>
+       <condition:argument nature="value"><![CDATA[brownfield]]></condition:argument>
+      </condition:equals>
+     </condition:condition>
+     <style type="AREA">
+      <areastyle paintbackground="true">
+       <fillpattern type="SOLID">
+        <color red="0" green="255" blue="0" alpha="255"/>
+       </fillpattern>
+       <linestyle haspoints="false">
+        <signature dashpattern="SOLID_LINE" width="1.0">
+         <color red="0" green="0" blue="0" alpha="255"/>
+        </signature>
+       </linestyle>
+      </areastyle>
+     </style>
+    </conditionalStyle>
+    <conditionalStyle>
+     <description><![CDATA[type EQ 'greenfield']]></description>
+     <condition:condition>
+      <condition:equals type="STRING">
+       <condition:argument nature="reference" name="type"/>
+       <condition:argument nature="value"><![CDATA[greenfield]]></condition:argument>
+      </condition:equals>
+     </condition:condition>
+     <style type="AREA">
+      <areastyle paintbackground="true">
+       <fillpattern type="SOLID">
+        <color red="0" green="255" blue="0" alpha="255"/>
+       </fillpattern>
+       <linestyle haspoints="false">
+        <signature dashpattern="SOLID_LINE" width="1.0">
+         <color red="0" green="0" blue="0" alpha="255"/>
+        </signature>
+       </linestyle>
+      </areastyle>
+     </style>
+    </conditionalStyle>
+    <conditionalStyle>
+     <description><![CDATA[type EQ 'farm']]></description>
+     <condition:condition>
+      <condition:equals type="STRING">
+       <condition:argument nature="reference" name="type"/>
+       <condition:argument nature="value"><![CDATA[farm]]></condition:argument>
+      </condition:equals>
+     </condition:condition>
+     <style type="AREA">
+      <areastyle paintbackground="true">
+       <fillpattern type="SOLID">
+        <color red="0" green="255" blue="0" alpha="255"/>
+       </fillpattern>
+       <linestyle haspoints="false">
+        <signature dashpattern="SOLID_LINE" width="1.0">
+         <color red="0" green="0" blue="0" alpha="255"/>
+        </signature>
+       </linestyle>
+      </areastyle>
+     </style>
+    </conditionalStyle>
+    <conditionalStyle>
+     <description><![CDATA[type EQ 'vineyard']]></description>
+     <condition:condition>
+      <condition:equals type="STRING">
+       <condition:argument nature="reference" name="type"/>
+       <condition:argument nature="value"><![CDATA[vineyard]]></condition:argument>
+      </condition:equals>
+     </condition:condition>
+     <style type="AREA">
+      <areastyle paintbackground="true">
+       <fillpattern type="SOLID">
+        <color red="0" green="255" blue="0" alpha="255"/>
+       </fillpattern>
+       <linestyle haspoints="false">
+        <signature dashpattern="SOLID_LINE" width="1.0">
+         <color red="0" green="0" blue="0" alpha="255"/>
+        </signature>
+       </linestyle>
+      </areastyle>
+     </style>
+    </conditionalStyle>
+    <conditionalStyle>
+     <description><![CDATA[type EQ 'farmyard']]></description>
+     <condition:condition>
+      <condition:equals type="STRING">
+       <condition:argument nature="reference" name="type"/>
+       <condition:argument nature="value"><![CDATA[farmyard]]></condition:argument>
+      </condition:equals>
+     </condition:condition>
+     <style type="AREA">
+      <areastyle paintbackground="true">
+       <fillpattern type="SOLID">
+        <color red="0" green="255" blue="0" alpha="255"/>
+       </fillpattern>
+       <linestyle haspoints="false">
+        <signature dashpattern="SOLID_LINE" width="1.0">
+         <color red="0" green="0" blue="0" alpha="255"/>
+        </signature>
+       </linestyle>
+      </areastyle>
+     </style>
+    </conditionalStyle>
+    <conditionalStyle>
+     <description><![CDATA[type EQ 'farmland']]></description>
+     <condition:condition>
+      <condition:equals type="STRING">
+       <condition:argument nature="reference" name="type"/>
+       <condition:argument nature="value"><![CDATA[farmland]]></condition:argument>
+      </condition:equals>
+     </condition:condition>
+     <style type="AREA">
+      <areastyle paintbackground="true">
+       <fillpattern type="SOLID">
+        <color red="0" green="255" blue="0" alpha="255"/>
+       </fillpattern>
+       <linestyle haspoints="false">
+        <signature dashpattern="SOLID_LINE" width="1.0">
+         <color red="0" green="0" blue="0" alpha="255"/>
+        </signature>
+       </linestyle>
+      </areastyle>
+     </style>
+    </conditionalStyle>
+    <conditionalStyle>
+     <description><![CDATA[type EQ 'village_green']]></description>
+     <condition:condition>
+      <condition:equals type="STRING">
+       <condition:argument nature="reference" name="type"/>
+       <condition:argument nature="value"><![CDATA[village_green]]></condition:argument>
+      </condition:equals>
+     </condition:condition>
+     <style type="AREA">
+      <areastyle paintbackground="true">
+       <fillpattern type="SOLID">
+        <color red="0" green="255" blue="0" alpha="255"/>
+       </fillpattern>
+       <linestyle haspoints="false">
+        <signature dashpattern="SOLID_LINE" width="1.0">
+         <color red="0" green="0" blue="0" alpha="255"/>
+        </signature>
+       </linestyle>
+      </areastyle>
+     </style>
+    </conditionalStyle>
+    <conditionalStyle>
+     <description><![CDATA[type EQ 'landfill']]></description>
+     <condition:condition>
+      <condition:equals type="STRING">
+       <condition:argument nature="reference" name="type"/>
+       <condition:argument nature="value"><![CDATA[landfill]]></condition:argument>
+      </condition:equals>
+     </condition:condition>
+     <style type="AREA">
+      <areastyle paintbackground="true">
+       <fillpattern type="SOLID">
+        <color red="0" green="255" blue="0" alpha="255"/>
+       </fillpattern>
+       <linestyle haspoints="false">
+        <signature dashpattern="SOLID_LINE" width="1.0">
+         <color red="0" green="0" blue="0" alpha="255"/>
+        </signature>
+       </linestyle>
+      </areastyle>
+     </style>
+    </conditionalStyle>
+    <conditionalStyle>
+     <description><![CDATA[type EQ 'recreation_groun']]></description>
+     <condition:condition>
+      <condition:equals type="STRING">
+       <condition:argument nature="reference" name="type"/>
+       <condition:argument nature="value"><![CDATA[recreation_groun]]></condition:argument>
+      </condition:equals>
+     </condition:condition>
+     <style type="AREA">
+      <areastyle paintbackground="true">
+       <fillpattern type="SOLID">
+        <color red="0" green="255" blue="0" alpha="255"/>
+       </fillpattern>
+       <linestyle haspoints="false">
+        <signature dashpattern="SOLID_LINE" width="1.0">
+         <color red="0" green="0" blue="0" alpha="255"/>
+        </signature>
+       </linestyle>
+      </areastyle>
+     </style>
+    </conditionalStyle>
+    <conditionalStyle>
+     <description><![CDATA[type EQ 'cemetery']]></description>
+     <condition:condition>
+      <condition:equals type="STRING">
+       <condition:argument nature="reference" name="type"/>
+       <condition:argument nature="value"><![CDATA[cemetery]]></condition:argument>
+      </condition:equals>
+     </condition:condition>
+     <style type="AREA">
+      <areastyle paintbackground="true">
+       <fillpattern type="SOLID">
+        <color red="0" green="255" blue="0" alpha="255"/>
+       </fillpattern>
+       <linestyle haspoints="false">
+        <signature dashpattern="SOLID_LINE" width="1.0">
+         <color red="0" green="0" blue="0" alpha="255"/>
+        </signature>
+       </linestyle>
+      </areastyle>
+     </style>
+    </conditionalStyle>
+    <conditionalStyle>
+     <description><![CDATA[type EQ 'grass']]></description>
+     <condition:condition>
+      <condition:equals type="STRING">
+       <condition:argument nature="reference" name="type"/>
+       <condition:argument nature="value"><![CDATA[grass]]></condition:argument>
+      </condition:equals>
+     </condition:condition>
+     <style type="AREA">
+      <areastyle paintbackground="true">
+       <fillpattern type="SOLID">
+        <color red="0" green="255" blue="0" alpha="255"/>
+       </fillpattern>
+       <linestyle haspoints="false">
+        <signature dashpattern="SOLID_LINE" width="1.0">
+         <color red="0" green="0" blue="0" alpha="255"/>
+        </signature>
+       </linestyle>
+      </areastyle>
+     </style>
+    </conditionalStyle>
+    <conditionalStyle>
+     <description><![CDATA[type EQ 'winery']]></description>
+     <condition:condition>
+      <condition:equals type="STRING">
+       <condition:argument nature="reference" name="type"/>
+       <condition:argument nature="value"><![CDATA[winery]]></condition:argument>
+      </condition:equals>
+     </condition:condition>
+     <style type="AREA">
+      <areastyle paintbackground="true">
+       <fillpattern type="SOLID">
+        <color red="0" green="255" blue="0" alpha="255"/>
+       </fillpattern>
+       <linestyle haspoints="false">
+        <signature dashpattern="SOLID_LINE" width="1.0">
+         <color red="0" green="0" blue="0" alpha="255"/>
+        </signature>
+       </linestyle>
+      </areastyle>
+     </style>
+    </conditionalStyle>
+    <conditionalStyle>
+     <description><![CDATA[type EQ 'animal_keeping']]></description>
+     <condition:condition>
+      <condition:equals type="STRING">
+       <condition:argument nature="reference" name="type"/>
+       <condition:argument nature="value"><![CDATA[animal_keeping]]></condition:argument>
+      </condition:equals>
+     </condition:condition>
+     <style type="AREA">
+      <areastyle paintbackground="true">
+       <fillpattern type="SOLID">
+        <color red="0" green="255" blue="0" alpha="255"/>
+       </fillpattern>
+       <linestyle haspoints="false">
+        <signature dashpattern="SOLID_LINE" width="1.0">
+         <color red="0" green="0" blue="0" alpha="255"/>
+        </signature>
+       </linestyle>
+      </areastyle>
+     </style>
+    </conditionalStyle>
+    <conditionalStyle>
+     <description><![CDATA[type EQ 'area']]></description>
+     <condition:condition>
+      <condition:equals type="STRING">
+       <condition:argument nature="reference" name="type"/>
+       <condition:argument nature="value"><![CDATA[area]]></condition:argument>
+      </condition:equals>
+     </condition:condition>
+     <style type="AREA">
+      <areastyle paintbackground="true">
+       <fillpattern type="SOLID">
+        <color red="0" green="255" blue="0" alpha="255"/>
+       </fillpattern>
+       <linestyle haspoints="false">
+        <signature dashpattern="SOLID_LINE" width="1.0">
+         <color red="0" green="0" blue="0" alpha="255"/>
+        </signature>
+       </linestyle>
+      </areastyle>
+     </style>
+    </conditionalStyle>
+   </conditionalStyles>
+   <style type="AREA">
+    <areastyle paintbackground="true">
+     <fillpattern type="SOLID">
+      <color red="255" green="255" blue="0" alpha="255"/>
+     </fillpattern>
+     <linestyle haspoints="false">
+      <signature dashpattern="SOLID_LINE" width="1.0">
+       <color red="0" green="0" blue="0" alpha="255"/>
+      </signature>
+     </linestyle>
+    </areastyle>
+   </style>
+   <conditionRule>FIRST_MATCH</conditionRule>
+   <tooltip:toolTipStyle>
+    <tooltip:attributeNames>
+     <tooltip:attributeName name="sid"/>
+    </tooltip:attributeNames>
+   </tooltip:toolTipStyle>
+   <label:labelStyle>
+    <label:attributeNames/>
+    <font:font name="Monospaced" size="12" isBold="false" isItalic="false"/>
+    <color red="0" green="0" blue="0" alpha="255"/>
+    <label:rotationAngle value="0.0"/>
+    <label:isRotationGeometryOrientated value="false"/>
+    <scalerange/>
+   </label:labelStyle>
+   <properties/>
+  </layer>
+  <layer name="natural_1" visible="true" uuid="e57dceb2-5f47-4da3-9a7c-3549fe05b4f5">
+   <resource type="DATABASE" layerType="FEATURE" format="SPATIALITE">
+    <database type="filesystem" protocol="jdbc:spatialite" database="$SYSTEM{jgisshell.workingpath}data/osm/$SYSTEM{region}/$SYSTEM{region}.osm.sqlite"/>
+    <layerColumn table="natural_1" column="geometry"/>
+   </resource>
+   <crs:coordinateReferenceSystem>
+    <crs:projectedCoordinateReference name="WGS 84 / Pseudo-Mercator" projection="Mercator 1SP">
+     <crs:geographicCoordinateReference name="WGS 84">
+      <crs:datum name="WGS_1984">
+       <crs:spheroid name="WGS 84" semiMajorAxis="6378137.0" inverseFlattening="298.257223563">
+        <crs:Authority name="EPSG" code="7030"/>
+       </crs:spheroid>
+       <crs:toWgs84 dx="0.0" dy="0.0" dz="0.0" rx="0.0" ry="0.0" rz="0.0" ppm="0.0"/>
+       <crs:Authority name="EPSG" code="6326"/>
+      </crs:datum>
+      <crs:primeMeridian name="greenwich" value="0.0">
+       <crs:Authority name="EPSG" code="8901"/>
+      </crs:primeMeridian>
+      <crs:unit name="degree" type="ANGLE" factor="0.0174532925199433"/>
+      <crs:Authority name="EPSG" code="4326"/>
+     </crs:geographicCoordinateReference>
+     <crs:parameters>
+      <crs:parameter name="false_easting" value="0.0"/>
+      <crs:parameter name="false_northing" value="0.0"/>
+      <crs:parameter name="central_meridian" value="0.0"/>
+      <crs:parameter name="scale_factor" value="1.0"/>
+     </crs:parameters>
+     <crs:unit name="metre" type="DISTANCE" factor="1.0"/>
+     <crs:axes>
+      <crs:axis name="X" value="EAST"/>
+      <crs:axis name="Y" value="NORTH"/>
+     </crs:axes>
+     <crs:Authority name="EPSG" code="3857"/>
+    </crs:projectedCoordinateReference>
+    <crs:Authority name="epsg" code="3857"/>
+   </crs:coordinateReferenceSystem>
+   <conditionalStyles>
+    <conditionalStyle>
+     <description><![CDATA[type EQ 'water']]></description>
+     <condition:condition>
+      <condition:equals type="STRING">
+       <condition:argument nature="reference" name="type"/>
+       <condition:argument nature="value"><![CDATA[water]]></condition:argument>
+      </condition:equals>
+     </condition:condition>
+     <style type="AREA">
+      <areastyle paintbackground="true">
+       <fillpattern type="SOLID">
+        <color red="0" green="0" blue="255" alpha="255"/>
+       </fillpattern>
+       <linestyle haspoints="false">
+        <signature dashpattern="SOLID_LINE" width="1.0">
+         <color red="0" green="0" blue="0" alpha="255"/>
+        </signature>
+       </linestyle>
+      </areastyle>
+     </style>
+    </conditionalStyle>
+    <conditionalStyle>
+     <description><![CDATA[type EQ 'riverbank']]></description>
+     <condition:condition>
+      <condition:equals type="STRING">
+       <condition:argument nature="reference" name="type"/>
+       <condition:argument nature="value"><![CDATA[riverbank]]></condition:argument>
+      </condition:equals>
+     </condition:condition>
+     <style type="AREA">
+      <areastyle paintbackground="true">
+       <fillpattern type="SOLID">
+        <color red="0" green="255" blue="0" alpha="255"/>
+       </fillpattern>
+       <linestyle haspoints="false">
+        <signature dashpattern="SOLID_LINE" width="1.0">
+         <color red="0" green="0" blue="0" alpha="255"/>
+        </signature>
+       </linestyle>
+      </areastyle>
+     </style>
+    </conditionalStyle>
+    <conditionalStyle>
+     <description><![CDATA[type EQ 'forest']]></description>
+     <condition:condition>
+      <condition:equals type="STRING">
+       <condition:argument nature="reference" name="type"/>
+       <condition:argument nature="value"><![CDATA[forest]]></condition:argument>
+      </condition:equals>
+     </condition:condition>
+     <style type="AREA">
+      <areastyle paintbackground="true">
+       <fillpattern type="SOLID">
+        <color red="0" green="178" blue="0" alpha="255"/>
+       </fillpattern>
+       <linestyle haspoints="false">
+        <signature dashpattern="SOLID_LINE" width="1.0">
+         <color red="0" green="0" blue="0" alpha="255"/>
+        </signature>
+       </linestyle>
+      </areastyle>
+     </style>
+    </conditionalStyle>
+   </conditionalStyles>
+   <style type="AREA">
+    <areastyle paintbackground="true">
+     <fillpattern type="SOLID">
+      <color red="0" green="255" blue="0" alpha="255"/>
+     </fillpattern>
+     <linestyle haspoints="false">
+      <signature dashpattern="SOLID_LINE" width="1.0">
+       <color red="0" green="0" blue="0" alpha="255"/>
+      </signature>
+     </linestyle>
+    </areastyle>
+   </style>
+   <conditionRule>FIRST_MATCH</conditionRule>
+   <tooltip:toolTipStyle>
+    <tooltip:attributeNames>
+     <tooltip:attributeName name="sid"/>
+    </tooltip:attributeNames>
+   </tooltip:toolTipStyle>
+   <label:labelStyle>
+    <label:attributeNames/>
+    <font:font name="Monospaced" size="12" isBold="false" isItalic="false"/>
+    <color red="0" green="0" blue="0" alpha="255"/>
+    <label:rotationAngle value="0.0"/>
+    <label:isRotationGeometryOrientated value="false"/>
+    <scalerange/>
+   </label:labelStyle>
+   <properties/>
+  </layer>
+  <layer name="waterways" visible="true" uuid="f3a89f29-4c6b-4f65-9583-2e62d1123fc0">
+   <resource type="DATABASE" layerType="FEATURE" format="SPATIALITE">
+    <database type="filesystem" protocol="jdbc:spatialite" database="$SYSTEM{jgisshell.workingpath}data/osm/$SYSTEM{region}/$SYSTEM{region}.osm.sqlite"/>
+    <layerColumn table="waterways" column="geometry"/>
+   </resource>
+   <crs:coordinateReferenceSystem>
+    <crs:projectedCoordinateReference name="WGS 84 / Pseudo-Mercator" projection="Mercator 1SP">
+     <crs:geographicCoordinateReference name="WGS 84">
+      <crs:datum name="WGS_1984">
+       <crs:spheroid name="WGS 84" semiMajorAxis="6378137.0" inverseFlattening="298.257223563">
+        <crs:Authority name="EPSG" code="7030"/>
+       </crs:spheroid>
+       <crs:toWgs84 dx="0.0" dy="0.0" dz="0.0" rx="0.0" ry="0.0" rz="0.0" ppm="0.0"/>
+       <crs:Authority name="EPSG" code="6326"/>
+      </crs:datum>
+      <crs:primeMeridian name="greenwich" value="0.0">
+       <crs:Authority name="EPSG" code="8901"/>
+      </crs:primeMeridian>
+      <crs:unit name="degree" type="ANGLE" factor="0.0174532925199433"/>
+      <crs:Authority name="EPSG" code="4326"/>
+     </crs:geographicCoordinateReference>
+     <crs:parameters>
+      <crs:parameter name="false_easting" value="0.0"/>
+      <crs:parameter name="false_northing" value="0.0"/>
+      <crs:parameter name="central_meridian" value="0.0"/>
+      <crs:parameter name="scale_factor" value="1.0"/>
+     </crs:parameters>
+     <crs:unit name="metre" type="DISTANCE" factor="1.0"/>
+     <crs:axes>
+      <crs:axis name="X" value="EAST"/>
+      <crs:axis name="Y" value="NORTH"/>
+     </crs:axes>
+     <crs:Authority name="EPSG" code="3857"/>
+    </crs:projectedCoordinateReference>
+    <crs:Authority name="epsg" code="3857"/>
+   </crs:coordinateReferenceSystem>
+   <conditionalStyles>
+    <conditionalStyle>
+     <description><![CDATA[type EQ 'river']]></description>
+     <condition:condition>
+      <condition:equals type="STRING">
+       <condition:argument nature="reference" name="type"/>
+       <condition:argument nature="value"><![CDATA[river]]></condition:argument>
+      </condition:equals>
+     </condition:condition>
+     <style type="LINE">
+      <linestyle haspoints="false">
+       <signature dashpattern="SOLID_LINE" width="2.0">
+        <color red="0" green="0" blue="255" alpha="255"/>
+       </signature>
+      </linestyle>
+     </style>
+    </conditionalStyle>
+   </conditionalStyles>
+   <style type="LINE">
+    <linestyle haspoints="false">
+     <signature dashpattern="SOLID_LINE" width="0.5">
+      <color red="0" green="0" blue="255" alpha="255"/>
+     </signature>
+    </linestyle>
+   </style>
+   <conditionRule>FIRST_MATCH</conditionRule>
+   <tooltip:toolTipStyle>
+    <tooltip:attributeNames>
+     <tooltip:attributeName name="sid"/>
+    </tooltip:attributeNames>
+   </tooltip:toolTipStyle>
+   <label:labelStyle>
+    <label:attributeNames/>
+    <font:font name="Monospaced" size="12" isBold="false" isItalic="false"/>
+    <color red="0" green="0" blue="0" alpha="255"/>
+    <label:rotationAngle value="0.0"/>
+    <label:isRotationGeometryOrientated value="false"/>
+    <scalerange/>
+   </label:labelStyle>
+   <properties/>
+  </layer>
+  <layer name="buildings" visible="true" uuid="51e466c9-9732-4b34-bb75-8aefcf0dc124">
+   <resource type="DATABASE" layerType="FEATURE" format="SPATIALITE">
+    <database type="filesystem" protocol="jdbc:spatialite" database="$SYSTEM{jgisshell.workingpath}data/osm/$SYSTEM{region}/$SYSTEM{region}.osm.sqlite"/>
+    <layerColumn table="buildings" column="geometry"/>
+   </resource>
+   <crs:coordinateReferenceSystem>
+    <crs:projectedCoordinateReference name="WGS 84 / Pseudo-Mercator" projection="Mercator 1SP">
+     <crs:geographicCoordinateReference name="WGS 84">
+      <crs:datum name="WGS_1984">
+       <crs:spheroid name="WGS 84" semiMajorAxis="6378137.0" inverseFlattening="298.257223563">
+        <crs:Authority name="EPSG" code="7030"/>
+       </crs:spheroid>
+       <crs:toWgs84 dx="0.0" dy="0.0" dz="0.0" rx="0.0" ry="0.0" rz="0.0" ppm="0.0"/>
+       <crs:Authority name="EPSG" code="6326"/>
+      </crs:datum>
+      <crs:primeMeridian name="greenwich" value="0.0">
+       <crs:Authority name="EPSG" code="8901"/>
+      </crs:primeMeridian>
+      <crs:unit name="degree" type="ANGLE" factor="0.0174532925199433"/>
+      <crs:Authority name="EPSG" code="4326"/>
+     </crs:geographicCoordinateReference>
+     <crs:parameters>
+      <crs:parameter name="false_easting" value="0.0"/>
+      <crs:parameter name="false_northing" value="0.0"/>
+      <crs:parameter name="central_meridian" value="0.0"/>
+      <crs:parameter name="scale_factor" value="1.0"/>
+     </crs:parameters>
+     <crs:unit name="metre" type="DISTANCE" factor="1.0"/>
+     <crs:axes>
+      <crs:axis name="X" value="EAST"/>
+      <crs:axis name="Y" value="NORTH"/>
+     </crs:axes>
+     <crs:Authority name="EPSG" code="3857"/>
+    </crs:projectedCoordinateReference>
+    <crs:Authority name="epsg" code="3857"/>
+   </crs:coordinateReferenceSystem>
+   <style type="AREA">
+    <areastyle paintbackground="true">
+     <fillpattern type="SOLID">
+      <color red="255" green="0" blue="0" alpha="255"/>
+     </fillpattern>
+     <linestyle haspoints="false">
+      <signature dashpattern="SOLID_LINE" width="1.0">
+       <color red="0" green="0" blue="0" alpha="255"/>
+      </signature>
+     </linestyle>
+    </areastyle>
+   </style>
+   <conditionRule>FIRST_MATCH</conditionRule>
+   <tooltip:toolTipStyle>
+    <tooltip:attributeNames>
+     <tooltip:attributeName name="sid"/>
+    </tooltip:attributeNames>
+   </tooltip:toolTipStyle>
+   <label:labelStyle>
+    <label:attributeNames/>
+    <font:font name="Monospaced" size="12" isBold="false" isItalic="false"/>
+    <color red="0" green="0" blue="0" alpha="255"/>
+    <label:rotationAngle value="0.0"/>
+    <label:isRotationGeometryOrientated value="false"/>
+    <scalerange/>
+   </label:labelStyle>
+   <properties/>
+  </layer>
+  <layer name="railways" visible="true" uuid="e35ffa7e-7fb4-4e53-8d93-4f46e07a9d24">
+   <resource type="DATABASE" layerType="FEATURE" format="SPATIALITE">
+    <database type="filesystem" protocol="jdbc:spatialite" database="$SYSTEM{jgisshell.workingpath}data/osm/$SYSTEM{region}/$SYSTEM{region}.osm.sqlite"/>
+    <layerColumn table="railways" column="geometry"/>
+   </resource>
+   <crs:coordinateReferenceSystem>
+    <crs:projectedCoordinateReference name="WGS 84 / Pseudo-Mercator" projection="Mercator 1SP">
+     <crs:geographicCoordinateReference name="WGS 84">
+      <crs:datum name="WGS_1984">
+       <crs:spheroid name="WGS 84" semiMajorAxis="6378137.0" inverseFlattening="298.257223563">
+        <crs:Authority name="EPSG" code="7030"/>
+       </crs:spheroid>
+       <crs:toWgs84 dx="0.0" dy="0.0" dz="0.0" rx="0.0" ry="0.0" rz="0.0" ppm="0.0"/>
+       <crs:Authority name="EPSG" code="6326"/>
+      </crs:datum>
+      <crs:primeMeridian name="greenwich" value="0.0">
+       <crs:Authority name="EPSG" code="8901"/>
+      </crs:primeMeridian>
+      <crs:unit name="degree" type="ANGLE" factor="0.0174532925199433"/>
+      <crs:Authority name="EPSG" code="4326"/>
+     </crs:geographicCoordinateReference>
+     <crs:parameters>
+      <crs:parameter name="false_easting" value="0.0"/>
+      <crs:parameter name="false_northing" value="0.0"/>
+      <crs:parameter name="central_meridian" value="0.0"/>
+      <crs:parameter name="scale_factor" value="1.0"/>
+     </crs:parameters>
+     <crs:unit name="metre" type="DISTANCE" factor="1.0"/>
+     <crs:axes>
+      <crs:axis name="X" value="EAST"/>
+      <crs:axis name="Y" value="NORTH"/>
+     </crs:axes>
+     <crs:Authority name="EPSG" code="3857"/>
+    </crs:projectedCoordinateReference>
+    <crs:Authority name="epsg" code="3857"/>
+   </crs:coordinateReferenceSystem>
+   <style type="LINE">
+    <linestyle haspoints="false">
+     <signature dashpattern="SOLID_LINE" width="2.0">
+      <color red="0" green="0" blue="0" alpha="255"/>
+     </signature>
+    </linestyle>
+   </style>
+   <conditionRule>FIRST_MATCH</conditionRule>
+   <tooltip:toolTipStyle>
+    <tooltip:attributeNames>
+     <tooltip:attributeName name="sid"/>
+    </tooltip:attributeNames>
+   </tooltip:toolTipStyle>
+   <label:labelStyle>
+    <label:attributeNames/>
+    <font:font name="Monospaced" size="12" isBold="false" isItalic="false"/>
+    <color red="0" green="0" blue="0" alpha="255"/>
+    <label:rotationAngle value="0.0"/>
+    <label:isRotationGeometryOrientated value="false"/>
+    <scalerange/>
+   </label:labelStyle>
+   <properties/>
+  </layer>
+  <layer name="roads" visible="true" uuid="73481aa1-e5f1-48b0-b8c2-18d5d30ef193">
+   <resource type="DATABASE" layerType="FEATURE" format="SPATIALITE">
+    <database type="filesystem" protocol="jdbc:spatialite" database="$SYSTEM{jgisshell.workingpath}data/osm/$SYSTEM{region}/$SYSTEM{region}.osm.sqlite"/>
+    <layerColumn table="roads" column="geometry"/>
+   </resource>
+   <crs:coordinateReferenceSystem>
+    <crs:projectedCoordinateReference name="WGS 84 / Pseudo-Mercator" projection="Mercator 1SP">
+     <crs:geographicCoordinateReference name="WGS 84">
+      <crs:datum name="WGS_1984">
+       <crs:spheroid name="WGS 84" semiMajorAxis="6378137.0" inverseFlattening="298.257223563">
+        <crs:Authority name="EPSG" code="7030"/>
+       </crs:spheroid>
+       <crs:toWgs84 dx="0.0" dy="0.0" dz="0.0" rx="0.0" ry="0.0" rz="0.0" ppm="0.0"/>
+       <crs:Authority name="EPSG" code="6326"/>
+      </crs:datum>
+      <crs:primeMeridian name="greenwich" value="0.0">
+       <crs:Authority name="EPSG" code="8901"/>
+      </crs:primeMeridian>
+      <crs:unit name="degree" type="ANGLE" factor="0.0174532925199433"/>
+      <crs:Authority name="EPSG" code="4326"/>
+     </crs:geographicCoordinateReference>
+     <crs:parameters>
+      <crs:parameter name="false_easting" value="0.0"/>
+      <crs:parameter name="false_northing" value="0.0"/>
+      <crs:parameter name="central_meridian" value="0.0"/>
+      <crs:parameter name="scale_factor" value="1.0"/>
+     </crs:parameters>
+     <crs:unit name="metre" type="DISTANCE" factor="1.0"/>
+     <crs:axes>
+      <crs:axis name="X" value="EAST"/>
+      <crs:axis name="Y" value="NORTH"/>
+     </crs:axes>
+     <crs:Authority name="EPSG" code="3857"/>
+    </crs:projectedCoordinateReference>
+    <crs:Authority name="epsg" code="3857"/>
+   </crs:coordinateReferenceSystem>
+   <style type="LINE">
+    <linestyle haspoints="false">
+     <signature dashpattern="SOLID_LINE" width="2.0">
+      <color red="0" green="0" blue="0" alpha="255"/>
+     </signature>
+    </linestyle>
+   </style>
+   <conditionRule>FIRST_MATCH</conditionRule>
+   <tooltip:toolTipStyle>
+    <tooltip:attributeNames>
+     <tooltip:attributeName name="sid"/>
+    </tooltip:attributeNames>
+   </tooltip:toolTipStyle>
+   <label:labelStyle>
+    <label:attributeNames/>
+    <font:font name="Monospaced" size="12" isBold="false" isItalic="false"/>
+    <color red="0" green="0" blue="0" alpha="255"/>
+    <label:rotationAngle value="0.0"/>
+    <label:isRotationGeometryOrientated value="false"/>
+    <scalerange/>
+   </label:labelStyle>
+   <properties/>
+  </layer>
+ </layers>
+ <locator>
+  <crs:coordinateReferenceSystem>
+   <crs:projectedCoordinateReference name="WGS 84 / Pseudo-Mercator" projection="Mercator 1SP">
+    <crs:geographicCoordinateReference name="WGS 84">
+     <crs:datum name="WGS_1984">
+      <crs:spheroid name="WGS 84" semiMajorAxis="6378137.0" inverseFlattening="298.257223563">
+       <crs:Authority name="EPSG" code="7030"/>
+      </crs:spheroid>
+      <crs:toWgs84 dx="0.0" dy="0.0" dz="0.0" rx="0.0" ry="0.0" rz="0.0" ppm="0.0"/>
+      <crs:Authority name="EPSG" code="6326"/>
+     </crs:datum>
+     <crs:primeMeridian name="greenwich" value="0.0">
+      <crs:Authority name="EPSG" code="8901"/>
+     </crs:primeMeridian>
+     <crs:unit name="degree" type="ANGLE" factor="0.0174532925199433"/>
+     <crs:Authority name="EPSG" code="4326"/>
+    </crs:geographicCoordinateReference>
+    <crs:parameters>
+     <crs:parameter name="false_easting" value="0.0"/>
+     <crs:parameter name="false_northing" value="0.0"/>
+     <crs:parameter name="longitude_of_origin" value="0.0"/>
+     <crs:parameter name="scale_factor" value="1.0"/>
+    </crs:parameters>
+    <crs:unit name="metre" type="DISTANCE" factor="1.0"/>
+    <crs:Authority name="EPSG" code="3857"/>
+   </crs:projectedCoordinateReference>
+   <crs:Authority name="EPSG" code="3857"/>
+  </crs:coordinateReferenceSystem>
+  <worldBox>
+   <coordinate coordinateDimension="2" isMeasured="false">1008976.5770811163, 6648490.523723703</coordinate>
+   <coordinate coordinateDimension="2" isMeasured="false">1103142.2126994948, 6706036.189934934</coordinate>
+  </worldBox>
+  <layers>
+   <layer name="Streets" visible="true" uuid="30496151-edc3-48ca-ae42-1fe363b0c075">
+    <resource type="SERVICE" layerType="RASTER" format="OSM" codec="PNG">
+     <file url="osm:http://{identifier}.tiles.wmflabs.org/osm/{zoomLevel}/{column}/{row}.png?identifiers=a,b,c"/>
+    </resource>
+    <crs:coordinateReferenceSystem>
+     <crs:projectedCoordinateReference name="WGS 84 / Pseudo-Mercator" projection="Mercator 1SP">
+      <crs:geographicCoordinateReference name="WGS 84">
+       <crs:datum name="WGS 84">
+        <crs:spheroid name="WGS 84" semiMajorAxis="6378137.0" inverseFlattening="298.257223563">
+         <crs:Authority name="EPSG" code="7030"/>
+        </crs:spheroid>
+        <crs:toWgs84 dx="0.0" dy="0.0" dz="0.0" rx="0.0" ry="0.0" rz="0.0" ppm="0.0"/>
+       </crs:datum>
+       <crs:primeMeridian name="greenwich" value="0.0"/>
+       <crs:unit name="degree" type="ANGLE" factor="0.0174532925199433"/>
+       <crs:axes>
+        <crs:axis name="north" value="NORTH"/>
+        <crs:axis name="east" value="EAST"/>
+       </crs:axes>
+       <crs:Authority name="EPSG" code="4326"/>
+      </crs:geographicCoordinateReference>
+      <crs:parameters>
+       <crs:parameter name="false_easting" value="0.0"/>
+       <crs:parameter name="false_northing" value="0.0"/>
+       <crs:parameter name="central_meridian" value="0.0"/>
+       <crs:parameter name="scale_factor" value="1.0"/>
+      </crs:parameters>
+      <crs:unit name="meter" type="DISTANCE" factor="1.0"/>
+      <crs:axes>
+       <crs:axis name="east" value="EAST"/>
+       <crs:axis name="north" value="NORTH"/>
+      </crs:axes>
+      <crs:Authority name="EPSG" code="3857"/>
+     </crs:projectedCoordinateReference>
+     <crs:Authority name="EPSG" code="3857"/>
+    </crs:coordinateReferenceSystem>
+    <style/>
+    <properties/>
+   </layer>
+   <layer name="natural_1" visible="true" uuid="11504544-42ed-4f4b-9593-679d8252b3a9">
+    <resource type="DATABASE" layerType="FEATURE" format="SPATIALITE">
+     <database type="filesystem" protocol="jdbc:spatialite" database="$SYSTEM{jgisshell.workingpath}data/osm/$SYSTEM{region}/$SYSTEM{region}.osm.sqlite"/>
+     <layerColumn table="natural_1" column="geometry"/>
+    </resource>
+    <crs:coordinateReferenceSystem>
+     <crs:projectedCoordinateReference name="WGS 84 / Pseudo-Mercator" projection="Mercator 1SP">
+      <crs:geographicCoordinateReference name="WGS 84">
+       <crs:datum name="WGS_1984">
+        <crs:spheroid name="WGS 84" semiMajorAxis="6378137.0" inverseFlattening="298.257223563">
+         <crs:Authority name="EPSG" code="7030"/>
+        </crs:spheroid>
+        <crs:toWgs84 dx="0.0" dy="0.0" dz="0.0" rx="0.0" ry="0.0" rz="0.0" ppm="0.0"/>
+        <crs:Authority name="EPSG" code="6326"/>
+       </crs:datum>
+       <crs:primeMeridian name="greenwich" value="0.0">
+        <crs:Authority name="EPSG" code="8901"/>
+       </crs:primeMeridian>
+       <crs:unit name="degree" type="ANGLE" factor="0.0174532925199433"/>
+       <crs:Authority name="EPSG" code="4326"/>
+      </crs:geographicCoordinateReference>
+      <crs:parameters>
+       <crs:parameter name="false_easting" value="0.0"/>
+       <crs:parameter name="false_northing" value="0.0"/>
+       <crs:parameter name="central_meridian" value="0.0"/>
+       <crs:parameter name="scale_factor" value="1.0"/>
+      </crs:parameters>
+      <crs:unit name="metre" type="DISTANCE" factor="1.0"/>
+      <crs:axes>
+       <crs:axis name="X" value="EAST"/>
+       <crs:axis name="Y" value="NORTH"/>
+      </crs:axes>
+      <crs:Authority name="EPSG" code="3857"/>
+     </crs:projectedCoordinateReference>
+     <crs:Authority name="epsg" code="3857"/>
+    </crs:coordinateReferenceSystem>
+    <conditionalStyles>
+     <conditionalStyle>
+      <description><![CDATA[type EQ 'water']]></description>
+      <condition:condition>
+       <condition:equals type="STRING">
+        <condition:argument nature="reference" name="type"/>
+        <condition:argument nature="value"><![CDATA[water]]></condition:argument>
+       </condition:equals>
+      </condition:condition>
+      <style type="AREA">
+       <areastyle paintbackground="true">
+        <fillpattern type="SOLID">
+         <color red="0" green="0" blue="255" alpha="255"/>
+        </fillpattern>
+        <linestyle haspoints="false">
+         <signature dashpattern="SOLID_LINE" width="1.0">
+          <color red="0" green="0" blue="0" alpha="255"/>
+         </signature>
+        </linestyle>
+       </areastyle>
+      </style>
+     </conditionalStyle>
+     <conditionalStyle>
+      <description><![CDATA[type EQ 'riverbank']]></description>
+      <condition:condition>
+       <condition:equals type="STRING">
+        <condition:argument nature="reference" name="type"/>
+        <condition:argument nature="value"><![CDATA[riverbank]]></condition:argument>
+       </condition:equals>
+      </condition:condition>
+      <style type="AREA">
+       <areastyle paintbackground="true">
+        <fillpattern type="SOLID">
+         <color red="0" green="255" blue="0" alpha="255"/>
+        </fillpattern>
+        <linestyle haspoints="false">
+         <signature dashpattern="SOLID_LINE" width="1.0">
+          <color red="0" green="0" blue="0" alpha="255"/>
+         </signature>
+        </linestyle>
+       </areastyle>
+      </style>
+     </conditionalStyle>
+     <conditionalStyle>
+      <description><![CDATA[type EQ 'forest']]></description>
+      <condition:condition>
+       <condition:equals type="STRING">
+        <condition:argument nature="reference" name="type"/>
+        <condition:argument nature="value"><![CDATA[forest]]></condition:argument>
+       </condition:equals>
+      </condition:condition>
+      <style type="AREA">
+       <areastyle paintbackground="true">
+        <fillpattern type="SOLID">
+         <color red="0" green="178" blue="0" alpha="255"/>
+        </fillpattern>
+        <linestyle haspoints="false">
+         <signature dashpattern="SOLID_LINE" width="1.0">
+          <color red="0" green="0" blue="0" alpha="255"/>
+         </signature>
+        </linestyle>
+       </areastyle>
+      </style>
+     </conditionalStyle>
+    </conditionalStyles>
+    <style type="AREA">
+     <areastyle paintbackground="true">
+      <fillpattern type="SOLID">
+       <color red="0" green="255" blue="0" alpha="255"/>
+      </fillpattern>
+      <linestyle haspoints="false">
+       <signature dashpattern="SOLID_LINE" width="1.0">
+        <color red="0" green="0" blue="0" alpha="255"/>
+       </signature>
+      </linestyle>
+     </areastyle>
+    </style>
+    <conditionRule>FIRST_MATCH</conditionRule>
+    <tooltip:toolTipStyle>
+     <tooltip:attributeNames>
+      <tooltip:attributeName name="sid"/>
+     </tooltip:attributeNames>
+    </tooltip:toolTipStyle>
+    <label:labelStyle>
+     <label:attributeNames/>
+     <font:font name="Monospaced" size="12" isBold="false" isItalic="false"/>
+     <color red="0" green="0" blue="0" alpha="255"/>
+     <label:rotationAngle value="0.0"/>
+     <label:isRotationGeometryOrientated value="false"/>
+     <scalerange/>
+    </label:labelStyle>
+    <properties/>
+   </layer>
+   <layer name="waterways" visible="true" uuid="32de372c-1179-4165-b9ed-138a030b5a6d">
+    <resource type="DATABASE" layerType="FEATURE" format="SPATIALITE">
+     <database type="filesystem" protocol="jdbc:spatialite" database="$SYSTEM{jgisshell.workingpath}data/osm/$SYSTEM{region}/$SYSTEM{region}.osm.sqlite"/>
+     <layerColumn table="waterways" column="geometry"/>
+    </resource>
+    <crs:coordinateReferenceSystem>
+     <crs:projectedCoordinateReference name="WGS 84 / Pseudo-Mercator" projection="Mercator 1SP">
+      <crs:geographicCoordinateReference name="WGS 84">
+       <crs:datum name="WGS_1984">
+        <crs:spheroid name="WGS 84" semiMajorAxis="6378137.0" inverseFlattening="298.257223563">
+         <crs:Authority name="EPSG" code="7030"/>
+        </crs:spheroid>
+        <crs:toWgs84 dx="0.0" dy="0.0" dz="0.0" rx="0.0" ry="0.0" rz="0.0" ppm="0.0"/>
+        <crs:Authority name="EPSG" code="6326"/>
+       </crs:datum>
+       <crs:primeMeridian name="greenwich" value="0.0">
+        <crs:Authority name="EPSG" code="8901"/>
+       </crs:primeMeridian>
+       <crs:unit name="degree" type="ANGLE" factor="0.0174532925199433"/>
+       <crs:Authority name="EPSG" code="4326"/>
+      </crs:geographicCoordinateReference>
+      <crs:parameters>
+       <crs:parameter name="false_easting" value="0.0"/>
+       <crs:parameter name="false_northing" value="0.0"/>
+       <crs:parameter name="central_meridian" value="0.0"/>
+       <crs:parameter name="scale_factor" value="1.0"/>
+      </crs:parameters>
+      <crs:unit name="metre" type="DISTANCE" factor="1.0"/>
+      <crs:axes>
+       <crs:axis name="X" value="EAST"/>
+       <crs:axis name="Y" value="NORTH"/>
+      </crs:axes>
+      <crs:Authority name="EPSG" code="3857"/>
+     </crs:projectedCoordinateReference>
+     <crs:Authority name="epsg" code="3857"/>
+    </crs:coordinateReferenceSystem>
+    <conditionalStyles>
+     <conditionalStyle>
+      <description><![CDATA[type EQ 'river']]></description>
+      <condition:condition>
+       <condition:equals type="STRING">
+        <condition:argument nature="reference" name="type"/>
+        <condition:argument nature="value"><![CDATA[river]]></condition:argument>
+       </condition:equals>
+      </condition:condition>
+      <style type="LINE">
+       <linestyle haspoints="false">
+        <signature dashpattern="SOLID_LINE" width="2.0">
+         <color red="0" green="0" blue="255" alpha="255"/>
+        </signature>
+       </linestyle>
+      </style>
+     </conditionalStyle>
+    </conditionalStyles>
+    <style type="LINE">
+     <linestyle haspoints="false">
+      <signature dashpattern="SOLID_LINE" width="0.5">
+       <color red="0" green="0" blue="255" alpha="255"/>
+      </signature>
+     </linestyle>
+    </style>
+    <conditionRule>FIRST_MATCH</conditionRule>
+    <tooltip:toolTipStyle>
+     <tooltip:attributeNames>
+      <tooltip:attributeName name="sid"/>
+     </tooltip:attributeNames>
+    </tooltip:toolTipStyle>
+    <label:labelStyle>
+     <label:attributeNames/>
+     <font:font name="Monospaced" size="12" isBold="false" isItalic="false"/>
+     <color red="0" green="0" blue="0" alpha="255"/>
+     <label:rotationAngle value="0.0"/>
+     <label:isRotationGeometryOrientated value="false"/>
+     <scalerange/>
+    </label:labelStyle>
+    <properties/>
+   </layer>
+  </layers>
+ </locator>
+</map>

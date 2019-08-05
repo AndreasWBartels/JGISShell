@@ -24,6 +24,6 @@ package net.anwiba.script.groovy
 import net.anwiba.jgisshell.scripting.groovy.api.JGISShellGroovyScript
 @groovy.transform.BaseScript JGISShellGroovyScript facade
 
-def resource = facade.resource("\$SYSTEM{jgisshell.workingpath}data/backup.map")
+def resource =  facade.resource("\$SYSTEM{jgisshell.workingpath}projects/default/backup.map")
 def map = facade.view().map()
 if (!map.isEmpty()) facade.write(map, resource)

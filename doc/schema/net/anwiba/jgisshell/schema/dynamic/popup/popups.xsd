@@ -46,9 +46,10 @@
 
   <xsd:simpleType name="PopupTargetEnum">
     <xsd:restriction base="xsd:string">
-      <xsd:enumeration value="MAP"/>
-      <xsd:enumeration value="LEGEND"/>
+      <xsd:enumeration value="PROJECT_MANAGER"/>
       <xsd:enumeration value="LAYER_MANAGER"/>
+      <xsd:enumeration value="LEGEND"/>
+      <xsd:enumeration value="MAP"/>
     </xsd:restriction>
   </xsd:simpleType>
 
