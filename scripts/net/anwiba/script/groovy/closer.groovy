@@ -24,6 +24,14 @@ package net.anwiba.script.groovy
 import net.anwiba.jgisshell.scripting.groovy.api.JGISShellGroovyScript
 @groovy.transform.BaseScript JGISShellGroovyScript facade
 
-def resource =  facade.resource("\$SYSTEM{jgisshell.workingpath}projects/default/backup.map")
-def map = facade.view().map()
-if (!map.isEmpty()) facade.write(map, resource)
+def folderResource = facade.resource("\$SYSTEM{jgisshell.workingpath}projects/default")
+def mapResource =  facade.resource("\$SYSTEM{jgisshell.workingpath}projects/default/backup.map")
+
+try {
+  if (!facade.exists(folderResource)) {
+    facade.createFolder(folderResource)
+  }
+  def map = facade.view().map()
+  if (!map.isEmpty()) facade.write(map, mapResource)
+} catch (Exception exception) {
+}
