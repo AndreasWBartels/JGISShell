@@ -26,13 +26,16 @@ import net.anwiba.jgisshell.scripting.groovy.api.JGISShellGroovyScript
 @groovy.transform.BaseScript JGISShellGroovyScript facade
 
 def epsg3857 = facade.coordinateReferenceSystem("EPSG",3857);
+def targetSystem =  facade.coordinateReferenceSystem("EPSG",3857);
 
-def region = System.getProperty("sampledata.region", "Kassel")
+def region = "Kassel"
 facade.addVariable("region", region)
+facade.addVariable("targetSystem", targetSystem);
 System.setProperty("region", region)
 
-def targetSystem =  facade.coordinateReferenceSystem("EPSG",3857);
-facade.addVariable("targetSystem", targetSystem);
+facade.addVariable("dba", "SYS")
+facade.addVariable("password", "GEO")
+facade.addVariable("database", "localhost:1521/GEODATA.localdomain")
 
 facade.view().coordinateReferenceSystem(epsg3857)
 
@@ -63,12 +66,16 @@ if (projectmanager) {
 
 facade.processLauncher()
     .description("backup")
-    .delay(3)
+    .delay(1)
     .timeUnit(TimeUnit.MINUTES)
     .isPeriodic(true)
     .closure( { def monitor, def canceler ->
-      def resource =  facade.resource("\$SYSTEM{jgisshell.workingpath}projects/default/backup.map")
+      def folderResource = facade.resource("\$SYSTEM{jgisshell.workingpath}projects/default")
+      def mapResource =  facade.resource("\$SYSTEM{jgisshell.workingpath}projects/default/backup.map")
+      if (!facade.exists(folderResource)) {
+        facade.createFolder(folderResource)
+      }
       def map = facade.view().map()
-      if (!map.isEmpty()) facade.write(map, resource)
+      if (!map.isEmpty()) facade.write(map, mapResource)
     })
     .launch()
