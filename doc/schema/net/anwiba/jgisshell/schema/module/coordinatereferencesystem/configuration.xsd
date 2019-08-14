@@ -166,9 +166,9 @@
     <xsd:complexContent>
       <xsd:extension base="crs:AbstractTransformerType">
         <xsd:sequence>
-          <xsd:element name="translation" type="crs:VectorType" minOccurs="0" maxOccurs="1"/>
-          <xsd:element name="rotation" type="crs:VectorType" minOccurs="0" maxOccurs="1"/>
-          <xsd:element name="scale" type="xsd:double" minOccurs="0" maxOccurs="1"/>
+          <xsd:element name="translation" type="crs:VectorType" minOccurs="1" maxOccurs="1"/>
+          <xsd:element name="rotation" type="crs:VectorType" minOccurs="1" maxOccurs="1"/>
+          <xsd:element name="scale" type="xsd:double" minOccurs="1" maxOccurs="1"/>
         </xsd:sequence>
       </xsd:extension>
     </xsd:complexContent>

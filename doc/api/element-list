@@ -123,6 +123,7 @@ net.anwiba.spatial.geometry.polygon
 net.anwiba.spatial.geometry.polygon.tree
 net.anwiba.spatial.geometry.ring
 net.anwiba.spatial.geometry.style
+net.anwiba.spatial.geometry.style.properties
 net.anwiba.spatial.geometry.utilities
 net.anwiba.spatial.geometry.validation
 net.anwiba.spatial.style
