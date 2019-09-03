@@ -10,6 +10,8 @@
   "raw": <int> 0,
   "scaled": <boolean> false,
   "timing": <boolean> false,
+  "split24": <boolean> false,
+  "pps": <boolean> false,
   "device": <String> null,
   "remote": <String> null
 }

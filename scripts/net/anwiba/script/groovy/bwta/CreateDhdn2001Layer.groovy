@@ -109,6 +109,7 @@ def createLayer = { name, description, envelope, geometry, transform ->
       }
     }
   }
+  epsg4314toEpsg4258Bwta2017Transformer.close()
   duration = duration + (System.nanoTime() - start);
 
   println "number of points: " + point_counter

@@ -1,4 +1,4 @@
-@JssdFactory(type="typeinfo",types="device,devices,error,gst,poll,sky,tpv,version,watch",property="class")
+@JssdFactory(type="typeinfo",types="device:device,devices:devices,error:error,gst:gst,poll:poll,sky:sky,tpv:tpv,version:version,watch:watch,device:DEVICE,devices:DEVICES,error:ERROR,gst:GST,poll:POLL,sky:SKY,tpv:TPV,version:VERSION,watch:WATCH",property="class")
 {
   @JssdImmutable
   @JssdNoProperty

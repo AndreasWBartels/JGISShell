@@ -120,6 +120,7 @@ def createLayer = { name, description, envelope, geometry, transform ->
   println "maximum: " + maximum
 
   builder.build();
+  epsg4314toEpsg4258Bwta2017Transformer.close()
 }
 
 def createMap = { layer, coordinateReferenceSystem, startValue, endValue, stepSize ->
@@ -201,3 +202,5 @@ facade.copy(layer, facade.layerReference("\$SYSTEM{jgisshell.workingpath}data/bw
 createXYZFile(layer, epsg31467)
 createMap(layer, epsg31467, 0.0, 2.0, 0.05)
 createMap(layer, epsg31467, 0.0, 0.5, 0.01)
+
+epsg4314toEpsg4258Transformer.close()

@@ -70,6 +70,7 @@ for (def x = (envelope.getMinimum().getXValue() + (stepSize/2)); x < envelope.ge
     }
   }
 }
+epsg4314toEpsg4258Bwta2017Transformer.close()
 duration = duration + (System.currentTimeMillis() - start);
 
 println "number of points: " + point_counter

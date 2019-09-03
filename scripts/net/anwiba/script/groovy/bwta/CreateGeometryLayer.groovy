@@ -85,3 +85,6 @@ view().style(id, style)
 
 
 facade.copy(layer, facade.layerReference("\$SYSTEM{jgisshell.workingpath}data/bwta/geometry.shp"));
+
+epsg4326toEpsg4314Bwta2017Transformer.close()
+beta2017ToEpsg4258Transformer.close()
