@@ -35,6 +35,7 @@ net.anwiba.commons.reference
 net.anwiba.commons.reference.utilities
 net.anwiba.commons.thread.cancel
 net.anwiba.commons.thread.job
+net.anwiba.commons.thread.monitor
 net.anwiba.commons.thread.process
 net.anwiba.commons.thread.program
 net.anwiba.commons.thread.progress

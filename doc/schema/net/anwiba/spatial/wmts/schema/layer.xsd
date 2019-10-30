@@ -45,7 +45,7 @@
       <xsd:element name="dimension" type="layer:DimensionType" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element name="matrixSet" type="layer:MatrixSetType" minOccurs="1" maxOccurs="unbounded"/>
       <xsd:element name="tiles" type="layer:TilesType" minOccurs="1" maxOccurs="1"/>
-      <xsd:element name="objectInfo" type="layer:KvpResourceType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="objectInfo" type="layer:ResourceType" minOccurs="0" maxOccurs="1"/>
     </xsd:sequence>
   </xsd:complexType>
 
@@ -103,24 +103,10 @@
         <jaxb:class name="Tiles"/>
       </xsd:appinfo>
     </xsd:annotation>
-    <xsd:complexContent>
-      <xsd:extension base="layer:KvpResourceType">
-        <xsd:sequence>
-          <xsd:element name="restful" type="layer:ResourceType" minOccurs="0" maxOccurs="unbounded"/>
-        </xsd:sequence>
-      </xsd:extension>
-    </xsd:complexContent>
-  </xsd:complexType>
-
-  <xsd:complexType name="KvpResourceType">
-    <xsd:annotation>
-      <xsd:appinfo>
-        <jaxb:class name="KvpResource"/>
-      </xsd:appinfo>
-    </xsd:annotation>
     <xsd:sequence>
-      <xsd:element name="format" type="xsd:string" minOccurs="1" maxOccurs="unbounded"/>
-      <xsd:element name="url" type="xsd:anyURI" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="operation" type="xsd:string" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element name="kvpResource" type="layer:ResourceType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="restfulResource" type="layer:ResourceType" minOccurs="0" maxOccurs="unbounded"/>
     </xsd:sequence>
   </xsd:complexType>
 
@@ -131,7 +117,7 @@
       </xsd:appinfo>
     </xsd:annotation>
     <xsd:sequence>
-      <xsd:element name="format" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="format" type="xsd:string" minOccurs="1" maxOccurs="unbounded"/>
       <xsd:element name="url" type="xsd:anyURI" minOccurs="1" maxOccurs="1"/>
     </xsd:sequence>
   </xsd:complexType>

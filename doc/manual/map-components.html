@@ -788,6 +788,52 @@ see <a href="#datasources">Supported formats</a>
 </li>
 </ul>
 </div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/mapviewer-mode-distance-measure-osmmap.png" alt="measure distance">
+</div>
+<div class="title">Figure 2. Measure distance</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The distance is displayed in the status line. The see result is calculated on the rotation ellipsoid. see <a href="#length-and-area-calculation">length and area calculation</a>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><strong>Enable layer clipping mode</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Toolbar <span class="image"><img src="./images/icons/edit-cut.png" alt="layer clipping"></span></p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/mapviewer-mode-layer-clipping-osmmap.png" alt="layer clipping">
+</div>
+<div class="title">Figure 3. Layer clipping</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+To set a clipping a layer must be selected. The clipping is relative to the map section and only has an effect on the presentation. The clipping can be deleted by clicking the right mouse button or pressing the delete key.
+</td>
+</tr>
+</table>
+</div>
 <div class="paragraph">
 <p><strong>Enable zoom and move mode</strong></p>
 </div>
@@ -1289,7 +1335,7 @@ Ensure that objects are selected and the objects owning layer
 <div class="content">
 <img src="./images/mapviewer-osmmap.png" alt="map viewer">
 </div>
-<div class="title">Figure 2. Map view</div>
+<div class="title">Figure 4. Map view</div>
 </div>
 <div style="page-break-after: always;"></div>
 <div class="sect3">
@@ -1544,7 +1590,7 @@ Ensure that objects are selected and the objects owning layer
 <div class="content">
 <img src="./images/mapviewer-locator-osmmap.png" alt="locator">
 </div>
-<div class="title">Figure 3. Locator view</div>
+<div class="title">Figure 5. Locator view</div>
 </div>
 <div class="sect3">
 <h4 id="features-3"><a class="anchor" href="#features-3"></a>Features</h4>
@@ -1708,7 +1754,7 @@ see <a href="#datasources">Supported formats</a>
 <div class="content">
 <img src="./images/mapviewer-legend-osmmap.png" alt="image legend">
 </div>
-<div class="title">Figure 4. Legend view</div>
+<div class="title">Figure 6. Legend view</div>
 </div>
 <div class="sect3">
 <h4 id="features-4"><a class="anchor" href="#features-4"></a>Features</h4>
@@ -1746,7 +1792,7 @@ see <a href="#datasources">Supported formats</a>
 <div class="ulist">
 <ul>
 <li>
-<p>menu:Layer[Popup &gt; Popup &gt; Remove]</p>
+<p>menu:Legend component[Layer &gt; Popup &gt; Remove]</p>
 </li>
 </ul>
 </div>
@@ -1756,7 +1802,7 @@ see <a href="#datasources">Supported formats</a>
 <div class="ulist">
 <ul>
 <li>
-<p>menu:Layer[Popup &gt; Fit to layer]</p>
+<p>menu:Legend component[Layer &gt; Popup &gt; Fit to layer]</p>
 </li>
 </ul>
 </div>
@@ -1776,7 +1822,7 @@ see <a href="#datasources">Supported formats</a>
 <div class="ulist">
 <ul>
 <li>
-<p>menu:Layer[Popup &gt; Popup &gt; Properties]</p>
+<p>menu:Legend component[Layer &gt; Popup &gt; Properties]</p>
 </li>
 </ul>
 </div>
@@ -1786,7 +1832,7 @@ see <a href="#datasources">Supported formats</a>
 <div class="ulist">
 <ul>
 <li>
-<p>menu:Layer[Popup &gt; Popup &gt; Attribute table]</p>
+<p>menu:Legend component[Layer &gt; Popup &gt; Attribute table]</p>
 </li>
 </ul>
 </div>
@@ -1809,7 +1855,7 @@ see <a href="#datasources">Supported formats</a>
 <div class="content">
 <img src="./images/mapviewer-detail-maps-osmmap.png" alt="detail maps">
 </div>
-<div class="title">Figure 5. Detail maps view</div>
+<div class="title">Figure 7. Detail maps view</div>
 </div>
 <div class="sect3">
 <h4 id="features-5"><a class="anchor" href="#features-5"></a>Features</h4>
@@ -1996,7 +2042,7 @@ see <a href="#datasources">Supported formats</a>
 <div class="content">
 <img src="./images/mapviewer-gazetteer-osmmap.png" alt="gazetteer">
 </div>
-<div class="title">Figure 6. Gazetteer  component</div>
+<div class="title">Figure 8. Gazetteer  component</div>
 </div>
 <div class="sect3">
 <h4 id="configuration"><a class="anchor" href="#configuration"></a>Configuration</h4>
@@ -2112,7 +2158,7 @@ Schema
 <div class="content">
 <img src="./images/mapviewer-object-search-osmmap.png" alt="object search">
 </div>
-<div class="title">Figure 7. Object search component</div>
+<div class="title">Figure 9. Object search component</div>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -2227,7 +2273,19 @@ needs one selected layer
 <div class="content">
 <img src="./images/mapviewer-time-range-osmmap.png" alt="time range">
 </div>
-<div class="title">Figure 8. Time range</div>
+<div class="title">Figure 10. Time range</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+see <a href="#time">Layer time properties</a>
+</td>
+</tr>
+</table>
 </div>
 <div style="page-break-after: always;"></div>
 </div>
@@ -2237,7 +2295,19 @@ needs one selected layer
 <div class="content">
 <img src="./images/mapviewer-scalebar-osmmap.png" alt="scale bar">
 </div>
-<div class="title">Figure 9. Time range</div>
+<div class="title">Figure 11. Scale bar</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The distances of the scale bar correspond to the coordinate reference system, they can be distorted in relation to reality.
+</td>
+</tr>
+</table>
 </div>
 <div style="page-break-after: always;"></div>
 </div>
@@ -2247,7 +2317,19 @@ needs one selected layer
 <div class="content">
 <img src="./images/mapviewer-mapgrid-topplus.png" alt="map grid">
 </div>
-<div class="title">Figure 10. Map grid</div>
+<div class="title">Figure 12. Map grid</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The distances of the map grid correspond to the coordinate reference system, they can be distorted in relation to reality.
+</td>
+</tr>
+</table>
 </div>
 <div style="page-break-after: always;"></div>
 </div>
@@ -2257,7 +2339,7 @@ needs one selected layer
 <div class="content">
 <img src="./images/mapviewer-map-distortion-osmmap.png" alt="map distortion">
 </div>
-<div class="title">Figure 11. Map distortion</div>
+<div class="title">Figure 13. Map distortion</div>
 </div>
 </div>
 </div>
@@ -2265,7 +2347,7 @@ needs one selected layer
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2019-09-01 23:01:20 +0200
+Last updated 2019-09-13 01:39:54 +0200
 </div>
 </div>
 </body>
