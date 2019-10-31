@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layer:layer xmlns:layer="http://www.anwiba.net/java/layer"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.anwiba.net/java/layer layer.xsd ">
+  
+  <layer:featureDescription>
+    <layer:string name="id" identifier="true" />
+    <layer:string name="ids" />
+    <layer:string name="code" />
+    <layer:string name="place" />
+    <layer:string name="title" />
+    <layer:string name="types" />
+    <layer:string name="type" />
+    <layer:double name="mag" />
+    <layer:string name="magType" />
+    <layer:long name="sig"  />
+    <layer:long name="nst"  />
+    <layer:double name="dmin" />
+    <layer:double name="rms" />
+    <layer:long name="gap"  />
+    <layer:string name="alert" />
+    <layer:boolean name="tsunami" />
+    <layer:string name="felt" />
+    <layer:string name="cdi" />
+    <layer:string name="mmi" />
+    <layer:string name="net" />
+    <layer:string name="sources" />
+    <layer:string name="status" />
+    <layer:string name="url" />
+    <layer:string name="detail" />
+    <layer:date name="time"  />
+    <layer:date name="updated" />
+    <layer:long name="tz"  />
+    <layer:geometry name="geometry" type="Point" coordinateDimension="3" coordinateReferenceSystem="EPSG:4326" />
+  </layer:featureDescription>
+  <layer:envelope>
+    <layer:minimum x="-180" y="-85"/>
+    <layer:maximum x="180" y="85"/>
+  </layer:envelope>
+  <layer:iteratorFactory>
+    <layer:script>net/anwiba/script/layer/earthquaks.groovy</layer:script>
+  </layer:iteratorFactory>
+</layer:layer>
