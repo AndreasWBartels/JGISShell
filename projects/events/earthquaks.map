@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<map xmlns:crs="http://www.anwiba.net/gis/crs" xmlns:condition="http://www.anwiba.net/condition" xmlns:tooltip="http://www.anwiba.net/tooltip" xmlns:label="http://www.anwiba.net/label" xmlns:font="http://www.anwiba.net/font">
+ <crs:coordinateReferenceSystem>
+  <crs:projectedCoordinateReference name="WGS 84 / Pseudo-Mercator" projection="Mercator 1SP">
+   <crs:geographicCoordinateReference name="World Geodetic System 1984">
+    <crs:datum name="World Geodetic System 1984">
+     <crs:spheroid name="WGS 84" semiMajorAxis="6378137.0" inverseFlattening="298.257223563">
+      <crs:Authority name="EPSG" code="7030"/>
+     </crs:spheroid>
+     <crs:toWgs84 dx="0.0" dy="0.0" dz="0.0" rx="0.0" ry="0.0" rz="0.0" ppm="0.0"/>
+     <crs:Authority name="EPSG" code="6326"/>
+    </crs:datum>
+    <crs:primeMeridian name="greenwich" value="0.0">
+     <crs:Authority name="EPSG" code="8901"/>
+    </crs:primeMeridian>
+    <crs:unit name="degree (supplier to define representation)" type="ANGLE" factor="0.017453292519943278"/>
+    <crs:axes>
+     <crs:axis name="LAT" value="NORTH"/>
+     <crs:axis name="LON" value="EAST"/>
+    </crs:axes>
+    <crs:Authority name="EPSG" code="4326"/>
+   </crs:geographicCoordinateReference>
+   <crs:parameters>
+    <crs:parameter name="false easting" value="0.0"/>
+    <crs:parameter name="false northing" value="0.0"/>
+    <crs:parameter name="latitude of natural origin" value="0.0"/>
+    <crs:parameter name="longitude of natural origin" value="0.0"/>
+   </crs:parameters>
+   <crs:unit name="metre" type="DISTANCE" factor="1.0"/>
+   <crs:axes>
+    <crs:axis name="X" value="EAST"/>
+    <crs:axis name="Y" value="NORTH"/>
+   </crs:axes>
+   <crs:Authority name="EPSG" code="3857"/>
+  </crs:projectedCoordinateReference>
+  <crs:Authority name="EPSG" code="3857"/>
+ </crs:coordinateReferenceSystem>
+ <worldBox>
+  <coordinate coordinateDimension="2" isMeasured="false">-2.1371781762033764E7, -4835431.782579682</coordinate>
+  <coordinate coordinateDimension="2" isMeasured="false">7361742.615746507, 9770776.442791957</coordinate>
+ </worldBox>
+ <timeSegment relative="true">
+  <startTime>P0D</startTime>
+  <duration>1</duration>
+  <unit>DAY</unit>
+ </timeSegment>
+ <properties/>
+ <layers>
+  <layer name="Wikimedia Maps" visible="true" uuid="6c48865c-b466-4c13-b85b-1c0a6e8bf7d0">
+   <resource type="SERVICE" layerType="RASTER" format="OSM" codec="PNG">
+    <file url="osm:https://maps.wikimedia.org/osm-intl/{zoomLevel}/{column}/{row}.png"/>
+   </resource>
+   <crs:coordinateReferenceSystem>
+    <crs:projectedCoordinateReference name="WGS 84 / Pseudo-Mercator" projection="Mercator 1SP">
+     <crs:geographicCoordinateReference name="WGS 84">
+      <crs:datum name="WGS 84">
+       <crs:spheroid name="WGS 84" semiMajorAxis="6378137.0" inverseFlattening="298.257223563">
+        <crs:Authority name="EPSG" code="7030"/>
+       </crs:spheroid>
+       <crs:toWgs84 dx="0.0" dy="0.0" dz="0.0" rx="0.0" ry="0.0" rz="0.0" ppm="0.0"/>
+      </crs:datum>
+      <crs:primeMeridian name="greenwich" value="0.0"/>
+      <crs:unit name="degree" type="ANGLE" factor="0.0174532925199433"/>
+      <crs:Authority name="EPSG" code="4326"/>
+     </crs:geographicCoordinateReference>
+     <crs:parameters>
+      <crs:parameter name="false_easting" value="0.0"/>
+      <crs:parameter name="false_northing" value="0.0"/>
+      <crs:parameter name="longitude_of_origin" value="0.0"/>
+      <crs:parameter name="scale_factor" value="1.0"/>
+     </crs:parameters>
+     <crs:unit name="meter" type="DISTANCE" factor="1.0"/>
+     <crs:Authority name="EPSG" code="3857"/>
+    </crs:projectedCoordinateReference>
+    <crs:Authority name="EPSG" code="3857"/>
+   </crs:coordinateReferenceSystem>
+   <style/>
+   <properties/>
+  </layer>
+  <layer name="earthquaks" visible="true" uuid="1ffb86dd-1965-4a54-984b-285908eaf195">
+   <resource type="FILE" layerType="FEATURE" format="JAVALAYER">
+    <file url="$SYSTEM{jgisshell.workingpath}data/earthquaks.jlayer"/>
+   </resource>
+   <crs:coordinateReferenceSystem>
+    <crs:geographicCoordinateReference name="World Geodetic System 1984">
+     <crs:datum name="World Geodetic System 1984">
+      <crs:spheroid name="WGS 84" semiMajorAxis="6378137.0" inverseFlattening="298.257223563">
+       <crs:Authority name="EPSG" code="7030"/>
+      </crs:spheroid>
+      <crs:toWgs84 dx="0.0" dy="0.0" dz="0.0" rx="0.0" ry="0.0" rz="0.0" ppm="0.0"/>
+      <crs:Authority name="EPSG" code="6326"/>
+     </crs:datum>
+     <crs:primeMeridian name="greenwich" value="0.0">
+      <crs:Authority name="EPSG" code="8901"/>
+     </crs:primeMeridian>
+     <crs:unit name="degree (supplier to define representation)" type="ANGLE" factor="0.017453292519943278"/>
+     <crs:Authority name="EPSG" code="4326"/>
+    </crs:geographicCoordinateReference>
+    <crs:Authority name="EPSG" code="4326"/>
+   </crs:coordinateReferenceSystem>
+   <conditionalStyles>
+    <conditionalStyle>
+     <description><![CDATA[< 1]]></description>
+     <condition:condition>
+      <condition:lowerThan type="DOUBLE">
+       <condition:argument nature="reference" name="mag"/>
+       <condition:argument nature="value"><![CDATA[1.0]]></condition:argument>
+      </condition:lowerThan>
+     </condition:condition>
+     <style type="SYMBOL">
+      <symbolstyle shape="DIAMOND" size="10.0" rotation="0.0">
+       <areastyle paintbackground="true">
+        <fillpattern type="SOLID">
+         <color red="255" green="255" blue="180" alpha="255"/>
+        </fillpattern>
+        <linestyle haspoints="false">
+         <signature dashpattern="SOLID_LINE" width="1.0">
+          <color red="255" green="255" blue="180" alpha="255"/>
+         </signature>
+        </linestyle>
+       </areastyle>
+      </symbolstyle>
+     </style>
+    </conditionalStyle>
+    <conditionalStyle>
+     <description><![CDATA[1 - 2]]></description>
+     <condition:condition>
+      <condition:and>
+       <condition:lowerThan type="DOUBLE">
+        <condition:argument nature="reference" name="mag"/>
+        <condition:argument nature="value"><![CDATA[2.0]]></condition:argument>
+       </condition:lowerThan>
+       <condition:greaterEquals type="DOUBLE">
+        <condition:argument nature="reference" name="mag"/>
+        <condition:argument nature="value"><![CDATA[1.0]]></condition:argument>
+       </condition:greaterEquals>
+      </condition:and>
+     </condition:condition>
+     <style type="SYMBOL">
+      <symbolstyle shape="DIAMOND" size="10.0" rotation="0.0">
+       <areastyle paintbackground="true">
+        <fillpattern type="SOLID">
+         <color red="255" green="255" blue="108" alpha="255"/>
+        </fillpattern>
+        <linestyle haspoints="false">
+         <signature dashpattern="SOLID_LINE" width="1.0">
+          <color red="255" green="255" blue="108" alpha="255"/>
+         </signature>
+        </linestyle>
+       </areastyle>
+      </symbolstyle>
+     </style>
+    </conditionalStyle>
+    <conditionalStyle>
+     <description><![CDATA[2 - 3]]></description>
+     <condition:condition>
+      <condition:and>
+       <condition:greaterEquals type="DOUBLE">
+        <condition:argument nature="reference" name="mag"/>
+        <condition:argument nature="value"><![CDATA[2.0]]></condition:argument>
+       </condition:greaterEquals>
+       <condition:lowerThan type="DOUBLE">
+        <condition:argument nature="reference" name="mag"/>
+        <condition:argument nature="value"><![CDATA[3.0]]></condition:argument>
+       </condition:lowerThan>
+      </condition:and>
+     </condition:condition>
+     <style type="SYMBOL">
+      <symbolstyle shape="DIAMOND" size="10.0" rotation="0.0">
+       <areastyle paintbackground="true">
+        <fillpattern type="SOLID">
+         <color red="255" green="255" blue="36" alpha="255"/>
+        </fillpattern>
+        <linestyle haspoints="false">
+         <signature dashpattern="SOLID_LINE" width="1.0">
+          <color red="255" green="255" blue="36" alpha="255"/>
+         </signature>
+        </linestyle>
+       </areastyle>
+      </symbolstyle>
+     </style>
+    </conditionalStyle>
+    <conditionalStyle>
+     <description><![CDATA[3 - 4]]></description>
+     <condition:condition>
+      <condition:and>
+       <condition:lowerThan type="DOUBLE">
+        <condition:argument nature="reference" name="mag"/>
+        <condition:argument nature="value"><![CDATA[4.0]]></condition:argument>
+       </condition:lowerThan>
+       <condition:greaterEquals type="DOUBLE">
+        <condition:argument nature="reference" name="mag"/>
+        <condition:argument nature="value"><![CDATA[3.0]]></condition:argument>
+       </condition:greaterEquals>
+      </condition:and>
+     </condition:condition>
+     <style type="SYMBOL">
+      <symbolstyle shape="DIAMOND" size="10.0" rotation="0.0">
+       <areastyle paintbackground="true">
+        <fillpattern type="SOLID">
+         <color red="255" green="200" blue="0" alpha="255"/>
+        </fillpattern>
+        <linestyle haspoints="false">
+         <signature dashpattern="SOLID_LINE" width="1.0">
+          <color red="255" green="200" blue="0" alpha="255"/>
+         </signature>
+        </linestyle>
+       </areastyle>
+      </symbolstyle>
+     </style>
+    </conditionalStyle>
+    <conditionalStyle>
+     <description><![CDATA[4 - 5]]></description>
+     <condition:condition>
+      <condition:and>
+       <condition:lowerThan type="DOUBLE">
+        <condition:argument nature="reference" name="mag"/>
+        <condition:argument nature="value"><![CDATA[5.0]]></condition:argument>
+       </condition:lowerThan>
+       <condition:greaterEquals type="DOUBLE">
+        <condition:argument nature="reference" name="mag"/>
+        <condition:argument nature="value"><![CDATA[4.0]]></condition:argument>
+       </condition:greaterEquals>
+      </condition:and>
+     </condition:condition>
+     <style type="SYMBOL">
+      <symbolstyle shape="DIAMOND" size="10.0" rotation="0.0">
+       <areastyle paintbackground="true">
+        <fillpattern type="SOLID">
+         <color red="255" green="180" blue="0" alpha="255"/>
+        </fillpattern>
+        <linestyle haspoints="false">
+         <signature dashpattern="SOLID_LINE" width="1.0">
+          <color red="255" green="180" blue="0" alpha="255"/>
+         </signature>
+        </linestyle>
+       </areastyle>
+      </symbolstyle>
+     </style>
+    </conditionalStyle>
+    <conditionalStyle>
+     <description><![CDATA[5 - 6]]></description>
+     <condition:condition>
+      <condition:and>
+       <condition:lowerThan type="DOUBLE">
+        <condition:argument nature="reference" name="mag"/>
+        <condition:argument nature="value"><![CDATA[6.0]]></condition:argument>
+       </condition:lowerThan>
+       <condition:greaterEquals type="DOUBLE">
+        <condition:argument nature="reference" name="mag"/>
+        <condition:argument nature="value"><![CDATA[5.0]]></condition:argument>
+       </condition:greaterEquals>
+      </condition:and>
+     </condition:condition>
+     <style type="SYMBOL">
+      <symbolstyle shape="DIAMOND" size="10.0" rotation="0.0">
+       <areastyle paintbackground="true">
+        <fillpattern type="SOLID">
+         <color red="255" green="108" blue="0" alpha="255"/>
+        </fillpattern>
+        <linestyle haspoints="false">
+         <signature dashpattern="SOLID_LINE" width="1.0">
+          <color red="255" green="108" blue="0" alpha="255"/>
+         </signature>
+        </linestyle>
+       </areastyle>
+      </symbolstyle>
+     </style>
+    </conditionalStyle>
+    <conditionalStyle>
+     <description><![CDATA[6 - 7]]></description>
+     <condition:condition>
+      <condition:and>
+       <condition:lowerThan type="DOUBLE">
+        <condition:argument nature="reference" name="mag"/>
+        <condition:argument nature="value"><![CDATA[7.0]]></condition:argument>
+       </condition:lowerThan>
+       <condition:greaterEquals type="DOUBLE">
+        <condition:argument nature="reference" name="mag"/>
+        <condition:argument nature="value"><![CDATA[6.0]]></condition:argument>
+       </condition:greaterEquals>
+      </condition:and>
+     </condition:condition>
+     <style type="SYMBOL">
+      <symbolstyle shape="DIAMOND" size="10.0" rotation="0.0">
+       <areastyle paintbackground="true">
+        <fillpattern type="SOLID">
+         <color red="255" green="36" blue="0" alpha="255"/>
+        </fillpattern>
+        <linestyle haspoints="false">
+         <signature dashpattern="SOLID_LINE" width="1.0">
+          <color red="255" green="36" blue="0" alpha="255"/>
+         </signature>
+        </linestyle>
+       </areastyle>
+      </symbolstyle>
+     </style>
+    </conditionalStyle>
+    <conditionalStyle>
+     <description><![CDATA[> 7]]></description>
+     <condition:condition>
+      <condition:greaterEquals type="DOUBLE">
+       <condition:argument nature="reference" name="mag"/>
+       <condition:argument nature="value"><![CDATA[7.0]]></condition:argument>
+      </condition:greaterEquals>
+     </condition:condition>
+     <style type="SYMBOL">
+      <symbolstyle shape="DIAMOND" size="10.0" rotation="0.0">
+       <areastyle paintbackground="true">
+        <fillpattern type="SOLID">
+         <color red="255" green="0" blue="0" alpha="255"/>
+        </fillpattern>
+        <linestyle haspoints="false">
+         <signature dashpattern="SOLID_LINE" width="1.0">
+          <color red="255" green="0" blue="0" alpha="255"/>
+         </signature>
+        </linestyle>
+       </areastyle>
+      </symbolstyle>
+     </style>
+    </conditionalStyle>
+   </conditionalStyles>
+   <style type="SYMBOL">
+    <symbolstyle shape="DIAMOND" size="10.0" rotation="0.0">
+     <areastyle paintbackground="true">
+      <fillpattern type="SOLID">
+       <color red="192" green="192" blue="192" alpha="255"/>
+      </fillpattern>
+      <linestyle haspoints="false">
+       <signature dashpattern="SOLID_LINE" width="1.0">
+        <color red="180" green="180" blue="180" alpha="255"/>
+       </signature>
+      </linestyle>
+     </areastyle>
+    </symbolstyle>
+   </style>
+   <conditionRule>FIRST_MATCH</conditionRule>
+   <tooltip:toolTipStyle>
+    <tooltip:attributeNames>
+     <tooltip:attributeName name="id"/>
+    </tooltip:attributeNames>
+   </tooltip:toolTipStyle>
+   <label:labelStyle>
+    <label:attributeNames/>
+    <font:font name="Monospaced" size="12" isBold="false" isItalic="false"/>
+    <color red="0" green="0" blue="0" alpha="255"/>
+    <label:rotationAngle value="0.0"/>
+    <label:isRotationGeometryOrientated value="false"/>
+    <scalerange/>
+   </label:labelStyle>
+   <temporalAttribute name="time"/>
+   <autoReload enabled="true" delay="PT15M"/>
+   <properties/>
+  </layer>
+ </layers>
+ <locator>
+  <crs:coordinateReferenceSystem>
+   <crs:projectedCoordinateReference name="WGS 84 / Pseudo-Mercator" projection="Mercator 1SP">
+    <crs:geographicCoordinateReference name="WGS 84">
+     <crs:datum name="WGS 84">
+      <crs:spheroid name="WGS 84" semiMajorAxis="6378137.0" inverseFlattening="298.257223563">
+       <crs:Authority name="EPSG" code="7030"/>
+      </crs:spheroid>
+      <crs:toWgs84 dx="0.0" dy="0.0" dz="0.0" rx="0.0" ry="0.0" rz="0.0" ppm="0.0"/>
+     </crs:datum>
+     <crs:primeMeridian name="greenwich" value="0.0"/>
+     <crs:unit name="degree" type="ANGLE" factor="0.0174532925199433"/>
+     <crs:axes>
+      <crs:axis name="north" value="NORTH"/>
+      <crs:axis name="east" value="EAST"/>
+     </crs:axes>
+     <crs:Authority name="EPSG" code="4326"/>
+    </crs:geographicCoordinateReference>
+    <crs:parameters>
+     <crs:parameter name="false_easting" value="0.0"/>
+     <crs:parameter name="false_northing" value="0.0"/>
+     <crs:parameter name="longitude_of_origin" value="0.0"/>
+     <crs:parameter name="scale_factor" value="1.0"/>
+    </crs:parameters>
+    <crs:unit name="meter" type="DISTANCE" factor="1.0"/>
+    <crs:axes>
+     <crs:axis name="east" value="EAST"/>
+     <crs:axis name="north" value="NORTH"/>
+    </crs:axes>
+    <crs:Authority name="EPSG" code="3857"/>
+   </crs:projectedCoordinateReference>
+   <crs:Authority name="EPSG" code="3857"/>
+  </crs:coordinateReferenceSystem>
+  <worldBox>
+   <coordinate coordinateDimension="2" isMeasured="false">-2.6899668734155413E7, -2.0037508342789236E7</coordinate>
+   <coordinate coordinateDimension="2" isMeasured="false">2.6899668734155413E7, 2.0037508342789236E7</coordinate>
+  </worldBox>
+  <properties/>
+  <layers>
+   <layer name="Wikimedia Maps" visible="true" uuid="4ed73339-ef9c-4579-985a-4e958e878c7b">
+    <resource type="SERVICE" layerType="RASTER" format="OSM" codec="PNG">
+     <file url="osm:https://maps.wikimedia.org/osm-intl/{zoomLevel}/{column}/{row}.png"/>
+    </resource>
+    <crs:coordinateReferenceSystem>
+     <crs:projectedCoordinateReference name="WGS 84 / Pseudo-Mercator" projection="Mercator 1SP">
+      <crs:geographicCoordinateReference name="WGS 84">
+       <crs:datum name="WGS 84">
+        <crs:spheroid name="WGS 84" semiMajorAxis="6378137.0" inverseFlattening="298.257223563">
+         <crs:Authority name="EPSG" code="7030"/>
+        </crs:spheroid>
+        <crs:toWgs84 dx="0.0" dy="0.0" dz="0.0" rx="0.0" ry="0.0" rz="0.0" ppm="0.0"/>
+       </crs:datum>
+       <crs:primeMeridian name="greenwich" value="0.0"/>
+       <crs:unit name="degree" type="ANGLE" factor="0.0174532925199433"/>
+       <crs:Authority name="EPSG" code="4326"/>
+      </crs:geographicCoordinateReference>
+      <crs:parameters>
+       <crs:parameter name="false_easting" value="0.0"/>
+       <crs:parameter name="false_northing" value="0.0"/>
+       <crs:parameter name="longitude_of_origin" value="0.0"/>
+       <crs:parameter name="scale_factor" value="1.0"/>
+      </crs:parameters>
+      <crs:unit name="meter" type="DISTANCE" factor="1.0"/>
+      <crs:Authority name="EPSG" code="3857"/>
+     </crs:projectedCoordinateReference>
+     <crs:Authority name="EPSG" code="3857"/>
+    </crs:coordinateReferenceSystem>
+    <style/>
+    <properties/>
+   </layer>
+  </layers>
+ </locator>
+</map>
