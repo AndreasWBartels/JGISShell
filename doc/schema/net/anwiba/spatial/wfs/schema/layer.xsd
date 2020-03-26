@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema jaxb:version="2.0"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+  xmlns:jaxb="http://java.sun.com/xml/ns/jaxb"
+  xmlns:layer="http://www.anwiba.net/wfs/layer"
+  targetNamespace="http://www.anwiba.net/wfs/layer"
+  elementFormDefault="qualified">
+
+  <xsd:annotation>
+    <xsd:appinfo>
+      <jaxb:schemaBindings>
+        <jaxb:package name="net.anwiba.spatial.wfs.schema.layer"/>
+      </jaxb:schemaBindings>
+    </xsd:appinfo>
+  </xsd:annotation>
+
+  <xsd:element name="layers" type="layer:LayersType">
+  </xsd:element>
+
+  <xsd:complexType name="LayersType">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <jaxb:class name="Layers"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="layer" type="layer:LayerType" minOccurs="1" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="LayerType">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <jaxb:class name="Layer"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="namespace" type="layer:NamespaceType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="identifier" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="name" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="abstract" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="keyword" type="xsd:string" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element name="version" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="srs" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="boundingBox" type="layer:BoundingBoxType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="operations" type="layer:OperationsType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="requests" type="layer:RequestsType" minOccurs="1" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="NamespaceType">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <jaxb:class name="Namespace"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:attribute name="alias" type="xsd:string"/>
+    <xsd:attribute name="url" type="xsd:anyURI"/>
+  </xsd:complexType>
+
+  <xsd:complexType name="BoundingBoxType">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <jaxb:class name="BoundingBox"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="srs" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="minx" type="xsd:double" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="miny" type="xsd:double" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="maxx" type="xsd:double" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="maxy" type="xsd:double" minOccurs="1" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="ResourceType">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <jaxb:class name="Resource"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="format" type="xsd:string" minOccurs="1" maxOccurs="unbounded"/>
+      <xsd:element name="url" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="OperationsType">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <jaxb:class name="Operations"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="operation" type="xsd:string" minOccurs="0" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="RequestsType">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <jaxb:class name="Requests"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="request" type="layer:RequestType" minOccurs="0" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="RequestType">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <jaxb:class name="Request"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="method" type="layer:MethodType" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element name="response" type="layer:ResponseType" minOccurs="1" maxOccurs="1"/>
+    </xsd:sequence>
+    <xsd:attribute name="name" type="xsd:string"/>
+  </xsd:complexType>
+
+  <xsd:complexType name="MethodType">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <jaxb:class name="Method"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:attribute name="name" type="xsd:string"/>
+    <xsd:attribute name="url" type="xsd:anyURI"/>
+  </xsd:complexType>
+
+  <xsd:complexType name="ResponseType">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <jaxb:class name="Response"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="format" type="xsd:string" minOccurs="1" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+</xsd:schema>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:jaxb="http://java.sun.com/xml/ns/jaxb"
+    xmlns:tree="http://www.anwiba.net/wfs/tree"
+    jaxb:version="2.0"
+    targetNamespace="http://www.anwiba.net/wfs/tree"
+    elementFormDefault="qualified">
+
+  <xsd:annotation>
+    <xsd:appinfo>
+      <jaxb:schemaBindings>
+        <jaxb:package name="net.anwiba.spatial.wfs.schema.tree"/>
+      </jaxb:schemaBindings>
+    </xsd:appinfo>
+  </xsd:annotation>
+
+  <xsd:element name="tree" type="tree:TreeType">
+  </xsd:element>
+
+
+  <xsd:complexType name="TreeType">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <jaxb:class name="Tree"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="keyword" type="xsd:string" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:choice minOccurs="0" maxOccurs="unbounded">
+        <xsd:element name="folder" type="tree:FolderType"/>
+        <xsd:element name="layer" type="tree:LayerType"/>
+      </xsd:choice>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="LayerType">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <jaxb:class name="Layer"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="tree:ItemType">
+        <xsd:sequence>
+          <xsd:element name="identifier" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+          <xsd:element name="keyword" type="xsd:string" minOccurs="0" maxOccurs="unbounded"/>
+          <xsd:element name="metaDataResource" type="xsd:string" minOccurs="0" maxOccurs="unbounded"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+
+  <xsd:complexType name="FolderType">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <jaxb:class name="Folder"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="tree:ItemType">
+        <xsd:sequence>
+          <xsd:choice minOccurs="0" maxOccurs="unbounded">
+            <xsd:element name="folder" type="tree:FolderType"/>
+            <xsd:element name="layer" type="tree:LayerType"/>
+          </xsd:choice>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+
+  <xsd:complexType name="ItemType">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <jaxb:class name="AbstractItem"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="name" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+</xsd:schema>

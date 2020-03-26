@@ -3,6 +3,7 @@
   "type" : <String> null,
   "sqlType" : <String> null,
   "alias" : <String> null,
+  "description" : <String> null,
   "editable" : <boolean> false,
   "nullable" : <boolean> true,
   "domain" : <domain> null,

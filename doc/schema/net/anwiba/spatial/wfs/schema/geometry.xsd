@@ -1,0 +1,252 @@
+<xsd:schema jaxb:version="2.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jaxb="http://java.sun.com/xml/ns/jaxb" xmlns="http://www.anwiba.net/wfs/geometry" targetNamespace="http://www.anwiba.net/wfs/geometry"
+  elementFormDefault="qualified">
+
+  <xsd:annotation>
+    <xsd:appinfo>
+      <jaxb:schemaBindings>
+        <jaxb:package name="net.anwiba.spatial.wfs.schema.geometry" />
+      </jaxb:schemaBindings>
+    </xsd:appinfo>
+  </xsd:annotation>
+
+  <xsd:element name="geometry" type="AbstractGeometryType" abstract="true" />
+
+  <xsd:element name="point" type="PointType" substitutionGroup="geometry" />
+  <xsd:element name="multiPoint" type="MultiPointType" substitutionGroup="geometry" />
+
+  <xsd:element name="lineString" type="LineStringType" substitutionGroup="geometry" />
+  <xsd:element name="multiLineString" type="MultiLineStringType" substitutionGroup="geometry" />
+
+  <xsd:element name="linearRing" type="LinearRingType" substitutionGroup="geometry" />
+  <xsd:element name="polygon" type="PolygonType" substitutionGroup="geometry" />
+  <xsd:element name="multiPolygon" type="MultiPolygonType" substitutionGroup="geometry" />
+
+  <xsd:element name="envelope" type="EnvelopeType" />
+
+  <xsd:complexType name="AbstractGeometryType" abstract="true">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <jaxb:class name="AbstractGeometry" />
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:attribute name="crs" type="xsd:string" use="required" />
+  </xsd:complexType>
+
+  <xsd:complexType name="PointType">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <jaxb:class name="Point" />
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="AbstractGeometryType">
+        <xsd:sequence>
+          <xsd:element name="coordinate" type="CoordinateType" minOccurs="1" maxOccurs="1" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+
+  <xsd:complexType name="AbstractCurveType" abstract="true">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <jaxb:class name="AbstractCurve" />
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="AbstractGeometryType">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+
+  <xsd:complexType name="LineStringType">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <jaxb:class name="LineString" />
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="AbstractCurveType">
+        <xsd:sequence>
+          <xsd:element name="coordinates" type="CoordinatesType" minOccurs="1" maxOccurs="1" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+
+  <xsd:complexType name="LinearRingType">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <jaxb:class name="LinearRing" />
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="AbstractCurveType">
+        <xsd:sequence>
+          <xsd:element name="coordinates" type="CoordinatesType" minOccurs="1" maxOccurs="1" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+
+  <xsd:complexType name="AbstractSurfaceType" abstract="true">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <jaxb:class name="AbstractSurface" />
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="AbstractGeometryType">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+
+  <xsd:complexType name="PolygonType">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <jaxb:class name="Polygon" />
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="AbstractSurfaceType">
+        <xsd:sequence>
+          <xsd:element name="outerRing" type="LinearRingType" minOccurs="1" maxOccurs="1" />
+          <xsd:element name="innerRings" type="LinearRingType" minOccurs="1" maxOccurs="unbounded" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+
+  <xsd:complexType name="AbstractCollectionType" abstract="true">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <jaxb:class name="AbstractCollection" />
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="AbstractGeometryType">
+        <xsd:sequence>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+
+  <xsd:complexType name="MultiPointType">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <jaxb:class name="MultiPoint" />
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="AbstractCollectionType">
+        <xsd:sequence>
+          <xsd:element name="members" type="PointType" minOccurs="1" maxOccurs="unbounded" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+
+  <xsd:complexType name="MultiCurveType">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <jaxb:class name="MultiCurve" />
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="AbstractCollectionType">
+        <xsd:sequence>
+          <xsd:element name="members" type="AbstractCurveType" minOccurs="1" maxOccurs="unbounded" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+
+  <xsd:complexType name="MultiLineStringType">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <jaxb:class name="MultiLineString" />
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="AbstractCollectionType">
+        <xsd:sequence>
+          <xsd:element name="members" type="LineStringType" minOccurs="1" maxOccurs="unbounded" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+
+  <xsd:complexType name="MultiPolygonType">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <jaxb:class name="MultiPolygon" />
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="AbstractCollectionType">
+        <xsd:sequence>
+          <xsd:element name="members" type="PolygonType" minOccurs="1" maxOccurs="unbounded" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+
+  <xsd:complexType name="MultiSurfaceType">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <jaxb:class name="MultiSurface" />
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="AbstractCollectionType">
+        <xsd:sequence>
+          <xsd:element name="members" type="AbstractSurfaceType" minOccurs="1" maxOccurs="unbounded" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+
+  <xsd:complexType name="EnvelopeType">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <jaxb:class name="Envelope" />
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="minimum" type="CoordinateType" minOccurs="1" maxOccurs="1" />
+      <xsd:element name="maximum" type="CoordinateType" minOccurs="1" maxOccurs="1" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="AbstractCoordinateType">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <jaxb:class name="AbstractCoordinate" />
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:simpleContent>
+      <xsd:extension base="xsd:string">
+        <xsd:attribute name="dimension" type="xsd:int" use="optional" default="2" />
+        <xsd:attribute name="decimal" type="xsd:string" use="optional" default="." />
+        <xsd:attribute name="cs" type="xsd:string" use="optional" default="&#x20;" />
+        <xsd:attribute name="ts" type="xsd:string" use="optional" default="&#x20;" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+
+  <xsd:complexType name="CoordinateType">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <jaxb:class name="Coordinate" />
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:complexType>
+
+  <xsd:complexType name="CoordinatesType">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <jaxb:class name="Coordinates" />
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:complexType>
+</xsd:schema>
