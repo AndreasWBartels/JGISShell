@@ -109,11 +109,6 @@ net.anwiba.spatial.coordinatereferencesystem.coordinatesystem.unit
 net.anwiba.spatial.coordinatereferencesystem.coordinatesystem.utilities
 net.anwiba.spatial.coordinatereferencesystem.utilities
 net.anwiba.spatial.geometry
-net.anwiba.spatial.geometry.attribute
-net.anwiba.spatial.geometry.attribute.comperator
-net.anwiba.spatial.geometry.attribute.condition
-net.anwiba.spatial.geometry.attribute.filter
-net.anwiba.spatial.geometry.attribute.string
 net.anwiba.spatial.geometry.calculator
 net.anwiba.spatial.geometry.converter
 net.anwiba.spatial.geometry.exception

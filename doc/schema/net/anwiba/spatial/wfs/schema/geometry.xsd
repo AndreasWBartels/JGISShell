@@ -9,7 +9,7 @@
     </xsd:appinfo>
   </xsd:annotation>
 
-  <xsd:element name="geometry" type="AbstractGeometryType" abstract="true" />
+  <xsd:element name="geometry" type="AbstractGeometryType" abstract="false" />
 
   <xsd:element name="point" type="PointType" substitutionGroup="geometry" />
   <xsd:element name="multiPoint" type="MultiPointType" substitutionGroup="geometry" />
@@ -29,7 +29,7 @@
         <jaxb:class name="AbstractGeometry" />
       </xsd:appinfo>
     </xsd:annotation>
-    <xsd:attribute name="crs" type="xsd:string" use="required" />
+    <xsd:attribute name="crs" type="xsd:string" use="optional" />
   </xsd:complexType>
 
   <xsd:complexType name="PointType">
@@ -111,10 +111,21 @@
       <xsd:extension base="AbstractSurfaceType">
         <xsd:sequence>
           <xsd:element name="outerRing" type="LinearRingType" minOccurs="1" maxOccurs="1" />
-          <xsd:element name="innerRings" type="LinearRingType" minOccurs="1" maxOccurs="unbounded" />
+          <xsd:element name="innerRings" type="InnerRingsType" minOccurs="0" maxOccurs="1" />
         </xsd:sequence>
       </xsd:extension>
     </xsd:complexContent>
+  </xsd:complexType>
+
+  <xsd:complexType name="InnerRingsType">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <jaxb:class name="InnerRings" />
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="innerRing" type="LinearRingType" minOccurs="0" maxOccurs="unbounded" />
+    </xsd:sequence>
   </xsd:complexType>
 
   <xsd:complexType name="AbstractCollectionType" abstract="true">
@@ -131,6 +142,21 @@
     </xsd:complexContent>
   </xsd:complexType>
 
+  <xsd:complexType name="GeometryCollectionType">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <jaxb:class name="GeometryCollection" />
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="AbstractCollectionType">
+        <xsd:sequence>
+          <xsd:element name="members" type="AbstractGeometryType" minOccurs="1" maxOccurs="unbounded" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+
   <xsd:complexType name="MultiPointType">
     <xsd:annotation>
       <xsd:appinfo>
@@ -140,22 +166,22 @@
     <xsd:complexContent>
       <xsd:extension base="AbstractCollectionType">
         <xsd:sequence>
-          <xsd:element name="members" type="PointType" minOccurs="1" maxOccurs="unbounded" />
+          <xsd:element name="members" type="MultiPointMembersType" minOccurs="1" maxOccurs="1" />
         </xsd:sequence>
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
 
-  <xsd:complexType name="MultiCurveType">
+  <xsd:complexType name="MultiPointMembersType">
     <xsd:annotation>
       <xsd:appinfo>
-        <jaxb:class name="MultiCurve" />
+        <jaxb:class name="MultiPointMembers" />
       </xsd:appinfo>
     </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="AbstractCollectionType">
         <xsd:sequence>
-          <xsd:element name="members" type="AbstractCurveType" minOccurs="1" maxOccurs="unbounded" />
+          <xsd:element name="point" type="PointType" minOccurs="1" maxOccurs="unbounded" />
         </xsd:sequence>
       </xsd:extension>
     </xsd:complexContent>
@@ -170,7 +196,22 @@
     <xsd:complexContent>
       <xsd:extension base="AbstractCollectionType">
         <xsd:sequence>
-          <xsd:element name="members" type="LineStringType" minOccurs="1" maxOccurs="unbounded" />
+          <xsd:element name="members" type="MultiLineStringMembersType" minOccurs="1" maxOccurs="1" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+
+  <xsd:complexType name="MultiLineStringMembersType">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <jaxb:class name="MultiLineStringMembers" />
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="AbstractCollectionType">
+        <xsd:sequence>
+          <xsd:element name="lineString" type="LineStringType" minOccurs="1" maxOccurs="unbounded" />
         </xsd:sequence>
       </xsd:extension>
     </xsd:complexContent>
@@ -185,22 +226,22 @@
     <xsd:complexContent>
       <xsd:extension base="AbstractCollectionType">
         <xsd:sequence>
-          <xsd:element name="members" type="PolygonType" minOccurs="1" maxOccurs="unbounded" />
+          <xsd:element name="members" type="MultiPolygonMembersType" minOccurs="1" maxOccurs="1" />
         </xsd:sequence>
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
 
-  <xsd:complexType name="MultiSurfaceType">
+  <xsd:complexType name="MultiPolygonMembersType">
     <xsd:annotation>
       <xsd:appinfo>
-        <jaxb:class name="MultiSurface" />
+        <jaxb:class name="MultiPolygonMembers" />
       </xsd:appinfo>
     </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="AbstractCollectionType">
         <xsd:sequence>
-          <xsd:element name="members" type="AbstractSurfaceType" minOccurs="1" maxOccurs="unbounded" />
+          <xsd:element name="polygon" type="PolygonType" minOccurs="1" maxOccurs="unbounded" />
         </xsd:sequence>
       </xsd:extension>
     </xsd:complexContent>
@@ -212,10 +253,14 @@
         <jaxb:class name="Envelope" />
       </xsd:appinfo>
     </xsd:annotation>
-    <xsd:sequence>
-      <xsd:element name="minimum" type="CoordinateType" minOccurs="1" maxOccurs="1" />
-      <xsd:element name="maximum" type="CoordinateType" minOccurs="1" maxOccurs="1" />
-    </xsd:sequence>
+    <xsd:complexContent>
+      <xsd:extension base="AbstractGeometryType">
+        <xsd:sequence>
+          <xsd:element name="minimum" type="CoordinateType" minOccurs="1" maxOccurs="1" />
+          <xsd:element name="maximum" type="CoordinateType" minOccurs="1" maxOccurs="1" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
   </xsd:complexType>
 
   <xsd:complexType name="AbstractCoordinateType">
@@ -240,6 +285,10 @@
         <jaxb:class name="Coordinate" />
       </xsd:appinfo>
     </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="AbstractCoordinateType">
+      </xsd:extension>
+    </xsd:complexContent>
   </xsd:complexType>
 
   <xsd:complexType name="CoordinatesType">
@@ -248,5 +297,9 @@
         <jaxb:class name="Coordinates" />
       </xsd:appinfo>
     </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="AbstractCoordinateType">
+      </xsd:extension>
+    </xsd:complexContent>
   </xsd:complexType>
 </xsd:schema>

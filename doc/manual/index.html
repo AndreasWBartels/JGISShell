@@ -548,23 +548,24 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#sqlite">12.13. Sqlite</a></li>
 <li><a href="#spatialite">12.14. Spatialite</a></li>
 <li><a href="#geopackage">12.15. Geopackage</a></li>
-<li><a href="#postgresql">12.16. PostgreSQL</a></li>
-<li><a href="#postgis">12.17. Postgis</a></li>
-<li><a href="#oracle-database">12.18. Oracle Database</a></li>
-<li><a href="#spatiallocator">12.19. Spatial/Locator</a></li>
-<li><a href="#sap-hana-spatial-reference">12.20. SAP Hana Spatial Reference</a></li>
-<li><a href="#esri-personal-geodatabase-mdb">12.21. ESRI Personal Geodatabase (MDB)</a></li>
-<li><a href="#ogc-web-feature-service-wfs">12.22. OGC Web Feature Service (WFS)</a></li>
-<li><a href="#ogc-web-map-service-wms">12.23. OGC Web Map Service (WMS)</a></li>
-<li><a href="#ogc-web-map-tile-service-wmts">12.24. OGC Web Map Tile Service (WMTS)</a></li>
-<li><a href="#esri-arcgis-rest-api">12.25. ESRI ArcGIS REST API</a></li>
-<li><a href="#mapbox">12.26. Mapbox</a></li>
-<li><a href="#mapzen">12.27. Mapzen</a></li>
-<li><a href="#open-street-map-osm">12.28. Open street map (OSM)</a></li>
-<li><a href="#ckan">12.29. CKAN</a></li>
-<li><a href="#georss">12.30. GeoRSS</a></li>
-<li><a href="#mediawiki">12.31. MediaWiki</a></li>
-<li><a href="#event-logging">12.32. Event logging</a></li>
+<li><a href="#h2-database">12.16. H2 database</a></li>
+<li><a href="#postgresql">12.17. PostgreSQL</a></li>
+<li><a href="#postgis">12.18. Postgis</a></li>
+<li><a href="#oracle-database">12.19. Oracle Database</a></li>
+<li><a href="#spatiallocator">12.20. Spatial/Locator</a></li>
+<li><a href="#sap-hana-spatial-reference">12.21. SAP Hana Spatial Reference</a></li>
+<li><a href="#esri-personal-geodatabase-mdb">12.22. ESRI Personal Geodatabase (MDB)</a></li>
+<li><a href="#ogc-web-feature-service-wfs">12.23. OGC Web Feature Service (WFS)</a></li>
+<li><a href="#ogc-web-map-service-wms">12.24. OGC Web Map Service (WMS)</a></li>
+<li><a href="#ogc-web-map-tile-service-wmts">12.25. OGC Web Map Tile Service (WMTS)</a></li>
+<li><a href="#esri-arcgis-rest-api">12.26. ESRI ArcGIS REST API</a></li>
+<li><a href="#mapbox">12.27. Mapbox</a></li>
+<li><a href="#mapzen">12.28. Mapzen</a></li>
+<li><a href="#open-street-map-osm">12.29. Open street map (OSM)</a></li>
+<li><a href="#ckan">12.30. CKAN</a></li>
+<li><a href="#georss">12.31. GeoRSS</a></li>
+<li><a href="#mediawiki">12.32. MediaWiki</a></li>
+<li><a href="#event-logging">12.33. Event logging</a></li>
 </ul>
 </li>
 <li><a href="#scripting-3">13. Scripting</a>
@@ -5554,7 +5555,184 @@ sample
 <div style="page-break-after: always;"></div>
 </div>
 <div class="sect2">
-<h3 id="postgresql"><a class="anchor" href="#postgresql"></a>12.16. PostgreSQL</h3>
+<h3 id="h2-database"><a class="anchor" href="#h2-database"></a>12.16. H2 database</h3>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+see <a href="https://www.h2database.com/html/main.html">H2 database homepage</a>
+</td>
+</tr>
+</table>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">URI syntax</dt>
+</dl>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+syntax
+</td>
+<td class="hdlist2">
+<p>h2:feature:/path/database[extension]</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+sample
+</td>
+<td class="hdlist2">
+<p>h2:feature:/path/transportation[.mv.db]</p>
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<div class="title">Capabilities</div>
+<ul>
+<li>
+<p>Open</p>
+</li>
+<li>
+<p>Reload</p>
+</li>
+<li>
+<p>Remove</p>
+</li>
+<li>
+<p>Bookmark</p>
+</li>
+<li>
+<p>Create new layers</p>
+</li>
+<li>
+<p>Show properties</p>
+</li>
+<li>
+<p>Open in sql console</p>
+</li>
+<li>
+<p>Show in system explorer</p>
+</li>
+</ul>
+</div>
+<div class="dlist">
+<div class="title">Feature layer</div>
+<dl>
+<dt class="hdlist1">URI syntax</dt>
+</dl>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+syntax
+</td>
+<td class="hdlist2">
+<p>h2:feature:/path/database[extension]?table={table name}&amp;column={geometry column name}</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+sample
+</td>
+<td class="hdlist2">
+<p>h2:feature:/path/transportation[.mv.db]?table=highway&amp;column=geometry</p>
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<div class="title">Capabilities</div>
+<ul>
+<li>
+<p>Open in map</p>
+</li>
+<li>
+<p>Open in locator</p>
+</li>
+<li>
+<p>Show attribute table</p>
+</li>
+<li>
+<p>Show properties</p>
+</li>
+<li>
+<p>Open in sql console</p>
+</li>
+<li>
+<p>Save layer as</p>
+</li>
+<li>
+<p>Adapt layer</p>
+</li>
+<li>
+<p>Delete layer content</p>
+</li>
+<li>
+<p>Delete layer</p>
+</li>
+<li>
+<p>Validate layer geometries</p>
+</li>
+</ul>
+</div>
+<div class="ulist">
+<div class="title">Capabilities (Drop)</div>
+<ul>
+<li>
+<p>Insert content</p>
+</li>
+<li>
+<p>Update content</p>
+</li>
+<li>
+<p>Remove content</p>
+</li>
+<li>
+<p>Replace content</p>
+</li>
+</ul>
+</div>
+<div class="ulist">
+<div class="title">Scripting</div>
+<ul>
+<li>
+<p>create database layer</p>
+</li>
+<li>
+<p>delete database layer</p>
+</li>
+<li>
+<p>list layer</p>
+</li>
+<li>
+<p>open as feature layer</p>
+</li>
+<li>
+<p>list features</p>
+</li>
+<li>
+<p>update features</p>
+</li>
+<li>
+<p>append features</p>
+</li>
+<li>
+<p>validate features</p>
+</li>
+</ul>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+<div class="sect2">
+<h3 id="postgresql"><a class="anchor" href="#postgresql"></a>12.17. PostgreSQL</h3>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -5569,7 +5747,7 @@ see <a href="https://www.postgresql.org/">postgresql homepage</a>
 </div>
 </div>
 <div class="sect2">
-<h3 id="postgis"><a class="anchor" href="#postgis"></a>12.17. Postgis</h3>
+<h3 id="postgis"><a class="anchor" href="#postgis"></a>12.18. Postgis</h3>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -5795,7 +5973,7 @@ sample
 <div style="page-break-after: always;"></div>
 </div>
 <div class="sect2">
-<h3 id="oracle-database"><a class="anchor" href="#oracle-database"></a>12.18. Oracle Database</h3>
+<h3 id="oracle-database"><a class="anchor" href="#oracle-database"></a>12.19. Oracle Database</h3>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -5810,7 +5988,7 @@ see <a href="http://www.oracle.com/technetwork/database/index.html">OTN database
 </div>
 </div>
 <div class="sect2">
-<h3 id="spatiallocator"><a class="anchor" href="#spatiallocator"></a>12.19. Spatial/Locator</h3>
+<h3 id="spatiallocator"><a class="anchor" href="#spatiallocator"></a>12.20. Spatial/Locator</h3>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -6015,7 +6193,7 @@ see <a href="#enable-oracle-locator-spatial-support">Enable Oracle Locator/Spati
 <div style="page-break-after: always;"></div>
 </div>
 <div class="sect2">
-<h3 id="sap-hana-spatial-reference"><a class="anchor" href="#sap-hana-spatial-reference"></a>12.20. SAP Hana Spatial Reference</h3>
+<h3 id="sap-hana-spatial-reference"><a class="anchor" href="#sap-hana-spatial-reference"></a>12.21. SAP Hana Spatial Reference</h3>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -6166,7 +6344,7 @@ see <a href="#enable-sap-hana-support">Enable SAP HANA support</a>
 <div style="page-break-after: always;"></div>
 </div>
 <div class="sect2">
-<h3 id="esri-personal-geodatabase-mdb"><a class="anchor" href="#esri-personal-geodatabase-mdb"></a>12.21. ESRI Personal Geodatabase (MDB)</h3>
+<h3 id="esri-personal-geodatabase-mdb"><a class="anchor" href="#esri-personal-geodatabase-mdb"></a>12.22. ESRI Personal Geodatabase (MDB)</h3>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -6302,7 +6480,7 @@ The geometry validation is <a href="http://www.opengeospatial.org/standards/sfa"
 <div style="page-break-after: always;"></div>
 </div>
 <div class="sect2">
-<h3 id="ogc-web-feature-service-wfs"><a class="anchor" href="#ogc-web-feature-service-wfs"></a>12.22. OGC Web Feature Service (WFS)</h3>
+<h3 id="ogc-web-feature-service-wfs"><a class="anchor" href="#ogc-web-feature-service-wfs"></a>12.23. OGC Web Feature Service (WFS)</h3>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -6437,7 +6615,7 @@ supported coordinate reference systems must be defined in <a href="../../config/
 <div style="page-break-after: always;"></div>
 </div>
 <div class="sect2">
-<h3 id="ogc-web-map-service-wms"><a class="anchor" href="#ogc-web-map-service-wms"></a>12.23. OGC Web Map Service (WMS)</h3>
+<h3 id="ogc-web-map-service-wms"><a class="anchor" href="#ogc-web-map-service-wms"></a>12.24. OGC Web Map Service (WMS)</h3>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -6565,7 +6743,7 @@ supported coordinate reference systems must be defined in <a href="../../config/
 <div style="page-break-after: always;"></div>
 </div>
 <div class="sect2">
-<h3 id="ogc-web-map-tile-service-wmts"><a class="anchor" href="#ogc-web-map-tile-service-wmts"></a>12.24. OGC Web Map Tile Service (WMTS)</h3>
+<h3 id="ogc-web-map-tile-service-wmts"><a class="anchor" href="#ogc-web-map-tile-service-wmts"></a>12.25. OGC Web Map Tile Service (WMTS)</h3>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -6680,7 +6858,7 @@ sample
 <div style="page-break-after: always;"></div>
 </div>
 <div class="sect2">
-<h3 id="esri-arcgis-rest-api"><a class="anchor" href="#esri-arcgis-rest-api"></a>12.25. ESRI ArcGIS REST API</h3>
+<h3 id="esri-arcgis-rest-api"><a class="anchor" href="#esri-arcgis-rest-api"></a>12.26. ESRI ArcGIS REST API</h3>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -6857,7 +7035,7 @@ sample
 <div style="page-break-after: always;"></div>
 </div>
 <div class="sect2">
-<h3 id="mapbox"><a class="anchor" href="#mapbox"></a>12.26. Mapbox</h3>
+<h3 id="mapbox"><a class="anchor" href="#mapbox"></a>12.27. Mapbox</h3>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -7028,7 +7206,7 @@ tilesets:read<br></p>
 <div style="page-break-after: always;"></div>
 </div>
 <div class="sect2">
-<h3 id="mapzen"><a class="anchor" href="#mapzen"></a>12.27. Mapzen</h3>
+<h3 id="mapzen"><a class="anchor" href="#mapzen"></a>12.28. Mapzen</h3>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -7098,7 +7276,7 @@ Configuration
 <div style="page-break-after: always;"></div>
 </div>
 <div class="sect2">
-<h3 id="open-street-map-osm"><a class="anchor" href="#open-street-map-osm"></a>12.28. Open street map (OSM)</h3>
+<h3 id="open-street-map-osm"><a class="anchor" href="#open-street-map-osm"></a>12.29. Open street map (OSM)</h3>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -7186,7 +7364,7 @@ Configuration
 <div style="page-break-after: always;"></div>
 </div>
 <div class="sect2">
-<h3 id="ckan"><a class="anchor" href="#ckan"></a>12.29. CKAN</h3>
+<h3 id="ckan"><a class="anchor" href="#ckan"></a>12.30. CKAN</h3>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -7306,7 +7484,7 @@ sample
 </ul>
 </div>
 <div class="sect3">
-<h4 id="dataset-and-resources-search"><a class="anchor" href="#dataset-and-resources-search"></a>12.29.1. Dataset and resources search</h4>
+<h4 id="dataset-and-resources-search"><a class="anchor" href="#dataset-and-resources-search"></a>12.30.1. Dataset and resources search</h4>
 <div class="imageblock">
 <div class="content">
 <img src="./images/dialog-layer-manager-ckan-search-action.png" alt="search">
@@ -7437,7 +7615,7 @@ File
 </div>
 </div>
 <div class="sect2">
-<h3 id="georss"><a class="anchor" href="#georss"></a>12.30. GeoRSS</h3>
+<h3 id="georss"><a class="anchor" href="#georss"></a>12.31. GeoRSS</h3>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -7505,7 +7683,7 @@ sample
 <div style="page-break-after: always;"></div>
 </div>
 <div class="sect2">
-<h3 id="mediawiki"><a class="anchor" href="#mediawiki"></a>12.31. MediaWiki</h3>
+<h3 id="mediawiki"><a class="anchor" href="#mediawiki"></a>12.32. MediaWiki</h3>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -7570,7 +7748,7 @@ sample
 <div style="page-break-after: always;"></div>
 </div>
 <div class="sect2">
-<h3 id="event-logging"><a class="anchor" href="#event-logging"></a>12.32. Event logging</h3>
+<h3 id="event-logging"><a class="anchor" href="#event-logging"></a>12.33. Event logging</h3>
 <div class="imageblock">
 <div class="content">
 <img src="./images/dialog-layer-properties-history.png" alt="history">

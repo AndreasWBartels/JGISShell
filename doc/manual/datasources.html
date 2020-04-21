@@ -459,6 +459,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#sqlite">Sqlite</a></li>
 <li><a href="#spatialite">Spatialite</a></li>
 <li><a href="#geopackage">Geopackage</a></li>
+<li><a href="#h2-database">H2 database</a></li>
 <li><a href="#postgresql">PostgreSQL</a></li>
 <li><a href="#postgis">Postgis</a></li>
 <li><a href="#oracle-database">Oracle Database</a></li>
@@ -1741,6 +1742,183 @@ sample
 </li>
 <li>
 <p>Open in sql console</p>
+</li>
+</ul>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+<div class="sect2">
+<h3 id="h2-database"><a class="anchor" href="#h2-database"></a>H2 database</h3>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+see <a href="https://www.h2database.com/html/main.html">H2 database homepage</a>
+</td>
+</tr>
+</table>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">URI syntax</dt>
+</dl>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+syntax
+</td>
+<td class="hdlist2">
+<p>h2:feature:/path/database[extension]</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+sample
+</td>
+<td class="hdlist2">
+<p>h2:feature:/path/transportation[.mv.db]</p>
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<div class="title">Capabilities</div>
+<ul>
+<li>
+<p>Open</p>
+</li>
+<li>
+<p>Reload</p>
+</li>
+<li>
+<p>Remove</p>
+</li>
+<li>
+<p>Bookmark</p>
+</li>
+<li>
+<p>Create new layers</p>
+</li>
+<li>
+<p>Show properties</p>
+</li>
+<li>
+<p>Open in sql console</p>
+</li>
+<li>
+<p>Show in system explorer</p>
+</li>
+</ul>
+</div>
+<div class="dlist">
+<div class="title">Feature layer</div>
+<dl>
+<dt class="hdlist1">URI syntax</dt>
+</dl>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+syntax
+</td>
+<td class="hdlist2">
+<p>h2:feature:/path/database[extension]?table={table name}&amp;column={geometry column name}</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+sample
+</td>
+<td class="hdlist2">
+<p>h2:feature:/path/transportation[.mv.db]?table=highway&amp;column=geometry</p>
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<div class="title">Capabilities</div>
+<ul>
+<li>
+<p>Open in map</p>
+</li>
+<li>
+<p>Open in locator</p>
+</li>
+<li>
+<p>Show attribute table</p>
+</li>
+<li>
+<p>Show properties</p>
+</li>
+<li>
+<p>Open in sql console</p>
+</li>
+<li>
+<p>Save layer as</p>
+</li>
+<li>
+<p>Adapt layer</p>
+</li>
+<li>
+<p>Delete layer content</p>
+</li>
+<li>
+<p>Delete layer</p>
+</li>
+<li>
+<p>Validate layer geometries</p>
+</li>
+</ul>
+</div>
+<div class="ulist">
+<div class="title">Capabilities (Drop)</div>
+<ul>
+<li>
+<p>Insert content</p>
+</li>
+<li>
+<p>Update content</p>
+</li>
+<li>
+<p>Remove content</p>
+</li>
+<li>
+<p>Replace content</p>
+</li>
+</ul>
+</div>
+<div class="ulist">
+<div class="title">Scripting</div>
+<ul>
+<li>
+<p>create database layer</p>
+</li>
+<li>
+<p>delete database layer</p>
+</li>
+<li>
+<p>list layer</p>
+</li>
+<li>
+<p>open as feature layer</p>
+</li>
+<li>
+<p>list features</p>
+</li>
+<li>
+<p>update features</p>
+</li>
+<li>
+<p>append features</p>
+</li>
+<li>
+<p>validate features</p>
 </li>
 </ul>
 </div>
@@ -3898,7 +4076,7 @@ CLEANED
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2020-03-02 03:00:39 +0100
+Last updated 2020-04-21 03:00:39 +0200
 </div>
 </div>
 <style>

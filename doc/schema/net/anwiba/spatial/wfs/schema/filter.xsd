@@ -59,7 +59,7 @@
   </xsd:complexType>
 
 
-  <xsd:element name="condition" type="AbstractConditionType" abstract="true"/>
+  <xsd:element name="condition" type="AbstractConditionType" abstract="false"/>
 
 
   <xsd:element name="and" type="AndType" substitutionGroup="condition"/>
@@ -218,17 +218,18 @@
   </xsd:complexType>
 
 
-  <xsd:element name="boundinBox" type="BoundinBoxType" substitutionGroup="condition"/>
+  <xsd:element name="boundingBox" type="BoundingBoxType" substitutionGroup="condition"/>
 
-  <xsd:complexType name="BoundinBoxType">
+  <xsd:complexType name="BoundingBoxType">
     <xsd:annotation>
       <xsd:appinfo>
-        <jaxb:class name="BoundinBox"/>
+        <jaxb:class name="BoundingBox"/>
       </xsd:appinfo>
     </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="AbstractConditionType">
         <xsd:sequence>
+          <xsd:element name="name" type="xsd:string" minOccurs="0" maxOccurs="1"/>
           <xsd:element name="value" type="geo:EnvelopeType" minOccurs="1" maxOccurs="1"/>
         </xsd:sequence>
       </xsd:extension>
