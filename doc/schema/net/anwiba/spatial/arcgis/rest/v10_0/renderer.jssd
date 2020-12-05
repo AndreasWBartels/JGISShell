@@ -1,2 +1,15 @@
+@JssdUnknownMember
+@JssdFactory(type="typeinfo",
+             types="classBreaksRenderer:classBreaks,
+                    simpleRenderer:simple,
+                    uniqueValueRenderer:uniqueValue,
+                    dotDensityRenderer:dotDensity,
+                    heatmapRenderer:heatmap,
+                    rasterStretchRenderer:rasterStretch,
+                    temporalRenderer:temporal,
+                    vectorFieldRenderer:vectorField")
 {
+  @JssdImmutable
+  @JssdNoProperty
+  "type": <java.lang.String>
 }

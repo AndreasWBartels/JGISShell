@@ -1,5 +1,6 @@
+@JssdUnknownMember
 {
   "renderer" : <renderer> null,
-  "transparency" : <transparency> null,
-  "labelingInfo" : <labelingInfo> null
+  "transparency" : <double> null,
+  "labelingInfo" : <labelingInfo[]> null
 }

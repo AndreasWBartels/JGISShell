@@ -1,0 +1,16 @@
+@JssdUnknownMember
+{
+
+  /** String value used to describe the drawn symbol. */
+  "description": <String>,
+
+  /** String value used to label the drawn symbol. */
+  "label": <String>,
+
+  /** An object used to display the value. */
+  "symbol": <symbol>,
+
+  /** String value indicating the unique value. */
+  "value": <String>
+
+}

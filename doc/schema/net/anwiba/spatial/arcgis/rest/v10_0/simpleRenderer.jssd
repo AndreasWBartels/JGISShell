@@ -1,0 +1,51 @@
+@JssdExtends(type="renderer")
+{
+  @JssdImmutable
+  @JssdNoProperty
+  "type": <String> "simple",
+
+  /**
+   * An object containing metadata about the authoring process for creating a renderer object.
+   *
+   * <p>This allows the authoring clients to save specific overridable settings so that next time
+   * it is accessed via the UI, their selections are remembered. Non-authoring clients can ignore
+   * it.</p>
+   */
+  "authoringInfo": <authoringInfo>,
+
+  /** Description of the renderer. */
+  "description": <String>,
+
+  /** The text string that is displayed in the table of contents. */
+  "label": <String>,
+
+  /**
+   * A constant value or an expression that derives the angle of rotation based on a feature
+   * attribute value.
+   *
+   * <p>When an attribute name is specified, it's enclosed in square brackets. Rotation is set
+   * using a visual variable of type {@code rotationInfo} with a specified {@code field} or
+   * {@code valueExpression} property.
+   */
+  "rotationExpression": <String>,
+
+  /**
+   * String value which controls the origin and direction of rotation on point features.
+   * <p>If the rotationType is defined as {@code arithmetic}, the symbol is rotated from East in a
+   * counter-clockwise direction where East is the 0 degree axis. If the rotationType is defined as
+   * {@code geographic}, the symbol is rotated from North in a clockwise direction where North is
+   * the 0 degree axis.</p>
+   * <p>If property is present, must be one of the following values:</p>
+   * <ul>
+   * <li>arithmetic</li>
+   * <li>geographic</li>
+   * </ul>
+   */
+  "rotationType": <String>,
+
+  /** An object that represents how all features will be drawn. */
+  "symbol": <symbol>,
+
+  /** An array of objects used to set rendering properties. */
+  "visualVariables": <visualVariable[]>
+}

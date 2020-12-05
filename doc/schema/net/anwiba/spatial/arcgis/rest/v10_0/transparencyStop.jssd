@@ -1,0 +1,18 @@
+@JssdUnknownMember
+{
+  /** A string value used to label the stop in the legend. */
+  "label": <String>,
+
+  /**
+   * A numeric transparancy value for a stop ranging from 0-100, where 0 is opaque
+   * and 100 is 100% transparent.
+   */
+  "transparency": <double>,
+
+  /**
+   * The pixel intensity value.
+   *
+   * <p>Describes the pixel intensity value that the color should be associated with.</p>
+   */
+  "value": <double>
+}

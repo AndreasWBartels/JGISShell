@@ -23,7 +23,7 @@
 
   <xsd:element name="envelope" type="EnvelopeType" />
 
-  <xsd:complexType name="AbstractGeometryType" abstract="true">
+  <xsd:complexType name="AbstractGeometryType" abstract="false">
     <xsd:annotation>
       <xsd:appinfo>
         <jaxb:class name="AbstractGeometry" />

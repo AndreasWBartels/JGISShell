@@ -1,0 +1,117 @@
+@JssdExtends(type="renderer")
+{
+  @JssdImmutable
+  @JssdNoProperty
+  "type": <String> "classBreaks",
+
+  /**
+   * An object containing metadata about the authoring process for creating a renderer object.
+   *
+   * <p>This allows the authoring clients to save specific overridable settings so that next time
+   * it is accessed via the UI, their selections are remembered. Non-authoring clients can ignore
+   * it.</p>
+   */
+  "authoringInfo": <authoringInfo>,
+
+  /**
+   * A symbol used for polygon features as a background if the renderer uses point symbols, e.g.
+   * for bivariate types & size rendering.
+   *
+   * <p>Only applicable to polygon layers. PictureFillSymbols can also be used outside of the Map
+   * Viewer for Size and Predominance and Size renderers.</p>
+   */
+  "backgroundFillSymbol": <symbol>,
+
+  "classBreakInfos": <classBreakInfo[]>,
+
+  /**
+   * Determines the classification method that was used to generate class breaks.
+   *
+   * <p>This has been replaced by authoringInfo.</p>
+   * <p>If property is present, must be one of the following values:</p>
+   * <ul>
+   * <li>esriClassifyDefinedInterval</li>
+   * <li>esriClassifyEqualInterval</li>
+   * <li>esriClassifyGeometricalInterval</li>
+   * <li>esriClassifyManual</li>
+   * <li>esriClassifyNaturalBreaks</li>
+   * <li>esriClassifyQuantile</li>
+   * <li>esriClassifyStandardDeviation</li>
+   * </ul>
+   */
+  "classificationMethod": <String>,
+
+  /** Label for the default symbol used to draw unspecified values. */
+  "defaultLabel": <String>,
+
+  /** Symbol used when a value cannot be classified. */
+  "defaultSymbol": <symbol>,
+
+  /** Attribute field used for renderer. */
+  "field": <String>,
+
+  /** A legend containing one title, which is a string describing the renderer in the legend. */
+  "legendOptions": <legendOptions>,
+
+  /** The minimum numeric data value needed to begin class breaks. */
+  "minValue": <Double>,
+
+  /**
+   * Used when normalizationType is field. The string value indicating the attribute field by which
+   * the data value is normalized.
+   */
+  "normalizationField": <String>,
+
+  /**
+   * Used when normalizationType is percent-of-total, this number property contains the total of all
+   * data values.
+   */
+  "normalizationTotal": <Double>,
+
+  /**
+   * Determine how the data was normalized.
+   * <p>If property is present, must be one of the following values:</p>
+   * <ul>
+   * <li>esriNormalizeByField</li>
+   * <li>esriNormalizeByLog</li>
+   * <li>esriNormalizeByPercentOfTotal</li>
+   * </ul>
+   */
+  "normalizationType": <String>,
+
+  /**
+   * A constant value or an expression that derives the angle of rotation based on a feature
+   * attribute value.
+   *
+   * <p>When an attribute name is specified, it's enclosed in square brackets. Rotation is set
+   * using a visual variable of type {@code rotationInfo} with a specified {@code field} or
+   * {@code valueExpression} property.
+   */
+  "rotationExpression": <String>,
+
+  /**
+   * String value which controls the origin and direction of rotation on point features.
+   * <p>If the rotationType is defined as {@code arithmetic}, the symbol is rotated from East in a
+   * counter-clockwise direction where East is the 0 degree axis. If the rotationType is defined as
+   * {@code geographic}, the symbol is rotated from North in a clockwise direction where North is
+   * the 0 degree axis.</p>
+   * <p>If property is present, must be one of the following values:</p>
+   * <ul>
+   * <li>arithmetic</li>
+   * <li>geographic</li>
+   * </ul>
+   */
+  "rotationType": <String>,
+
+  /** An Arcade expression evaluating to a number. */
+  "valueExpression": <String>,
+
+  /**
+   * The title identifying and describing the associated Arcade expression as defined in the
+   * {@code valueExpression} property.
+   */
+  "valueExpressionTitle": <String>,
+
+  /** An array of objects used to set rendering properties. */
+  "visualVariables": <visualVariable[]>
+}

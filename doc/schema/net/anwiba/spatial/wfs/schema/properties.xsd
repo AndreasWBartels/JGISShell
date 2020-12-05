@@ -25,7 +25,7 @@
     </xsd:annotation>
     <xsd:sequence>
        <xsd:element name="description" type="properties:DescriptionType" minOccurs="0" maxOccurs="1"/>
-       <xsd:element name="contact" type="properties:ContactType" minOccurs="0" maxOccurs="1"/>
+       <xsd:element name="provider" type="properties:ProviderType" minOccurs="0" maxOccurs="1"/>
     </xsd:sequence>
   </xsd:complexType>
 
@@ -45,6 +45,19 @@
     </xsd:sequence>
   </xsd:complexType>
 
+  <xsd:complexType name="ProviderType">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <jaxb:class name="Provider"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="name" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="site" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="contact" type="properties:ContactType" minOccurs="0" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
   <xsd:complexType name="ContactType">
     <xsd:annotation>
       <xsd:appinfo>
@@ -52,8 +65,10 @@
       </xsd:appinfo>
     </xsd:annotation>
     <xsd:sequence>
-      <xsd:element name="person" type="xsd:string" minOccurs="0" maxOccurs="1"/>
-      <xsd:element name="organization" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="name" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="position" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="role" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="site" type="xsd:string" minOccurs="0" maxOccurs="1"/>
       <xsd:element name="phone" type="properties:PhoneType" minOccurs="0" maxOccurs="1"/>
       <xsd:element name="address" type="properties:AddressType" minOccurs="0" maxOccurs="1"/>
     </xsd:sequence>

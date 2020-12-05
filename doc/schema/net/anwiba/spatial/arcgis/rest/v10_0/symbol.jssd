@@ -1,0 +1,13 @@
+@JssdUnknownMember
+@JssdFactory(type="typeinfo",
+             types="simpleLineSymbol:esriSLS,
+                    simpleMarkerSymbol:esriSMS,
+                    simpleFillSymbol:esriSFS,
+                    pictureFillSymbol:esriPFS,
+                    pictureMarkSymbol:esriPMS,
+                    textSymbol:esriTS")
+{
+  @JssdImmutable
+  @JssdNoProperty
+  "type": <java.lang.String>
+}

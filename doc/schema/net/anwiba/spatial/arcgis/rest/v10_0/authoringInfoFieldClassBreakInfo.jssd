@@ -1,0 +1,8 @@
+@JssdUnknownMember
+{
+  /** A numeric value used to specify the maximum value for a break. */
+  "maxValue": <double>,
+
+  /** A numeric value used to specify the minimum value for a break. */
+  "minValue": <double>
+}

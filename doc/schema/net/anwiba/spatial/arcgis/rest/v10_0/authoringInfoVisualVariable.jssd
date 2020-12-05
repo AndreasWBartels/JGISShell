@@ -1,0 +1,88 @@
+@JssdUnknownMember
+{
+
+  /**
+   * A Unix stamp.
+   *
+   * <p>Both {@code startTime} or {@code endTime} can be fields. If this is the case, their names
+   * must be different.</p>
+   */
+  "endTime": <String>,
+
+  /**
+   * The attribute field the user chose in the Smart Mapping gallery.
+   *
+   * <p>Must be the same as in either startTime or endTime.</p>
+   */
+  "field": <String>,
+
+  /** A numeric value indicating the maximum value displayed. */
+  "maxSliderValue": <double>,
+
+  /** A numeric value indicating the minimum value displayed. */
+  "minSliderValue": <double>,
+
+  /**
+   * A Unix stamp.
+   *
+   * <p>Both {@code startTime} or {@code endTime} can be fields. If this is the case, their names
+   * must be different.</p>
+   */
+  "startTime": <String>,
+
+  /**
+   * It is used to map the ratio between two numbers.
+   *
+   * <p>It is possible to express that relationship as percentages, simple ratios, or an overall
+   * percentage.</p>
+   * <p>If property is present, must be one of the following values:</p>
+   * <ul>
+   * <li>{@code percent}</li>
+   * <li>{@code percentTotal}</li>
+   * <li>{@code ratio}</li>
+   * </ul>
+   */
+  "style": <String>,
+
+  /**
+   * Theme to be used only when working with visual variables of type {@code colorInfo}.
+   *
+   * <p>Default is {@code high-to-low}.</p>
+   * <p>If property is present, must be one of the following values:</p>
+   * <ul>
+   * <li>{@code above-and-below}</li>
+   * <li>{@code centered-on}</li>
+   * <li>{@code extremes}</li>
+   * <li>{@code high-to-low}</li>
+   * </ul>
+   */
+  "theme": <String>,
+
+  /**
+   * A string value specifying the type of renderer's visual variable.
+   *
+   * <p>If property is present, must be one of the following values:</p>
+   * <ul>
+   * <li>{@code colorInfo}</li>
+   * <li>{@code rotationInfo}</li>
+   * <li>{@code sizeInfo}</li>
+   * <li>{@code transparencyInfo}</li>
+   * </ul>
+   */
+  "type": <String>,
+
+  /**
+   * Units for {@code startTime} and {@code endTime}.
+   *
+   * <p>If property is present, must be one of the following values:</p>
+   * <ul>
+   * <li>{@code days}</li>
+   * <li>{@code hours}</li>
+   * <li>{@code minutes}</li>
+   * <li>{@code months}</li>
+   * <li>{@code seconds}</li>
+   * <li>{@code years}</li>
+   * </ul>
+   */
+  "units": <String>
+}

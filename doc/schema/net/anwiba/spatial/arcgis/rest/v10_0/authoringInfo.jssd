@@ -1,0 +1,95 @@
+@JssdUnknownMember
+{
+
+  /**
+   * Used for classed color or size.
+   *
+   * <p>The default value is esriClassifyManual.
+   * If property is present, must be one of the following values:</p>
+   * <ul>
+   * <li>esriClassifyEqualInterval</li>
+   * <li>esriClassifyManual</li>
+   * <li>esriClassifyNaturalBreaks</li>
+   * <li>esriClassifyQuantile</li>
+   * <li>esriClassifyStandardDeviation</li>
+   * </ul>
+   */
+  "classificationMethod": <String>,
+
+  /**
+   * A colorRamp object is used to specify a range of colors that are applied to a group of symbols.
+   */
+  "colorRamp": <colorRamp>,
+
+  /** Contains information about an attribute field relating to Relationship renderers. */
+  "field1": <authoringInfoField>,
+
+  /** Contains information about an attribute field relating to Relationship renderers. */
+  "field2": <authoringInfoField>,
+
+  /**
+   * An array of string values representing field names used for creating predominance renderers.
+   */
+  "fields": <String[]>,
+
+  /**
+   * Optional. Used for Relationship renderer. If not set, the legend will default to being square.
+   *
+   * <p>If property is present, must be one of the following values:</p>
+   * <ul>
+   * <li>HH</li>
+   * <li>HL</li>
+   * <li>LH</li>
+   * <li>LL</li>
+   * </ul>
+   */
+ "focus": <String>,
+
+  /**
+   * Optional. Indicates the maximum value of a slider if one was used to generate the dot value
+   * for dot density renderer.
+   */
+  "maxSliderValue": <double>,
+
+  /**
+   * Optional. Indicates the minimum value of a slider if one was used to generate the dot value
+   * for dot density renderer.
+   */
+  "minSliderValue": <double>,
+
+  /** Number of classes to be associated with the relationship. Used for Relationship renderer. */
+  "numClasses": <int>,
+
+  /**
+   * Use this property if the classificationMethod is esriClassifyStandardDeviation.
+   *
+   * <p>If property is present, must be one of the following values:</p>
+   * <ul>
+   * <li>0.25</li>
+   * <li>0.33</li>
+   * <li>0.5</li>
+   * <li>1</li>
+   * </ul>
+   */
+  "standardDeviationInterval": <double>,
+
+  /**
+   * Type: {@code String}
+   * If property is present, must be one of the following values:
+   *
+   * <ul>
+   * <li>classedColor</li>
+   * <li>classedSize</li>
+   * <li>dotDensity</li>
+   * <li>predominance</li>
+   * <li>relationship</li>
+   */
+  "type": <String>,
+
+  /**
+   * An array of visualVariable objects containing additional information needed when authoring the
+   * renderer.
+   */
+  "visualVariables": <authoringInfoVisualVariable[]>
+
+}

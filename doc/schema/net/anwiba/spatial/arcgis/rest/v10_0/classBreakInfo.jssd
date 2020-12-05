@@ -1,0 +1,26 @@
+@JssdUnknownMember
+{
+
+  /**
+   * A numeric value used to specify the maximum value for a break.
+   */
+  "classMaxValue": <Double>,
+
+  /**
+   * A numeric value used to specify discontinuous class breaks.
+   *
+   * <p>If this value is null or is missing, the map server will calculate the minimum value based
+   * on the preceding class' maximum value.</p>
+   */
+  "classMinValue": <Double>,
+
+  /** String value used to describe the drawn symbol. */
+  "description": <String>,
+
+  /** String value used to label the drawn symbol. */
+  "label": <String>,
+
+  /** An object used to display the value. */
+  "symbol": <symbol>
+
+}

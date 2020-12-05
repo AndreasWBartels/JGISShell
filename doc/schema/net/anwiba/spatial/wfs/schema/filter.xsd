@@ -44,6 +44,7 @@
     </xsd:complexContent>
   </xsd:complexType>
 
+
   <xsd:element name="elseFilter" type="ElseFilterType" substitutionGroup="accept"/>
 
   <xsd:complexType name="ElseFilterType">
@@ -60,7 +61,6 @@
 
 
   <xsd:element name="condition" type="AbstractConditionType" abstract="false"/>
-
 
   <xsd:element name="and" type="AndType" substitutionGroup="condition"/>
 
@@ -217,6 +217,44 @@
     </xsd:complexContent>
   </xsd:complexType>
 
+
+  <xsd:element name="like" type="LikeType" substitutionGroup="condition"/>
+
+  <xsd:complexType name="LikeType">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <jaxb:class name="Like"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="AbstractPropertyConditionType">
+        <xsd:sequence>
+          <xsd:element name="wildCardChar" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+          <xsd:element name="singleChar" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+          <xsd:element name="escapeChar" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+
+
+  <xsd:element name="intersectGeometry" type="IntersectGeometryType" substitutionGroup="condition"/>
+
+  <xsd:complexType name="IntersectGeometryType">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <jaxb:class name="IntersectGeometry"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="AbstractConditionType">
+        <xsd:sequence>
+          <xsd:element name="name" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+          <xsd:element ref="geo:geometry" minOccurs="1" maxOccurs="1"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
 
   <xsd:element name="boundingBox" type="BoundingBoxType" substitutionGroup="condition"/>
 

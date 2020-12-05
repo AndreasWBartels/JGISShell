@@ -1,0 +1,19 @@
+@JssdUnknownMember
+{
+  /**
+   * Indicates where the marker is placed.
+   * <p>If property is present, must be one of the following values:</p>
+   * <ul>
+   * <li>begin</li>
+   * <li>begin-end</li>
+   * <li>end</li>
+   * </ul>
+   */
+  "placement": <String>,
+
+  /**
+   * Style of the marker.
+   * <p>If property is present, value of this property must be {@code arrow}.</p>
+   */
+  "style": <String>
+}

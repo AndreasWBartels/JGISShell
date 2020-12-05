@@ -1,0 +1,28 @@
+@JssdExtends(type="visualVariable")
+{
+  /** Specifies the type of visual variable. Value of this property must be transparencyInfo */
+  @JssdImmutable
+  @JssdNoProperty
+  "type": <String> "transparencyInfo",
+
+  /**
+   * Attribute field used for setting the transparency of a feature if no valueExpression is
+   * provided.
+   */
+  "field": <String>,
+
+  /** Options available for the legend. */
+  "legendOptions": <legendOptions>,
+
+  /** Attribute field used to normalize the data. */
+  "normalizationField": <String>,
+
+  /** An array of transparencyStop objects. */
+  "stops": <transparencyStop[]>,
+
+  /** An Arcade expression evaluating to a number. */
+  "valueExpression": <String>,
+
+  /** The title identifying and describing the associated Arcade expression as defined in the valueExpression property. */
+  "valueExpressionTitle": <String>
+}

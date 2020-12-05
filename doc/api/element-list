@@ -68,6 +68,7 @@ net.anwiba.commons.utilities.string
 net.anwiba.commons.utilities.time
 net.anwiba.commons.utilities.validation
 net.anwiba.jgisshell.api
+net.anwiba.jgisshell.api.attribute
 net.anwiba.jgisshell.api.condition
 net.anwiba.jgisshell.api.coordinatereferencesystem
 net.anwiba.jgisshell.api.data
@@ -89,6 +90,7 @@ net.anwiba.jgisshell.api.program
 net.anwiba.jgisshell.api.project
 net.anwiba.jgisshell.api.raster
 net.anwiba.jgisshell.api.report
+net.anwiba.jgisshell.api.table
 net.anwiba.jgisshell.api.transformer
 net.anwiba.jgisshell.scripting.desktop.api
 net.anwiba.jgisshell.scripting.java.api
@@ -107,6 +109,7 @@ net.anwiba.spatial.coordinatereferencesystem.axis
 net.anwiba.spatial.coordinatereferencesystem.coordinatesystem
 net.anwiba.spatial.coordinatereferencesystem.coordinatesystem.unit
 net.anwiba.spatial.coordinatereferencesystem.coordinatesystem.utilities
+net.anwiba.spatial.coordinatereferencesystem.datasource
 net.anwiba.spatial.coordinatereferencesystem.utilities
 net.anwiba.spatial.geometry
 net.anwiba.spatial.geometry.calculator

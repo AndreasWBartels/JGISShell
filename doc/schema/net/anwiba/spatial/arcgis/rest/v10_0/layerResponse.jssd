@@ -7,6 +7,7 @@
   "description" : <String> null,
   "definitionExpression" : <String> null,
   "geometryType" : <String> null,
+  "drawingInfo": <drawingInfo>,
   "copyrightText" : <String> null,
   "parentLayer" : <identifier> null,
   "subLayers" : <identifier[]> null,
@@ -18,5 +19,7 @@
   "objectIdField" : <String> null,
   "globalIdField" : <String> null,
   "typeIdField" : <String> null,
-  "fields" : <field[]> null
+  "fields" : <field[]> null,
+  "maxRecordCount": <int> null,
+  "capabilities": <String> null
 }

@@ -3360,26 +3360,26 @@ Configuration
 <div class="listingblock">
 <div class="title">Configuration: Set mapbox as gazetteer source</div>
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="xml">  <span class="tag">&lt;service&gt;</span>
-    <span class="tag">&lt;name&gt;</span>mapbox<span class="tag">&lt;/name&gt;</span>
-    <span class="tag">&lt;type&gt;</span>GEOJSON<span class="tag">&lt;/type&gt;</span>
-    <span class="tag">&lt;url&gt;</span>https://api.mapbox.com/geocoding/v5/mapbox.places/${query}.json?limit=${limit}<span class="entity">&amp;amp;</span>access_token=${access-token}<span class="tag">&lt;/url&gt;</span>
-    <span class="tag">&lt;values&gt;</span>
-      <span class="tag">&lt;value</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">limit</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">value</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">20</span><span class="delimiter">&quot;</span></span><span class="tag">/&gt;</span>
-      <span class="tag">&lt;value</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">access-token</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">value</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">{token}</span><span class="delimiter">&quot;</span></span><span class="tag">/&gt;</span>
-    <span class="tag">&lt;/values&gt;</span>
-    <span class="tag">&lt;featureMemberToPropertiesMappings&gt;</span>
-      <span class="tag">&lt;mapping</span> <span class="attribute-name">member</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">text</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">property</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">text</span><span class="delimiter">&quot;</span></span><span class="tag">/&gt;</span>
-      <span class="tag">&lt;mapping</span> <span class="attribute-name">member</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">place_name</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">property</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">place_name</span><span class="delimiter">&quot;</span></span><span class="tag">/&gt;</span>
-      <span class="tag">&lt;mapping</span> <span class="attribute-name">member</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">place_type</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">property</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">place_type</span><span class="delimiter">&quot;</span></span><span class="tag">/&gt;</span>
-      <span class="tag">&lt;mapping</span> <span class="attribute-name">member</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">address</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">property</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">address</span><span class="delimiter">&quot;</span></span><span class="tag">/&gt;</span>
-    <span class="tag">&lt;/featureMemberToPropertiesMappings&gt;</span>
-    <span class="tag">&lt;label&gt;</span>{0}<span class="tag">&lt;/label&gt;</span>
-    <span class="tag">&lt;properties&gt;</span>
-      <span class="tag">&lt;property</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">place_name</span><span class="delimiter">&quot;</span></span><span class="tag">/&gt;</span>
-    <span class="tag">&lt;/properties&gt;</span>
-    <span class="tag">&lt;maximumZoomValue&gt;</span>0.0001<span class="tag">&lt;/maximumZoomValue&gt;</span>
-  <span class="tag">&lt;/service&gt;</span></code></pre>
+<pre class="highlight"><code class="language-xml" data-lang="xml">  &lt;service&gt;
+    &lt;name&gt;mapbox&lt;/name&gt;
+    &lt;type&gt;GEOJSON&lt;/type&gt;
+    &lt;url&gt;https://api.mapbox.com/geocoding/v5/mapbox.places/${query}.json?limit=${limit}&amp;amp;access_token=${access-token}&lt;/url&gt;
+    &lt;values&gt;
+      &lt;value name="limit" value="20"/&gt;
+      &lt;value name="access-token" value="{token}"/&gt;
+    &lt;/values&gt;
+    &lt;featureMemberToPropertiesMappings&gt;
+      &lt;mapping member="text" property="text"/&gt;
+      &lt;mapping member="place_name" property="place_name"/&gt;
+      &lt;mapping member="place_type" property="place_type"/&gt;
+      &lt;mapping member="address" property="address"/&gt;
+    &lt;/featureMemberToPropertiesMappings&gt;
+    &lt;label&gt;{0}&lt;/label&gt;
+    &lt;properties&gt;
+      &lt;property name="place_name"/&gt;
+    &lt;/properties&gt;
+    &lt;maximumZoomValue&gt;0.0001&lt;/maximumZoomValue&gt;
+  &lt;/service&gt;</code></pre>
 </div>
 </div>
 <div class="dlist">
@@ -3440,21 +3440,21 @@ Configuration
 <div class="listingblock">
 <div class="title">Configuration: Set mapzen as gazetteer source</div>
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="xml">  <span class="tag">&lt;service&gt;</span>
-    <span class="tag">&lt;name&gt;</span>mapzen<span class="tag">&lt;/name&gt;</span>
-    <span class="tag">&lt;type&gt;</span>GEOJSON<span class="tag">&lt;/type&gt;</span>
-    <span class="tag">&lt;url&gt;</span>https://search.mapzen.com/v1/search?text=${query}<span class="entity">&amp;amp;</span>size=${size}<span class="entity">&amp;amp;</span>api_key=${key}<span class="tag">&lt;/url&gt;</span>
-    <span class="tag">&lt;boundary&gt;</span><span class="entity">&amp;amp;</span>boundary.rect.min_lat=${minX}<span class="entity">&amp;amp;</span>boundary.rect.min_lon=${minY}<span class="entity">&amp;amp;</span>boundary.rect.max_lat=${maxX}<span class="entity">&amp;amp;</span>boundary.rect.max_lon=${maxY}<span class="tag">&lt;/boundary&gt;</span>
-    <span class="tag">&lt;values&gt;</span>
-      <span class="tag">&lt;value</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">size</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">value</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">20</span><span class="delimiter">&quot;</span></span><span class="tag">/&gt;</span>
-      <span class="tag">&lt;value</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">key</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">value</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">{key}</span><span class="delimiter">&quot;</span></span><span class="tag">/&gt;</span>
-    <span class="tag">&lt;/values&gt;</span>
-    <span class="tag">&lt;label&gt;</span>{0}<span class="tag">&lt;/label&gt;</span>
-    <span class="tag">&lt;properties&gt;</span>
-      <span class="tag">&lt;property</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">label</span><span class="delimiter">&quot;</span></span><span class="tag">/&gt;</span>
-    <span class="tag">&lt;/properties&gt;</span>
-    <span class="tag">&lt;maximumZoomValue&gt;</span>0.0001<span class="tag">&lt;/maximumZoomValue&gt;</span>
-  <span class="tag">&lt;/service&gt;</span></code></pre>
+<pre class="highlight"><code class="language-xml" data-lang="xml">  &lt;service&gt;
+    &lt;name&gt;mapzen&lt;/name&gt;
+    &lt;type&gt;GEOJSON&lt;/type&gt;
+    &lt;url&gt;https://search.mapzen.com/v1/search?text=${query}&amp;amp;size=${size}&amp;amp;api_key=${key}&lt;/url&gt;
+    &lt;boundary&gt;&amp;amp;boundary.rect.min_lat=${minX}&amp;amp;boundary.rect.min_lon=${minY}&amp;amp;boundary.rect.max_lat=${maxX}&amp;amp;boundary.rect.max_lon=${maxY}&lt;/boundary&gt;
+    &lt;values&gt;
+      &lt;value name="size" value="20"/&gt;
+      &lt;value name="key" value="{key}"/&gt;
+    &lt;/values&gt;
+    &lt;label&gt;{0}&lt;/label&gt;
+    &lt;properties&gt;
+      &lt;property name="label"/&gt;
+    &lt;/properties&gt;
+    &lt;maximumZoomValue&gt;0.0001&lt;/maximumZoomValue&gt;
+  &lt;/service&gt;</code></pre>
 </div>
 </div>
 <div class="dlist">
@@ -3539,19 +3539,19 @@ Configuration
 <div class="listingblock">
 <div class="title">Configuration: Set OSM nominatim as gazetteer source</div>
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="xml">  <span class="tag">&lt;service&gt;</span>
-    <span class="tag">&lt;name&gt;</span>nominatim osm<span class="tag">&lt;/name&gt;</span>
-    <span class="tag">&lt;type&gt;</span>NOMINATIM<span class="tag">&lt;/type&gt;</span>
-    <span class="tag">&lt;url&gt;</span>http://nominatim.openstreetmap.org/search/${query}?format=jsonv2<span class="entity">&amp;amp;</span>addressdetails=1<span class="entity">&amp;amp;</span>limit=${limit}<span class="entity">&amp;amp;</span>polygon_geojson=1<span class="tag">&lt;/url&gt;</span>
-    <span class="tag">&lt;values&gt;</span>
-      <span class="tag">&lt;value</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">limit</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">value</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">20</span><span class="delimiter">&quot;</span></span><span class="tag">/&gt;</span>
-    <span class="tag">&lt;/values&gt;</span>
-    <span class="tag">&lt;label&gt;</span>{0}<span class="tag">&lt;/label&gt;</span>
-    <span class="tag">&lt;properties&gt;</span>
-      <span class="tag">&lt;property</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">display_name</span><span class="delimiter">&quot;</span></span><span class="tag">/&gt;</span>
-    <span class="tag">&lt;/properties&gt;</span>
-    <span class="tag">&lt;maximumZoomValue&gt;</span>0.0001<span class="tag">&lt;/maximumZoomValue&gt;</span>
-  <span class="tag">&lt;/service&gt;</span></code></pre>
+<pre class="highlight"><code class="language-xml" data-lang="xml">  &lt;service&gt;
+    &lt;name&gt;nominatim osm&lt;/name&gt;
+    &lt;type&gt;NOMINATIM&lt;/type&gt;
+    &lt;url&gt;http://nominatim.openstreetmap.org/search/${query}?format=jsonv2&amp;amp;addressdetails=1&amp;amp;limit=${limit}&amp;amp;polygon_geojson=1&lt;/url&gt;
+    &lt;values&gt;
+      &lt;value name="limit" value="20"/&gt;
+    &lt;/values&gt;
+    &lt;label&gt;{0}&lt;/label&gt;
+    &lt;properties&gt;
+      &lt;property name="display_name"/&gt;
+    &lt;/properties&gt;
+    &lt;maximumZoomValue&gt;0.0001&lt;/maximumZoomValue&gt;
+  &lt;/service&gt;</code></pre>
 </div>
 </div>
 <div style="page-break-after: always;"></div>
@@ -3756,23 +3756,23 @@ File
 <div class="listingblock">
 <div class="title">Configuration: Set registerable CKAN resource consumer</div>
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="xml">  <span class="tag">&lt;script</span><span class="attribute-name">s</span><span class="tag">&gt;</span>
-<span class="inline">    <span class="tag">&lt;registerable&gt;</span>
-      <span class="tag">&lt;nature&gt;</span>CKAN_RESOURCE_CONSUMER<span class="tag">&lt;/nature&gt;</span>
-        <span class="tag">&lt;script</span><span class="attribute-name">:applicable</span><span class="tag">&gt;</span>
-<span class="inline">          &lt;script:language&gt;GROOVY&lt;<span class="regexp"><span class="delimiter">/</span><span class="content">script:language&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">  &lt;scripts&gt;
+    &lt;registerable&gt;
+      &lt;nature&gt;CKAN_RESOURCE_CONSUMER&lt;/nature&gt;
+        &lt;script:applicable&gt;
+          &lt;script:language&gt;GROOVY&lt;/script:language&gt;
           &lt;script:groovyScript&gt;
-            &lt;script:uri&gt;net</span><span class="delimiter">/</span></span>anwiba/script/groovy/ckan/isTextResource.groovy&lt;<span class="regexp"><span class="delimiter">/</span><span class="content">script:uri&gt;
-          &lt;</span><span class="delimiter">/</span></span>script:groovyScript&gt;
-        &lt;<span class="regexp"><span class="delimiter">/</span><span class="content">script:applicable&gt;
+            &lt;script:uri&gt;net/anwiba/script/groovy/ckan/isTextResource.groovy&lt;/script:uri&gt;
+          &lt;/script:groovyScript&gt;
+        &lt;/script:applicable&gt;
         &lt;script:script&gt;
-          &lt;script:language&gt;GROOVY&lt;</span><span class="delimiter">/</span></span>script:language&gt;
+          &lt;script:language&gt;GROOVY&lt;/script:language&gt;
           &lt;script:groovyScript&gt;
-            &lt;script:uri&gt;net/anwiba/script/groovy/ckan/OpenTextResource.groovy&lt;<span class="regexp"><span class="delimiter">/</span><span class="content">script:uri&gt;
-          &lt;</span><span class="delimiter">/</span></span>script:groovyScript&gt;
-        &lt;<span class="regexp"><span class="delimiter">/</span><span class="content">script:script&gt;
-    &lt;</span><span class="delimiter">/</span></span>registerable&gt;</span>
-  &lt;<span class="regexp"><span class="delimiter">/</span><span class="content">scripts&gt;</span></span></span></code></pre>
+            &lt;script:uri&gt;net/anwiba/script/groovy/ckan/OpenTextResource.groovy&lt;/script:uri&gt;
+          &lt;/script:groovyScript&gt;
+        &lt;/script:script&gt;
+    &lt;/registerable&gt;
+  &lt;/scripts&gt;</code></pre>
 </div>
 </div>
 <div class="dlist">
@@ -3973,15 +3973,15 @@ Schema
 <div class="listingblock">
 <div class="title">Table</div>
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="sql"><span class="class">create</span> <span class="type">table</span> datasource_event (
-         resource <span class="predefined-type">VARCHAR</span>(<span class="integer">512</span>) <span class="keyword">NOT</span> <span class="predefined-constant">NULL</span>,
-         source_resource <span class="predefined-type">VARCHAR</span>(<span class="integer">512</span>),
-         join_condition <span class="predefined-type">VARCHAR</span>(<span class="integer">1024</span>),
-         select_condition <span class="predefined-type">VARCHAR</span>(<span class="integer">2024</span>),
-         number_of_rows <span class="predefined-type">INTEGER</span>,
-         kind <span class="predefined-type">VARCHAR</span>(<span class="integer">128</span>) <span class="keyword">NOT</span> <span class="predefined-constant">NULL</span>,
-         executed <span class="predefined-type">date</span> <span class="keyword">NOT</span> <span class="predefined-constant">NULL</span>,
-         duration <span class="predefined-type">VARCHAR</span>(<span class="integer">32</span>)
+<pre class="highlight"><code class="language-sql" data-lang="sql">create table datasource_event (
+         resource VARCHAR(512) NOT NULL,
+         source_resource VARCHAR(512),
+         join_condition VARCHAR(1024),
+         select_condition VARCHAR(2024),
+         number_of_rows INTEGER,
+         kind VARCHAR(128) NOT NULL,
+         executed date NOT NULL,
+         duration VARCHAR(32)
        )</code></pre>
 </div>
 </div>
@@ -4079,94 +4079,5 @@ CLEANED
 Last updated 2020-04-21 03:00:39 +0200
 </div>
 </div>
-<style>
-/* Stylesheet for CodeRay to match GitHub theme | MIT License | http://foundation.zurb.com */
-pre.CodeRay{background:#f7f7f8}
-.CodeRay .line-numbers{border-right:1px solid currentColor;opacity:.35;padding:0 .5em 0 0}
-.CodeRay span.line-numbers{display:inline-block;margin-right:.75em}
-.CodeRay .line-numbers strong{color:#000}
-table.CodeRay{border-collapse:separate;border:0;margin-bottom:0;background:none}
-table.CodeRay td{vertical-align:top;line-height:inherit}
-table.CodeRay td.line-numbers{text-align:right}
-table.CodeRay td.code{padding:0 0 0 .75em}
-.CodeRay .debug{color:#fff !important;background:#000080 !important}
-.CodeRay .annotation{color:#007}
-.CodeRay .attribute-name{color:#000080}
-.CodeRay .attribute-value{color:#700}
-.CodeRay .binary{color:#509}
-.CodeRay .comment{color:#998;font-style:italic}
-.CodeRay .char{color:#04d}
-.CodeRay .char .content{color:#04d}
-.CodeRay .char .delimiter{color:#039}
-.CodeRay .class{color:#458;font-weight:bold}
-.CodeRay .complex{color:#a08}
-.CodeRay .constant,.CodeRay .predefined-constant{color:#008080}
-.CodeRay .color{color:#099}
-.CodeRay .class-variable{color:#369}
-.CodeRay .decorator{color:#b0b}
-.CodeRay .definition{color:#099}
-.CodeRay .delimiter{color:#000}
-.CodeRay .doc{color:#970}
-.CodeRay .doctype{color:#34b}
-.CodeRay .doc-string{color:#d42}
-.CodeRay .escape{color:#666}
-.CodeRay .entity{color:#800}
-.CodeRay .error{color:#808}
-.CodeRay .exception{color:inherit}
-.CodeRay .filename{color:#099}
-.CodeRay .function{color:#900;font-weight:bold}
-.CodeRay .global-variable{color:#008080}
-.CodeRay .hex{color:#058}
-.CodeRay .integer,.CodeRay .float{color:#099}
-.CodeRay .include{color:#555}
-.CodeRay .inline{color:#000}
-.CodeRay .inline .inline{background:#ccc}
-.CodeRay .inline .inline .inline{background:#bbb}
-.CodeRay .inline .inline-delimiter{color:#d14}
-.CodeRay .inline-delimiter{color:#d14}
-.CodeRay .important{color:#555;font-weight:bold}
-.CodeRay .interpreted{color:#b2b}
-.CodeRay .instance-variable{color:#008080}
-.CodeRay .label{color:#970}
-.CodeRay .local-variable{color:#963}
-.CodeRay .octal{color:#40e}
-.CodeRay .predefined{color:#369}
-.CodeRay .preprocessor{color:#579}
-.CodeRay .pseudo-class{color:#555}
-.CodeRay .directive{font-weight:bold}
-.CodeRay .type{font-weight:bold}
-.CodeRay .predefined-type{color:inherit}
-.CodeRay .reserved,.CodeRay .keyword {color:#000;font-weight:bold}
-.CodeRay .key{color:#808}
-.CodeRay .key .delimiter{color:#606}
-.CodeRay .key .char{color:#80f}
-.CodeRay .value{color:#088}
-.CodeRay .regexp .delimiter{color:#808}
-.CodeRay .regexp .content{color:#808}
-.CodeRay .regexp .modifier{color:#808}
-.CodeRay .regexp .char{color:#d14}
-.CodeRay .regexp .function{color:#404;font-weight:bold}
-.CodeRay .string{color:#d20}
-.CodeRay .string .string .string{background:#ffd0d0}
-.CodeRay .string .content{color:#d14}
-.CodeRay .string .char{color:#d14}
-.CodeRay .string .delimiter{color:#d14}
-.CodeRay .shell{color:#d14}
-.CodeRay .shell .delimiter{color:#d14}
-.CodeRay .symbol{color:#990073}
-.CodeRay .symbol .content{color:#a60}
-.CodeRay .symbol .delimiter{color:#630}
-.CodeRay .tag{color:#008080}
-.CodeRay .tag-special{color:#d70}
-.CodeRay .variable{color:#036}
-.CodeRay .insert{background:#afa}
-.CodeRay .delete{background:#faa}
-.CodeRay .change{color:#aaf;background:#007}
-.CodeRay .head{color:#f8f;background:#505}
-.CodeRay .insert .insert{color:#080}
-.CodeRay .delete .delete{color:#800}
-.CodeRay .change .change{color:#66f}
-.CodeRay .head .head{color:#f4f}
-</style>
 </body>
 </html>
