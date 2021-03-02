@@ -1,9 +1,0 @@
-{
-  "id" : <int> null,
-  "name" : <String> null,
-  "defaultVisibility" : <boolean> null,
-  "parentLayerId" : <int> null,
-  "subLayerIds" : <int[]> null,
-  "minScale": <double> null,
-  "maxScale": <double> null
-}

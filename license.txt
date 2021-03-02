@@ -1,5 +1,5 @@
 <P>
-Copyright (c) 2007-2019 by Andreas W. Bartels. All Rights Reserved.
+Copyright (c) 2007-2021 by Andreas W. Bartels. All Rights Reserved.
 </P>
 <P>
 Redistribution and use in binary forms, without modification, are permitted provided that the following conditions are met:

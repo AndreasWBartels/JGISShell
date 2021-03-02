@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Asciidoctor 2.0.10">
+<meta name="generator" content="Asciidoctor 2.0.12">
 <meta name="author" content="Andreas W. Bartels">
 <title>JGISShell</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
@@ -48,7 +48,7 @@ textarea{overflow:auto;vertical-align:top}
 table{border-collapse:collapse;border-spacing:0}
 *,*::before,*::after{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}
 html,body{font-size:100%}
-body{background:#fff;color:rgba(0,0,0,.8);padding:0;margin:0;font-family:"Noto Serif","DejaVu Serif",serif;font-weight:400;font-style:normal;line-height:1;position:relative;cursor:auto;tab-size:4;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased}
+body{background:#fff;color:rgba(0,0,0,.8);padding:0;margin:0;font-family:"Noto Serif","DejaVu Serif",serif;font-weight:400;font-style:normal;line-height:1;position:relative;cursor:auto;tab-size:4;word-wrap:anywhere;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased}
 a:hover{cursor:pointer}
 img,object,embed{max-width:100%;height:auto}
 object,embed{height:100%}
@@ -63,10 +63,8 @@ img{-ms-interpolation-mode:bicubic}
 img,object,svg{display:inline-block;vertical-align:middle}
 textarea{height:auto;min-height:50px}
 select{width:100%}
-.center{margin-left:auto;margin-right:auto}
-.stretch{width:100%}
 .subheader,.admonitionblock td.content>.title,.audioblock>.title,.exampleblock>.title,.imageblock>.title,.listingblock>.title,.literalblock>.title,.stemblock>.title,.openblock>.title,.paragraph>.title,.quoteblock>.title,table.tableblock>.title,.verseblock>.title,.videoblock>.title,.dlist>.title,.olist>.title,.ulist>.title,.qlist>.title,.hdlist>.title{line-height:1.45;color:#7a2518;font-weight:400;margin-top:0;margin-bottom:.25em}
-div,dl,dt,dd,ul,ol,li,h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6,pre,form,p,blockquote,th,td{margin:0;padding:0;direction:ltr}
+div,dl,dt,dd,ul,ol,li,h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6,pre,form,p,blockquote,th,td{margin:0;padding:0}
 a{color:#2156a5;text-decoration:underline;line-height:inherit}
 a:hover,a:focus{color:#1d4b8f}
 a img{border:0}
@@ -106,19 +104,22 @@ h1{font-size:2.75em}
 h2{font-size:2.3125em}
 h3,#toctitle,.sidebarblock>.content>.title{font-size:1.6875em}
 h4{font-size:1.4375em}}
-table{background:#fff;margin-bottom:1.25em;border:solid 1px #dedede}
+table{background:#fff;margin-bottom:1.25em;border:solid 1px #dedede;word-wrap:normal}
 table thead,table tfoot{background:#f7f8f7}
 table thead tr th,table thead tr td,table tfoot tr th,table tfoot tr td{padding:.5em .625em .625em;font-size:inherit;color:rgba(0,0,0,.8);text-align:left}
 table tr th,table tr td{padding:.5625em .625em;font-size:inherit;color:rgba(0,0,0,.8)}
 table tr.even,table tr.alt{background:#f8f8f7}
-table thead tr th,table tfoot tr th,table tbody tr td,table tr td,table tfoot tr td{display:table-cell;line-height:1.6}
+table thead tr th,table tfoot tr th,table tbody tr td,table tr td,table tfoot tr td{line-height:1.6}
 h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{line-height:1.2;word-spacing:-.05em}
 h1 strong,h2 strong,h3 strong,#toctitle strong,.sidebarblock>.content>.title strong,h4 strong,h5 strong,h6 strong{font-weight:400}
+.center{margin-left:auto;margin-right:auto}
+.stretch{width:100%}
 .clearfix::before,.clearfix::after,.float-group::before,.float-group::after{content:" ";display:table}
 .clearfix::after,.float-group::after{clear:both}
-:not(pre):not([class^=L])>code{font-size:.9375em;font-style:normal!important;letter-spacing:0;padding:.1em .5ex;word-spacing:-.15em;background:#f7f7f8;-webkit-border-radius:4px;border-radius:4px;line-height:1.45;text-rendering:optimizeSpeed;word-wrap:break-word}
-:not(pre)>code.nobreak{word-wrap:normal}
-:not(pre)>code.nowrap{white-space:nowrap}
+:not(pre).nobreak{word-wrap:normal}
+:not(pre).nowrap{white-space:nowrap}
+:not(pre).pre-wrap{white-space:pre-wrap}
+:not(pre):not([class^=L])>code{font-size:.9375em;font-style:normal!important;letter-spacing:0;padding:.1em .5ex;word-spacing:-.15em;background:#f7f7f8;-webkit-border-radius:4px;border-radius:4px;line-height:1.45;text-rendering:optimizeSpeed}
 pre{color:rgba(0,0,0,.9);font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;line-height:1.45;text-rendering:optimizeSpeed}
 pre code,pre pre{color:inherit;font-size:inherit;line-height:inherit}
 pre>code{display:block}
@@ -183,7 +184,7 @@ body.toc2.toc-right{padding-left:0;padding-right:20em}}
 #content #toc{border-style:solid;border-width:1px;border-color:#e0e0dc;margin-bottom:1.25em;padding:1.25em;background:#f8f8f7;-webkit-border-radius:4px;border-radius:4px}
 #content #toc>:first-child{margin-top:0}
 #content #toc>:last-child{margin-bottom:0}
-#footer{max-width:100%;background:rgba(0,0,0,.8);padding:1.25em}
+#footer{max-width:none;background:rgba(0,0,0,.8);padding:1.25em}
 #footer-text{color:rgba(255,255,255,.8);line-height:1.44}
 #content{margin-bottom:.625em}
 .sect1{padding-bottom:.625em}
@@ -206,7 +207,7 @@ table.tableblock #preamble>.sectionbody>[class="paragraph"]:first-of-type p{font
 .admonitionblock>table td.icon{text-align:center;width:80px}
 .admonitionblock>table td.icon img{max-width:none}
 .admonitionblock>table td.icon .title{font-weight:bold;font-family:"Open Sans","DejaVu Sans",sans-serif;text-transform:uppercase}
-.admonitionblock>table td.content{padding-left:1.125em;padding-right:1.25em;border-left:1px solid #dddddf;color:rgba(0,0,0,.6)}
+.admonitionblock>table td.content{padding-left:1.125em;padding-right:1.25em;border-left:1px solid #dddddf;color:rgba(0,0,0,.6);word-wrap:anywhere}
 .admonitionblock>table td.content>:last-child>:last-child{margin-bottom:0}
 .exampleblock>.content{border-style:solid;border-width:1px;border-color:#e6e6e6;margin-bottom:1.25em;padding:1.25em;background:#fff;-webkit-border-radius:4px;border-radius:4px}
 .exampleblock>.content>:first-child{margin-top:0}
@@ -216,7 +217,7 @@ table.tableblock #preamble>.sectionbody>[class="paragraph"]:first-of-type p{font
 .sidebarblock>:last-child{margin-bottom:0}
 .sidebarblock>.content>.title{color:#7a2518;margin-top:0;text-align:center}
 .exampleblock>.content>:last-child>:last-child,.exampleblock>.content .olist>ol>li:last-child>:last-child,.exampleblock>.content .ulist>ul>li:last-child>:last-child,.exampleblock>.content .qlist>ol>li:last-child>:last-child,.sidebarblock>.content>:last-child>:last-child,.sidebarblock>.content .olist>ol>li:last-child>:last-child,.sidebarblock>.content .ulist>ul>li:last-child>:last-child,.sidebarblock>.content .qlist>ol>li:last-child>:last-child{margin-bottom:0}
-.literalblock pre,.listingblock>.content>pre{-webkit-border-radius:4px;border-radius:4px;word-wrap:break-word;overflow-x:auto;padding:1em;font-size:.8125em}
+.literalblock pre,.listingblock>.content>pre{-webkit-border-radius:4px;border-radius:4px;overflow-x:auto;padding:1em;font-size:.8125em}
 @media screen and (min-width:768px){.literalblock pre,.listingblock>.content>pre{font-size:.90625em}}
 @media screen and (min-width:1280px){.literalblock pre,.listingblock>.content>pre{font-size:1em}}
 .literalblock pre,.listingblock>.content>pre:not(.highlight),.listingblock>.content>pre[class="highlight"],.listingblock>.content>pre[class^="highlight "]{background:#f7f7f8}
@@ -262,21 +263,20 @@ pre.pygments .lineno::before{content:"";margin-right:-.125em}
 .quoteblock.excerpt,.quoteblock .quoteblock{margin-left:0}
 .quoteblock.excerpt blockquote,.quoteblock.excerpt p,.quoteblock .quoteblock blockquote,.quoteblock .quoteblock p{color:inherit;font-size:1.0625rem}
 .quoteblock.excerpt .attribution,.quoteblock .quoteblock .attribution{color:inherit;text-align:left;margin-right:0}
-table.tableblock{max-width:100%;border-collapse:separate}
 p.tableblock:last-child{margin-bottom:0}
+td.tableblock>.content{margin-bottom:1.25em;word-wrap:anywhere}
 td.tableblock>.content>:last-child{margin-bottom:-1.25em}
-td.tableblock>.content>:last-child.sidebarblock{margin-bottom:0}
 table.tableblock,th.tableblock,td.tableblock{border:0 solid #dedede}
-table.grid-all>thead>tr>.tableblock,table.grid-all>tbody>tr>.tableblock{border-width:0 1px 1px 0}
-table.grid-all>tfoot>tr>.tableblock{border-width:1px 1px 0 0}
-table.grid-cols>*>tr>.tableblock{border-width:0 1px 0 0}
-table.grid-rows>thead>tr>.tableblock,table.grid-rows>tbody>tr>.tableblock{border-width:0 0 1px}
-table.grid-rows>tfoot>tr>.tableblock{border-width:1px 0 0}
-table.grid-all>*>tr>.tableblock:last-child,table.grid-cols>*>tr>.tableblock:last-child{border-right-width:0}
-table.grid-all>tbody>tr:last-child>.tableblock,table.grid-all>thead:last-child>tr>.tableblock,table.grid-rows>tbody>tr:last-child>.tableblock,table.grid-rows>thead:last-child>tr>.tableblock{border-bottom-width:0}
+table.grid-all>*>tr>*{border-width:1px}
+table.grid-cols>*>tr>*{border-width:0 1px}
+table.grid-rows>*>tr>*{border-width:1px 0}
 table.frame-all{border-width:1px}
+table.frame-ends{border-width:1px 0}
 table.frame-sides{border-width:0 1px}
-table.frame-topbot,table.frame-ends{border-width:1px 0}
+table.frame-none>colgroup+*>:first-child>*,table.frame-sides>colgroup+*>:first-child>*{border-top-width:0}
+table.frame-none>:last-child>:last-child>*,table.frame-sides>:last-child>:last-child>*{border-bottom-width:0}
+table.frame-none>*>tr>:first-child,table.frame-ends>*>tr>:first-child{border-left-width:0}
+table.frame-none>*>tr>:last-child,table.frame-ends>*>tr>:last-child{border-right-width:0}
 table.stripes-all tr,table.stripes-odd tr:nth-of-type(odd),table.stripes-even tr:nth-of-type(even),table.stripes-hover tr:hover{background:#f8f8f7}
 th.halign-left,td.halign-left{text-align:left}
 th.halign-right,td.halign-right{text-align:right}
@@ -285,7 +285,7 @@ th.valign-top,td.valign-top{vertical-align:top}
 th.valign-bottom,td.valign-bottom{vertical-align:bottom}
 th.valign-middle,td.valign-middle{vertical-align:middle}
 table thead th,table tfoot th{font-weight:bold}
-tbody tr th{display:table-cell;line-height:1.6;background:#f7f8f7}
+tbody tr th{background:#f7f8f7}
 tbody tr th,tbody tr th p,tfoot tr th,tfoot tr th p{color:rgba(0,0,0,.8);font-weight:bold}
 p.tableblock>code:only-child{background:none;padding:0}
 p.tableblock{font-size:1em}
@@ -314,6 +314,7 @@ ol.lowergreek{list-style-type:lower-greek}
 .hdlist>table>tbody>tr,.colist>table>tbody>tr{background:none}
 td.hdlist1,td.hdlist2{vertical-align:top;padding:0 .625em}
 td.hdlist1{font-weight:bold;padding-bottom:1.25em}
+td.hdlist2{word-wrap:anywhere}
 .literalblock+.colist,.listingblock+.colist{margin-top:-.5em}
 .colist td:not([class]):first-child{padding:.4em .75em 0;line-height:1;vertical-align:top}
 .colist td:not([class]):first-child img{max-width:none}
@@ -386,7 +387,7 @@ a span.icon>.fa{cursor:inherit}
 .admonitionblock td.icon .icon-warning::before{content:"\f071";color:#bf6900}
 .admonitionblock td.icon .icon-caution::before{content:"\f06d";color:#bf3400}
 .admonitionblock td.icon .icon-important::before{content:"\f06a";color:#bf0000}
-.conum[data-value]{display:inline-block;color:#fff!important;background:rgba(0,0,0,.8);-webkit-border-radius:100px;border-radius:100px;text-align:center;font-size:.75em;width:1.67em;height:1.67em;line-height:1.67em;font-family:"Open Sans","DejaVu Sans",sans-serif;font-style:normal;font-weight:bold}
+.conum[data-value]{display:inline-block;color:#fff!important;background:rgba(0,0,0,.8);-webkit-border-radius:50%;border-radius:50%;text-align:center;font-size:.75em;width:1.67em;height:1.67em;line-height:1.67em;font-family:"Open Sans","DejaVu Sans",sans-serif;font-style:normal;font-weight:bold}
 .conum[data-value] *{color:#fff!important}
 .conum[data-value]+b{display:none}
 .conum[data-value]::after{content:attr(data-value)}
@@ -413,6 +414,7 @@ thead{display:table-header-group}
 svg{max-width:100%}
 p,blockquote,dt,td.content{font-size:1em;orphans:3;widows:3}
 h2,h3,#toctitle,.sidebarblock>.content>.title{page-break-after:avoid}
+#header,#content,#footnotes,#footer{max-width:none}
 #toc,.sidebarblock,.exampleblock>.content{background:none!important}
 #toc{border-bottom:1px solid #dddddf!important;padding-bottom:0!important}
 body.book #header{text-align:center}
@@ -437,6 +439,95 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 @media amzn-kf8{#header,#content,#footnotes,#footer{padding:0}}
 </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+/* Stylesheet for CodeRay to match GitHub theme | MIT License | http://foundation.zurb.com */
+pre.CodeRay{background:#f7f7f8}
+.CodeRay .line-numbers{border-right:1px solid currentColor;opacity:.35;padding:0 .5em 0 0}
+.CodeRay span.line-numbers{display:inline-block;margin-right:.75em}
+.CodeRay .line-numbers strong{color:#000}
+table.CodeRay{border-collapse:separate;border:0;margin-bottom:0;background:none}
+table.CodeRay td{vertical-align:top;line-height:inherit}
+table.CodeRay td.line-numbers{text-align:right}
+table.CodeRay td.code{padding:0 0 0 .75em}
+.CodeRay .debug{color:#fff !important;background:#000080 !important}
+.CodeRay .annotation{color:#007}
+.CodeRay .attribute-name{color:#000080}
+.CodeRay .attribute-value{color:#700}
+.CodeRay .binary{color:#509}
+.CodeRay .comment{color:#998;font-style:italic}
+.CodeRay .char{color:#04d}
+.CodeRay .char .content{color:#04d}
+.CodeRay .char .delimiter{color:#039}
+.CodeRay .class{color:#458;font-weight:bold}
+.CodeRay .complex{color:#a08}
+.CodeRay .constant,.CodeRay .predefined-constant{color:#008080}
+.CodeRay .color{color:#099}
+.CodeRay .class-variable{color:#369}
+.CodeRay .decorator{color:#b0b}
+.CodeRay .definition{color:#099}
+.CodeRay .delimiter{color:#000}
+.CodeRay .doc{color:#970}
+.CodeRay .doctype{color:#34b}
+.CodeRay .doc-string{color:#d42}
+.CodeRay .escape{color:#666}
+.CodeRay .entity{color:#800}
+.CodeRay .error{color:#808}
+.CodeRay .exception{color:inherit}
+.CodeRay .filename{color:#099}
+.CodeRay .function{color:#900;font-weight:bold}
+.CodeRay .global-variable{color:#008080}
+.CodeRay .hex{color:#058}
+.CodeRay .integer,.CodeRay .float{color:#099}
+.CodeRay .include{color:#555}
+.CodeRay .inline{color:#000}
+.CodeRay .inline .inline{background:#ccc}
+.CodeRay .inline .inline .inline{background:#bbb}
+.CodeRay .inline .inline-delimiter{color:#d14}
+.CodeRay .inline-delimiter{color:#d14}
+.CodeRay .important{color:#555;font-weight:bold}
+.CodeRay .interpreted{color:#b2b}
+.CodeRay .instance-variable{color:#008080}
+.CodeRay .label{color:#970}
+.CodeRay .local-variable{color:#963}
+.CodeRay .octal{color:#40e}
+.CodeRay .predefined{color:#369}
+.CodeRay .preprocessor{color:#579}
+.CodeRay .pseudo-class{color:#555}
+.CodeRay .directive{font-weight:bold}
+.CodeRay .type{font-weight:bold}
+.CodeRay .predefined-type{color:inherit}
+.CodeRay .reserved,.CodeRay .keyword {color:#000;font-weight:bold}
+.CodeRay .key{color:#808}
+.CodeRay .key .delimiter{color:#606}
+.CodeRay .key .char{color:#80f}
+.CodeRay .value{color:#088}
+.CodeRay .regexp .delimiter{color:#808}
+.CodeRay .regexp .content{color:#808}
+.CodeRay .regexp .modifier{color:#808}
+.CodeRay .regexp .char{color:#d14}
+.CodeRay .regexp .function{color:#404;font-weight:bold}
+.CodeRay .string{color:#d20}
+.CodeRay .string .string .string{background:#ffd0d0}
+.CodeRay .string .content{color:#d14}
+.CodeRay .string .char{color:#d14}
+.CodeRay .string .delimiter{color:#d14}
+.CodeRay .shell{color:#d14}
+.CodeRay .shell .delimiter{color:#d14}
+.CodeRay .symbol{color:#990073}
+.CodeRay .symbol .content{color:#a60}
+.CodeRay .symbol .delimiter{color:#630}
+.CodeRay .tag{color:#008080}
+.CodeRay .tag-special{color:#d70}
+.CodeRay .variable{color:#036}
+.CodeRay .insert{background:#afa}
+.CodeRay .delete{background:#faa}
+.CodeRay .change{color:#aaf;background:#007}
+.CodeRay .head{color:#f8f;background:#505}
+.CodeRay .insert .insert{color:#080}
+.CodeRay .delete .delete{color:#800}
+.CodeRay .change .change{color:#66f}
+.CodeRay .head .head{color:#f4f}
+</style>
 </head>
 <body class="article toc2 toc-left">
 <div id="header">
@@ -730,9 +821,9 @@ need&#8217;s registration
 <div class="listingblock">
 <div class="title">Listing 1. Scripting: Set sample data region</div>
 <div class="content">
-<pre class="highlight"><code class="language-groovy" data-lang="groovy">  :
-def region = "whereyouwant"
-facade.addVariable("region", region)
+<pre class="CodeRay highlight"><code data-lang="groovy">  :
+<span class="keyword">def</span> region = <span class="string"><span class="delimiter">&quot;</span><span class="content">whereyouwant</span><span class="delimiter">&quot;</span></span>
+facade.addVariable(<span class="string"><span class="delimiter">&quot;</span><span class="content">region</span><span class="delimiter">&quot;</span></span>, region)
   :</code></pre>
 </div>
 </div>
@@ -761,15 +852,15 @@ facade.addVariable("region", region)
 <div class="listingblock">
 <div class="title">Listing 2. Scripting: Add JGISShell default data folder to layer-manager</div>
 <div class="content">
-<pre class="highlight"><code class="language-groovy" data-lang="groovy">// Copyright (c) 2015 by Andreas W. Bartels
-package net.anwiba.script.groovy
+<pre class="CodeRay highlight"><code data-lang="groovy"><span class="comment">// Copyright (c) 2015 by Andreas W. Bartels</span>
+<span class="keyword">package</span> net.anwiba.script.groovy
 
-import net.anwiba.spatial.scripting.groovy.api.JGISShellGroovyScript
-@groovy.transform.BaseScript JGISShellGroovyScript facade
+<span class="keyword">import</span> <span class="include">net.anwiba.spatial.scripting.groovy.api.JGISShellGroovyScript</span>
+<span class="annotation">@groovy</span>.transform.BaseScript JGISShellGroovyScript facade
 
-if (layermanager) {
-  def dataFolder = "\$SYSTEM{jgisshell.workingpath}/data"
-  if (exists(resource(dataFolder))) {
+<span class="keyword">if</span> (layermanager) {
+  <span class="keyword">def</span> dataFolder = <span class="string"><span class="delimiter">&quot;</span><span class="char">\$</span><span class="content">SYSTEM{jgisshell.workingpath}/data</span><span class="delimiter">&quot;</span></span>
+  <span class="keyword">if</span> (exists(resource(dataFolder))) {
     layermanager.open(facade.dataStoreReference(dataFolder))
   }
 }</code></pre>
@@ -824,10 +915,10 @@ The database is added by the initialization script.</p>
 <div class="listingblock">
 <div class="title">Listing 3. Scripting: Add sample data spatialite database to layer-manager</div>
 <div class="content">
-<pre class="highlight"><code class="language-groovy" data-lang="groovy">  :
-  def targetFileName = "\$SYSTEM{jgisshell.workingpath}/data/osm/${region}/${region}.osm.sqlite"
-  if (exists(resource(targetFileName))) {
-    layermanager.open(facade.dataStoreReference("sqlite:spatialite://${targetFileName}"))
+<pre class="CodeRay highlight"><code data-lang="groovy">  :
+  <span class="keyword">def</span> targetFileName = <span class="string"><span class="delimiter">&quot;</span><span class="char">\$</span><span class="content">SYSTEM{jgisshell.workingpath}/data/osm/</span><span class="inline"><span class="inline-delimiter">${</span>region<span class="inline-delimiter">}</span></span><span class="content">/</span><span class="inline"><span class="inline-delimiter">${</span>region<span class="inline-delimiter">}</span></span><span class="content">.osm.sqlite</span><span class="delimiter">&quot;</span></span>
+  <span class="keyword">if</span> (exists(resource(targetFileName))) {
+    layermanager.open(facade.dataStoreReference(<span class="string"><span class="delimiter">&quot;</span><span class="content">sqlite:spatialite://</span><span class="inline"><span class="inline-delimiter">${</span>targetFileName<span class="inline-delimiter">}</span></span><span class="delimiter">&quot;</span></span>))
   }
   :</code></pre>
 </div>
@@ -2422,22 +2513,41 @@ Schema
 <div class="listingblock">
 <div class="title">Listing 4. Configuration: Set OSM nominatim as gazetteer source</div>
 <div class="content">
-<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
-&lt;configuration xmlns="http://www.anwiba.net/module/gazetteer"&gt;
-  &lt;service&gt;
-    &lt;name&gt;nominatim osm&lt;/name&gt;
-    &lt;type&gt;NOMINATIM&lt;/type&gt;
-    &lt;url&gt;http://nominatim.openstreetmap.org/search/${query}?format=jsonv2&amp;amp;addressdetails=1&amp;amp;limit=${limit}&amp;amp;polygon_geojson=1&lt;/url&gt;
-    &lt;values&gt;
-      &lt;value name="limit" value="20"/&gt;
-    &lt;/values&gt;
-    &lt;label&gt;{0}&lt;/label&gt;
-    &lt;properties&gt;
-      &lt;property name="display_name"/&gt;
-    &lt;/properties&gt;
-    &lt;maximumZoomValue&gt;0.0001&lt;/maximumZoomValue&gt;
-  &lt;/service&gt;
-&lt;/configuration&gt;</code></pre>
+<pre class="CodeRay highlight"><code data-lang="xml"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+</pre></td>
+  <td class="code"><pre><span class="preprocessor">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="tag">&lt;configuration</span> <span class="attribute-name">xmlns</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">http://www.anwiba.net/module/gazetteer</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
+  <span class="tag">&lt;service&gt;</span>
+    <span class="tag">&lt;name&gt;</span>nominatim osm<span class="tag">&lt;/name&gt;</span>
+    <span class="tag">&lt;type&gt;</span>NOMINATIM<span class="tag">&lt;/type&gt;</span>
+    <span class="tag">&lt;url&gt;</span>http://nominatim.openstreetmap.org/search/${query}?format=jsonv2<span class="entity">&amp;amp;</span>addressdetails=1<span class="entity">&amp;amp;</span>limit=${limit}<span class="entity">&amp;amp;</span>polygon_geojson=1<span class="tag">&lt;/url&gt;</span>
+    <span class="tag">&lt;values&gt;</span>
+      <span class="tag">&lt;value</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">limit</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">value</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">20</span><span class="delimiter">&quot;</span></span><span class="tag">/&gt;</span>
+    <span class="tag">&lt;/values&gt;</span>
+    <span class="tag">&lt;label&gt;</span>{0}<span class="tag">&lt;/label&gt;</span>
+    <span class="tag">&lt;properties&gt;</span>
+      <span class="tag">&lt;property</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">display_name</span><span class="delimiter">&quot;</span></span><span class="tag">/&gt;</span>
+    <span class="tag">&lt;/properties&gt;</span>
+    <span class="tag">&lt;maximumZoomValue&gt;</span>0.0001<span class="tag">&lt;/maximumZoomValue&gt;</span>
+  <span class="tag">&lt;/service&gt;</span>
+<span class="tag">&lt;/configuration&gt;</span></pre></td>
+</tr></table></code></pre>
 </div>
 </div>
 </div>
@@ -3183,26 +3293,26 @@ Schema
 <div class="listingblock">
 <div class="title">Listing 5. Configuration: Set known coordinate reference systems</div>
 <div class="content">
-<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
-&lt;configuration xmlns="http://www.anwiba.net/module/coordinatereferencesystem"&gt;
+<pre class="CodeRay highlight"><code data-lang="xml"><span class="preprocessor">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="tag">&lt;configuration</span> <span class="attribute-name">xmlns</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">http://www.anwiba.net/module/coordinatereferencesystem</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
 
-  &lt;url&gt;http://spatialreference.org/ref/${authority}/${code}/ogcwkt/&lt;/url&gt;
+  <span class="tag">&lt;url&gt;</span>http://spatialreference.org/ref/${authority}/${code}/ogcwkt/<span class="tag">&lt;/url&gt;</span>
 
-  &lt;coordinateReferenceSystems&gt;
+  <span class="tag">&lt;coordinateReferenceSystems&gt;</span>
 
-    &lt;coordinateReferenceSystem&gt;
-      &lt;authority&gt;EPSG:4326&lt;/authority&gt;
-      &lt;wkt&gt;GEOGCS["World Geodetic System 1984", DATUM["World Geodetic System 1984", SPHEROID["WGS 84", 6378137.0, 298.257223563, AUTHORITY["EPSG", 7030]], AUTHORITY["EPSG", 6326]], AREA["world", -180.0, -90.0, 180.0, 90.0],PRIMEM["greenwich", 0.0, AUTHORITY["EPSG", 8901]], UNIT["degree (supplier to define representation)", 0.017453292519943278, AUTHORITY["EPSG", 9122]], AXIS["north", NORTH], AXIS["east", EAST], AUTHORITY["EPSG", 4326]]&lt;/wkt&gt;
-    &lt;/coordinateReferenceSystem&gt;
+    <span class="tag">&lt;coordinateReferenceSystem&gt;</span>
+      <span class="tag">&lt;authority&gt;</span>EPSG:4326<span class="tag">&lt;/authority&gt;</span>
+      <span class="tag">&lt;wkt&gt;</span>GEOGCS[&quot;World Geodetic System 1984&quot;, DATUM[&quot;World Geodetic System 1984&quot;, SPHEROID[&quot;WGS 84&quot;, 6378137.0, 298.257223563, AUTHORITY[&quot;EPSG&quot;, 7030]], AUTHORITY[&quot;EPSG&quot;, 6326]], AREA[&quot;world&quot;, -180.0, -90.0, 180.0, 90.0],PRIMEM[&quot;greenwich&quot;, 0.0, AUTHORITY[&quot;EPSG&quot;, 8901]], UNIT[&quot;degree (supplier to define representation)&quot;, 0.017453292519943278, AUTHORITY[&quot;EPSG&quot;, 9122]], AXIS[&quot;north&quot;, NORTH], AXIS[&quot;east&quot;, EAST], AUTHORITY[&quot;EPSG&quot;, 4326]]<span class="tag">&lt;/wkt&gt;</span>
+    <span class="tag">&lt;/coordinateReferenceSystem&gt;</span>
 
       :
 
-  &lt;/coordinateReferenceSystems&gt;
+  <span class="tag">&lt;/coordinateReferenceSystems&gt;</span>
 
-  &lt;transformers&gt;
-  &lt;/transformers&gt;
+  <span class="tag">&lt;transformers&gt;</span>
+  <span class="tag">&lt;/transformers&gt;</span>
 
-&lt;/configuration&gt;</code></pre>
+<span class="tag">&lt;/configuration&gt;</span></code></pre>
 </div>
 </div>
 <div class="sect3">
@@ -3212,21 +3322,21 @@ Schema
 <div class="listingblock">
 <div class="title">Listing 6. Configuration: Set BETA2007 for transformations between epsg:4312 (DHDN) to epsg:4258 (ETRS89)</div>
 <div class="content">
-<pre class="highlight"><code class="language-xml" data-lang="xml">    &lt;ntv2Transformer&gt;
-      &lt;sourceCoordinateReferenceSystem&gt;EPSG:4314&lt;/sourceCoordinateReferenceSystem&gt;
-      &lt;targetCoordinateReferenceSystem&gt;EPSG:4258&lt;/targetCoordinateReferenceSystem&gt;
-      &lt;boundingBox&gt;
-        &lt;minimum&gt;
-          &lt;longitude&gt;5.5&lt;/longitude&gt;
-          &lt;latitude&gt;47&lt;/latitude&gt;
-        &lt;/minimum&gt;
-        &lt;maximum&gt;
-          &lt;longitude&gt;15.666667&lt;/longitude&gt;
-          &lt;latitude&gt;55.3&lt;/latitude&gt;
-        &lt;/maximum&gt;
-      &lt;/boundingBox&gt;
-      &lt;gridShiftFile&gt;$SYSTEM{jgisshell.workingpath}/data/ntv2/BETA2007.gsb&lt;/gridShiftFile&gt;
-    &lt;/ntv2Transformer&gt;</code></pre>
+<pre class="CodeRay highlight"><code data-lang="xml">    <span class="tag">&lt;ntv2Transformer&gt;</span>
+      <span class="tag">&lt;sourceCoordinateReferenceSystem&gt;</span>EPSG:4314<span class="tag">&lt;/sourceCoordinateReferenceSystem&gt;</span>
+      <span class="tag">&lt;targetCoordinateReferenceSystem&gt;</span>EPSG:4258<span class="tag">&lt;/targetCoordinateReferenceSystem&gt;</span>
+      <span class="tag">&lt;boundingBox&gt;</span>
+        <span class="tag">&lt;minimum&gt;</span>
+          <span class="tag">&lt;longitude&gt;</span>5.5<span class="tag">&lt;/longitude&gt;</span>
+          <span class="tag">&lt;latitude&gt;</span>47<span class="tag">&lt;/latitude&gt;</span>
+        <span class="tag">&lt;/minimum&gt;</span>
+        <span class="tag">&lt;maximum&gt;</span>
+          <span class="tag">&lt;longitude&gt;</span>15.666667<span class="tag">&lt;/longitude&gt;</span>
+          <span class="tag">&lt;latitude&gt;</span>55.3<span class="tag">&lt;/latitude&gt;</span>
+        <span class="tag">&lt;/maximum&gt;</span>
+      <span class="tag">&lt;/boundingBox&gt;</span>
+      <span class="tag">&lt;gridShiftFile&gt;</span>$SYSTEM{jgisshell.workingpath}/data/ntv2/BETA2007.gsb<span class="tag">&lt;/gridShiftFile&gt;</span>
+    <span class="tag">&lt;/ntv2Transformer&gt;</span></code></pre>
 </div>
 </div>
 </div>
@@ -3235,31 +3345,31 @@ Schema
 <div class="listingblock">
 <div class="title">Listing 7. Configuration: Set DHDN 2001 parameter for transformations between epsg:4312 (DHDN) to epsg:4258 (ETRS89)</div>
 <div class="content">
-<pre class="highlight"><code class="language-xml" data-lang="xml">    &lt;sevenParameterTransformer&gt;
-      &lt;sourceCoordinateReferenceSystem&gt;EPSG:4314&lt;/sourceCoordinateReferenceSystem&gt;
-      &lt;targetCoordinateReferenceSystem&gt;EPSG:4258&lt;/targetCoordinateReferenceSystem&gt;
-      &lt;boundingBox&gt;
-        &lt;minimum&gt;
-          &lt;longitude&gt;5.5&lt;/longitude&gt;
-          &lt;latitude&gt;47&lt;/latitude&gt;
-        &lt;/minimum&gt;
-        &lt;maximum&gt;
-          &lt;longitude&gt;15.666667&lt;/longitude&gt;
-          &lt;latitude&gt;55.3&lt;/latitude&gt;
-        &lt;/maximum&gt;
-      &lt;/boundingBox&gt;
-      &lt;translation&gt;
-        &lt;x&gt;598.1&lt;/x&gt;
-        &lt;y&gt;73.7&lt;/y&gt;
-        &lt;z&gt;418.2&lt;/z&gt;
-      &lt;/translation&gt;
-      &lt;rotation&gt;
-        &lt;x&gt;0.202&lt;/x&gt;
-        &lt;y&gt;0.045&lt;/y&gt;
-        &lt;z&gt;-2.455&lt;/z&gt;
-      &lt;/rotation&gt;
-      &lt;scale&gt;6.7&lt;/scale&gt;
-    &lt;/sevenParameterTransformer&gt;</code></pre>
+<pre class="CodeRay highlight"><code data-lang="xml">    <span class="tag">&lt;sevenParameterTransformer&gt;</span>
+      <span class="tag">&lt;sourceCoordinateReferenceSystem&gt;</span>EPSG:4314<span class="tag">&lt;/sourceCoordinateReferenceSystem&gt;</span>
+      <span class="tag">&lt;targetCoordinateReferenceSystem&gt;</span>EPSG:4258<span class="tag">&lt;/targetCoordinateReferenceSystem&gt;</span>
+      <span class="tag">&lt;boundingBox&gt;</span>
+        <span class="tag">&lt;minimum&gt;</span>
+          <span class="tag">&lt;longitude&gt;</span>5.5<span class="tag">&lt;/longitude&gt;</span>
+          <span class="tag">&lt;latitude&gt;</span>47<span class="tag">&lt;/latitude&gt;</span>
+        <span class="tag">&lt;/minimum&gt;</span>
+        <span class="tag">&lt;maximum&gt;</span>
+          <span class="tag">&lt;longitude&gt;</span>15.666667<span class="tag">&lt;/longitude&gt;</span>
+          <span class="tag">&lt;latitude&gt;</span>55.3<span class="tag">&lt;/latitude&gt;</span>
+        <span class="tag">&lt;/maximum&gt;</span>
+      <span class="tag">&lt;/boundingBox&gt;</span>
+      <span class="tag">&lt;translation&gt;</span>
+        <span class="tag">&lt;x&gt;</span>598.1<span class="tag">&lt;/x&gt;</span>
+        <span class="tag">&lt;y&gt;</span>73.7<span class="tag">&lt;/y&gt;</span>
+        <span class="tag">&lt;z&gt;</span>418.2<span class="tag">&lt;/z&gt;</span>
+      <span class="tag">&lt;/translation&gt;</span>
+      <span class="tag">&lt;rotation&gt;</span>
+        <span class="tag">&lt;x&gt;</span>0.202<span class="tag">&lt;/x&gt;</span>
+        <span class="tag">&lt;y&gt;</span>0.045<span class="tag">&lt;/y&gt;</span>
+        <span class="tag">&lt;z&gt;</span>-2.455<span class="tag">&lt;/z&gt;</span>
+      <span class="tag">&lt;/rotation&gt;</span>
+      <span class="tag">&lt;scale&gt;</span>6.7<span class="tag">&lt;/scale&gt;</span>
+    <span class="tag">&lt;/sevenParameterTransformer&gt;</span></code></pre>
 </div>
 </div>
 </div>
@@ -3295,23 +3405,23 @@ File
 <div class="listingblock">
 <div class="title">Listing 8. Configuration: Add script as projection transformer</div>
 <div class="content">
-<pre class="highlight"><code class="language-xml" data-lang="xml">    &lt;projectionTransformer&gt;
+<pre class="CodeRay highlight"><code data-lang="xml">    <span class="tag">&lt;projectionTransformer&gt;</span>
 
-      &lt;script:applicable&gt;
-        &lt;script:language&gt;GROOVY&lt;/script:language&gt;
+      <span class="tag">&lt;script</span><span class="attribute-name">:applicable</span><span class="tag">&gt;</span>
+<span class="inline">        &lt;script:language&gt;GROOVY&lt;<span class="regexp"><span class="delimiter">/</span><span class="content">script:language&gt;
         &lt;script:groovyScript&gt;
-          &lt;script:uri&gt;net/anwiba/script/groovy/transformer/applicable.groovy&lt;/script:uri&gt;
-        &lt;/script:groovyScript&gt;
-      &lt;/script:applicable&gt;
+          &lt;script:uri&gt;net</span><span class="delimiter">/</span></span>anwiba/script/groovy/transformer/applicable.groovy&lt;<span class="regexp"><span class="delimiter">/</span><span class="content">script:uri&gt;
+        &lt;</span><span class="delimiter">/</span></span>script:groovyScript&gt;
+      &lt;<span class="regexp"><span class="delimiter">/</span><span class="content">script:applicable&gt;
 
       &lt;factory&gt;
-        &lt;script:language&gt;GROOVY&lt;/script:language&gt;
+        &lt;script:language&gt;GROOVY&lt;</span><span class="delimiter">/</span></span>script:language&gt;
         &lt;script:groovyScript&gt;
-          &lt;script:uri&gt;net/anwiba/script/groovy/transformer/factory.groovy&lt;/script:uri&gt;
-        &lt;/script:groovyScript&gt;
-      &lt;/factory&gt;
+          &lt;script:uri&gt;net/anwiba/script/groovy/transformer/factory.groovy&lt;<span class="regexp"><span class="delimiter">/</span><span class="content">script:uri&gt;
+        &lt;</span><span class="delimiter">/</span></span>script:groovyScript&gt;
+      &lt;<span class="regexp"><span class="delimiter">/</span><span class="content">factory&gt;
 
-    &lt;/projectionTransformer&gt;</code></pre>
+    &lt;</span><span class="delimiter">/</span></span>projectionTransformer&gt;</span></code></pre>
 </div>
 </div>
 </div>
@@ -3427,34 +3537,34 @@ Java injections
 <div class="listingblock">
 <div class="title">Listing 9. Configuration: Add script as distance or area calculator</div>
 <div class="content">
-<pre class="highlight"><code class="language-xml" data-lang="xml">    &lt;calculators&gt;
-      &lt;length&gt;
+<pre class="CodeRay highlight"><code data-lang="xml">    <span class="tag">&lt;calculators&gt;</span>
+      <span class="tag">&lt;length&gt;</span>
 
-        &lt;script:applicable&gt;
-          &lt;script:language&gt;GROOVY&lt;/script:language&gt;
+        <span class="tag">&lt;script</span><span class="attribute-name">:applicable</span><span class="tag">&gt;</span>
+<span class="inline">          &lt;script:language&gt;GROOVY&lt;<span class="regexp"><span class="delimiter">/</span><span class="content">script:language&gt;
           &lt;script:groovyScript&gt;
-            &lt;script:uri&gt;net/anwiba/script/groovy/calculators/length/applicable.groovy&lt;/script:uri&gt;
-          &lt;/script:groovyScript&gt;
-        &lt;/script:applicable&gt;
+            &lt;script:uri&gt;net</span><span class="delimiter">/</span></span>anwiba/script/groovy/calculators/length/applicable.groovy&lt;<span class="regexp"><span class="delimiter">/</span><span class="content">script:uri&gt;
+          &lt;</span><span class="delimiter">/</span></span>script:groovyScript&gt;
+        &lt;<span class="regexp"><span class="delimiter">/</span><span class="content">script:applicable&gt;
 
         &lt;calculator&gt;
-          &lt;script:language&gt;GROOVY&lt;/script:language&gt;
+          &lt;script:language&gt;GROOVY&lt;</span><span class="delimiter">/</span></span>script:language&gt;
           &lt;script:groovyScript&gt;
-            &lt;script:uri&gt;net/anwiba/script/groovy/calculators/length/calculator.groovy&lt;/script:uri&gt;
-          &lt;/script:groovyScript&gt;
-        &lt;/calculator&gt;
+            &lt;script:uri&gt;net/anwiba/script/groovy/calculators/length/calculator.groovy&lt;<span class="regexp"><span class="delimiter">/</span><span class="content">script:uri&gt;
+          &lt;</span><span class="delimiter">/</span></span>script:groovyScript&gt;
+        &lt;<span class="regexp"><span class="delimiter">/</span><span class="content">calculator&gt;
 
-      &lt;/length&gt;
+      &lt;</span><span class="delimiter">/</span></span>length&gt;
 
-      &lt;area&gt;
-
-         :
-
-      &lt;/area&gt;
+      <span class="tag">&lt;area&gt;</span>
 
          :
 
-    &lt;/calculators&gt;</code></pre>
+      <span class="tag">&lt;/area&gt;</span>
+
+         :
+
+    &lt;<span class="regexp"><span class="delimiter">/</span><span class="content">calculators&gt;</span></span></span></code></pre>
 </div>
 </div>
 <div style="page-break-after: always;"></div>
@@ -3636,25 +3746,25 @@ Schema
 <div class="listingblock">
 <div class="title">Listing 10. Configuration: Add layer to layer-manager folder 'other'</div>
 <div class="content">
-<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
-&lt;configuration xmlns="http://www.anwiba.net/module/layer/manager/tree"&gt;
+<pre class="CodeRay highlight"><code data-lang="xml"><span class="preprocessor">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="tag">&lt;configuration</span> <span class="attribute-name">xmlns</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">http://www.anwiba.net/module/layer/manager/tree</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
 
-  &lt;folder&gt;
+  <span class="tag">&lt;folder&gt;</span>
     :
-  &lt;/folder&gt;
+  <span class="tag">&lt;/folder&gt;</span>
     :
-  &lt;folder&gt;
-    &lt;name&gt;Aster&lt;/name&gt;
-    &lt;layer&gt;
+  <span class="tag">&lt;folder&gt;</span>
+    <span class="tag">&lt;name&gt;</span>Aster<span class="tag">&lt;/name&gt;</span>
+    <span class="tag">&lt;layer&gt;</span>
       :
-    &lt;/layer&gt;
-  &lt;/folder&gt;
+    <span class="tag">&lt;/layer&gt;</span>
+  <span class="tag">&lt;/folder&gt;</span>
    :
-  &lt;layer&gt;
-    &lt;name&gt;OSM Streets (de)&lt;/name&gt;
-    &lt;url&gt;&lt;![CDATA[osm:http://{identifier}.tile.openstreetmap.de/tiles/osmde/{zoomLevel}/{column}/{row}.png?identifiers=a,b,c,d]]&gt;&lt;/url&gt;
-  &lt;/layer&gt;
-&lt;/configuration&gt;</code></pre>
+  <span class="tag">&lt;layer&gt;</span>
+    <span class="tag">&lt;name&gt;</span>OSM Streets (de)<span class="tag">&lt;/name&gt;</span>
+    <span class="tag">&lt;url&gt;</span><span class="inline-delimiter">&lt;![CDATA[</span>osm:http://{identifier}.tile.openstreetmap.de/tiles/osmde/{zoomLevel}/{column}/{row}.png?identifiers=a,b,c,d<span class="inline-delimiter">]]&gt;</span><span class="tag">&lt;/url&gt;</span>
+  <span class="tag">&lt;/layer&gt;</span>
+<span class="tag">&lt;/configuration&gt;</span></code></pre>
 </div>
 </div>
 <div style="page-break-after: always;"></div>
@@ -7148,26 +7258,26 @@ Configuration
 <div class="listingblock">
 <div class="title">Listing 11. Configuration: Set mapbox as gazetteer source</div>
 <div class="content">
-<pre class="highlight"><code class="language-xml" data-lang="xml">  &lt;service&gt;
-    &lt;name&gt;mapbox&lt;/name&gt;
-    &lt;type&gt;GEOJSON&lt;/type&gt;
-    &lt;url&gt;https://api.mapbox.com/geocoding/v5/mapbox.places/${query}.json?limit=${limit}&amp;amp;access_token=${access-token}&lt;/url&gt;
-    &lt;values&gt;
-      &lt;value name="limit" value="20"/&gt;
-      &lt;value name="access-token" value="{token}"/&gt;
-    &lt;/values&gt;
-    &lt;featureMemberToPropertiesMappings&gt;
-      &lt;mapping member="text" property="text"/&gt;
-      &lt;mapping member="place_name" property="place_name"/&gt;
-      &lt;mapping member="place_type" property="place_type"/&gt;
-      &lt;mapping member="address" property="address"/&gt;
-    &lt;/featureMemberToPropertiesMappings&gt;
-    &lt;label&gt;{0}&lt;/label&gt;
-    &lt;properties&gt;
-      &lt;property name="place_name"/&gt;
-    &lt;/properties&gt;
-    &lt;maximumZoomValue&gt;0.0001&lt;/maximumZoomValue&gt;
-  &lt;/service&gt;</code></pre>
+<pre class="CodeRay highlight"><code data-lang="xml">  <span class="tag">&lt;service&gt;</span>
+    <span class="tag">&lt;name&gt;</span>mapbox<span class="tag">&lt;/name&gt;</span>
+    <span class="tag">&lt;type&gt;</span>GEOJSON<span class="tag">&lt;/type&gt;</span>
+    <span class="tag">&lt;url&gt;</span>https://api.mapbox.com/geocoding/v5/mapbox.places/${query}.json?limit=${limit}<span class="entity">&amp;amp;</span>access_token=${access-token}<span class="tag">&lt;/url&gt;</span>
+    <span class="tag">&lt;values&gt;</span>
+      <span class="tag">&lt;value</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">limit</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">value</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">20</span><span class="delimiter">&quot;</span></span><span class="tag">/&gt;</span>
+      <span class="tag">&lt;value</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">access-token</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">value</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">{token}</span><span class="delimiter">&quot;</span></span><span class="tag">/&gt;</span>
+    <span class="tag">&lt;/values&gt;</span>
+    <span class="tag">&lt;featureMemberToPropertiesMappings&gt;</span>
+      <span class="tag">&lt;mapping</span> <span class="attribute-name">member</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">text</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">property</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">text</span><span class="delimiter">&quot;</span></span><span class="tag">/&gt;</span>
+      <span class="tag">&lt;mapping</span> <span class="attribute-name">member</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">place_name</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">property</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">place_name</span><span class="delimiter">&quot;</span></span><span class="tag">/&gt;</span>
+      <span class="tag">&lt;mapping</span> <span class="attribute-name">member</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">place_type</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">property</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">place_type</span><span class="delimiter">&quot;</span></span><span class="tag">/&gt;</span>
+      <span class="tag">&lt;mapping</span> <span class="attribute-name">member</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">address</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">property</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">address</span><span class="delimiter">&quot;</span></span><span class="tag">/&gt;</span>
+    <span class="tag">&lt;/featureMemberToPropertiesMappings&gt;</span>
+    <span class="tag">&lt;label&gt;</span>{0}<span class="tag">&lt;/label&gt;</span>
+    <span class="tag">&lt;properties&gt;</span>
+      <span class="tag">&lt;property</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">place_name</span><span class="delimiter">&quot;</span></span><span class="tag">/&gt;</span>
+    <span class="tag">&lt;/properties&gt;</span>
+    <span class="tag">&lt;maximumZoomValue&gt;</span>0.0001<span class="tag">&lt;/maximumZoomValue&gt;</span>
+  <span class="tag">&lt;/service&gt;</span></code></pre>
 </div>
 </div>
 <div class="dlist">
@@ -7228,21 +7338,21 @@ Configuration
 <div class="listingblock">
 <div class="title">Listing 12. Configuration: Set mapzen as gazetteer source</div>
 <div class="content">
-<pre class="highlight"><code class="language-xml" data-lang="xml">  &lt;service&gt;
-    &lt;name&gt;mapzen&lt;/name&gt;
-    &lt;type&gt;GEOJSON&lt;/type&gt;
-    &lt;url&gt;https://search.mapzen.com/v1/search?text=${query}&amp;amp;size=${size}&amp;amp;api_key=${key}&lt;/url&gt;
-    &lt;boundary&gt;&amp;amp;boundary.rect.min_lat=${minX}&amp;amp;boundary.rect.min_lon=${minY}&amp;amp;boundary.rect.max_lat=${maxX}&amp;amp;boundary.rect.max_lon=${maxY}&lt;/boundary&gt;
-    &lt;values&gt;
-      &lt;value name="size" value="20"/&gt;
-      &lt;value name="key" value="{key}"/&gt;
-    &lt;/values&gt;
-    &lt;label&gt;{0}&lt;/label&gt;
-    &lt;properties&gt;
-      &lt;property name="label"/&gt;
-    &lt;/properties&gt;
-    &lt;maximumZoomValue&gt;0.0001&lt;/maximumZoomValue&gt;
-  &lt;/service&gt;</code></pre>
+<pre class="CodeRay highlight"><code data-lang="xml">  <span class="tag">&lt;service&gt;</span>
+    <span class="tag">&lt;name&gt;</span>mapzen<span class="tag">&lt;/name&gt;</span>
+    <span class="tag">&lt;type&gt;</span>GEOJSON<span class="tag">&lt;/type&gt;</span>
+    <span class="tag">&lt;url&gt;</span>https://search.mapzen.com/v1/search?text=${query}<span class="entity">&amp;amp;</span>size=${size}<span class="entity">&amp;amp;</span>api_key=${key}<span class="tag">&lt;/url&gt;</span>
+    <span class="tag">&lt;boundary&gt;</span><span class="entity">&amp;amp;</span>boundary.rect.min_lat=${minX}<span class="entity">&amp;amp;</span>boundary.rect.min_lon=${minY}<span class="entity">&amp;amp;</span>boundary.rect.max_lat=${maxX}<span class="entity">&amp;amp;</span>boundary.rect.max_lon=${maxY}<span class="tag">&lt;/boundary&gt;</span>
+    <span class="tag">&lt;values&gt;</span>
+      <span class="tag">&lt;value</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">size</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">value</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">20</span><span class="delimiter">&quot;</span></span><span class="tag">/&gt;</span>
+      <span class="tag">&lt;value</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">key</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">value</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">{key}</span><span class="delimiter">&quot;</span></span><span class="tag">/&gt;</span>
+    <span class="tag">&lt;/values&gt;</span>
+    <span class="tag">&lt;label&gt;</span>{0}<span class="tag">&lt;/label&gt;</span>
+    <span class="tag">&lt;properties&gt;</span>
+      <span class="tag">&lt;property</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">label</span><span class="delimiter">&quot;</span></span><span class="tag">/&gt;</span>
+    <span class="tag">&lt;/properties&gt;</span>
+    <span class="tag">&lt;maximumZoomValue&gt;</span>0.0001<span class="tag">&lt;/maximumZoomValue&gt;</span>
+  <span class="tag">&lt;/service&gt;</span></code></pre>
 </div>
 </div>
 <div class="dlist">
@@ -7327,19 +7437,19 @@ Configuration
 <div class="listingblock">
 <div class="title">Listing 13. Configuration: Set OSM nominatim as gazetteer source</div>
 <div class="content">
-<pre class="highlight"><code class="language-xml" data-lang="xml">  &lt;service&gt;
-    &lt;name&gt;nominatim osm&lt;/name&gt;
-    &lt;type&gt;NOMINATIM&lt;/type&gt;
-    &lt;url&gt;http://nominatim.openstreetmap.org/search/${query}?format=jsonv2&amp;amp;addressdetails=1&amp;amp;limit=${limit}&amp;amp;polygon_geojson=1&lt;/url&gt;
-    &lt;values&gt;
-      &lt;value name="limit" value="20"/&gt;
-    &lt;/values&gt;
-    &lt;label&gt;{0}&lt;/label&gt;
-    &lt;properties&gt;
-      &lt;property name="display_name"/&gt;
-    &lt;/properties&gt;
-    &lt;maximumZoomValue&gt;0.0001&lt;/maximumZoomValue&gt;
-  &lt;/service&gt;</code></pre>
+<pre class="CodeRay highlight"><code data-lang="xml">  <span class="tag">&lt;service&gt;</span>
+    <span class="tag">&lt;name&gt;</span>nominatim osm<span class="tag">&lt;/name&gt;</span>
+    <span class="tag">&lt;type&gt;</span>NOMINATIM<span class="tag">&lt;/type&gt;</span>
+    <span class="tag">&lt;url&gt;</span>http://nominatim.openstreetmap.org/search/${query}?format=jsonv2<span class="entity">&amp;amp;</span>addressdetails=1<span class="entity">&amp;amp;</span>limit=${limit}<span class="entity">&amp;amp;</span>polygon_geojson=1<span class="tag">&lt;/url&gt;</span>
+    <span class="tag">&lt;values&gt;</span>
+      <span class="tag">&lt;value</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">limit</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">value</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">20</span><span class="delimiter">&quot;</span></span><span class="tag">/&gt;</span>
+    <span class="tag">&lt;/values&gt;</span>
+    <span class="tag">&lt;label&gt;</span>{0}<span class="tag">&lt;/label&gt;</span>
+    <span class="tag">&lt;properties&gt;</span>
+      <span class="tag">&lt;property</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">display_name</span><span class="delimiter">&quot;</span></span><span class="tag">/&gt;</span>
+    <span class="tag">&lt;/properties&gt;</span>
+    <span class="tag">&lt;maximumZoomValue&gt;</span>0.0001<span class="tag">&lt;/maximumZoomValue&gt;</span>
+  <span class="tag">&lt;/service&gt;</span></code></pre>
 </div>
 </div>
 <div style="page-break-after: always;"></div>
@@ -7544,23 +7654,23 @@ File
 <div class="listingblock">
 <div class="title">Listing 14. Configuration: Set registerable CKAN resource consumer</div>
 <div class="content">
-<pre class="highlight"><code class="language-xml" data-lang="xml">  &lt;scripts&gt;
-    &lt;registerable&gt;
-      &lt;nature&gt;CKAN_RESOURCE_CONSUMER&lt;/nature&gt;
-        &lt;script:applicable&gt;
-          &lt;script:language&gt;GROOVY&lt;/script:language&gt;
+<pre class="CodeRay highlight"><code data-lang="xml">  <span class="tag">&lt;script</span><span class="attribute-name">s</span><span class="tag">&gt;</span>
+<span class="inline">    <span class="tag">&lt;registerable&gt;</span>
+      <span class="tag">&lt;nature&gt;</span>CKAN_RESOURCE_CONSUMER<span class="tag">&lt;/nature&gt;</span>
+        <span class="tag">&lt;script</span><span class="attribute-name">:applicable</span><span class="tag">&gt;</span>
+<span class="inline">          &lt;script:language&gt;GROOVY&lt;<span class="regexp"><span class="delimiter">/</span><span class="content">script:language&gt;
           &lt;script:groovyScript&gt;
-            &lt;script:uri&gt;net/anwiba/script/groovy/ckan/isTextResource.groovy&lt;/script:uri&gt;
-          &lt;/script:groovyScript&gt;
-        &lt;/script:applicable&gt;
+            &lt;script:uri&gt;net</span><span class="delimiter">/</span></span>anwiba/script/groovy/ckan/isTextResource.groovy&lt;<span class="regexp"><span class="delimiter">/</span><span class="content">script:uri&gt;
+          &lt;</span><span class="delimiter">/</span></span>script:groovyScript&gt;
+        &lt;<span class="regexp"><span class="delimiter">/</span><span class="content">script:applicable&gt;
         &lt;script:script&gt;
-          &lt;script:language&gt;GROOVY&lt;/script:language&gt;
+          &lt;script:language&gt;GROOVY&lt;</span><span class="delimiter">/</span></span>script:language&gt;
           &lt;script:groovyScript&gt;
-            &lt;script:uri&gt;net/anwiba/script/groovy/ckan/OpenTextResource.groovy&lt;/script:uri&gt;
-          &lt;/script:groovyScript&gt;
-        &lt;/script:script&gt;
-    &lt;/registerable&gt;
-  &lt;/scripts&gt;</code></pre>
+            &lt;script:uri&gt;net/anwiba/script/groovy/ckan/OpenTextResource.groovy&lt;<span class="regexp"><span class="delimiter">/</span><span class="content">script:uri&gt;
+          &lt;</span><span class="delimiter">/</span></span>script:groovyScript&gt;
+        &lt;<span class="regexp"><span class="delimiter">/</span><span class="content">script:script&gt;
+    &lt;</span><span class="delimiter">/</span></span>registerable&gt;</span>
+  &lt;<span class="regexp"><span class="delimiter">/</span><span class="content">scripts&gt;</span></span></span></code></pre>
 </div>
 </div>
 <div class="dlist">
@@ -7761,15 +7871,15 @@ Schema
 <div class="listingblock">
 <div class="title">Listing 15. Table</div>
 <div class="content">
-<pre class="highlight"><code class="language-sql" data-lang="sql">create table datasource_event (
-         resource VARCHAR(512) NOT NULL,
-         source_resource VARCHAR(512),
-         join_condition VARCHAR(1024),
-         select_condition VARCHAR(2024),
-         number_of_rows INTEGER,
-         kind VARCHAR(128) NOT NULL,
-         executed date NOT NULL,
-         duration VARCHAR(32)
+<pre class="CodeRay highlight"><code data-lang="sql"><span class="class">create</span> <span class="type">table</span> datasource_event (
+         resource <span class="predefined-type">VARCHAR</span>(<span class="integer">512</span>) <span class="keyword">NOT</span> <span class="predefined-constant">NULL</span>,
+         source_resource <span class="predefined-type">VARCHAR</span>(<span class="integer">512</span>),
+         join_condition <span class="predefined-type">VARCHAR</span>(<span class="integer">1024</span>),
+         select_condition <span class="predefined-type">VARCHAR</span>(<span class="integer">2024</span>),
+         number_of_rows <span class="predefined-type">INTEGER</span>,
+         kind <span class="predefined-type">VARCHAR</span>(<span class="integer">128</span>) <span class="keyword">NOT</span> <span class="predefined-constant">NULL</span>,
+         executed <span class="predefined-type">date</span> <span class="keyword">NOT</span> <span class="predefined-constant">NULL</span>,
+         duration <span class="predefined-type">VARCHAR</span>(<span class="integer">32</span>)
        )</code></pre>
 </div>
 </div>
@@ -7952,25 +8062,25 @@ File
 <div class="listingblock">
 <div class="title">Listing 16. Scripting: Groovy script</div>
 <div class="content">
-<pre class="highlight"><code class="language-groovy" data-lang="groovy">package net.anwiba.script.groovy
+<pre class="CodeRay highlight"><code data-lang="groovy"><span class="keyword">package</span> net.anwiba.script.groovy
 
-import net.anwiba.spatial.scripting.groovy.api.JGISShellGroovyScript
-@groovy.transform.BaseScript JGISShellGroovyScript facadeScript
+<span class="keyword">import</span> <span class="include">net.anwiba.spatial.scripting.groovy.api.JGISShellGroovyScript</span>
+<span class="annotation">@groovy</span>.transform.BaseScript JGISShellGroovyScript facadeScript
 
-def builder = facade.featureLayerBuilder();
+<span class="keyword">def</span> builder = facade.featureLayerBuilder();
 
-builder.values(null, facade.geometry("POINT (10 10)"));
-builder.values(null, facade.geometry("LINESTRING ( 10 10, 20 20, 30 40)"));
-builder.values(null, facade.geometry("POLYGON ((10 10, 10 20, 20 20, 20 15, 10 10))"));
-builder.values(null, facade.geometry("MULTIPOINT (5.0 5.0, 15.0 8.0)"));
+builder.values(<span class="predefined-constant">null</span>, facade.geometry(<span class="string"><span class="delimiter">&quot;</span><span class="content">POINT (10 10)</span><span class="delimiter">&quot;</span></span>));
+builder.values(<span class="predefined-constant">null</span>, facade.geometry(<span class="string"><span class="delimiter">&quot;</span><span class="content">LINESTRING ( 10 10, 20 20, 30 40)</span><span class="delimiter">&quot;</span></span>));
+builder.values(<span class="predefined-constant">null</span>, facade.geometry(<span class="string"><span class="delimiter">&quot;</span><span class="content">POLYGON ((10 10, 10 20, 20 20, 20 15, 10 10))</span><span class="delimiter">&quot;</span></span>));
+builder.values(<span class="predefined-constant">null</span>, facade.geometry(<span class="string"><span class="delimiter">&quot;</span><span class="content">MULTIPOINT (5.0 5.0, 15.0 8.0)</span><span class="delimiter">&quot;</span></span>));
 
-builder.values(null, facade.geometry("MULTILINESTRING ((50.0 50.0, 50.0 150.0, 150.0 150.0, 150.0 50.0, 75.0 75.0, 75.0 125.0, 125.0 125.0, 125.0 75.0), (50.0 50.0, 50.0 150.0, 150.0 150.0, 150.0 50.0, 75.0 75.0, 75.0 125.0, 125.0 125.0, 125.0 75.0))"));
+builder.values(<span class="predefined-constant">null</span>, facade.geometry(<span class="string"><span class="delimiter">&quot;</span><span class="content">MULTILINESTRING ((50.0 50.0, 50.0 150.0, 150.0 150.0, 150.0 50.0, 75.0 75.0, 75.0 125.0, 125.0 125.0, 125.0 75.0), (50.0 50.0, 50.0 150.0, 150.0 150.0, 150.0 50.0, 75.0 75.0, 75.0 125.0, 125.0 125.0, 125.0 75.0))</span><span class="delimiter">&quot;</span></span>));
 
-builder.values(null, facade.geometry("MULTIPOLYGON (((50.0 50.0, 50.0 150.0, 150.0 150.0, 150.0 50.0, 50.0 50.0), (75.0 75.0, 125.0 75.0, 125.0 125.0, 75.0 125.0, 75.0 75.0)), ((175.0 50.0, 175.0 150.0, 200.0 150.0, 200.0 50.0, 175.0 50.0)))"));
+builder.values(<span class="predefined-constant">null</span>, facade.geometry(<span class="string"><span class="delimiter">&quot;</span><span class="content">MULTIPOLYGON (((50.0 50.0, 50.0 150.0, 150.0 150.0, 150.0 50.0, 50.0 50.0), (75.0 75.0, 125.0 75.0, 125.0 125.0, 75.0 125.0, 75.0 75.0)), ((175.0 50.0, 175.0 150.0, 200.0 150.0, 200.0 50.0, 175.0 50.0)))</span><span class="delimiter">&quot;</span></span>));
 
-builder.values(null, facade.geometry("GEOMETRYCOLLECTION (POINT (5.0 5.0), LINESTRING (5.0 5.0, 15.0 8.0), POLYGON ((50.0 50.0, 50.0 150.0, 150.0 150.0, 150.0 50.0, 50.0 50.0), (75.0 75.0, 125.0 75.0, 125.0 125.0, 75.0 125.0, 75.0 75.0)))"));
+builder.values(<span class="predefined-constant">null</span>, facade.geometry(<span class="string"><span class="delimiter">&quot;</span><span class="content">GEOMETRYCOLLECTION (POINT (5.0 5.0), LINESTRING (5.0 5.0, 15.0 8.0), POLYGON ((50.0 50.0, 50.0 150.0, 150.0 150.0, 150.0 50.0, 50.0 50.0), (75.0 75.0, 125.0 75.0, 125.0 125.0, 75.0 125.0, 75.0 75.0)))</span><span class="delimiter">&quot;</span></span>));
 
-def layer = builder.build();
+<span class="keyword">def</span> layer = builder.build();
 facade.view().add(layer);</code></pre>
 </div>
 </div>
@@ -7984,9 +8094,9 @@ facade.view().add(layer);</code></pre>
 <div class="listingblock">
 <div class="title">Listing 17. Configuration: Set threading mode</div>
 <div class="content">
-<pre class="highlight"><code class="language-xml" data-lang="xml">  &lt;script:script mode="EDT"&gt;
-     :
-  &lt;/script:script&gt;</code></pre>
+<pre class="CodeRay highlight"><code data-lang="xml">  <span class="tag">&lt;script</span><span class="attribute-name">:script</span> <span class="attribute-name">mode</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EDT</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
+<span class="inline">     :
+  &lt;<span class="regexp"><span class="delimiter">/</span><span class="content">script:script&gt;</span></span></span></code></pre>
 </div>
 </div>
 <div class="dlist">
@@ -8009,12 +8119,12 @@ facade.view().add(layer);</code></pre>
 <div class="listingblock">
 <div class="title">Listing 18. Configuration: Set program initializer script</div>
 <div class="content">
-<pre class="highlight"><code class="language-xml" data-lang="xml">  &lt;initializer&gt;
-    &lt;script:language&gt;GROOVY&lt;/script:language&gt;
+<pre class="CodeRay highlight"><code data-lang="xml">  <span class="tag">&lt;initializer&gt;</span>
+    <span class="tag">&lt;script</span><span class="attribute-name">:language</span><span class="tag">&gt;</span><span class="inline">GROOVY&lt;<span class="regexp"><span class="delimiter">/</span><span class="content">script:language&gt;
     &lt;script:groovyScript&gt;
-        &lt;script:uri&gt;initializer.groovy&lt;/script:uri&gt;
-    &lt;/script:groovyScript&gt;
-  &lt;/initializer&gt;</code></pre>
+        &lt;script:uri&gt;initializer.groovy&lt;</span><span class="delimiter">/</span></span>script:uri&gt;
+    &lt;<span class="regexp"><span class="delimiter">/</span><span class="content">script:groovyScript&gt;
+  &lt;</span><span class="delimiter">/</span><span class="modifier">i</span></span>nitializer&gt;</span></code></pre>
 </div>
 </div>
 <div class="dlist">
@@ -8062,12 +8172,12 @@ facade.view().add(layer);</code></pre>
 <div class="listingblock">
 <div class="title">Listing 19. Configuration: Set program closer script</div>
 <div class="content">
-<pre class="highlight"><code class="language-xml" data-lang="xml">  &lt;closer&gt;
-    &lt;script:language&gt;GROOVY&lt;/script:language&gt;
+<pre class="CodeRay highlight"><code data-lang="xml">  <span class="tag">&lt;closer&gt;</span>
+    <span class="tag">&lt;script</span><span class="attribute-name">:language</span><span class="tag">&gt;</span><span class="inline">GROOVY&lt;<span class="regexp"><span class="delimiter">/</span><span class="content">script:language&gt;
     &lt;script:groovyScript&gt;
-        &lt;script:uri&gt;closer.groovyy&lt;/script:uri&gt;
-    &lt;/script:groovyScript&gt;
-  &lt;/closer&gt;</code></pre>
+        &lt;script:uri&gt;closer.groovyy&lt;</span><span class="delimiter">/</span></span>script:uri&gt;
+    &lt;<span class="regexp"><span class="delimiter">/</span><span class="content">script:groovyScript&gt;
+  &lt;</span><span class="delimiter">/</span></span>closer&gt;</span></code></pre>
 </div>
 </div>
 <div class="dlist">
@@ -8114,22 +8224,22 @@ facade.view().add(layer);</code></pre>
 <div class="listingblock">
 <div class="title">Listing 20. Configuration: Add program modus action</div>
 <div class="content">
-<pre class="highlight"><code class="language-xml" data-lang="xml">  &lt;modes&gt;
-    &lt;mode&gt;
-        &lt;name&gt;FOO&lt;/name&gt;
-        &lt;description&gt;Foo and so on&lt;/description&gt;
-        &lt;icon&gt;net/anwiba/script/icons/misc.png&lt;/icon&gt;
-        &lt;initializer&gt;
+<pre class="CodeRay highlight"><code data-lang="xml">  <span class="tag">&lt;modes&gt;</span>
+    <span class="tag">&lt;mode&gt;</span>
+        <span class="tag">&lt;name&gt;</span>FOO<span class="tag">&lt;/name&gt;</span>
+        <span class="tag">&lt;description&gt;</span>Foo and so on<span class="tag">&lt;/description&gt;</span>
+        <span class="tag">&lt;icon&gt;</span>net/anwiba/script/icons/misc.png<span class="tag">&lt;/icon&gt;</span>
+        <span class="tag">&lt;initializer&gt;</span>
           :
-        &lt;/initializer&gt;
-        &lt;script&gt;
+        <span class="tag">&lt;/initializer&gt;</span>
+        <span class="tag">&lt;script&gt;</span>
+<span class="inline">          :</span>
+        <span class="tag">&lt;/script&gt;</span>
+        <span class="tag">&lt;closer&gt;</span>
           :
-        &lt;/script&gt;
-        &lt;closer&gt;
-          :
-        &lt;/closer&gt;
-    &lt;/mode&gt;
-  &lt;/modes&gt;</code></pre>
+        <span class="tag">&lt;/closer&gt;</span>
+    <span class="tag">&lt;/mode&gt;</span>
+  <span class="tag">&lt;/modes&gt;</span></code></pre>
 </div>
 </div>
 <div class="dlist">
@@ -8189,19 +8299,19 @@ isShiftDown<br>
 <div class="listingblock">
 <div class="title">Listing 21. Configuration: Add toolbar action</div>
 <div class="content">
-<pre class="highlight"><code class="language-xml" data-lang="xml">  &lt;toolbar&gt;
-    &lt;toolbaritem&gt;
-        &lt;menu:name&gt;Load Backup&lt;/menu:name&gt;
-        &lt;menu:icon&gt;net/anwiba/script/icons/misc.png&lt;/menu:icon&gt;
-        &lt;menu:tooltip&gt;&amp;lt;html&amp;gt;Load Backup&amp;lt;br&amp;gt;(Scripting Example)&amp;lt;/html&amp;gt;&lt;/menu:tooltip&gt;
-        &lt;script:script&gt;
-          :
-        &lt;/script:script&gt;
-    &lt;/toolbaritem&gt;
-    &lt;toolbaritem&gt;
+<pre class="CodeRay highlight"><code data-lang="xml">  <span class="tag">&lt;toolbar&gt;</span>
+    <span class="tag">&lt;toolbaritem&gt;</span>
+        <span class="tag">&lt;menu:name&gt;</span>Load Backup<span class="tag">&lt;/menu:name&gt;</span>
+        <span class="tag">&lt;menu:icon&gt;</span>net/anwiba/script/icons/misc.png<span class="tag">&lt;/menu:icon&gt;</span>
+        <span class="tag">&lt;menu:tooltip&gt;</span><span class="entity">&amp;lt;</span>html<span class="entity">&amp;gt;</span>Load Backup<span class="entity">&amp;lt;</span>br<span class="entity">&amp;gt;</span>(Scripting Example)<span class="entity">&amp;lt;</span>/html<span class="entity">&amp;gt;</span><span class="tag">&lt;/menu:tooltip&gt;</span>
+        <span class="tag">&lt;script</span><span class="attribute-name">:script</span><span class="tag">&gt;</span>
+<span class="inline">          :
+        &lt;<span class="regexp"><span class="delimiter">/</span><span class="content">script:script&gt;
+    &lt;</span><span class="delimiter">/</span></span>toolbaritem&gt;
+    <span class="tag">&lt;toolbaritem&gt;</span>
         :
-    &lt;/toolbaritem&gt;
-  &lt;toolbar&gt;</code></pre>
+    <span class="tag">&lt;/toolbaritem&gt;</span>
+  &lt;toolbar&gt;</span></code></pre>
 </div>
 </div>
 <div class="dlist">
@@ -8247,30 +8357,30 @@ isShiftDown<br>
 <div class="listingblock">
 <div class="title">Listing 22. Configuration: Add menu items</div>
 <div class="content">
-<pre class="highlight"><code class="language-xml" data-lang="xml">  &lt;menu:menus&gt;
-    &lt;menu:menu&gt;
-        &lt;menu:name&gt;Scripting&lt;/menu:name&gt;
-        &lt;menu:submenu&gt;
-          &lt;menu:name&gt;Deutschland&lt;/menu:name&gt;
-          &lt;menu:menuitem&gt;
-            &lt;menu:name&gt;Deutschland&lt;/menu:name&gt;
-            &lt;script:script&gt;
-                :
-            &lt;/script:script&gt;
-          &lt;/menu:menuitem&gt;
+<pre class="CodeRay highlight"><code data-lang="xml">  <span class="tag">&lt;menu:menus&gt;</span>
+    <span class="tag">&lt;menu:menu&gt;</span>
+        <span class="tag">&lt;menu:name&gt;</span>Scripting<span class="tag">&lt;/menu:name&gt;</span>
+        <span class="tag">&lt;menu:submenu&gt;</span>
+          <span class="tag">&lt;menu:name&gt;</span>Deutschland<span class="tag">&lt;/menu:name&gt;</span>
+          <span class="tag">&lt;menu:menuitem&gt;</span>
+            <span class="tag">&lt;menu:name&gt;</span>Deutschland<span class="tag">&lt;/menu:name&gt;</span>
+            <span class="tag">&lt;script</span><span class="attribute-name">:script</span><span class="tag">&gt;</span>
+<span class="inline">                :
+            &lt;<span class="regexp"><span class="delimiter">/</span><span class="content">script:script&gt;
+          &lt;</span><span class="delimiter">/</span><span class="modifier">m</span></span>enu:menuitem&gt;
             :
         &lt;menu:submenu&gt;
           :
         &lt;menu:menuitem&gt;
-          &lt;menu:name&gt;Create Polygons&lt;/menu:name&gt;
+          &lt;menu:name&gt;Create Polygons&lt;<span class="regexp"><span class="delimiter">/</span><span class="content">menu:name&gt;
           &lt;script:script&gt;
             :
-          &lt;/script:script&gt;
-        &lt;/menu:menuitem&gt;
+          &lt;</span><span class="delimiter">/</span></span>script:script&gt;
+        &lt;<span class="regexp"><span class="delimiter">/</span><span class="content">menu:menuitem&gt;
         :
     &lt;menu:menu&gt;
         :
-  &lt;menu:menus&gt;</code></pre>
+  &lt;menu:menus&gt;</span></span></span></code></pre>
 </div>
 </div>
 <div class="dlist">
@@ -8316,28 +8426,28 @@ isShiftDown<br>
 <div class="listingblock">
 <div class="title">Listing 23. Configuration: Add popup menu item</div>
 <div class="content">
-<pre class="highlight"><code class="language-xml" data-lang="xml">  &lt;popup:popups&gt;
-    &lt;popup:popup&gt;
-        &lt;popup:target&gt;{Anchor Point}&lt;/popup:target&gt;
-        &lt;popup:menuitem&gt;
-          &lt;popup:name&gt;Map Popup Script (groovy)&lt;/popup:name&gt;
-          &lt;popup:applicable&gt;
-            &lt;popup:script&gt;
+<pre class="CodeRay highlight"><code data-lang="xml">  <span class="tag">&lt;popup:popups&gt;</span>
+    <span class="tag">&lt;popup:popup&gt;</span>
+        <span class="tag">&lt;popup:target&gt;</span>{Anchor Point}<span class="tag">&lt;/popup:target&gt;</span>
+        <span class="tag">&lt;popup:menuitem&gt;</span>
+          <span class="tag">&lt;popup:name&gt;</span>Map Popup Script (groovy)<span class="tag">&lt;/popup:name&gt;</span>
+          <span class="tag">&lt;popup:applicable&gt;</span>
+            <span class="tag">&lt;popup:script&gt;</span>
                 :
-            &lt;/popup:script&gt;
-          &lt;/popup:applicable&gt;
-          &lt;script:script&gt;
-            :
-          &lt;/script:script&gt;
-        &lt;/popup:menuitem&gt;
+            <span class="tag">&lt;/popup:script&gt;</span>
+          <span class="tag">&lt;/popup:applicable&gt;</span>
+          <span class="tag">&lt;script</span><span class="attribute-name">:script</span><span class="tag">&gt;</span>
+<span class="inline">            :
+          &lt;<span class="regexp"><span class="delimiter">/</span><span class="content">script:script&gt;
+        &lt;</span><span class="delimiter">/</span></span>popup:menuitem&gt;
         &lt;popup:menuitem&gt;
-          &lt;popup:name&gt;Map Popup Script (java)&lt;/popup:name&gt;
+          &lt;popup:name&gt;Map Popup Script (java)&lt;<span class="regexp"><span class="delimiter">/</span><span class="content">popup:name&gt;
           &lt;script:script&gt;
             :
-          &lt;/script:script&gt;
-        &lt;/popup:menuitem&gt;
-    &lt;/popup:popup&gt;
-  &lt;/popup:popups&gt;</code></pre>
+          &lt;</span><span class="delimiter">/</span></span>script:script&gt;
+        &lt;<span class="regexp"><span class="delimiter">/</span><span class="content">popup:menuitem&gt;
+    &lt;</span><span class="delimiter">/</span></span>popup:popup&gt;
+  &lt;<span class="regexp"><span class="delimiter">/</span><span class="content">popup:popups&gt;</span></span></span></code></pre>
 </div>
 </div>
 <div class="dlist">
@@ -8382,13 +8492,13 @@ isShiftDown<br>
 <div class="listingblock">
 <div class="title">Listing 24. Configuration: Add map popup menu item</div>
 <div class="content">
-<pre class="highlight"><code class="language-xml" data-lang="xml">  &lt;popup:popup&gt;
-      &lt;popup:target&gt;MAP&lt;/popup:target&gt;
-      &lt;popup:menuitem&gt;
+<pre class="CodeRay highlight"><code data-lang="xml">  <span class="tag">&lt;popup:popup&gt;</span>
+      <span class="tag">&lt;popup:target&gt;</span>MAP<span class="tag">&lt;/popup:target&gt;</span>
+      <span class="tag">&lt;popup:menuitem&gt;</span>
          :
-      &lt;/popup:menuitem&gt;
+      <span class="tag">&lt;/popup:menuitem&gt;</span>
        :
-  &lt;/popup:popup&gt;</code></pre>
+  <span class="tag">&lt;/popup:popup&gt;</span></code></pre>
 </div>
 </div>
 <div class="dlist">
@@ -8434,13 +8544,13 @@ isShiftDown<br>
 <div class="listingblock">
 <div class="title">Listing 25. Configuration: Add layer legend popup menu item</div>
 <div class="content">
-<pre class="highlight"><code class="language-xml" data-lang="xml">  &lt;popup:popup&gt;
-      &lt;popup:target&gt;LAYER&lt;/popup:target&gt;
-      &lt;popup:menuitem&gt;
+<pre class="CodeRay highlight"><code data-lang="xml">  <span class="tag">&lt;popup:popup&gt;</span>
+      <span class="tag">&lt;popup:target&gt;</span>LAYER<span class="tag">&lt;/popup:target&gt;</span>
+      <span class="tag">&lt;popup:menuitem&gt;</span>
          :
-      &lt;/popup:menuitem&gt;
+      <span class="tag">&lt;/popup:menuitem&gt;</span>
        :
-  &lt;/popup:popup&gt;</code></pre>
+  <span class="tag">&lt;/popup:popup&gt;</span></code></pre>
 </div>
 </div>
 <div class="dlist">
@@ -8486,13 +8596,13 @@ isShiftDown<br>
 <div class="listingblock">
 <div class="title">Listing 26. Configuration: Add layer manager popup menu item</div>
 <div class="content">
-<pre class="highlight"><code class="language-xml" data-lang="xml">  &lt;popup:popup&gt;
-      &lt;popup:target&gt;PROJECT_MANAGER&lt;/popup:target&gt;
-      &lt;popup:menuitem&gt;
+<pre class="CodeRay highlight"><code data-lang="xml">  <span class="tag">&lt;popup:popup&gt;</span>
+      <span class="tag">&lt;popup:target&gt;</span>PROJECT_MANAGER<span class="tag">&lt;/popup:target&gt;</span>
+      <span class="tag">&lt;popup:menuitem&gt;</span>
          :
-      &lt;/popup:menuitem&gt;
+      <span class="tag">&lt;/popup:menuitem&gt;</span>
        :
-  &lt;/popup:popup&gt;</code></pre>
+  <span class="tag">&lt;/popup:popup&gt;</span></code></pre>
 </div>
 </div>
 <div class="dlist">
@@ -8539,13 +8649,13 @@ isShiftDown<br>
 <div class="listingblock">
 <div class="title">Listing 27. Configuration: Add layer manager popup menu item</div>
 <div class="content">
-<pre class="highlight"><code class="language-xml" data-lang="xml">  &lt;popup:popup&gt;
-      &lt;popup:target&gt;LAYER_MANAGER&lt;/popup:target&gt;
-      &lt;popup:menuitem&gt;
+<pre class="CodeRay highlight"><code data-lang="xml">  <span class="tag">&lt;popup:popup&gt;</span>
+      <span class="tag">&lt;popup:target&gt;</span>LAYER_MANAGER<span class="tag">&lt;/popup:target&gt;</span>
+      <span class="tag">&lt;popup:menuitem&gt;</span>
          :
-      &lt;/popup:menuitem&gt;
+      <span class="tag">&lt;/popup:menuitem&gt;</span>
        :
-  &lt;/popup:popup&gt;</code></pre>
+  <span class="tag">&lt;/popup:popup&gt;</span></code></pre>
 </div>
 </div>
 <div class="dlist">
@@ -8630,38 +8740,38 @@ Schema
 <div class="listingblock">
 <div class="title">Listing 28. Configuration: set id to groovy classpath root</div>
 <div class="content">
-<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
-&lt;configuration xmlns="http://www.anwiba.net/module/scripting"
-               xmlns:menu="http://www.anwiba.net/dynamic/menu"
-               xmlns:popup="http://www.anwiba.net/dynamic/popup"
-               xmlns:condition="http://www.anwiba.net/dynamic/condition"
-               xmlns:script="http://www.anwiba.net/dynamic/script"
-             &gt;
-  &lt;script:classSearchPath&gt;
-    &lt;script:groovyClassPath&gt;
+<pre class="CodeRay highlight"><code data-lang="xml"><span class="preprocessor">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="tag">&lt;configuration</span> <span class="attribute-name">xmlns</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">http://www.anwiba.net/module/scripting</span><span class="delimiter">&quot;</span></span>
+               <span class="attribute-name">xmlns:menu</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">http://www.anwiba.net/dynamic/menu</span><span class="delimiter">&quot;</span></span>
+               <span class="attribute-name">xmlns:popup</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">http://www.anwiba.net/dynamic/popup</span><span class="delimiter">&quot;</span></span>
+               <span class="attribute-name">xmlns:condition</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">http://www.anwiba.net/dynamic/condition</span><span class="delimiter">&quot;</span></span>
+               <span class="attribute-name">xmlns:script</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">http://www.anwiba.net/dynamic/script</span><span class="delimiter">&quot;</span></span>
+             <span class="tag">&gt;</span>
+  <span class="tag">&lt;script</span><span class="attribute-name">:classSearchPath</span><span class="tag">&gt;</span>
+<span class="inline">    &lt;script:groovyClassPath&gt;
       &lt;script:roots&gt;
-        &lt;script:uri id="net.anwiba.script" &gt;$SYSTEM{jgisshell.workingpath}/scripts&lt;/script:uri&gt;
-      &lt;/script:roots&gt;
+        &lt;script:uri id=<span class="string"><span class="delimiter">&quot;</span><span class="content">net.anwiba.script</span><span class="delimiter">&quot;</span></span> &gt;<span class="predefined">$SYSTEM</span>{jgisshell.workingpath}/scripts&lt;<span class="regexp"><span class="delimiter">/</span><span class="content">script:uri&gt;
+      &lt;</span><span class="delimiter">/</span></span>script:roots&gt;
       &lt;script:classPath&gt;
 
   :
 
-&lt;/configuration&gt;</code></pre>
+&lt;<span class="regexp"><span class="delimiter">/</span><span class="content">configuration&gt;</span></span></span></code></pre>
 </div>
 </div>
 <div class="listingblock">
 <div class="title">Listing 29. Configuration: add groovy classpath root as folder 'Groovy Scripts'</div>
 <div class="content">
-<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
-&lt;configuration xmlns="http://www.anwiba.net/module/layer/manager/tree"&gt;
-  &lt;scriptingProjects&gt;
-    &lt;project reference="net.anwiba.script"&gt;Groovy Scripts&lt;/project&gt;
-  &lt;/scriptingProjects&gt;
+<pre class="CodeRay highlight"><code data-lang="xml"><span class="preprocessor">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="tag">&lt;configuration</span> <span class="attribute-name">xmlns</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">http://www.anwiba.net/module/layer/manager/tree</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
+  <span class="tag">&lt;script</span><span class="attribute-name">ingProjects</span><span class="tag">&gt;</span>
+<span class="inline">    <span class="tag">&lt;project</span> <span class="attribute-name">reference</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">net.anwiba.script</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>Groovy Scripts<span class="tag">&lt;/project&gt;</span>
+  &lt;<span class="regexp"><span class="delimiter">/</span><span class="content">scriptingProjects&gt;
   &lt;folder&gt;
 
    :
 
-&lt;/configuration&gt;</code></pre>
+&lt;</span><span class="delimiter">/</span></span>configuration&gt;</span></code></pre>
 </div>
 </div>
 <div class="dlist">
@@ -8706,87 +8816,87 @@ path<br>
 <div class="listingblock">
 <div class="title">Listing 30. Configuration: layer description</div>
 <div class="content">
-<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
-&lt;layer:layer xmlns:layer="http://www.anwiba.net/java/layer"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://www.anwiba.net/java/layer layer.xsd "&gt;
-  &lt;layer:featureDescription&gt;
-    &lt;layer:string name="identifier" identifier="true" /&gt;
-    &lt;layer:string name="title" /&gt;
-    &lt;layer:geometry name="geometry" type="Point" coordinateReferenceSystem="EPSG:4326" /&gt;
-  &lt;/layer:featureDescription&gt;
-  &lt;layer:envelope&gt;
-    &lt;layer:minimum x="-180" y="-85"/&gt;
-    &lt;layer:maximum x="180" y="85"/&gt;
-  &lt;/layer:envelope&gt;
-  &lt;layer:iteratorFactory&gt;
-    &lt;layer:script&gt;net/anwiba/script/layer/FeatureIteratorFactory.groovy&lt;/layer:script&gt;
-&lt;/layer:iteratorFactory&gt;
-&lt;/layer:layer&gt;</code></pre>
+<pre class="CodeRay highlight"><code data-lang="xml"><span class="preprocessor">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="tag">&lt;layer:layer</span> <span class="attribute-name">xmlns:layer</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">http://www.anwiba.net/java/layer</span><span class="delimiter">&quot;</span></span>
+  <span class="attribute-name">xmlns:xsi</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">http://www.w3.org/2001/XMLSchema-instance</span><span class="delimiter">&quot;</span></span>
+  <span class="attribute-name">xsi:schemaLocation</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">http://www.anwiba.net/java/layer layer.xsd </span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
+  <span class="tag">&lt;layer:featureDescription&gt;</span>
+    <span class="tag">&lt;layer:string</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">identifier</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">identifier</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">true</span><span class="delimiter">&quot;</span></span> <span class="tag">/&gt;</span>
+    <span class="tag">&lt;layer:string</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">title</span><span class="delimiter">&quot;</span></span> <span class="tag">/&gt;</span>
+    <span class="tag">&lt;layer:geometry</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">geometry</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">type</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">Point</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">coordinateReferenceSystem</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EPSG:4326</span><span class="delimiter">&quot;</span></span> <span class="tag">/&gt;</span>
+  <span class="tag">&lt;/layer:featureDescription&gt;</span>
+  <span class="tag">&lt;layer:envelope&gt;</span>
+    <span class="tag">&lt;layer:minimum</span> <span class="attribute-name">x</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">-180</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">y</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">-85</span><span class="delimiter">&quot;</span></span><span class="tag">/&gt;</span>
+    <span class="tag">&lt;layer:maximum</span> <span class="attribute-name">x</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">180</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">y</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">85</span><span class="delimiter">&quot;</span></span><span class="tag">/&gt;</span>
+  <span class="tag">&lt;/layer:envelope&gt;</span>
+  <span class="tag">&lt;layer:iteratorFactory&gt;</span>
+    <span class="tag">&lt;layer:script&gt;</span>net/anwiba/script/layer/FeatureIteratorFactory.groovy<span class="tag">&lt;/layer:script&gt;</span>
+<span class="tag">&lt;/layer:iteratorFactory&gt;</span>
+<span class="tag">&lt;/layer:layer&gt;</span></code></pre>
 </div>
 </div>
 <div class="listingblock">
 <div class="title">Listing 31. Configuration: feature iterator factory</div>
 <div class="content">
-<pre class="highlight"><code class="language-groovy" data-lang="groovy">package net.anwiba.script.layer
+<pre class="CodeRay highlight"><code data-lang="groovy"><span class="keyword">package</span> net.anwiba.script.layer
 
-import groovy.json.JsonSlurper
-import net.anwiba.commons.utilities.io.IClosableIoIterator
+<span class="keyword">import</span> <span class="include">groovy.json.JsonSlurper</span>
+<span class="keyword">import</span> <span class="include">net.anwiba.commons.utilities.io.IClosableIoIterator</span>
 
-def values = {feature -&gt;
+<span class="keyword">def</span> values = {feature -&gt;
 
-  def values = new Object[3]
-  def properties = feature.properties
-  def geometry = feature.geometry
-  values[0] = feature.id
-  values[1] = properties.title
-  if (geometry) {
-    def coordinates = geometry.coordinates
-    values[2] = geometryFactory.createPoint(coordinates[0], coordinates[1])
+  <span class="keyword">def</span> values = <span class="keyword">new</span> <span class="predefined-type">Object</span>[<span class="integer">3</span>]
+  <span class="keyword">def</span> properties = feature.properties
+  <span class="keyword">def</span> geometry = feature.geometry
+  values[<span class="integer">0</span>] = feature.id
+  values[<span class="integer">1</span>] = properties.title
+  <span class="keyword">if</span> (geometry) {
+    <span class="keyword">def</span> coordinates = geometry.coordinates
+    values[<span class="integer">2</span>] = geometryFactory.createPoint(coordinates[<span class="integer">0</span>], coordinates[<span class="integer">1</span>])
   }
-  return values
+  <span class="keyword">return</span> values
 }
 
-def timeRangeValue = {value, defaultValue -&gt;
-  if (value) {
-    return ZonedDateTimeUtilities.toString(value)
+<span class="keyword">def</span> timeRangeValue = {value, defaultValue -&gt;
+  <span class="keyword">if</span> (value) {
+    <span class="keyword">return</span> ZonedDateTimeUtilities.toString(value)
   }
-  return defaultValue.format(formatter)
+  <span class="keyword">return</span> defaultValue.format(formatter)
 }
 
-def featureCollection = new JsonSlurper().parse(new URL(http://host/foo/collection.geojson))
+<span class="keyword">def</span> featureCollection = <span class="keyword">new</span> JsonSlurper().parse(<span class="keyword">new</span> <span class="predefined-type">URL</span>(<span class="key">http</span>:<span class="comment">//host/foo/collection.geojson))</span>
 
-def entities = []
+<span class="keyword">def</span> entities = <span class="type">[]</span>
 
-def features = featureCollection.features
-if (features) {
-  for (feature in features) {
-    if (!feature) {
-      continue
+<span class="keyword">def</span> features = featureCollection.features
+<span class="keyword">if</span> (features) {
+  <span class="keyword">for</span> (feature <span class="keyword">in</span> features) {
+    <span class="keyword">if</span> (!feature) {
+      <span class="keyword">continue</span>
     }
-    def entity = values(feature)
-    if (!entity) {
-      continue
+    <span class="keyword">def</span> entity = values(feature)
+    <span class="keyword">if</span> (!entity) {
+      <span class="keyword">continue</span>
     }
     entities.add(entity)
   }
 }
 
-def iterator = entities.iterator()
-new IClosableIoIterator() {
+<span class="keyword">def</span> iterator = entities.iterator()
+<span class="keyword">new</span> IClosableIoIterator() {
 
-      @Override
-      public void close() throws IOException {
+      <span class="annotation">@Override</span>
+      <span class="directive">public</span> <span class="type">void</span> close() <span class="directive">throws</span> <span class="exception">IOException</span> {
       }
 
-      @Override
-      public boolean hasNext() throws IOException {
-        return iterator.hasNext();
+      <span class="annotation">@Override</span>
+      <span class="directive">public</span> <span class="type">boolean</span> hasNext() <span class="directive">throws</span> <span class="exception">IOException</span> {
+        <span class="keyword">return</span> iterator.hasNext();
       }
 
-      @Override
-      public Object next() throws Exception {
-        return iterator.next();
+      <span class="annotation">@Override</span>
+      <span class="directive">public</span> <span class="predefined-type">Object</span> next() <span class="directive">throws</span> <span class="exception">Exception</span> {
+        <span class="keyword">return</span> iterator.next();
       }
     };</code></pre>
 </div>
@@ -9194,7 +9304,7 @@ net.anwiba.preferences
 <div class="literalblock">
 <div class="content">
 <pre>orai18n.jar
-ojdbc8.jar
+ojdbc11.jar
 sdoapi.jar</pre>
 </div>
 </div>
@@ -9209,8 +9319,8 @@ sdoapi.jar</pre>
 </div>
 <div class="literalblock">
 <div class="content">
-<pre>ojdbc10.jar to JGISShell/lib/ojdbc10-19.8.0.0.jar
-orai18n.jar to JGISShell/lib/orai18n-19.8.0.0.jar
+<pre>ojdbc10.jar to JGISShell/lib/ojdbc11-21.1.0.0.jar
+orai18n.jar to JGISShell/lib/orai18n-21.1.0.0.jar
 sdoapi-19.2-190126.jar to JGISShell/lib/sdoapi-19.2.0.0.jar</pre>
 </div>
 </div>
@@ -9226,15 +9336,35 @@ sdoapi-19.2-190126.jar to JGISShell/lib/sdoapi-19.2.0.0.jar</pre>
 </div>
 </div>
 <div class="paragraph">
-<p>Ask your Database Administrators for the library, or you can download the 'SAP HANA Client Software Packages' from SAP Store or
-<a href="https://www.sap.com/developer/trials-downloads.html">trials and downloads page</a>.</p>
+<p>Ask your Database Administrators for the library, or you can download the 'SAP HANA Client Software Packages' from SAP Store.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>https://www.sap.com/developer/trials-downloads.html[trials and downloads page].</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>SAP Development Tools - HANA Client</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>https://tools.hana.ondemand.com/#hanatools</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Maven repository</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>https://search.maven.org/artifact/com.sap.cloud.db.jdbc/ngdbc</pre>
+</div>
 </div>
 <div class="paragraph">
 <p>Copy</p>
 </div>
 <div class="literalblock">
 <div class="content">
-<pre>ngdbc.jar to JGISShell/lib/ngdbc-1.94.0.jar</pre>
+<pre>ngdbc.jar to JGISShell/lib/ngdbc-2.7.13.jar</pre>
 </div>
 </div>
 <div style="page-break-after: always;"></div>

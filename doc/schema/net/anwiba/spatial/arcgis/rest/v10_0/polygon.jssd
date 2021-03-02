@@ -1,6 +1,0 @@
-@JssdExtends(type="geometry")
-{
-  @JssdImmutable
-  "type": <String> "Polygon",
-  "rings" : <double[][][]> null
-}

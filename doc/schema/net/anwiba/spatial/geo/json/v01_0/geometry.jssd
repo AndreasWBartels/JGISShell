@@ -1,6 +1,0 @@
-@JssdExtends(type="geoJsonObject")
-{
-  @JssdImmutable
-  @JssdNoProperty
-  "type" : <String> "Geometry"
-}

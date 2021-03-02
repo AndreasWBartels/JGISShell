@@ -1,6 +1,0 @@
-@JssdUnknownMember
-@JssdExtends(type="named")
-{
-  "image_display_url": <String> null,
-  "id":  <String> null
-}

@@ -1,6 +1,0 @@
-@JssdUnknownMember
-@JssdExtends(type="named")
-{
-  "type": <String> null,
-  "resource": <String> null
-}

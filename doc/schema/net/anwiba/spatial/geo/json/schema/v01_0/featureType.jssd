@@ -1,8 +1,0 @@
-{
-  @JssdImmutable
-  "type": <java.lang.String> "FeatureType",
-  "title": <java.lang.String> null,
-  "description": <java.lang.String> null,
-  @JssdProperties
-  "properties": <net.anwiba.commons.json.schema.v1_0.Property> null
-}

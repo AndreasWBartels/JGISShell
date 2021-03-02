@@ -26,8 +26,8 @@ net.anwiba.commons.lang.tree.iterator
 net.anwiba.commons.lang.tree.walker
 net.anwiba.commons.lang.visitor
 net.anwiba.commons.logging
-net.anwiba.commons.logging.apache
 net.anwiba.commons.logging.java
+net.anwiba.commons.logging.log4j2
 net.anwiba.commons.message
 net.anwiba.commons.message.notification
 net.anwiba.commons.message.observer

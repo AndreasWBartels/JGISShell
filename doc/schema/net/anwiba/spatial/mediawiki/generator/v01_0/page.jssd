@@ -1,9 +1,0 @@
-{
-    "pageid": <int>,
-    "ns": <int> 0,
-    "title": <String>,
-    "index": <int>,
-    "coordinates": <coordinate[]>,
-    "thumbnail": <thumbnail>,
-    "pageimage": <String> 
-}

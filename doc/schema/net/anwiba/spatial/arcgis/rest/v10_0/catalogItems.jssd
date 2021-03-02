@@ -1,6 +1,0 @@
-{
-  "objectIdFieldName" : <String> null,
-  "spatialReference" : <spatialReference> null,
-  "geometryType" : <String> null,
-  "features" : <feature[]> null
-}

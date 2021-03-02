@@ -1,7 +1,0 @@
-@JssdUnknownMember
-@JssdExtends(type="named")
-{
-  "vocabulary_id": <String> null,
-  "state": <String> null,
-  "id": <String> null
-}

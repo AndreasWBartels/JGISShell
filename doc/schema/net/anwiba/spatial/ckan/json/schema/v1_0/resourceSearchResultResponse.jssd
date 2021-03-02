@@ -1,4 +1,0 @@
-@JssdExtends(type="response")
-{
-  "result": <resourceSearchResult> null
-}

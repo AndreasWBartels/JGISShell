@@ -1,6 +1,0 @@
-@JssdExtends(type="geometry")
-{
-  @JssdImmutable
-  "type": <String> "Polyline",
-  "paths" : <double[][][]> null
-}

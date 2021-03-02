@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- PLEASE DON'T CHANGE 'strict="true"' !
+      Setting it to false DOES NOT disable some additional verification;
+      instead it changes the expected format of this configuration to "concise".
+      But since it is not "concise", parsing the config fails
+      (almost silently; Log4J2 status logging has to be activated to see it)
+      and we end up without any appenders. Details:
+      https://logging.apache.org/log4j/2.x/manual/configuration.html#ConfigurationSyntax -->
+<Configuration strict="true">
+
+  <Appenders>
+    <Appender type="Console" name="SystemOut">
+      <PatternLayout>
+        <Pattern>%d{HH:mm:ss} %-5.5p [%-16.16t] %-40.40c - %m%n</Pattern>
+      </PatternLayout>
+    </Appender>
+
+    <RollingRandomAccessFile name="FileOut" 
+      fileName="log/viewer.log" 
+      filePattern="log/viewer.log-%i.gz"
+      immediateFlush="false">
+      <Policies>
+        <OnStartupTriggeringPolicy/>
+        <SizeBasedTriggeringPolicy size="4096KB"/>
+      </Policies>
+      <PatternLayout>
+        <Pattern>[%d{yyyy.MM.dd-HH:mm:ss}] [%-5.5p] [%-16.16t] %-50.50c - %m%n</Pattern>
+      </PatternLayout>
+      <DefaultRolloverStrategy max="6"/>
+    </RollingRandomAccessFile>
+
+  </Appenders>
+
+  <Loggers>
+    <Logger name="net.anwiba" level="debug" additivity="false">
+      <AppenderRef ref="FileOut" level="debug" />
+      <AppenderRef ref="SystemOut" level="info" />
+    </Logger>
+    <Logger name="net.anwiba.commons.http" level="debug" additivity="false">
+      <AppenderRef ref="FileOut" level="debug" />
+      <AppenderRef ref="SystemOut" level="info" />
+    </Logger>
+    <Logger name="net.anwiba.commons.jdbc" level="debug" additivity="false">
+      <AppenderRef ref="FileOut" level="debug" />
+      <AppenderRef ref="SystemOut" level="info" />
+    </Logger>
+    <Logger name="net.anwiba.database" level="debug" additivity="false">
+      <AppenderRef ref="FileOut" level="debug" />
+      <AppenderRef ref="SystemOut" level="info" />
+    </Logger>
+    <Logger name="net.anwiba.database.dbase" level="debug" additivity="false">
+      <AppenderRef ref="FileOut" level="debug" />
+      <AppenderRef ref="SystemOut" level="info" />
+    </Logger>
+    <Logger name="net.anwiba.database.resource.constraint" level="debug" additivity="false">
+      <AppenderRef ref="FileOut" level="debug" />
+      <AppenderRef ref="SystemOut" level="info" />
+    </Logger>
+    <Logger name="net.anwiba.spatial.shapefile.converter" level="error" additivity="false">
+      <AppenderRef ref="FileOut" level="error" />
+      <AppenderRef ref="SystemOut" level="error" />
+    </Logger>
+    <Logger name="net.anwiba.spatial.shapefile.io" level="error" additivity="false">
+      <AppenderRef ref="FileOut" level="error" />
+      <AppenderRef ref="SystemOut" level="error" />
+    </Logger>
+    <Logger name="net.anwiba.spatial.renderer.layer.GeometryStyleProvider" level="error" additivity="false">
+      <AppenderRef ref="FileOut" level="error" />
+      <AppenderRef ref="SystemOut" level="error" />
+    </Logger>
+    <Logger name="net.anwiba.spatial.swing.map.MapPanel" level="debug" additivity="false">
+      <AppenderRef ref="FileOut" level="debug" />
+      <AppenderRef ref="SystemOut" level="info" />
+    </Logger>
+    <Logger name="net.anwiba.spatial.renderer.layer.RasterLayerRenderer" level="debug" additivity="false">
+      <AppenderRef ref="FileOut" level="debug" />
+      <AppenderRef ref="SystemOut" level="info" />
+    </Logger>
+
+    <Logger name="org.apache.http" level="warn" additivity="false">
+      <AppenderRef ref="FileOut"/>
+      <AppenderRef ref="SystemOut"/>
+    </Logger>
+    <Logger name="org.apache.http.impl.execchain" level="warn" additivity="false">
+      <AppenderRef ref="FileOut"/>
+      <AppenderRef ref="SystemOut"/>
+    </Logger>
+    <Logger name="org.apache.http.wire" level="warn" additivity="false">
+      <AppenderRef ref="FileOut"/>
+      <AppenderRef ref="SystemOut"/>
+    </Logger>
+    <Logger name="org.apache.http.http.headers" level="warn" additivity="false">
+      <AppenderRef ref="FileOut"/>
+      <AppenderRef ref="SystemOut"/>
+    </Logger>
+
+    <Root level="warn">
+      <AppenderRef ref="FileOut"/>
+    </Root>
+
+  </Loggers>
+</Configuration>

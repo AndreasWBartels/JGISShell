@@ -1,4 +1,8 @@
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jaxb="http://java.sun.com/xml/ns/jaxb" jaxb:version="2.0" targetNamespace="http://www.anwiba.net/database/connection" xmlns:this="http://www.anwiba.net/database/connection"
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+  xmlns:jaxb="http://java.sun.com/xml/ns/jaxb" 
+  jaxb:version="2.0" 
+  targetNamespace="http://www.anwiba.net/database/connection" 
+  xmlns:this="http://www.anwiba.net/database/connection"
   elementFormDefault="qualified">
   <xsd:annotation>
     <xsd:appinfo>

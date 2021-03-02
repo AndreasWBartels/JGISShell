@@ -1,7 +1,0 @@
-@JssdExtends(type="geometry")
-{
-  @JssdImmutable
-  "type": <String> "Point",
-  "x" : <double> null,
-  "y" : <double> null
-}

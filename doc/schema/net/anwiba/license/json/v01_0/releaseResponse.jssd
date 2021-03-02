@@ -1,8 +1,0 @@
-{
-  @JssdImmutable
-  "type": <String> "VersionResponse",
-  @JssdImmutable
-  "version": <String> "1.0.0",
-  @JssdNotNullable
-  "releases": <release[]> null
-}

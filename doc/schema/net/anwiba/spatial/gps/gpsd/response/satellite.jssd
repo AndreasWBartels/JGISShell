@@ -1,8 +1,0 @@
-@JssdPrimitivesEnabled
-{
-  "PRN": <int> -1,
-  "az": <int> -1,
-  "el": <int> -1,
-  "ss": <int> -1,
-  "used": <boolean> false
-}

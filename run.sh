@@ -1,5 +1,5 @@
 #!/bin/sh
-# JAVA_HOME=/usr/lib/jvm/java-8-oracle/bin
+# JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64/bin
 
 program=`basename "$0"`
 folder=`dirname "$0"`

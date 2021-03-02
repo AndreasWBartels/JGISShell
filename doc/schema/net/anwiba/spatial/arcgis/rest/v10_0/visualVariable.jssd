@@ -1,8 +1,0 @@
-@JssdUnknownMember
-@JssdFactory(type="typeinfo",
-             types="colorInfoVisualVariable:colorInfo,
-                    rotationInfoVisualVariable:rotationInfo,
-                    sizeInfoVisualVariable:sizeInfo,
-                    transparencyInfoVisualVariable:transparencyInfo")
-{
-}

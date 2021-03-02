@@ -1,8 +1,0 @@
-{
-  @JssdImmutable
-  "type": <String> "ErrorResponse",
-  @JssdNotNullable
-  "code": <int> 0,
-  "message": <String[]> null
-
-}

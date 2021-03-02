@@ -1,7 +1,0 @@
-@JssdExtends(type="overpassObject")
-{
-  @JssdImmutable
-  @JssdNoProperty
-  "type": <String> "relation",
-  "members": <member[]> null
-}

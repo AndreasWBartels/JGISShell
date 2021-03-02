@@ -1,9 +1,0 @@
-{
-  @JssdImmutable
-  "type" : <String> "Topology",
-  "transform" : <transform> null,
-  "bbox" : <double[]> null,
-  @JssdProperties
-  "objects": <geometry> null,
-  "arcs": <double[][][]> null
-}

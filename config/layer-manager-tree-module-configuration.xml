@@ -193,6 +193,11 @@
       <license identifier="cc-zero-1.0" />
     </layer>
     <layer>
+      <name>Wikivoyage (de)</name>
+      <url><![CDATA[mediawiki:https://de.wikivoyage.org/w/api.php]]></url>
+      <license identifier="cc-zero-1.0" />
+    </layer>
+    <layer>
       <name>Wikimedia</name>
       <url><![CDATA[mediawiki:https://commons.wikimedia.org/w/api.php]]></url>
       <license identifier="cc-zero-1.0" />
@@ -213,22 +218,6 @@
     <layer>
       <name><![CDATA[Download Service BGR]]></name>
       <url><![CDATA[georss:https://services.bgr.de/atomfeeds/service.xml]]></url>
-    </layer>
-    <layer>
-      <name><![CDATA[SERTIT - Activations]]></name>
-      <url><![CDATA[georss:http://sertit.u-strasbg.fr/RMS/georss/ActivationsSertit.xml]]></url>
-    </layer>
-    <layer>
-      <name><![CDATA[DLR/ZKI Emergency Mapping Activations]]></name>
-      <url><![CDATA[georss:https://www.zki.dlr.de/iwg-sem/feeds/activations]]></url>
-    </layer>
-    <layer>
-      <name><![CDATA[Copernicus EMS Risk and Recovery Mapping Activations]]></name>
-      <url><![CDATA[georss:http://emergency.copernicus.eu/mapping/activations-risk-and-recovery/feed]]></url>
-    </layer>
-    <layer>
-      <name><![CDATA[Copernicus EMS Rapid Mapping Activations]]></name>
-      <url><![CDATA[georss:http://emergency.copernicus.eu/mapping/activations-rapid/feed]]></url>
     </layer>
     <layer>
       <name><![CDATA[Geonames]]></name>

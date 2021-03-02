@@ -1,7 +1,0 @@
-{
-  "xmin" : <double> null,
-  "ymin" : <double> null,
-  "xmax" : <double> null,
-  "ymax" : <double> null,
-  "spatialReference" : <spatialReference> null
-}

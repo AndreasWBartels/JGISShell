@@ -1,6 +1,0 @@
-@JssdExtends(type="renderer")
-{
-  @JssdImmutable
-  @JssdNoProperty
-  "type": <String> "temporal"
-}

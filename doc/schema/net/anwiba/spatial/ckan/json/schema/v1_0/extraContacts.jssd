@@ -1,5 +1,0 @@
-@JssdUnknownMember
-@JssdExtends(type="extra")
-{
-  "value" : <contactString> null
-}

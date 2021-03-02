@@ -1,7 +1,0 @@
-{
-  "count": <int> 0,
-  "sort": <String> null,
-  "facets": <facets> null,
-  "expanded": <expanded> null,
-  "search_facets": <facets> null
-}

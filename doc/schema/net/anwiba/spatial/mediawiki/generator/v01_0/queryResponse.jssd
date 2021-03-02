@@ -1,7 +1,0 @@
-{
- "batchcomplete": <String>,
- "continue": <continue>,
-  @JssdProperties
-  "warnings": <net.anwiba.spatial.mediawiki.message.v01_0.Message>,
- "query": <query>
-}

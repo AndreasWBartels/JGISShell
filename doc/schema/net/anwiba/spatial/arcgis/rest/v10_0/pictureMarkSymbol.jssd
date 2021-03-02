@@ -1,6 +1,0 @@
-@JssdExtends(type="symbol")
-{
-  @JssdImmutable
-  @JssdNoProperty
-  "type": <String> "esriPMS"
-}
