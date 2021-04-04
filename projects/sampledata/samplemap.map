@@ -43,7 +43,7 @@
  <layers>
   <layer name="Streets" visible="true" uuid="3b76bbdc-0ab9-46bc-8e75-35e01fc8ae28">
    <resource type="SERVICE" layerType="RASTER" format="OSM" codec="PNG">
-    <file url="osm:http://{identifier}.tiles.wmflabs.org/osm/{zoomLevel}/{column}/{row}.png?identifiers=a,b,c"/>
+    <file url="osm:http://{identifier}.tile.openstreetmap.de/tiles/osmde/{zoomLevel}/{column}/{row}.png?identifiers=a,b,c,d"/>
    </resource>
    <crs:coordinateReferenceSystem>
     <crs:projectedCoordinateReference name="WGS 84 / Pseudo-Mercator" projection="Mercator 1SP">
@@ -1242,7 +1242,7 @@
   <layers>
    <layer name="Streets" visible="true" uuid="30496151-edc3-48ca-ae42-1fe363b0c075">
     <resource type="SERVICE" layerType="RASTER" format="OSM" codec="PNG">
-     <file url="osm:http://{identifier}.tiles.wmflabs.org/osm/{zoomLevel}/{column}/{row}.png?identifiers=a,b,c"/>
+     <file url="osm:http://{identifier}.tile.openstreetmap.de/tiles/osmde/{zoomLevel}/{column}/{row}.png?identifiers=a,b,c,d"/>
     </resource>
     <crs:coordinateReferenceSystem>
      <crs:projectedCoordinateReference name="WGS 84 / Pseudo-Mercator" projection="Mercator 1SP">

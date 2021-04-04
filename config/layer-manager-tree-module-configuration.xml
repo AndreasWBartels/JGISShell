@@ -10,93 +10,119 @@
     <layer>
       <name>Relief</name>
       <url><![CDATA[osm:https://maps-for-free.com/layer/relief/z{zoomLevel}/row{row}/{zoomLevel}_{column}-{row}.jpg?name=Relief]]></url>
-      <license identifier="odbl">
+      <constraint>
+        <license identifier="odbl" />
         <maintainer>OpenStreetMap</maintainer>
-      </license>
+        <usagePolicy><![CDATA[https://maps-for-free.com/]]></usagePolicy>
+      </constraint>
     </layer>
     <layer>
       <name>Water</name>
       <url><![CDATA[osm:https://maps-for-free.com/layer/water/z{zoomLevel}/row{row}/{zoomLevel}_{column}-{row}.gif?name=Water]]></url>
-      <license identifier="odbl">
+      <constraint>
+        <license identifier="odbl" />
         <maintainer>OpenStreetMap</maintainer>
-      </license>
+        <usagePolicy><![CDATA[https://maps-for-free.com/]]></usagePolicy>
+      </constraint>
     </layer>
     <layer>
       <name>Admin</name>
       <url><![CDATA[osm:https://maps-for-free.com/layer/admin/z{zoomLevel}/row{row}/{zoomLevel}_{column}-{row}.gif?name=Admin]]></url>
-      <license identifier="odbl">
+      <constraint>
+        <license identifier="odbl" />
         <maintainer>OpenStreetMap</maintainer>
-      </license>
+        <usagePolicy><![CDATA[https://maps-for-free.com/]]></usagePolicy>
+      </constraint>
     </layer>
     <layer>
       <name>Streets</name>
       <url><![CDATA[osm:https://maps-for-free.com/layer/streets/z{zoomLevel}/row{row}/{zoomLevel}_{column}-{row}.gif?name=Streets]]></url>
-      <license identifier="odbl">
+      <constraint>
+        <license identifier="odbl" />
         <maintainer>OpenStreetMap</maintainer>
-      </license>
+        <usagePolicy><![CDATA[https://maps-for-free.com/]]></usagePolicy>
+      </constraint>
     </layer>
     <layer>
       <name>Country</name>
       <url><![CDATA[osm:https://maps-for-free.com/layer/country/z{zoomLevel}/row{row}/{zoomLevel}_{column}-{row}.png?name=Country]]></url>
-      <license identifier="odbl">
+      <constraint>
+        <license identifier="odbl" />
         <maintainer>OpenStreetMap</maintainer>
-      </license>
+        <usagePolicy><![CDATA[https://maps-for-free.com/]]></usagePolicy>
+      </constraint>
     </layer>
     <layer>
       <name>Crop</name>
       <url><![CDATA[osm:https://maps-for-free.com/layer/crop/z{zoomLevel}/row{row}/{zoomLevel}_{column}-{row}.gif?name=Crop]]></url>
-      <license identifier="odbl">
+      <constraint>
+        <license identifier="odbl" />
         <maintainer>OpenStreetMap</maintainer>
-      </license>
+        <usagePolicy><![CDATA[https://maps-for-free.com/]]></usagePolicy>
+      </constraint>
     </layer>
     <layer>
       <name>Grass</name>
       <url><![CDATA[osm:https://maps-for-free.com/layer/grass/z{zoomLevel}/row{row}/{zoomLevel}_{column}-{row}.gif?name=Grass]]></url>
-      <license identifier="odbl">
+      <constraint>
+        <license identifier="odbl" />
         <maintainer>OpenStreetMap</maintainer>
-      </license>
+        <usagePolicy><![CDATA[https://maps-for-free.com/]]></usagePolicy>
+      </constraint>
     </layer>
     <layer>
       <name>Forest</name>
       <url><![CDATA[osm:https://maps-for-free.com/layer/forest/z{zoomLevel}/row{row}/{zoomLevel}_{column}-{row}.gif?name=Forest]]></url>
-      <license identifier="odbl">
+      <constraint>
+        <license identifier="odbl" />
         <maintainer>OpenStreetMap</maintainer>
-      </license>
+        <usagePolicy><![CDATA[https://maps-for-free.com/]]></usagePolicy>
+      </constraint>
     </layer>
     <layer>
       <name>Tundra</name>
       <url><![CDATA[osm:https://maps-for-free.com/layer/tundra/z{zoomLevel}/row{row}/{zoomLevel}_{column}-{row}.gif?name=Tundra]]></url>
-      <license identifier="odbl">
+      <constraint>
+        <license identifier="odbl" />
         <maintainer>OpenStreetMap</maintainer>
-      </license>
+        <usagePolicy><![CDATA[https://maps-for-free.com/]]></usagePolicy>
+      </constraint>
     </layer>
     <layer>
       <name>Sand</name>
       <url><![CDATA[osm:https://maps-for-free.com/layer/sand/z{zoomLevel}/row{row}/{zoomLevel}_{column}-{row}.gif?name=Sand]]></url>
-      <license identifier="odbl">
+      <constraint>
+        <license identifier="odbl" />
         <maintainer>OpenStreetMap</maintainer>
-      </license>
+        <usagePolicy><![CDATA[https://maps-for-free.com/]]></usagePolicy>
+      </constraint>
     </layer>
     <layer>
       <name>Swamp</name>
       <url><![CDATA[osm:https://maps-for-free.com/layer/swamp/z{zoomLevel}/row{row}/{zoomLevel}_{column}-{row}.gif?name=Swamp]]></url>
-      <license identifier="odbl">
+      <constraint>
+        <license identifier="odbl" />
         <maintainer>OpenStreetMap</maintainer>
-      </license>
+        <usagePolicy><![CDATA[https://maps-for-free.com/]]></usagePolicy>
+      </constraint>
     </layer>
     <layer>
       <name>Ice</name>
       <url><![CDATA[osm:https://maps-for-free.com/layer/ice/z{zoomLevel}/row{row}/{zoomLevel}_{column}-{row}.gif?name=Ice]]></url>
-      <license identifier="odbl">
+      <constraint>
+        <license identifier="odbl" />
         <maintainer>OpenStreetMap</maintainer>
-      </license>
+        <usagePolicy><![CDATA[https://maps-for-free.com/]]></usagePolicy>
+      </constraint>
     </layer>
     <layer>
       <name>Numbers</name>
       <url><![CDATA[osm:https://maps-for-free.com/layer/numbers/z{zoomLevel}/row{row}/{zoomLevel}_{column}-{row}.gif?name=Numbers]]></url>
-      <license identifier="odbl">
+      <constraint>
+        <license identifier="odbl" />
         <maintainer>OpenStreetMap</maintainer>
-      </license>
+        <usagePolicy><![CDATA[https://maps-for-free.com/]]></usagePolicy>
+      </constraint>
     </layer>
   </folder>
 
@@ -105,16 +131,20 @@
     <layer>
       <name>Max Speed</name>
       <url><![CDATA[osm:http://{identifier}.tiles.openrailwaymap.org/maxspeed/{zoomLevel}/{column}/{row}.png?identifiers=a,b,c,d]]></url>
-      <license identifier="odbl">
+      <constraint>
+        <license identifier="odbl" />
         <maintainer>OpenStreetMap</maintainer>
-      </license>
+        <usagePolicy><![CDATA[https://openrailwaymap.org/]]></usagePolicy>
+      </constraint>
     </layer>
     <layer>
       <name>Standard</name>
       <url><![CDATA[osm:http://{identifier}.tiles.openrailwaymap.org/standard/{zoomLevel}/{column}/{row}.png?identifiers=a,b,c,d]]></url>
-      <license identifier="odbl">
+      <constraint>
+        <license identifier="odbl" />
         <maintainer>OpenStreetMap</maintainer>
-      </license>
+        <usagePolicy><![CDATA[https://openrailwaymap.org/]]></usagePolicy>
+      </constraint>
     </layer>
   </folder>
 
@@ -123,30 +153,29 @@
     <layer>
       <name>petroleum</name>
       <url><![CDATA[osm:https://tiles-{identifier}.openinframap.org/petroleum/{zoomLevel}/{column}/{row}.png?identifiers=a,b,c,d]]></url>
-      <license identifier="odbl">
+      <constraint>
+        <license identifier="odbl" />
         <maintainer>OpenStreetMap</maintainer>
-      </license>
+        <usagePolicy><![CDATA[https://openinframap.org/about]]></usagePolicy>
+      </constraint>
     </layer>
     <layer>
       <name>telecoms</name>
       <url><![CDATA[osm:https://tiles-{identifier}.openinframap.org/telecoms/{zoomLevel}/{column}/{row}.png?identifiers=a,b,c,d]]></url>
-      <license identifier="odbl">
+      <constraint>
+        <license identifier="odbl" />
         <maintainer>OpenStreetMap</maintainer>
-      </license>
+        <usagePolicy><![CDATA[https://openinframap.org/about]]></usagePolicy>
+      </constraint>
     </layer>
     <layer>
       <name>water</name>
       <url><![CDATA[osm:https://tiles-{identifier}.openinframap.org/water/{zoomLevel}/{column}/{row}.png?identifiers=a,b,c,d]]></url>
-      <license identifier="odbl">
+      <constraint>
+        <license identifier="odbl" />
         <maintainer>OpenStreetMap</maintainer>
-      </license>
-    </layer>
-    <layer>
-      <name>Marine Traffic</name>
-      <url><![CDATA[osm:https://tiles.marinetraffic.com/ais_helpers/shiptilesingle.aspx?output=png&sat=1&grouping=shiptype&tile_size=256&legends=1&zoom={zoomLevel}&X={column}&Y={row}]]></url>
-      <license identifier="odbl">
-        <maintainer>OpenStreetMap</maintainer>
-      </license>
+        <usagePolicy><![CDATA[https://openinframap.org/about]]></usagePolicy>
+      </constraint>
     </layer>
   </folder>
 
@@ -155,23 +184,29 @@
     <layer>
       <name>Cycling</name>
       <url><![CDATA[osm:http://tile.waymarkedtrails.org/cycling/{zoomLevel}/{column}/{row}.png]]></url>
-      <license identifier="odbl">
+      <constraint>
+        <license identifier="odbl" />
         <maintainer>OpenStreetMap</maintainer>
-      </license>
+        <usagePolicy><![CDATA[https://cycling.waymarkedtrails.org/help/legal]]></usagePolicy>
+      </constraint>
     </layer>
     <layer>
       <name>Hiking</name>
       <url><![CDATA[osm:http://tile.waymarkedtrails.org/hiking/{zoomLevel}/{column}/{row}.png]]></url>
-      <license identifier="odbl">
+      <constraint>
+        <license identifier="odbl" />
         <maintainer>OpenStreetMap</maintainer>
-      </license>
+        <usagePolicy><![CDATA[https://cycling.waymarkedtrails.org/help/legal]]></usagePolicy>
+      </constraint>
     </layer>
     <layer>
       <name>MTB</name>
       <url><![CDATA[osm:http://tile.waymarkedtrails.org/mtb/{zoomLevel}/{column}/{row}.png]]></url>
-      <license identifier="odbl">
+      <constraint>
+        <license identifier="odbl" />
         <maintainer>OpenStreetMap</maintainer>
-      </license>
+        <usagePolicy><![CDATA[https://cycling.waymarkedtrails.org/help/legal]]></usagePolicy>
+      </constraint>
     </layer>
   </folder>
 
@@ -180,32 +215,56 @@
     <layer>
       <name>Wikipedia (en)</name>
       <url><![CDATA[mediawiki:https://en.wikipedia.org/w/api.php]]></url>
-      <license identifier="cc-zero-1.0" />
+      <constraint>
+        <license identifier="cc-by-sa-3.0" />
+        <maintainer>Wikimedia</maintainer>
+        <usagePolicy><![CDATA[https://foundation.wikimedia.org/wiki/Maps_Terms_of_Use]]></usagePolicy>
+      </constraint>
     </layer>
     <layer>
       <name>Wikipedia (de)</name>
       <url><![CDATA[mediawiki:https://de.wikipedia.org/w/api.php]]></url>
-      <license identifier="cc-zero-1.0" />
+      <constraint>
+        <license identifier="cc-by-sa-3.0" />
+        <maintainer>Wikimedia</maintainer>
+        <usagePolicy><![CDATA[https://foundation.wikimedia.org/wiki/Maps_Terms_of_Use]]></usagePolicy>
+      </constraint>
     </layer>
     <layer>
       <name>Wikivoyage (en)</name>
       <url><![CDATA[mediawiki:https://en.wikivoyage.org/w/api.php]]></url>
-      <license identifier="cc-zero-1.0" />
+      <constraint>
+        <license identifier="cc-by-sa-3.0" />
+        <maintainer>Wikimedia</maintainer>
+        <usagePolicy><![CDATA[https://foundation.wikimedia.org/wiki/Maps_Terms_of_Use]]></usagePolicy>
+      </constraint>
     </layer>
     <layer>
       <name>Wikivoyage (de)</name>
       <url><![CDATA[mediawiki:https://de.wikivoyage.org/w/api.php]]></url>
-      <license identifier="cc-zero-1.0" />
+      <constraint>
+        <license identifier="cc-by-sa-3.0" />
+        <maintainer>Wikimedia</maintainer>
+        <usagePolicy><![CDATA[https://foundation.wikimedia.org/wiki/Maps_Terms_of_Use]]></usagePolicy>
+      </constraint>
     </layer>
     <layer>
       <name>Wikimedia</name>
       <url><![CDATA[mediawiki:https://commons.wikimedia.org/w/api.php]]></url>
-      <license identifier="cc-zero-1.0" />
+      <constraint>
+        <license identifier="cc-by-sa-3.0" />
+        <maintainer>Wikimedia</maintainer>
+        <usagePolicy><![CDATA[https://foundation.wikimedia.org/wiki/Maps_Terms_of_Use]]></usagePolicy>
+      </constraint>
     </layer>
     <layer>
       <name>Wikidata</name>
       <url><![CDATA[mediawiki:https://www.wikidata.org/w/api.php]]></url>
-      <license identifier="cc-zero-1.0" />
+      <constraint>
+        <license identifier="cc-by-sa-3.0" />
+        <maintainer>Wikimedia</maintainer>
+        <usagePolicy><![CDATA[https://foundation.wikimedia.org/wiki/Maps_Terms_of_Use]]></usagePolicy>
+      </constraint>
     </layer>
   </folder>
 
@@ -233,12 +292,23 @@
     </layer>
   </folder>
 
+    <layer>
+      <name>Marine Traffic</name>
+      <url><![CDATA[osm:https://tiles.marinetraffic.com/ais_helpers/shiptilesingle.aspx?output=png&sat=1&grouping=shiptype&tile_size=256&legends=1&zoom={zoomLevel}&X={column}&Y={row}]]></url>
+      <constraint>
+        <license identifier="odbl" />
+        <maintainer>OpenStreetMap</maintainer>
+      </constraint>
+    </layer>
+
   <layer>
     <name>OSM Streets (de)</name>
     <url><![CDATA[osm:http://{identifier}.tile.openstreetmap.de/tiles/osmde/{zoomLevel}/{column}/{row}.png?identifiers=a,b,c,d]]></url>
-    <license identifier="odbl">
+    <constraint>
+      <license identifier="odbl" />
       <maintainer>OpenStreetMap</maintainer>
-    </license>
+      <usagePolicy><![CDATA[https://openstreetmap.de/index.html]]></usagePolicy>
+    </constraint>
   </layer>
 
 </configuration>

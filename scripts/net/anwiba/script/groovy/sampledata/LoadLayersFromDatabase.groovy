@@ -114,7 +114,7 @@ load(locator
     )
 
 locator.envelope(locator.worldBox())
-locator.add(0,"Streets", facade.layerReference("osm:http://{identifier}.tiles.wmflabs.org/osm/{zoomLevel}/{column}/{row}.png?identifiers=a,b,c"))
+locator.add(0,"Streets", facade.layerReference("osm:http://{identifier}.tile.openstreetmap.de/tiles/osmde/{zoomLevel}/{column}/{row}.png?identifiers=a,b,c,d"))
 
 def view = facade.view()
 view.clear()
@@ -141,4 +141,4 @@ load(view
     ].iterator()
     )
 view.center(view.worldBox().getCenterCoordinate())
-view.add(0,"Streets", facade.layerReference("osm:http://{identifier}.tiles.wmflabs.org/osm/{zoomLevel}/{column}/{row}.png?identifiers=a,b,c"))
+view.add(0,"Streets", facade.layerReference("osm:http://{identifier}.tile.openstreetmap.de/tiles/osmde/{zoomLevel}/{column}/{row}.png?identifiers=a,b,c,d"))

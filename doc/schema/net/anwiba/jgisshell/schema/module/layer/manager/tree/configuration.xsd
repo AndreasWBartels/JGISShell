@@ -71,8 +71,22 @@
     </xsd:annotation>
     <xsd:sequence>
       <xsd:element name="maintainer" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="usagePolicy" type="xsd:string" minOccurs="0" maxOccurs="1"/>
     </xsd:sequence>
     <xsd:attribute name="identifier" type="xsd:string" />
+  </xsd:complexType>
+
+  <xsd:complexType name="ConstraintType">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <jaxb:class name="Constraint"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="license" type="tree:LicenseType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="maintainer" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="usagePolicy" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+    </xsd:sequence>
   </xsd:complexType>
 
   <xsd:complexType name="LayerType">
@@ -84,7 +98,7 @@
     <xsd:sequence>
       <xsd:element name="name" type="xsd:string" minOccurs="1" maxOccurs="1"/>
       <xsd:element name="url" type="xsd:string" minOccurs="1" maxOccurs="1"/>
-      <xsd:element name="license" type="tree:LicenseType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="constraint" type="tree:ConstraintType" minOccurs="0" maxOccurs="unbounded"/>
     </xsd:sequence>
   </xsd:complexType>
 

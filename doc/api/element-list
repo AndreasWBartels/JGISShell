@@ -32,6 +32,7 @@ net.anwiba.commons.message
 net.anwiba.commons.message.notification
 net.anwiba.commons.message.observer
 net.anwiba.commons.reference
+net.anwiba.commons.reference.cache
 net.anwiba.commons.reference.utilities
 net.anwiba.commons.thread.cancel
 net.anwiba.commons.thread.job
@@ -42,7 +43,6 @@ net.anwiba.commons.thread.progress
 net.anwiba.commons.thread.queue
 net.anwiba.commons.utilities
 net.anwiba.commons.utilities.boole
-net.anwiba.commons.utilities.cache
 net.anwiba.commons.utilities.collection
 net.anwiba.commons.utilities.color
 net.anwiba.commons.utilities.date
