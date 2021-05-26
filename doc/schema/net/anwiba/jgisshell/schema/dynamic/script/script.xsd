@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jaxb="http://java.sun.com/xml/ns/jaxb" jaxb:version="2.0" targetNamespace="http://www.anwiba.net/dynamic/script" xmlns="http://www.anwiba.net/dynamic/script"
+<xsd:schema 
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+  xmlns:jaxb="https://jakarta.ee/xml/ns/jaxb" jaxb:version="3.0"
+  targetNamespace="http://www.anwiba.net/dynamic/script" 
+  xmlns="http://www.anwiba.net/dynamic/script"
   elementFormDefault="qualified">
 
   <xsd:annotation>

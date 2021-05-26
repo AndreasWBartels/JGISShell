@@ -14,10 +14,10 @@
     <crs:primeMeridian name="greenwich" value="0.0">
      <crs:Authority name="EPSG" code="8901"/>
     </crs:primeMeridian>
-    <crs:unit name="degree (supplier to define representation)" type="ANGLE" factor="0.017453292519943278"/>
+    <crs:unit name="degree" type="ANGLE" factor="0.017453292519943278"/>
     <crs:axes>
-     <crs:axis name="LAT" value="NORTH"/>
-     <crs:axis name="LON" value="EAST"/>
+     <crs:axis name="lat" value="NORTH"/>
+     <crs:axis name="lon" value="EAST"/>
     </crs:axes>
     <crs:Authority name="EPSG" code="4326"/>
    </crs:geographicCoordinateReference>
@@ -29,17 +29,18 @@
    </crs:parameters>
    <crs:unit name="metre" type="DISTANCE" factor="1.0"/>
    <crs:axes>
-    <crs:axis name="X" value="EAST"/>
-    <crs:axis name="Y" value="NORTH"/>
+    <crs:axis name="x" value="EAST"/>
+    <crs:axis name="y" value="NORTH"/>
    </crs:axes>
    <crs:Authority name="EPSG" code="3857"/>
   </crs:projectedCoordinateReference>
   <crs:Authority name="EPSG" code="3857"/>
  </crs:coordinateReferenceSystem>
  <worldBox>
-  <coordinate coordinateDimension="2" isMeasured="false">912922.4487781025, 6307366.346282564</coordinate>
-  <coordinate coordinateDimension="2" isMeasured="false">955892.009018497, 6327620.227541708</coordinate>
+  <coordinate coordinateDimension="2" isMeasured="false">911817.4510478722, 6273351.900579271</coordinate>
+  <coordinate coordinateDimension="2" isMeasured="false">933997.4643305097, 6284626.740664612</coordinate>
  </worldBox>
+ <properties/>
  <layers>
   <layer name="Wikimedia Maps" visible="true" uuid="245a12c8-28a2-4d8a-8391-17458f7c836d">
    <resource type="SERVICE" layerType="RASTER" format="OSM" codec="PNG">
@@ -98,7 +99,7 @@
    <style type="SYMBOL">
     <symbolstyle shape="CIRCLE" size="20.0" rotation="0.0">
      <areastyle paintbackground="true">
-      <fillpattern type="TEXTURE" method="SCALE" imageurl="/home/andreas/work/JGISShell/development/trunk/workspace/jgisshell/workspace/data/icons/20px-Wikipedia-logo-v2.svg.png"/>
+      <fillpattern type="TEXTURE" method="SCALE" imageurl="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAASCAYAAABb0P4QAAAEG0lEQVR4XnVUSU9bZxRFlfofWFRVV9l0VamLtJXSVVf9DSxYFtoyKSwqUSGHOEAAu1BjDMY4YTazbTziEYOHgjG2sQHPeJ4CuEpQlYrT+73WiCD1Sk9v+t75zjn33NfQcK8cRsenXq93W2c0/Xj/udvte+R2ux8B+MhgMH+rM+z8uqRYFa6sbS5Ozc19cn/tXcVisS9tNnvNZLIkJRLJx/Xn8Xj8SSh8FnS5PEXvka/kdHlgttigMxjR/bQboompS5FopvE+VkOpVGrM5wuJRCIJs9U6f/9dNBKLhMOnlR2jEWrVNvyBICxWGx12SKUyrKxu4PX8ck4sFn9291EqdWGLRKJIZzI4ODwU9vb2NjY3Nxubmpr6eDyezmw2h9PpDKLRGELhMNyeP2Cz7cK4Y8KWUo3Z2UWIxiXqfxlEk18HgyfwHfmgUKzmurq6Dtrb2y0tLS1obW1FX1/fcbX6BtlsDplMFufnEfiO/bDbd2El0G2NHgLBbxCOim77R0Y+bygWi4PZbBaVShU9PT3nBHTLgDo6OlLDw8MelUoVJDsQi8Vh0OuhUipxcODFrmMPJrOF83JsTATx5DSGRgRCMj3hvbhII5/Po1Ao/FWpVtHZ2Rk1GAz+t2/foUr3bEN21mm1kM/IOZaOPScBWqHVG7GsWIVMPothwai1IR5LpIwGAxiL6+tr3NzcIBKJIJlMolgocEBXV1dgsguFIvkYhZ8kHxx6YSbAzS011jdVkE7L8eLFywjFJZ5zOV3kTwa1Wo0DC4fCHJs3BJbL5cEUMMBisQTWvLPzczhdbth396CkzqvUGoyQj7285ykm2V/3sFyuolIuw0zdY37Van/i8vKKY8W6nEikcHp6BovFislJKfm4Dx1Jnl9SQCyZIoaDLopMavTs7BwXqQvQNTHKoVQqE3i57iuSlE/GjnU6kUxBOjWNsVERNDo91BodZucWqMvjGBgcmmKA32k1Gk4yO5hn6XSau2Zg5XKFA+Kk0sYsYouLyzAYTdDpDNjYUmGC2D573k8RG3jMZdHvDxyzxZwsagbzbXN9A6/kcq5Z7J4BBoMh+P1B7O27yD8HF+rFpWWMT0zi57b2wN2khEKh72kK/o5S1phsFmAV7SyblnHTkaKmeL1HBBagKfHAZneAx3vGxWVcLKH8Cd+3tbU9uQNkRTt3H3l9CJPpdXlx8u7kJIQAyWRhdv7HTEtSBQIhZih7L4dHbvn9gz98AFYvtVL9i8Vse39MTNh47VEXXW4P9p1uGjM7tFo9FxEaUUhlcoz+Pv5uaEjw00OcD2pdofhKrze5TSYr/UnWOFlLyytY31CSXyt4PTuPCYoInz9g5/P53zz8/n9LqdQ8XtvYEihW1kwLC0sBiWTyeFr2SicSSYbEYukXD9fX6x/grbkITRlbkgAAAABJRU5ErkJg"/>
       <linestyle haspoints="false">
        <signature dashpattern="SOLID_LINE" width="0.0">
         <color red="0" green="0" blue="0" alpha="255"/>
@@ -149,7 +150,7 @@
    <style type="SYMBOL">
     <symbolstyle shape="CIRCLE" size="20.0" rotation="0.0">
      <areastyle paintbackground="true">
-      <fillpattern type="TEXTURE" method="SCALE" imageurl="/home/andreas/work/JGISShell/development/trunk/workspace/jgisshell/workspace/data/icons/20px-Wikipedia-logo-v2.svg.png"/>
+      <fillpattern type="TEXTURE" method="SCALE" imageurl="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAASCAYAAABb0P4QAAAEG0lEQVR4XnVUSU9bZxRFlfofWFRVV9l0VamLtJXSVVf9DSxYFtoyKSwqUSGHOEAAu1BjDMY4YTazbTziEYOHgjG2sQHPeJ4CuEpQlYrT+73WiCD1Sk9v+t75zjn33NfQcK8cRsenXq93W2c0/Xj/udvte+R2ux8B+MhgMH+rM+z8uqRYFa6sbS5Ozc19cn/tXcVisS9tNnvNZLIkJRLJx/Xn8Xj8SSh8FnS5PEXvka/kdHlgttigMxjR/bQboompS5FopvE+VkOpVGrM5wuJRCIJs9U6f/9dNBKLhMOnlR2jEWrVNvyBICxWGx12SKUyrKxu4PX8ck4sFn9291EqdWGLRKJIZzI4ODwU9vb2NjY3Nxubmpr6eDyezmw2h9PpDKLRGELhMNyeP2Cz7cK4Y8KWUo3Z2UWIxiXqfxlEk18HgyfwHfmgUKzmurq6Dtrb2y0tLS1obW1FX1/fcbX6BtlsDplMFufnEfiO/bDbd2El0G2NHgLBbxCOim77R0Y+bygWi4PZbBaVShU9PT3nBHTLgDo6OlLDw8MelUoVJDsQi8Vh0OuhUipxcODFrmMPJrOF83JsTATx5DSGRgRCMj3hvbhII5/Po1Ao/FWpVtHZ2Rk1GAz+t2/foUr3bEN21mm1kM/IOZaOPScBWqHVG7GsWIVMPothwai1IR5LpIwGAxiL6+tr3NzcIBKJIJlMolgocEBXV1dgsguFIvkYhZ8kHxx6YSbAzS011jdVkE7L8eLFywjFJZ5zOV3kTwa1Wo0DC4fCHJs3BJbL5cEUMMBisQTWvLPzczhdbth396CkzqvUGoyQj7285ykm2V/3sFyuolIuw0zdY37Van/i8vKKY8W6nEikcHp6BovFislJKfm4Dx1Jnl9SQCyZIoaDLopMavTs7BwXqQvQNTHKoVQqE3i57iuSlE/GjnU6kUxBOjWNsVERNDo91BodZucWqMvjGBgcmmKA32k1Gk4yO5hn6XSau2Zg5XKFA+Kk0sYsYouLyzAYTdDpDNjYUmGC2D573k8RG3jMZdHvDxyzxZwsagbzbXN9A6/kcq5Z7J4BBoMh+P1B7O27yD8HF+rFpWWMT0zi57b2wN2khEKh72kK/o5S1phsFmAV7SyblnHTkaKmeL1HBBagKfHAZneAx3vGxWVcLKH8Cd+3tbU9uQNkRTt3H3l9CJPpdXlx8u7kJIQAyWRhdv7HTEtSBQIhZih7L4dHbvn9gz98AFYvtVL9i8Vse39MTNh47VEXXW4P9p1uGjM7tFo9FxEaUUhlcoz+Pv5uaEjw00OcD2pdofhKrze5TSYr/UnWOFlLyytY31CSXyt4PTuPCYoInz9g5/P53zz8/n9LqdQ8XtvYEihW1kwLC0sBiWTyeFr2SicSSYbEYukXD9fX6x/grbkITRlbkgAAAABJRU5ErkJg"/>
       <linestyle haspoints="false">
        <signature dashpattern="SOLID_LINE" width="0.0">
         <color red="0" green="0" blue="0" alpha="255"/>
@@ -200,7 +201,7 @@
    <style type="SYMBOL">
     <symbolstyle shape="QUADRAT" size="20.0" rotation="0.0">
      <areastyle paintbackground="false">
-      <fillpattern type="TEXTURE" method="SCALE" imageurl="/home/andreas/work/JGISShell/development/trunk/workspace/jgisshell/workspace/data/icons/40px-Wikidata-logo.svg.png"/>
+      <fillpattern type="TEXTURE" method="SCALE" imageurl="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAWCAMAAACFUC6CAAAAZlBMVEUAAACZAACaAACiAACYAACbAACbAACZAAAymGcuol01mmUzmWYAZpkAZ5gAZpkAZJsAZJuZAACZAACYAACaAACaAACZAAAwmGc0mWYzmWYAZpkAZpkAZZoAZZqZAAAzmWYAZpn///9YO/YMAAAAHnRSTlMAIzoLUhcuRlILOiMjUkYXLm63JUmS2yW3bm7bSZJq94mtAAAAXElEQVR4Xu2TMQqAQAwEdz0RRRQ7//89yxPlRBSzVlZHCsubIjBkSBfACd9haN4IRysxW0fyAqN8s6ZWOJE9sLNDWuZkm8bCgQw4o1xh9T2fo4RZSpjl/9D9Cm4eaFgVOOcIz8kAAAAASUVORK5C"/>
       <linestyle haspoints="false">
        <signature dashpattern="SOLID_LINE" width="0.0">
         <color red="0" green="0" blue="0" alpha="255"/>
@@ -251,7 +252,7 @@
    <style type="SYMBOL">
     <symbolstyle shape="CIRCLE" size="20.0" rotation="0.0">
      <areastyle paintbackground="true">
-      <fillpattern type="TEXTURE" method="SCALE" imageurl="/home/andreas/work/JGISShell/development/trunk/workspace/jgisshell/workspace/data/icons/23px-Wikivoyage-Logo-v3-icon.svg.png"/>
+      <fillpattern type="TEXTURE" method="SCALE" imageurl="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAAXCAMAAADX9CSSAAAA6lBMVEUAAACbAACaAACZAACZAACfAACbAACaAACZAACaAACZAAAAZpkAZpkAZpkAZpkAZ5iXAACZAACZAAAAZJsAZpkAZ5kAZpkAZpkAZpkAZpkAZZqbAACZAAAAapUAZpkAZpmaAACZAAAAZ5gAZpmaAAAAapUAZ5icAAAAZZoAZpkAZpkAZJsAZpkAAP80l2gwmGcA/wAkkm1AgIAzmWYzmWYzmWYzmWY0mWYzmWYzmWYzmWYzmWZAn2AymGczmWYymWYvl2gzmWYzmWYymWcymWYzmWYymWYxnGMzmGc3m2SZAAAAZpkzmWb////xEhG7AAAASnRSTlMAHCuR5xAXiPd+8AoZKDcqIO8PIa3M3Ov69Csz4x23gjX4Ye+SGK4kXe3ZF6IBQCUBBwQym/wosun7Ge4IYfm2G+/aZsq5ux+fHDs2RE4AAADhSURBVHhedZG7DwFBEMa/bx2CSpQiUSg0HqHQa/zNOgk5jSAiIpEIUSmIR8TjBPu4S845U+zM/DY7M98sEWYkg0gaBSmCELF4vBV1rCAlm+g88c01Bd6Ox1OyE49IXlXST1xhZRRhHRhKfkB2UsZN3hI5lvST6Vq7PLeOA1lnA4tFCV6m4qogqwNqzqVYAION4Ygk1OnqKpIzlxtzdc2FMF3+WrminU9XlaOamlkn/r01yAywt1Xs30OEaXgd/fu0VXLq/XB0z8DDhN/75wXJMN4RHgj81+4ezscinKPtCvoAkTItTG1bSnsAAAAASUVORK5C"/>
       <linestyle haspoints="false">
        <signature dashpattern="SOLID_LINE" width="0.0">
         <color red="0" green="0" blue="0" alpha="255"/>
@@ -289,31 +290,24 @@
      </crs:datum>
      <crs:primeMeridian name="greenwich" value="0.0"/>
      <crs:unit name="degree" type="ANGLE" factor="0.0174532925199433"/>
-     <crs:axes>
-      <crs:axis name="north" value="NORTH"/>
-      <crs:axis name="east" value="EAST"/>
-     </crs:axes>
      <crs:Authority name="EPSG" code="4326"/>
     </crs:geographicCoordinateReference>
     <crs:parameters>
      <crs:parameter name="false_easting" value="0.0"/>
      <crs:parameter name="false_northing" value="0.0"/>
-     <crs:parameter name="central_meridian" value="0.0"/>
+     <crs:parameter name="longitude_of_origin" value="0.0"/>
      <crs:parameter name="scale_factor" value="1.0"/>
     </crs:parameters>
     <crs:unit name="meter" type="DISTANCE" factor="1.0"/>
-    <crs:axes>
-     <crs:axis name="east" value="EAST"/>
-     <crs:axis name="north" value="NORTH"/>
-    </crs:axes>
     <crs:Authority name="EPSG" code="3857"/>
    </crs:projectedCoordinateReference>
    <crs:Authority name="EPSG" code="3857"/>
   </crs:coordinateReferenceSystem>
   <worldBox>
-   <coordinate coordinateDimension="2" isMeasured="false">-3051.997228104854, 5639185.202803457</coordinate>
-   <coordinate coordinateDimension="2" isMeasured="false">2482225.003780736, 7401703.07596789</coordinate>
+   <coordinate coordinateDimension="2" isMeasured="false">-3051.997228104621, 5594805.256356872</coordinate>
+   <coordinate coordinateDimension="2" isMeasured="false">2482225.003780736, 7446083.022414478</coordinate>
   </worldBox>
+  <properties/>
   <layers>
    <layer name="Wikimedia Maps" visible="true" uuid="dbb9eca3-8fbb-4799-9068-e7b029c449d5">
     <resource type="SERVICE" layerType="RASTER" format="OSM" codec="PNG">
@@ -330,23 +324,15 @@
        </crs:datum>
        <crs:primeMeridian name="greenwich" value="0.0"/>
        <crs:unit name="degree" type="ANGLE" factor="0.0174532925199433"/>
-       <crs:axes>
-        <crs:axis name="north" value="NORTH"/>
-        <crs:axis name="east" value="EAST"/>
-       </crs:axes>
        <crs:Authority name="EPSG" code="4326"/>
       </crs:geographicCoordinateReference>
       <crs:parameters>
        <crs:parameter name="false_easting" value="0.0"/>
        <crs:parameter name="false_northing" value="0.0"/>
-       <crs:parameter name="central_meridian" value="0.0"/>
+       <crs:parameter name="longitude_of_origin" value="0.0"/>
        <crs:parameter name="scale_factor" value="1.0"/>
       </crs:parameters>
       <crs:unit name="meter" type="DISTANCE" factor="1.0"/>
-      <crs:axes>
-       <crs:axis name="east" value="EAST"/>
-       <crs:axis name="north" value="NORTH"/>
-      </crs:axes>
       <crs:Authority name="EPSG" code="3857"/>
      </crs:projectedCoordinateReference>
      <crs:Authority name="EPSG" code="3857"/>

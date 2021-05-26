@@ -1,1155 +1,1422 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <this:configuration
-  xmlns:this="http://www.anwiba.net/module/license"
-  xmlns:config="http://www.anwiba.net/dynamic/configuration"
-  xmlns="http://www.anwiba.net/dynamic/license">
-  <this:licenses>
-      <license>
-        <identifier>dl-de-zero-1.0</identifier>
-        <name>Datenlizenz Deutschland Zero Version 1.0</name>
-        <acronym>DL-DE ZERO 1.0</acronym>
-        <version>1.0</version>
-        <reference>https://www.govdata.de/dl-de/zero-1-0</reference>
-        <attributes>
-          <attribute>zero</attribute>
-        </attributes>
-        <aliases>
-          <alias>DL-DE-ZERO-1.0</alias>
-          <alias>dlzerode/1_0</alias>
-          <alias>http://dcat-ap.de/def/licenses/dl-zero-de/1.0</alias>
-          <alias>dl-zero-de</alias>
-          <alias>DL-ZERO-DE</alias>
-          <alias>http://dcat-ap.de/def/licenses/dl-zero-de</alias>
-        </aliases>
-      </license>
-      <license>
-        <identifier>dl-de-zero-2.0</identifier>
-        <name>Datenlizenz Deutschland Zero Version 2.0</name>
-        <acronym>DL-DE ZERO 2.0</acronym>
-        <version>2.0</version>
-        <reference>https://www.govdata.de/dl-de/zero-2-0</reference>
-        <attributes>
-          <attribute>zero</attribute>
-        </attributes>
-        <aliases>
-          <alias>DL-DE-ZERO-2.0</alias>
-          <alias>dlzerode/2_0</alias>
-          <alias>http://dcat-ap.de/def/licenses/dl-zero-de/2.0</alias>
-        </aliases>
-      </license>
-      <license>
-        <identifier>dl-de-by-1.0</identifier>
-        <name>Datenlizenz Deutschland Namensnennung Version 1.0</name>
-        <acronym>DL-DE BY 1.0</acronym>
-        <version>1.0</version>
-        <reference>https://www.govdata.de/dl-de/by-1-0</reference>
-        <attributes>
-          <attribute>by</attribute>
-        </attributes>
-        <aliases>
-          <alias>DL-DE-BY-1.0</alias>
-          <alias>dlbyde/1_0</alias>
-          <alias>http://dcat-ap.de/def/licenses/dl-by-de/1.0</alias>
-          <alias>dl-by-de</alias>
-          <alias>DL-BY-DE</alias>
-          <alias>http://dcat-ap.de/def/licenses/dl-by-de</alias>
-        </aliases>
-      </license>
-      <license>
-        <identifier>dl-de-by-2.0</identifier>
-        <name>Datenlizenz Deutschland Namensnennung Version 2.0</name>
-        <acronym>DL-DE BY 2.0</acronym>
-        <version>2.0</version>
-        <reference>https://www.govdata.de/dl-de/by-2-0</reference>
-        <attributes>
-          <attribute>by</attribute>
-        </attributes>
-        <aliases>
-          <alias>DL-DE-BY-2.0</alias>
-          <alias>dlbyde/2_0</alias>
-          <alias>http://dcat-ap.de/def/licenses/dl-by-de/2.0</alias>
-        </aliases>
-      </license>
-      <license>
-        <identifier>dl-de-by-nc-1.0</identifier>
-        <name>Datenlizenz Deutschland Namensnennung - Nicht kommerziell Version 1.0</name>
-        <acronym>DL-DE BY-NC 1.0</acronym>
-        <version>1.0</version>
-        <reference>https://www.govdata.de/dl-de/by-nc-1-0</reference>
-        <attributes>
-          <attribute>by</attribute>
-          <attribute>nc</attribute>
-        </attributes>
-        <aliases>
-          <alias>DL-DE-BY-NC-1.0</alias>
-          <alias>dlbyncde/1_0</alias>
-          <alias>http://dcat-ap.de/def/licenses/dl-by-nc-de/1.0</alias>
-          <alias>dl-by-nc-de</alias>
-          <alias>DL-BY-NC-DE</alias>
-          <alias>http://dcat-ap.de/def/licenses/dl-by-nc-de</alias>
-        </aliases>
-      </license>
-      <license>
-        <identifier>dl-de-by-nc-2.0</identifier>
-        <name>Datenlizenz Deutschland Namensnennung - Nicht kommerziell Version 2.0</name>
-        <acronym>DL-DE BY-NC 2.0</acronym>
-        <version>2.0</version>
-        <reference>https://www.govdata.de/dl-de/by-nc-2-0</reference>
-        <attributes>
-          <attribute>by</attribute>
-          <attribute>nc</attribute>
-        </attributes>
-        <aliases>
-          <alias>DL-DE-BY-NC-2.0</alias>
-          <alias>dlbyncde/2_0</alias>
-          <alias>http://dcat-ap.de/def/licenses/dl-by-nc-de/2.0</alias>
-        </aliases>
-      </license>
-      <license>
-        <identifier>official-work</identifier>
-        <name>Amtliches Werk, lizenzfrei nach §5 Abs. 1 UrhG</name>
-        <reference>http://www.gesetze-im-internet.de/urhg/__5.html</reference>
-        <attributes>
-          <attribute>by</attribute>
-          <attribute>nd</attribute>
-        </attributes>
-        <aliases>
-          <alias>OFFICIAL-WORK</alias>
-          <alias>officialWork</alias>
-          <alias>http://dcat-ap.de/def/licenses/official-work</alias>
-        </aliases>
-      </license>
-      <license>
-        <identifier>geonutz-be-2013-10-01</identifier>
-        <name>Nutzungsbestimmungen für die Bereitstellung von Geodaten des Landes Berlin</name>
-        <reference>http://www.stadtentwicklung.berlin.de/geoinformation/download/nutzIII.pdf</reference>
-        <attributes>
-          <attribute>by</attribute>
-        </attributes>
-        <aliases>
-          <alias>GEONUTZ-BE-2013-10-01</alias>
-        </aliases>
-      </license>
-      <license>
-        <identifier>geonutzv-de-2013-03-19</identifier>
-        <name>Nutzungsbestimmungen für die Bereitstellung von Geodaten des Bundes</name>
-        <reference>http://www.geodatenzentrum.de/docpdf/geonutzv.pdf</reference>
-        <attributes>
-          <attribute>by</attribute>
-        </attributes>
-        <aliases>
-          <alias>GEONUTZV-DE-2013-03-19</alias>
-        </aliases>
-      </license>
-      <license>
-        <identifier>cc-zero-1.0</identifier>
-        <name>Creative Commons Zero 1.0 Generic</name>
-        <acronym>CC-ZERO 1.0</acronym>
-        <version>1.0</version>
-        <reference>http://creativecommons.org/licenses/zero/1.0/</reference>
-        <attributes>
-          <attribute>zero</attribute>
-        </attributes>
-        <aliases>
-          <alias>CC-ZERO-1.0</alias>
-          <alias>cczero/1_0</alias>
-          <alias>http://dcat-ap.de/def/licenses/cc-zero/1.0</alias>
-          <alias>http://dcat-ap.de/def/licenses/cc-zero-de/1.0</alias>
-          <alias>cc-zero</alias>
-          <alias>cczero</alias>
-          <alias>http://dcat-ap.de/def/licenses/cc-zero</alias>
-          <alias>http://dcat-ap.de/def/licenses/cc-zero-de</alias>
-        </aliases>
-      </license>
-      <license>
-        <identifier>cc-zero-2.0</identifier>
-        <name>Creative Commons Zero 2.0 Generic</name>
-        <acronym>CC-ZERO 2.0</acronym>
-        <version>2.0</version>
-        <reference>http://creativecommons.org/licenses/zero/2.0/</reference>
-        <attributes>
-          <attribute>zero</attribute>
-        </attributes>
-        <aliases>
-          <alias>CC-ZERO-2.0</alias>
-          <alias>cczero/2_0</alias>
-          <alias>http://dcat-ap.de/def/licenses/cc-zero/2.0</alias>
-          <alias>http://dcat-ap.de/def/licenses/cc-zero-de/2.0</alias>
-        </aliases>
-      </license>
-      <license>
-        <identifier>cc-zero-2.5</identifier>
-        <name>Creative Commons Zero 2.5 Generic</name>
-        <acronym>CC-ZERO 2.5</acronym>
-        <version>2.5</version>
-        <reference>http://creativecommons.org/licenses/zero/2.5/</reference>
-        <attributes>
-          <attribute>zero</attribute>
-        </attributes>
-        <aliases>
-          <alias>CC-ZERO-2.5</alias>
-          <alias>cczero/2_5</alias>
-          <alias>http://dcat-ap.de/def/licenses/cc-zero/2.5</alias>
-          <alias>http://dcat-ap.de/def/licenses/cc-zero-de/2.5</alias>
-        </aliases>
-      </license>
-      <license>
-        <identifier>cc-zero-3.0</identifier>
-        <name>Creative Commons Zero 3.0 Unported</name>
-        <acronym>CC-ZERO 3.0</acronym>
-        <version>3.0</version>
-        <reference>http://creativecommons.org/licenses/zero/3.0/</reference>
-        <attributes>
-          <attribute>zero</attribute>
-        </attributes>
-        <aliases>
-          <alias>CC-ZERO-3.0</alias>
-          <alias>cczero/3_0</alias>
-          <alias>http://dcat-ap.de/def/licenses/cc-zero/3.0</alias>
-          <alias>http://dcat-ap.de/def/licenses/cc-zero-de/3.0</alias>
-        </aliases>
-      </license>
-      <license>
-        <identifier>cc-zero-4.0</identifier>
-        <name>Creative Commons Zero 4.0 International</name>
-        <acronym>CC-ZERO 4.0</acronym>
-        <version>4.0</version>
-        <reference>http://creativecommons.org/licenses/zero/4.0/</reference>
-        <attributes>
-          <attribute>zero</attribute>
-        </attributes>
-        <aliases>
-          <alias>CC-ZERO-4.0</alias>
-          <alias>cczero/4_0</alias>
-          <alias>http://dcat-ap.de/def/licenses/cc-zero/4.0</alias>
-          <alias>http://dcat-ap.de/def/licenses/cc-zero-de/4.0</alias>
-        </aliases>
-      </license>
-      <license>
-        <identifier>cc-by-1.0</identifier>
-        <name>Creative Commons Attribution 1.0 Generic</name>
-        <acronym>CC-BY 1.0</acronym>
-        <version>1.0</version>
-        <reference>http://creativecommons.org/licenses/by/1.0/</reference>
-        <attributes>
-          <attribute>by</attribute>
-        </attributes>
-        <aliases>
-          <alias>CC-BY-1.0</alias>
-          <alias>ccby/1_0</alias>
-          <alias>http://dcat-ap.de/def/licenses/cc-by/1.0</alias>
-          <alias>http://dcat-ap.de/def/licenses/cc-by-de/1.0</alias>
-          <alias>cc-by</alias>
-          <alias>ccby</alias>
-          <alias>http://dcat-ap.de/def/licenses/cc-by</alias>
-          <alias>http://dcat-ap.de/def/licenses/cc-by-de</alias>
-        </aliases>
-      </license>
-      <license>
-        <identifier>cc-by-2.0</identifier>
-        <name>Creative Commons Attribution 2.0 Generic</name>
-        <acronym>CC-BY 2.0</acronym>
-        <version>2.0</version>
-        <reference>http://creativecommons.org/licenses/by/2.0/</reference>
-        <attributes>
-          <attribute>by</attribute>
-        </attributes>
-        <aliases>
-          <alias>CC-BY-2.0</alias>
-          <alias>ccby/2_0</alias>
-          <alias>http://dcat-ap.de/def/licenses/cc-by/2.0</alias>
-          <alias>http://dcat-ap.de/def/licenses/cc-by-de/2.0</alias>
-        </aliases>
-      </license>
-      <license>
-        <identifier>cc-by-2.5</identifier>
-        <name>Creative Commons Attribution 2.5 Generic</name>
-        <acronym>CC-BY 2.5</acronym>
-        <version>2.5</version>
-        <reference>http://creativecommons.org/licenses/by/2.5/</reference>
-        <attributes>
-          <attribute>by</attribute>
-        </attributes>
-        <aliases>
-          <alias>CC-BY-2.5</alias>
-          <alias>ccby/2_5</alias>
-          <alias>http://dcat-ap.de/def/licenses/cc-by/2.5</alias>
-          <alias>http://dcat-ap.de/def/licenses/cc-by-de/2.5</alias>
-        </aliases>
-      </license>
-      <license>
-        <identifier>cc-by-3.0</identifier>
-        <name>Creative Commons Attribution 3.0 Unported</name>
-        <acronym>CC-BY 3.0</acronym>
-        <version>3.0</version>
-        <reference>http://creativecommons.org/licenses/by/3.0/</reference>
-        <attributes>
-          <attribute>by</attribute>
-        </attributes>
-        <aliases>
-          <alias>CC-BY-3.0</alias>
-          <alias>ccby/3_0</alias>
-          <alias>http://dcat-ap.de/def/licenses/cc-by/3.0</alias>
-          <alias>http://dcat-ap.de/def/licenses/cc-by-de/3.0</alias>
-        </aliases>
-      </license>
-      <license>
-        <identifier>cc-by-4.0</identifier>
-        <name>Creative Commons Attribution 4.0 International</name>
-        <acronym>CC-BY 4.0</acronym>
-        <version>4.0</version>
-        <reference>http://creativecommons.org/licenses/by/4.0/</reference>
-        <attributes>
-          <attribute>by</attribute>
-        </attributes>
-        <aliases>
-          <alias>CC-BY-4.0</alias>
-          <alias>ccby/4_0</alias>
-          <alias>http://dcat-ap.de/def/licenses/cc-by/4.0</alias>
-          <alias>http://dcat-ap.de/def/licenses/cc-by-de/4.0</alias>
-        </aliases>
-      </license>
-      <license>
-        <identifier>cc-by-sa-1.0</identifier>
-        <name>Creative Commons Attribution-ShareAlike 1.0 Generic</name>
-        <acronym>CC-BY-SA 1.0</acronym>
-        <version>1.0</version>
-        <reference>http://creativecommons.org/licenses/by-sa/1.0/</reference>
-        <attributes>
-          <attribute>by</attribute>
-          <attribute>sa</attribute>
-        </attributes>
-        <aliases>
-          <alias>CC-BY-SA-1.0</alias>
-          <alias>ccbysa/1_0</alias>
-          <alias>http://dcat-ap.de/def/licenses/cc-by-sa/1.0</alias>
-          <alias>http://dcat-ap.de/def/licenses/cc-by-sa-de/1.0</alias>
-          <alias>cc-by-sa</alias>
-          <alias>ccbysa</alias>
-          <alias>http://dcat-ap.de/def/licenses/cc-by-sa</alias>
-          <alias>http://dcat-ap.de/def/licenses/cc-by-sa-de</alias>
-        </aliases>
-      </license>
-      <license>
-        <identifier>cc-by-sa-2.0</identifier>
-        <name>Creative Commons Attribution-ShareAlike 2.0 Generic</name>
-        <acronym>CC-BY-SA 2.0</acronym>
-        <version>2.0</version>
-        <reference>http://creativecommons.org/licenses/by-sa/2.0/</reference>
-        <attributes>
-          <attribute>by</attribute>
-          <attribute>sa</attribute>
-        </attributes>
-        <aliases>
-          <alias>CC-BY-SA-2.0</alias>
-          <alias>ccbysa/2_0</alias>
-          <alias>http://dcat-ap.de/def/licenses/cc-by-sa/2.0</alias>
-          <alias>http://dcat-ap.de/def/licenses/cc-by-sa-de/2.0</alias>
-        </aliases>
-      </license>
-      <license>
-        <identifier>cc-by-sa-2.5</identifier>
-        <name>Creative Commons Attribution-ShareAlike 2.5 Generic</name>
-        <acronym>CC-BY-SA 2.5</acronym>
-        <version>2.5</version>
-        <reference>http://creativecommons.org/licenses/by-sa/2.5/</reference>
-        <attributes>
-          <attribute>by</attribute>
-          <attribute>sa</attribute>
-        </attributes>
-        <aliases>
-          <alias>CC-BY-SA-2.5</alias>
-          <alias>ccbysa/2_5</alias>
-          <alias>http://dcat-ap.de/def/licenses/cc-by-sa/2.5</alias>
-          <alias>http://dcat-ap.de/def/licenses/cc-by-sa-de/2.5</alias>
-        </aliases>
-      </license>
-      <license>
-        <identifier>cc-by-sa-3.0</identifier>
-        <name>Creative Commons Attribution-ShareAlike 3.0 Unported</name>
-        <acronym>CC-BY-SA 3.0</acronym>
-        <version>3.0</version>
-        <reference>http://creativecommons.org/licenses/by-sa/3.0/</reference>
-        <attributes>
-          <attribute>by</attribute>
-          <attribute>sa</attribute>
-        </attributes>
-        <aliases>
-          <alias>CC-BY-SA-3.0</alias>
-          <alias>ccbysa/3_0</alias>
-          <alias>http://dcat-ap.de/def/licenses/cc-by-sa/3.0</alias>
-          <alias>http://dcat-ap.de/def/licenses/cc-by-sa-de/3.0</alias>
-        </aliases>
-      </license>
-      <license>
-        <identifier>cc-by-sa-4.0</identifier>
-        <name>Creative Commons Attribution-ShareAlike 4.0 International</name>
-        <acronym>CC-BY-SA 4.0</acronym>
-        <version>4.0</version>
-        <reference>http://creativecommons.org/licenses/by-sa/4.0/</reference>
-        <attributes>
-          <attribute>by</attribute>
-          <attribute>sa</attribute>
-        </attributes>
-        <aliases>
-          <alias>CC-BY-SA-4.0</alias>
-          <alias>ccbysa/4_0</alias>
-          <alias>http://dcat-ap.de/def/licenses/cc-by-sa/4.0</alias>
-          <alias>http://dcat-ap.de/def/licenses/cc-by-sa-de/4.0</alias>
-        </aliases>
-      </license>
-      <license>
-        <identifier>cc-by-nc-1.0</identifier>
-        <name>Creative Commons Attribution-NonCommercial 1.0 Generic</name>
-        <acronym>CC-BY-NC 1.0</acronym>
-        <version>1.0</version>
-        <reference>http://creativecommons.org/licenses/by-nc/1.0/</reference>
-        <attributes>
-          <attribute>by</attribute>
-          <attribute>nc</attribute>
-        </attributes>
-        <aliases>
-          <alias>CC-BY-NC-1.0</alias>
-          <alias>ccbync/1_0</alias>
-          <alias>http://dcat-ap.de/def/licenses/cc-by-nc/1.0</alias>
-          <alias>http://dcat-ap.de/def/licenses/cc-by-nc-de/1.0</alias>
-          <alias>cc-by-nc</alias>
-          <alias>ccbync</alias>
-          <alias>http://dcat-ap.de/def/licenses/cc-by-nc</alias>
-          <alias>http://dcat-ap.de/def/licenses/cc-by-nc-de</alias>
-        </aliases>
-      </license>
-      <license>
-        <identifier>cc-by-nc-2.0</identifier>
-        <name>Creative Commons Attribution-NonCommercial 2.0 Generic</name>
-        <acronym>CC-BY-NC 2.0</acronym>
-        <version>2.0</version>
-        <reference>http://creativecommons.org/licenses/by-nc/2.0/</reference>
-        <attributes>
-          <attribute>by</attribute>
-          <attribute>nc</attribute>
-        </attributes>
-        <aliases>
-          <alias>CC-BY-NC-2.0</alias>
-          <alias>ccbync/2_0</alias>
-          <alias>http://dcat-ap.de/def/licenses/cc-by-nc/2.0</alias>
-          <alias>http://dcat-ap.de/def/licenses/cc-by-nc-de/2.0</alias>
-        </aliases>
-      </license>
-      <license>
-        <identifier>cc-by-nc-2.5</identifier>
-        <name>Creative Commons Attribution-NonCommercial 2.5 Generic</name>
-        <acronym>CC-BY-NC 2.5</acronym>
-        <version>2.5</version>
-        <reference>http://creativecommons.org/licenses/by-nc/2.5/</reference>
-        <attributes>
-          <attribute>by</attribute>
-          <attribute>nc</attribute>
-        </attributes>
-        <aliases>
-          <alias>CC-BY-NC-2.5</alias>
-          <alias>ccbync/2_5</alias>
-          <alias>http://dcat-ap.de/def/licenses/cc-by-nc/2.5</alias>
-          <alias>http://dcat-ap.de/def/licenses/cc-by-nc-de/2.5</alias>
-        </aliases>
-      </license>
-      <license>
-        <identifier>cc-by-nc-3.0</identifier>
-        <name>Creative Commons Attribution-NonCommercial 3.0 Unported</name>
-        <acronym>CC-BY-NC 3.0</acronym>
-        <version>3.0</version>
-        <reference>http://creativecommons.org/licenses/by-nc/3.0/</reference>
-        <attributes>
-          <attribute>by</attribute>
-          <attribute>nc</attribute>
-        </attributes>
-        <aliases>
-          <alias>CC-BY-NC-3.0</alias>
-          <alias>ccbync/3_0</alias>
-          <alias>http://dcat-ap.de/def/licenses/cc-by-nc/3.0</alias>
-          <alias>http://dcat-ap.de/def/licenses/cc-by-nc-de/3.0</alias>
-        </aliases>
-      </license>
-      <license>
-        <identifier>cc-by-nc-4.0</identifier>
-        <name>Creative Commons Attribution-NonCommercial 4.0 International</name>
-        <acronym>CC-BY-NC 4.0</acronym>
-        <version>4.0</version>
-        <reference>http://creativecommons.org/licenses/by-nc/4.0/</reference>
-        <attributes>
-          <attribute>by</attribute>
-          <attribute>nc</attribute>
-        </attributes>
-        <aliases>
-          <alias>CC-BY-NC-4.0</alias>
-          <alias>ccbync/4_0</alias>
-          <alias>http://dcat-ap.de/def/licenses/cc-by-nc/4.0</alias>
-          <alias>http://dcat-ap.de/def/licenses/cc-by-nc-de/4.0</alias>
-        </aliases>
-      </license>
-      <license>
-        <identifier>cc-by-nc-nd-1.0</identifier>
-        <name>Creative Commons Attribution-NonCommercial-NoDerivatives 1.0 Generic</name>
-        <acronym>CC-BY-NC-ND 1.0</acronym>
-        <version>1.0</version>
-        <reference>http://creativecommons.org/licenses/by-nc-nd/1.0/</reference>
-        <attributes>
-          <attribute>by</attribute>
-          <attribute>nc</attribute>
-          <attribute>nd</attribute>
-        </attributes>
-        <aliases>
-          <alias>CC-BY-NC-ND-1.0</alias>
-          <alias>ccbyncnd/1_0</alias>
-          <alias>http://dcat-ap.de/def/licenses/cc-by-nc-nd/1.0</alias>
-          <alias>http://dcat-ap.de/def/licenses/cc-by-nc-nd-de/1.0</alias>
-          <alias>cc-by-nc-nd</alias>
-          <alias>ccbyncnd</alias>
-          <alias>http://dcat-ap.de/def/licenses/cc-by-nc-nd</alias>
-          <alias>http://dcat-ap.de/def/licenses/cc-by-nc-nd-de</alias>
-        </aliases>
-      </license>
-      <license>
-        <identifier>cc-by-nc-nd-2.0</identifier>
-        <name>Creative Commons Attribution-NonCommercial-NoDerivatives 2.0 Generic</name>
-        <acronym>CC-BY-NC-ND 2.0</acronym>
-        <version>2.0</version>
-        <reference>http://creativecommons.org/licenses/by-nc-nd/2.0/</reference>
-        <attributes>
-          <attribute>by</attribute>
-          <attribute>nc</attribute>
-          <attribute>nd</attribute>
-        </attributes>
-        <aliases>
-          <alias>CC-BY-NC-ND-2.0</alias>
-          <alias>ccbyncnd/2_0</alias>
-          <alias>http://dcat-ap.de/def/licenses/cc-by-nc-nd/2.0</alias>
-          <alias>http://dcat-ap.de/def/licenses/cc-by-nc-nd-de/2.0</alias>
-        </aliases>
-      </license>
-      <license>
-        <identifier>cc-by-nc-nd-2.5</identifier>
-        <name>Creative Commons Attribution-NonCommercial-NoDerivatives 2.5 Generic</name>
-        <acronym>CC-BY-NC-ND 2.5</acronym>
-        <version>2.5</version>
-        <reference>http://creativecommons.org/licenses/by-nc-nd/2.5/</reference>
-        <attributes>
-          <attribute>by</attribute>
-          <attribute>nc</attribute>
-          <attribute>nd</attribute>
-        </attributes>
-        <aliases>
-          <alias>CC-BY-NC-ND-2.5</alias>
-          <alias>ccbyncnd/2_5</alias>
-          <alias>http://dcat-ap.de/def/licenses/cc-by-nc-nd/2.5</alias>
-          <alias>http://dcat-ap.de/def/licenses/cc-by-nc-nd-de/2.5</alias>
-        </aliases>
-      </license>
-      <license>
-        <identifier>cc-by-nc-nd-3.0</identifier>
-        <name>Creative Commons Attribution-NonCommercial-NoDerivatives 3.0 Unported</name>
-        <acronym>CC-BY-NC-ND 3.0</acronym>
-        <version>3.0</version>
-        <reference>http://creativecommons.org/licenses/by-nc-nd/3.0/</reference>
-        <attributes>
-          <attribute>by</attribute>
-          <attribute>nc</attribute>
-          <attribute>nd</attribute>
-        </attributes>
-        <aliases>
-          <alias>CC-BY-NC-ND-3.0</alias>
-          <alias>ccbyncnd/3_0</alias>
-          <alias>http://dcat-ap.de/def/licenses/cc-by-nc-nd/3.0</alias>
-          <alias>http://dcat-ap.de/def/licenses/cc-by-nc-nd-de/3.0</alias>
-        </aliases>
-      </license>
-      <license>
-        <identifier>cc-by-nc-nd-4.0</identifier>
-        <name>Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International</name>
-        <acronym>CC-BY-NC-ND 4.0</acronym>
-        <version>4.0</version>
-        <reference>http://creativecommons.org/licenses/by-nc-nd/4.0/</reference>
-        <attributes>
-          <attribute>by</attribute>
-          <attribute>nc</attribute>
-          <attribute>nd</attribute>
-        </attributes>
-        <aliases>
-          <alias>CC-BY-NC-ND-4.0</alias>
-          <alias>ccbyncnd/4_0</alias>
-          <alias>http://dcat-ap.de/def/licenses/cc-by-nc-nd/4.0</alias>
-          <alias>http://dcat-ap.de/def/licenses/cc-by-nc-nd-de/4.0</alias>
-        </aliases>
-      </license>
-      <license>
-        <identifier>cc-by-nc-sa-1.0</identifier>
-        <name>Creative Commons Attribution-NonCommercial-ShareAlike 1.0 Generic</name>
-        <acronym>CC-BY-NC-SA 1.0</acronym>
-        <version>1.0</version>
-        <reference>http://creativecommons.org/licenses/by-nc-sa/1.0/</reference>
-        <attributes>
-          <attribute>by</attribute>
-          <attribute>nc</attribute>
-          <attribute>sa</attribute>
-        </attributes>
-        <aliases>
-          <alias>CC-BY-NC-SA-1.0</alias>
-          <alias>ccbyncsa/1_0</alias>
-          <alias>http://dcat-ap.de/def/licenses/cc-by-nc-sa/1.0</alias>
-          <alias>http://dcat-ap.de/def/licenses/cc-by-nc-sa-de/1.0</alias>
-          <alias>cc-by-nc-sa</alias>
-          <alias>ccbyncsa</alias>
-          <alias>http://dcat-ap.de/def/licenses/cc-by-nc-sa</alias>
-          <alias>http://dcat-ap.de/def/licenses/cc-by-nc-sa-de</alias>
-        </aliases>
-      </license>
-      <license>
-        <identifier>cc-by-nc-sa-2.0</identifier>
-        <name>Creative Commons Attribution-NonCommercial-ShareAlike 2.0 Generic</name>
-        <acronym>CC-BY-NC-SA 2.0</acronym>
-        <version>2.0</version>
-        <reference>http://creativecommons.org/licenses/by-nc-sa/2.0/</reference>
-        <attributes>
-          <attribute>by</attribute>
-          <attribute>nc</attribute>
-          <attribute>sa</attribute>
-        </attributes>
-        <aliases>
-          <alias>CC-BY-NC-SA-2.0</alias>
-          <alias>ccbyncsa/2_0</alias>
-          <alias>http://dcat-ap.de/def/licenses/cc-by-nc-sa/2.0</alias>
-          <alias>http://dcat-ap.de/def/licenses/cc-by-nc-sa-de/2.0</alias>
-        </aliases>
-      </license>
-      <license>
-        <identifier>cc-by-nc-sa-2.5</identifier>
-        <name>Creative Commons Attribution-NonCommercial-ShareAlike 2.5 Generic</name>
-        <acronym>CC-BY-NC-SA 2.5</acronym>
-        <version>2.5</version>
-        <reference>http://creativecommons.org/licenses/by-nc-sa/2.5/</reference>
-        <attributes>
-          <attribute>by</attribute>
-          <attribute>nc</attribute>
-          <attribute>sa</attribute>
-        </attributes>
-        <aliases>
-          <alias>CC-BY-NC-SA-2.5</alias>
-          <alias>ccbyncsa/2_5</alias>
-          <alias>http://dcat-ap.de/def/licenses/cc-by-nc-sa/2.5</alias>
-          <alias>http://dcat-ap.de/def/licenses/cc-by-nc-sa-de/2.5</alias>
-        </aliases>
-      </license>
-      <license>
-        <identifier>cc-by-nc-sa-3.0</identifier>
-        <name>Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported</name>
-        <acronym>CC-BY-NC-SA 3.0</acronym>
-        <version>3.0</version>
-        <reference>http://creativecommons.org/licenses/by-nc-sa/3.0/</reference>
-        <attributes>
-          <attribute>by</attribute>
-          <attribute>nc</attribute>
-          <attribute>sa</attribute>
-        </attributes>
-        <aliases>
-          <alias>CC-BY-NC-SA-3.0</alias>
-          <alias>ccbyncsa/3_0</alias>
-          <alias>http://dcat-ap.de/def/licenses/cc-by-nc-sa/3.0</alias>
-          <alias>http://dcat-ap.de/def/licenses/cc-by-nc-sa-de/3.0</alias>
-        </aliases>
-      </license>
-      <license>
-        <identifier>cc-by-nc-sa-4.0</identifier>
-        <name>Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</name>
-        <acronym>CC-BY-NC-SA 4.0</acronym>
-        <version>4.0</version>
-        <reference>http://creativecommons.org/licenses/by-nc-sa/4.0/</reference>
-        <attributes>
-          <attribute>by</attribute>
-          <attribute>nc</attribute>
-          <attribute>sa</attribute>
-        </attributes>
-        <aliases>
-          <alias>CC-BY-NC-SA-4.0</alias>
-          <alias>ccbyncsa/4_0</alias>
-          <alias>http://dcat-ap.de/def/licenses/cc-by-nc-sa/4.0</alias>
-          <alias>http://dcat-ap.de/def/licenses/cc-by-nc-sa-de/4.0</alias>
-        </aliases>
-      </license>
-      <license>
-        <identifier>cc-by-nd-1.0</identifier>
-        <name>Creative Commons Attribution-NoDerivatives 1.0 Generic</name>
-        <acronym>CC-BY-ND 1.0</acronym>
-        <version>1.0</version>
-        <reference>http://creativecommons.org/licenses/by-nd/1.0/</reference>
-        <attributes>
-          <attribute>by</attribute>
-          <attribute>nd</attribute>
-        </attributes>
-        <aliases>
-          <alias>CC-BY-ND-1.0</alias>
-          <alias>ccbynd/1_0</alias>
-          <alias>http://dcat-ap.de/def/licenses/cc-by-nd/1.0</alias>
-          <alias>http://dcat-ap.de/def/licenses/cc-by-nd-de/1.0</alias>
-          <alias>cc-by-nd</alias>
-          <alias>ccbynd</alias>
-          <alias>http://dcat-ap.de/def/licenses/cc-by-nd</alias>
-          <alias>http://dcat-ap.de/def/licenses/cc-by-nd-de</alias>
-        </aliases>
-      </license>
-      <license>
-        <identifier>cc-by-nd-2.0</identifier>
-        <name>Creative Commons Attribution-NoDerivatives 2.0 Generic</name>
-        <acronym>CC-BY-ND 2.0</acronym>
-        <version>2.0</version>
-        <reference>http://creativecommons.org/licenses/by-nd/2.0/</reference>
-        <attributes>
-          <attribute>by</attribute>
-          <attribute>nd</attribute>
-        </attributes>
-        <aliases>
-          <alias>CC-BY-ND-2.0</alias>
-          <alias>ccbynd/2_0</alias>
-          <alias>http://dcat-ap.de/def/licenses/cc-by-nd/2.0</alias>
-          <alias>http://dcat-ap.de/def/licenses/cc-by-nd-de/2.0</alias>
-        </aliases>
-      </license>
-      <license>
-        <identifier>cc-by-nd-2.5</identifier>
-        <name>Creative Commons Attribution-NoDerivatives 2.5 Generic</name>
-        <acronym>CC-BY-ND 2.5</acronym>
-        <version>2.5</version>
-        <reference>http://creativecommons.org/licenses/by-nd/2.5/</reference>
-        <attributes>
-          <attribute>by</attribute>
-          <attribute>nd</attribute>
-        </attributes>
-        <aliases>
-          <alias>CC-BY-ND-2.5</alias>
-          <alias>ccbynd/2_5</alias>
-          <alias>http://dcat-ap.de/def/licenses/cc-by-nd/2.5</alias>
-          <alias>http://dcat-ap.de/def/licenses/cc-by-nd-de/2.5</alias>
-        </aliases>
-      </license>
-      <license>
-        <identifier>cc-by-nd-3.0</identifier>
-        <name>Creative Commons Attribution-NoDerivatives 3.0 Unported</name>
-        <acronym>CC-BY-ND 3.0</acronym>
-        <version>3.0</version>
-        <reference>http://creativecommons.org/licenses/by-nd/3.0/</reference>
-        <attributes>
-          <attribute>by</attribute>
-          <attribute>nd</attribute>
-        </attributes>
-        <aliases>
-          <alias>CC-BY-ND-3.0</alias>
-          <alias>ccbynd/3_0</alias>
-          <alias>http://dcat-ap.de/def/licenses/cc-by-nd/3.0</alias>
-          <alias>http://dcat-ap.de/def/licenses/cc-by-nd-de/3.0</alias>
-        </aliases>
-      </license>
-      <license>
-        <identifier>cc-by-nd-4.0</identifier>
-        <name>Creative Commons Attribution-NoDerivatives 4.0 International</name>
-        <acronym>CC-BY-ND 4.0</acronym>
-        <version>4.0</version>
-        <reference>http://creativecommons.org/licenses/by-nd/4.0/</reference>
-        <attributes>
-          <attribute>by</attribute>
-          <attribute>nd</attribute>
-        </attributes>
-        <aliases>
-          <alias>CC-BY-ND-4.0</alias>
-          <alias>ccbynd/4_0</alias>
-          <alias>http://dcat-ap.de/def/licenses/cc-by-nd/4.0</alias>
-          <alias>http://dcat-ap.de/def/licenses/cc-by-nd-de/4.0</alias>
-        </aliases>
-      </license>
-      <license>
-        <identifier>cc-by-sa-1.0</identifier>
-        <name>Creative Commons Attribution-ShareAlike 1.0 Generic</name>
-        <acronym>CC-BY-SA 1.0</acronym>
-        <version>1.0</version>
-        <reference>http://creativecommons.org/licenses/by-sa/1.0/</reference>
-        <attributes>
-          <attribute>by</attribute>
-          <attribute>sa</attribute>
-        </attributes>
-        <aliases>
-          <alias>CC-BY-SA-1.0</alias>
-          <alias>ccbysa/1_0</alias>
-          <alias>http://dcat-ap.de/def/licenses/cc-by-sa/1.0</alias>
-          <alias>http://dcat-ap.de/def/licenses/cc-by-sa-de/1.0</alias>
-          <alias>cc-by-sa</alias>
-          <alias>ccbysa</alias>
-          <alias>http://dcat-ap.de/def/licenses/cc-by-sa</alias>
-          <alias>http://dcat-ap.de/def/licenses/cc-by-sa-de</alias>
-        </aliases>
-      </license>
-      <license>
-        <identifier>cc-by-sa-2.0</identifier>
-        <name>Creative Commons Attribution-ShareAlike 2.0 Generic</name>
-        <acronym>CC-BY-SA 2.0</acronym>
-        <version>2.0</version>
-        <reference>http://creativecommons.org/licenses/by-sa/2.0/</reference>
-        <attributes>
-          <attribute>by</attribute>
-          <attribute>sa</attribute>
-        </attributes>
-        <aliases>
-          <alias>CC-BY-SA-2.0</alias>
-          <alias>ccbysa/2_0</alias>
-          <alias>http://dcat-ap.de/def/licenses/cc-by-sa/2.0</alias>
-          <alias>http://dcat-ap.de/def/licenses/cc-by-sa-de/2.0</alias>
-        </aliases>
-      </license>
-      <license>
-        <identifier>cc-by-sa-2.5</identifier>
-        <name>Creative Commons Attribution-ShareAlike 2.5 Generic</name>
-        <acronym>CC-BY-SA 2.5</acronym>
-        <version>2.5</version>
-        <reference>http://creativecommons.org/licenses/by-sa/2.5/</reference>
-        <attributes>
-          <attribute>by</attribute>
-          <attribute>sa</attribute>
-        </attributes>
-        <aliases>
-          <alias>CC-BY-SA-2.5</alias>
-          <alias>ccbysa/2_5</alias>
-          <alias>http://dcat-ap.de/def/licenses/cc-by-sa/2.5</alias>
-          <alias>http://dcat-ap.de/def/licenses/cc-by-sa-de/2.5</alias>
-        </aliases>
-      </license>
-      <license>
-        <identifier>cc-by-sa-3.0</identifier>
-        <name>Creative Commons Attribution-ShareAlike 3.0 Unported</name>
-        <acronym>CC-BY-SA 3.0</acronym>
-        <version>3.0</version>
-        <reference>http://creativecommons.org/licenses/by-sa/3.0/</reference>
-        <attributes>
-          <attribute>by</attribute>
-          <attribute>sa</attribute>
-        </attributes>
-        <aliases>
-          <alias>CC-BY-SA-3.0</alias>
-          <alias>ccbysa/3_0</alias>
-          <alias>http://dcat-ap.de/def/licenses/cc-by-sa/3.0</alias>
-          <alias>http://dcat-ap.de/def/licenses/cc-by-sa-de/3.0</alias>
-        </aliases>
-      </license>
-      <license>
-        <identifier>cc-by-sa-4.0</identifier>
-        <name>Creative Commons Attribution-ShareAlike 4.0 International</name>
-        <acronym>CC-BY-SA 4.0</acronym>
-        <version>4.0</version>
-        <reference>http://creativecommons.org/licenses/by-sa/4.0/</reference>
-        <attributes>
-          <attribute>by</attribute>
-          <attribute>sa</attribute>
-        </attributes>
-        <aliases>
-          <alias>CC-BY-SA-4.0</alias>
-          <alias>ccbysa/4_0</alias>
-          <alias>http://dcat-ap.de/def/licenses/cc-by-sa/4.0</alias>
-          <alias>http://dcat-ap.de/def/licenses/cc-by-sa-de/4.0</alias>
-        </aliases>
-      </license>
-      <license>
-        <identifier>cc-nc-1.0</identifier>
-        <name>Creative Commons NonCommercial 1.0 Generic</name>
-        <acronym>CC-NC 1.0</acronym>
-        <version>1.0</version>
-        <reference>http://creativecommons.org/licenses/nc/1.0/</reference>
-        <attributes>
-          <attribute>nc</attribute>
-        </attributes>
-        <aliases>
-          <alias>CC-NC-1.0</alias>
-          <alias>ccnc/1_0</alias>
-          <alias>http://dcat-ap.de/def/licenses/dl-nc/1.0</alias>
-          <alias>http://dcat-ap.de/def/licenses/dl-nc-de/1.0</alias>
-          <alias>cc-nc</alias>
-          <alias>CC-NC</alias>
-          <alias>ccnc</alias>
-          <alias>http://dcat-ap.de/def/licenses/cc-nc</alias>
-          <alias>http://dcat-ap.de/def/licenses/cc-nc-de</alias>
-        </aliases>
-      </license>
-      <license>
-        <identifier>cc-nc-sa-1.0</identifier>
-        <name>Creative Commons NonCommercial-ShareAlike 1.0 Generic</name>
-        <acronym>CC-NC-SA 1.0</acronym>
-        <version>1.0</version>
-        <reference>http://creativecommons.org/licenses/nc-sa/1.0/</reference>
-        <attributes>
-          <attribute>nc</attribute>
-          <attribute>sa</attribute>
-        </attributes>
-        <aliases>
-          <alias>CC-NC-SA-1.0</alias>
-          <alias>ccncsa/1_0</alias>
-          <alias>http://dcat-ap.de/def/licenses/dl-nc-sa/1.0</alias>
-          <alias>http://dcat-ap.de/def/licenses/dl-nc-sa-de/1.0</alias>
-          <alias>cc-nc-sa</alias>
-          <alias>CC-NC-SA</alias>
-          <alias>ccncsa</alias>
-          <alias>http://dcat-ap.de/def/licenses/cc-nc-sa</alias>
-          <alias>http://dcat-ap.de/def/licenses/cc-nc-sa-de</alias>
-        </aliases>
-      </license>
-      <license>
-        <identifier>cc-nd-1.0</identifier>
-        <name>Creative Commons NoDerivatives 1.0 Generic</name>
-        <acronym>CC-ND 1.0</acronym>
-        <version>1.0</version>
-        <reference>http://creativecommons.org/licenses/nd/1.0/</reference>
-        <attributes>
-          <attribute>nd</attribute>
-        </attributes>
-        <aliases>
-          <alias>CC-ND-1.0</alias>
-          <alias>ccnd/1_0</alias>
-          <alias>http://dcat-ap.de/def/licenses/dl-nd/1.0</alias>
-          <alias>http://dcat-ap.de/def/licenses/dl-nd-de/1.0</alias>
-          <alias>cc-nd</alias>
-          <alias>CC-ND</alias>
-          <alias>ccnd</alias>
-          <alias>http://dcat-ap.de/def/licenses/cc-nd</alias>
-          <alias>http://dcat-ap.de/def/licenses/cc-nd-de</alias>
-        </aliases>
-      </license>
-      <license>
-        <identifier>cc-sa-1.0</identifier>
-        <name>Creative Commons ShareAlike 1.0 Generic</name>
-        <acronym>CC-SA 1.0</acronym>
-        <version>1.0</version>
-        <reference>http://creativecommons.org/licenses/sa/1.0/</reference>
-        <attributes>
-          <attribute>sa</attribute>
-        </attributes>
-        <aliases>
-          <alias>CC-SA-1.0</alias>
-          <alias>ccsa/1_0</alias>
-          <alias>http://dcat-ap.de/def/licenses/dl-sa/1.0</alias>
-          <alias>http://dcat-ap.de/def/licenses/dl-sa-de/1.0</alias>
-          <alias>cc-sa</alias>
-          <alias>CC-SA</alias>
-          <alias>ccsa</alias>
-          <alias>http://dcat-ap.de/def/licenses/cc-sa</alias>
-          <alias>http://dcat-ap.de/def/licenses/cc-sa-de</alias>
-        </aliases>
-      </license>
-      <license>
-        <identifier>odbl</identifier>
-        <name>Open Data Commons Open Database License (ODbL) v1.0</name>
-        <acronym>ODbL</acronym>
-        <version>1.0</version>
-        <reference>https://opendatacommons.org/licenses/odbl/1.0/</reference>
-        <attributes>
-          <attribute>by</attribute>
-          <attribute>sa</attribute>
-        </attributes>
-        <aliases>
-          <alias>ODBL</alias>
-          <alias>ODbL</alias>
-        </aliases>
-      </license>
-      <license>
-        <identifier>odc-by</identifier>
-        <name>Open Data Commons Attribution License (ODC-By) v1.0</name>
-        <acronym>ODC-By</acronym>
-        <version>1.0</version>
-        <reference>https://opendatacommons.org/licenses/by/1.0/</reference>
-        <attributes>
-          <attribute>by</attribute>
-        </attributes>
-        <aliases>
-          <alias>ODC-BY</alias>
-          <alias>ODC-By</alias>
-        </aliases>
-      </license>
-      <license>
-        <identifier>pddl</identifier>
-        <name>Open Data Commons Public Domain Dedication and Licence (PDDL)</name>
-        <acronym>PDDL</acronym>
-        <version>1.0</version>
-        <reference>https://opendatacommons.org/licenses/pddl/1.0/</reference>
-        <attributes>
-          <attribute>zero</attribute>
-        </attributes>
-        <aliases>
-          <alias>PDDL</alias>
-        </aliases>
-      </license>
-      <license>
-        <identifier>dbcl</identifier>
-        <name>Database Contents License (DbCL) v1.0</name>
-        <acronym>DbCL</acronym>
-        <version>1.0</version>
-        <reference>https://opendatacommons.org/licenses/dbcl/1.0/</reference>
-        <attributes>
-          <attribute>by</attribute>
-          <attribute>sa</attribute>
-        </attributes>
-        <aliases>
-          <alias>DBCL</alias>
-          <alias>DbCL</alias>
-        </aliases>
-      </license>
-      <license>
-        <identifier>other-open</identifier>
-        <name>Other (Open)</name>
-        <acronym>OTHER-OPEN</acronym>
-        <attributes>
-          <attribute>open</attribute>
-        </attributes>
-        <aliases>
-          <alias>OTHER-OPEN</alias>
-          <alias>otheropen</alias>
-          <alias>http://dcat-ap.de/def/licenses/other-open</alias>
-        </aliases>
-      </license>
-      <license>
-        <identifier>other-closed</identifier>
-        <name>Other (Not Open)</name>
-        <acronym>OTHER-CLOSED</acronym>
-        <attributes>
-          <attribute>closed</attribute>
-        </attributes>
-        <aliases>
-          <alias>OTHER-CLOSED</alias>
-          <alias>otherclosed</alias>
-          <alias>http://dcat-ap.de/def/licenses/other-closed</alias>
-        </aliases>
-      </license>
-      <license>
-        <identifier>other-forsale</identifier>
-        <name>Other (available for purchase)</name>
-        <acronym>OTHER-FORSALE</acronym>
-        <attributes>
-          <attribute>forsale</attribute>
-        </attributes>
-        <aliases>
-          <alias>OTHER-FORSALE</alias>
-          <alias>otherforsale</alias>
-          <alias>http://dcat-ap.de/def/licenses/other-forsale</alias>
-        </aliases>
-      </license>
-      <license>
-        <identifier>other-commercial</identifier>
-        <name>Other (Commercial)</name>
-        <acronym>OTHER-COMMERCIAL</acronym>
-        <attributes>
-          <attribute>commercial</attribute>
-        </attributes>
-        <aliases>
-          <alias>OTHER-COMMERCIAL</alias>
-          <alias>othercommercial</alias>
-          <alias>http://dcat-ap.de/def/licenses/other-commercial</alias>
-        </aliases>
-      </license>
-      <license>
-        <identifier>other-unpublished</identifier>
-        <name>Other (unpublished)</name>
-        <acronym>OTHER-UNPUBLISHED</acronym>
-        <attributes>
-          <attribute>unpublished</attribute>
-        </attributes>
-        <aliases>
-          <alias>OTHER-UNPUBLISHED</alias>
-          <alias>otherunpublished</alias>
-          <alias>http://dcat-ap.de/def/licenses/other-unpublished</alias>
-        </aliases>
-      </license>
-      <license>
-        <identifier>other-zero</identifier>
-        <name>Other (Zero)</name>
-        <acronym>OTHER-ZERO</acronym>
-        <attributes>
-          <attribute>zero</attribute>
-        </attributes>
-        <aliases>
-          <alias>OTHER-ZERO</alias>
-          <alias>otherzero</alias>
-          <alias>http://dcat-ap.de/def/licenses/other-zero</alias>
-        </aliases>
-      </license>
-      <license>
-        <identifier>other-by</identifier>
-        <name>Other (Attribution)</name>
-        <acronym>OTHER-BY</acronym>
-        <attributes>
-          <attribute>by</attribute>
-        </attributes>
-        <aliases>
-          <alias>OTHER-BY</alias>
-          <alias>otherby</alias>
-          <alias>http://dcat-ap.de/def/licenses/other-by</alias>
-        </aliases>
-      </license>
-      <license>
-        <identifier>other-pd</identifier>
-        <name>Other (Public Domain)</name>
-        <acronym>OTHER-PD</acronym>
-        <attributes>
-          <attribute>pd</attribute>
-        </attributes>
-        <aliases>
-          <alias>OTHER-PD</alias>
-          <alias>otherpd</alias>
-          <alias>http://dcat-ap.de/def/licenses/other-pd</alias>
-        </aliases>
-      </license>
-      <license>
-        <identifier>other-nc</identifier>
-        <name>Other (NonCommercial)</name>
-        <acronym>OTHER-NC</acronym>
-        <attributes>
-          <attribute>nc</attribute>
-        </attributes>
-        <aliases>
-          <alias>OTHER-NC</alias>
-          <alias>othernc</alias>
-          <alias>http://dcat-ap.de/def/licenses/other-nc</alias>
-        </aliases>
-      </license>
-      <license>
-        <identifier>other-nd</identifier>
-        <name>Other (NoDerivatives)</name>
-        <acronym>OTHER-ND</acronym>
-        <attributes>
-          <attribute>nd</attribute>
-        </attributes>
-        <aliases>
-          <alias>OTHER-ND</alias>
-          <alias>othernd</alias>
-          <alias>http://dcat-ap.de/def/licenses/other-nd</alias>
-        </aliases>
-      </license>
-      <license>
-        <identifier>other-sa</identifier>
-        <name>Other (ShareAlike)</name>
-        <acronym>OTHER-SA</acronym>
-        <attributes>
-          <attribute>sa</attribute>
-        </attributes>
-        <aliases>
-          <alias>OTHER-SA</alias>
-          <alias>othersa</alias>
-          <alias>http://dcat-ap.de/def/licenses/other-sa</alias>
-        </aliases>
-      </license>
-      <license>
-        <identifier>notspecified</identifier>
-        <name>License not specified</name>
-        <acronym>-</acronym>
-        <attributes>
-          <attribute>closed</attribute>
-        </attributes>
-        <aliases>
-          <alias>NOTSPECIFIED</alias>
-          <alias>other</alias>
-          <alias>OTHER</alias>
-        </aliases>
-      </license>
-  </this:licenses>
+	xmlns:this="http://www.anwiba.net/module/license"
+	xmlns:config="http://www.anwiba.net/dynamic/configuration"
+	xmlns="http://www.anwiba.net/dynamic/license"
+	xmlns:resource="http://www.anwiba.net/dynamic/resource/constraint"
+	>
+	<!-- https://wiki.creativecommons.org/wiki/Icons -->
+	<!-- https://www.dcat-ap.de/def/licenses/ -->
+	<!-- https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/dcat-application-profile-data-portals-europe/release/201-0 -->
+	<!-- https://opendatacommons.org/licenses/pddl/ -->
+	<!-- https://joinup.ec.europa.eu/collection/eupl -->
+	<!-- https://theodi.org/ -->
+	<!-- http://schema.theodi.org/odrs/ -->
+	<!-- https://www.w3.org/community/odrl/ -->
+	<!-- merge cc0 and pd -->
+	<this:licenses>
+
+		<license>
+			<identifier>dl-de-zero-1.0</identifier>
+			<name>Datenlizenz Deutschland Zero Version 1.0</name>
+			<acronym>DL-DE ZERO 1.0</acronym>
+			<version>1.0</version>
+			<reference>https://www.govdata.de/dl-de/zero-1-0</reference>
+			<attributes>
+				<attribute>zero</attribute>
+			</attributes>
+			<aliases>
+				<alias>DL-DE-ZERO-1.0</alias>
+				<alias>dlzerode/1_0</alias>
+				<alias>http://dcat-ap.de/def/licenses/dl-zero-de/1.0</alias>
+			</aliases>
+		</license>
+		<license>
+			<identifier>dl-de-zero-2.0</identifier>
+			<name>Datenlizenz Deutschland Zero Version 2.0</name>
+			<acronym>DL-DE ZERO 2.0</acronym>
+			<version>2.0</version>
+			<reference>https://www.govdata.de/dl-de/zero-2-0</reference>
+			<attributes>
+				<attribute>zero</attribute>
+			</attributes>
+			<aliases>
+				<alias>DL-DE-ZERO-2.0</alias>
+				<alias>dlzerode/2_0</alias>
+				<alias>http://dcat-ap.de/def/licenses/dl-zero-de/2.0</alias>
+			</aliases>
+		</license>
+		<license>
+			<identifier>dl-de-by-1.0</identifier>
+			<name>Datenlizenz Deutschland Namensnennung Version 1.0</name>
+			<acronym>DL-DE BY 1.0</acronym>
+			<version>1.0</version>
+			<reference>https://www.govdata.de/dl-de/by-1-0</reference>
+			<attributes>
+				<attribute>by</attribute>
+			</attributes>
+			<aliases>
+				<alias>DL-DE-BY-1.0</alias>
+				<alias>dlbyde/1_0</alias>
+				<alias>http://dcat-ap.de/def/licenses/dl-by-de/1.0</alias>
+			</aliases>
+		</license>
+		<license>
+			<identifier>dl-de-by-2.0</identifier>
+			<name>Datenlizenz Deutschland Namensnennung Version 2.0</name>
+			<acronym>DL-DE BY 2.0</acronym>
+			<version>2.0</version>
+			<reference>https://www.govdata.de/dl-de/by-2-0</reference>
+			<attributes>
+				<attribute>by</attribute>
+			</attributes>
+			<aliases>
+				<alias>DL-DE-BY-2.0</alias>
+				<alias>dlbyde/2_0</alias>
+				<alias>http://dcat-ap.de/def/licenses/dl-by-de/2.0</alias>
+			</aliases>
+		</license>
+		<license>
+			<identifier>dl-de-by-nc-1.0</identifier>
+			<name>Datenlizenz Deutschland Namensnennung - Nicht kommerziell
+				Version 1.0</name>
+			<acronym>DL-DE BY-NC 1.0</acronym>
+			<version>1.0</version>
+			<reference>https://www.govdata.de/dl-de/by-nc-1-0</reference>
+			<attributes>
+				<attribute>by</attribute>
+				<attribute>nc</attribute>
+			</attributes>
+			<aliases>
+				<alias>DL-DE-BY-NC-1.0</alias>
+				<alias>dlbyncde/1_0</alias>
+				<alias>http://dcat-ap.de/def/licenses/dl-by-nc-de/1.0</alias>
+			</aliases>
+		</license>
+		<license>
+			<identifier>dl-de-by-nc-2.0</identifier>
+			<name>Datenlizenz Deutschland Namensnennung - Nicht kommerziell
+				Version 2.0</name>
+			<acronym>DL-DE BY-NC 2.0</acronym>
+			<version>2.0</version>
+			<reference>https://www.govdata.de/dl-de/by-nc-2-0</reference>
+			<attributes>
+				<attribute>by</attribute>
+				<attribute>nc</attribute>
+			</attributes>
+			<aliases>
+				<alias>DL-DE-BY-NC-2.0</alias>
+				<alias>dlbyncde/2_0</alias>
+				<alias>http://dcat-ap.de/def/licenses/dl-by-nc-de/2.0</alias>
+			</aliases>
+		</license>
+		<license>
+			<identifier>official-work</identifier>
+			<name>Amtliches Werk, lizenzfrei nach §5 Abs. 1 UrhG</name>
+			<reference>http://www.gesetze-im-internet.de/urhg/__5.html
+			</reference>
+			<attributes>
+				<attribute>by</attribute>
+				<attribute>nd</attribute>
+			</attributes>
+			<aliases>
+				<alias>OFFICIAL-WORK</alias>
+				<alias>officialWork</alias>
+				<alias>http://dcat-ap.de/def/licenses/official-work</alias>
+			</aliases>
+		</license>
+		<license>
+			<identifier>geonutz-be-2013-10-01</identifier>
+			<name>Nutzungsbestimmungen für die Bereitstellung von Geodaten des
+				Landes Berlin</name>
+			<reference>http://www.stadtentwicklung.berlin.de/geoinformation/download/nutzIII.pdf
+			</reference>
+			<attributes>
+				<attribute>by</attribute>
+			</attributes>
+			<aliases>
+				<alias>GEONUTZ-BE-2013-10-01</alias>
+			</aliases>
+		</license>
+		<license>
+			<identifier>geonutzv-de-2013-03-19</identifier>
+			<name>Nutzungsbestimmungen für die Bereitstellung von Geodaten des
+				Bundes</name>
+			<reference>http://www.geodatenzentrum.de/docpdf/geonutzv.pdf
+			</reference>
+			<attributes>
+				<attribute>by</attribute>
+			</attributes>
+			<aliases>
+				<alias>GEONUTZV-DE-2013-03-19</alias>
+			</aliases>
+		</license>
+		<license>
+			<identifier>geolizenz-v1.2.1-open</identifier>
+			<name>GeoLizenz V1.2.1 Open-räumlich und zeitlich unbeschränkte
+				Einräumung aller Nutzungsrechte</name>
+			<reference>https://www.bmwi.de/Redaktion/DE/Downloads/G/geolizenz-v1-4-open.pdf
+			</reference>
+			<attributes>
+				<attribute>by</attribute>
+				<attribute>sa</attribute>
+			</attributes>
+			<aliases>
+				<alias>GEOLIZENZ-V1.2.1-OPEN</alias>
+			</aliases>
+		</license>
+		<license>
+			<identifier>geolizenz-v1.4-open</identifier>
+			<name>GeoLizenz V1.4 Open-räumlich und zeitlich unbeschränkte
+				Einräumung aller Nutzungsrechte</name>
+			<reference>https://www.bmwi.de/Redaktion/DE/Downloads/G/geolizenz-v1-4-open.pdf
+			</reference>
+			<attributes>
+				<attribute>by</attribute>
+				<attribute>sa</attribute>
+			</attributes>
+			<aliases>
+				<alias>GEOLIZENZ-V1.4-OPEN</alias>
+			</aliases>
+		</license>
+		<license>
+			<identifier>geolizenz-v1.2.1a</identifier>
+			<name>GeoLizenz V1-2
+				Ia-kommerziell-Weiterverarbeitung-oeffentliche_Netzwerke</name>
+			<reference>http://www.geolizenz.org</reference>
+			<attributes>
+				<attribute>by</attribute>
+				<attribute>commercial</attribute>
+			</attributes>
+			<aliases>
+				<alias>GEOLIZENZ-V1.2.1A</alias>
+			</aliases>
+		</license>
+		<license>
+			<identifier>geolizenz-v1.2.1b</identifier>
+			<name>GeoLizenz V1-2
+				Ib-nicht-kommerziell-Weiterverarbeitung-oeffentliche_Netzwerke
+			</name>
+			<reference>http://www.geolizenz.org</reference>
+			<attributes>
+				<attribute>by</attribute>
+				<attribute>nc</attribute>
+			</attributes>
+			<aliases>
+				<alias>GEOLIZENZ-V1.2.1B</alias>
+			</aliases>
+		</license>
+		<license>
+			<identifier>geolizenz-v1.2.2a</identifier>
+			<name>GeoLizenz V1-2 IIa-kommerziell-keine
+				Weiterverarbeitung-oeffentliche_Netzwerke</name>
+			<reference>http://www.geolizenz.org</reference>
+			<attributes>
+				<attribute>by</attribute>
+				<attribute>commercial</attribute>
+			</attributes>
+			<aliases>
+				<alias>GEOLIZENZ-V1.2.2A</alias>
+			</aliases>
+		</license>
+		<license>
+			<identifier>geolizenz-v1.2.2b</identifier>
+			<name>GeoLizenz V1-2 IIb-nicht-kommerziell-keine
+				Weiterverarbeitung-oeffentliche_Netzwerke</name>
+			<reference>http://www.geolizenz.org</reference>
+			<attributes>
+				<attribute>by</attribute>
+				<attribute>nc</attribute>
+			</attributes>
+			<aliases>
+				<alias>GEOLIZENZ-V1.2.2B</alias>
+			</aliases>
+		</license>
+		<license>
+			<identifier>geolizenz-v1.2.3a</identifier>
+			<name>GeoLizenz V1-2
+				IIIa-kommerziell-Weiterverarbeitung-nicht-oeffentliche_Netzwerke
+			</name>
+			<reference>http://www.geolizenz.org</reference>
+			<attributes>
+				<attribute>by</attribute>
+				<attribute>commercial</attribute>
+			</attributes>
+			<aliases>
+				<alias>GEOLIZENZ-V1.2.3A</alias>
+			</aliases>
+		</license>
+		<license>
+			<identifier>geolizenz-v1.2.3b</identifier>
+			<name>GeoLizenz V1-2
+				IIIb-nicht-kommerziell-Weiterverarbeitung-nicht-oeffentliche_Netzwerke
+			</name>
+			<reference>http://www.geolizenz.org</reference>
+			<attributes>
+				<attribute>by</attribute>
+				<attribute>nc</attribute>
+			</attributes>
+			<aliases>
+				<alias>GEOLIZENZ-V1.2.3B</alias>
+			</aliases>
+		</license>
+		<license>
+			<identifier>geolizenz-v1.2.4a</identifier>
+			<name>GeoLizenz V1-2 IVa-kommerziell-keine
+				Weiterverarbeitung-nicht-oeffentliche_Netzwerke</name>
+			<reference>http://www.geolizenz.org</reference>
+			<attributes>
+				<attribute>by</attribute>
+				<attribute>commercial</attribute>
+			</attributes>
+			<aliases>
+				<alias>GEOLIZENZ-V1.2.4A</alias>
+			</aliases>
+		</license>
+		<license>
+			<identifier>geolizenz-v1.2.4b</identifier>
+			<name>GeoLizenz V1-2 IVb-nicht-kommerziell-keine
+				Weiterverarbeitung-nicht-oeffentliche_Netzwerke</name>
+			<reference>http://www.geolizenz.org</reference>
+			<attributes>
+				<attribute>by</attribute>
+				<attribute>nc</attribute>
+			</attributes>
+			<aliases>
+				<alias>GEOLIZENZ-V1.2.4B</alias>
+			</aliases>
+		</license>
+		<license>
+			<identifier>gfdl</identifier>
+			<name>GNU Free Documentation License</name>
+			<reference>http://www.opendefinition.org/licenses/gfdl</reference>
+			<attributes>
+				<attribute>by</attribute>
+				<attribute>sa</attribute>
+			</attributes>
+			<aliases>
+				<alias>GFDL</alias>
+			</aliases>
+		</license>
+		<license>
+			<identifier>cc-zero-1.0</identifier>
+			<name>Creative Commons Zero 1.0 Generic</name>
+			<acronym>CC-ZERO 1.0</acronym>
+			<version>1.0</version>
+			<reference>http://creativecommons.org/licenses/zero/1.0/</reference>
+			<attributes>
+				<attribute>zero</attribute>
+			</attributes>
+			<aliases>
+				<alias>CC-ZERO-1.0</alias>
+				<alias>cczero/1_0</alias>
+				<alias>http://dcat-ap.de/def/licenses/cc-zero/1.0</alias>
+				<alias>http://dcat-ap.de/def/licenses/cc-zero-de/1.0</alias>
+			</aliases>
+		</license>
+		<license>
+			<identifier>cc-zero-2.0</identifier>
+			<name>Creative Commons Zero 2.0 Generic</name>
+			<acronym>CC-ZERO 2.0</acronym>
+			<version>2.0</version>
+			<reference>http://creativecommons.org/licenses/zero/2.0/</reference>
+			<attributes>
+				<attribute>zero</attribute>
+			</attributes>
+			<aliases>
+				<alias>CC-ZERO-2.0</alias>
+				<alias>cczero/2_0</alias>
+				<alias>http://dcat-ap.de/def/licenses/cc-zero/2.0</alias>
+				<alias>http://dcat-ap.de/def/licenses/cc-zero-de/2.0</alias>
+			</aliases>
+		</license>
+		<license>
+			<identifier>cc-zero-2.5</identifier>
+			<name>Creative Commons Zero 2.5 Generic</name>
+			<acronym>CC-ZERO 2.5</acronym>
+			<version>2.5</version>
+			<reference>http://creativecommons.org/licenses/zero/2.5/</reference>
+			<attributes>
+				<attribute>zero</attribute>
+			</attributes>
+			<aliases>
+				<alias>CC-ZERO-2.5</alias>
+				<alias>cczero/2_5</alias>
+				<alias>http://dcat-ap.de/def/licenses/cc-zero/2.5</alias>
+				<alias>http://dcat-ap.de/def/licenses/cc-zero-de/2.5</alias>
+			</aliases>
+		</license>
+		<license>
+			<identifier>cc-zero-3.0</identifier>
+			<name>Creative Commons Zero 3.0 Unported</name>
+			<acronym>CC-ZERO 3.0</acronym>
+			<version>3.0</version>
+			<reference>http://creativecommons.org/licenses/zero/3.0/</reference>
+			<attributes>
+				<attribute>zero</attribute>
+			</attributes>
+			<aliases>
+				<alias>CC-ZERO-3.0</alias>
+				<alias>cczero/3_0</alias>
+				<alias>http://dcat-ap.de/def/licenses/cc-zero/3.0</alias>
+				<alias>http://dcat-ap.de/def/licenses/cc-zero-de/3.0</alias>
+			</aliases>
+		</license>
+		<license>
+			<identifier>cc-zero-4.0</identifier>
+			<name>Creative Commons Zero 4.0 International</name>
+			<acronym>CC-ZERO 4.0</acronym>
+			<version>4.0</version>
+			<reference>http://creativecommons.org/licenses/zero/4.0/</reference>
+			<attributes>
+				<attribute>zero</attribute>
+			</attributes>
+			<aliases>
+				<alias>CC-ZERO-4.0</alias>
+				<alias>cczero/4_0</alias>
+				<alias>http://dcat-ap.de/def/licenses/cc-zero/4.0</alias>
+				<alias>http://dcat-ap.de/def/licenses/cc-zero-de/4.0</alias>
+			</aliases>
+		</license>
+		<license>
+			<identifier>cc-by-1.0</identifier>
+			<name>Creative Commons Attribution 1.0 Generic</name>
+			<acronym>CC-BY 1.0</acronym>
+			<version>1.0</version>
+			<reference>http://creativecommons.org/licenses/by/1.0/</reference>
+			<attributes>
+				<attribute>by</attribute>
+			</attributes>
+			<aliases>
+				<alias>CC-BY-1.0</alias>
+				<alias>ccby/1_0</alias>
+				<alias>http://dcat-ap.de/def/licenses/cc-by/1.0</alias>
+				<alias>http://dcat-ap.de/def/licenses/cc-by-de/1.0</alias>
+			</aliases>
+		</license>
+		<license>
+			<identifier>cc-by-2.0</identifier>
+			<name>Creative Commons Attribution 2.0 Generic</name>
+			<acronym>CC-BY 2.0</acronym>
+			<version>2.0</version>
+			<reference>http://creativecommons.org/licenses/by/2.0/</reference>
+			<attributes>
+				<attribute>by</attribute>
+			</attributes>
+			<aliases>
+				<alias>CC-BY-2.0</alias>
+				<alias>ccby/2_0</alias>
+				<alias>http://dcat-ap.de/def/licenses/cc-by/2.0</alias>
+				<alias>http://dcat-ap.de/def/licenses/cc-by-de/2.0</alias>
+			</aliases>
+		</license>
+		<license>
+			<identifier>cc-by-2.5</identifier>
+			<name>Creative Commons Attribution 2.5 Generic</name>
+			<acronym>CC-BY 2.5</acronym>
+			<version>2.5</version>
+			<reference>http://creativecommons.org/licenses/by/2.5/</reference>
+			<attributes>
+				<attribute>by</attribute>
+			</attributes>
+			<aliases>
+				<alias>CC-BY-2.5</alias>
+				<alias>ccby/2_5</alias>
+				<alias>http://dcat-ap.de/def/licenses/cc-by/2.5</alias>
+				<alias>http://dcat-ap.de/def/licenses/cc-by-de/2.5</alias>
+			</aliases>
+		</license>
+		<license>
+			<identifier>cc-by-3.0</identifier>
+			<name>Creative Commons Attribution 3.0 Unported</name>
+			<acronym>CC-BY 3.0</acronym>
+			<version>3.0</version>
+			<reference>http://creativecommons.org/licenses/by/3.0/</reference>
+			<attributes>
+				<attribute>by</attribute>
+			</attributes>
+			<aliases>
+				<alias>CC-BY-3.0</alias>
+				<alias>ccby/3_0</alias>
+				<alias>http://dcat-ap.de/def/licenses/cc-by/3.0</alias>
+				<alias>http://dcat-ap.de/def/licenses/cc-by-de/3.0</alias>
+			</aliases>
+		</license>
+		<license>
+			<identifier>cc-by-4.0</identifier>
+			<name>Creative Commons Attribution 4.0 International</name>
+			<acronym>CC-BY 4.0</acronym>
+			<version>4.0</version>
+			<reference>http://creativecommons.org/licenses/by/4.0/</reference>
+			<attributes>
+				<attribute>by</attribute>
+			</attributes>
+			<aliases>
+				<alias>CC-BY-4.0</alias>
+				<alias>ccby/4_0</alias>
+				<alias>http://dcat-ap.de/def/licenses/cc-by/4.0</alias>
+				<alias>http://dcat-ap.de/def/licenses/cc-by-de/4.0</alias>
+			</aliases>
+		</license>
+		<license>
+			<identifier>cc-by-sa-1.0</identifier>
+			<name>Creative Commons Attribution-ShareAlike 1.0 Generic</name>
+			<acronym>CC-BY-SA 1.0</acronym>
+			<version>1.0</version>
+			<reference>http://creativecommons.org/licenses/by-sa/1.0/</reference>
+			<attributes>
+				<attribute>by</attribute>
+				<attribute>sa</attribute>
+			</attributes>
+			<aliases>
+				<alias>CC-BY-SA-1.0</alias>
+				<alias>ccbysa/1_0</alias>
+				<alias>http://dcat-ap.de/def/licenses/cc-by-sa/1.0</alias>
+				<alias>http://dcat-ap.de/def/licenses/cc-by-sa-de/1.0</alias>
+			</aliases>
+		</license>
+		<license>
+			<identifier>cc-by-sa-2.0</identifier>
+			<name>Creative Commons Attribution-ShareAlike 2.0 Generic</name>
+			<acronym>CC-BY-SA 2.0</acronym>
+			<version>2.0</version>
+			<reference>http://creativecommons.org/licenses/by-sa/2.0/</reference>
+			<attributes>
+				<attribute>by</attribute>
+				<attribute>sa</attribute>
+			</attributes>
+			<aliases>
+				<alias>CC-BY-SA-2.0</alias>
+				<alias>ccbysa/2_0</alias>
+				<alias>http://dcat-ap.de/def/licenses/cc-by-sa/2.0</alias>
+				<alias>http://dcat-ap.de/def/licenses/cc-by-sa-de/2.0</alias>
+			</aliases>
+		</license>
+		<license>
+			<identifier>cc-by-sa-2.5</identifier>
+			<name>Creative Commons Attribution-ShareAlike 2.5 Generic</name>
+			<acronym>CC-BY-SA 2.5</acronym>
+			<version>2.5</version>
+			<reference>http://creativecommons.org/licenses/by-sa/2.5/</reference>
+			<attributes>
+				<attribute>by</attribute>
+				<attribute>sa</attribute>
+			</attributes>
+			<aliases>
+				<alias>CC-BY-SA-2.5</alias>
+				<alias>ccbysa/2_5</alias>
+				<alias>http://dcat-ap.de/def/licenses/cc-by-sa/2.5</alias>
+				<alias>http://dcat-ap.de/def/licenses/cc-by-sa-de/2.5</alias>
+			</aliases>
+		</license>
+		<license>
+			<identifier>cc-by-sa-3.0</identifier>
+			<name>Creative Commons Attribution-ShareAlike 3.0 Unported</name>
+			<acronym>CC-BY-SA 3.0</acronym>
+			<version>3.0</version>
+			<reference>http://creativecommons.org/licenses/by-sa/3.0/</reference>
+			<attributes>
+				<attribute>by</attribute>
+				<attribute>sa</attribute>
+			</attributes>
+			<aliases>
+				<alias>CC-BY-SA-3.0</alias>
+				<alias>ccbysa/3_0</alias>
+				<alias>http://dcat-ap.de/def/licenses/cc-by-sa/3.0</alias>
+				<alias>http://dcat-ap.de/def/licenses/cc-by-sa-de/3.0</alias>
+			</aliases>
+		</license>
+		<license>
+			<identifier>cc-by-sa-4.0</identifier>
+			<name>Creative Commons Attribution-ShareAlike 4.0 International
+			</name>
+			<acronym>CC-BY-SA 4.0</acronym>
+			<version>4.0</version>
+			<reference>http://creativecommons.org/licenses/by-sa/4.0/</reference>
+			<attributes>
+				<attribute>by</attribute>
+				<attribute>sa</attribute>
+			</attributes>
+			<aliases>
+				<alias>CC-BY-SA-4.0</alias>
+				<alias>ccbysa/4_0</alias>
+				<alias>http://dcat-ap.de/def/licenses/cc-by-sa/4.0</alias>
+				<alias>http://dcat-ap.de/def/licenses/cc-by-sa-de/4.0</alias>
+			</aliases>
+		</license>
+		<license>
+			<identifier>cc-by-nc-1.0</identifier>
+			<name>Creative Commons Attribution-NonCommercial 1.0 Generic</name>
+			<acronym>CC-BY-NC 1.0</acronym>
+			<version>1.0</version>
+			<reference>http://creativecommons.org/licenses/by-nc/1.0/</reference>
+			<attributes>
+				<attribute>by</attribute>
+				<attribute>nc</attribute>
+			</attributes>
+			<aliases>
+				<alias>CC-BY-NC-1.0</alias>
+				<alias>ccbync/1_0</alias>
+				<alias>http://dcat-ap.de/def/licenses/cc-by-nc/1.0</alias>
+				<alias>http://dcat-ap.de/def/licenses/cc-by-nc-de/1.0</alias>
+			</aliases>
+		</license>
+		<license>
+			<identifier>cc-by-nc-2.0</identifier>
+			<name>Creative Commons Attribution-NonCommercial 2.0 Generic</name>
+			<acronym>CC-BY-NC 2.0</acronym>
+			<version>2.0</version>
+			<reference>http://creativecommons.org/licenses/by-nc/2.0/</reference>
+			<attributes>
+				<attribute>by</attribute>
+				<attribute>nc</attribute>
+			</attributes>
+			<aliases>
+				<alias>CC-BY-NC-2.0</alias>
+				<alias>ccbync/2_0</alias>
+				<alias>http://dcat-ap.de/def/licenses/cc-by-nc/2.0</alias>
+				<alias>http://dcat-ap.de/def/licenses/cc-by-nc-de/2.0</alias>
+			</aliases>
+		</license>
+		<license>
+			<identifier>cc-by-nc-2.5</identifier>
+			<name>Creative Commons Attribution-NonCommercial 2.5 Generic</name>
+			<acronym>CC-BY-NC 2.5</acronym>
+			<version>2.5</version>
+			<reference>http://creativecommons.org/licenses/by-nc/2.5/</reference>
+			<attributes>
+				<attribute>by</attribute>
+				<attribute>nc</attribute>
+			</attributes>
+			<aliases>
+				<alias>CC-BY-NC-2.5</alias>
+				<alias>ccbync/2_5</alias>
+				<alias>http://dcat-ap.de/def/licenses/cc-by-nc/2.5</alias>
+				<alias>http://dcat-ap.de/def/licenses/cc-by-nc-de/2.5</alias>
+			</aliases>
+		</license>
+		<license>
+			<identifier>cc-by-nc-3.0</identifier>
+			<name>Creative Commons Attribution-NonCommercial 3.0 Unported</name>
+			<acronym>CC-BY-NC 3.0</acronym>
+			<version>3.0</version>
+			<reference>http://creativecommons.org/licenses/by-nc/3.0/</reference>
+			<attributes>
+				<attribute>by</attribute>
+				<attribute>nc</attribute>
+			</attributes>
+			<aliases>
+				<alias>CC-BY-NC-3.0</alias>
+				<alias>ccbync/3_0</alias>
+				<alias>http://dcat-ap.de/def/licenses/cc-by-nc/3.0</alias>
+				<alias>http://dcat-ap.de/def/licenses/cc-by-nc-de/3.0</alias>
+			</aliases>
+		</license>
+		<license>
+			<identifier>cc-by-nc-4.0</identifier>
+			<name>Creative Commons Attribution-NonCommercial 4.0 International
+			</name>
+			<acronym>CC-BY-NC 4.0</acronym>
+			<version>4.0</version>
+			<reference>http://creativecommons.org/licenses/by-nc/4.0/</reference>
+			<attributes>
+				<attribute>by</attribute>
+				<attribute>nc</attribute>
+			</attributes>
+			<aliases>
+				<alias>CC-BY-NC-4.0</alias>
+				<alias>ccbync/4_0</alias>
+				<alias>http://dcat-ap.de/def/licenses/cc-by-nc/4.0</alias>
+				<alias>http://dcat-ap.de/def/licenses/cc-by-nc-de/4.0</alias>
+			</aliases>
+		</license>
+		<license>
+			<identifier>cc-by-nc-nd-1.0</identifier>
+			<name>Creative Commons Attribution-NonCommercial-NoDerivatives 1.0
+				Generic</name>
+			<acronym>CC-BY-NC-ND 1.0</acronym>
+			<version>1.0</version>
+			<reference>http://creativecommons.org/licenses/by-nc-nd/1.0/
+			</reference>
+			<attributes>
+				<attribute>by</attribute>
+				<attribute>nc</attribute>
+				<attribute>nd</attribute>
+			</attributes>
+			<aliases>
+				<alias>CC-BY-NC-ND-1.0</alias>
+				<alias>ccbyncnd/1_0</alias>
+				<alias>http://dcat-ap.de/def/licenses/cc-by-nc-nd/1.0</alias>
+				<alias>http://dcat-ap.de/def/licenses/cc-by-nc-nd-de/1.0</alias>
+			</aliases>
+		</license>
+		<license>
+			<identifier>cc-by-nc-nd-2.0</identifier>
+			<name>Creative Commons Attribution-NonCommercial-NoDerivatives 2.0
+				Generic</name>
+			<acronym>CC-BY-NC-ND 2.0</acronym>
+			<version>2.0</version>
+			<reference>http://creativecommons.org/licenses/by-nc-nd/2.0/
+			</reference>
+			<attributes>
+				<attribute>by</attribute>
+				<attribute>nc</attribute>
+				<attribute>nd</attribute>
+			</attributes>
+			<aliases>
+				<alias>CC-BY-NC-ND-2.0</alias>
+				<alias>ccbyncnd/2_0</alias>
+				<alias>http://dcat-ap.de/def/licenses/cc-by-nc-nd/2.0</alias>
+				<alias>http://dcat-ap.de/def/licenses/cc-by-nc-nd-de/2.0</alias>
+			</aliases>
+		</license>
+		<license>
+			<identifier>cc-by-nc-nd-2.5</identifier>
+			<name>Creative Commons Attribution-NonCommercial-NoDerivatives 2.5
+				Generic</name>
+			<acronym>CC-BY-NC-ND 2.5</acronym>
+			<version>2.5</version>
+			<reference>http://creativecommons.org/licenses/by-nc-nd/2.5/
+			</reference>
+			<attributes>
+				<attribute>by</attribute>
+				<attribute>nc</attribute>
+				<attribute>nd</attribute>
+			</attributes>
+			<aliases>
+				<alias>CC-BY-NC-ND-2.5</alias>
+				<alias>ccbyncnd/2_5</alias>
+				<alias>http://dcat-ap.de/def/licenses/cc-by-nc-nd/2.5</alias>
+				<alias>http://dcat-ap.de/def/licenses/cc-by-nc-nd-de/2.5</alias>
+			</aliases>
+		</license>
+		<license>
+			<identifier>cc-by-nc-nd-3.0</identifier>
+			<name>Creative Commons Attribution-NonCommercial-NoDerivatives 3.0
+				Unported</name>
+			<acronym>CC-BY-NC-ND 3.0</acronym>
+			<version>3.0</version>
+			<reference>http://creativecommons.org/licenses/by-nc-nd/3.0/
+			</reference>
+			<attributes>
+				<attribute>by</attribute>
+				<attribute>nc</attribute>
+				<attribute>nd</attribute>
+			</attributes>
+			<aliases>
+				<alias>CC-BY-NC-ND-3.0</alias>
+				<alias>ccbyncnd/3_0</alias>
+				<alias>http://dcat-ap.de/def/licenses/cc-by-nc-nd/3.0</alias>
+				<alias>http://dcat-ap.de/def/licenses/cc-by-nc-nd-de/3.0</alias>
+			</aliases>
+		</license>
+		<license>
+			<identifier>cc-by-nc-nd-4.0</identifier>
+			<name>Creative Commons Attribution-NonCommercial-NoDerivatives 4.0
+				International</name>
+			<acronym>CC-BY-NC-ND 4.0</acronym>
+			<version>4.0</version>
+			<reference>http://creativecommons.org/licenses/by-nc-nd/4.0/
+			</reference>
+			<attributes>
+				<attribute>by</attribute>
+				<attribute>nc</attribute>
+				<attribute>nd</attribute>
+			</attributes>
+			<aliases>
+				<alias>CC-BY-NC-ND-4.0</alias>
+				<alias>ccbyncnd/4_0</alias>
+				<alias>http://dcat-ap.de/def/licenses/cc-by-nc-nd/4.0</alias>
+				<alias>http://dcat-ap.de/def/licenses/cc-by-nc-nd-de/4.0</alias>
+			</aliases>
+		</license>
+		<license>
+			<identifier>cc-by-nc-sa-1.0</identifier>
+			<name>Creative Commons Attribution-NonCommercial-ShareAlike 1.0
+				Generic</name>
+			<acronym>CC-BY-NC-SA 1.0</acronym>
+			<version>1.0</version>
+			<reference>http://creativecommons.org/licenses/by-nc-sa/1.0/
+			</reference>
+			<attributes>
+				<attribute>by</attribute>
+				<attribute>nc</attribute>
+				<attribute>sa</attribute>
+			</attributes>
+			<aliases>
+				<alias>CC-BY-NC-SA-1.0</alias>
+				<alias>ccbyncsa/1_0</alias>
+				<alias>http://dcat-ap.de/def/licenses/cc-by-nc-sa/1.0</alias>
+				<alias>http://dcat-ap.de/def/licenses/cc-by-nc-sa-de/1.0</alias>
+			</aliases>
+		</license>
+		<license>
+			<identifier>cc-by-nc-sa-2.0</identifier>
+			<name>Creative Commons Attribution-NonCommercial-ShareAlike 2.0
+				Generic</name>
+			<acronym>CC-BY-NC-SA 2.0</acronym>
+			<version>2.0</version>
+			<reference>http://creativecommons.org/licenses/by-nc-sa/2.0/
+			</reference>
+			<attributes>
+				<attribute>by</attribute>
+				<attribute>nc</attribute>
+				<attribute>sa</attribute>
+			</attributes>
+			<aliases>
+				<alias>CC-BY-NC-SA-2.0</alias>
+				<alias>ccbyncsa/2_0</alias>
+				<alias>http://dcat-ap.de/def/licenses/cc-by-nc-sa/2.0</alias>
+				<alias>http://dcat-ap.de/def/licenses/cc-by-nc-sa-de/2.0</alias>
+			</aliases>
+		</license>
+		<license>
+			<identifier>cc-by-nc-sa-2.5</identifier>
+			<name>Creative Commons Attribution-NonCommercial-ShareAlike 2.5
+				Generic</name>
+			<acronym>CC-BY-NC-SA 2.5</acronym>
+			<version>2.5</version>
+			<reference>http://creativecommons.org/licenses/by-nc-sa/2.5/
+			</reference>
+			<attributes>
+				<attribute>by</attribute>
+				<attribute>nc</attribute>
+				<attribute>sa</attribute>
+			</attributes>
+			<aliases>
+				<alias>CC-BY-NC-SA-2.5</alias>
+				<alias>ccbyncsa/2_5</alias>
+				<alias>http://dcat-ap.de/def/licenses/cc-by-nc-sa/2.5</alias>
+				<alias>http://dcat-ap.de/def/licenses/cc-by-nc-sa-de/2.5</alias>
+			</aliases>
+		</license>
+		<license>
+			<identifier>cc-by-nc-sa-3.0</identifier>
+			<name>Creative Commons Attribution-NonCommercial-ShareAlike 3.0
+				Unported</name>
+			<acronym>CC-BY-NC-SA 3.0</acronym>
+			<version>3.0</version>
+			<reference>http://creativecommons.org/licenses/by-nc-sa/3.0/
+			</reference>
+			<attributes>
+				<attribute>by</attribute>
+				<attribute>nc</attribute>
+				<attribute>sa</attribute>
+			</attributes>
+			<aliases>
+				<alias>CC-BY-NC-SA-3.0</alias>
+				<alias>ccbyncsa/3_0</alias>
+				<alias>http://dcat-ap.de/def/licenses/cc-by-nc-sa/3.0</alias>
+				<alias>http://dcat-ap.de/def/licenses/cc-by-nc-sa-de/3.0</alias>
+			</aliases>
+		</license>
+		<license>
+			<identifier>cc-by-nc-sa-4.0</identifier>
+			<name>Creative Commons Attribution-NonCommercial-ShareAlike 4.0
+				International</name>
+			<acronym>CC-BY-NC-SA 4.0</acronym>
+			<version>4.0</version>
+			<reference>http://creativecommons.org/licenses/by-nc-sa/4.0/
+			</reference>
+			<attributes>
+				<attribute>by</attribute>
+				<attribute>nc</attribute>
+				<attribute>sa</attribute>
+			</attributes>
+			<aliases>
+				<alias>CC-BY-NC-SA-4.0</alias>
+				<alias>ccbyncsa/4_0</alias>
+				<alias>http://dcat-ap.de/def/licenses/cc-by-nc-sa/4.0</alias>
+				<alias>http://dcat-ap.de/def/licenses/cc-by-nc-sa-de/4.0</alias>
+			</aliases>
+		</license>
+		<license>
+			<identifier>cc-by-nc-nd-sa-1.0</identifier>
+			<name>Creative Commons
+				Attribution-NonCommercial-NoDerivatives-ShareAlike 1.0 Generic
+			</name>
+			<acronym>CC-BY-NC-ND-SA 1.0</acronym>
+			<version>1.0</version>
+			<reference>http://creativecommons.org/licenses/by-nc-nd-sa/1.0/
+			</reference>
+			<attributes>
+				<attribute>by</attribute>
+				<attribute>nc</attribute>
+				<attribute>nd</attribute>
+				<attribute>sa</attribute>
+			</attributes>
+			<aliases>
+				<alias>CC-BY-NC-ND-SA-1.0</alias>
+				<alias>ccbyncndsa/1_0</alias>
+				<alias>http://dcat-ap.de/def/licenses/cc-by-nc-nd-sa/1.0</alias>
+				<alias>http://dcat-ap.de/def/licenses/cc-by-nc-nd-sa-de/1.0</alias>
+			</aliases>
+		</license>
+		<license>
+			<identifier>cc-by-nc-nd-sa-2.0</identifier>
+			<name>Creative Commons
+				Attribution-NonCommercial-NoDerivatives-ShareAlike 2.0 Generic
+			</name>
+			<acronym>CC-BY-NC-ND-SA 2.0</acronym>
+			<version>2.0</version>
+			<reference>http://creativecommons.org/licenses/by-nc-nd-sa/2.0/
+			</reference>
+			<attributes>
+				<attribute>by</attribute>
+				<attribute>nc</attribute>
+				<attribute>nd</attribute>
+				<attribute>sa</attribute>
+			</attributes>
+			<aliases>
+				<alias>CC-BY-NC-ND-SA-2.0</alias>
+				<alias>ccbyncndsa/2_0</alias>
+				<alias>http://dcat-ap.de/def/licenses/cc-by-nc-nd-sa/2.0</alias>
+				<alias>http://dcat-ap.de/def/licenses/cc-by-nc-nd-sa-de/2.0</alias>
+			</aliases>
+		</license>
+		<license>
+			<identifier>cc-by-nc-nd-sa-2.5</identifier>
+			<name>Creative Commons
+				Attribution-NonCommercial-NoDerivatives-ShareAlike 2.5 Generic
+			</name>
+			<acronym>CC-BY-NC-ND-SA 2.5</acronym>
+			<version>2.5</version>
+			<reference>http://creativecommons.org/licenses/by-nc-nd-sa/2.5/
+			</reference>
+			<attributes>
+				<attribute>by</attribute>
+				<attribute>nc</attribute>
+				<attribute>nd</attribute>
+				<attribute>sa</attribute>
+			</attributes>
+			<aliases>
+				<alias>CC-BY-NC-ND-SA-2.5</alias>
+				<alias>ccbyncndsa/2_5</alias>
+				<alias>http://dcat-ap.de/def/licenses/cc-by-nc-nd-sa/2.5</alias>
+				<alias>http://dcat-ap.de/def/licenses/cc-by-nc-nd-sa-de/2.5</alias>
+			</aliases>
+		</license>
+		<license>
+			<identifier>cc-by-nc-nd-sa-3.0</identifier>
+			<name>Creative Commons
+				Attribution-NonCommercial-NoDerivatives-ShareAlike 3.0 Unported
+			</name>
+			<acronym>CC-BY-NC-ND-SA 3.0</acronym>
+			<version>3.0</version>
+			<reference>http://creativecommons.org/licenses/by-nc-nd-sa/3.0/
+			</reference>
+			<attributes>
+				<attribute>by</attribute>
+				<attribute>nc</attribute>
+				<attribute>nd</attribute>
+				<attribute>sa</attribute>
+			</attributes>
+			<aliases>
+				<alias>CC-BY-NC-ND-SA-3.0</alias>
+				<alias>ccbyncndsa/3_0</alias>
+				<alias>http://dcat-ap.de/def/licenses/cc-by-nc-nd-sa/3.0</alias>
+				<alias>http://dcat-ap.de/def/licenses/cc-by-nc-nd-sa-de/3.0</alias>
+			</aliases>
+		</license>
+		<license>
+			<identifier>cc-by-nc-nd-sa-4.0</identifier>
+			<name>Creative Commons
+				Attribution-NonCommercial-NoDerivatives-ShareAlike 4.0 International
+			</name>
+			<acronym>CC-BY-NC-ND-SA 4.0</acronym>
+			<version>4.0</version>
+			<reference>http://creativecommons.org/licenses/by-nc-nd-sa/4.0/
+			</reference>
+			<attributes>
+				<attribute>by</attribute>
+				<attribute>nc</attribute>
+				<attribute>nd</attribute>
+				<attribute>sa</attribute>
+			</attributes>
+			<aliases>
+				<alias>CC-BY-NC-ND-SA-4.0</alias>
+				<alias>ccbyncndsa/4_0</alias>
+				<alias>http://dcat-ap.de/def/licenses/cc-by-nc-nd-sa/4.0</alias>
+				<alias>http://dcat-ap.de/def/licenses/cc-by-nc-nd-sa-de/4.0</alias>
+			</aliases>
+		</license>
+		<license>
+			<identifier>cc-by-nd-1.0</identifier>
+			<name>Creative Commons Attribution-NoDerivatives 1.0 Generic</name>
+			<acronym>CC-BY-ND 1.0</acronym>
+			<version>1.0</version>
+			<reference>http://creativecommons.org/licenses/by-nd/1.0/</reference>
+			<attributes>
+				<attribute>by</attribute>
+				<attribute>nd</attribute>
+			</attributes>
+			<aliases>
+				<alias>CC-BY-ND-1.0</alias>
+				<alias>ccbynd/1_0</alias>
+				<alias>http://dcat-ap.de/def/licenses/cc-by-nd/1.0</alias>
+				<alias>http://dcat-ap.de/def/licenses/cc-by-nd-de/1.0</alias>
+			</aliases>
+		</license>
+		<license>
+			<identifier>cc-by-nd-2.0</identifier>
+			<name>Creative Commons Attribution-NoDerivatives 2.0 Generic</name>
+			<acronym>CC-BY-ND 2.0</acronym>
+			<version>2.0</version>
+			<reference>http://creativecommons.org/licenses/by-nd/2.0/</reference>
+			<attributes>
+				<attribute>by</attribute>
+				<attribute>nd</attribute>
+			</attributes>
+			<aliases>
+				<alias>CC-BY-ND-2.0</alias>
+				<alias>ccbynd/2_0</alias>
+				<alias>http://dcat-ap.de/def/licenses/cc-by-nd/2.0</alias>
+				<alias>http://dcat-ap.de/def/licenses/cc-by-nd-de/2.0</alias>
+			</aliases>
+		</license>
+		<license>
+			<identifier>cc-by-nd-2.5</identifier>
+			<name>Creative Commons Attribution-NoDerivatives 2.5 Generic</name>
+			<acronym>CC-BY-ND 2.5</acronym>
+			<version>2.5</version>
+			<reference>http://creativecommons.org/licenses/by-nd/2.5/</reference>
+			<attributes>
+				<attribute>by</attribute>
+				<attribute>nd</attribute>
+			</attributes>
+			<aliases>
+				<alias>CC-BY-ND-2.5</alias>
+				<alias>ccbynd/2_5</alias>
+				<alias>http://dcat-ap.de/def/licenses/cc-by-nd/2.5</alias>
+				<alias>http://dcat-ap.de/def/licenses/cc-by-nd-de/2.5</alias>
+			</aliases>
+		</license>
+		<license>
+			<identifier>cc-by-nd-3.0</identifier>
+			<name>Creative Commons Attribution-NoDerivatives 3.0 Unported</name>
+			<acronym>CC-BY-ND 3.0</acronym>
+			<version>3.0</version>
+			<reference>http://creativecommons.org/licenses/by-nd/3.0/</reference>
+			<attributes>
+				<attribute>by</attribute>
+				<attribute>nd</attribute>
+			</attributes>
+			<aliases>
+				<alias>CC-BY-ND-3.0</alias>
+				<alias>ccbynd/3_0</alias>
+				<alias>http://dcat-ap.de/def/licenses/cc-by-nd/3.0</alias>
+				<alias>http://dcat-ap.de/def/licenses/cc-by-nd-de/3.0</alias>
+			</aliases>
+		</license>
+		<license>
+			<identifier>cc-by-nd-4.0</identifier>
+			<name>Creative Commons Attribution-NoDerivatives 4.0 International
+			</name>
+			<acronym>CC-BY-ND 4.0</acronym>
+			<version>4.0</version>
+			<reference>http://creativecommons.org/licenses/by-nd/4.0/</reference>
+			<attributes>
+				<attribute>by</attribute>
+				<attribute>nd</attribute>
+			</attributes>
+			<aliases>
+				<alias>CC-BY-ND-4.0</alias>
+				<alias>ccbynd/4_0</alias>
+				<alias>http://dcat-ap.de/def/licenses/cc-by-nd/4.0</alias>
+				<alias>http://dcat-ap.de/def/licenses/cc-by-nd-de/4.0</alias>
+			</aliases>
+		</license>
+		<license>
+			<identifier>cc-by-sa-1.0</identifier>
+			<name>Creative Commons Attribution-ShareAlike 1.0 Generic</name>
+			<acronym>CC-BY-SA 1.0</acronym>
+			<version>1.0</version>
+			<reference>http://creativecommons.org/licenses/by-sa/1.0/</reference>
+			<attributes>
+				<attribute>by</attribute>
+				<attribute>sa</attribute>
+			</attributes>
+			<aliases>
+				<alias>CC-BY-SA-1.0</alias>
+				<alias>ccbysa/1_0</alias>
+				<alias>http://dcat-ap.de/def/licenses/cc-by-sa/1.0</alias>
+				<alias>http://dcat-ap.de/def/licenses/cc-by-sa-de/1.0</alias>
+			</aliases>
+		</license>
+		<license>
+			<identifier>cc-by-sa-2.0</identifier>
+			<name>Creative Commons Attribution-ShareAlike 2.0 Generic</name>
+			<acronym>CC-BY-SA 2.0</acronym>
+			<version>2.0</version>
+			<reference>http://creativecommons.org/licenses/by-sa/2.0/</reference>
+			<attributes>
+				<attribute>by</attribute>
+				<attribute>sa</attribute>
+			</attributes>
+			<aliases>
+				<alias>CC-BY-SA-2.0</alias>
+				<alias>ccbysa/2_0</alias>
+				<alias>http://dcat-ap.de/def/licenses/cc-by-sa/2.0</alias>
+				<alias>http://dcat-ap.de/def/licenses/cc-by-sa-de/2.0</alias>
+			</aliases>
+		</license>
+		<license>
+			<identifier>cc-by-sa-2.5</identifier>
+			<name>Creative Commons Attribution-ShareAlike 2.5 Generic</name>
+			<acronym>CC-BY-SA 2.5</acronym>
+			<version>2.5</version>
+			<reference>http://creativecommons.org/licenses/by-sa/2.5/</reference>
+			<attributes>
+				<attribute>by</attribute>
+				<attribute>sa</attribute>
+			</attributes>
+			<aliases>
+				<alias>CC-BY-SA-2.5</alias>
+				<alias>ccbysa/2_5</alias>
+				<alias>http://dcat-ap.de/def/licenses/cc-by-sa/2.5</alias>
+				<alias>http://dcat-ap.de/def/licenses/cc-by-sa-de/2.5</alias>
+			</aliases>
+		</license>
+		<license>
+			<identifier>cc-by-sa-3.0</identifier>
+			<name>Creative Commons Attribution-ShareAlike 3.0 Unported</name>
+			<acronym>CC-BY-SA 3.0</acronym>
+			<version>3.0</version>
+			<reference>http://creativecommons.org/licenses/by-sa/3.0/</reference>
+			<attributes>
+				<attribute>by</attribute>
+				<attribute>sa</attribute>
+			</attributes>
+			<aliases>
+				<alias>CC-BY-SA-3.0</alias>
+				<alias>ccbysa/3_0</alias>
+				<alias>http://dcat-ap.de/def/licenses/cc-by-sa/3.0</alias>
+				<alias>http://dcat-ap.de/def/licenses/cc-by-sa-de/3.0</alias>
+			</aliases>
+		</license>
+		<license>
+			<identifier>cc-by-sa-4.0</identifier>
+			<name>Creative Commons Attribution-ShareAlike 4.0 International
+			</name>
+			<acronym>CC-BY-SA 4.0</acronym>
+			<version>4.0</version>
+			<reference>http://creativecommons.org/licenses/by-sa/4.0/</reference>
+			<attributes>
+				<attribute>by</attribute>
+				<attribute>sa</attribute>
+			</attributes>
+			<aliases>
+				<alias>CC-BY-SA-4.0</alias>
+				<alias>ccbysa/4_0</alias>
+				<alias>http://dcat-ap.de/def/licenses/cc-by-sa/4.0</alias>
+				<alias>http://dcat-ap.de/def/licenses/cc-by-sa-de/4.0</alias>
+			</aliases>
+		</license>
+		<license>
+			<identifier>cc-nc-1.0</identifier>
+			<name>Creative Commons NonCommercial 1.0 Generic</name>
+			<acronym>CC-NC 1.0</acronym>
+			<version>1.0</version>
+			<reference>http://creativecommons.org/licenses/nc/1.0/</reference>
+			<attributes>
+				<attribute>nc</attribute>
+			</attributes>
+			<aliases>
+				<alias>CC-NC-1.0</alias>
+				<alias>ccnc/1_0</alias>
+				<alias>http://dcat-ap.de/def/licenses/dl-nc/1.0</alias>
+				<alias>http://dcat-ap.de/def/licenses/dl-nc-de/1.0</alias>
+			</aliases>
+		</license>
+		<license>
+			<identifier>cc-nc-sa-1.0</identifier>
+			<name>Creative Commons NonCommercial-ShareAlike 1.0 Generic</name>
+			<acronym>CC-NC-SA 1.0</acronym>
+			<version>1.0</version>
+			<reference>http://creativecommons.org/licenses/nc-sa/1.0/</reference>
+			<attributes>
+				<attribute>nc</attribute>
+				<attribute>sa</attribute>
+			</attributes>
+			<aliases>
+				<alias>CC-NC-SA-1.0</alias>
+				<alias>ccncsa/1_0</alias>
+				<alias>http://dcat-ap.de/def/licenses/dl-nc-sa/1.0</alias>
+				<alias>http://dcat-ap.de/def/licenses/dl-nc-sa-de/1.0</alias>
+			</aliases>
+		</license>
+		<license>
+			<identifier>cc-nd-1.0</identifier>
+			<name>Creative Commons NoDerivatives 1.0 Generic</name>
+			<acronym>CC-ND 1.0</acronym>
+			<version>1.0</version>
+			<reference>http://creativecommons.org/licenses/nd/1.0/</reference>
+			<attributes>
+				<attribute>nd</attribute>
+			</attributes>
+			<aliases>
+				<alias>CC-ND-1.0</alias>
+				<alias>ccnd/1_0</alias>
+				<alias>http://dcat-ap.de/def/licenses/dl-nd/1.0</alias>
+				<alias>http://dcat-ap.de/def/licenses/dl-nd-de/1.0</alias>
+			</aliases>
+		</license>
+		<license>
+			<identifier>cc-sa-1.0</identifier>
+			<name>Creative Commons ShareAlike 1.0 Generic</name>
+			<acronym>CC-SA 1.0</acronym>
+			<version>1.0</version>
+			<reference>http://creativecommons.org/licenses/sa/1.0/</reference>
+			<attributes>
+				<attribute>sa</attribute>
+			</attributes>
+			<aliases>
+				<alias>CC-SA-1.0</alias>
+				<alias>ccsa/1_0</alias>
+				<alias>http://dcat-ap.de/def/licenses/dl-sa/1.0</alias>
+				<alias>http://dcat-ap.de/def/licenses/dl-sa-de/1.0</alias>
+			</aliases>
+		</license>
+		<license>
+			<identifier>odbl</identifier>
+			<name>Open Data Commons Open Database License (ODbL) v1.0</name>
+			<acronym>ODbL</acronym>
+			<version>1.0</version>
+			<reference>https://opendatacommons.org/licenses/odbl/1.0/</reference>
+			<attributes>
+				<attribute>by</attribute>
+				<attribute>sa</attribute>
+			</attributes>
+			<aliases>
+				<alias>ODBL</alias>
+				<alias>ODbL</alias>
+			</aliases>
+		</license>
+		<license>
+			<identifier>odc-by</identifier>
+			<name>Open Data Commons Attribution License (ODC-By) v1.0</name>
+			<acronym>ODC-By</acronym>
+			<version>1.0</version>
+			<reference>https://opendatacommons.org/licenses/by/1.0/</reference>
+			<attributes>
+				<attribute>by</attribute>
+			</attributes>
+			<aliases>
+				<alias>ODC-BY</alias>
+				<alias>ODC-By</alias>
+			</aliases>
+		</license>
+		<license>
+			<identifier>pd</identifier>
+			<name>Public Domain</name>
+			<acronym>PD</acronym>
+			<reference>https://creativecommons.org/publicdomain/</reference>
+			<attributes>
+				<attribute>pd</attribute>
+			</attributes>
+			<aliases>
+				<alias>PD</alias>
+			</aliases>
+		</license>
+		<license>
+			<identifier>pddl</identifier>
+			<name>Open Data Commons Public Domain Dedication and Licence (PDDL)
+			</name>
+			<acronym>PDDL</acronym>
+			<version>1.0</version>
+			<reference>https://opendatacommons.org/licenses/pddl/1.0/</reference>
+			<attributes>
+				<attribute>zero</attribute>
+			</attributes>
+			<aliases>
+				<alias>PDDL</alias>
+			</aliases>
+		</license>
+		<license>
+			<identifier>dbcl</identifier>
+			<name>Database Contents License (DbCL) v1.0</name>
+			<acronym>DbCL</acronym>
+			<version>1.0</version>
+			<reference>https://opendatacommons.org/licenses/dbcl/1.0/</reference>
+			<attributes>
+				<attribute>by</attribute>
+				<attribute>sa</attribute>
+			</attributes>
+			<aliases>
+				<alias>DBCL</alias>
+				<alias>DbCL</alias>
+			</aliases>
+		</license>
+		<license>
+			<identifier>other-open</identifier>
+			<name>Other (Open)</name>
+			<acronym>OTHER-OPEN</acronym>
+			<attributes>
+				<attribute>open</attribute>
+			</attributes>
+			<aliases>
+				<alias>OTHER-OPEN</alias>
+				<alias>otheropen</alias>
+				<alias>http://dcat-ap.de/def/licenses/other-open</alias>
+			</aliases>
+		</license>
+		<license>
+			<identifier>other-closed</identifier>
+			<name>Other (Not Open)</name>
+			<acronym>OTHER-CLOSED</acronym>
+			<attributes>
+				<attribute>closed</attribute>
+			</attributes>
+			<aliases>
+				<alias>OTHER-CLOSED</alias>
+				<alias>otherclosed</alias>
+				<alias>http://dcat-ap.de/def/licenses/other-closed</alias>
+			</aliases>
+		</license>
+		<license>
+			<identifier>other-forsale</identifier>
+			<name>Other (available for purchase)</name>
+			<acronym>OTHER-FORSALE</acronym>
+			<attributes>
+				<attribute>forsale</attribute>
+			</attributes>
+			<aliases>
+				<alias>OTHER-FORSALE</alias>
+				<alias>otherforsale</alias>
+				<alias>http://dcat-ap.de/def/licenses/other-forsale</alias>
+			</aliases>
+		</license>
+		<license>
+			<identifier>other-commercial</identifier>
+			<name>Other (Commercial)</name>
+			<acronym>OTHER-COMMERCIAL</acronym>
+			<attributes>
+				<attribute>commercial</attribute>
+			</attributes>
+			<aliases>
+				<alias>OTHER-COMMERCIAL</alias>
+				<alias>othercommercial</alias>
+				<alias>http://dcat-ap.de/def/licenses/other-commercial</alias>
+			</aliases>
+		</license>
+		<license>
+			<identifier>other-unpublished</identifier>
+			<name>Other (unpublished)</name>
+			<acronym>OTHER-UNPUBLISHED</acronym>
+			<attributes>
+				<attribute>unpublished</attribute>
+			</attributes>
+			<aliases>
+				<alias>OTHER-UNPUBLISHED</alias>
+				<alias>otherunpublished</alias>
+				<alias>http://dcat-ap.de/def/licenses/other-unpublished</alias>
+			</aliases>
+		</license>
+		<license>
+			<identifier>other-zero</identifier>
+			<name>Other (Zero)</name>
+			<acronym>OTHER-ZERO</acronym>
+			<attributes>
+				<attribute>zero</attribute>
+			</attributes>
+			<aliases>
+				<alias>OTHER-ZERO</alias>
+				<alias>otherzero</alias>
+				<alias>http://dcat-ap.de/def/licenses/other-zero</alias>
+			</aliases>
+		</license>
+		<license>
+			<identifier>other-by</identifier>
+			<name>Other (Attribution)</name>
+			<acronym>OTHER-BY</acronym>
+			<attributes>
+				<attribute>by</attribute>
+			</attributes>
+			<aliases>
+				<alias>OTHER-BY</alias>
+				<alias>otherby</alias>
+				<alias>http://dcat-ap.de/def/licenses/other-by</alias>
+			</aliases>
+		</license>
+		<license>
+			<identifier>other-pd</identifier>
+			<name>Other (Public Domain)</name>
+			<acronym>OTHER-PD</acronym>
+			<attributes>
+				<attribute>pd</attribute>
+			</attributes>
+			<aliases>
+				<alias>OTHER-PD</alias>
+				<alias>otherpd</alias>
+				<alias>http://dcat-ap.de/def/licenses/other-pd</alias>
+			</aliases>
+		</license>
+		<license>
+			<identifier>other-nc</identifier>
+			<name>Other (NonCommercial)</name>
+			<acronym>OTHER-NC</acronym>
+			<attributes>
+				<attribute>nc</attribute>
+			</attributes>
+			<aliases>
+				<alias>OTHER-NC</alias>
+				<alias>othernc</alias>
+				<alias>http://dcat-ap.de/def/licenses/other-nc</alias>
+			</aliases>
+		</license>
+		<license>
+			<identifier>other-nd</identifier>
+			<name>Other (NoDerivatives)</name>
+			<acronym>OTHER-ND</acronym>
+			<attributes>
+				<attribute>nd</attribute>
+			</attributes>
+			<aliases>
+				<alias>OTHER-ND</alias>
+				<alias>othernd</alias>
+				<alias>http://dcat-ap.de/def/licenses/other-nd</alias>
+			</aliases>
+		</license>
+		<license>
+			<identifier>other-sa</identifier>
+			<name>Other (ShareAlike)</name>
+			<acronym>OTHER-SA</acronym>
+			<attributes>
+				<attribute>sa</attribute>
+			</attributes>
+			<aliases>
+				<alias>OTHER-SA</alias>
+				<alias>othersa</alias>
+				<alias>http://dcat-ap.de/def/licenses/other-sa</alias>
+			</aliases>
+		</license>
+		<license>
+			<identifier>notspecified</identifier>
+			<name>License not specified</name>
+			<acronym>-</acronym>
+			<attributes>
+				<attribute>closed</attribute>
+			</attributes>
+			<aliases>
+				<alias>NOTSPECIFIED</alias>
+				<alias>other</alias>
+				<alias>OTHER</alias>
+			</aliases>
+		</license>
+
+	</this:licenses>
+
+	<this:resourceConstraints>
+
+		<!-- <resource:resource> -->
+		<!-- <resource:url><![CDATA[]]></resource:url> -->
+		<!-- <resource:constraint> -->
+		<!-- <resource:license identifier="" /> -->
+		<!-- <resource:maintainer><![CDATA[]]></resource:maintainer> -->
+		<!-- <resource:usagePolicy><![CDATA[]]></resource:usagePolicy> -->
+		<!-- </resource:constraint> -->
+		<!-- </resource:resource> -->
+
+	</this:resourceConstraints>
+
 </this:configuration>

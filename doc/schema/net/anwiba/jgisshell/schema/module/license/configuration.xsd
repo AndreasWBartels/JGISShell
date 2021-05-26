@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-  xmlns:jaxb="http://java.sun.com/xml/ns/jaxb"
-  jaxb:version="2.0"
+  xmlns:jaxb="https://jakarta.ee/xml/ns/jaxb" jaxb:version="3.0"
   targetNamespace="http://www.anwiba.net/module/license"
   xmlns:this="http://www.anwiba.net/module/license"
-  xmlns:license="http://www.anwiba.net/dynamic/license"
   xmlns:config="http://www.anwiba.net/dynamic/configuration"
+  xmlns:license="http://www.anwiba.net/dynamic/license"
+  xmlns:resource="http://www.anwiba.net/dynamic/resource/constraint"
   elementFormDefault="qualified">
 
   <xsd:import namespace="http://www.anwiba.net/dynamic/configuration" schemaLocation="../../dynamic/configuration/configuration.xsd"/>
   <xsd:import namespace="http://www.anwiba.net/dynamic/license" schemaLocation="../../dynamic/license/license.xsd"/>
+  <xsd:import namespace="http://www.anwiba.net/dynamic/resource/constraint" schemaLocation="../../dynamic/resource/constraint.xsd"/>
 
   <xsd:annotation>
     <xsd:appinfo>
@@ -33,6 +34,7 @@
       <xsd:extension base="config:ConfigurationType">
         <xsd:sequence>
           <xsd:element name="licenses" type="license:LicensesType" minOccurs="1" maxOccurs="1"/>
+          <xsd:element name="resourceConstraints" type="resource:ResourceConstraintsType" minOccurs="0" maxOccurs="1"/>
         </xsd:sequence>
       </xsd:extension>
     </xsd:complexContent>

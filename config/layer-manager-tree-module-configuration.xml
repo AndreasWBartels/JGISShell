@@ -148,6 +148,128 @@
     </layer>
   </folder>
 
+	<folder>
+		<name>OSM Maps</name>
+		<layer>
+			<name>OSM Topo Map</name>
+			<url><![CDATA[osm:http://{identifier}.tile.opentopomap.org/{zoomLevel}/{column}/{row}.png?identifiers=a,b,c]]></url>
+			<constraint>
+				<license identifier="cc-by-sa-4.0" />
+				<maintainer>OpenTopoMap</maintainer>
+				<usagePolicy><![CDATA[https://opentopomap.org/about]]></usagePolicy>
+			</constraint>
+			<constraint>
+				<license identifier="odbl" />
+				<maintainer>OpenStreetMap contributors</maintainer>
+				<usagePolicy><![CDATA[https://openstreetmap.de/index.html]]></usagePolicy>
+			</constraint>
+			<constraint>
+				<license identifier="pd" />
+				<maintainer>SRTM</maintainer>
+				<usagePolicy><![CDATA[https://www2.jpl.nasa.gov/srtm/]]></usagePolicy>
+			</constraint>
+		</layer>
+		<layer>
+			<name>OSM Streets (de)</name>
+			<url><![CDATA[osm:http://{identifier}.tile.openstreetmap.de/tiles/osmde/{zoomLevel}/{column}/{row}.png?identifiers=a,b,c,d]]></url>
+			<constraint>
+				<license identifier="odbl" />
+				<maintainer>OpenStreetMap contributors</maintainer>
+				<usagePolicy><![CDATA[https://openstreetmap.de/index.html]]></usagePolicy>
+			</constraint>
+		</layer>
+		<layer>
+			<name>Public transport</name>
+			<url><![CDATA[osm:https://tileserver.memomaps.de/tilegen/{zoomLevel}/{column}/{row}.png]]></url>
+			<constraint>
+				<license identifier="cc-by-sa-4.0" />
+				<maintainer>MeMoMaps</maintainer>
+				<usagePolicy><![CDATA[http://memomaps.de/en/homepage/]]></usagePolicy>
+			</constraint>
+			<constraint>
+				<license identifier="odbl" />
+				<maintainer>OpenStreetMap contributors</maintainer>
+				<usagePolicy><![CDATA[https://openstreetmap.de/index.html]]></usagePolicy>
+			</constraint>
+		</layer>
+		<layer>
+			<name>Open Cycle Map</name>
+			<url><![CDATA[osm:http://{identifier}.tile-cyclosm.openstreetmap.fr/cyclosm/{zoomLevel}/{column}/{row}.png?identifiers=a,b,c]]></url>
+			<constraint>
+				<license identifier="odbl" />
+				<maintainer>OpenCycleMap</maintainer>
+				<usagePolicy><![CDATA[http://www.opencyclemap.org/docs/]]></usagePolicy>
+			</constraint>
+			<constraint>
+				<license identifier="odbl" />
+				<maintainer>OpenStreetMap contributors</maintainer>
+				<usagePolicy><![CDATA[https://openstreetmap.de/index.html]]></usagePolicy>
+			</constraint>
+			<constraint>
+				<license identifier="cc-by-sa-2.0" />
+				<maintainer>Thunderforest, Data</maintainer>
+				<usagePolicy><![CDATA[https://www.thunderforest.com/terms/]]></usagePolicy>
+			</constraint>
+			<constraint>
+				<license identifier="cc-by-3.0" />
+				<maintainer>Unearthed Outdoors, LLC</maintainer>
+				<usagePolicy><![CDATA[https://www2.jpl.nasa.gov/srtm/]]></usagePolicy>
+			</constraint>
+			<constraint>
+				<license identifier="pd" />
+				<maintainer>SRTM</maintainer>
+				<usagePolicy><![CDATA[https://www2.jpl.nasa.gov/srtm/]]></usagePolicy>
+			</constraint>
+		</layer>
+		<layer>
+			<name>Open Sea Map</name>
+			<url><![CDATA[osm:https://tiles.openseamap.org/seamark/{zoomLevel}/{column}/{row}.png]]></url>
+			<constraint>
+				<license identifier="cc-by-sa-2.0" />
+				<maintainer>OpenSeaMap</maintainer>
+				<usagePolicy><![CDATA[http://www.openseamap.org/index.php]]></usagePolicy>
+			</constraint>
+			<constraint>
+				<license identifier="odbl" />
+				<maintainer>OpenStreetMap contributors</maintainer>
+				<usagePolicy><![CDATA[http://www.openseamap.org/index.php]]></usagePolicy>
+			</constraint>
+			<constraint>
+				<license identifier="cc-by-nc-sa-4.0" />
+				<maintainer>OpenPortGuide</maintainer>
+				<usagePolicy><![CDATA[http://openportguide.org/index.php/en/terms-of-use]]></usagePolicy>
+			</constraint>
+			<constraint>
+				<license identifier="pddl" />
+				<maintainer>Water Depth Project</maintainer>
+				<usagePolicy><![CDATA[https://depth.openseamap.org/#license]]></usagePolicy>
+			</constraint>
+			<constraint>
+				<license identifier="other" />
+				<maintainer>Marine Traffic Project</maintainer>
+				<usagePolicy><![CDATA[https://www.marinetraffic.com/en/p/user-agreement]]></usagePolicy>
+			</constraint>
+		</layer>
+		<layer>
+			<name>Open Fire Map Hydrants</name>
+			<url><![CDATA[osm:http://www.openfiremap.de/hytiles/{zoomLevel}/{column}/{row}.png]]></url>
+			<constraint>
+				<license identifier="odbl" />
+				<maintainer>OpenStreetMap contributors</maintainer>
+				<usagePolicy><![CDATA[https://wiki.openstreetmap.org/wiki/DE:OpenFireMap]]></usagePolicy>
+			</constraint>
+		</layer>
+		<layer>
+			<name>Open Snow Map</name>
+			<url><![CDATA[osm:https://tiles.opensnowmap.org/base_snow_map/{zoomLevel}/{column}/{row}.png]]></url>
+			<constraint>
+				<license identifier="odbl" />
+				<maintainer>OpenStreetMap contributors</maintainer>
+				<usagePolicy><![CDATA[https://wiki.openstreetmap.org/wiki/DE:OpenFireMap]]></usagePolicy>
+			</constraint>
+		</layer>
+	</folder>
+
   <folder>
     <name>Open Infrastructure Map</name>
     <layer>
@@ -266,6 +388,20 @@
         <usagePolicy><![CDATA[https://foundation.wikimedia.org/wiki/Maps_Terms_of_Use]]></usagePolicy>
       </constraint>
     </layer>
+	  <layer>
+		  <name>Wikimedia Maps</name>
+		  <url><![CDATA[osm:https://maps.wikimedia.org/osm-intl/{zoomLevel}/{column}/{row}.png]]></url>
+		  <constraint>
+			  <license identifier="odbl" />
+			  <maintainer>OpenStreetMap contributors</maintainer>
+			  <usagePolicy><![CDATA[https://www.openstreetmap.org/copyright]]></usagePolicy>
+		  </constraint>
+		  <constraint>
+			  <license identifier="cc-by-sa-4.0" />
+			  <maintainer>Wikimedia</maintainer>
+			  <usagePolicy><![CDATA[https://foundation.wikimedia.org/wiki/Maps_Terms_of_Use]]></usagePolicy>
+		  </constraint>
+	  </layer>
   </folder>
 
   <folder>
@@ -292,23 +428,19 @@
     </layer>
   </folder>
 
-    <layer>
-      <name>Marine Traffic</name>
-      <url><![CDATA[osm:https://tiles.marinetraffic.com/ais_helpers/shiptilesingle.aspx?output=png&sat=1&grouping=shiptype&tile_size=256&legends=1&zoom={zoomLevel}&X={column}&Y={row}]]></url>
-      <constraint>
-        <license identifier="odbl" />
-        <maintainer>OpenStreetMap</maintainer>
-      </constraint>
-    </layer>
-
   <layer>
-    <name>OSM Streets (de)</name>
-    <url><![CDATA[osm:http://{identifier}.tile.openstreetmap.de/tiles/osmde/{zoomLevel}/{column}/{row}.png?identifiers=a,b,c,d]]></url>
-    <constraint>
-      <license identifier="odbl" />
-      <maintainer>OpenStreetMap</maintainer>
-      <usagePolicy><![CDATA[https://openstreetmap.de/index.html]]></usagePolicy>
-    </constraint>
+    <name>Marine Traffic</name>
+    <url><![CDATA[osm:https://tiles.marinetraffic.com/ais_helpers/shiptilesingle.aspx?output=png&sat=1&grouping=shiptype&tile_size=256&legends=1&zoom={zoomLevel}&X={column}&Y={row}]]></url>
+		<constraint>
+			<license identifier="other" />
+			<maintainer>Marine Traffic Project</maintainer>
+			<usagePolicy><![CDATA[https://www.marinetraffic.com/en/p/user-agreement]]></usagePolicy>
+		</constraint>
+		<constraint>
+			<license identifier="odbl" />
+			<maintainer>OpenStreetMap contributors</maintainer>
+			<usagePolicy><![CDATA[https://www.openstreetmap.org/copyright]]></usagePolicy>
+		</constraint>
   </layer>
 
 </configuration>

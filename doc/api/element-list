@@ -41,6 +41,7 @@ net.anwiba.commons.thread.process
 net.anwiba.commons.thread.program
 net.anwiba.commons.thread.progress
 net.anwiba.commons.thread.queue
+net.anwiba.commons.thread.result
 net.anwiba.commons.utilities
 net.anwiba.commons.utilities.boole
 net.anwiba.commons.utilities.collection
@@ -93,6 +94,7 @@ net.anwiba.jgisshell.api.report
 net.anwiba.jgisshell.api.table
 net.anwiba.jgisshell.api.transformer
 net.anwiba.jgisshell.scripting.desktop.api
+net.anwiba.jgisshell.scripting.groovy.api
 net.anwiba.jgisshell.scripting.java.api
 net.anwiba.spatial.coordinate
 net.anwiba.spatial.coordinate.calculator

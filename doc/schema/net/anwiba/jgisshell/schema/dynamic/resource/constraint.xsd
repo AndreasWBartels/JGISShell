@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+  xmlns:jaxb="https://jakarta.ee/xml/ns/jaxb" jaxb:version="3.0"
+  targetNamespace="http://www.anwiba.net/dynamic/resource/constraint"
+  xmlns:this="http://www.anwiba.net/dynamic/resource/constraint"
+  elementFormDefault="qualified">
+
+  <xsd:annotation>
+    <xsd:appinfo>
+      <!-- <jaxb:globalBindings choiceContentProperty="false"/> -->
+      <jaxb:schemaBindings>
+        <jaxb:package name="net.anwiba.jgisshell.schema.dynamic.resource.constraint"/>
+      </jaxb:schemaBindings>
+    </xsd:appinfo>
+  </xsd:annotation>
+
+  <xsd:element name="resourceConstraints" type="this:ResourceConstraintsType">
+  </xsd:element>
+ 
+  <xsd:complexType name="ResourceConstraintsType">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <jaxb:class name="ResourceConstraints"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="resource" type="this:ResourceType" minOccurs="0" maxOccurs="unbounded"/> 
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="ResourceType">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <jaxb:class name="Resource"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="url" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="constraint" type="this:ConstraintType" minOccurs="1" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="LicenseType">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <jaxb:class name="License"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:attribute name="identifier" type="xsd:string" />
+  </xsd:complexType>
+
+  <xsd:complexType name="ConstraintType">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <jaxb:class name="Constraint"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="license" type="this:LicenseType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="maintainer" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="usagePolicy" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+</xsd:schema>
