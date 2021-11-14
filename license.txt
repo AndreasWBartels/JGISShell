@@ -15,7 +15,7 @@ Private use or use for education is not limited.
 </li>
 <li>
 Commercial use is not permitted in or for governmental organizations of states or countries with death penalty.
-For information about death penalty, see <a href="http://www.amnesty.org/en/death-penalty">http://www.amnesty.org/en/death-penalty</a>
+For information about death penalty, see <a href="https://www.amnesty.org/en/what-we-do/death-penalty/">http://www.amnesty.org/en/death-penalty</a>
 </li>
 </ul>
 </P>

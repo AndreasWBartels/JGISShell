@@ -5,7 +5,7 @@
   xmlns:config="http://www.anwiba.net/configuration"
   xmlns:scripting="http://www.anwiba.net/module/scripting"
   xmlns:spatialite="http://www.anwiba.net/module/spatialite"
-  xmlns:gazetteer="http://www.anwiba.net/module/gazetteer"
+  xmlns:geocoder="http://www.anwiba.net/module/geocoder"
   elementFormDefault="qualified"
 >
 
@@ -20,7 +20,7 @@
 
   <xsd:import namespace="http://www.anwiba.net/module/scripting" schemaLocation="scripting/configuration.xsd" />
   <xsd:import namespace="http://www.anwiba.net/module/spatialite" schemaLocation="spatialite/configuration.xsd" />
-  <xsd:import namespace="http://www.anwiba.net/module/gazetteer" schemaLocation="gazetteer/configuration.xsd" />
+  <xsd:import namespace="http://www.anwiba.net/module/geocoder" schemaLocation="geocoder/configuration.xsd" />
 
   <xsd:element name="configuration" type="config:ConfigurationType" >
   </xsd:element>
@@ -34,7 +34,7 @@
     <xsd:sequence>
         <xsd:element ref="scripting:configuration" minOccurs="0" maxOccurs="1"/>
         <xsd:element ref="spatialite:configuration" minOccurs="0" maxOccurs="1"/>
-        <xsd:element ref="gazetteer:configuration" minOccurs="0" maxOccurs="1"/>
+        <xsd:element ref="geocoder:configuration" minOccurs="0" maxOccurs="1"/>
     </xsd:sequence>
   </xsd:complexType>
 
