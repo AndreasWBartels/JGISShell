@@ -15,11 +15,11 @@ JGISShell was created 10 years ago as a private education and evaluation project
 The viewer supports the following formats:
 
 ### Feature based geodata
-Shapefiles, GeoJSON, PostGIS, SpatiaLite, GeoPackage, H2 Database. Oracle Locator/Spatial, SAP Hana, ESRI MDB based Geodatabases, ESRI Arc GIS Rest Feature Services and a own GML equal XML format.
+WFS, Shapefiles, GeoJSON, PostGIS, SpatiaLite, GeoPackage, H2 Database. Oracle Locator/Spatial, MSSQL/SQLServer, SAP Hana, ESRI MDB based Geodatabases, ESRI Arc GIS Rest Feature Services and a own GML equal XML format.
 
 ### Image based geodata
-Worldfiles, mbtiles, OSM, MAPBOX Tile Layers, GeoPackage, ESRI Arc GIS Rest Map and Image Services
-published
+WMS, WMTS, PostGIS Raster, Worldfiles, mbtiles, OSM, MAPBOX Tile Layers, GeoPackage, ESRI Arc GIS Rest Map and Image Services
+
 ### Grid based geodata
 ESRI ASCII Grid, Saga Grid and XYZ Grid files
 
