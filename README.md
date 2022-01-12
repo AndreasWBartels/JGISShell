@@ -12,6 +12,8 @@ JGISShell was created 10 years ago as a private education and evaluation project
 ![Viewer](https://github.com/AndreasWBartels/JGISShell/wiki/images/WindAndRadioWaves-LUBW.png)  
 `map source: © 2016 Landesanstalt für Umwelt, Messungen und Naturschutz Baden-Württemberg and Landesamt für Geoinformation und Landentwicklung Baden-Württemberg`
 
+[further screenshots](https://github.com/AndreasWBartels/JGISShell/tree/master/doc/manual/images)
+
 The viewer supports the following formats:
 
 ### Feature based geodata
