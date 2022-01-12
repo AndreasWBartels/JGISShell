@@ -654,19 +654,20 @@ table.CodeRay td.code{padding:0 0 0 .75em}
 <li><a href="#postgis">12.18. Postgis</a></li>
 <li><a href="#oracle-database">12.19. Oracle Database</a></li>
 <li><a href="#spatiallocator">12.20. Spatial/Locator</a></li>
-<li><a href="#sap-hana-spatial-reference">12.21. SAP Hana Spatial Reference</a></li>
-<li><a href="#esri-personal-geodatabase-mdb">12.22. ESRI Personal Geodatabase (MDB)</a></li>
-<li><a href="#ogc-web-feature-service-wfs">12.23. OGC Web Feature Service (WFS)</a></li>
-<li><a href="#ogc-web-map-service-wms">12.24. OGC Web Map Service (WMS)</a></li>
-<li><a href="#ogc-web-map-tile-service-wmts">12.25. OGC Web Map Tile Service (WMTS)</a></li>
-<li><a href="#esri-arcgis-rest-api">12.26. ESRI ArcGIS REST API</a></li>
-<li><a href="#mapbox">12.27. Mapbox</a></li>
-<li><a href="#mapzen">12.28. Mapzen</a></li>
-<li><a href="#open-street-map-osm">12.29. Open street map (OSM)</a></li>
-<li><a href="#ckan">12.30. CKAN</a></li>
-<li><a href="#georss">12.31. GeoRSS</a></li>
-<li><a href="#mediawiki">12.32. MediaWiki</a></li>
-<li><a href="#event-logging">12.33. Event logging</a></li>
+<li><a href="#mssql-sqlserver">12.21. MsSQL /SqlServer</a></li>
+<li><a href="#sap-hana-spatial-reference">12.22. SAP Hana Spatial Reference</a></li>
+<li><a href="#esri-personal-geodatabase-mdb">12.23. ESRI Personal Geodatabase (MDB)</a></li>
+<li><a href="#ogc-web-feature-service-wfs">12.24. OGC Web Feature Service (WFS)</a></li>
+<li><a href="#ogc-web-map-service-wms">12.25. OGC Web Map Service (WMS)</a></li>
+<li><a href="#ogc-web-map-tile-service-wmts">12.26. OGC Web Map Tile Service (WMTS)</a></li>
+<li><a href="#esri-arcgis-rest-api">12.27. ESRI ArcGIS REST API</a></li>
+<li><a href="#mapbox">12.28. Mapbox</a></li>
+<li><a href="#mapzen">12.29. Mapzen</a></li>
+<li><a href="#open-street-map-osm">12.30. Open street map (OSM)</a></li>
+<li><a href="#ckan">12.31. CKAN</a></li>
+<li><a href="#georss">12.32. GeoRSS</a></li>
+<li><a href="#mediawiki">12.33. MediaWiki</a></li>
+<li><a href="#event-logging">12.34. Event logging</a></li>
 </ul>
 </li>
 <li><a href="#scripting-3">13. Scripting</a>
@@ -696,7 +697,12 @@ table.CodeRay td.code{padding:0 0 0 .75em}
 <li><a href="#enable-sap-hana-support">C.2. Enable SAP HANA support</a></li>
 </ul>
 </li>
-<li><a href="#third-party-dependencies">Appendix D: Third-party dependencies.</a></li>
+<li><a href="#third-party-dependencies">Appendix D: Third-party dependencies.</a>
+<ul class="sectlevel2">
+<li><a href="#libraries">D.1. Libraries</a></li>
+<li><a href="#licenses">D.2. Licenses</a></li>
+</ul>
+</li>
 <li><a href="#glossary">Glossary</a></li>
 <li><a href="#references">References</a></li>
 </ul>
@@ -766,29 +772,42 @@ cd JGISShell-master
 <div class="sidebarblock">
 <div class="content">
 <div class="paragraph">
-<p>Copyright (c) 2007-2019 by Andreas W. Bartels. All Rights Reserved.</p>
+<p>Copyright (c) 2007-2022 by Andreas W. Bartels. All Rights Reserved.</p>
 </div>
 <div class="paragraph">
-<p>Redistribution and use in binary forms, without modification, are permitted provided that the following conditions are met:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.</p>
-</li>
-<li>
-<p>Neither my name "Andreas W. Bartels" nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.</p>
-</li>
-<li>
-<p>Private use or use for education is not limited.</p>
-</li>
-<li>
-<p>Commercial use is not permitted in or for governmental organizations of states or countries with death penalty. For information about death penalty, see <a href="https://www.amnesty.org/en/what-we-do/death-penalty/" class="bare">https://www.amnesty.org/en/what-we-do/death-penalty/</a></p>
-</li>
-</ul>
+<p>Redistribution and use in binary forms, without modification,
+are permitted provided that the following conditions are met:</p>
 </div>
 <div class="paragraph">
-<p>THIS SOFTWARE IS PROVIDED BY THE REGENTS AND CONTRIBUTORS “AS IS” AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE REGENTS OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</p>
+<p>· Redistributions in binary form must reproduce the above copyright notice,
+  this list of conditions and the following disclaimer in the documentation
+  and/or other materials provided with the distribution.</p>
+</div>
+<div class="paragraph">
+<p>· Neither my name "Andreas W. Bartels" nor the names of its contributors
+  may be used to endorse or promote products derived from this software
+  without specific prior written permission.</p>
+</div>
+<div class="paragraph">
+<p>· Private use or use for education is not limited.</p>
+</div>
+<div class="paragraph">
+<p>· Commercial use is not permitted in or for governmental organizations of
+  states or countries with death penalty. For information about death penalty,
+  see <a href="https://www.amnesty.org/en/what-we-do/death-penalty/" class="bare">https://www.amnesty.org/en/what-we-do/death-penalty/</a></p>
+</div>
+<div class="paragraph">
+<p>THIS SOFTWARE IS PROVIDED BY THE REGENTS AND CONTRIBUTORS “AS IS” AND ANY
+EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE REGENTS OR CONTRIBUTORS BE LIABLE FOR
+ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
+OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
+OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
+SUCH DAMAGE.</p>
 </div>
 </div>
 </div>
@@ -6335,7 +6354,140 @@ see <a href="#enable-oracle-locator-spatial-support">Enable Oracle Locator/Spati
 <div style="page-break-after: always;"></div>
 </div>
 <div class="sect2">
-<h3 id="sap-hana-spatial-reference"><a class="anchor" href="#sap-hana-spatial-reference"></a>12.21. SAP Hana Spatial Reference</h3>
+<h3 id="mssql-sqlserver"><a class="anchor" href="#mssql-sqlserver"></a>12.21. MsSQL /SqlServer</h3>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+see <a href="https://docs.microsoft.com/en-us/sql/relational-databases/spatial/spatial-data-sql-server?view=sql-server-linux-ver15">Spatial Data (SQL Server)</a>
+</td>
+</tr>
+</table>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">URI syntax</dt>
+</dl>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+syntax
+</td>
+<td class="hdlist2">
+<p>mssql://{user}:{password}@{host}:{port}/{instance}[?schema={schema name}]</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+sample
+</td>
+<td class="hdlist2">
+<p>mssql://user:xxxx@host:30015/transportation</p>
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<div class="title">Capabilities</div>
+<ul>
+<li>
+<p>Open</p>
+</li>
+<li>
+<p>Reload</p>
+</li>
+<li>
+<p>Remove</p>
+</li>
+<li>
+<p>Bookmark</p>
+</li>
+<li>
+<p>Show properties</p>
+</li>
+<li>
+<p>Adapt</p>
+</li>
+</ul>
+</div>
+<div class="dlist">
+<div class="title">Feature layer</div>
+<dl>
+<dt class="hdlist1">URI syntax</dt>
+</dl>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+syntax
+</td>
+<td class="hdlist2">
+<p>mssql://{user}:{password}@{host}:{port}/{instance}?[schema={schema name}&amp;]table={table name}&amp;column={geometry column name}</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+sample
+</td>
+<td class="hdlist2">
+<p>mssql://user:xxxx@host:30015/transportation?schema=transportation&amp;table=highway&amp;column=geometry</p>
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<div class="title">Capabilities</div>
+<ul>
+<li>
+<p>Open in map</p>
+</li>
+<li>
+<p>Open in locator</p>
+</li>
+<li>
+<p>Show attribute table</p>
+</li>
+<li>
+<p>Show properties</p>
+</li>
+<li>
+<p>Save layer as</p>
+</li>
+</ul>
+</div>
+<div class="ulist">
+<div class="title">Scripting</div>
+<ul>
+<li>
+<p>list layer</p>
+</li>
+<li>
+<p>open as feature layer</p>
+</li>
+<li>
+<p>list features</p>
+</li>
+</ul>
+</div>
+<div class="dlist">
+<div class="title">Requirements</div>
+<dl>
+<dt class="hdlist1">Libraries</dt>
+<dd>
+<p>JDBC-Driver mssql-jdbc-9.4.1.jre11.jar</p>
+</dd>
+</dl>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+<div class="sect2">
+<h3 id="sap-hana-spatial-reference"><a class="anchor" href="#sap-hana-spatial-reference"></a>12.22. SAP Hana Spatial Reference</h3>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -6486,7 +6638,7 @@ see <a href="#enable-sap-hana-support">Enable SAP HANA support</a>
 <div style="page-break-after: always;"></div>
 </div>
 <div class="sect2">
-<h3 id="esri-personal-geodatabase-mdb"><a class="anchor" href="#esri-personal-geodatabase-mdb"></a>12.22. ESRI Personal Geodatabase (MDB)</h3>
+<h3 id="esri-personal-geodatabase-mdb"><a class="anchor" href="#esri-personal-geodatabase-mdb"></a>12.23. ESRI Personal Geodatabase (MDB)</h3>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -6622,7 +6774,7 @@ The geometry validation is <a href="http://www.opengeospatial.org/standards/sfa"
 <div style="page-break-after: always;"></div>
 </div>
 <div class="sect2">
-<h3 id="ogc-web-feature-service-wfs"><a class="anchor" href="#ogc-web-feature-service-wfs"></a>12.23. OGC Web Feature Service (WFS)</h3>
+<h3 id="ogc-web-feature-service-wfs"><a class="anchor" href="#ogc-web-feature-service-wfs"></a>12.24. OGC Web Feature Service (WFS)</h3>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -6757,7 +6909,7 @@ supported coordinate reference systems must be defined in <a href="../../config/
 <div style="page-break-after: always;"></div>
 </div>
 <div class="sect2">
-<h3 id="ogc-web-map-service-wms"><a class="anchor" href="#ogc-web-map-service-wms"></a>12.24. OGC Web Map Service (WMS)</h3>
+<h3 id="ogc-web-map-service-wms"><a class="anchor" href="#ogc-web-map-service-wms"></a>12.25. OGC Web Map Service (WMS)</h3>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -6885,7 +7037,7 @@ supported coordinate reference systems must be defined in <a href="../../config/
 <div style="page-break-after: always;"></div>
 </div>
 <div class="sect2">
-<h3 id="ogc-web-map-tile-service-wmts"><a class="anchor" href="#ogc-web-map-tile-service-wmts"></a>12.25. OGC Web Map Tile Service (WMTS)</h3>
+<h3 id="ogc-web-map-tile-service-wmts"><a class="anchor" href="#ogc-web-map-tile-service-wmts"></a>12.26. OGC Web Map Tile Service (WMTS)</h3>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -7000,7 +7152,7 @@ sample
 <div style="page-break-after: always;"></div>
 </div>
 <div class="sect2">
-<h3 id="esri-arcgis-rest-api"><a class="anchor" href="#esri-arcgis-rest-api"></a>12.26. ESRI ArcGIS REST API</h3>
+<h3 id="esri-arcgis-rest-api"><a class="anchor" href="#esri-arcgis-rest-api"></a>12.27. ESRI ArcGIS REST API</h3>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -7177,7 +7329,7 @@ sample
 <div style="page-break-after: always;"></div>
 </div>
 <div class="sect2">
-<h3 id="mapbox"><a class="anchor" href="#mapbox"></a>12.27. Mapbox</h3>
+<h3 id="mapbox"><a class="anchor" href="#mapbox"></a>12.28. Mapbox</h3>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -7348,7 +7500,7 @@ tilesets:read<br></p>
 <div style="page-break-after: always;"></div>
 </div>
 <div class="sect2">
-<h3 id="mapzen"><a class="anchor" href="#mapzen"></a>12.28. Mapzen</h3>
+<h3 id="mapzen"><a class="anchor" href="#mapzen"></a>12.29. Mapzen</h3>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -7418,7 +7570,7 @@ Configuration
 <div style="page-break-after: always;"></div>
 </div>
 <div class="sect2">
-<h3 id="open-street-map-osm"><a class="anchor" href="#open-street-map-osm"></a>12.29. Open street map (OSM)</h3>
+<h3 id="open-street-map-osm"><a class="anchor" href="#open-street-map-osm"></a>12.30. Open street map (OSM)</h3>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -7506,7 +7658,7 @@ Configuration
 <div style="page-break-after: always;"></div>
 </div>
 <div class="sect2">
-<h3 id="ckan"><a class="anchor" href="#ckan"></a>12.30. CKAN</h3>
+<h3 id="ckan"><a class="anchor" href="#ckan"></a>12.31. CKAN</h3>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -7626,7 +7778,7 @@ sample
 </ul>
 </div>
 <div class="sect3">
-<h4 id="dataset-and-resources-search"><a class="anchor" href="#dataset-and-resources-search"></a>12.30.1. Dataset and resources search</h4>
+<h4 id="dataset-and-resources-search"><a class="anchor" href="#dataset-and-resources-search"></a>12.31.1. Dataset and resources search</h4>
 <div class="imageblock">
 <div class="content">
 <img src="./images/dialog-layer-manager-ckan-search-action.png" alt="search">
@@ -7757,7 +7909,7 @@ File
 </div>
 </div>
 <div class="sect2">
-<h3 id="georss"><a class="anchor" href="#georss"></a>12.31. GeoRSS</h3>
+<h3 id="georss"><a class="anchor" href="#georss"></a>12.32. GeoRSS</h3>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -7825,7 +7977,7 @@ sample
 <div style="page-break-after: always;"></div>
 </div>
 <div class="sect2">
-<h3 id="mediawiki"><a class="anchor" href="#mediawiki"></a>12.32. MediaWiki</h3>
+<h3 id="mediawiki"><a class="anchor" href="#mediawiki"></a>12.33. MediaWiki</h3>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -7890,7 +8042,7 @@ sample
 <div style="page-break-after: always;"></div>
 </div>
 <div class="sect2">
-<h3 id="event-logging"><a class="anchor" href="#event-logging"></a>12.33. Event logging</h3>
+<h3 id="event-logging"><a class="anchor" href="#event-logging"></a>12.34. Event logging</h3>
 <div class="imageblock">
 <div class="content">
 <img src="./images/dialog-layer-properties-history.png" alt="history">
@@ -9053,37 +9205,50 @@ path<br>
 <div class="sidebarblock">
 <div class="content">
 <div class="paragraph">
-<p>Copyright (c) 2007-2021 by Andreas W. Bartels. All Rights Reserved.</p>
+<p>Copyright (c) 2007-2022 by Andreas W. Bartels. All Rights Reserved.</p>
 </div>
 <div class="paragraph">
-<p>Redistribution and use in binary forms, without modification, are permitted provided that the following conditions are met:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.</p>
-</li>
-<li>
-<p>Neither my name "Andreas W. Bartels" nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.</p>
-</li>
-<li>
-<p>Private use or use for education is not limited.</p>
-</li>
-<li>
-<p>Commercial use is not permitted in or for governmental organizations of states or countries with death penalty. For information about death penalty, see <a href="https://www.amnesty.org/en/what-we-do/death-penalty" class="bare">https://www.amnesty.org/en/what-we-do/death-penalty</a></p>
-</li>
-</ul>
+<p>Redistribution and use in binary forms, without modification,
+are permitted provided that the following conditions are met:</p>
 </div>
 <div class="paragraph">
-<p>THIS SOFTWARE IS PROVIDED BY THE REGENTS AND CONTRIBUTORS “AS IS” AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE REGENTS OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</p>
+<p>· Redistributions in binary form must reproduce the above copyright notice,
+  this list of conditions and the following disclaimer in the documentation
+  and/or other materials provided with the distribution.</p>
+</div>
+<div class="paragraph">
+<p>· Neither my name "Andreas W. Bartels" nor the names of its contributors
+  may be used to endorse or promote products derived from this software
+  without specific prior written permission.</p>
+</div>
+<div class="paragraph">
+<p>· Private use or use for education is not limited.</p>
+</div>
+<div class="paragraph">
+<p>· Commercial use is not permitted in or for governmental organizations of
+  states or countries with death penalty. For information about death penalty,
+  see <a href="https://www.amnesty.org/en/what-we-do/death-penalty/" class="bare">https://www.amnesty.org/en/what-we-do/death-penalty/</a></p>
+</div>
+<div class="paragraph">
+<p>THIS SOFTWARE IS PROVIDED BY THE REGENTS AND CONTRIBUTORS “AS IS” AND ANY
+EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE REGENTS OR CONTRIBUTORS BE LIABLE FOR
+ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
+OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
+OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
+SUCH DAMAGE.</p>
 </div>
 </div>
 </div>
 <div class="paragraph">
-<p>Free use of the scripting examples is granted under the terms of the <a href="https://www.gnu.org/licenses/gpl-3.0.en.html">GNU General Public License Version 3</a>.</p>
+<p>Free use of the <a href="https://github.com/AndreasWBartels/JGISShell/tree/master/scripts/net/anwiba/script">scripting examples</a> is granted under the terms of the <a href="https://www.gnu.org/licenses/gpl-3.0.en.html">GNU General Public License Version 3</a>.</p>
 </div>
 <div class="paragraph">
-<p>The source code, insofar as it is published, are licensed under the terms of the <a href="https://www.gnu.org/licenses/old-licenses/lgpl-2.1.en.html">GNU Lesser General Public License (LGPL) Version 2.1</a>.</p>
+<p>The <a href="https://github.com/AndreasWBartels/libraries">source code</a>, insofar as it is published, are licensed under the terms of the <a href="https://www.gnu.org/licenses/old-licenses/lgpl-2.1.en.html">GNU Lesser General Public License (LGPL) Version 2.1</a>.</p>
 </div>
 <div class="paragraph">
 <p>This manual is published under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)</a> license.</p>
@@ -9378,19 +9543,19 @@ sdoapi.jar</pre>
 </div>
 </div>
 <div class="paragraph">
-<p>Ask your Database Administrators for the libraries. If you are a developer, you can download the libraries from Oracle Technology Network. The sdoapi.jar is part of the <a href="http://www.oracle.com/technetwork/database/database-technologies/bigdata-spatialandgraph/downloads/bdsp-downloads-2562575.html">"Oracle Big Data Spatial and Graph - Vector API"</a>. The JDBC-driver can be found <a href="http://www.oracle.com/technetwork/database/features/jdbc/default-2280470.html">here</a> or <a href="https://www.oracle.com/database/technologies/spatial-studio/oracle-spatial-studio-downloads.html">Oracle Spatial Studio</a></p>
+<p>Ask your Database Administrators for the libraries. If you are a developer, you can download the libraries from Oracle Technology Network. The sdoapi.jar is part of the <a href="http://www.oracle.com/technetwork/database/database-technologies/bigdata-spatialandgraph/downloads/bdsp-downloads-2562575.html">"Oracle Big Data Spatial and Graph - Vector API"</a> it could be downloaded from <a href="https://www.oracle.com/database/technologies/spatial-studio/oracle-spatial-studio-downloads.html">here</a>. The JDBC-driver can be found over a <a href="https://mvnrepository.com/artifact/com.oracle.database.jdbc">maven repository</a>.</p>
 </div>
 <div class="paragraph">
-<p>The sdoapi.jar library file, could be found in the folder "/opt/oracle/oracle-spatial-graph/spatial/vector/jlib/" of the "Oracle Big Data Spatial and Graph" archive file.</p>
+<p>The sdoapi.jar library file, is part of the <a href="https://download.oracle.com/otn/other/spatial/studio/spatial_java_jar_files.zip">Oracle Spatial Java Developer Libraries</a>.</p>
 </div>
 <div class="paragraph">
 <p>Copy</p>
 </div>
 <div class="literalblock">
 <div class="content">
-<pre>ojdbc11.jar to JGISShell/lib/ojdbc11-21.3.0.0.jar
-orai18n.jar to JGISShell/lib/orai18n-21.3.0.0.jar
-sdoapi-19.2-190126.jar to JGISShell/lib/sdoapi-19.2.0.0.jar</pre>
+<pre>ojdbc11.jar to JGISShell/lib/ojdbc11-21.4.0.0.1.jar
+orai18n.jar to JGISShell/lib/orai18n-21.4.0.0.1.jar
+sdoapi.jar to JGISShell/lib/sdoapi-21.3.0.0.jar</pre>
 </div>
 </div>
 </div>
@@ -9433,7 +9598,7 @@ sdoapi-19.2-190126.jar to JGISShell/lib/sdoapi-19.2.0.0.jar</pre>
 </div>
 <div class="literalblock">
 <div class="content">
-<pre>ngdbc.jar to JGISShell/lib/ngdbc-2.10.15.jar</pre>
+<pre>ngdbc.jar to JGISShell/lib/ngdbc-2.11.14.jar</pre>
 </div>
 </div>
 <div style="page-break-after: always;"></div>
@@ -9443,6 +9608,8 @@ sdoapi-19.2-190126.jar to JGISShell/lib/sdoapi-19.2.0.0.jar</pre>
 <div class="sect1">
 <h2 id="third-party-dependencies"><a class="anchor" href="#third-party-dependencies"></a>Appendix D: Third-party dependencies.</h2>
 <div class="sectionbody">
+<div class="sect2">
+<h3 id="libraries"><a class="anchor" href="#libraries"></a>D.1. Libraries</h3>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 33.3333%;">
@@ -9451,305 +9618,371 @@ sdoapi-19.2-190126.jar to JGISShell/lib/sdoapi-19.2.0.0.jar</pre>
 </colgroup>
 <thead>
 <tr>
-<th class="tableblock halign-left valign-top">Library</th>
 <th class="tableblock halign-left valign-top">Dependency</th>
+<th class="tableblock halign-left valign-top">Library</th>
 <th class="tableblock halign-left valign-top">License</th>
 </tr>
 </thead>
 <tbody>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://mvnrepository.com/artifact/ch.hsr/geohash/1.4.0">ch.hsr:geohash:1.4.0</a></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/kungfoo/geohash-java">geohash-java</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ch.hsr:geohash:1.4.0</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Apache License, Version 2.0</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-annotations/2.13.1">com.fasterxml.jackson.core:jackson-annotations:2.13.1</a></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://github.com/FasterXML/jackson">Jackson-annotations</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">com.fasterxml.jackson.core:jackson-annotations:2.13.0</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Apache License, Version 2.0</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-core/2.13.1">com.fasterxml.jackson.core:jackson-core:2.13.1</a></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/FasterXML/jackson-core">Jackson-core</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">com.fasterxml.jackson.core:jackson-core:2.13.0</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Apache License, Version 2.0</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind/2.13.1">com.fasterxml.jackson.core:jackson-databind:2.13.1</a></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://github.com/FasterXML/jackson">jackson-databind</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">com.fasterxml.jackson.core:jackson-databind:2.13.0</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Apache License, Version 2.0</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/FasterXML/jackson-modules-java8/jackson-datatype-jsr310">Jackson datatype: JSR310</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.13.0</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Apache License, Version 2.0</p></td>
-</tr>
-<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://mvnrepository.com/artifact/com.h2database/h2/2.0.206">com.h2database:h2:2.0.206</a></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://h2database.com">H2 Database Engine</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">com.h2database:h2:jts-1.8.1-1.4.200</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">MPL 2.0 or EPL 1.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">EPL 1.0; MPL 2.0</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://mvnrepository.com/artifact/com.healthmarketscience.jackcess/jackcess/4.0.1">com.healthmarketscience.jackcess:jackcess:4.0.1</a></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jackcess.sourceforge.io">Jackcess</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">com.healthmarketscience.jackcess:jackcess:4.0.1</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Apache License, Version 2.0</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://mvnrepository.com/artifact/com.microsoft.sqlserver/mssql-jdbc/9.4.1.jre11">com.microsoft.sqlserver:mssql-jdbc:9.4.1.jre11</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/Microsoft/mssql-jdbc">Microsoft JDBC Driver for SQL Server</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">MIT License</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://mvnrepository.com/artifact/com.oracle.database.jdbc/ojdbc11/21.4.0.0.1">com.oracle.database.jdbc:ojdbc11:21.4.0.0.1</a></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.oracle.com/database/technologies/maven-central-guide.html">ojdbc11</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">com.oracle.database.jdbc:ojdbc11:21.3.0.0</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Oracle Free Use Terms and Conditions (FUTC)</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://mvnrepository.com/artifact/com.oracle.database.nls/orai18n/21.4.0.0.1">com.oracle.database.nls:orai18n:21.4.0.0.1</a></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.oracle.com/database/technologies/maven-central-guide.html">orai18n</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">com.oracle.database.nls:orai18n:21.3.0.0</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Oracle Free Use Terms and Conditions (FUTC)</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://rometools.com/rome">rome</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">com.rometools:rome:1.16.0</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Apache License, Version 2.0</p></td>
-</tr>
-<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://mvnrepository.com/artifact/com.rometools/rome-modules/1.18.0">com.rometools:rome-modules:1.18.0</a></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://rometools.com/rome-modules">rome-modules</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">com.rometools:rome-modules:1.16.0</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Apache License, Version 2.0</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://mvnrepository.com/artifact/com.rometools/rome-utils/1.18.0">com.rometools:rome-utils:1.18.0</a></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://rometools.com/rome-utils">rome-utils</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">com.rometools:rome-utils:1.16.0</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Apache License, Version 2.0</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://mvnrepository.com/artifact/com.rometools/rome/1.18.0">com.rometools:rome:1.18.0</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://rometools.com/rome">rome</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Apache License, Version 2.0</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://mvnrepository.com/artifact/com.sap.cloud.db.jdbc/ngdbc/2.11.14">com.sap.cloud.db.jdbc:ngdbc:2.11.14</a></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://help.sap.com/viewer/f1b440ded6144a54ada97ff95dac7adf/latest/en-US/434e2962074540e18c802fd478de86d6.html">SAP HANA JDBC Driver</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">com.sap.cloud.db.jdbc:ngdbc:2.10.15</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">SAP DEVELOPER LICENSE AGREEMENT</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://mvnrepository.com/artifact/com.sun.activation/jakarta.activation/2.0.1">com.sun.activation:jakarta.activation:2.0.1</a></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/eclipse-ee4j/jaf/jakarta.activation">Jakarta Activation</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">com.sun.activation:jakarta.activation:2.0.1</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Eclipse Distribution License, Version 1.0</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://mvnrepository.com/artifact/com.sun.istack/istack-commons-runtime/4.0.1">com.sun.istack:istack-commons-runtime:4.0.1</a></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://projects.eclipse.org/projects/ee4j/istack-commons/istack-commons-runtime">istack common utility code runtime</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">com.sun.istack:istack-commons-runtime:4.0.1</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Eclipse Distribution License, Version 1.0</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://mvnrepository.com/artifact/commons-codec/commons-codec/1.15">commons-codec:commons-codec:1.15</a></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://commons.apache.org/proper/commons-codec/">Apache Commons Codec</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">commons-codec:commons-codec:1.15</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Apache License, Version 2.0</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://mvnrepository.com/artifact/commons-logging/commons-logging/1.2">commons-logging:commons-logging:1.2</a></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://commons.apache.org/proper/commons-logging/">Apache Commons Logging</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">commons-logging:commons-logging:1.2</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Apache License, Version 2.0</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://mvnrepository.com/artifact/jakarta.xml.bind/jakarta.xml.bind-api/3.0.1">jakarta.xml.bind:jakarta.xml.bind-api:3.0.1</a></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/eclipse-ee4j/jaxb-api/jakarta.xml.bind-api">Jakarta XML Binding API</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">jakarta.xml.bind:jakarta.xml.bind-api:3.0.1</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Eclipse Distribution License, Version 1.0</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://mvnrepository.com/artifact/jaxen/jaxen/1.2.0">jaxen:jaxen:1.2.0</a></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://www.cafeconleche.org/jaxen">jaxen</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">jaxen:jaxen:1.2.0</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">BSD License 2.0</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://mvnrepository.com/artifact/net.anwiba.thirdparty/jgridshift/1.0-robust">net.anwiba.thirdparty:jgridshift:1.0-robust</a></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://jgridshift.sourceforge.net/">jgridshift</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">net.anwiba.thirdparty:jgridshift:1.0-robust</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GNU Lesser General Public License, Version 2.1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://mvnrepository.com/artifact/net.jafama/jafama/2.3.2">net.jafama:jafama:2.3.2</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://sourceforge.net/projects/jafama/">Java Fast Math</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Apache License, Version 2.0</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://mvnrepository.com/artifact/net.postgis/postgis-geometry/2021.1.0">net.postgis:postgis-geometry:2021.1.0</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://postgis.net/postgis-geometry">PostGIS Geometry</a></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">GNU Lesser General Public License, version 2.1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/benstadin/spatialite4-jdbc">Spatialite/Geopackage JDBC</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">net.anwiba.thirdparty:spatialite-jdbc:4.3.0a</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Apache License, Version 2.0</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://sourceforge.net/projects/jafama/">Java Fast Math</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">net.jafama:jafama:2.3.2</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Apache License, Version 2.0</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://postgis.net/postgis-geometry">PostGIS Geometry</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">net.postgis:postgis-geometry:2021.1.0</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">GNU Lesser General Public License</p></td>
-</tr>
-<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://mvnrepository.com/artifact/net.postgis/postgis-jdbc/2021.1.0">net.postgis:postgis-jdbc:2021.1.0</a></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://postgis.net/postgis-jdbc">Postgis JDBC Driver</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">net.postgis:postgis-jdbc:2021.1.0</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">GNU Lesser General Public License</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GNU Lesser General Public License, version 2.1</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://mvnrepository.com/artifact/net.sf.geographiclib/GeographicLib-Java/1.52">net.sf.geographiclib:GeographicLib-Java:1.52</a></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://geographiclib.sourceforge.io">Java implementation of GeographicLib</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">net.sf.geographiclib:GeographicLib-Java:1.52</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">MIT License</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://mvnrepository.com/artifact/oracle.spatial/sdoapi/21.3.0.0">oracle.spatial:sdoapi:21.3.0.0</a></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">sdoapi</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">oracle.spatial:sdoapi:19.2.0.0</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Oracle Technology Network Development and Distribution License</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Oracle Free Use Terms and Conditions (FUTC)</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://mvnrepository.com/artifact/org.antlr/antlr4-runtime/4.9.3">org.antlr:antlr4-runtime:4.9.3</a></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://www.antlr.org/antlr4-runtime">ANTLR 4 Runtime</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">org.antlr:antlr4-runtime:4.9.2</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">BSD License</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">BSD License 3.0</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://mvnrepository.com/artifact/org.apache.commons/commons-imaging/1.0-alpha2">org.apache.commons:commons-imaging:1.0-alpha2</a></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://commons.apache.org/proper/commons-imaging/">Apache Commons Imaging</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">org.apache.commons:commons-imaging:1.0-alpha2</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Apache License, Version 2.0</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://mvnrepository.com/artifact/org.apache.commons/commons-lang3/3.12.0">org.apache.commons:commons-lang3:3.12.0</a></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://commons.apache.org/proper/commons-lang/">Apache Commons Lang</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">org.apache.commons:commons-lang3:3.12.0</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Apache License, Version 2.0</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://hc.apache.org/httpcomponents-client-5.0.x/5.1.1/httpclient5/">Apache HttpClient</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">org.apache.httpcomponents.client5:httpclient5:5.1.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://mvnrepository.com/artifact/org.apache.derby/derby/10.15.2.0">org.apache.derby:derby:10.15.2.0</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://db.apache.org/derby/">Apache Derby Database Engine and Embedded JDBC Driver</a></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Apache License, Version 2.0</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://hc.apache.org/httpcomponents-core-5.1.x/5.1.2/httpcore5/">Apache HttpComponents Core HTTP/1.1</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">org.apache.httpcomponents.core5:httpcore5:5.1.2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://mvnrepository.com/artifact/org.apache.derby/derbyshared/10.15.2.0">org.apache.derby:derbyshared:10.15.2.0</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://db.apache.org/derby/">Apache Derby Shared Code</a></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Apache License, Version 2.0</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://hc.apache.org/httpcomponents-core-5.1.x/5.1.2/httpcore5-h2/">Apache HttpComponents Core HTTP/2</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">org.apache.httpcomponents.core5:httpcore5-h2:5.1.2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://mvnrepository.com/artifact/org.apache.httpcomponents.client5/httpclient5/5.1.2">org.apache.httpcomponents.client5:httpclient5:5.1.2</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://hc.apache.org/httpcomponents-client-5.0.x/5.1.2/httpclient5/">Apache HttpClient</a></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Apache License, Version 2.0</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-api/2.17.1">org.apache.logging.log4j:log4j-api:2.17.1</a></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://logging.apache.org/log4j/2.x/log4j-api/">Apache Log4j API</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">org.apache.logging.log4j:log4j-api:2.14.1</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Apache License, Version 2.0</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core/2.17.1">org.apache.logging.log4j:log4j-core:2.17.1</a></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://logging.apache.org/log4j/2.x/log4j-core/">Apache Log4j Core</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">org.apache.logging.log4j:log4j-core:2.14.1</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Apache License, Version 2.0</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-jcl/2.17.1">org.apache.logging.log4j:log4j-jcl:2.17.1</a></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://logging.apache.org/log4j/2.x/log4j-jcl/">Apache Log4j Commons Logging Bridge</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">org.apache.logging.log4j:log4j-jcl:2.14.1</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Apache License, Version 2.0</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-jul/2.17.1">org.apache.logging.log4j:log4j-jul:2.17.1</a></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://logging.apache.org/log4j/2.x/log4j-jul/">Apache Log4j JUL Adapter</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">org.apache.logging.log4j:log4j-jul:2.14.1</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Apache License, Version 2.0</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-slf4j-impl/2.17.1">org.apache.logging.log4j:log4j-slf4j-impl:2.17.1</a></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://logging.apache.org/log4j/2.x/log4j-slf4j-impl/">Apache Log4j SLF4J Binding</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">org.apache.logging.log4j:log4j-slf4j-impl:2.14.1</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Apache License, Version 2.0</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://mvnrepository.com/artifact/org.bouncycastle/bcprov-jdk15on/1.70">org.bouncycastle:bcprov-jdk15on:1.70</a></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.bouncycastle.org/java.html">Bouncy Castle Provider</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">org.bouncycastle:bcprov-jdk15on:1.69</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Bouncy Castle Licence</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Bouncy Castle License</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://mvnrepository.com/artifact/org.checkerframework/checker-qual/3.5.0">org.checkerframework:checker-qual:3.5.0</a></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://checkerframework.org">Checker Qual</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">org.checkerframework:checker-qual:3.5.0</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">MIT License</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://mvnrepository.com/artifact/org.codehaus.groovy/groovy-console/3.0.9">org.codehaus.groovy:groovy-console:3.0.9</a></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://groovy-lang.org">Apache Groovy</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">org.codehaus.groovy:groovy:3.0.9</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Apache License, Version 2.0</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://mvnrepository.com/artifact/org.codehaus.groovy/groovy-json/3.0.9">org.codehaus.groovy:groovy-json:3.0.9</a></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://groovy-lang.org">Apache Groovy</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">org.codehaus.groovy:groovy-console:3.0.9</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Apache License, Version 2.0</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://mvnrepository.com/artifact/org.codehaus.groovy/groovy-sql/3.0.9">org.codehaus.groovy:groovy-sql:3.0.9</a></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://groovy-lang.org">Apache Groovy</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">org.codehaus.groovy:groovy-json:3.0.9</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Apache License, Version 2.0</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://mvnrepository.com/artifact/org.codehaus.groovy/groovy-swing/3.0.9">org.codehaus.groovy:groovy-swing:3.0.9</a></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://groovy-lang.org">Apache Groovy</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">org.codehaus.groovy:groovy-sql:3.0.9</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Apache License, Version 2.0</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://mvnrepository.com/artifact/org.codehaus.groovy/groovy-templates/3.0.9">org.codehaus.groovy:groovy-templates:3.0.9</a></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://groovy-lang.org">Apache Groovy</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">org.codehaus.groovy:groovy-swing:3.0.9</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Apache License, Version 2.0</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://mvnrepository.com/artifact/org.codehaus.groovy/groovy-xml/3.0.9">org.codehaus.groovy:groovy-xml:3.0.9</a></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://groovy-lang.org">Apache Groovy</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">org.codehaus.groovy:groovy-templates:3.0.9</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Apache License, Version 2.0</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://mvnrepository.com/artifact/org.codehaus.groovy/groovy/3.0.9">org.codehaus.groovy:groovy:3.0.9</a></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://groovy-lang.org">Apache Groovy</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">org.codehaus.groovy:groovy-xml:3.0.9</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Apache License, Version 2.0</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://dom4j.github.io/">dom4j</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">org.dom4j:dom4j:2.1.3</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">BSD 3-clause New License</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://projects.eclipse.org/projects/locationtech.rasterprocessingengine/imagen-modules/imagen-codec">imagen-codec</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">org.eclipse.imagen:imagen-codec:0.4-JAVA11-SNAPSHOT</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Apache License, Version 2.0</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://projects.eclipse.org/projects/locationtech.rasterprocessingengine/imagen-modules/imagen-core">imagen-core</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">org.eclipse.imagen:imagen-core:0.4-JAVA11-SNAPSHOT</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Apache License, Version 2.0</p></td>
-</tr>
-<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://mvnrepository.com/artifact/org.glassfish.jaxb/jaxb-core/3.0.2">org.glassfish.jaxb:jaxb-core:3.0.2</a></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://eclipse-ee4j.github.io/jaxb-ri/">JAXB Core</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">org.glassfish.jaxb:jaxb-core:3.0.2</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Eclipse Distribution License, Version 1.0</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://mvnrepository.com/artifact/org.glassfish.jaxb/jaxb-runtime/3.0.2">org.glassfish.jaxb:jaxb-runtime:3.0.2</a></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://eclipse-ee4j.github.io/jaxb-ri/">JAXB Runtime</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">org.glassfish.jaxb:jaxb-runtime:3.0.2</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Eclipse Distribution License, Version 1.0</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://mvnrepository.com/artifact/org.glassfish.jaxb/txw2/3.0.2">org.glassfish.jaxb:txw2:3.0.2</a></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://eclipse-ee4j.github.io/jaxb-ri/">TXW2 Runtime</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">org.glassfish.jaxb:txw2:3.0.2</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Eclipse Distribution License, Version 1.0</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://mvnrepository.com/artifact/org.jdom/jdom2/2.0.6.1">org.jdom:jdom2:2.0.6.1</a></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://www.jdom.org">JDOM</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">org.jdom:jdom2:2.0.6</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Similar to Apache License but with the acknowledgment clause removed</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://mvnrepository.com/artifact/org.khelekore/prtree/1.7.0">org.khelekore:prtree:1.7.0</a></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">prtree</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">org.khelekore:prtree:1.7.0</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">BSD License</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">BSD License 3.0</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.locationtech.org/projects/technology.jts/jts-modules/jts-core">JTS</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">org.locationtech.jts:jts-core:1.18.2</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Eclipse Distribution License, Version 1.0 / Eclipse Public License, Version 2.0</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jdbc.postgresql.org">PostgreSQL JDBC Driver</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">org.postgresql:postgresql:42.3.1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">BSD-2-Clause</p></td>
-</tr>
-<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://mvnrepository.com/artifact/org.slf4j/slf4j-api/1.7.32">org.slf4j:slf4j-api:1.7.32</a></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://www.slf4j.org">SLF4J API Module</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">org.slf4j:slf4j-api:1.7.30</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">MIT License</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://mvnrepository.com/artifact/org.xerial/sqlite-jdbc/3.36.0.3">org.xerial:sqlite-jdbc:3.36.0.3</a></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://nexus.sonatype.org/oss-repository-hosting.html/sqlite-jdbc">SQLite JDBC</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">org.xerial:sqlite-jdbc:3.36.0.3</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Apache License, Version 2.0</p></td>
 </tr>
 </tbody>
 </table>
+</div>
+<div class="sect2">
+<h3 id="licenses"><a class="anchor" href="#licenses"></a>D.2. Licenses</h3>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+APL 2.0
+</td>
+<td class="hdlist2">
+<p><a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Bouncy Castle License
+</td>
+<td class="hdlist2">
+<p><a href="https://www.bouncycastle.org/licence.html">Bouncy Castle License</a></p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+BSD License 2.0
+</td>
+<td class="hdlist2">
+<p><a href="https://opensource.org/licenses/BSD-2-Clause">The 2-Clause Berkeley-Software-Distribution License</a></p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+BSD License 3.0
+</td>
+<td class="hdlist2">
+<p><a href="https://opensource.org/licenses/BSD-3-Clause">The 3-Clause Berkeley-Software-Distribution License</a></p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+EDL 1.0
+</td>
+<td class="hdlist2">
+<p><a href="https://www.eclipse.org/org/documents/edl-v10.php">Eclipse Distribution License, Version 1.0</a></p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+EPL 1.0
+</td>
+<td class="hdlist2">
+<p><a href="https://opensource.org/licenses/eclipse-1.0.php">Eclipse Public License, Version 1.0</a></p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+GNU Lesser General Public License, Version 2.1
+</td>
+<td class="hdlist2">
+<p><a href="https://tools.ietf.org/html/rfc20">GNU Lesser General Public License, Version 2.1</a></p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+MIT License
+</td>
+<td class="hdlist2">
+<p><a href="https://opensource.org/licenses/mit-license.php">Massachusetts Institute of Technology License</a></p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+MPL 2.0
+</td>
+<td class="hdlist2">
+<p><a href="https://www.mozilla.org/en-US/MPL/2.0/">Mozilla Public License, Version 2.0</a></p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Oracle FUTC
+</td>
+<td class="hdlist2">
+<p><a href="https://www.oracle.com/downloads/licenses/oracle-free-license.html">Oracle Free Use Terms and Conditions (FUTC)</a></p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+SAP DEVELOPER LICENSE AGREEMENT
+</td>
+<td class="hdlist2">
+<p><a href="https://tools.hana.ondemand.com/developer-license-3_1.txt">SAP DEVELOPER LICENSE AGREEMENT</a></p>
+</td>
+</tr>
+</table>
+</div>
 <div style="page-break-after: always;"></div>
+</div>
 </div>
 </div>
 <div class="sect1">
@@ -10380,7 +10613,8 @@ CRSEU04
 SWISSTOPO01
 </td>
 <td class="hdlist2">
-<p><a href="https://cms.geo.admin.ch/www.swisstopo.admin.ch/archives/cms2007/internet/swisstopo/en/home/products/software/products/skripts.parsysrelated1.45237.downloadList.10374.DownloadFile.tmp/swissprojectionen.pdf">Formulas and constants for the calculation of the Swiss conformal cylindrical projection and for the transformation between coordinate systems </a></p>
+<p> <a href="https://cms.geo.admin.ch/www.swisstopo.admin.ch/archives/cms2007/internet/swisstopo/en/home/products/software/products/skripts.parsysrelated1.45237.downloadList.10374.DownloadFile.tmp/swissprojectionen.pdf">Formulas and constants for the calculation of the Swiss conformal cylindrical projection and for the transformation between coordinate systems </a>
+Kylie Rocket</p>
 </td>
 </tr>
 <tr>
@@ -10498,6 +10732,15 @@ Spatial/Locator
 </tr>
 <tr>
 <td class="hdlist1">
+MSSql/SQLServer
+</td>
+<td class="hdlist2">
+<p>see
+<a href="https://docs.microsoft.com/en-us/sql/relational-databases/spatial/spatial-data-sql-server?view=sql-server-linux-ver15">Spatial Data</a> and  <a href="https://docs.microsoft.com/en-us/sql/connect/jdbc/use-spatial-datatypes?view=sql-server-linux-ver15">Using spatial datatypes</a></p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
 SAP Hana Spatial Reference
 </td>
 <td class="hdlist2">
@@ -10562,11 +10805,29 @@ Mapzen
 </tr>
 <tr>
 <td class="hdlist1">
-Open street map (OSM)
+Mediawiki
 </td>
 <td class="hdlist2">
-<p> see <a href="https://wiki.openstreetmap.org/wiki/Nominatim">osm wiki</a>, <a href="https://nominatim.openstreetmap.org/">homepage</a> and
-<a href="https://operations.osmfoundation.org/policies/nominatim/">Usage Policy</a></p>
+<p>see <a href="https://www.mediawiki.org/wiki/API:Geosearch">API:Geosearch</a></p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Open street map (OSM) - Nominatim
+</td>
+<td class="hdlist2">
+<p>see <a href="https://wiki.openstreetmap.org/wiki/Nominatim">osm wiki</a>
+, <a href="https://nominatim.openstreetmap.org/">homepage</a>
+, <a href="https://operations.osmfoundation.org/policies/nominatim/">Usage Policy</a>
+and <a href="https://nominatim.org/release-docs/develop/api/Overview">API</a></p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Open street map (OSM) - Overpass
+</td>
+<td class="hdlist2">
+<p>see <a href="https://wiki.openstreetmap.org/wiki/Overpass_API">osm wiki Overpass API</a></p>
 </td>
 </tr>
 <tr>
@@ -10583,6 +10844,14 @@ GeoRSS
 </td>
 <td class="hdlist2">
 <p>see <a href="http://www.georss.org/">hompage</a></p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+GPSD
+</td>
+<td class="hdlist2">
+<p><a href="https://gpsd.gitlab.io/gpsd/client-howto.html">GPSD Client HOWTO</a></p>
 </td>
 </tr>
 </table>

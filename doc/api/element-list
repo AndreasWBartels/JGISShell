@@ -1,5 +1,4 @@
 net.anwiba.commons.annotation
-net.anwiba.commons.attribute
 net.anwiba.commons.ensure
 net.anwiba.commons.lang.collection
 net.anwiba.commons.lang.comparable
@@ -97,6 +96,7 @@ net.anwiba.jgisshell.api.transformer
 net.anwiba.jgisshell.scripting.desktop.api
 net.anwiba.jgisshell.scripting.groovy.api
 net.anwiba.jgisshell.scripting.java.api
+net.anwiba.object.attribute
 net.anwiba.spatial.coordinate
 net.anwiba.spatial.coordinate.calculator
 net.anwiba.spatial.coordinate.converter
